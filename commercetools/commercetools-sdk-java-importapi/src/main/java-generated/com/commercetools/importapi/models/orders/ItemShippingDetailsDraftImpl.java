@@ -32,7 +32,7 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets() {

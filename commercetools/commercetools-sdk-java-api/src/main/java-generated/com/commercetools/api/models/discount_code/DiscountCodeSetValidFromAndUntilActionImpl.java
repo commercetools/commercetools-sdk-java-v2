@@ -39,7 +39,7 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
     }
 
     /**
-     <*  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -55,7 +55,7 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
     }
 
     /**
-     <*  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {

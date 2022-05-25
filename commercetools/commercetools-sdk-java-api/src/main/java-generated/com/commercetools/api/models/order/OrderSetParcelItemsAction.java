@@ -34,14 +34,14 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

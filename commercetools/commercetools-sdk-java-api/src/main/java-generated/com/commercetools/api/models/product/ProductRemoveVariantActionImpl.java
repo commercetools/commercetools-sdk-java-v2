@@ -42,7 +42,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     <>
+     *
      */
 
     public Long getId() {
@@ -58,7 +58,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

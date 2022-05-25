@@ -36,14 +36,14 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     String IMPORT_CUSTOM_LINE_ITEM_STATE = "importCustomLineItemState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

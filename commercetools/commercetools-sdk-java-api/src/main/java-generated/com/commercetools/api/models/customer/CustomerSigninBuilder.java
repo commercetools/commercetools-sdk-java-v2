@@ -46,7 +46,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     private Boolean updateProductData;
 
     /**
-     <>
+     *
      */
 
     public CustomerSigninBuilder email(final String email) {
@@ -55,7 +55,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerSigninBuilder password(final String password) {
@@ -64,7 +64,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
     @Deprecated
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
@@ -73,7 +73,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Cart.</p>>
+     *  <p>ResourceIdentifier to a Cart.</p>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -84,7 +84,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Cart.</p>>
+     *  <p>ResourceIdentifier to a Cart.</p>
      */
 
     public CustomerSigninBuilder anonymousCart(
@@ -94,7 +94,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerSigninBuilder anonymousCartSignInMode(
@@ -104,7 +104,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerSigninBuilder anonymousId(@Nullable final String anonymousId) {
@@ -113,7 +113,7 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {

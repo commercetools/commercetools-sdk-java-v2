@@ -36,7 +36,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
     /**
-     <*  <p>User-defined unique identifier for the Zone.</p>>
+     *  <p>User-defined unique identifier for the Zone.</p>
      */
 
     public ZoneDraftBuilder key(@Nullable final String key) {
@@ -45,7 +45,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
 
     public ZoneDraftBuilder name(final String name) {
@@ -54,7 +54,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public ZoneDraftBuilder description(@Nullable final String description) {
@@ -63,7 +63,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneDraftBuilder locations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
@@ -72,7 +72,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneDraftBuilder locations(
@@ -82,7 +82,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneDraftBuilder plusLocations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
@@ -94,7 +94,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneDraftBuilder plusLocations(
@@ -107,7 +107,7 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public ZoneDraftBuilder withLocations(

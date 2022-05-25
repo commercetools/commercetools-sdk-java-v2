@@ -35,7 +35,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLanguages() {

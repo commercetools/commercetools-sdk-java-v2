@@ -28,7 +28,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder parcelId(final String parcelId) {
@@ -37,7 +37,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder items(
@@ -47,7 +47,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder items(
@@ -57,7 +57,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder plusItems(
@@ -70,7 +70,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder plusItems(
@@ -83,7 +83,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelItemsActionBuilder withItems(

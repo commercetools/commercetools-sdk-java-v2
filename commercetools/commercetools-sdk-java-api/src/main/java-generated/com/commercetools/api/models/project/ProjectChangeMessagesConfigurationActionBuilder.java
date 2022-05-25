@@ -26,7 +26,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
     /**
-     <*  <p>Configuration for the Messages Query feature.</p>>
+     *  <p>Configuration for the Messages Query feature.</p>
      */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
@@ -38,7 +38,7 @@ public class ProjectChangeMessagesConfigurationActionBuilder
     }
 
     /**
-     <*  <p>Configuration for the Messages Query feature.</p>>
+     *  <p>Configuration for the Messages Query feature.</p>
      */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(

@@ -47,7 +47,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public java.time.ZonedDateTime getTimestamp() {
@@ -55,7 +55,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>>
+     *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionType getType() {
@@ -63,7 +63,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getAmount() {
@@ -71,7 +71,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
      */
 
     public String getInteractionId() {
@@ -79,7 +79,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

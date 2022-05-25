@@ -25,7 +25,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources;
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
 
     public ProductVariantImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
 
     public ProductVariantImportRequestBuilder plusResources(
@@ -72,7 +72,7 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
     }
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
 
     public ProductVariantImportRequestBuilder withResources(

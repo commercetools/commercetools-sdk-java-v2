@@ -28,7 +28,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>>
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      */
 
     public CustomFieldsBuilder type(
@@ -38,7 +38,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     <*  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>>
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      */
 
     public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
@@ -47,7 +47,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      */
 
     public CustomFieldsBuilder fields(
@@ -57,7 +57,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      */
 
     public CustomFieldsBuilder fields(final com.commercetools.api.models.type.FieldContainer fields) {

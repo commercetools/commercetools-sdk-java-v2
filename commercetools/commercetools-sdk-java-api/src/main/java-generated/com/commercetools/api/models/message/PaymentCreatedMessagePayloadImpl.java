@@ -36,7 +36,7 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.Payment getPayment() {

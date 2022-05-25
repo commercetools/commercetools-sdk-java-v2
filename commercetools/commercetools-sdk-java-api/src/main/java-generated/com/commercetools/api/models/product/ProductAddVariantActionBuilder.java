@@ -45,7 +45,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     private java.util.List<com.commercetools.api.models.common.Asset> assets;
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder key(@Nullable final String key) {
@@ -63,7 +63,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder prices(
@@ -73,7 +73,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder prices(
@@ -83,7 +83,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusPrices(
@@ -96,7 +96,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusPrices(
@@ -109,7 +109,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder withPrices(
@@ -120,7 +120,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -129,7 +129,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder images(
@@ -139,7 +139,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -152,7 +152,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -165,7 +165,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder withImages(
@@ -176,7 +176,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -186,7 +186,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -196,7 +196,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -209,7 +209,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -222,7 +222,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder withAttributes(
@@ -233,7 +233,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder staged(@Nullable final Boolean staged) {
@@ -242,7 +242,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -251,7 +251,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder assets(
@@ -261,7 +261,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -274,7 +274,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -287,7 +287,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddVariantActionBuilder withAssets(

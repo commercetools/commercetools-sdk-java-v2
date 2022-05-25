@@ -27,7 +27,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     private String container;
 
     /**
-     <>
+     *
      */
 
     public CustomObjectKeyReferenceBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyR
     }
 
     /**
-     <>
+     *
      */
 
     public CustomObjectKeyReferenceBuilder container(final String container) {

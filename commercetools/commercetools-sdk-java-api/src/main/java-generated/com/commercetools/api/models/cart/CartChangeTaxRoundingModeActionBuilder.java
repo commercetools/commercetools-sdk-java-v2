@@ -24,7 +24,7 @@ public class CartChangeTaxRoundingModeActionBuilder implements Builder<CartChang
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     /**
-     <>
+     *
      */
 
     public CartChangeTaxRoundingModeActionBuilder taxRoundingMode(

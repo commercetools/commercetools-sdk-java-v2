@@ -54,7 +54,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -62,7 +62,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the InventoryEntry.</p>>
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
      */
 
     public String getKey() {
@@ -70,7 +70,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -78,7 +78,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantityOnStock() {
@@ -86,7 +86,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getRestockableInDays() {
@@ -94,7 +94,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getExpectedDelivery() {
@@ -102,7 +102,7 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

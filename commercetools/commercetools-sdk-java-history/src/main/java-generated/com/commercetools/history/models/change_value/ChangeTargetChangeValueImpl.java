@@ -31,7 +31,7 @@ public class ChangeTargetChangeValueImpl implements ChangeTargetChangeValue, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

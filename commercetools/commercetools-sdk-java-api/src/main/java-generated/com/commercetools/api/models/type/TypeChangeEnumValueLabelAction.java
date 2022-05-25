@@ -34,14 +34,14 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
     String CHANGE_ENUM_VALUE_LABEL = "changeEnumValueLabel";
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

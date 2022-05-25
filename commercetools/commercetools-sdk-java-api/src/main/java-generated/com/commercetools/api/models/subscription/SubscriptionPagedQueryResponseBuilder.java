@@ -39,7 +39,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     private java.util.List<com.commercetools.api.models.subscription.Subscription> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public SubscriptionPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionPagedQueryResponseBuilder withResults(

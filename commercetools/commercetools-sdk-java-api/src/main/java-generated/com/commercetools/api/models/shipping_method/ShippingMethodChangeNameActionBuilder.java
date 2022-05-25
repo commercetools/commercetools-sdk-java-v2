@@ -24,7 +24,7 @@ public class ShippingMethodChangeNameActionBuilder implements Builder<ShippingMe
     private String name;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodChangeNameActionBuilder name(final String name) {

@@ -34,7 +34,7 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
     String PAYMENT_CREATED = "PaymentCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

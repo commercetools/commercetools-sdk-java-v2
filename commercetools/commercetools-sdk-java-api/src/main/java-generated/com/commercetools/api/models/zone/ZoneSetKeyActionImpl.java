@@ -35,7 +35,7 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction, ModelBase {
     }
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      */
 
     public String getKey() {

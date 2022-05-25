@@ -40,7 +40,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {

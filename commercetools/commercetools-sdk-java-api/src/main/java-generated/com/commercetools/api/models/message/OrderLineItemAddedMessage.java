@@ -42,7 +42,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface OrderLineItemAddedMessage extends OrderMessage {
     public LineItem getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("addedQuantity")

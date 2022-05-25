@@ -60,7 +60,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public CategorySlugChangedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CategorySlugChangedMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CategorySlugChangedMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CategorySlugChangedMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CategorySlugChangedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CategorySlugChangedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySlugChangedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CategorySlugChangedMessageBuilder slug(
@@ -205,7 +205,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CategorySlugChangedMessageBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -214,7 +214,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(
@@ -224,7 +224,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(

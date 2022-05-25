@@ -30,7 +30,7 @@ public interface ConcurrentModificationError extends ErrorObject {
     String CONCURRENT_MODIFICATION = "ConcurrentModification";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("currentVersion")

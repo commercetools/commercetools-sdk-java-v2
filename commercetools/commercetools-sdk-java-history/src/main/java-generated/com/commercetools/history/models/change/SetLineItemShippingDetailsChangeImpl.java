@@ -47,7 +47,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemShippingDetails</code></p>>
+     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -71,7 +71,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ItemShippingDetails getNextValue() {
@@ -79,7 +79,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ItemShippingDetails getPreviousValue() {

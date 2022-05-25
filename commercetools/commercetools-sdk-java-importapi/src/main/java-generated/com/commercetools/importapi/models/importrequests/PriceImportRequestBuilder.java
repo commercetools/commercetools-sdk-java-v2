@@ -25,7 +25,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     private java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources;
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public PriceImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public PriceImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public PriceImportRequestBuilder plusResources(
@@ -71,7 +71,7 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
     }
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
 
     public PriceImportRequestBuilder withResources(

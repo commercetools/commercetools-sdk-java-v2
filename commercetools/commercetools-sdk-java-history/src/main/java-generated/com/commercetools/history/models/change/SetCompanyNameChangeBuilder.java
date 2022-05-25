@@ -30,7 +30,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setCompanyName</code></p>>
+     *  <p>Shape of the action for <code>setCompanyName</code></p>
      */
 
     public SetCompanyNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetCompanyNameChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetCompanyNameChangeBuilder nextValue(final String nextValue) {

@@ -47,7 +47,7 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addVariant</code></p>>
+     *  <p>Update action for <code>addVariant</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getPreviousValue() {
@@ -79,7 +79,7 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getNextValue() {

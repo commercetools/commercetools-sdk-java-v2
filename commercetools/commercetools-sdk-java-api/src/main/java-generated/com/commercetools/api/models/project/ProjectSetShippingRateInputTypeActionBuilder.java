@@ -27,7 +27,7 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
@@ -37,7 +37,7 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(

@@ -33,14 +33,14 @@ public interface AzureEventGridDestination extends Destination {
     String EVENT_GRID = "EventGrid";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("uri")
     public String getUri();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("accessKey")

@@ -32,7 +32,7 @@ public interface CategorySetMetaDescriptionAction extends CategoryUpdateAction {
     String SET_META_DESCRIPTION = "setMetaDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaDescription")

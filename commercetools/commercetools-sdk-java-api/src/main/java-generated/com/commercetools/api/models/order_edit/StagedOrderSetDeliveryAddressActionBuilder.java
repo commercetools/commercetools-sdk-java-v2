@@ -30,7 +30,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryAddressActionBuilder deliveryId(final String deliveryId) {
@@ -39,7 +39,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryAddressActionBuilder address(
@@ -49,7 +49,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryAddressActionBuilder address(

@@ -43,7 +43,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {

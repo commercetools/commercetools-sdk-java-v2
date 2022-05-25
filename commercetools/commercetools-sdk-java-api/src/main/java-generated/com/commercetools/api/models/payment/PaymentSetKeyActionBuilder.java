@@ -26,7 +26,7 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
     private String key;
 
     /**
-     <*  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>>
+     *  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>
      */
 
     public PaymentSetKeyActionBuilder key(@Nullable final String key) {

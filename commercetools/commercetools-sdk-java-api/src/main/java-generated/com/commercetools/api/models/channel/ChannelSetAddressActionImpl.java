@@ -36,7 +36,7 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

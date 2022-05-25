@@ -34,7 +34,7 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
     String CHANGE_CART_DISCOUNTS = "changeCartDiscounts";
 
     /**
-     <*  <p>New value to set.</p>>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @Valid

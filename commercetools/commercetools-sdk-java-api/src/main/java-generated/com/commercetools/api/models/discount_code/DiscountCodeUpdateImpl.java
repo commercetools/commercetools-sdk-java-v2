@@ -35,7 +35,7 @@ public class DiscountCodeUpdateImpl implements DiscountCodeUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class DiscountCodeUpdateImpl implements DiscountCodeUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> getActions() {

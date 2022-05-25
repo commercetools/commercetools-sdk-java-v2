@@ -43,7 +43,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPrice() {
@@ -51,7 +51,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getFreeAbove() {
@@ -59,7 +59,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     <*  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>>
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
      */
 
     public Boolean getIsMatching() {
@@ -67,7 +67,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> getTiers() {

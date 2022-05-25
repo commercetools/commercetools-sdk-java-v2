@@ -32,21 +32,21 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

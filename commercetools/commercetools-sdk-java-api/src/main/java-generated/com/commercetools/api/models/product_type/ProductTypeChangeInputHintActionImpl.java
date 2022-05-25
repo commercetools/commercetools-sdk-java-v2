@@ -39,7 +39,7 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.TextInputHint getNewValue() {

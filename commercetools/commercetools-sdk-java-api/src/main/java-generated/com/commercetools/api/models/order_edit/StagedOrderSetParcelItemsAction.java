@@ -36,14 +36,14 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

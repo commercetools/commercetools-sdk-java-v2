@@ -36,7 +36,7 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
     }
 
     /**
-     <>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {

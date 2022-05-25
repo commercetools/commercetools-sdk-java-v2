@@ -38,7 +38,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -46,7 +46,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -54,7 +54,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     public String getField() {

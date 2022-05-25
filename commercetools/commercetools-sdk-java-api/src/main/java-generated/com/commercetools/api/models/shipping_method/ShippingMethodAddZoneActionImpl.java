@@ -36,7 +36,7 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

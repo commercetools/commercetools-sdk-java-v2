@@ -38,21 +38,21 @@ public interface SetLineItemProductSlugChange extends Change {
     String SET_LINE_ITEM_PRODUCT_SLUG_CHANGE = "SetLineItemProductSlugChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemProductSlug</code></p>>
+     *  <p>Update action for <code>setLineItemProductSlug</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,14 +60,14 @@ public interface SetLineItemProductSlugChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -75,7 +75,7 @@ public interface SetLineItemProductSlugChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

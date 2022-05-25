@@ -35,7 +35,7 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
     }
 
     /**
-     <>
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
      */
 
     public Boolean getIsActive() {

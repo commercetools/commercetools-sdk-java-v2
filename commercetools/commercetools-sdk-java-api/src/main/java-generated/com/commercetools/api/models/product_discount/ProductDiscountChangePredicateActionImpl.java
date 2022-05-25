@@ -35,7 +35,7 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
     }
 
     /**
-     <*  <p>New value to set. Must be a valid ProductDiscount predicate.</p>>
+     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
      */
 
     public String getPredicate() {

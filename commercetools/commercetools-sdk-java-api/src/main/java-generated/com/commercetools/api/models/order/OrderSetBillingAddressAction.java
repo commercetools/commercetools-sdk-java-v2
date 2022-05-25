@@ -32,7 +32,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

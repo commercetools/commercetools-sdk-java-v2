@@ -113,7 +113,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <*  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>>
+     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
      */
 
     public String getKey() {
@@ -121,7 +121,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -129,7 +129,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSalutation() {
@@ -137,7 +137,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {
@@ -145,7 +145,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {
@@ -153,7 +153,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getStreetName() {
@@ -161,7 +161,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getStreetNumber() {
@@ -169,7 +169,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAdditionalStreetInfo() {
@@ -177,7 +177,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPostalCode() {
@@ -185,7 +185,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCity() {
@@ -193,7 +193,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getRegion() {
@@ -201,7 +201,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {
@@ -209,7 +209,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -217,7 +217,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCompany() {
@@ -225,7 +225,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDepartment() {
@@ -233,7 +233,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getBuilding() {
@@ -241,7 +241,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getApartment() {
@@ -249,7 +249,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPOBox() {
@@ -257,7 +257,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPhone() {
@@ -265,7 +265,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMobile() {
@@ -273,7 +273,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -281,7 +281,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFax() {
@@ -289,7 +289,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAdditionalAddressInfo() {
@@ -297,7 +297,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {

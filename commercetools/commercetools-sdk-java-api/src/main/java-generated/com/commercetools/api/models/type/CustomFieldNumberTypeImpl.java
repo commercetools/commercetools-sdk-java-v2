@@ -27,7 +27,7 @@ public class CustomFieldNumberTypeImpl implements CustomFieldNumberType, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

@@ -31,21 +31,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLRequest {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("query")
     public String getQuery();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("operationName")
     public String getOperationName();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("variables")

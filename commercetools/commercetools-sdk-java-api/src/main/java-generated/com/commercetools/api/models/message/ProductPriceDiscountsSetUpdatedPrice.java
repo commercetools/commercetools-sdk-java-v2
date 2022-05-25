@@ -34,42 +34,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductPriceDiscountsSetUpdatedPrice {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantKey")
     public String getVariantKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

@@ -34,7 +34,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemTotalPrice</code></p>>
+     *  <p>Update action for <code>setLineItemTotalPrice</code></p>
      */
 
     public SetLineItemTotalPriceChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder lineItem(
@@ -53,7 +53,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder lineItem(
@@ -63,7 +63,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
@@ -82,7 +82,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder previousValue(
@@ -92,7 +92,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemTotalPriceChangeBuilder previousValue(

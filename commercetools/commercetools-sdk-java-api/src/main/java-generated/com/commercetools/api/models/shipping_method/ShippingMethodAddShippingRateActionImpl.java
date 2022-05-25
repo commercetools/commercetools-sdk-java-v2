@@ -40,7 +40,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
@@ -56,7 +56,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {

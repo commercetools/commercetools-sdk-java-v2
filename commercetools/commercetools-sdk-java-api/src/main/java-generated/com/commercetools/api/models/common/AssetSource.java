@@ -31,28 +31,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssetSource {
 
     /**
-     <*  <p>URI of the AssetSource.</p>>
+     *  <p>URI of the AssetSource.</p>
      */
     @NotNull
     @JsonProperty("uri")
     public String getUri();
 
     /**
-     <*  <p>User-defined unique identifier of the AssetSource.</p>>
+     *  <p>User-defined unique identifier of the AssetSource.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Width and height of the AssetSource.</p>>
+     *  <p>Width and height of the AssetSource.</p>
      */
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();
 
     /**
-     <*  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>>
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      */
 
     @JsonProperty("contentType")

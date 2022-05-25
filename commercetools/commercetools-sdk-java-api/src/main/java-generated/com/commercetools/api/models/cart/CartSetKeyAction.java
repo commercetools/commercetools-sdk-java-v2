@@ -29,7 +29,7 @@ public interface CartSetKeyAction extends CartUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("key")

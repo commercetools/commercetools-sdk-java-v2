@@ -29,7 +29,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
-     <*  <p>Current version of the ImportContainer.</p>>
+     *  <p>Current version of the ImportContainer.</p>
      */
 
     public ImportContainerUpdateDraftBuilder version(final Long version) {
@@ -38,7 +38,7 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
     }
 
     /**
-     <*  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public ImportContainerUpdateDraftBuilder resourceType(

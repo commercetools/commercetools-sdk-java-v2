@@ -55,7 +55,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -63,7 +63,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -71,7 +71,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLanguages() {
@@ -79,7 +79,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -87,7 +87,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -95,7 +95,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -103,7 +103,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

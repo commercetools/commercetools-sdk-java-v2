@@ -40,28 +40,28 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

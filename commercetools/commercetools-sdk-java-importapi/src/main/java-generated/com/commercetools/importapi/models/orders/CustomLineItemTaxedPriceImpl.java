@@ -36,7 +36,7 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalNet() {
@@ -44,7 +44,7 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalGross() {

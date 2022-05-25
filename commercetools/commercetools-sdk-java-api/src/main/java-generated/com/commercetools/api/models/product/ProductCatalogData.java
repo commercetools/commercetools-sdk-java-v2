@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductCatalogData {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("published")
     public Boolean getPublished();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface ProductCatalogData {
     public ProductData getCurrent();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -57,7 +57,7 @@ public interface ProductCatalogData {
     public ProductData getStaged();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("hasStagedChanges")

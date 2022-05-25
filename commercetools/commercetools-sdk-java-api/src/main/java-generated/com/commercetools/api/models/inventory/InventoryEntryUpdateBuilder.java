@@ -28,7 +28,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryUpdateBuilder withActions(

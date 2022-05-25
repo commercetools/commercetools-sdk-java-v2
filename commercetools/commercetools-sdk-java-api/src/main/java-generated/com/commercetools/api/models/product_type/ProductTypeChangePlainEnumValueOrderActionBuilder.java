@@ -29,7 +29,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder attributeName(final String attributeName) {
@@ -38,7 +38,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder values(
@@ -48,7 +48,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder values(
@@ -58,7 +58,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder plusValues(
@@ -71,7 +71,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder plusValues(
@@ -85,7 +85,7 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder withValues(

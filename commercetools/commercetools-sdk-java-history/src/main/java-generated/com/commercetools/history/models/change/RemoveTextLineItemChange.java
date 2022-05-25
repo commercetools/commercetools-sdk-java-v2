@@ -36,21 +36,21 @@ public interface RemoveTextLineItemChange extends Change {
     String REMOVE_TEXT_LINE_ITEM_CHANGE = "RemoveTextLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface RemoveTextLineItemChange extends Change {
     public TextLineItem getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

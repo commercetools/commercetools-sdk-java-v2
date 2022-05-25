@@ -34,7 +34,7 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getLine() {
@@ -42,7 +42,7 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getColumn() {

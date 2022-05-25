@@ -31,7 +31,7 @@ public class UpdateActionImpl implements UpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

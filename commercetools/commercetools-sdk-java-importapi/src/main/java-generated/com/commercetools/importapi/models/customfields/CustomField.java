@@ -54,7 +54,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomField {
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
     @NotNull
     @JsonProperty("type")

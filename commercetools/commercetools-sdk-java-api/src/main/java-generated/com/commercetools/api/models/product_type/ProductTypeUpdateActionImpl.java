@@ -31,7 +31,7 @@ public class ProductTypeUpdateActionImpl implements ProductTypeUpdateAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

@@ -43,7 +43,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantId(final Integer variantId) {
@@ -52,7 +52,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder variantKey(@Nullable final String variantKey) {
@@ -61,7 +61,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder sku(@Nullable final String sku) {
@@ -70,7 +70,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder priceId(final String priceId) {
@@ -79,7 +79,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -89,7 +89,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder discounted(
@@ -99,7 +99,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessagePayloadBuilder staged(final Boolean staged) {

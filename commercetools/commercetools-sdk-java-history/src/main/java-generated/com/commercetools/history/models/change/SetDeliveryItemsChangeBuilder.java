@@ -34,7 +34,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
     /**
-     <*  <p>Update action for <code>setDeliveryItems</code></p>>
+     *  <p>Update action for <code>setDeliveryItems</code></p>
      */
 
     public SetDeliveryItemsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder deliveryId(final String deliveryId) {
@@ -52,7 +52,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder nextValue(
@@ -72,7 +72,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder plusNextValue(
@@ -85,7 +85,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder plusNextValue(
@@ -98,7 +98,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder withNextValue(
@@ -109,7 +109,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder previousValue(
@@ -119,7 +119,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder previousValue(
@@ -129,7 +129,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
@@ -142,7 +142,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
@@ -155,7 +155,7 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeliveryItemsChangeBuilder withPreviousValue(

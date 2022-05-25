@@ -36,35 +36,35 @@ public interface ProductProjectionPagedSearchResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -72,7 +72,7 @@ public interface ProductProjectionPagedSearchResponse
     public List<ProductProjection> getResults();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

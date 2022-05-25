@@ -30,7 +30,7 @@ public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredi
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeCartPredicate</code></p>>
+     *  <p>Shape of the action for <code>changeCartPredicate</code></p>
      */
 
     public ChangeCartPredicateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartPredicateChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeCartPredicateChangeBuilder nextValue(final String nextValue) {

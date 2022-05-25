@@ -69,7 +69,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     /**
-     <*  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
      */
 
     public MyCartDraftBuilder currency(final String currency) {
@@ -78,7 +78,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder customerEmail(@Nullable final String customerEmail) {
@@ -87,7 +87,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public MyCartDraftBuilder country(@Nullable final String country) {
@@ -96,7 +96,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Default inventory mode is <code>None</code>.</p>>
+     *  <p>Default inventory mode is <code>None</code>.</p>
      */
 
     public MyCartDraftBuilder inventoryMode(
@@ -106,7 +106,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.me.MyLineItemDraft... lineItems) {
@@ -115,7 +115,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder lineItems(
@@ -125,7 +125,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -138,7 +138,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder plusLineItems(
@@ -151,7 +151,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder withLineItems(
@@ -162,7 +162,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -172,7 +172,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder shippingAddress(
@@ -182,7 +182,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder billingAddress(
@@ -192,7 +192,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder billingAddress(
@@ -202,7 +202,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -214,7 +214,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder shippingMethod(
@@ -224,7 +224,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyCartDraftBuilder custom(
@@ -234,7 +234,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public MyCartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -243,7 +243,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder locale(@Nullable final String locale) {
@@ -252,7 +252,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>>
+     *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
      */
 
     public MyCartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {
@@ -261,7 +261,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>>
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
      */
 
     public MyCartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
@@ -270,7 +270,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -280,7 +280,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder itemShippingAddresses(
@@ -290,7 +290,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -303,7 +303,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder plusItemShippingAddresses(
@@ -317,7 +317,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
      */
 
     public MyCartDraftBuilder withItemShippingAddresses(
@@ -329,7 +329,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder store(
@@ -339,7 +339,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -348,7 +348,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder discountCodes(
@@ -358,7 +358,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder discountCodes(
@@ -368,7 +368,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder plusDiscountCodes(
@@ -381,7 +381,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder plusDiscountCodes(
@@ -394,7 +394,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCartDraftBuilder withDiscountCodes(

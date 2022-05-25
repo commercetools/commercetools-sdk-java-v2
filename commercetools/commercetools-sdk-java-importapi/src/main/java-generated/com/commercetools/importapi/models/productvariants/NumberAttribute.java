@@ -32,7 +32,7 @@ public interface NumberAttribute extends Attribute {
     String NUMBER = "number";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

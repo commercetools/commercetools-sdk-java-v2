@@ -33,7 +33,7 @@ public interface DateField extends CustomField {
     String DATE = "Date";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -38,7 +38,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
 
     public String getKey() {
@@ -46,7 +46,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-     <*  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
      */
 
     public String getGroupName() {
@@ -54,7 +54,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

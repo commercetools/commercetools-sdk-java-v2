@@ -34,14 +34,14 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     String PRODUCT_TYPE = "product-type";
 
     /**
-     <*  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
      */
     @Valid
     @JsonProperty("obj")
     public ProductType getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductType.</p>>
+     *  <p>Unique identifier of the referenced ProductType.</p>
      */
     @NotNull
     @JsonProperty("id")

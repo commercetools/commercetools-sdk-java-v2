@@ -37,7 +37,7 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dateOfBirth")

@@ -35,7 +35,7 @@ public class ProductTypeUpdateImpl implements ProductTypeUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ProductTypeUpdateImpl implements ProductTypeUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions() {

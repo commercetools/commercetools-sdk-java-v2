@@ -36,7 +36,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeImportBuilder key(final String key) {
@@ -45,7 +45,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>Maps to <code>ProductType.name</code>.</p>>
+     *  <p>Maps to <code>ProductType.name</code>.</p>
      */
 
     public ProductTypeImportBuilder name(final String name) {
@@ -54,7 +54,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>Maps to <code>ProductType.description</code>.</p>>
+     *  <p>Maps to <code>ProductType.description</code>.</p>
      */
 
     public ProductTypeImportBuilder description(final String description) {
@@ -63,7 +63,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public ProductTypeImportBuilder attributes(
@@ -73,7 +73,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public ProductTypeImportBuilder attributes(
@@ -83,7 +83,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public ProductTypeImportBuilder plusAttributes(
@@ -96,7 +96,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public ProductTypeImportBuilder plusAttributes(
@@ -110,7 +110,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public ProductTypeImportBuilder withAttributes(

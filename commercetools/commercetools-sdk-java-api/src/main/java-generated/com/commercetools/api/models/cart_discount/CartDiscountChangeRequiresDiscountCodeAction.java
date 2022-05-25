@@ -32,7 +32,7 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
 
     /**
-     <>
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
      */
     @NotNull
     @JsonProperty("requiresDiscountCode")

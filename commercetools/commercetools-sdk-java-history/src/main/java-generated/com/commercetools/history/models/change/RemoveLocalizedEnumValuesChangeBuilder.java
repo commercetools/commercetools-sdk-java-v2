@@ -31,7 +31,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
     /**
-     <*  <p>Update action for <code>removeEnumValues</code> on product types</p>>
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
@@ -49,7 +49,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveLocalizedEnumValuesChangeBuilder previousValue(

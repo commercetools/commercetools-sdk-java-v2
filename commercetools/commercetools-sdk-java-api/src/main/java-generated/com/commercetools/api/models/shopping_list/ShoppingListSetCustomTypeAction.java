@@ -33,14 +33,14 @@ public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>>
+     *  <p>Defines the Type that extends the ShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShoppingList.</p>>
+     *  <p>Sets the Custom Fields fields for the ShoppingList.</p>
      */
     @Valid
     @JsonProperty("fields")

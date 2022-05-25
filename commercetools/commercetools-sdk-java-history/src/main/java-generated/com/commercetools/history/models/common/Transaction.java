@@ -36,28 +36,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Transaction {
 
     /**
-     <*  <p>The unique ID of this object.</p>>
+     *  <p>The unique ID of this object.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
     @NotNull
     @JsonProperty("timestamp")
     public String getTimestamp();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -65,14 +65,14 @@ public interface Transaction {
     public Money getAmount();
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
     @NotNull
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("state")

@@ -43,7 +43,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LineItem getPreviousValue() {
@@ -67,7 +67,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LineItem getNextValue() {

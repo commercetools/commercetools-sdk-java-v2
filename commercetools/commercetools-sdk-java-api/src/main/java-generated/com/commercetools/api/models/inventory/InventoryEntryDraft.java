@@ -35,49 +35,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>User-defined unique identifier for the InventoryEntry.</p>>
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")

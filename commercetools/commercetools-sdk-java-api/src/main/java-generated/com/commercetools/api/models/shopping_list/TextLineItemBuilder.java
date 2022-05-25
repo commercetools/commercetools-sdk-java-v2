@@ -42,7 +42,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     private Integer quantity;
 
     /**
-     <*  <p>When the text line item was added to the shopping list.</p>>
+     *  <p>When the text line item was added to the shopping list.</p>
      */
 
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
@@ -51,7 +51,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder custom(
@@ -61,7 +61,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -70,7 +70,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder description(
@@ -80,7 +80,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder description(
@@ -90,7 +90,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the TextLineItem.</p>>
+     *  <p>Unique identifier of the TextLineItem.</p>
      */
 
     public TextLineItemBuilder id(final String id) {
@@ -99,7 +99,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder name(
@@ -109,7 +109,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -118,7 +118,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemBuilder quantity(final Integer quantity) {

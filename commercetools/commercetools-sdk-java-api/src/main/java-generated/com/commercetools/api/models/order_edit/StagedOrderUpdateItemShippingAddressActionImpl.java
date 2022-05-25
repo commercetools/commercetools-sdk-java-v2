@@ -37,7 +37,7 @@ public class StagedOrderUpdateItemShippingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class StagedOrderUpdateItemShippingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

@@ -27,7 +27,7 @@ public class ProductDiscountValueExternalDraftImpl implements ProductDiscountVal
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

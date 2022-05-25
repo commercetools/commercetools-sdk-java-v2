@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FieldContainer {
 
     /**
-     <*  <p>Mapping from the custom field name to the actual value.</p>>
+     *  <p>Mapping from the custom field name to the actual value.</p>
      */
     @NotNull
     @Valid

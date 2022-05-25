@@ -36,7 +36,7 @@ public class CartSetBillingAddressActionImpl implements CartSetBillingAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartSetBillingAddressActionImpl implements CartSetBillingAddressAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

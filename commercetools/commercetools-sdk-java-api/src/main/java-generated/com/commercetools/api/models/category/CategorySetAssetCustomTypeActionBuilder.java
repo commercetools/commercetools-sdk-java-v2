@@ -36,7 +36,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     private java.lang.Object fields;
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -45,7 +45,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
@@ -54,7 +54,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -64,7 +64,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public CategorySetAssetCustomTypeActionBuilder type(
@@ -74,7 +74,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
     public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {

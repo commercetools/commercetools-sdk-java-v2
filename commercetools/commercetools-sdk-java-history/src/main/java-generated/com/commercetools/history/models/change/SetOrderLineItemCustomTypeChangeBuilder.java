@@ -37,7 +37,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder variant(final String variant) {
@@ -75,7 +75,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder nextValue(
@@ -85,7 +85,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder nextValue(
@@ -95,7 +95,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder previousValue(
@@ -105,7 +105,7 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderLineItemCustomTypeChangeBuilder previousValue(

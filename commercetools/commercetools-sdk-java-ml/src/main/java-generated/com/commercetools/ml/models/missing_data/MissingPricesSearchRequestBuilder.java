@@ -56,7 +56,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     private java.util.List<String> productTypeIds;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public MissingPricesSearchRequestBuilder limit(@Nullable final Long limit) {
@@ -65,7 +65,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MissingPricesSearchRequestBuilder offset(@Nullable final Long offset) {
@@ -74,7 +74,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>If true, searches data from staged products in addition to published products.</p>>
+     *  <p>If true, searches data from staged products in addition to published products.</p>
      */
 
     public MissingPricesSearchRequestBuilder staged(@Nullable final Boolean staged) {
@@ -83,7 +83,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Maximum number of products to scan.</p>>
+     *  <p>Maximum number of products to scan.</p>
      */
 
     public MissingPricesSearchRequestBuilder productSetLimit(@Nullable final Long productSetLimit) {
@@ -92,7 +92,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
      */
 
     public MissingPricesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
@@ -101,7 +101,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>If used, only checks if a product variant has a price in the provided currency code.</p>>
+     *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
      */
 
     public MissingPricesSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
@@ -110,7 +110,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>If true, checks if there are prices for the specified date range and time.</p>>
+     *  <p>If true, checks if there are prices for the specified date range and time.</p>
      */
 
     public MissingPricesSearchRequestBuilder checkDate(@Nullable final Boolean checkDate) {
@@ -119,7 +119,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>>
+     *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
      */
 
     public MissingPricesSearchRequestBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -128,7 +128,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>>
+     *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
      */
 
     public MissingPricesSearchRequestBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -137,7 +137,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder productIds(@Nullable final String... productIds) {
@@ -146,7 +146,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
@@ -155,7 +155,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder plusProductIds(@Nullable final String... productIds) {
@@ -167,7 +167,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
@@ -176,7 +176,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
@@ -185,7 +185,7 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
      */
 
     public MissingPricesSearchRequestBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {

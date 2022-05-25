@@ -30,7 +30,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setFirstName</code></p>>
+     *  <p>Shape of the action for <code>setFirstName</code></p>
      */
 
     public SetFirstNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetFirstNameChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetFirstNameChangeBuilder nextValue(final String nextValue) {

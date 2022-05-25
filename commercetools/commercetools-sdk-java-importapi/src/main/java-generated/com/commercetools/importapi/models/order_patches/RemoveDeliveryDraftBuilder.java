@@ -24,7 +24,7 @@ public class RemoveDeliveryDraftBuilder implements Builder<RemoveDeliveryDraft> 
     private String id;
 
     /**
-     <>
+     *
      */
 
     public RemoveDeliveryDraftBuilder id(final String id) {

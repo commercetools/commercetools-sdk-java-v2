@@ -26,7 +26,7 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
     private String cartPredicate;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public DiscountCodeSetCartPredicateActionBuilder cartPredicate(@Nullable final String cartPredicate) {

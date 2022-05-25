@@ -32,7 +32,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     String REMOVE_SUPPLY_CHANNEL = "removeSupplyChannel";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("supplyChannel")

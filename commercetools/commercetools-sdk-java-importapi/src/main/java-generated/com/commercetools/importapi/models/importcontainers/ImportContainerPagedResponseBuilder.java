@@ -37,7 +37,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     private java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ImportContainerPagedResponseBuilder limit(final Integer limit) {
@@ -46,7 +46,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ImportContainerPagedResponseBuilder offset(final Long offset) {
@@ -55,7 +55,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
 
     public ImportContainerPagedResponseBuilder count(final Long count) {
@@ -64,7 +64,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The total number of results matching the query.</p>>
+     *  <p>The total number of results matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder total(final Long total) {
@@ -73,7 +73,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder results(
@@ -83,7 +83,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder results(
@@ -93,7 +93,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder plusResults(
@@ -106,7 +106,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder plusResults(
@@ -120,7 +120,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public ImportContainerPagedResponseBuilder withResults(

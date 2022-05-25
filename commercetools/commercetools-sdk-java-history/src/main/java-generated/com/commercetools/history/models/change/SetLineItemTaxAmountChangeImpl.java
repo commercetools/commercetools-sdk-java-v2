@@ -55,7 +55,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -63,7 +63,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemTaxAmount</code></p>>
+     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
      */
 
     public String getChange() {
@@ -71,7 +71,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -79,7 +79,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -87,7 +87,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -95,7 +95,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {
@@ -103,7 +103,7 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {

@@ -52,7 +52,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -60,7 +60,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -68,7 +68,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -76,7 +76,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -84,7 +84,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -92,7 +92,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {

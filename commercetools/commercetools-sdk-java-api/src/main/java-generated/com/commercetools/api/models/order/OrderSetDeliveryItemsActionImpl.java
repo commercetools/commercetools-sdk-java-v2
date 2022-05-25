@@ -39,7 +39,7 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {

@@ -24,7 +24,7 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
     private String cartPredicate;
 
     /**
-     <*  <p>A valid Cart predicate.</p>>
+     *  <p>New value to set.</p>
      */
 
     public CartDiscountChangeCartPredicateActionBuilder cartPredicate(final String cartPredicate) {

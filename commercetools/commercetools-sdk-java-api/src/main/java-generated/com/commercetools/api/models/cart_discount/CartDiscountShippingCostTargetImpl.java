@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountShippingCostTarget
+ *  <p>Discount is applied to the shipping costs of the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingCostTarget, ModelBase {
@@ -27,7 +27,7 @@ public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

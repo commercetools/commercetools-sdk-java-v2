@@ -36,7 +36,7 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
     }
 
     /**
-     <*  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>>
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

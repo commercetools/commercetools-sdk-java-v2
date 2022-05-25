@@ -31,7 +31,7 @@ public class InventoryEntryUpdateActionImpl implements InventoryEntryUpdateActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

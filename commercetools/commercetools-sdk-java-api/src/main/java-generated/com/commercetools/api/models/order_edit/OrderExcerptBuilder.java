@@ -33,7 +33,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     private Integer version;
 
     /**
-     <>
+     *
      */
 
     public OrderExcerptBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
@@ -42,7 +42,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderExcerptBuilder totalPrice(
@@ -52,7 +52,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderExcerptBuilder taxedPrice(
@@ -62,7 +62,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderExcerptBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
@@ -71,7 +71,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderExcerptBuilder version(final Integer version) {

@@ -32,7 +32,7 @@ public interface IronMqDestination extends Destination {
     String IRON_MQ = "IronMQ";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("uri")

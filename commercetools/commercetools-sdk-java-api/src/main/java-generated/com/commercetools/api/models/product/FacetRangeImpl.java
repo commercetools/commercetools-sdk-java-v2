@@ -62,7 +62,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getFrom() {
@@ -70,7 +70,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFromStr() {
@@ -78,7 +78,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getTo() {
@@ -86,7 +86,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getToStr() {
@@ -94,7 +94,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -102,7 +102,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getProductCount() {
@@ -110,7 +110,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getTotal() {
@@ -118,7 +118,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getMin() {
@@ -126,7 +126,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getMax() {
@@ -134,7 +134,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getMean() {

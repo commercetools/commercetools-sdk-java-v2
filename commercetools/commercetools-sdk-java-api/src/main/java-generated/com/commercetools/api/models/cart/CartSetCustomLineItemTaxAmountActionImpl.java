@@ -39,7 +39,7 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -55,7 +55,7 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {

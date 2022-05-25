@@ -39,7 +39,7 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -55,7 +55,7 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

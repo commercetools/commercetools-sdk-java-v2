@@ -30,7 +30,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder parcelId(final String parcelId) {
@@ -39,7 +39,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder items(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -48,7 +48,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder items(
@@ -58,7 +58,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder plusItems(
@@ -71,7 +71,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder plusItems(
@@ -84,7 +84,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelItemsBuilder withItems(

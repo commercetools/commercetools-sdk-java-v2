@@ -29,7 +29,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     private String invalidAttributeName;
 
     /**
-     <>
+     *
      */
 
     public AttributeNameDoesNotExistErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeNameDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeNameDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class AttributeNameDoesNotExistErrorBuilder implements Builder<AttributeN
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeNameDoesNotExistErrorBuilder invalidAttributeName(final String invalidAttributeName) {

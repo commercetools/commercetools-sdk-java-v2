@@ -35,7 +35,7 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.LocalDate getDateOfBirth() {

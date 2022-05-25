@@ -30,7 +30,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     private com.commercetools.api.models.channel.Channel obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
+     *  <p>Unique identifier of the referenced Channel.</p>
      */
 
     public ChannelReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      */
 
     public ChannelReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      */
 
     public ChannelReferenceBuilder obj(@Nullable final com.commercetools.api.models.channel.Channel obj) {

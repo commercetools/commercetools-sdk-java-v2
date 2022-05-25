@@ -28,7 +28,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public ZoneUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Zone.</p>>
+     *  <p>Update actions to be performed on the Zone.</p>
      */
 
     public ZoneUpdateBuilder actions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Zone.</p>>
+     *  <p>Update actions to be performed on the Zone.</p>
      */
 
     public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
@@ -55,7 +55,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Zone.</p>>
+     *  <p>Update actions to be performed on the Zone.</p>
      */
 
     public ZoneUpdateBuilder plusActions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
@@ -67,7 +67,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Zone.</p>>
+     *  <p>Update actions to be performed on the Zone.</p>
      */
 
     public ZoneUpdateBuilder plusActions(
@@ -80,7 +80,7 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Zone.</p>>
+     *  <p>Update actions to be performed on the Zone.</p>
      */
 
     public ZoneUpdateBuilder withActions(

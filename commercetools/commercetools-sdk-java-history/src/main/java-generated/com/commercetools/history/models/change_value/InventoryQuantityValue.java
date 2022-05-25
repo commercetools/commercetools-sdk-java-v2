@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryQuantityValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Integer getQuantityOnStock();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("availableQuantity")

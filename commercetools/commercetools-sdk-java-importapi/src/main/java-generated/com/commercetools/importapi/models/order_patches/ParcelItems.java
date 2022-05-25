@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelItems {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

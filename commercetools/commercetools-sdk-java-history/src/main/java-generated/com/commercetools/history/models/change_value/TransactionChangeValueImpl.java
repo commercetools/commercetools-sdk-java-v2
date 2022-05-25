@@ -39,7 +39,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -47,7 +47,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getInteractionId() {
@@ -55,7 +55,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getTimestamp() {

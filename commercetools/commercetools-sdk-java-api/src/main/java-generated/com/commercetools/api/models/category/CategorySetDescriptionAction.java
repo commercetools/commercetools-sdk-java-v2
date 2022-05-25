@@ -32,7 +32,7 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")

@@ -27,7 +27,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     private String authorizationHeader;
 
     /**
-     <*  <p>URL with authorization header.</p>>
+     *  <p>URL with authorization header.</p>
      */
 
     public ExternalOAuthBuilder url(final String url) {
@@ -36,7 +36,7 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
     }
 
     /**
-     <*  <p>Partially hidden on retrieval.</p>>
+     *  <p>Partially hidden on retrieval.</p>
      */
 
     public ExternalOAuthBuilder authorizationHeader(final String authorizationHeader) {

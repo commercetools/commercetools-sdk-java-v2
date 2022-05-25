@@ -31,10 +31,6 @@ public class TypeUpdateActionBuilder {
         return com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder.of();
     }
 
-    public com.commercetools.api.models.type.TypeChangeFieldDefinitionLabelActionBuilder changeFieldDefinitionLabelBuilder() {
-        return com.commercetools.api.models.type.TypeChangeFieldDefinitionLabelActionBuilder.of();
-    }
-
     public com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder changeFieldDefinitionOrderBuilder() {
         return com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder.of();
     }

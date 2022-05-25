@@ -47,7 +47,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     <*  <p>The version specified in the failed request.</p>>
+     *  <p>The version specified in the failed request.</p>
      */
 
     public Long getSpecifiedVersion() {
@@ -71,7 +71,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     <*  <p>The current version of the resource.</p>>
+     *  <p>The current version of the resource.</p>
      */
 
     public Long getCurrentVersion() {
@@ -79,7 +79,7 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-     <*  <p>The resource in conflict.</p>>
+     *  <p>The resource in conflict.</p>
      */
 
     public java.lang.Object getConflictedResource() {

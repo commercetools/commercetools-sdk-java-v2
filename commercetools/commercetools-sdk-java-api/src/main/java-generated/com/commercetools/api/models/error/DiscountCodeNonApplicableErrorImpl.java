@@ -62,7 +62,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -70,7 +70,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -78,7 +78,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -86,7 +86,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public String getDiscountCode() {
@@ -94,7 +94,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public String getReason() {
@@ -102,7 +102,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public String getDicountCodeId() {
@@ -110,7 +110,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -118,7 +118,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -126,7 +126,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidityCheckTime() {

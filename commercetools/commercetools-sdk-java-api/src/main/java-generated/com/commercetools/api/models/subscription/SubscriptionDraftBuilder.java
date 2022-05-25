@@ -39,7 +39,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder changes(
@@ -49,7 +49,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder changes(
@@ -59,7 +59,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -72,7 +72,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder plusChanges(
@@ -86,7 +86,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder withChanges(
@@ -98,7 +98,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder destination(
@@ -108,7 +108,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder destination(
@@ -118,7 +118,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Subscription.</p>>
+     *  <p>User-defined unique identifier for the Subscription.</p>
      */
 
     public SubscriptionDraftBuilder key(@Nullable final String key) {
@@ -127,7 +127,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder messages(
@@ -137,7 +137,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder messages(
@@ -147,7 +147,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -160,7 +160,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder plusMessages(
@@ -174,7 +174,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder withMessages(
@@ -186,7 +186,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder format(
@@ -196,7 +196,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionDraftBuilder format(

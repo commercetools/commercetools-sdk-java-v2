@@ -36,21 +36,21 @@ public interface AddCustomLineItemChange extends Change {
     String ADD_CUSTOM_LINE_ITEM_CHANGE = "AddCustomLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for adding and removing custom line items</p>>
+     *  <p>Update action for adding and removing custom line items</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddCustomLineItemChange extends Change {
     public CustomLineItem getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

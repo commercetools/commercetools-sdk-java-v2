@@ -36,7 +36,7 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {

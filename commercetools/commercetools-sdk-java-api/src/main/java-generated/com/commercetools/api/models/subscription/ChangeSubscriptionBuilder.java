@@ -24,7 +24,7 @@ public class ChangeSubscriptionBuilder implements Builder<ChangeSubscription> {
     private String resourceTypeId;
 
     /**
-     <>
+     *
      */
 
     public ChangeSubscriptionBuilder resourceTypeId(final String resourceTypeId) {

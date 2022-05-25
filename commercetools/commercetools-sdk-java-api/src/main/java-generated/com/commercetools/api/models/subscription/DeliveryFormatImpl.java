@@ -31,7 +31,7 @@ public class DeliveryFormatImpl implements DeliveryFormat, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

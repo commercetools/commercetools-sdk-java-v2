@@ -33,7 +33,7 @@ public interface CustomFieldEnumType extends FieldType {
     String ENUM = "Enum";
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
     @NotNull
     @Valid

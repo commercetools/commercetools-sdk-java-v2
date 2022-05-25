@@ -29,7 +29,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("description")

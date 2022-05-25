@@ -27,7 +27,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
@@ -36,7 +36,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnPaymentStateActionBuilder paymentState(

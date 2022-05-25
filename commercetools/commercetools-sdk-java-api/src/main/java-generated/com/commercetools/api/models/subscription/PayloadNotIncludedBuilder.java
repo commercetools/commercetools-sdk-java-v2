@@ -27,7 +27,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
     private String payloadType;
 
     /**
-     <>
+     *
      */
 
     public PayloadNotIncludedBuilder reason(final String reason) {
@@ -36,7 +36,7 @@ public class PayloadNotIncludedBuilder implements Builder<PayloadNotIncluded> {
     }
 
     /**
-     <>
+     *
      */
 
     public PayloadNotIncludedBuilder payloadType(final String payloadType) {

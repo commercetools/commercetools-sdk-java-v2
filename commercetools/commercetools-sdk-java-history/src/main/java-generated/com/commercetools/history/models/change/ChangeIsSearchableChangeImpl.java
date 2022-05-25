@@ -47,7 +47,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     <*  <p>Update action for <code>changeIsSearchable</code> on product types</p>>
+     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     <*  <p>The name of the updated attribute.</p>>
+     *  <p>The name of the updated attribute.</p>
      */
 
     public String getAttributeName() {
@@ -71,7 +71,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPreviousValue() {

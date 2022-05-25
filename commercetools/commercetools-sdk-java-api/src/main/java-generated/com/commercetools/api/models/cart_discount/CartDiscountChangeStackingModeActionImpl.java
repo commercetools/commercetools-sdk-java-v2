@@ -36,7 +36,7 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
     }
 
     /**
-     <>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {

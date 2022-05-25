@@ -43,7 +43,7 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>>
+     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.PaymentInfo getNextValue() {
@@ -67,7 +67,7 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.PaymentInfo getPreviousValue() {

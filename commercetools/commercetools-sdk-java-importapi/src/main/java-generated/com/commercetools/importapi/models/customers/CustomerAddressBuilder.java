@@ -95,7 +95,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     private String externalId;
 
     /**
-     <*  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>>
+     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
      */
 
     public CustomerAddressBuilder key(final String key) {
@@ -104,7 +104,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder title(@Nullable final String title) {
@@ -113,7 +113,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder salutation(@Nullable final String salutation) {
@@ -122,7 +122,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder firstName(@Nullable final String firstName) {
@@ -131,7 +131,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder lastName(@Nullable final String lastName) {
@@ -140,7 +140,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder streetName(@Nullable final String streetName) {
@@ -149,7 +149,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder streetNumber(@Nullable final String streetNumber) {
@@ -158,7 +158,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
@@ -167,7 +167,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder postalCode(@Nullable final String postalCode) {
@@ -176,7 +176,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder city(@Nullable final String city) {
@@ -185,7 +185,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder region(@Nullable final String region) {
@@ -194,7 +194,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder state(@Nullable final String state) {
@@ -203,7 +203,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public CustomerAddressBuilder country(final String country) {
@@ -212,7 +212,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder company(@Nullable final String company) {
@@ -221,7 +221,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder department(@Nullable final String department) {
@@ -230,7 +230,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder building(@Nullable final String building) {
@@ -239,7 +239,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder apartment(@Nullable final String apartment) {
@@ -248,7 +248,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder pOBox(@Nullable final String pOBox) {
@@ -257,7 +257,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder phone(@Nullable final String phone) {
@@ -266,7 +266,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder mobile(@Nullable final String mobile) {
@@ -275,7 +275,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder email(@Nullable final String email) {
@@ -284,7 +284,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder fax(@Nullable final String fax) {
@@ -293,7 +293,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
@@ -302,7 +302,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressBuilder externalId(@Nullable final String externalId) {

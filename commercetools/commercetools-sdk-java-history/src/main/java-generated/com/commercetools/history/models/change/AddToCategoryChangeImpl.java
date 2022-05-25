@@ -47,7 +47,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addToCategory</code></p>>
+     *  <p>Update action for <code>addToCategory</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getCategory() {
@@ -71,7 +71,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -79,7 +79,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

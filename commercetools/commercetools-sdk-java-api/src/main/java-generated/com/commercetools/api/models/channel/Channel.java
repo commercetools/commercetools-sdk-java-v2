@@ -47,98 +47,98 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Customizable<Channel> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Channel.</p>>
+     *  <p>Unique identifier of the Channel.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the Channel.</p>>
+     *  <p>Current version of the Channel.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the Channel was initially created.</p>>
+     *  <p>Date and time (UTC) the Channel was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the Channel was last updated.</p>>
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the Channel.</p>>
+     *  <p>User-defined unique identifier of the Channel.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Roles of the Channel.</p>>
+     *  <p>Roles of the Channel.</p>
      */
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();
 
     /**
-     <*  <p>Name of the Channel.</p>>
+     *  <p>Name of the Channel.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     <*  <p>Description of the Channel.</p>>
+     *  <p>Description of the Channel.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>>
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for the Channel.</p>>
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
      */
     @Valid
     @JsonProperty("reviewRatingStatistics")
     public ReviewRatingStatistics getReviewRatingStatistics();
 
     /**
-     <*  <p>Custom Fields defined for the Channel.</p>>
+     *  <p>Custom Fields defined for the Channel.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <*  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
      */
     @Valid
     @JsonProperty("geoLocation")

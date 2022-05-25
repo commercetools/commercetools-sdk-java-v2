@@ -30,7 +30,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setVatId</code></p>>
+     *  <p>Shape of the action for <code>setVatId</code></p>
      */
 
     public SetVatIdChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetVatIdChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetVatIdChangeBuilder nextValue(final String nextValue) {

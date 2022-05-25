@@ -47,7 +47,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingEnumKey() {
@@ -79,7 +79,7 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingAttributeName() {

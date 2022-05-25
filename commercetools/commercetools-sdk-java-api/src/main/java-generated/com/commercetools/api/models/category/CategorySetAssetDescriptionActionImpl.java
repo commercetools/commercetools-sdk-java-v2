@@ -43,7 +43,7 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -59,7 +59,7 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -67,7 +67,7 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

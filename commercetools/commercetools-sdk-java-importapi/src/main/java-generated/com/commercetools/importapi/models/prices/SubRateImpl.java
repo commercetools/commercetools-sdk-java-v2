@@ -34,7 +34,7 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -42,7 +42,7 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getAmount() {

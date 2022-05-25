@@ -30,7 +30,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     private com.commercetools.history.models.common.ReturnPaymentState previousValue;
 
     /**
-     <*  <p>Update action for <code>setReturnPaymentState</code></p>>
+     *  <p>Update action for <code>setReturnPaymentState</code></p>
      */
 
     public SetReturnPaymentStateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     <>
+     *
      */
 
     public SetReturnPaymentStateChangeBuilder nextValue(
@@ -49,7 +49,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     <>
+     *
      */
 
     public SetReturnPaymentStateChangeBuilder previousValue(

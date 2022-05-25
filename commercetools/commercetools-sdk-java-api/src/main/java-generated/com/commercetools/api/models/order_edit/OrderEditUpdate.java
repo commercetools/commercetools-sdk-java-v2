@@ -33,14 +33,14 @@ public interface OrderEditUpdate extends
         com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -48,7 +48,7 @@ public interface OrderEditUpdate extends
     public List<OrderEditUpdateAction> getActions();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dryRun")

@@ -35,7 +35,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
      */
 
     public String getAddressKey() {
@@ -43,7 +43,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>>
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      */
 
     public Double getQuantity() {

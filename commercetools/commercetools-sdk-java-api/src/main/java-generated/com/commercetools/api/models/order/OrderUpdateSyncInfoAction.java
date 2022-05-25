@@ -35,7 +35,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @NotNull
     @Valid
@@ -43,14 +43,14 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("syncedAt")

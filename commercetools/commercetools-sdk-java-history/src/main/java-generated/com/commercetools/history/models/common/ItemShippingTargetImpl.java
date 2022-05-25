@@ -35,7 +35,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     <*  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>>
+     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
      */
 
     public String getAddressKey() {
@@ -43,7 +43,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     }
 
     /**
-     <*  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>>
+     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
      */
 
     public Integer getQuantity() {

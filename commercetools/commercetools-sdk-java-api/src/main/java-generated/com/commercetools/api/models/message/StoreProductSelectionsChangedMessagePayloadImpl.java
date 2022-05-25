@@ -45,7 +45,7 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -53,7 +53,7 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getAddedProductSelections() {
@@ -61,7 +61,7 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getRemovedProductSelections() {
@@ -69,7 +69,7 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getUpdatedProductSelections() {

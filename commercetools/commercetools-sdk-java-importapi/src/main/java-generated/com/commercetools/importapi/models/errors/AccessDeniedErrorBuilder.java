@@ -24,7 +24,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public AccessDeniedErrorBuilder message(final String message) {

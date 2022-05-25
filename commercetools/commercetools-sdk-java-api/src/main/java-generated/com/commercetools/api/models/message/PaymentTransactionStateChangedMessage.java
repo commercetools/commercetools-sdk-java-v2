@@ -41,14 +41,14 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("state")

@@ -32,7 +32,7 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     String SET_STORES = "setStores";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("stores")

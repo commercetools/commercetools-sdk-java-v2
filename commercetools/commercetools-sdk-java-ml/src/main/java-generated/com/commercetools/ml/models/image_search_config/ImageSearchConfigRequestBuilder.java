@@ -25,7 +25,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -35,7 +35,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public ImageSearchConfigRequestBuilder actions(
@@ -45,7 +45,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -58,7 +58,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public ImageSearchConfigRequestBuilder plusActions(
@@ -73,7 +73,7 @@ public class ImageSearchConfigRequestBuilder implements Builder<ImageSearchConfi
     }
 
     /**
-     <*  <p>The list of update actions to be performed on the project.</p>>
+     *  <p>The list of update actions to be performed on the project.</p>
      */
 
     public ImageSearchConfigRequestBuilder withActions(

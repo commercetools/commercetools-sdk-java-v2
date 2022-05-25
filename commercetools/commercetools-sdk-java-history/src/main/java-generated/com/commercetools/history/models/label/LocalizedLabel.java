@@ -34,14 +34,14 @@ public interface LocalizedLabel extends Label {
     String LOCALIZED_LABEL = "LocalizedLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

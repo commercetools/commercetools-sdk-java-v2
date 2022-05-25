@@ -34,14 +34,14 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

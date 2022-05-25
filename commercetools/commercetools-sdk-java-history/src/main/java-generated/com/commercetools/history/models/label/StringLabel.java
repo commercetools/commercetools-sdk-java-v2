@@ -32,14 +32,14 @@ public interface StringLabel extends Label {
     String STRING_LABEL = "StringLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

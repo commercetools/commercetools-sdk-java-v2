@@ -43,7 +43,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
+     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -67,7 +67,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {

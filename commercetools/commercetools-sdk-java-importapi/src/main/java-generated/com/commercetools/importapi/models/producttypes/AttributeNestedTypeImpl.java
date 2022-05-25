@@ -36,7 +36,7 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
     }
 
     /**
-     <*  <p>References a product type by key.</p>>
+     *  <p>References a product type by key.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference() {

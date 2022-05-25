@@ -46,7 +46,7 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -54,7 +54,7 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setSku</code></p>>
+     *  <p>Update action for <code>setSku</code></p>
      */
 
     public String getChange() {
@@ -62,7 +62,7 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -70,7 +70,7 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -78,7 +78,7 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

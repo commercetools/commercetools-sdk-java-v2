@@ -26,7 +26,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public EnumValuesMustMatchErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     }
 
     /**
-     <>
+     *
      */
 
     public EnumValuesMustMatchErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class EnumValuesMustMatchErrorBuilder implements Builder<EnumValuesMustMa
     }
 
     /**
-     <>
+     *
      */
 
     public EnumValuesMustMatchErrorBuilder addValue(final String key, final java.lang.Object value) {

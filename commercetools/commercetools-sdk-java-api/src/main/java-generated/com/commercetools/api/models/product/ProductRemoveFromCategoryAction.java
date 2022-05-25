@@ -34,7 +34,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     String REMOVE_FROM_CATEGORY = "removeFromCategory";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     public CategoryResourceIdentifier getCategory();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

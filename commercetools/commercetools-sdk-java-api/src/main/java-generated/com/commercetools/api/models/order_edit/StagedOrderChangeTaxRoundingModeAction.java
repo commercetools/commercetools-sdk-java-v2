@@ -34,7 +34,7 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxRoundingMode")

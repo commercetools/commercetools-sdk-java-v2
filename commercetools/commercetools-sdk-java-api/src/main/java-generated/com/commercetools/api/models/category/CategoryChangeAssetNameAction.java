@@ -34,21 +34,21 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     String CHANGE_ASSET_NAME = "changeAssetName";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

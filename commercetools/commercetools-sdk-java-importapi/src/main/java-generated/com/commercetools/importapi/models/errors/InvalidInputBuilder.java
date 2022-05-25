@@ -24,7 +24,7 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public InvalidInputBuilder message(final String message) {

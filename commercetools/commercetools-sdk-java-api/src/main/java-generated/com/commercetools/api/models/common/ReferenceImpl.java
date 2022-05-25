@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+ *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceImpl implements Reference, ModelBase {
@@ -35,7 +35,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -43,7 +43,7 @@ public class ReferenceImpl implements Reference, ModelBase {
     }
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
 
     public String getId() {

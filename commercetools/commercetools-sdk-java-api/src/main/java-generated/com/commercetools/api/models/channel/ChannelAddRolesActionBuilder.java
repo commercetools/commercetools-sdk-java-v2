@@ -24,7 +24,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public ChannelAddRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -33,7 +33,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public ChannelAddRolesActionBuilder roles(
@@ -43,7 +43,7 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public ChannelAddRolesActionBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {

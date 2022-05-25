@@ -35,7 +35,7 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -43,14 +43,14 @@ public interface OrderStateTransitionMessagePayload extends OrderMessagePayload 
     public StateReference getState();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("force")

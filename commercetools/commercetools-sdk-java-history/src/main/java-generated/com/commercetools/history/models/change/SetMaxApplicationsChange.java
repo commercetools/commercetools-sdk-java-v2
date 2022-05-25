@@ -34,28 +34,28 @@ public interface SetMaxApplicationsChange extends Change {
     String SET_MAX_APPLICATIONS_CHANGE = "SetMaxApplicationsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setMaxApplications</code></p>>
+     *  <p>Shape of the action for <code>setMaxApplications</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

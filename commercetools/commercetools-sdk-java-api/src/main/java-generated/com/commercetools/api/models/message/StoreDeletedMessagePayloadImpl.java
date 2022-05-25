@@ -27,7 +27,7 @@ public class StoreDeletedMessagePayloadImpl implements StoreDeletedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

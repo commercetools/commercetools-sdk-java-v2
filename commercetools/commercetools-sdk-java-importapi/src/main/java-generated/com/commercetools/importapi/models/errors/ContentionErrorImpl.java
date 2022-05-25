@@ -35,7 +35,7 @@ public class ContentionErrorImpl implements ContentionError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class ContentionErrorImpl implements ContentionError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

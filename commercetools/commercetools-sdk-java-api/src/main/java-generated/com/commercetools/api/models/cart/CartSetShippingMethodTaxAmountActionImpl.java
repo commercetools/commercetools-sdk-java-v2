@@ -36,7 +36,7 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {

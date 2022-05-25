@@ -35,7 +35,7 @@ public class StateChangeInitialActionImpl implements StateChangeInitialAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StateChangeInitialActionImpl implements StateChangeInitialAction, M
     }
 
     /**
-     <*  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>>
+     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
      */
 
     public Boolean getInitial() {

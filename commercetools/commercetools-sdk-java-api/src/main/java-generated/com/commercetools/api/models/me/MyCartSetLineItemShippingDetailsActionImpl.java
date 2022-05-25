@@ -39,7 +39,7 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

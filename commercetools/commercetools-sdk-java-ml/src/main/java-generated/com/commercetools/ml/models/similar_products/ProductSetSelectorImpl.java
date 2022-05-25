@@ -51,7 +51,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>The project containing the project set.</p>>
+     *  <p>The project containing the project set.</p>
      */
 
     public String getProjectKey() {
@@ -59,7 +59,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>>
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
      */
 
     public java.util.List<String> getProductIds() {
@@ -67,7 +67,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>>
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
      */
 
     public java.util.List<String> getProductTypeIds() {
@@ -75,7 +75,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>Specifies use of staged or current product data.</p>>
+     *  <p>Specifies use of staged or current product data.</p>
      */
 
     public Boolean getStaged() {
@@ -83,7 +83,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>>
+     *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
      */
 
     public Boolean getIncludeVariants() {
@@ -91,7 +91,7 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-     <*  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>>
+     *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
      */
 
     public Long getProductSetLimit() {

@@ -32,7 +32,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     <*  <p>A reference to the customer this payment belongs to.</p>>
+     *  <p>A reference to the customer this payment belongs to.</p>
      */
     @Valid
     @JsonProperty("customer")

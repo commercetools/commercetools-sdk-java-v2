@@ -25,7 +25,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -35,7 +35,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
@@ -45,7 +45,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -58,7 +58,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -72,7 +72,7 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
 
     public StoreSetProductSelectionsActionBuilder withProductSelections(

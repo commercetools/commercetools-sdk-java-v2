@@ -35,7 +35,7 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getValue() {

@@ -31,7 +31,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setDescription</code></p>>
+     *  <p>Shape of the action for <code>setDescription</code></p>
      */
 
     public SetLocalizedDescriptionChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
-     <>
+     *
      */
 
     public SetLocalizedDescriptionChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
-     <>
+     *
      */
 
     public SetLocalizedDescriptionChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
-     <>
+     *
      */
 
     public SetLocalizedDescriptionChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
-     <>
+     *
      */
 
     public SetLocalizedDescriptionChangeBuilder nextValue(

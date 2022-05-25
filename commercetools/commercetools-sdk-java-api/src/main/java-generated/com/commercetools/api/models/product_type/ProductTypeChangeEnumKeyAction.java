@@ -34,21 +34,21 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     String CHANGE_ENUM_KEY = "changeEnumKey";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newKey")

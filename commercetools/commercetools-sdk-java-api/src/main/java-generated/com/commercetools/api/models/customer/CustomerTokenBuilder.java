@@ -41,7 +41,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     private String value;
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerToken.</p>>
+     *  <p>Unique identifier of the CustomerToken.</p>
      */
 
     public CustomerTokenBuilder id(final String id) {
@@ -50,7 +50,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerTokenBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -59,7 +59,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerTokenBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
@@ -68,7 +68,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerTokenBuilder customerId(final String customerId) {
@@ -77,7 +77,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
@@ -86,7 +86,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerTokenBuilder value(final String value) {

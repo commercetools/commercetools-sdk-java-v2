@@ -31,7 +31,7 @@ public class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

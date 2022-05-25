@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>A representation of the resource to import. Import resources are similar to commercetools draft types, but they only support key references. In general, import resources are more granular then the normal commercetools resource. They are optimized for incremental updates and therefore have a slightly different structure.</p>
+ *  <p>A representation of the resource to import. Import resources are similar to draft types, but they only support key references. In general, import resources are more granular then regular resources. They are optimized for incremental updates and therefore have a slightly different structure.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportResource {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")

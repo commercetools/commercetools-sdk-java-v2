@@ -35,15 +35,15 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")
     public String getValue();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isMatching")

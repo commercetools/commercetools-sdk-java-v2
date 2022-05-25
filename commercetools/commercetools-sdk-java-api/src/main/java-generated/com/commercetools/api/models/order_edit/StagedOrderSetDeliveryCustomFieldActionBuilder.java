@@ -33,7 +33,7 @@ public class StagedOrderSetDeliveryCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryCustomFieldActionBuilder deliveryId(final String deliveryId) {
@@ -42,7 +42,7 @@ public class StagedOrderSetDeliveryCustomFieldActionBuilder
     }
 
     /**
-     <*  <p>Name of the Custom Field.</p>>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public StagedOrderSetDeliveryCustomFieldActionBuilder name(final String name) {
@@ -51,7 +51,7 @@ public class StagedOrderSetDeliveryCustomFieldActionBuilder
     }
 
     /**
-     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public StagedOrderSetDeliveryCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

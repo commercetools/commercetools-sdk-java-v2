@@ -36,7 +36,7 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
     @NotNull
     @Valid
@@ -44,14 +44,14 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
     public DiscountCodeReference getDiscountCode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("state")
     public DiscountCodeState getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldState")

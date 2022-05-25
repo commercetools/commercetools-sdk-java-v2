@@ -33,35 +33,35 @@ public interface SetPropertyChange extends Change {
     String SET_PROPERTY_CHANGE = "SetPropertyChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>setProperty</code> on custom objects</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Value path to the property that was changed</p>>
+     *  <p>Value path to the property that was changed</p>
      */
     @NotNull
     @JsonProperty("path")
     public String getPath();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

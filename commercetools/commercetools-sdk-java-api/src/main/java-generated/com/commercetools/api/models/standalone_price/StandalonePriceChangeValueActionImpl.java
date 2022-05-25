@@ -35,7 +35,7 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {

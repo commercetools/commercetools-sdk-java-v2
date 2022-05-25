@@ -28,7 +28,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     private com.commercetools.history.models.common.FieldDefinition nextValue;
 
     /**
-     <*  <p>Update action for <code>addFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
      */
 
     public AddFieldDefinitionChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     <>
+     *
      */
 
     public AddFieldDefinitionChangeBuilder nextValue(
@@ -47,7 +47,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     <>
+     *
      */
 
     public AddFieldDefinitionChangeBuilder nextValue(

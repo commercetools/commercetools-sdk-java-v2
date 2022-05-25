@@ -39,7 +39,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getUrl() {
@@ -47,7 +47,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ImageDimensions getDimensions() {
@@ -55,7 +55,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLabel() {

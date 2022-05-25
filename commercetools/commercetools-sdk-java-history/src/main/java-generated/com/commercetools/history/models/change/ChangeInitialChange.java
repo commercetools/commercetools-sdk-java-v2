@@ -34,28 +34,28 @@ public interface ChangeInitialChange extends Change {
     String CHANGE_INITIAL_CHANGE = "ChangeInitialChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeInitial</code></p>>
+     *  <p>Shape of the action for <code>changeInitial</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

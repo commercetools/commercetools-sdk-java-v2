@@ -27,7 +27,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     private Long version;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Cart from which the Platform creates an Order.</p>>
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
      */
 
     public MyOrderFromCartDraftBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     <>
+     *
      */
 
     public MyOrderFromCartDraftBuilder version(final Long version) {

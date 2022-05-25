@@ -26,7 +26,7 @@ public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerS
     private String salutation;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSetSalutationActionBuilder salutation(@Nullable final String salutation) {

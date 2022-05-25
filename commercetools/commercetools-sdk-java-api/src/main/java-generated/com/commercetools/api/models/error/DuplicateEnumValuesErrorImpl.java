@@ -43,7 +43,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getDuplicates() {

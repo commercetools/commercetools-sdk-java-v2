@@ -30,7 +30,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setExpectedDelivery</code></p>>
+     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
      */
 
     public SetExpectedDeliveryChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
     }
 
     /**
-     <>
+     *
      */
 
     public SetExpectedDeliveryChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
     }
 
     /**
-     <>
+     *
      */
 
     public SetExpectedDeliveryChangeBuilder nextValue(final String nextValue) {

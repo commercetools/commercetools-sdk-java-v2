@@ -30,7 +30,7 @@ public interface ResourceDeletionError extends ErrorObject {
     String RESOURCE_DELETION = "ResourceDeletion";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("resource")

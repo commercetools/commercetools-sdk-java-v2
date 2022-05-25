@@ -35,7 +35,7 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public Long getMaxApplications() {

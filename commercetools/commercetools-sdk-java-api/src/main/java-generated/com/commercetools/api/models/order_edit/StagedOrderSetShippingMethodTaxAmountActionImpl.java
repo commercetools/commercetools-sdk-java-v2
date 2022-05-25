@@ -37,7 +37,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {

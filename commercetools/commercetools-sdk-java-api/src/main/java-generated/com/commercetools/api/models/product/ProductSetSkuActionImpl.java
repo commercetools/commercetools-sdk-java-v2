@@ -42,7 +42,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -58,7 +58,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     <*  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>>
+     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

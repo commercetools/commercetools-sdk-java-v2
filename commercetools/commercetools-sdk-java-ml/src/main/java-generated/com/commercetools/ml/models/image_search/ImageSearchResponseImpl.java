@@ -42,7 +42,7 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-     <*  <p>The maximum number of results to return from a query.</p>>
+     *  <p>The maximum number of results to return from a query.</p>
      */
 
     public Integer getCount() {
@@ -50,7 +50,7 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Double getOffset() {
@@ -58,7 +58,7 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-     <*  <p>The total number of product images that were have been analyzed.</p>>
+     *  <p>The total number of product images that were have been analyzed.</p>
      */
 
     public Integer getTotal() {
@@ -66,7 +66,7 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-     <*  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>>
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
      */
 
     public java.util.List<com.commercetools.ml.models.image_search.ResultItem> getResults() {

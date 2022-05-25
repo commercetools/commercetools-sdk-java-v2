@@ -25,7 +25,7 @@ public class CartAddPaymentActionBuilder implements Builder<CartAddPaymentAction
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     <>
+     *
      */
 
     public CartAddPaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class CartAddPaymentActionBuilder implements Builder<CartAddPaymentAction
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddPaymentActionBuilder payment(

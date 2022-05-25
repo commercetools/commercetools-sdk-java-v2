@@ -43,7 +43,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {

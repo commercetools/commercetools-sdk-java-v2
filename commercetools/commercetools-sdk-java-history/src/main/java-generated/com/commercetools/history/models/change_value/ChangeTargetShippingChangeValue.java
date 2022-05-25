@@ -31,7 +31,7 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
     String SHIPPING = "shipping";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

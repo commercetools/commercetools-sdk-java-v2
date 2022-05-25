@@ -31,7 +31,7 @@ public class HttpDestinationAuthenticationImpl implements HttpDestinationAuthent
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

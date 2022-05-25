@@ -30,7 +30,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     private String newKey;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeEnumKeyActionBuilder attributeName(final String attributeName) {
@@ -39,7 +39,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeEnumKeyActionBuilder key(final String key) {
@@ -48,7 +48,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeEnumKeyActionBuilder newKey(final String newKey) {

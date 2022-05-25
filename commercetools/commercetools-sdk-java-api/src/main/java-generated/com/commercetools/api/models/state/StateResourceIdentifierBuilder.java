@@ -29,7 +29,7 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public StateResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public StateResourceIdentifierBuilder key(@Nullable final String key) {

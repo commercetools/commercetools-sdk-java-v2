@@ -30,7 +30,7 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
     String PROJECT_NOT_CONFIGURED_FOR_LANGUAGES = "ProjectNotConfiguredForLanguages";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("languages")

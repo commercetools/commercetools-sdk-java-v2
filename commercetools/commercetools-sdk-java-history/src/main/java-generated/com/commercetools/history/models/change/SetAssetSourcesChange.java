@@ -38,21 +38,21 @@ public interface SetAssetSourcesChange extends Change {
     String SET_ASSET_SOURCES_CHANGE = "SetAssetSourcesChange";
 
     /**
-     <*  <p>Update action for <code>setAssetSources</code></p>>
+     *  <p>Update action for <code>setAssetSources</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetAssetSourcesChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetAssetSourcesChange extends Change {
     public List<AssetSource> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

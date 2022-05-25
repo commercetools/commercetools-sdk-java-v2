@@ -39,7 +39,7 @@ public interface OrderReturnInfoSetMessage extends OrderMessage {
     String RETURN_INFO_SET = "ReturnInfoSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("returnInfo")

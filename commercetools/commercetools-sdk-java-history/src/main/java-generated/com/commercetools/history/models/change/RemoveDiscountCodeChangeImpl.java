@@ -39,7 +39,7 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
     }
 
     /**
-     <*  <p>Update action for <code>removeDiscountCode</code></p>>
+     *  <p>Update action for <code>removeDiscountCode</code></p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountCodeInfo getPreviousValue() {

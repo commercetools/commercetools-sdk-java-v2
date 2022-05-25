@@ -38,7 +38,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     String CUSTOM_LINE_ITEM_RETURN_ITEM = "CustomLineItemReturnItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")

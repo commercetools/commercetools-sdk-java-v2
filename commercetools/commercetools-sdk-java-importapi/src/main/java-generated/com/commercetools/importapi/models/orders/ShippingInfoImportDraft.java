@@ -37,14 +37,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingInfoImportDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface ShippingInfoImportDraft {
     public TypedMoney getPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,42 +60,42 @@ public interface ShippingInfoImportDraft {
     public ShippingRateDraft getShippingRate();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     <*  <p>References a shipping method by key.</p>>
+     *  <p>References a shipping method by key.</p>
      */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodKeyReference getShippingMethod();
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("shippingMethodState")

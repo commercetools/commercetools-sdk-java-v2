@@ -35,14 +35,14 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
     String SET_RETURN_SHIPMENT_STATE = "setReturnShipmentState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")

@@ -28,7 +28,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public ReplicaCartDraftBuilder reference(final java.lang.Object reference) {
@@ -37,7 +37,7 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
     }
 
     /**
-     <*  <p>User-specific unique identifier of the cart.</p>>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     public ReplicaCartDraftBuilder key(@Nullable final String key) {

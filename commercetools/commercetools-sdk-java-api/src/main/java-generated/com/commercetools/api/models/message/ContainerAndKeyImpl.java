@@ -34,7 +34,7 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
     }
 
     /**
-     <*  <p>User-defined identifier that is unique within the given container.</p>>
+     *  <p>User-defined identifier that is unique within the given container.</p>
      */
 
     public String getKey() {
@@ -42,7 +42,7 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
     }
 
     /**
-     <*  <p>Namespace to group Custom Objects.</p>>
+     *  <p>Namespace to group Custom Objects.</p>
      */
 
     public String getContainer() {

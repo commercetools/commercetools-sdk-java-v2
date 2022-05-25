@@ -34,7 +34,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -42,7 +42,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {

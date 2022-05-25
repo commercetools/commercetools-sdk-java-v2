@@ -51,7 +51,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -75,7 +75,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -83,7 +83,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
@@ -91,7 +91,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {

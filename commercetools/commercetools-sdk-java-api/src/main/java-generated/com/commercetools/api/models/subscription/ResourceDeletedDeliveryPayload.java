@@ -36,21 +36,21 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_DELETED = "ResourceDeleted";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("modifiedAt")
     public ZonedDateTime getModifiedAt();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dataErasure")

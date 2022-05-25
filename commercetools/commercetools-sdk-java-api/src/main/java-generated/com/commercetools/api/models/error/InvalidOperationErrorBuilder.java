@@ -26,7 +26,7 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidOperationErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidOperationErrorBuilder addValue(final String key, final java.lang.Object value) {

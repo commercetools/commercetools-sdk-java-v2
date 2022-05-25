@@ -31,7 +31,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     private com.commercetools.history.models.common.Money nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountPlannedChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountPlannedChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountPlannedChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountPlannedChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAmountPlannedChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {

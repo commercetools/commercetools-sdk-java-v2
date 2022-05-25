@@ -41,7 +41,7 @@ public interface CategoryCreatedMessage extends Message {
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

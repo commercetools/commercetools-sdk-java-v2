@@ -36,7 +36,7 @@ public class LocalizedStringFieldImpl implements LocalizedStringField, ModelBase
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -44,12 +44,12 @@ public class LocalizedStringFieldImpl implements LocalizedStringField, ModelBase
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getValue() {

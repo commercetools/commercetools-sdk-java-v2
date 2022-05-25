@@ -24,7 +24,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     private String code;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddDiscountCodeActionBuilder code(final String code) {

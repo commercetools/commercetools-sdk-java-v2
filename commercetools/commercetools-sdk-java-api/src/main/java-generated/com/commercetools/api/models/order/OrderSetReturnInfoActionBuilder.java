@@ -27,7 +27,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnInfoActionBuilder items(
@@ -37,7 +37,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnInfoActionBuilder items(
@@ -47,7 +47,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnInfoActionBuilder plusItems(
@@ -60,7 +60,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnInfoActionBuilder plusItems(
@@ -73,7 +73,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnInfoActionBuilder withItems(

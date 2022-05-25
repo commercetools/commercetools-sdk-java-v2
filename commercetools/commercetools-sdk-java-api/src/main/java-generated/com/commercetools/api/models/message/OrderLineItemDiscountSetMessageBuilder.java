@@ -66,7 +66,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder id(final String id) {
@@ -75,7 +75,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder version(final Long version) {
@@ -84,7 +84,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +93,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -102,7 +102,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -112,7 +112,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder lastModifiedBy(
@@ -122,7 +122,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdBy(
@@ -132,7 +132,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder createdBy(
@@ -142,7 +142,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -151,7 +151,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -161,7 +161,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder resource(
@@ -171,7 +171,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -180,7 +180,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -202,7 +202,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder lineItemId(final String lineItemId) {
@@ -211,7 +211,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -221,7 +221,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
@@ -231,7 +231,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -244,7 +244,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
@@ -258,7 +258,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
@@ -270,8 +270,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -281,8 +281,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
@@ -292,7 +292,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(
@@ -302,7 +302,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessageBuilder taxedPrice(

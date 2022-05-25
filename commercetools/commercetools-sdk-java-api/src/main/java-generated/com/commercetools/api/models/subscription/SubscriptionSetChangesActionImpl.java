@@ -36,7 +36,7 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {

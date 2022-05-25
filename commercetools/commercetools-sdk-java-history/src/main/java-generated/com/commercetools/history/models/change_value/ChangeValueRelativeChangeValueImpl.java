@@ -35,7 +35,7 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPermyriad() {

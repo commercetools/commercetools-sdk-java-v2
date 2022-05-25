@@ -27,7 +27,7 @@ public class AttributeTimeTypeImpl implements AttributeTimeType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

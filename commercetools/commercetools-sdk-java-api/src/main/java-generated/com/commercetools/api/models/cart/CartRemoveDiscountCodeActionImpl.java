@@ -36,7 +36,7 @@ public class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeA
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {

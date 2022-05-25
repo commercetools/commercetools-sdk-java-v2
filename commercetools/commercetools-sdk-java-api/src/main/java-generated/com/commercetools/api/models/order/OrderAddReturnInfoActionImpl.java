@@ -43,7 +43,7 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnTrackingId() {
@@ -59,7 +59,7 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
@@ -67,7 +67,7 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getReturnDate() {

@@ -39,7 +39,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -55,7 +55,7 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
     }
 
     /**
-     <>
+     *
      */
 
     public String getOldEmail() {

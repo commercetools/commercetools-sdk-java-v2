@@ -27,7 +27,7 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

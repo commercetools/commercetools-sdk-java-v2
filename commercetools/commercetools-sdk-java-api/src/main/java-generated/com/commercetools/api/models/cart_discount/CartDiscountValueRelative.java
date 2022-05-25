@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartDiscountValueRelative
+ *  <p>Discounts the CartDiscountTarget relative to its price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     String RELATIVE = "relative";
 
     /**
-     <>
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      */
     @NotNull
     @JsonProperty("permyriad")

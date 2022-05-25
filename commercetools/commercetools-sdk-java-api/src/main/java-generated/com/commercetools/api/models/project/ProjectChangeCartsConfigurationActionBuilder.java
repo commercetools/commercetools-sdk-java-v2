@@ -25,7 +25,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
     /**
-     <*  <p>Configuration for the Carts feature.</p>>
+     *  <p>Configuration for the Carts feature.</p>
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
@@ -36,7 +36,7 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
     }
 
     /**
-     <*  <p>Configuration for the Carts feature.</p>>
+     *  <p>Configuration for the Carts feature.</p>
      */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(

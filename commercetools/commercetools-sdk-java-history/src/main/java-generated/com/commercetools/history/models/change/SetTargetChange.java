@@ -36,21 +36,21 @@ public interface SetTargetChange extends Change {
     String SET_TARGET_CHANGE = "SetTargetChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setTarget</code></p>>
+     *  <p>Shape of the action for <code>setTarget</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetTargetChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

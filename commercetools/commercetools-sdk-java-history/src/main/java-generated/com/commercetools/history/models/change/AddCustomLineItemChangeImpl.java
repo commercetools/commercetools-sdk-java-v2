@@ -43,7 +43,7 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
     }
 
     /**
-     <*  <p>Update action for adding and removing custom line items</p>>
+     *  <p>Update action for adding and removing custom line items</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomLineItem getNextValue() {
@@ -67,7 +67,7 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomLineItem getPreviousValue() {

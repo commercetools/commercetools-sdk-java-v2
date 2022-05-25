@@ -39,7 +39,7 @@ public interface CustomerEmailChangedMessage extends Message {
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")

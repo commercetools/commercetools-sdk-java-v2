@@ -27,7 +27,7 @@ public class ProductDiscountValueExternalImpl implements ProductDiscountValueExt
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

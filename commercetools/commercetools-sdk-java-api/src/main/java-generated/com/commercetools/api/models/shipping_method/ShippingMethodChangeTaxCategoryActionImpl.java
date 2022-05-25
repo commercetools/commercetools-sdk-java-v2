@@ -36,7 +36,7 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {

@@ -32,7 +32,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveVariantActionBuilder id(@Nullable final Long id) {
@@ -41,7 +41,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveVariantActionBuilder sku(@Nullable final String sku) {
@@ -50,7 +50,7 @@ public class ProductRemoveVariantActionBuilder implements Builder<ProductRemoveV
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveVariantActionBuilder staged(@Nullable final Boolean staged) {

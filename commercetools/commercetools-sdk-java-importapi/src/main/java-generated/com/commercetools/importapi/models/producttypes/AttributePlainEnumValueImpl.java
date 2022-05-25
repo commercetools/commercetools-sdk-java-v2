@@ -34,7 +34,7 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -42,7 +42,7 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getLabel() {

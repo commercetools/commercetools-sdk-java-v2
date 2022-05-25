@@ -51,7 +51,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddedAt() {
@@ -59,7 +59,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
@@ -67,7 +67,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getDescription() {
@@ -75,7 +75,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -83,7 +83,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -91,7 +91,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {

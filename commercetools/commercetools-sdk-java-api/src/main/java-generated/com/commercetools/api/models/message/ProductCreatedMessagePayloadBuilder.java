@@ -25,7 +25,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
-     <>
+     *
      */
 
     public ProductCreatedMessagePayloadBuilder productProjection(
@@ -36,7 +36,7 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
     }
 
     /**
-     <>
+     *
      */
 
     public ProductCreatedMessagePayloadBuilder productProjection(

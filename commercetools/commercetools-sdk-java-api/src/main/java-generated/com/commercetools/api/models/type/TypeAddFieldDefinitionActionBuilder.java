@@ -25,7 +25,7 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
@@ -35,7 +35,7 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(

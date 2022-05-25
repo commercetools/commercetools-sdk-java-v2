@@ -32,14 +32,14 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
     String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("oldCustomerGroup")

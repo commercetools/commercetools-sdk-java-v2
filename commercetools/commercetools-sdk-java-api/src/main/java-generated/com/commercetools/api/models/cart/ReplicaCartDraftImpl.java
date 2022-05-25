@@ -37,7 +37,7 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getReference() {
@@ -45,7 +45,7 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-specific unique identifier of the cart.</p>>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     public String getKey() {

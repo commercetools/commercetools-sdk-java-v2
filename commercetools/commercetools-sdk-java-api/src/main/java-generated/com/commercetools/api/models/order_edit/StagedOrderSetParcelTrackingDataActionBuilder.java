@@ -30,7 +30,7 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
@@ -39,7 +39,7 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(
@@ -49,7 +49,7 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(

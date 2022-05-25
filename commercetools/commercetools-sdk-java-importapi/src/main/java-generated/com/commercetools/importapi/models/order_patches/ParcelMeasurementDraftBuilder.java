@@ -30,7 +30,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementDraftBuilder parcelId(final String parcelId) {
@@ -39,7 +39,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementDraftBuilder measurements(
@@ -50,7 +50,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelMeasurementDraftBuilder measurements(

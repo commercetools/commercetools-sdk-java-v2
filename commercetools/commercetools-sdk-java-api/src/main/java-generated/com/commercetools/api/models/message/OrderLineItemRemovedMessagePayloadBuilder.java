@@ -48,7 +48,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -57,7 +57,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder removedQuantity(final Long removedQuantity) {
@@ -66,7 +66,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newQuantity(final Long newQuantity) {
@@ -75,7 +75,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -85,7 +85,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
@@ -95,7 +95,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -108,7 +108,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
@@ -121,7 +121,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder withNewState(
@@ -132,7 +132,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
@@ -142,7 +142,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
@@ -152,7 +152,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -162,7 +162,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
@@ -172,7 +172,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -182,7 +182,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
@@ -192,7 +192,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
@@ -203,7 +203,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(

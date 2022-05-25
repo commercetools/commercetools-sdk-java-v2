@@ -27,7 +27,7 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

@@ -42,7 +42,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -50,7 +50,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAccessKey() {
@@ -58,7 +58,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAccessSecret() {
@@ -66,7 +66,7 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTopicArn() {

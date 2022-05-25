@@ -36,7 +36,7 @@ public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturnInfoAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {

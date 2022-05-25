@@ -54,7 +54,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -62,7 +62,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <*  <p>Update action for <code>setDiscountedPrice</code></p>>
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
      */
 
     public String getChange() {
@@ -70,7 +70,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -78,7 +78,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -86,7 +86,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -94,7 +94,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {
@@ -102,7 +102,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {

@@ -35,7 +35,7 @@ public interface StagedOrderUpdateItemShippingAddressAction extends StagedOrderU
     String UPDATE_ITEM_SHIPPING_ADDRESS = "updateItemShippingAddress";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

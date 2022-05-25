@@ -31,7 +31,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     private Integer nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>>
+     *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder previousValue(final Integer previousValue) {
@@ -49,7 +49,7 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetDeleteDaysAfterLastModificationChangeBuilder nextValue(final Integer nextValue) {

@@ -28,7 +28,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     private com.commercetools.history.models.common.SuggestTokenizer suggestTokenizer;
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordBuilder text(final String text) {
@@ -37,7 +37,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordBuilder suggestTokenizer(
@@ -48,7 +48,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordBuilder suggestTokenizer(

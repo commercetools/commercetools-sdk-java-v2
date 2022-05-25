@@ -35,7 +35,7 @@ public class CustomerSetKeyActionImpl implements CustomerSetKeyAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetKeyActionImpl implements CustomerSetKeyAction, ModelBase
     }
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public String getKey() {

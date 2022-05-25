@@ -51,7 +51,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -75,7 +75,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -83,7 +83,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -91,7 +91,7 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {

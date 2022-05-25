@@ -37,7 +37,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
 
     /**
-     <*  <p>Update action for <code>setCategoryOrderHint</code></p>>
+     *  <p>Update action for <code>setCategoryOrderHint</code></p>
      */
 
     public SetCategoryOrderHintChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder catalogData(final String catalogData) {
@@ -55,7 +55,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder categoryId(final String categoryId) {
@@ -64,7 +64,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder previousValue(
@@ -75,7 +75,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder previousValue(
@@ -85,7 +85,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder nextValue(
@@ -95,7 +95,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     <>
+     *
      */
 
     public SetCategoryOrderHintChangeBuilder nextValue(

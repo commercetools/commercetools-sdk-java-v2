@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface HttpDestinationAuthentication {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

@@ -30,7 +30,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder data(@Nullable final java.lang.Object data) {
@@ -39,7 +39,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder errors(@Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
@@ -48,7 +48,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder errors(
@@ -58,7 +58,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder plusErrors(
@@ -71,7 +71,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder plusErrors(
@@ -84,7 +84,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLResponseBuilder withErrors(

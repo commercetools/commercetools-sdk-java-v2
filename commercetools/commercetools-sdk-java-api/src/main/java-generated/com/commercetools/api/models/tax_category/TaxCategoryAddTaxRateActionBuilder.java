@@ -25,7 +25,7 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     /**
-     <*  <p>Value to append to the <code>rates</code> array.</p>>
+     *  <p>Value to append to the <code>rates</code> array.</p>
      */
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(
@@ -35,7 +35,7 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
     }
 
     /**
-     <*  <p>Value to append to the <code>rates</code> array.</p>>
+     *  <p>Value to append to the <code>rates</code> array.</p>
      */
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(

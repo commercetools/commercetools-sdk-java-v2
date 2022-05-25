@@ -43,7 +43,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -67,7 +67,7 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {

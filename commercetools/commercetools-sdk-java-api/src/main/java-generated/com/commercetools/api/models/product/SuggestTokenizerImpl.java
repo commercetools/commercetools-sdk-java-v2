@@ -31,7 +31,7 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

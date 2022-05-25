@@ -30,7 +30,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     private com.commercetools.history.models.common.StackingMode previousValue;
 
     /**
-     <*  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>>
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
      */
 
     public ChangeStackingModeChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeStackingModeChangeBuilder nextValue(
@@ -49,7 +49,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeStackingModeChangeBuilder previousValue(

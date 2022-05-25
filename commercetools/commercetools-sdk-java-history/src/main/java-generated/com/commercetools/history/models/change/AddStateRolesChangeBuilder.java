@@ -30,7 +30,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder previousValue(
@@ -49,7 +49,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder previousValue(
@@ -59,7 +59,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder plusPreviousValue(
@@ -72,7 +72,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder nextValue(final com.commercetools.history.models.common.StateRole... nextValue) {
@@ -81,7 +81,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder nextValue(
@@ -91,7 +91,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddStateRolesChangeBuilder plusNextValue(

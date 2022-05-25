@@ -33,7 +33,7 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     private Boolean isMatching;
 
     /**
-     <>
+     *
      */
 
     public CartValueTierBuilder minimumCentAmount(final Long minimumCentAmount) {
@@ -42,8 +42,8 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartValueTierBuilder price(
@@ -53,8 +53,8 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartValueTierBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -63,7 +63,7 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     }
 
     /**
-     <>
+     *
      */
 
     public CartValueTierBuilder isMatching(@Nullable final Boolean isMatching) {

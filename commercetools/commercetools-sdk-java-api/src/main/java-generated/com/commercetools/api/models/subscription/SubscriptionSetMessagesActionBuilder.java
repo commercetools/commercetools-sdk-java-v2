@@ -27,7 +27,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetMessagesActionBuilder messages(
@@ -37,7 +37,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetMessagesActionBuilder messages(
@@ -47,7 +47,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetMessagesActionBuilder plusMessages(
@@ -60,7 +60,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetMessagesActionBuilder plusMessages(
@@ -74,7 +74,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetMessagesActionBuilder withMessages(

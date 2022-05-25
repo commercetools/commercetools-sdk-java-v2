@@ -32,7 +32,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetCategoryOrderHintActionBuilder categoryId(final String categoryId) {
@@ -41,7 +41,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetCategoryOrderHintActionBuilder orderHint(@Nullable final String orderHint) {
@@ -50,7 +50,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetCategoryOrderHintActionBuilder staged(@Nullable final Boolean staged) {

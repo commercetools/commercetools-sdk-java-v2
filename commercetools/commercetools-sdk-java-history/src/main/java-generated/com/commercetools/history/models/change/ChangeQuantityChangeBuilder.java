@@ -31,7 +31,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     private com.commercetools.history.models.change_value.InventoryQuantityValue previousValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeQuantityChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeQuantityChangeBuilder nextValue(
@@ -51,7 +51,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeQuantityChangeBuilder nextValue(
@@ -61,7 +61,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeQuantityChangeBuilder previousValue(
@@ -73,7 +73,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeQuantityChangeBuilder previousValue(

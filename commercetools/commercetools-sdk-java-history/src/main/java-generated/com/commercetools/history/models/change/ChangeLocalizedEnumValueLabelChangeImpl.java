@@ -54,7 +54,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -62,7 +62,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      */
 
     public String getChange() {
@@ -70,7 +70,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public String getFieldName() {
@@ -78,7 +78,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -86,7 +86,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
 
     public String getValueKey() {
@@ -94,7 +94,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -102,7 +102,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

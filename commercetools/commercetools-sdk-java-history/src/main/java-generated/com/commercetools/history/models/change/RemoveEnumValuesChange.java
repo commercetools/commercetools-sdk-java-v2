@@ -36,28 +36,28 @@ public interface RemoveEnumValuesChange extends Change {
     String REMOVE_ENUM_VALUES_CHANGE = "RemoveEnumValuesChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeEnumValues</code> on product types</p>>
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

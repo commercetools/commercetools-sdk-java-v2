@@ -33,42 +33,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxRateDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>>
+     *  <p>Percentage in the range of [0..1]. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified then the <code>amount</code> can be omitted or it must be the sum of the amounts of all <code>subRates</code>.</p>
      */
 
     @JsonProperty("amount")
     public Double getAmount();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>The state in the country</p>>
+     *  <p>The state in the country</p>
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     <*  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>>
+     *  <p>For countries (e.g. the US) where the total tax is a combination of multiple taxes (e.g. state and local taxes).</p>
      */
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
     /**
-     <*  <p>The default value for <code>includedInPrice</code> is FALSE.</p>>
+     *  <p>The default value for <code>includedInPrice</code> is FALSE.</p>
      */
 
     @JsonProperty("includedInPrice")

@@ -35,7 +35,7 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {

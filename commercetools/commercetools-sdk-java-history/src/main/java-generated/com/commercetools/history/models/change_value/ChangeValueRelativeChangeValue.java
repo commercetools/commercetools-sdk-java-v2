@@ -32,14 +32,14 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
     String RELATIVE = "relative";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("permyriad")

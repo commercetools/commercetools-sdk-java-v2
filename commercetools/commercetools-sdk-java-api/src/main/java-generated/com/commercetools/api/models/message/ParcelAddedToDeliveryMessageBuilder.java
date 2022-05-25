@@ -60,7 +60,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     private com.commercetools.api.models.order.Parcel parcel;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ParcelAddedToDeliveryMessageBuilder resource(
@@ -164,7 +164,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder delivery(
@@ -205,7 +205,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder delivery(final com.commercetools.api.models.order.Delivery delivery) {
@@ -214,7 +214,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder parcel(
@@ -224,7 +224,7 @@ public class ParcelAddedToDeliveryMessageBuilder implements Builder<ParcelAddedT
     }
 
     /**
-     <>
+     *
      */
 
     public ParcelAddedToDeliveryMessageBuilder parcel(final com.commercetools.api.models.order.Parcel parcel) {

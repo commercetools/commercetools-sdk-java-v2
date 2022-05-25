@@ -36,7 +36,7 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getLineItemOrder() {

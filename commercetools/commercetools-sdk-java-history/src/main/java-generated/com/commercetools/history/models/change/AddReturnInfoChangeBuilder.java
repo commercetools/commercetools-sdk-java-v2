@@ -28,7 +28,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     private com.commercetools.history.models.common.ReturnInfo nextValue;
 
     /**
-     <*  <p>Update action for <code>addReturnInfo</code></p>>
+     *  <p>Update action for <code>addReturnInfo</code></p>
      */
 
     public AddReturnInfoChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddReturnInfoChangeBuilder nextValue(
@@ -47,7 +47,7 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public AddReturnInfoChangeBuilder nextValue(final com.commercetools.history.models.common.ReturnInfo nextValue) {

@@ -25,7 +25,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>The name of the ProductSelection which is recommended to be unique.</p>>
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      */
 
     public IndividualProductSelectionTypeBuilder name(
@@ -35,7 +35,7 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
     }
 
     /**
-     <*  <p>The name of the ProductSelection which is recommended to be unique.</p>>
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
      */
 
     public IndividualProductSelectionTypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

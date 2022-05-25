@@ -34,28 +34,28 @@ public interface SetValidUntilChange extends Change {
     String SET_VALID_UNTIL_CHANGE = "SetValidUntilChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setValidUntil</code></p>>
+     *  <p>Shape of the action for <code>setValidUntil</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -24,7 +24,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
     /**
-     <*  <p>Mapping from the custom field name to the actual value.</p>>
+     *  <p>Mapping from the custom field name to the actual value.</p>
      */
 
     public FieldContainerBuilder values(
@@ -34,7 +34,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-     <*  <p>Mapping from the custom field name to the actual value.</p>>
+     *  <p>Mapping from the custom field name to the actual value.</p>
      */
 
     public FieldContainerBuilder addValue(final String key,

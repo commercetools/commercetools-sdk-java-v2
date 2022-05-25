@@ -33,7 +33,7 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
     String STORE = "store";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("obj")

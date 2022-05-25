@@ -29,7 +29,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
      */
 
     public StandalonePriceResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
      */
 
     public StandalonePriceResourceIdentifierBuilder key(@Nullable final String key) {

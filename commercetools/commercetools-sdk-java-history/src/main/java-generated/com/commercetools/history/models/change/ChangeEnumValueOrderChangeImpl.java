@@ -47,7 +47,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     <*  <p>Update action for <code>changeEnumValueOrder</code> on types</p>>
+     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     <*  <p>The name of the field/attribute definition updated.</p>>
+     *  <p>The name of the field/attribute definition updated.</p>
      */
 
     public String getFieldName() {
@@ -71,7 +71,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getPreviousValue() {

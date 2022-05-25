@@ -26,7 +26,7 @@ public class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public WeakPasswordErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
     }
 
     /**
-     <>
+     *
      */
 
     public WeakPasswordErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class WeakPasswordErrorBuilder implements Builder<WeakPasswordError> {
     }
 
     /**
-     <>
+     *
      */
 
     public WeakPasswordErrorBuilder addValue(final String key, final java.lang.Object value) {

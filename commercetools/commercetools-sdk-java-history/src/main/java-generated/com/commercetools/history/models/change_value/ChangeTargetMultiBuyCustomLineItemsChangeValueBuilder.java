@@ -37,7 +37,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder predicate(final String predicate) {
@@ -46,7 +46,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
@@ -55,7 +55,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
@@ -64,7 +64,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     *  <p>Maximum number of applications of this discount.</p>
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
@@ -73,7 +73,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder selectionMode(

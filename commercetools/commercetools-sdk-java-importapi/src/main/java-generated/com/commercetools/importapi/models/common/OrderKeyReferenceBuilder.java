@@ -24,7 +24,7 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public OrderKeyReferenceBuilder key(final String key) {

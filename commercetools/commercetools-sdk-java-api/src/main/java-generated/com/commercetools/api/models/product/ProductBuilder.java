@@ -63,7 +63,7 @@ public class ProductBuilder implements Builder<Product> {
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Product.</p>>
+     *  <p>Unique identifier of the Product.</p>
      */
 
     public ProductBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>The current version of the product.</p>>
+     *  <p>The current version of the product.</p>
      */
 
     public ProductBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductBuilder createdBy(
@@ -129,7 +129,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -138,7 +138,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>>
+     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
      */
 
     public ProductBuilder key(@Nullable final String key) {
@@ -147,7 +147,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder productType(
@@ -158,7 +158,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder productType(
@@ -168,7 +168,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>The product data in the master catalog.</p>>
+     *  <p>The product data in the master catalog.</p>
      */
 
     public ProductBuilder masterData(
@@ -178,7 +178,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>The product data in the master catalog.</p>>
+     *  <p>The product data in the master catalog.</p>
      */
 
     public ProductBuilder masterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {
@@ -187,7 +187,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder taxCategory(
@@ -198,7 +198,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder taxCategory(
@@ -208,7 +208,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder state(
@@ -218,7 +218,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -227,7 +227,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public ProductBuilder reviewRatingStatistics(
@@ -239,7 +239,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public ProductBuilder reviewRatingStatistics(
@@ -249,7 +249,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     <*  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>>
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
      */
 
     public ProductBuilder priceMode(

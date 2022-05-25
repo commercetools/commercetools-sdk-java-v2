@@ -35,7 +35,7 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
     }
 
     /**
-     <*  <p>Key of the value used as a programmatic identifier.</p>>
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
     }
 
     /**
-     <*  <p>Descriptive localized label of the value.</p>>
+     *  <p>Descriptive localized label of the value.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {

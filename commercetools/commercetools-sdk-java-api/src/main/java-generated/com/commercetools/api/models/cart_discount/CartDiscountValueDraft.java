@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartDiscountValueDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

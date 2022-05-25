@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SuggestionResult {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

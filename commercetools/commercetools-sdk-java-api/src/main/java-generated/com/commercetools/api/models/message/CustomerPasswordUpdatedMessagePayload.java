@@ -32,7 +32,7 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
-     <*  <p>true, if password has been updated during Customer's Password Reset workflow.</p>>
+     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
      */
     @NotNull
     @JsonProperty("reset")

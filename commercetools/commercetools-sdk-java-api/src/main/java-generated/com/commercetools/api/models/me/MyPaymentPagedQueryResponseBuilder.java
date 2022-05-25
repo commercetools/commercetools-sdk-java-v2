@@ -39,7 +39,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     private java.util.List<com.commercetools.api.models.me.MyPayment> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public MyPaymentPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MyPaymentPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.me.MyPayment... results) {
@@ -84,7 +84,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.me.MyPayment... results) {
@@ -106,7 +106,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentPagedQueryResponseBuilder withResults(

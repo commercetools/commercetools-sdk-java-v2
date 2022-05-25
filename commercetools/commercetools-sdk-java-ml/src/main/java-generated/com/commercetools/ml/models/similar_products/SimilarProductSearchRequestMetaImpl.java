@@ -32,7 +32,7 @@ public class SimilarProductSearchRequestMetaImpl implements SimilarProductSearch
     }
 
     /**
-     <*  <p>The SimilarityMeasures used in this search.</p>>
+     *  <p>The SimilarityMeasures used in this search.</p>
      */
 
     public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {

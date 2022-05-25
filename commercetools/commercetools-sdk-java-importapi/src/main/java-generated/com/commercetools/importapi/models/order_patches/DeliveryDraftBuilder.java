@@ -33,7 +33,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     private java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> parcels;
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder items(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -42,7 +42,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder items(
@@ -52,7 +52,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder plusItems(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
@@ -64,7 +64,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder plusItems(
@@ -77,7 +77,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder withItems(
@@ -88,7 +88,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder address(
@@ -98,7 +98,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder address(@Nullable final com.commercetools.importapi.models.common.Address address) {
@@ -107,7 +107,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder parcels(
@@ -117,7 +117,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder parcels(
@@ -127,7 +127,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder plusParcels(
@@ -140,7 +140,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder plusParcels(
@@ -154,7 +154,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryDraftBuilder withParcels(

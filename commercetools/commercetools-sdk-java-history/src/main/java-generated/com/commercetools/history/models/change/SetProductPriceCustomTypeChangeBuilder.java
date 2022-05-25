@@ -34,7 +34,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     private com.commercetools.history.models.common.CustomFields nextValue;
 
     /**
-     <*  <p>Update action for <code>setProductPriceCustomType</code></p>>
+     *  <p>Update action for <code>setProductPriceCustomType</code></p>
      */
 
     public SetProductPriceCustomTypeChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     <>
+     *
      */
 
     public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     <>
+     *
      */
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     <>
+     *
      */
 
     public SetProductPriceCustomTypeChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     <>
+     *
      */
 
     public SetProductPriceCustomTypeChangeBuilder nextValue(
@@ -82,7 +82,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     <>
+     *
      */
 
     public SetProductPriceCustomTypeChangeBuilder nextValue(

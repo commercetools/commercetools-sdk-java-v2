@@ -35,7 +35,7 @@ public class MyShoppingListUpdateImpl implements MyShoppingListUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class MyShoppingListUpdateImpl implements MyShoppingListUpdate, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.me.MyShoppingListUpdateAction> getActions() {

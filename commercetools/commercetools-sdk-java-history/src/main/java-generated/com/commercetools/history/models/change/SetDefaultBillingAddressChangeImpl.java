@@ -43,7 +43,7 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
     }
 
     /**
-     <*  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>>
+     *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -67,7 +67,7 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

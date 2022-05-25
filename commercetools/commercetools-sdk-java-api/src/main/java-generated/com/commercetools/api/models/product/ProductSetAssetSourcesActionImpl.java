@@ -53,7 +53,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -61,7 +61,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -69,7 +69,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -77,7 +77,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -85,7 +85,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -93,7 +93,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -101,7 +101,7 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {

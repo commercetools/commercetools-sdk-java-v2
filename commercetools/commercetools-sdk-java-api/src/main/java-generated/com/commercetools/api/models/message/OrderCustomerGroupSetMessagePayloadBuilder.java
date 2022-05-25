@@ -30,7 +30,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -42,7 +42,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -52,7 +52,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(
@@ -64,7 +64,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(

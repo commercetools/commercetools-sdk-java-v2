@@ -35,7 +35,7 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>>
+     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Update actions to be performed on the Channel.</p>>
+     *  <p>Update actions to be performed on the Channel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions() {

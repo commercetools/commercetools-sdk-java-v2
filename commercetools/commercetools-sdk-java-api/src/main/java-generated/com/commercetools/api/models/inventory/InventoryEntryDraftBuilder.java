@@ -45,7 +45,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder sku(final String sku) {
@@ -54,7 +54,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <*  <p>User-defined unique identifier for the InventoryEntry.</p>>
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder key(@Nullable final String key) {
@@ -63,7 +63,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -74,7 +74,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -84,7 +84,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder quantityOnStock(final Long quantityOnStock) {
@@ -93,7 +93,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -102,7 +102,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -111,7 +111,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public InventoryEntryDraftBuilder custom(
@@ -121,7 +121,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public InventoryEntryDraftBuilder custom(

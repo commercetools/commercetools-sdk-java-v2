@@ -24,7 +24,7 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public CartRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {

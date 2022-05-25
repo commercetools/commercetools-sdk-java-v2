@@ -31,28 +31,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerSignin {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("activeCartSignInMode")
     public AnonymousCartSignInMode getActiveCartSignInMode();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("updateProductData")

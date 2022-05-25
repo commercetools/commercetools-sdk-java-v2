@@ -35,7 +35,7 @@ public class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthA
     }
 
     /**
-     <*  <p>If not defined, the date of birth is unset.</p>>
+     *  <p>If not defined, the date of birth is unset.</p>
      */
 
     public java.time.LocalDate getDateOfBirth() {

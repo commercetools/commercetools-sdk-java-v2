@@ -32,7 +32,7 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateTierType getType() {

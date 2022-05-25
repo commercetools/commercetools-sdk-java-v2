@@ -126,7 +126,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>A three-digit currency code as per ISO 4217.</p>>
+     *  <p>A three-digit currency code as per ISO 4217.</p>
      */
 
     public String getCurrency() {
@@ -134,7 +134,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Cart.</p>>
+     *  <p>User-defined unique identifier for the Cart.</p>
      */
 
     public String getKey() {
@@ -142,7 +142,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Id of an existing Customer.</p>>
+     *  <p>Id of an existing Customer.</p>
      */
 
     public String getCustomerId() {
@@ -150,7 +150,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerEmail() {
@@ -158,7 +158,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>>
+     *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -166,7 +166,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -174,7 +174,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>>
+     *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -182,7 +182,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -190,7 +190,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Default inventory mode is <code>None</code>.</p>>
+     *  <p>Default inventory mode is <code>None</code>.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -198,7 +198,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The default tax mode is <code>Platform</code>.</p>>
+     *  <p>The default tax mode is <code>Platform</code>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -206,7 +206,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The default tax rounding mode is <code>HalfEven</code>.</p>>
+     *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -214,7 +214,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>>
+     *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -222,7 +222,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItemDraft> getLineItems() {
@@ -230,7 +230,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
@@ -238,7 +238,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>>
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
@@ -246,7 +246,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
@@ -254,7 +254,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -262,7 +262,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {
@@ -270,7 +270,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -278,7 +278,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Must be one of the languages supported for this project</p>>
+     *  <p>Must be one of the languages supported for this project</p>
      */
 
     public String getLocale() {
@@ -286,7 +286,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>>
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -294,7 +294,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The default origin is <code>Customer</code>.</p>>
+     *  <p>The default origin is <code>Customer</code>.</p>
      */
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
@@ -302,7 +302,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
@@ -310,7 +310,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>>
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -318,7 +318,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     <*  <p>The code of existing DiscountCodes.</p>>
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
     public java.util.List<String> getDiscountCodes() {

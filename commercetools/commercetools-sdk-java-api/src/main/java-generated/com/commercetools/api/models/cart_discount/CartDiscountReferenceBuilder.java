@@ -30,7 +30,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>>
+     *  <p>Unique identifier of the referenced CartDiscount.</p>
      */
 
     public CartDiscountReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
      */
 
     public CartDiscountReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>>
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
      */
 
     public CartDiscountReferenceBuilder obj(

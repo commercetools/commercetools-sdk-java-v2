@@ -35,7 +35,7 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public String getKey() {

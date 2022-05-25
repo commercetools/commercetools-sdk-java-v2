@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeCoverage {
 
     /**
-     <*  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>>
+     *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
      */
     @NotNull
     @JsonProperty("names")
     public Double getNames();
 
     /**
-     <*  <p>Represents the percentage of attributes in the product variant that contain values.</p>>
+     *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
      */
     @NotNull
     @JsonProperty("values")

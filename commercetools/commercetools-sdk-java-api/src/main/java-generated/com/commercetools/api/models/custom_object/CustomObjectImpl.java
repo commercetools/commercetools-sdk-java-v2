@@ -61,7 +61,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomObject.</p>>
+     *  <p>Unique identifier of the CustomObject.</p>
      */
 
     public String getId() {
@@ -69,7 +69,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the CustomObject.</p>>
+     *  <p>Current version of the CustomObject.</p>
      */
 
     public Long getVersion() {
@@ -77,7 +77,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the CustomObject was initially created.</p>>
+     *  <p>Date and time (UTC) the CustomObject was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -85,7 +85,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the CustomObject was last updated.</p>>
+     *  <p>Date and time (UTC) the CustomObject was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -93,7 +93,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -101,7 +101,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -109,7 +109,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>Namespace to group CustomObjects.</p>>
+     *  <p>Namespace to group CustomObjects.</p>
      */
 
     public String getContainer() {
@@ -117,7 +117,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>>
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      */
 
     public String getKey() {
@@ -125,7 +125,7 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
     }
 
     /**
-     <*  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>>
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
      */
 
     public java.lang.Object getValue() {

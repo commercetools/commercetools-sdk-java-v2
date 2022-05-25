@@ -32,7 +32,7 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
     String CHANGE_TAX_CALCULATION_MODE = "changeTaxCalculationMode";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxCalculationMode")

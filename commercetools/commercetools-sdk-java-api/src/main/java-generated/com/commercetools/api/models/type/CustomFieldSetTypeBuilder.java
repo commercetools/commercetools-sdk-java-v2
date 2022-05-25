@@ -25,7 +25,7 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
     private com.commercetools.api.models.type.FieldType elementType;
 
     /**
-     <*  <p>Field type of the elements in the set.</p>>
+     *  <p>Field type of the elements in the set.</p>
      */
 
     public CustomFieldSetTypeBuilder elementType(final com.commercetools.api.models.type.FieldType elementType) {
@@ -34,7 +34,7 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
     }
 
     /**
-     <*  <p>Field type of the elements in the set.</p>>
+     *  <p>Field type of the elements in the set.</p>
      */
 
     public CustomFieldSetTypeBuilder elementType(

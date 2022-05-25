@@ -36,7 +36,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -45,7 +45,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -55,7 +55,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
@@ -65,7 +65,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -78,7 +78,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
@@ -92,7 +92,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
@@ -104,8 +104,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -115,8 +115,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
@@ -126,7 +126,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
@@ -136,7 +136,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(

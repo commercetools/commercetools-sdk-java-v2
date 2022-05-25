@@ -32,7 +32,7 @@ public interface AzureServiceBusDestination extends Destination {
     String AZURE_SERVICE_BUS = "AzureServiceBus";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("connectionString")

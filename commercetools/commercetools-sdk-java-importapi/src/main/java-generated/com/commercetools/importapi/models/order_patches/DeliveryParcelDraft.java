@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryParcelDraft {
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

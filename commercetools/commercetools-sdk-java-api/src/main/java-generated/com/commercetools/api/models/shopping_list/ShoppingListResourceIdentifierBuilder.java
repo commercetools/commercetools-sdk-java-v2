@@ -29,7 +29,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public ShoppingListResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class ShoppingListResourceIdentifierBuilder implements Builder<ShoppingLi
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public ShoppingListResourceIdentifierBuilder key(@Nullable final String key) {

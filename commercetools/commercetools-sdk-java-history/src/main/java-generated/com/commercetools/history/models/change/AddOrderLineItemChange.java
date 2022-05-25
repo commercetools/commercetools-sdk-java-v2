@@ -36,21 +36,21 @@ public interface AddOrderLineItemChange extends Change {
     String ADD_ORDER_LINE_ITEM_CHANGE = "AddOrderLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddOrderLineItemChange extends Change {
     public LineItem getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

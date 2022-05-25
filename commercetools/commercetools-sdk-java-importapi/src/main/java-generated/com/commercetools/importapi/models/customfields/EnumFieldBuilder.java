@@ -24,7 +24,7 @@ public class EnumFieldBuilder implements Builder<EnumField> {
     private String value;
 
     /**
-     <>
+     *
      */
 
     public EnumFieldBuilder value(final String value) {

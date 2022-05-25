@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FieldDefinitionOrderValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

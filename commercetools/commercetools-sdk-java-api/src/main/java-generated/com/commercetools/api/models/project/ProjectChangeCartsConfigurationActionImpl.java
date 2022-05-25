@@ -36,7 +36,7 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
     }
 
     /**
-     <*  <p>Configuration for the Carts feature.</p>>
+     *  <p>Configuration for the Carts feature.</p>
      */
 
     public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {

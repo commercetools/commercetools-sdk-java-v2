@@ -36,7 +36,7 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {

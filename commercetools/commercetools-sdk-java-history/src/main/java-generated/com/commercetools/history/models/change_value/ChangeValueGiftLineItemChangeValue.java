@@ -36,14 +36,14 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     String GIFT_LINE_ITEM = "giftLineItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,21 +51,21 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getProduct();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("supplyChannel")
     public Reference getSupplyChannel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

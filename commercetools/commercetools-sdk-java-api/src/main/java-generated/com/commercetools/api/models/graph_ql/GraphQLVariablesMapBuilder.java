@@ -23,7 +23,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public GraphQLVariablesMapBuilder values(final Map<String, java.lang.Object> values) {
@@ -32,7 +32,7 @@ public class GraphQLVariablesMapBuilder implements Builder<GraphQLVariablesMap> 
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLVariablesMapBuilder addValue(final String key, final java.lang.Object value) {

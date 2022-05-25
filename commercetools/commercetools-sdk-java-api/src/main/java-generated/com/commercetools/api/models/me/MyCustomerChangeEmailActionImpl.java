@@ -35,7 +35,7 @@ public class MyCustomerChangeEmailActionImpl implements MyCustomerChangeEmailAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerChangeEmailActionImpl implements MyCustomerChangeEmailAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {

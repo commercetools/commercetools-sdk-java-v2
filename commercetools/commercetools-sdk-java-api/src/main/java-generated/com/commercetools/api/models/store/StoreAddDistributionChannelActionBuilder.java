@@ -25,7 +25,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     <>
+     *
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(
@@ -37,7 +37,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
     }
 
     /**
-     <>
+     *
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(

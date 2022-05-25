@@ -60,7 +60,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder custom(
@@ -70,7 +70,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder custom(
@@ -80,7 +80,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder distributionChannel(
@@ -92,7 +92,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder distributionChannel(
@@ -102,7 +102,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder externalTaxRate(
@@ -113,7 +113,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder externalTaxRate(
@@ -123,7 +123,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -132,7 +132,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -141,7 +141,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -150,7 +150,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -159,7 +159,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -168,7 +168,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder supplyChannel(
@@ -179,7 +179,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder supplyChannel(
@@ -189,8 +189,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder externalPrice(
@@ -200,8 +200,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderAddLineItemActionBuilder externalPrice(
@@ -211,7 +211,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder externalTotalPrice(
@@ -223,7 +223,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder externalTotalPrice(
@@ -233,7 +233,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder shippingDetails(
@@ -244,7 +244,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddLineItemActionBuilder shippingDetails(

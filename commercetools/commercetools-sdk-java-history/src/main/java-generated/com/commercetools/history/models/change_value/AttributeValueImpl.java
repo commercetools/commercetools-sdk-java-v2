@@ -34,7 +34,7 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -42,7 +42,7 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getValue() {

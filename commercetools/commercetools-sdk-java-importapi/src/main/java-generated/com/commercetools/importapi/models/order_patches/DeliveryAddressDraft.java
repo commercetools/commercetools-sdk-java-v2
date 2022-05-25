@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryAddressDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

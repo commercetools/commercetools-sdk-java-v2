@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFields {
 
     /**
-     <*  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>>
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface CustomFields {
     public TypeReference getType();
 
     /**
-     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      */
     @NotNull
     @Valid

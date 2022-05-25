@@ -36,7 +36,7 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues() {

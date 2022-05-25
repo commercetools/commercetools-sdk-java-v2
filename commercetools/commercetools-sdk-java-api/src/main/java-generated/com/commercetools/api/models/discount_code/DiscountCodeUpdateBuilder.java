@@ -28,7 +28,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions;
 
     /**
-     <*  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public DiscountCodeUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public DiscountCodeUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public DiscountCodeUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public DiscountCodeUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public DiscountCodeUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     <*  <p>Update actions to be performed on the DiscountCode.</p>>
+     *  <p>Update actions to be performed on the DiscountCode.</p>
      */
 
     public DiscountCodeUpdateBuilder withActions(

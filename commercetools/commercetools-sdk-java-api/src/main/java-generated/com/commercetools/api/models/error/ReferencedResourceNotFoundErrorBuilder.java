@@ -37,7 +37,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     private String key;
 
     /**
-     <>
+     *
      */
 
     public ReferencedResourceNotFoundErrorBuilder message(final String message) {
@@ -46,7 +46,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     <>
+     *
      */
 
     public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -55,7 +55,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     <>
+     *
      */
 
     public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -67,7 +67,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public ReferencedResourceNotFoundErrorBuilder typeId(
@@ -77,7 +77,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     <>
+     *
      */
 
     public ReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
@@ -86,7 +86,7 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-     <>
+     *
      */
 
     public ReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {

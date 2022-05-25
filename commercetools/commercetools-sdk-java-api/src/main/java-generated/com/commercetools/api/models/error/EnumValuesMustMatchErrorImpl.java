@@ -39,7 +39,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

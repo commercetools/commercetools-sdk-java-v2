@@ -41,7 +41,7 @@ public interface OrderStoreSetMessage extends OrderMessage {
     String ORDER_STORE_SET = "OrderStoreSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

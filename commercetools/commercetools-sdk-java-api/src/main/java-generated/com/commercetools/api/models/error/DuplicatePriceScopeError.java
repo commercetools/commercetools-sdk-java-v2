@@ -35,7 +35,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     String DUPLICATE_PRICE_SCOPE = "DuplicatePriceScope";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -35,7 +35,7 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
     }
 
     /**
-     <*  <p>User-specific unique identifier for the shopping list.</p>>
+     *  <p>User-specific unique identifier for the shopping list.</p>
      */
 
     public String getKey() {

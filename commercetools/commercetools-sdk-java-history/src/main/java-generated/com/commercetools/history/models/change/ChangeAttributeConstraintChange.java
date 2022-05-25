@@ -36,35 +36,35 @@ public interface ChangeAttributeConstraintChange extends Change {
     String CHANGE_ATTRIBUTE_CONSTRAINT_CHANGE = "ChangeAttributeConstraintChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>name of the updated attribute</p>>
+     *  <p>name of the updated attribute</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public AttributeConstraintEnum getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

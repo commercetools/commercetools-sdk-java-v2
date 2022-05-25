@@ -43,7 +43,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalNet() {
@@ -51,7 +51,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalGross() {
@@ -59,7 +59,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortion> getTaxPortions() {
@@ -67,7 +67,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalTax() {

@@ -34,7 +34,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     private com.commercetools.history.models.common.Variant nextValue;
 
     /**
-     <*  <p>Update action for <code>changeMasterVariant</code></p>>
+     *  <p>Update action for <code>changeMasterVariant</code></p>
      */
 
     public ChangeMasterVariantChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeMasterVariantChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeMasterVariantChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeMasterVariantChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeMasterVariantChangeBuilder nextValue(
@@ -82,7 +82,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeMasterVariantChangeBuilder nextValue(final com.commercetools.history.models.common.Variant nextValue) {

@@ -51,7 +51,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     private com.commercetools.importapi.models.orders.ShippingMethodState shippingMethodState;
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder shippingMethodName(final String shippingMethodName) {
@@ -60,7 +60,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder price(final com.commercetools.importapi.models.common.TypedMoney price) {
@@ -69,7 +69,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder price(
@@ -79,7 +79,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder shippingRate(
@@ -90,7 +90,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder shippingRate(
@@ -100,7 +100,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder taxRate(
@@ -110,7 +110,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder taxRate(
@@ -120,7 +120,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public ShippingInfoImportDraftBuilder taxCategory(
@@ -131,7 +131,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public ShippingInfoImportDraftBuilder taxCategory(
@@ -141,7 +141,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>References a shipping method by key.</p>>
+     *  <p>References a shipping method by key.</p>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -153,7 +153,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>References a shipping method by key.</p>>
+     *  <p>References a shipping method by key.</p>
      */
 
     public ShippingInfoImportDraftBuilder shippingMethod(
@@ -163,7 +163,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -173,7 +173,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
@@ -183,7 +183,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -196,7 +196,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
@@ -209,7 +209,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <*  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
      */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
@@ -220,7 +220,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder discountedPrice(
@@ -232,7 +232,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder discountedPrice(
@@ -242,7 +242,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingInfoImportDraftBuilder shippingMethodState(

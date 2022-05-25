@@ -29,7 +29,7 @@ public interface CartSetCountryAction extends CartUpdateAction {
     String SET_COUNTRY = "setCountry";
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     @JsonProperty("country")

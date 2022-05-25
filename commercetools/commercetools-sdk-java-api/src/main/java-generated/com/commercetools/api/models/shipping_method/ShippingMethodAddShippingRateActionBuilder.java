@@ -28,7 +28,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodAddShippingRateActionBuilder zone(
@@ -38,7 +38,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodAddShippingRateActionBuilder zone(
@@ -48,7 +48,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(
@@ -59,7 +59,7 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(

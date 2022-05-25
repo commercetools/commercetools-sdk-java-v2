@@ -29,7 +29,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     private Long productCount;
 
     /**
-     <>
+     *
      */
 
     public FilteredFacetResultBuilder count(final Long count) {
@@ -38,7 +38,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     <>
+     *
      */
 
     public FilteredFacetResultBuilder productCount(@Nullable final Long productCount) {

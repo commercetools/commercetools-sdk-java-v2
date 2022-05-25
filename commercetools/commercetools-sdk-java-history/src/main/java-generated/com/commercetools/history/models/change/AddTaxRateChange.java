@@ -35,21 +35,21 @@ public interface AddTaxRateChange extends Change {
     String ADD_TAX_RATE_CHANGE = "AddTaxRateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addTaxRate</code> on tax categories</p>>
+     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid

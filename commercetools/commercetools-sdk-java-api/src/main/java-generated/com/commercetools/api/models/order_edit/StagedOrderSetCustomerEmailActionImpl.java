@@ -35,7 +35,7 @@ public class StagedOrderSetCustomerEmailActionImpl implements StagedOrderSetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StagedOrderSetCustomerEmailActionImpl implements StagedOrderSetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {

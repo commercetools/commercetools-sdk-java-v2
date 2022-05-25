@@ -29,7 +29,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     private Boolean staged;
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -39,7 +39,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
@@ -49,7 +49,7 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder staged(final Boolean staged) {

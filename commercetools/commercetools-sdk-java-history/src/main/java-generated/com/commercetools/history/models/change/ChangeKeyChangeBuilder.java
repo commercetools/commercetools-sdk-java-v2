@@ -30,7 +30,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeKey</code></p>>
+     *  <p>Shape of the action for <code>changeKey</code></p>
      */
 
     public ChangeKeyChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeKeyChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class ChangeKeyChangeBuilder implements Builder<ChangeKeyChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeKeyChangeBuilder nextValue(final String nextValue) {

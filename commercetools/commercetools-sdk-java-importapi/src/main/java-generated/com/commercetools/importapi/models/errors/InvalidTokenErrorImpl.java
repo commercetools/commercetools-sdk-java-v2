@@ -35,7 +35,7 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

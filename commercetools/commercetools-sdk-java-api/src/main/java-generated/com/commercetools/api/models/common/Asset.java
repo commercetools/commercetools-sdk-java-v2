@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Asset extends com.commercetools.api.models.Customizable<Asset> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Asset.</p>>
+     *  <p>Unique identifier of the Asset.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset> 
     public List<AssetSource> getSources();
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
     @NotNull
     @Valid
@@ -57,28 +57,28 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset> 
     public LocalizedString getName();
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     @JsonProperty("tags")
     public List<String> getTags();
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <*  <p>User-defined unique identifier of the Asset.</p>>
+     *  <p>User-defined unique identifier of the Asset.</p>
      */
 
     @JsonProperty("key")

@@ -40,7 +40,7 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
     }
 
     /**
-     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
+     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
+     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

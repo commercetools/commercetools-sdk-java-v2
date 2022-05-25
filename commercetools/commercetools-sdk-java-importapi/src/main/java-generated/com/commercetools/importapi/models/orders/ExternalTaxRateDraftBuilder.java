@@ -42,7 +42,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     private Boolean includedInPrice;
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder name(final String name) {
@@ -51,7 +51,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
@@ -60,7 +60,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder country(final String country) {
@@ -69,7 +69,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
@@ -78,7 +78,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -88,7 +88,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder subRates(
@@ -98,7 +98,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -111,7 +111,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
@@ -124,7 +124,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder withSubRates(
@@ -135,7 +135,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {

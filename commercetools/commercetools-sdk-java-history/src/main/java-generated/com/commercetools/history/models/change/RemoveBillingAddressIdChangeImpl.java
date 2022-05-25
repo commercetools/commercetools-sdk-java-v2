@@ -47,7 +47,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     <*  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getNextValue() {
@@ -71,7 +71,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -79,7 +79,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getAddress() {

@@ -30,7 +30,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     private String timestamp;
 
     /**
-     <>
+     *
      */
 
     public TransactionChangeValueBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     <>
+     *
      */
 
     public TransactionChangeValueBuilder interactionId(final String interactionId) {
@@ -48,7 +48,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     <>
+     *
      */
 
     public TransactionChangeValueBuilder timestamp(final String timestamp) {

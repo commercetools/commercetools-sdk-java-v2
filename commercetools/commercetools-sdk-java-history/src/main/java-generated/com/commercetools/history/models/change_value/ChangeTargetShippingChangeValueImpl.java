@@ -27,7 +27,7 @@ public class ChangeTargetShippingChangeValueImpl implements ChangeTargetShipping
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

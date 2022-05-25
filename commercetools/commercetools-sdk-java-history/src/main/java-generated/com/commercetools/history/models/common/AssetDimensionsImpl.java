@@ -34,7 +34,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getW() {
@@ -42,7 +42,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getH() {

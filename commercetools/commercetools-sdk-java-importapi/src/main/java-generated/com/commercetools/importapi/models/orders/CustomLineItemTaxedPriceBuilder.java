@@ -28,7 +28,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     private com.commercetools.importapi.models.common.TypedMoney totalGross;
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemTaxedPriceBuilder totalNet(
@@ -38,7 +38,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemTaxedPriceBuilder totalNet(
@@ -48,7 +48,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemTaxedPriceBuilder totalGross(
@@ -58,7 +58,7 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemTaxedPriceBuilder totalGross(

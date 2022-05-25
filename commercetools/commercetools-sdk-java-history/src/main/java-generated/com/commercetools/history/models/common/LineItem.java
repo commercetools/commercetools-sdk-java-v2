@@ -40,14 +40,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItem {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("addedAt")
     public String getAddedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -55,14 +55,14 @@ public interface LineItem {
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -70,14 +70,14 @@ public interface LineItem {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -85,7 +85,7 @@ public interface LineItem {
     public LocalizedString getProductSlug();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -93,14 +93,14 @@ public interface LineItem {
     public Reference getProductType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -108,7 +108,7 @@ public interface LineItem {
     public Variant getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")

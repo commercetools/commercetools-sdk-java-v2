@@ -35,7 +35,7 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
     }
 
     /**
-     <*  <p>Location to be added to the Zone.</p>>
+     *  <p>Location to be added to the Zone.</p>
      */
 
     public com.commercetools.api.models.zone.Location getLocation() {

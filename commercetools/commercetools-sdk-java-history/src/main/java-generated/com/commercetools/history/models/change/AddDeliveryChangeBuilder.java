@@ -31,7 +31,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
     /**
-     <*  <p>Update action for <code>addDelivery</code></p>>
+     *  <p>Update action for <code>addDelivery</code></p>
      */
 
     public AddDeliveryChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddDeliveryChangeBuilder nextValue(
@@ -51,7 +51,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddDeliveryChangeBuilder nextValue(
@@ -61,7 +61,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddDeliveryChangeBuilder previousValue(
@@ -73,7 +73,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddDeliveryChangeBuilder previousValue(

@@ -38,7 +38,7 @@ public interface LineItemReturnItem extends ReturnItem {
     String LINE_ITEM_RETURN_ITEM = "LineItemReturnItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")

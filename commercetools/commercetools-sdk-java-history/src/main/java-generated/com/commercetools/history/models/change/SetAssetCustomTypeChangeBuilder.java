@@ -34,7 +34,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetCustomType</code></p>>
+     *  <p>Update action for <code>setAssetCustomType</code></p>
      */
 
     public SetAssetCustomTypeChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder asset(
@@ -53,7 +53,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder asset(
@@ -63,7 +63,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder nextValue(
@@ -83,7 +83,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder previousValue(
@@ -93,7 +93,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomTypeChangeBuilder previousValue(

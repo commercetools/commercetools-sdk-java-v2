@@ -32,7 +32,7 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
     String CHANGE_EMAIL = "changeEmail";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")

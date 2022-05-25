@@ -42,7 +42,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public AssetDraftBuilder sources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -51,7 +51,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetDraftBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
@@ -60,7 +60,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetDraftBuilder plusSources(final com.commercetools.api.models.common.AssetSource... sources) {
@@ -72,7 +72,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetDraftBuilder plusSources(
@@ -85,7 +85,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetDraftBuilder withSources(
@@ -96,7 +96,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public AssetDraftBuilder name(
@@ -106,7 +106,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
 
     public AssetDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -115,7 +115,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public AssetDraftBuilder description(
@@ -125,7 +125,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
 
     public AssetDraftBuilder description(
@@ -135,7 +135,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetDraftBuilder tags(@Nullable final String... tags) {
@@ -144,7 +144,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -153,7 +153,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public AssetDraftBuilder plusTags(@Nullable final String... tags) {
@@ -165,7 +165,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public AssetDraftBuilder custom(
@@ -175,7 +175,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
 
     public AssetDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -184,7 +184,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Asset.</p>>
+     *  <p>User-defined unique identifier for the Asset.</p>
      */
 
     public AssetDraftBuilder key(@Nullable final String key) {

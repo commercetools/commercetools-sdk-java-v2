@@ -33,14 +33,14 @@ public interface ShippingMethodUpdate extends
         com.commercetools.api.models.ResourceUpdate<ShippingMethodUpdate, ShippingMethodUpdateAction, ShippingMethodUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

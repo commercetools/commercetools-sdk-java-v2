@@ -40,7 +40,7 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

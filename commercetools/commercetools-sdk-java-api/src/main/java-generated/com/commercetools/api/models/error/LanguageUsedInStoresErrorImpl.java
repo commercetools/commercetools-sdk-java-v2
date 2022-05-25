@@ -39,7 +39,7 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

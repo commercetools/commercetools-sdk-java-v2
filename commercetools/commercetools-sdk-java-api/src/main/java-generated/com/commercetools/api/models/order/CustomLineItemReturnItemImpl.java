@@ -66,7 +66,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ReturnItem.</p>>
+     *  <p>Unique identifier of the ReturnItem.</p>
      */
 
     public String getId() {
@@ -74,7 +74,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -82,7 +82,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -90,7 +90,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {
@@ -98,7 +98,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -106,7 +106,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
@@ -114,7 +114,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -122,7 +122,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -130,7 +130,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -138,7 +138,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {

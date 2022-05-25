@@ -31,7 +31,7 @@ public class LabelImpl implements Label, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

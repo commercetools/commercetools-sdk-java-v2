@@ -24,7 +24,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     private java.util.List<String> value;
 
     /**
-     <>
+     *
      */
 
     public StringSetFieldBuilder value(final String... value) {
@@ -33,7 +33,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public StringSetFieldBuilder value(final java.util.List<String> value) {
@@ -42,7 +42,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public StringSetFieldBuilder plusValue(final String... value) {

@@ -34,14 +34,14 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     String APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToCustomLineItemShippingDetailsTargets";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

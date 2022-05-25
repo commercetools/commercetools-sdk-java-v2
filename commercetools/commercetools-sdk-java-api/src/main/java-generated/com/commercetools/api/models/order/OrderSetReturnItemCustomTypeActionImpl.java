@@ -43,7 +43,7 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnItemId() {
@@ -59,7 +59,7 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     <*  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>>
+     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ReturnItem.</p>>
+     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

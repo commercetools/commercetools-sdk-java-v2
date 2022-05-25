@@ -43,7 +43,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addEnumValue</code> on types</p>>
+     *  <p>Update action for <code>addEnumValue</code> on types</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     <*  <p>The name of the field/attribute definition updated.</p>>
+     *  <p>The name of the field/attribute definition updated.</p>
      */
 
     public String getFieldName() {
@@ -67,7 +67,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {

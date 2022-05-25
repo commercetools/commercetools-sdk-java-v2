@@ -36,7 +36,7 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.AttributeType getElementType() {

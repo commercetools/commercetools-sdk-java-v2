@@ -37,7 +37,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
@@ -46,7 +46,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessagePayloadBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
@@ -55,7 +55,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -64,7 +64,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -74,7 +74,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
@@ -84,7 +84,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(
@@ -94,7 +94,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(

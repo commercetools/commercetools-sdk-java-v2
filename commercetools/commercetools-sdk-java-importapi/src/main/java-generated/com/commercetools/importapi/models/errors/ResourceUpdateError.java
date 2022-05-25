@@ -30,7 +30,7 @@ public interface ResourceUpdateError extends ErrorObject {
     String RESOURCE_UPDATE = "ResourceUpdate";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("resource")

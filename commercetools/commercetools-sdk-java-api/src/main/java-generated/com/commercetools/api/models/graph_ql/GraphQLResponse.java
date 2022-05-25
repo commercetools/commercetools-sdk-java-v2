@@ -29,14 +29,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLResponse {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("data")
     public Object getData();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("errors")

@@ -43,7 +43,7 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setValue</code> on custom objects</p>>
+     *  <p>Update action for <code>setValue</code> on custom objects</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -67,7 +67,7 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

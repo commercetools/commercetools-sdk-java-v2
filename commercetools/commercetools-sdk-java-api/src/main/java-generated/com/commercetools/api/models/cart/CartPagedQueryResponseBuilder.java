@@ -39,7 +39,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     private java.util.List<com.commercetools.api.models.cart.Cart> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public CartPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public CartPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder results(final com.commercetools.api.models.cart.Cart... results) {
@@ -84,7 +84,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.cart.Cart> results) {
@@ -93,7 +93,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.cart.Cart... results) {
@@ -105,7 +105,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder plusResults(
@@ -118,7 +118,7 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
-     <>
+     *
      */
 
     public CartPagedQueryResponseBuilder withResults(

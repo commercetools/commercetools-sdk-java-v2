@@ -43,7 +43,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getNextValue() {

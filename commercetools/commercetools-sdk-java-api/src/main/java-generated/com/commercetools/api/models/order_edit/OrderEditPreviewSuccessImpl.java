@@ -40,7 +40,7 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
@@ -56,7 +56,7 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads() {

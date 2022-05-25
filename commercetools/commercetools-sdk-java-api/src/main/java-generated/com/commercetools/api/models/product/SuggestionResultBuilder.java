@@ -24,7 +24,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SuggestionResultBuilder values(
@@ -34,7 +34,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public SuggestionResultBuilder addValue(final String key,

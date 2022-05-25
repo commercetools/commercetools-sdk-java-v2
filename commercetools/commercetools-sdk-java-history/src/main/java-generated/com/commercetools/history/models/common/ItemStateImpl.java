@@ -35,7 +35,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -43,7 +43,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getState() {

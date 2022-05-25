@@ -34,14 +34,14 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     String ORDER_EDIT = "order-edit";
 
     /**
-     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
      */
     @Valid
     @JsonProperty("obj")
     public OrderEdit getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
+     *  <p>Unique identifier of the referenced OrderEdit.</p>
      */
     @NotNull
     @JsonProperty("id")

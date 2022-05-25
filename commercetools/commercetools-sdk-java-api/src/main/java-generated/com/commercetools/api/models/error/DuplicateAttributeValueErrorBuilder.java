@@ -30,7 +30,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     private com.commercetools.api.models.product.Attribute attribute;
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(
@@ -70,7 +70,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(

@@ -29,7 +29,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     String CUSTOMER_TITLE_SET = "CustomerTitleSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")

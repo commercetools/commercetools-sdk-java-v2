@@ -47,7 +47,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setAttribute</code></p>>
+     *  <p>Update action for <code>setAttribute</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AttributeValue getPreviousValue() {
@@ -79,7 +79,7 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AttributeValue getNextValue() {

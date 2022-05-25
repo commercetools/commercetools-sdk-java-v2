@@ -35,28 +35,28 @@ public interface AddChannelRolesChange extends Change {
     String ADD_CHANNEL_ROLES_CHANGE = "AddChannelRolesChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<ChannelRole> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

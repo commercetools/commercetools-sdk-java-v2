@@ -40,7 +40,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     private com.commercetools.history.models.common.Price nextValue;
 
     /**
-     <*  <p>Update action for <code>setDiscountedPrice</code></p>>
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
      */
 
     public SetDiscountedPriceChangeBuilder change(final String change) {
@@ -49,7 +49,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder catalogData(final String catalogData) {
@@ -58,7 +58,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder variant(final String variant) {
@@ -67,7 +67,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder priceId(final String priceId) {
@@ -76,7 +76,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
@@ -86,7 +86,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder previousValue(
@@ -96,7 +96,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder nextValue(
@@ -106,7 +106,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     <>
+     *
      */
 
     public SetDiscountedPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {

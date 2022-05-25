@@ -35,28 +35,28 @@ public interface RemoveStateRolesChange extends Change {
     String REMOVE_STATE_ROLES_CHANGE = "RemoveStateRolesChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<StateRole> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

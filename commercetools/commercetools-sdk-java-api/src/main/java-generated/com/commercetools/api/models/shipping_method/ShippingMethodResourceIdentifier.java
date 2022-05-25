@@ -31,14 +31,14 @@ public interface ShippingMethodResourceIdentifier
     String SHIPPING_METHOD = "shipping-method";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("key")

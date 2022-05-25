@@ -33,7 +33,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -42,7 +42,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
+     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
+     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the Delivery.</p>
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the Delivery.</p>
      */
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder fields(

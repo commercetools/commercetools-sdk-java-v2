@@ -36,14 +36,14 @@ public interface OrderEditApplied extends OrderEditResult {
     String APPLIED = "Applied";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("appliedAt")
     public ZonedDateTime getAppliedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface OrderEditApplied extends OrderEditResult {
     public OrderExcerpt getExcerptBeforeEdit();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -27,7 +27,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public ErrorObjectBuilder code(final String code) {
@@ -36,7 +36,7 @@ public class ErrorObjectBuilder implements Builder<ErrorObject> {
     }
 
     /**
-     <>
+     *
      */
 
     public ErrorObjectBuilder message(final String message) {

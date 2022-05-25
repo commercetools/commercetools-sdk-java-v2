@@ -33,21 +33,21 @@ public interface ConcurrentModificationError extends ErrorObject {
     String CONCURRENT_MODIFICATION = "ConcurrentModification";
 
     /**
-     <*  <p>The version specified in the failed request.</p>>
+     *  <p>The version specified in the failed request.</p>
      */
 
     @JsonProperty("specifiedVersion")
     public Long getSpecifiedVersion();
 
     /**
-     <*  <p>The current version of the resource.</p>>
+     *  <p>The current version of the resource.</p>
      */
     @NotNull
     @JsonProperty("currentVersion")
     public Long getCurrentVersion();
 
     /**
-     <*  <p>The resource in conflict.</p>>
+     *  <p>The resource in conflict.</p>
      */
 
     @JsonProperty("conflictedResource")

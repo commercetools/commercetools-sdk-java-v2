@@ -63,7 +63,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *  <p>Name of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder name(
@@ -73,7 +73,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Name of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -82,7 +82,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the CartDiscount.</p>>
+     *  <p>User-defined unique identifier for the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder key(@Nullable final String key) {
@@ -91,7 +91,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Description of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder description(
@@ -101,7 +101,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Description of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder description(
@@ -111,7 +111,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
      */
 
     public CartDiscountDraftBuilder value(
@@ -121,7 +121,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
      */
 
     public CartDiscountDraftBuilder value(
@@ -132,7 +132,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>A valid Cart predicate.</p>>
+     *  <p>Valid Cart Predicate.</p>
      */
 
     public CartDiscountDraftBuilder cartPredicate(final String cartPredicate) {
@@ -141,7 +141,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>>
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
      */
 
     public CartDiscountDraftBuilder target(
@@ -151,7 +151,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>>
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
      */
 
     public CartDiscountDraftBuilder target(
@@ -161,7 +161,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>The string must contain a number between 0 and 1. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order must be unambiguous among all cart discounts.</p>>
+     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
      */
 
     public CartDiscountDraftBuilder sortOrder(final String sortOrder) {
@@ -170,7 +170,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>Only active discount can be applied to the cart. Defaults to <code>true</code>.</p>>
+     *  <p>Only active Discounts can be applied to the Cart.</p>
      */
 
     public CartDiscountDraftBuilder isActive(@Nullable final Boolean isActive) {
@@ -179,7 +179,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
 
     public CartDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -188,7 +188,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
 
     public CartDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -197,7 +197,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>States whether the discount can only be used in a connection with a DiscountCode. Defaults to <code>false</code>.</p>>
+     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
      */
 
     public CartDiscountDraftBuilder requiresDiscountCode(@Nullable final Boolean requiresDiscountCode) {
@@ -206,7 +206,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <*  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>>
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
      */
 
     public CartDiscountDraftBuilder stackingMode(
@@ -216,7 +216,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Custom Fields of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder custom(
@@ -226,7 +226,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     <>
+     *  <p>Custom Fields of the CartDiscount.</p>
      */
 
     public CartDiscountDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

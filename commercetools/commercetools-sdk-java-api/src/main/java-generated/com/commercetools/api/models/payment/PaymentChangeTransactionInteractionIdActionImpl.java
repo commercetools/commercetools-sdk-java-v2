@@ -40,7 +40,7 @@ public class PaymentChangeTransactionInteractionIdActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class PaymentChangeTransactionInteractionIdActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getTransactionId() {
@@ -56,7 +56,7 @@ public class PaymentChangeTransactionInteractionIdActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getInteractionId() {

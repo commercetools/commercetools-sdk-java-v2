@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Suggestion {
 
     /**
-     <*  <p>The suggested text.</p>>
+     *  <p>The suggested text.</p>
      */
     @NotNull
     @JsonProperty("text")

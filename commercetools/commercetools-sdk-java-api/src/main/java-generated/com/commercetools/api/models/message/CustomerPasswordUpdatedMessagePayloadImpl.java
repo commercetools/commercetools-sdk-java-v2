@@ -35,7 +35,7 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
     }
 
     /**
-     <*  <p>true, if password has been updated during Customer's Password Reset workflow.</p>>
+     *  <p>true, if password has been updated during Customer's Password Reset workflow.</p>
      */
 
     public Boolean getReset() {

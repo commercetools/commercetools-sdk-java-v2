@@ -41,7 +41,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -49,7 +49,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -57,7 +57,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {

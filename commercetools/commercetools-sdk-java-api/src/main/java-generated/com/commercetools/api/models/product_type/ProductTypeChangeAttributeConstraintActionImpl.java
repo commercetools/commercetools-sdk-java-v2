@@ -40,7 +40,7 @@ public class ProductTypeChangeAttributeConstraintActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductTypeChangeAttributeConstraintActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangeAttributeConstraintActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue() {

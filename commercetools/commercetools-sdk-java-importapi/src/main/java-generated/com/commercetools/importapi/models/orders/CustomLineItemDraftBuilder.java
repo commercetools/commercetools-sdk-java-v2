@@ -60,12 +60,12 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public CustomLineItemDraftBuilder name(
@@ -75,12 +75,12 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public CustomLineItemDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -89,7 +89,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder money(final com.commercetools.importapi.models.common.TypedMoney money) {
@@ -98,7 +98,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder money(
@@ -108,7 +108,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder taxedPrice(
@@ -119,7 +119,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder taxedPrice(
@@ -129,7 +129,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder totalPrice(
@@ -139,7 +139,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder totalPrice(
@@ -149,7 +149,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder slug(final String slug) {
@@ -158,7 +158,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder quantity(final Double quantity) {
@@ -167,7 +167,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder state(
@@ -177,7 +177,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder state(
@@ -187,7 +187,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder plusState(
@@ -200,7 +200,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder plusState(
@@ -213,7 +213,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder withState(
@@ -224,7 +224,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -235,7 +235,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
 
     public CustomLineItemDraftBuilder taxCategory(
@@ -245,7 +245,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder taxRate(
@@ -255,7 +255,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder taxRate(
@@ -265,7 +265,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -276,7 +276,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder externalTaxRate(
@@ -286,7 +286,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
@@ -296,7 +296,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
@@ -306,7 +306,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
@@ -319,7 +319,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
@@ -333,7 +333,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder withDiscountedPricePerQuantity(
@@ -345,7 +345,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder shippingDetails(
@@ -357,7 +357,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemDraftBuilder shippingDetails(

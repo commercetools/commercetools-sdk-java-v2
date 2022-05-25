@@ -40,7 +40,7 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
@@ -56,7 +56,7 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

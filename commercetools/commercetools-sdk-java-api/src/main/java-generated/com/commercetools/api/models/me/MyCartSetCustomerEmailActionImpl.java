@@ -35,7 +35,7 @@ public class MyCartSetCustomerEmailActionImpl implements MyCartSetCustomerEmailA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCartSetCustomerEmailActionImpl implements MyCartSetCustomerEmailA
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {

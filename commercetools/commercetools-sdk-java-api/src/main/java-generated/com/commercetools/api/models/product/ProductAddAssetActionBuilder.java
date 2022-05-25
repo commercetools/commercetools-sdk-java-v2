@@ -39,7 +39,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     private Integer position;
 
     /**
-     <>
+     *
      */
 
     public ProductAddAssetActionBuilder variantId(@Nullable final Long variantId) {
@@ -48,7 +48,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddAssetActionBuilder sku(@Nullable final String sku) {
@@ -57,7 +57,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddAssetActionBuilder staged(@Nullable final Boolean staged) {
@@ -66,7 +66,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddAssetActionBuilder asset(
@@ -76,7 +76,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
@@ -85,7 +85,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     <*  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>>
+     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
      */
 
     public ProductAddAssetActionBuilder position(@Nullable final Integer position) {

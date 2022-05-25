@@ -33,7 +33,7 @@ public class MoneyBuilder implements Builder<Money> {
     private com.commercetools.history.models.common.MoneyType type;
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public MoneyBuilder currencyCode(final String currencyCode) {
@@ -42,7 +42,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneyBuilder centAmount(final Integer centAmount) {
@@ -51,7 +51,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneyBuilder fractionDigits(final Integer fractionDigits) {
@@ -60,7 +60,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     <>
+     *
      */
 
     public MoneyBuilder type(final com.commercetools.history.models.common.MoneyType type) {

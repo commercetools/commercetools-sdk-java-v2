@@ -35,28 +35,28 @@ public interface ChangeOrderStateChange extends Change {
     String CHANGE_ORDER_STATE_CHANGE = "ChangeOrderStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeOrderState</code></p>>
+     *  <p>Update action for <code>changeOrderState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public OrderState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

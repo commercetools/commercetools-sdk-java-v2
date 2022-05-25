@@ -34,7 +34,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     private com.commercetools.history.models.common.TextInputHint inputHint;
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionBuilder type(
@@ -44,7 +44,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionBuilder type(final com.commercetools.history.models.common.FieldType type) {
@@ -53,7 +53,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     <*  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>>
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
      */
 
     public FieldDefinitionBuilder name(final String name) {
@@ -62,7 +62,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionBuilder label(
@@ -72,7 +72,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {
@@ -81,7 +81,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {

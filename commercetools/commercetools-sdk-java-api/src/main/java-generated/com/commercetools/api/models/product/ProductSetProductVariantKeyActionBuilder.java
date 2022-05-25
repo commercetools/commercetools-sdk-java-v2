@@ -35,7 +35,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetProductVariantKeyActionBuilder variantId(@Nullable final Long variantId) {
@@ -44,7 +44,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetProductVariantKeyActionBuilder sku(@Nullable final String sku) {
@@ -53,7 +53,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     <*  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>>
+     *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
      */
 
     public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
@@ -62,7 +62,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetProductVariantKeyActionBuilder staged(@Nullable final Boolean staged) {

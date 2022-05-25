@@ -35,7 +35,7 @@ public class AzureServiceBusDestinationImpl implements AzureServiceBusDestinatio
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class AzureServiceBusDestinationImpl implements AzureServiceBusDestinatio
     }
 
     /**
-     <>
+     *
      */
 
     public String getConnectionString() {

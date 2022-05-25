@@ -38,35 +38,35 @@ public interface TransitionLineItemStateChange extends Change {
     String TRANSITION_LINE_ITEM_STATE_CHANGE = "TransitionLineItemStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>transitionLineItemState</code></p>>
+     *  <p>Update action for <code>transitionLineItemState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("stateId")
     public String getStateId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface TransitionLineItemStateChange extends Change {
     public List<ItemState> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

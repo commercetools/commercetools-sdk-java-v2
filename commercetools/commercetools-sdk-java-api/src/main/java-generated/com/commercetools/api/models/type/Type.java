@@ -44,56 +44,56 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Type.</p>>
+     *  <p>Unique identifier of the Type.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Current version of the Type.</p>>
+     *  <p>Current version of the Type.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>Date and time (UTC) the Type was initially created.</p>>
+     *  <p>Date and time (UTC) the Type was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>Date and time (UTC) the Type was last updated.</p>>
+     *  <p>Date and time (UTC) the Type was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the Type.</p>>
+     *  <p>User-defined unique identifier of the Type.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Name of the Type.</p>>
+     *  <p>Name of the Type.</p>
      */
     @NotNull
     @Valid
@@ -101,21 +101,21 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     public LocalizedString getName();
 
     /**
-     <*  <p>Description of the Type.</p>>
+     *  <p>Description of the Type.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Resources and/or data types for which the Type is defined.</p>>
+     *  <p>Resources and/or data types for which the Type is defined.</p>
      */
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
 
     /**
-     <*  <p>Defines Custom Fields.</p>>
+     *  <p>Defines Custom Fields.</p>
      */
     @NotNull
     @Valid

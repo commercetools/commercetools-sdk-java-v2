@@ -31,7 +31,7 @@ public class AttributeTypeImpl implements AttributeType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

@@ -47,7 +47,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     <*  <p>Update action for <code>setDeliveryAddress</code></p>>
+     *  <p>Update action for <code>setDeliveryAddress</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -71,7 +71,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -79,7 +79,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

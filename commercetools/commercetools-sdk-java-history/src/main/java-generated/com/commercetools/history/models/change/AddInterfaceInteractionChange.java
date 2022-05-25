@@ -35,21 +35,21 @@ public interface AddInterfaceInteractionChange extends Change {
     String ADD_INTERFACE_INTERACTION_CHANGE = "AddInterfaceInteractionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>>
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Only available if <code>expand</code> is set to true</p>>
+     *  <p>Only available if <code>expand</code> is set to true</p>
      */
     @NotNull
     @Valid

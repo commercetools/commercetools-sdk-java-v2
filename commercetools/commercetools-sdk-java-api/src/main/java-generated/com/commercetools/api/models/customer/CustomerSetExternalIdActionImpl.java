@@ -35,7 +35,7 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
     }
 
     /**
-     <*  <p>If not defined, the external ID is unset.</p>>
+     *  <p>If not defined, the external ID is unset.</p>
      */
 
     public String getExternalId() {

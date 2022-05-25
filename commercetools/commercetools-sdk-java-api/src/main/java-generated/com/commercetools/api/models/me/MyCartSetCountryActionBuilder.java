@@ -26,7 +26,7 @@ public class MyCartSetCountryActionBuilder implements Builder<MyCartSetCountryAc
     private String country;
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public MyCartSetCountryActionBuilder country(@Nullable final String country) {

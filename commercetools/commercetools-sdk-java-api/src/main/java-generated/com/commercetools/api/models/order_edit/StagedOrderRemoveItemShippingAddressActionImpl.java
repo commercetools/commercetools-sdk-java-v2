@@ -36,7 +36,7 @@ public class StagedOrderRemoveItemShippingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderRemoveItemShippingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

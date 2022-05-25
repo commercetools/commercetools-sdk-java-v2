@@ -33,14 +33,14 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
     String CHANGE_ATTRIBUTE_CONSTRAINT = "changeAttributeConstraint";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newValue")

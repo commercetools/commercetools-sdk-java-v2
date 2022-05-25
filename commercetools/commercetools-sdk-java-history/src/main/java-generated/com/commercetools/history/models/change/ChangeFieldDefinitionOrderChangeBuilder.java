@@ -31,7 +31,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     private java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue;
 
     /**
-     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
+     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
@@ -87,7 +87,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
@@ -99,7 +99,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
@@ -109,7 +109,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder nextValue(
@@ -119,7 +119,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
@@ -132,7 +132,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
@@ -146,7 +146,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeFieldDefinitionOrderChangeBuilder withNextValue(

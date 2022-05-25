@@ -36,7 +36,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     private java.util.List<java.lang.Object> allowedValues;
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder message(final String message) {
@@ -45,7 +45,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -54,7 +54,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -66,7 +66,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder field(final String field) {
@@ -75,7 +75,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
@@ -84,7 +84,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
@@ -93,7 +93,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
@@ -102,7 +102,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {

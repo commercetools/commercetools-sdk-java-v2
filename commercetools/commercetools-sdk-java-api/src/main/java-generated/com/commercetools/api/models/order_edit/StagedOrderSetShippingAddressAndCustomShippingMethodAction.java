@@ -40,7 +40,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     String SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD = "setShippingAddressAndCustomShippingMethod";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -48,14 +48,14 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public BaseAddress getAddress();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,14 +63,14 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ShippingRateDraft getShippingRate();
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")

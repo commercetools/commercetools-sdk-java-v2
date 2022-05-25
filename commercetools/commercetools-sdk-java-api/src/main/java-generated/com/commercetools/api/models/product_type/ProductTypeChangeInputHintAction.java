@@ -33,14 +33,14 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     String CHANGE_INPUT_HINT = "changeInputHint";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newValue")

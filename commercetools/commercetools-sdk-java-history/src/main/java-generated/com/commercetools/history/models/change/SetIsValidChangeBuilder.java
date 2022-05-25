@@ -30,7 +30,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     private Boolean nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setIsValid</code></p>>
+     *  <p>Shape of the action for <code>setIsValid</code></p>
      */
 
     public SetIsValidChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetIsValidChangeBuilder previousValue(final Boolean previousValue) {
@@ -48,7 +48,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetIsValidChangeBuilder nextValue(final Boolean nextValue) {

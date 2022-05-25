@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingImages {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface MissingImages {
     public ProductReference getProduct();
 
     /**
-     <*  <p>ID of the variant</p>>
+     *  <p>ID of the variant</p>
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <*  <p>Number of images the variant contains.</p>>
+     *  <p>Number of images the variant contains.</p>
      */
     @NotNull
     @JsonProperty("imageCount")

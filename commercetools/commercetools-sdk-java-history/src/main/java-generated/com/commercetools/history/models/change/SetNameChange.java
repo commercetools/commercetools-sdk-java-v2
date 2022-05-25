@@ -36,21 +36,21 @@ public interface SetNameChange extends Change {
     String SET_NAME_CHANGE = "SetNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setName</code></p>>
+     *  <p>Shape of the action for <code>setName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetNameChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

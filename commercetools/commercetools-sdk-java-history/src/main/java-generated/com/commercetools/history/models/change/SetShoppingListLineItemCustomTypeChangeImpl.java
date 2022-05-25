@@ -47,7 +47,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
@@ -71,7 +71,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -79,7 +79,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {

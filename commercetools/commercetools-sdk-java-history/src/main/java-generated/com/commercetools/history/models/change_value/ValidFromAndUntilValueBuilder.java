@@ -27,7 +27,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     private String validUntil;
 
     /**
-     <>
+     *
      */
 
     public ValidFromAndUntilValueBuilder validFrom(final String validFrom) {
@@ -36,7 +36,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     <>
+     *
      */
 
     public ValidFromAndUntilValueBuilder validUntil(final String validUntil) {

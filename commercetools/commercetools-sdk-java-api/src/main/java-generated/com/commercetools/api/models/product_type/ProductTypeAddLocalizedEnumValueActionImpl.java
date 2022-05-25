@@ -39,7 +39,7 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue() {

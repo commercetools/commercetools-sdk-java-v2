@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoneyDraft extends Money {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-     <*  <p>Must be equal to the default number of fraction digits for the specified currency.</p>>
+     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
      */
 
     @JsonProperty("fractionDigits")

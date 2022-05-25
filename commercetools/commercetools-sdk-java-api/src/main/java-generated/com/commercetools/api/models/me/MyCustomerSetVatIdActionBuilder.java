@@ -26,7 +26,7 @@ public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVat
     private String vatId;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {

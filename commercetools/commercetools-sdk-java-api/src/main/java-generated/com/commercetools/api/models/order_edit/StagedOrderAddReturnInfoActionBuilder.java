@@ -33,7 +33,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     private java.time.ZonedDateTime returnDate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
@@ -42,7 +42,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder items(
@@ -52,7 +52,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder items(
@@ -62,7 +62,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder plusItems(
@@ -75,7 +75,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder plusItems(
@@ -88,7 +88,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder withItems(
@@ -99,7 +99,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {

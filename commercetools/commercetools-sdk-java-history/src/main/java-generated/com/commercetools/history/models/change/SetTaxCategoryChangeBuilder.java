@@ -31,7 +31,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setTaxCategory</code></p>>
+     *  <p>Shape of the action for <code>setTaxCategory</code></p>
      */
 
     public SetTaxCategoryChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTaxCategoryChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTaxCategoryChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTaxCategoryChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetTaxCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

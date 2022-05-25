@@ -30,7 +30,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
     /**
-     <>
+     *
      */
 
     public EditPreviewFailedErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     <>
+     *
      */
 
     public EditPreviewFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -48,7 +48,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     <>
+     *
      */
 
     public EditPreviewFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -60,7 +60,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     <>
+     *
      */
 
     public EditPreviewFailedErrorBuilder result(
@@ -71,7 +71,7 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
     }
 
     /**
-     <>
+     *
      */
 
     public EditPreviewFailedErrorBuilder result(

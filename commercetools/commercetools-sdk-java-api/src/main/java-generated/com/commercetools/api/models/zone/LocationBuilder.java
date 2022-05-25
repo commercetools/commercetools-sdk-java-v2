@@ -29,7 +29,7 @@ public class LocationBuilder implements Builder<Location> {
     private String state;
 
     /**
-     <*  <p>Country code of the geographic location.</p>>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public LocationBuilder country(final String country) {
@@ -38,7 +38,7 @@ public class LocationBuilder implements Builder<Location> {
     }
 
     /**
-     <*  <p>State within the country.</p>>
+     *  <p>State within the country.</p>
      */
 
     public LocationBuilder state(@Nullable final String state) {

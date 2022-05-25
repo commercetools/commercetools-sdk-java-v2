@@ -28,7 +28,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     private java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionUpdateBuilder withActions(

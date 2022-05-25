@@ -31,7 +31,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     private com.commercetools.history.models.common.Asset previousValue;
 
     /**
-     <*  <p>Update action for <code>addAsset</code></p>>
+     *  <p>Update action for <code>addAsset</code></p>
      */
 
     public AddAssetChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddAssetChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddAssetChangeBuilder nextValue(final com.commercetools.history.models.common.Asset nextValue) {
@@ -59,7 +59,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddAssetChangeBuilder previousValue(
@@ -69,7 +69,7 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddAssetChangeBuilder previousValue(final com.commercetools.history.models.common.Asset previousValue) {

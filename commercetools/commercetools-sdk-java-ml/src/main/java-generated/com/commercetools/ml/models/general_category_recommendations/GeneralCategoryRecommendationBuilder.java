@@ -27,7 +27,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
     private Double confidence;
 
     /**
-     <*  <p>An English category name that is recommended for a product.</p>>
+     *  <p>An English category name that is recommended for a product.</p>
      */
 
     public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
@@ -36,7 +36,7 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
     }
 
     /**
-     <*  <p>Probability score for the category recommendation.</p>>
+     *  <p>Probability score for the category recommendation.</p>
      */
 
     public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {

@@ -35,7 +35,7 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
     }
 
     /**
-     <>
+     *
      */
 
     public Double getScore() {

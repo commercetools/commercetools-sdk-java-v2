@@ -26,7 +26,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
     private String customerId;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {

@@ -35,35 +35,35 @@ public interface ChangeIsSearchableChange extends Change {
     String CHANGE_IS_SEARCHABLE_CHANGE = "ChangeIsSearchableChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeIsSearchable</code> on product types</p>>
+     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the updated attribute.</p>>
+     *  <p>The name of the updated attribute.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public Boolean getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

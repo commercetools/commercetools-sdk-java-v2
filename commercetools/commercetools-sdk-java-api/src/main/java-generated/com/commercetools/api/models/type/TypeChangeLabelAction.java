@@ -35,14 +35,14 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     String CHANGE_LABEL = "changeLabel";
 
     /**
-     <*  <p>Name of the Field Definition to update.</p>>
+     *  <p>Name of the Field Definition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid

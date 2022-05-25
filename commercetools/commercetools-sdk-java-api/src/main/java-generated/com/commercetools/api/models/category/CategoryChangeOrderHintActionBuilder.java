@@ -24,7 +24,7 @@ public class CategoryChangeOrderHintActionBuilder implements Builder<CategoryCha
     private String orderHint;
 
     /**
-     <>
+     *
      */
 
     public CategoryChangeOrderHintActionBuilder orderHint(final String orderHint) {

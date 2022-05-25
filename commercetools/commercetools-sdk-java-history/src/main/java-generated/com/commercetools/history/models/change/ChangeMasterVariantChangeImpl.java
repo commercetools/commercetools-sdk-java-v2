@@ -47,7 +47,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     <*  <p>Update action for <code>changeMasterVariant</code></p>>
+     *  <p>Update action for <code>changeMasterVariant</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getPreviousValue() {
@@ -79,7 +79,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getNextValue() {

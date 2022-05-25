@@ -36,21 +36,21 @@ public interface SetShippingAddressChange extends Change {
     String SET_SHIPPING_ADDRESS_CHANGE = "SetShippingAddressChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setShippingAddress</code></p>>
+     *  <p>Update action for <code>setShippingAddress</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetShippingAddressChange extends Change {
     public Address getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

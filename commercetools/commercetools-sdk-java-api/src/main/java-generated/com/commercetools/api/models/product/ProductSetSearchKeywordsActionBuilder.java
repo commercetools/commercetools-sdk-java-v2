@@ -30,7 +30,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -40,7 +40,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -50,7 +50,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetSearchKeywordsActionBuilder staged(@Nullable final Boolean staged) {

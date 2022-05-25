@@ -36,21 +36,21 @@ public interface ChangeValueChange extends Change {
     String CHANGE_VALUE_CHANGE = "ChangeValueChange";
 
     /**
-     <*  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>>
+     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeValueChange extends Change {
     public ChangeValueChangeValue getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

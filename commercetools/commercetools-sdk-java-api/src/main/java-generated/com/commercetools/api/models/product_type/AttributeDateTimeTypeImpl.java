@@ -27,7 +27,7 @@ public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

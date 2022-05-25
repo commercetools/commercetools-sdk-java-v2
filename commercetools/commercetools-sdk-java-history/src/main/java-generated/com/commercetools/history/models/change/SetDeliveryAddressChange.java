@@ -37,28 +37,28 @@ public interface SetDeliveryAddressChange extends Change {
     String SET_DELIVERY_ADDRESS_CHANGE = "SetDeliveryAddressChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setDeliveryAddress</code></p>>
+     *  <p>Update action for <code>setDeliveryAddress</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetDeliveryAddressChange extends Change {
     public Address getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

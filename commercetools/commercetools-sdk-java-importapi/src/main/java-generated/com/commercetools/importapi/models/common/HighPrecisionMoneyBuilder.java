@@ -35,7 +35,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     private Long preciseAmount;
 
     /**
-     <>
+     *
      */
 
     public HighPrecisionMoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
@@ -44,7 +44,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     <>
+     *
      */
 
     public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
@@ -53,7 +53,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
 
     public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
@@ -62,7 +62,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     <>
+     *
      */
 
     public HighPrecisionMoneyBuilder preciseAmount(final Long preciseAmount) {

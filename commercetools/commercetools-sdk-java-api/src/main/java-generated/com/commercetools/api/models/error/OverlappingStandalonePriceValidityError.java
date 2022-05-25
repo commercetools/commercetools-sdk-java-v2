@@ -40,7 +40,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     String OVERLAPPING_STANDALONE_PRICE_VALIDITY = "OverlappingStandalonePriceValidity";
 
     /**
-     <*  <p>Reference to a StandalonePrice.</p>>
+     *  <p>Reference to a StandalonePrice.</p>
      */
     @NotNull
     @Valid
@@ -48,63 +48,63 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     public StandalonePriceReference getConflictingStandalonePrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("conflictingValidFrom")
     public ZonedDateTime getConflictingValidFrom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("conflictingValidUntil")

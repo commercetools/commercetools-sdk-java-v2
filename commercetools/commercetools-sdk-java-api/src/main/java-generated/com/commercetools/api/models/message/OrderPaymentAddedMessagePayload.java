@@ -34,7 +34,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
     String ORDER_PAYMENT_ADDED = "OrderPaymentAdded";
 
     /**
-     <*  <p>Reference to a Payment.</p>>
+     *  <p>Reference to a Payment.</p>
      */
     @NotNull
     @Valid

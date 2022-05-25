@@ -36,7 +36,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -46,7 +46,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customer(
@@ -56,7 +56,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -68,7 +68,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder customerGroup(
@@ -78,7 +78,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -88,7 +88,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomer(
@@ -98,7 +98,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(
@@ -110,7 +110,7 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public OrderCustomerSetMessagePayloadBuilder oldCustomerGroup(

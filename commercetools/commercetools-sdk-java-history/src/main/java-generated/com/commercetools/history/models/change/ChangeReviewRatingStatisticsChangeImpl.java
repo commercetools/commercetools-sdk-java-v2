@@ -43,7 +43,7 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
+     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReviewRatingStatistics getPreviousValue() {

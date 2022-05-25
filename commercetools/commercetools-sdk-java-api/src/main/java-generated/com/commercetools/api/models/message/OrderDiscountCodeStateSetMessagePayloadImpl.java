@@ -44,7 +44,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -52,7 +52,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
@@ -60,7 +60,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
@@ -68,7 +68,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getOldState() {

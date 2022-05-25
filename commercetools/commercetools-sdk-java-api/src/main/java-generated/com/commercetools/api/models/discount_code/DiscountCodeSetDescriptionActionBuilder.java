@@ -27,7 +27,7 @@ public class DiscountCodeSetDescriptionActionBuilder implements Builder<Discount
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public DiscountCodeSetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class DiscountCodeSetDescriptionActionBuilder implements Builder<Discount
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public DiscountCodeSetDescriptionActionBuilder description(

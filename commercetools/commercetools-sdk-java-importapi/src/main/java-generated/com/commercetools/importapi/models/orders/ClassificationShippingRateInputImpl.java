@@ -39,7 +39,7 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateInputType getType() {
@@ -47,7 +47,7 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -55,12 +55,12 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {

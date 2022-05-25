@@ -51,7 +51,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <*  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>>
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {
@@ -67,7 +67,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -75,7 +75,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -83,7 +83,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     *  <p>Maximum number of times this Discount can be applied.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -91,7 +91,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     <>
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {

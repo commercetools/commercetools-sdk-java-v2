@@ -31,7 +31,7 @@ public class CategoryOrderHintsImpl implements CategoryOrderHints, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, String> values() {

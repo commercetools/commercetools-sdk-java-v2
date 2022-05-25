@@ -32,7 +32,7 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("store")

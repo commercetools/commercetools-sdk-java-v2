@@ -39,7 +39,7 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
     }
 
     /**
-     <*  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>>
+     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
      */
 
     public String getAddressId() {
@@ -55,7 +55,7 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

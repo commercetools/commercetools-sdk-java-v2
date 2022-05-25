@@ -35,7 +35,7 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {

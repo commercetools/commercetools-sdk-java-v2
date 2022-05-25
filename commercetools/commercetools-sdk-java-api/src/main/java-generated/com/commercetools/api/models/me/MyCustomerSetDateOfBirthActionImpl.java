@@ -35,7 +35,7 @@ public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBi
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.LocalDate getDateOfBirth() {

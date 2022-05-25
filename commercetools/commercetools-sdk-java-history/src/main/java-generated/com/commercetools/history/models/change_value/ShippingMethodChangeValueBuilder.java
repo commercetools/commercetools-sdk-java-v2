@@ -27,7 +27,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     private String name;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodChangeValueBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodChangeValueBuilder name(final String name) {

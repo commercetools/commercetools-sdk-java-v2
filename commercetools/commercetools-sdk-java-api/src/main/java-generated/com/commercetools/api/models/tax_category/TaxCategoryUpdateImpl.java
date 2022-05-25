@@ -35,7 +35,7 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>>
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
     }
 
     /**
-     <*  <p>Update actions to be performed on the TaxCategory.</p>>
+     *  <p>Update actions to be performed on the TaxCategory.</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> getActions() {

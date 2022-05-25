@@ -31,7 +31,7 @@ public interface StagedOrderChangeShipmentStateAction extends StagedOrderUpdateA
     String CHANGE_SHIPMENT_STATE = "changeShipmentState";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("shipmentState")

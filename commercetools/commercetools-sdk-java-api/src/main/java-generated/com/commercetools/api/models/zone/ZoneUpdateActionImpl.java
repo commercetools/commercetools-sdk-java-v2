@@ -31,7 +31,7 @@ public class ZoneUpdateActionImpl implements ZoneUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

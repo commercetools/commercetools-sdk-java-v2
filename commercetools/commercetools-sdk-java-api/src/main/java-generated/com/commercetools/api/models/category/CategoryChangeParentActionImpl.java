@@ -36,7 +36,7 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {

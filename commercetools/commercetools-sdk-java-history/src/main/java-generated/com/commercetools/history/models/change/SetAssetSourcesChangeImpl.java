@@ -47,7 +47,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>setAssetSources</code></p>>
+     *  <p>Update action for <code>setAssetSources</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -71,7 +71,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.AssetSource> getNextValue() {
@@ -79,7 +79,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.AssetSource> getPreviousValue() {

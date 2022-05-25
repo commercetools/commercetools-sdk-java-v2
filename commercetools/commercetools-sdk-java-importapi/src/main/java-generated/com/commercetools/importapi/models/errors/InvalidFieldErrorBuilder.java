@@ -37,7 +37,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     private Long resourceIndex;
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder message(final String message) {
@@ -46,7 +46,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     public InvalidFieldErrorBuilder field(final String field) {
@@ -55,7 +55,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <*  <p>The invalid value.</p>>
+     *  <p>The invalid value.</p>
      */
 
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
@@ -64,7 +64,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <*  <p>The set of allowed values for the field, if any.</p>>
+     *  <p>The set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
@@ -73,7 +73,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <*  <p>The set of allowed values for the field, if any.</p>>
+     *  <p>The set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
@@ -82,7 +82,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <*  <p>The set of allowed values for the field, if any.</p>>
+     *  <p>The set of allowed values for the field, if any.</p>
      */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
@@ -94,7 +94,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidFieldErrorBuilder resourceIndex(@Nullable final Long resourceIndex) {

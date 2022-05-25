@@ -35,7 +35,7 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
     }
 
     /**
-     <*  <p>An English category name that is recommended for a product.</p>>
+     *  <p>An English category name that is recommended for a product.</p>
      */
 
     public String getCategoryName() {
@@ -43,7 +43,7 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
     }
 
     /**
-     <*  <p>Probability score for the category recommendation.</p>>
+     *  <p>Probability score for the category recommendation.</p>
      */
 
     public Double getConfidence() {

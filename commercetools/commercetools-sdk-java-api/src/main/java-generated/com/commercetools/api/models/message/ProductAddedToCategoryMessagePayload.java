@@ -35,7 +35,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     public CategoryReference getCategory();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

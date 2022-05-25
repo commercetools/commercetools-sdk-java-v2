@@ -24,7 +24,7 @@ public class TypeKeyReferenceBuilder implements Builder<TypeKeyReference> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public TypeKeyReferenceBuilder key(final String key) {

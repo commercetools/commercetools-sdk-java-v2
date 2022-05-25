@@ -32,7 +32,7 @@ public interface BooleanField extends CustomField {
     String BOOLEAN = "Boolean";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -34,7 +34,7 @@ public class EnumValueImpl implements EnumValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -42,7 +42,7 @@ public class EnumValueImpl implements EnumValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLabel() {

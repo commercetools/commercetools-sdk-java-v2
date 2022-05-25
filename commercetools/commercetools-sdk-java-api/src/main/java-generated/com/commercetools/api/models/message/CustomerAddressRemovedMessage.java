@@ -41,7 +41,7 @@ public interface CustomerAddressRemovedMessage extends Message {
     String CUSTOMER_ADDRESS_REMOVED = "CustomerAddressRemoved";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

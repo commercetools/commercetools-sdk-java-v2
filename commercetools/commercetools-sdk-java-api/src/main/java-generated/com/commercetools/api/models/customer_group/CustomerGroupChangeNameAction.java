@@ -32,7 +32,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     String CHANGE_NAME = "changeName";
 
     /**
-     <*  <p>New name of the CustomerGroup.</p>>
+     *  <p>New name of the CustomerGroup.</p>
      */
     @NotNull
     @JsonProperty("name")

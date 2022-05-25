@@ -31,7 +31,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingRate</code></p>>
+     *  <p>Update action for <code>setShippingRate</code></p>
      */
 
     public SetShippingRateChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
@@ -59,7 +59,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateChangeBuilder previousValue(
@@ -69,7 +69,7 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateChangeBuilder previousValue(

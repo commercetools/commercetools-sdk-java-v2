@@ -27,7 +27,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
     private java.util.List<String> keys;
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public TypeChangeEnumValueOrderActionBuilder fieldName(final String fieldName) {
@@ -36,7 +36,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
     }
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      */
 
     public TypeChangeEnumValueOrderActionBuilder keys(final String... keys) {
@@ -45,7 +45,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
     }
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      */
 
     public TypeChangeEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
@@ -54,7 +54,7 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
     }
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      */
 
     public TypeChangeEnumValueOrderActionBuilder plusKeys(final String... keys) {

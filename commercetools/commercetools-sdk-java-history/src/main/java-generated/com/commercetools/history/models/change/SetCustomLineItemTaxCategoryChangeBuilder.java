@@ -37,7 +37,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     private com.commercetools.history.models.common.Reference previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
@@ -57,7 +57,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItemId(final String customLineItemId) {
@@ -76,7 +76,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
@@ -96,7 +96,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
@@ -106,7 +106,7 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(

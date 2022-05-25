@@ -35,7 +35,7 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getInputs() {

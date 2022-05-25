@@ -32,7 +32,7 @@ public interface NumberSetField extends CustomField {
     String NUMBER_SET = "NumberSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

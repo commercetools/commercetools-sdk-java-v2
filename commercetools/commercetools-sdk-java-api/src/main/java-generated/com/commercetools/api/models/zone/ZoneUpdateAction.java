@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

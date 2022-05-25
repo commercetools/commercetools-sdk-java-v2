@@ -34,7 +34,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
@@ -44,7 +44,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
@@ -54,7 +54,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusAddedProductSelections(
@@ -67,7 +67,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusAddedProductSelections(
@@ -81,7 +81,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder withAddedProductSelections(
@@ -93,7 +93,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
@@ -103,7 +103,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
@@ -113,7 +113,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusRemovedProductSelections(
@@ -126,7 +126,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusRemovedProductSelections(
@@ -140,7 +140,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder withRemovedProductSelections(
@@ -152,7 +152,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
@@ -162,7 +162,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
@@ -172,7 +172,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusUpdatedProductSelections(
@@ -185,7 +185,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder plusUpdatedProductSelections(
@@ -199,7 +199,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StoreProductSelectionsChangedMessagePayloadBuilder withUpdatedProductSelections(

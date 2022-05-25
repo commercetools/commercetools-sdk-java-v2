@@ -70,7 +70,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Type.</p>>
+     *  <p>Unique identifier of the Type.</p>
      */
 
     public String getId() {
@@ -78,7 +78,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Type.</p>>
+     *  <p>Current version of the Type.</p>
      */
 
     public Long getVersion() {
@@ -86,7 +86,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Type was initially created.</p>>
+     *  <p>Date and time (UTC) the Type was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -94,7 +94,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Type was last updated.</p>>
+     *  <p>Date and time (UTC) the Type was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -102,7 +102,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -110,7 +110,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -118,7 +118,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Type.</p>>
+     *  <p>User-defined unique identifier of the Type.</p>
      */
 
     public String getKey() {
@@ -126,7 +126,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Type.</p>>
+     *  <p>Name of the Type.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -134,7 +134,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Type.</p>>
+     *  <p>Description of the Type.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -142,7 +142,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Resources and/or data types for which the Type is defined.</p>>
+     *  <p>Resources and/or data types for which the Type is defined.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
@@ -150,7 +150,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-     <*  <p>Defines Custom Fields.</p>>
+     *  <p>Defines Custom Fields.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {

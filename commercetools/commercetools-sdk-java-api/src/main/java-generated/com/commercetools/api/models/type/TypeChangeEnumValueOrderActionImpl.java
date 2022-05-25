@@ -39,7 +39,7 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
     }
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public String getFieldName() {
@@ -55,7 +55,7 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
     }
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      */
 
     public java.util.List<String> getKeys() {

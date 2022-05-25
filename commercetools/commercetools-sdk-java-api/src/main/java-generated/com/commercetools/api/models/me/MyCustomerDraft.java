@@ -36,105 +36,105 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft<MyCustomerDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("firstName")
     public String getFirstName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lastName")
     public String getLastName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("middleName")
     public String getMiddleName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("companyName")
     public String getCompanyName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("vatId")
     public String getVatId();
 
     /**
-     <*  <p>Sets the ID of each address to be unique in the addresses list.</p>>
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
      */
     @Valid
     @JsonProperty("addresses")
     public List<BaseAddress> getAddresses();
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     @JsonProperty("defaultShippingAddress")
     public Long getDefaultShippingAddress();
 
     /**
-     <*  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>>
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
      */
 
     @JsonProperty("defaultBillingAddress")
     public Long getDefaultBillingAddress();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("stores")

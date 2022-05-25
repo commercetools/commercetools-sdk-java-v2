@@ -40,7 +40,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -56,7 +56,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

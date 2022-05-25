@@ -39,7 +39,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     private java.util.List<com.commercetools.api.models.order_edit.OrderEdit> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public OrderEditPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public OrderEditPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditPagedQueryResponseBuilder withResults(

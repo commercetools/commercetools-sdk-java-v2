@@ -36,7 +36,7 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {

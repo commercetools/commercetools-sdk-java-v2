@@ -25,7 +25,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(
@@ -35,7 +35,7 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessagePayloadBuilder inventoryEntry(

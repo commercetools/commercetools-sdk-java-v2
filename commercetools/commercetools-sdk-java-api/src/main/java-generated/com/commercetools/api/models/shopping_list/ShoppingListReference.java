@@ -34,14 +34,14 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     String SHOPPING_LIST = "shopping-list";
 
     /**
-     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
      */
     @Valid
     @JsonProperty("obj")
     public ShoppingList getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
+     *  <p>Unique identifier of the referenced ShoppingList.</p>
      */
     @NotNull
     @JsonProperty("id")

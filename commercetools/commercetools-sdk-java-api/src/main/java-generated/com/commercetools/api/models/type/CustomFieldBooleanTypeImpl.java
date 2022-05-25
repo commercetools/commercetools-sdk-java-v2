@@ -27,7 +27,7 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

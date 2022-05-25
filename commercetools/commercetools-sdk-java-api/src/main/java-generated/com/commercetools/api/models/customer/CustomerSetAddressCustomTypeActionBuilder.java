@@ -33,7 +33,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     private String addressId;
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public CustomerSetAddressCustomTypeActionBuilder type(
@@ -43,7 +43,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public CustomerSetAddressCustomTypeActionBuilder type(
@@ -53,7 +53,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      */
 
     public CustomerSetAddressCustomTypeActionBuilder fields(
@@ -63,7 +63,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      */
 
     public CustomerSetAddressCustomTypeActionBuilder fields(
@@ -73,7 +73,7 @@ public class CustomerSetAddressCustomTypeActionBuilder implements Builder<Custom
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerSetAddressCustomTypeActionBuilder addressId(final String addressId) {

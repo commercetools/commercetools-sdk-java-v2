@@ -39,14 +39,14 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     String ORDER_SHIPPING_RATE_INPUT_SET = "OrderShippingRateInputSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldShippingRateInput")

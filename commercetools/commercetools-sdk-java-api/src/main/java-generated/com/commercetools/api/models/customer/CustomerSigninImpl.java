@@ -55,7 +55,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -63,7 +63,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPassword() {
@@ -71,7 +71,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
     @Deprecated
     public String getAnonymousCartId() {
@@ -79,7 +79,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Cart.</p>>
+     *  <p>ResourceIdentifier to a Cart.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
@@ -87,7 +87,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode() {
@@ -95,7 +95,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAnonymousId() {
@@ -103,7 +103,7 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getUpdateProductData() {

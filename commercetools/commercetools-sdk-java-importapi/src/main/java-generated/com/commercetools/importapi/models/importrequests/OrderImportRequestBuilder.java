@@ -25,7 +25,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
 
     public OrderImportRequestBuilder resources(
@@ -35,7 +35,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
 
     public OrderImportRequestBuilder resources(
@@ -45,7 +45,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -58,7 +58,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
 
     public OrderImportRequestBuilder plusResources(
@@ -71,7 +71,7 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-     <*  <p>The order import resources of this request.</p>>
+     *  <p>The order import resources of this request.</p>
      */
 
     public OrderImportRequestBuilder withResources(

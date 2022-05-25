@@ -24,7 +24,7 @@ public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpda
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
     /**
-     <>
+     *
      */
 
     public ChangeStatusUpdateActionBuilder status(

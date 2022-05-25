@@ -34,7 +34,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-     <>
+     *
      */
 
     public AssetSourceBuilder uri(final String uri) {
@@ -43,7 +43,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetSourceBuilder key(final String key) {
@@ -52,7 +52,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetSourceBuilder dimensions(
@@ -62,7 +62,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetSourceBuilder dimensions(final com.commercetools.history.models.common.AssetDimensions dimensions) {
@@ -71,7 +71,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetSourceBuilder contentType(final String contentType) {

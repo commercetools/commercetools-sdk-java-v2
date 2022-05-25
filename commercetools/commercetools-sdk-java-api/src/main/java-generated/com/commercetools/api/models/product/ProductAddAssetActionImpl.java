@@ -50,7 +50,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -58,7 +58,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -66,7 +66,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -82,7 +82,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.AssetDraft getAsset() {
@@ -90,7 +90,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     <*  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>>
+     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
      */
 
     public Integer getPosition() {

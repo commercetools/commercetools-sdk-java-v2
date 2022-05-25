@@ -74,7 +74,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
+     *  <p>Unique identifier of the Subscription.</p>
      */
 
     public String getId() {
@@ -82,7 +82,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -90,7 +90,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -98,7 +98,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -106,7 +106,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -114,7 +114,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -122,7 +122,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -130,7 +130,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {
@@ -138,7 +138,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Subscription.</p>>
+     *  <p>User-defined unique identifier of the Subscription.</p>
      */
 
     public String getKey() {
@@ -146,7 +146,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
@@ -154,7 +154,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
@@ -162,7 +162,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.SubscriptionHealthStatus getStatus() {

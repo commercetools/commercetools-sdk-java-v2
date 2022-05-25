@@ -42,7 +42,7 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Zone.</p>>
+     *  <p>User-defined unique identifier for the Zone.</p>
      */
 
     public String getKey() {
@@ -50,7 +50,7 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     public String getDescription() {
@@ -66,7 +66,7 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
     }
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
 
     public java.util.List<com.commercetools.api.models.zone.Location> getLocations() {

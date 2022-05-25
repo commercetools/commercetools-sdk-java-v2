@@ -69,7 +69,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     private Boolean publish;
 
     /**
-     <>
+     *
      */
 
     public ProductDraftImportBuilder key(final String key) {
@@ -78,7 +78,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>>
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
      */
 
     public ProductDraftImportBuilder productType(
@@ -89,7 +89,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>>
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
      */
 
     public ProductDraftImportBuilder productType(
@@ -99,7 +99,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDraftImportBuilder name(
@@ -109,7 +109,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDraftImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -118,7 +118,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
      */
 
     public ProductDraftImportBuilder slug(
@@ -128,7 +128,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
      */
 
     public ProductDraftImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
@@ -137,7 +137,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Product.description</code>.</p>>
+     *  <p>Maps to <code>Product.description</code>.</p>
      */
 
     public ProductDraftImportBuilder description(
@@ -147,7 +147,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Product.description</code>.</p>>
+     *  <p>Maps to <code>Product.description</code>.</p>
      */
 
     public ProductDraftImportBuilder description(
@@ -157,7 +157,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>>
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      */
 
     public ProductDraftImportBuilder categories(
@@ -167,7 +167,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>>
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      */
 
     public ProductDraftImportBuilder categories(
@@ -177,7 +177,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>>
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      */
 
     public ProductDraftImportBuilder plusCategories(
@@ -190,7 +190,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>>
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      */
 
     public ProductDraftImportBuilder plusCategories(
@@ -204,7 +204,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>>
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
      */
 
     public ProductDraftImportBuilder withCategories(
@@ -216,12 +216,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaTitle(
@@ -231,12 +231,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaTitle(
@@ -246,12 +246,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaDescription(
@@ -262,12 +262,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaDescription(
@@ -277,12 +277,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaKeywords(
@@ -293,12 +293,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder metaKeywords(
@@ -308,7 +308,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>>
+     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
      */
 
     public ProductDraftImportBuilder masterVariant(
@@ -320,7 +320,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>>
+     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
      */
 
     public ProductDraftImportBuilder masterVariant(
@@ -330,7 +330,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>An array of related Product Variants.</p>>
+     *  <p>An array of related Product Variants.</p>
      */
 
     public ProductDraftImportBuilder variants(
@@ -340,7 +340,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>An array of related Product Variants.</p>>
+     *  <p>An array of related Product Variants.</p>
      */
 
     public ProductDraftImportBuilder variants(
@@ -350,7 +350,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>An array of related Product Variants.</p>>
+     *  <p>An array of related Product Variants.</p>
      */
 
     public ProductDraftImportBuilder plusVariants(
@@ -363,7 +363,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>An array of related Product Variants.</p>>
+     *  <p>An array of related Product Variants.</p>
      */
 
     public ProductDraftImportBuilder plusVariants(
@@ -378,7 +378,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>An array of related Product Variants.</p>>
+     *  <p>An array of related Product Variants.</p>
      */
 
     public ProductDraftImportBuilder withVariants(
@@ -391,7 +391,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>>
+     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
      */
 
     public ProductDraftImportBuilder taxCategory(
@@ -402,7 +402,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>>
+     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
      */
 
     public ProductDraftImportBuilder taxCategory(
@@ -412,23 +412,23 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-    *  <pre><code>{
-    *    "en": [
-    *      { "text": "Multi tool" },
-    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    *    ],
-    *    "de": [
-    *      {
-    *        "text": "Schweizer Messer",
-    *        "suggestTokenizer": {
-    *          "type": "custom",
-    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-    *        }
-    *      }
-    *    ]
-    *  }
-    *  </code></pre>>
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder searchKeywords(
@@ -439,23 +439,23 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-    *  <pre><code>{
-    *    "en": [
-    *      { "text": "Multi tool" },
-    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    *    ],
-    *    "de": [
-    *      {
-    *        "text": "Schweizer Messer",
-    *        "suggestTokenizer": {
-    *          "type": "custom",
-    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-    *        }
-    *      }
-    *    ]
-    *  }
-    *  </code></pre>>
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
      */
 
     public ProductDraftImportBuilder searchKeywords(
@@ -465,7 +465,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>>
+     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
      */
 
     public ProductDraftImportBuilder state(
@@ -475,7 +475,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>>
+     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
      */
 
     public ProductDraftImportBuilder state(
@@ -485,7 +485,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
-     <*  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>>
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      */
 
     public ProductDraftImportBuilder publish(@Nullable final Boolean publish) {

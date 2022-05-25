@@ -34,7 +34,7 @@ public class ParcelChangeValueImpl implements ParcelChangeValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -42,7 +42,7 @@ public class ParcelChangeValueImpl implements ParcelChangeValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCreatedAt() {

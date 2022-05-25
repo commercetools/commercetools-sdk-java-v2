@@ -36,7 +36,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     private com.commercetools.api.models.common.TypedMoney totalTax;
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceBuilder totalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
@@ -45,7 +45,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceBuilder totalNet(
@@ -55,7 +55,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
@@ -64,7 +64,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedPriceBuilder totalGross(
@@ -74,7 +74,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -83,7 +83,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public TaxedPriceBuilder taxPortions(
@@ -93,7 +93,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public TaxedPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
@@ -105,7 +105,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public TaxedPriceBuilder plusTaxPortions(
@@ -118,7 +118,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>>
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
      */
 
     public TaxedPriceBuilder withTaxPortions(
@@ -129,7 +129,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
@@ -138,7 +138,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
 
     public TaxedPriceBuilder totalTax(

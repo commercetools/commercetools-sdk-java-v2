@@ -30,7 +30,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder address(
@@ -40,7 +40,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder address(
@@ -50,7 +50,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(
@@ -60,7 +60,7 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(

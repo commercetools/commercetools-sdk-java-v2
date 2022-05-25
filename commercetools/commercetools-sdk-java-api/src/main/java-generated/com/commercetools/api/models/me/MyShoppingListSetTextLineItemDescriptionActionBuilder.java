@@ -31,7 +31,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
@@ -40,7 +40,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListSetTextLineItemDescriptionActionBuilder description(
@@ -50,7 +50,7 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListSetTextLineItemDescriptionActionBuilder description(

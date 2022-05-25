@@ -35,7 +35,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     String EDIT_PREVIEW_FAILED = "EditPreviewFailed";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

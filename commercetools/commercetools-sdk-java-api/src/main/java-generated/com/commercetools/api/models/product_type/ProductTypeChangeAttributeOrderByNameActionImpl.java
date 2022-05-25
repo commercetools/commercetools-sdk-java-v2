@@ -37,7 +37,7 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getAttributeNames() {

@@ -39,7 +39,7 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
     }
 
     /**
-     <*  <p>Update action for <code>removeFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.FieldDefinition getPreviousValue() {

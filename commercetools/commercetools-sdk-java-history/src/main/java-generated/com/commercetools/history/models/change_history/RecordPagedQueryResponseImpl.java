@@ -45,7 +45,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Integer getLimit() {
@@ -53,7 +53,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
 
     public Integer getCount() {
@@ -61,7 +61,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      */
 
     public Integer getTotal() {
@@ -69,7 +69,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Integer getOffset() {
@@ -77,7 +77,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {

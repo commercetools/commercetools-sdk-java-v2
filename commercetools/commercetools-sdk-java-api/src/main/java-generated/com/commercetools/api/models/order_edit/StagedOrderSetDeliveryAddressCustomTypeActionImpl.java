@@ -44,7 +44,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -60,7 +60,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -68,7 +68,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

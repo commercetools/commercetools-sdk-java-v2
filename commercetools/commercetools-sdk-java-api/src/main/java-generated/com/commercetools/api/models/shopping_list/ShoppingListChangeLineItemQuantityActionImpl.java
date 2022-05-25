@@ -40,7 +40,7 @@ public class ShoppingListChangeLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ShoppingListChangeLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class ShoppingListChangeLineItemQuantityActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

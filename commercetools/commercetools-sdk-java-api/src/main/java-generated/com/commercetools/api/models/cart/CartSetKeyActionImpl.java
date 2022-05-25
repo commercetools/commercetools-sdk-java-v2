@@ -35,7 +35,7 @@ public class CartSetKeyActionImpl implements CartSetKeyAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartSetKeyActionImpl implements CartSetKeyAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

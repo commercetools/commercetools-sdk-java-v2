@@ -45,7 +45,7 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Integer getLimit() {
@@ -53,7 +53,7 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -61,7 +61,7 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
 
     public Long getCount() {
@@ -69,7 +69,7 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-     <*  <p>The total number of results matching the query.</p>>
+     *  <p>The total number of results matching the query.</p>
      */
 
     public Long getTotal() {
@@ -77,7 +77,7 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults() {

@@ -43,7 +43,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the action for <code>setDescription</code></p>>
+     *  <p>Shape of the action for <code>setDescription</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

@@ -34,14 +34,14 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
     String CHANNEL = "channel";
 
     /**
-     <*  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>>
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Channel getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Channel.</p>>
+     *  <p>Unique identifier of the referenced Channel.</p>
      */
     @NotNull
     @JsonProperty("id")

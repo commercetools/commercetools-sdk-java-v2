@@ -35,7 +35,7 @@ public class NumberFieldImpl implements NumberField, ModelBase {
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class NumberFieldImpl implements NumberField, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getValue() {

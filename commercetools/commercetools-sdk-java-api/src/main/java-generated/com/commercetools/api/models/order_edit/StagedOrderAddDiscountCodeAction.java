@@ -33,7 +33,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("code")

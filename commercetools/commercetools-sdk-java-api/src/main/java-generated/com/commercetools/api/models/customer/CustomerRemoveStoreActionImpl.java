@@ -36,7 +36,7 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

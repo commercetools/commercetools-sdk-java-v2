@@ -29,7 +29,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     @JsonProperty("description")

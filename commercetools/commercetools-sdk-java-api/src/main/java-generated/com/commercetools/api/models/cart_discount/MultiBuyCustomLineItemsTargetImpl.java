@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MultiBuyCustomLineItemsTarget
+ *  <p>This Discount target is similar to <code>MultiBuyLineItems</code>, but is applied on Custom Line Items instead of Line Items.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItemsTarget, ModelBase {
@@ -51,7 +51,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>>
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {
@@ -67,7 +67,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>>
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -75,7 +75,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Quantity of line items that are discounted per application of this discount.</p>>
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -83,7 +83,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <*  <p>Maximum number of applications of this discount.</p>>
+     *  <p>Maximum number of times this Discount can be applied.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -91,7 +91,7 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
     }
 
     /**
-     <>
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
      */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {

@@ -35,7 +35,7 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

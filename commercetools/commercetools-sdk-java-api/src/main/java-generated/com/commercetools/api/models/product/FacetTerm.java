@@ -30,21 +30,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FacetTerm {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("term")
     public Object getTerm();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("productCount")

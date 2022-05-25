@@ -37,7 +37,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder id(final String id) {
@@ -46,7 +46,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder name(
@@ -56,7 +56,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -65,7 +65,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder description(
@@ -75,7 +75,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
@@ -84,7 +84,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder custom(
@@ -94,7 +94,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
@@ -103,7 +103,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     <>
+     *
      */
 
     public AssetBuilder key(final String key) {

@@ -35,7 +35,7 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
     }
 
     /**
-     <*  <p>The type of this field.</p>>
+     *  <p>The type of this field.</p>
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValue() {

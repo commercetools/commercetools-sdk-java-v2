@@ -39,7 +39,7 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

@@ -32,7 +32,7 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, com.commercetools.api.models.product.FacetResult> values() {

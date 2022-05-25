@@ -34,14 +34,14 @@ public interface PriceChangedError extends ErrorObject {
     String PRICE_CHANGED = "PriceChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipping")

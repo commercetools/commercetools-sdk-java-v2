@@ -30,7 +30,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerId")

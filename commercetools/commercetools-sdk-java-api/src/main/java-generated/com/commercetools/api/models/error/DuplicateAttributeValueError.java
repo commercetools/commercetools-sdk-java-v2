@@ -35,7 +35,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     String DUPLICATE_ATTRIBUTE_VALUE = "DuplicateAttributeValue";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

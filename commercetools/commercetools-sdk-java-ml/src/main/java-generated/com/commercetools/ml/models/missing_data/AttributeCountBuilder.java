@@ -30,7 +30,7 @@ public class AttributeCountBuilder implements Builder<AttributeCount> {
     private Integer missingAttributeValues;
 
     /**
-     <*  <p>Number of attributes defined in the product type.</p>>
+     *  <p>Number of attributes defined in the product type.</p>
      */
 
     public AttributeCountBuilder productTypeAttributes(final Integer productTypeAttributes) {
@@ -39,7 +39,7 @@ public class AttributeCountBuilder implements Builder<AttributeCount> {
     }
 
     /**
-     <*  <p>Number of attributes defined in the variant.</p>>
+     *  <p>Number of attributes defined in the variant.</p>
      */
 
     public AttributeCountBuilder variantAttributes(final Integer variantAttributes) {
@@ -48,7 +48,7 @@ public class AttributeCountBuilder implements Builder<AttributeCount> {
     }
 
     /**
-     <*  <p>Number of attributes missing values in the variant.</p>>
+     *  <p>Number of attributes missing values in the variant.</p>
      */
 
     public AttributeCountBuilder missingAttributeValues(final Integer missingAttributeValues) {

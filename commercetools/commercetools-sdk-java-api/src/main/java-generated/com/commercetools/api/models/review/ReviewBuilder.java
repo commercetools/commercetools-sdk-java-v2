@@ -78,7 +78,7 @@ public class ReviewBuilder implements Builder<Review> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Review.</p>>
+     *  <p>Unique identifier of the Review.</p>
      */
 
     public ReviewBuilder id(final String id) {
@@ -87,7 +87,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>The current version of the review.</p>>
+     *  <p>The current version of the review.</p>
      */
 
     public ReviewBuilder version(final Long version) {
@@ -96,7 +96,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -105,7 +105,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -114,7 +114,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -124,7 +124,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewBuilder lastModifiedBy(
@@ -134,7 +134,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewBuilder createdBy(
@@ -144,7 +144,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ReviewBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -153,7 +153,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Review.</p>>
+     *  <p>User-defined unique identifier of the Review.</p>
      */
 
     public ReviewBuilder key(@Nullable final String key) {
@@ -162,7 +162,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
@@ -171,7 +171,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder locale(@Nullable final String locale) {
@@ -180,7 +180,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder authorName(@Nullable final String authorName) {
@@ -189,7 +189,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder title(@Nullable final String title) {
@@ -198,7 +198,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder text(@Nullable final String text) {
@@ -207,7 +207,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Identifies the target of the review. Can be a Product or a Channel</p>>
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
      */
 
     public ReviewBuilder target(@Nullable final java.lang.Object target) {
@@ -216,7 +216,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>>
+     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
 
     public ReviewBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -225,7 +225,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>Number between -100 and 100 included.</p>>
+     *  <p>Number between -100 and 100 included.</p>
      */
 
     public ReviewBuilder rating(@Nullable final Integer rating) {
@@ -234,7 +234,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder state(
@@ -244,7 +244,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -253,7 +253,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>The customer who created the review.</p>>
+     *  <p>The customer who created the review.</p>
      */
 
     public ReviewBuilder customer(
@@ -263,7 +263,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <*  <p>The customer who created the review.</p>>
+     *  <p>The customer who created the review.</p>
      */
 
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -272,7 +272,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder custom(
@@ -282,7 +282,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

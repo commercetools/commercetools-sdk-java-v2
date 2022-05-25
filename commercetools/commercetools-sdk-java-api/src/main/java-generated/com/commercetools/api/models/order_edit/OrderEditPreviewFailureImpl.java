@@ -36,7 +36,7 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {

@@ -63,7 +63,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getShippingMethodName() {
@@ -71,7 +71,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -79,7 +79,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>The shipping rate used to determine the price.</p>>
+     *  <p>The shipping rate used to determine the price.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -87,7 +87,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -95,7 +95,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -103,7 +103,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>Not set if custom shipping method is used.</p>>
+     *  <p>Not set if custom shipping method is used.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -111,7 +111,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>>
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
@@ -119,7 +119,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.DiscountedLineItemPriceDraft getDiscountedPrice() {
@@ -127,7 +127,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     <*  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>>
+     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {

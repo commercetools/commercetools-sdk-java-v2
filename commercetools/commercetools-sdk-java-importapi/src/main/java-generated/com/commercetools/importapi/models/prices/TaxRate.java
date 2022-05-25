@@ -34,49 +34,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxRate {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("state")
     public String getState();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("subRates")

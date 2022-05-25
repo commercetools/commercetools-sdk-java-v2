@@ -34,14 +34,14 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

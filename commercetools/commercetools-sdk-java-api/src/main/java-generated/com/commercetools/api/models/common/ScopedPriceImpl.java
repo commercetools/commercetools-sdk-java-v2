@@ -67,7 +67,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -75,7 +75,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getValue() {
@@ -83,7 +83,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getCurrentValue() {
@@ -91,7 +91,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -99,7 +99,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -107,7 +107,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -115,7 +115,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -123,7 +123,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -131,7 +131,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -139,7 +139,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -24,7 +24,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     private String value;
 
     /**
-     <>
+     *
      */
 
     public LocalizedEnumFieldBuilder value(final String value) {

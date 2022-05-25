@@ -29,14 +29,14 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
     String ADD_SHIPPING_ADDRESS_ID = "addShippingAddressId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

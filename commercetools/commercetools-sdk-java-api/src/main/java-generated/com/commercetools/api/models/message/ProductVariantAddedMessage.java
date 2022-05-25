@@ -42,7 +42,7 @@ public interface ProductVariantAddedMessage extends Message {
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductVariantAddedMessage extends Message {
     public ProductVariant getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

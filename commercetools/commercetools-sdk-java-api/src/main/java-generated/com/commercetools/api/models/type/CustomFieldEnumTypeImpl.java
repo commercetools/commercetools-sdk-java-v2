@@ -36,7 +36,7 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues() {

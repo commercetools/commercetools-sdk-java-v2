@@ -36,21 +36,21 @@ public interface SetCustomTypeChange extends Change {
     String SET_CUSTOM_TYPE_CHANGE = "SetCustomTypeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for setting a custom type</p>>
+     *  <p>Update action for setting a custom type</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -29,7 +29,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     String SET_CART_PREDICATE = "setCartPredicate";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("cartPredicate")

@@ -27,7 +27,7 @@ public class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEmailVer
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

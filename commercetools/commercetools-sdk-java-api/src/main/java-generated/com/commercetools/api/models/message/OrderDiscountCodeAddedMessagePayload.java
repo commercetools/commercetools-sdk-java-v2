@@ -34,7 +34,7 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
     /**
-     <*  <p>Reference to a DiscountCode.</p>>
+     *  <p>Reference to a DiscountCode.</p>
      */
     @NotNull
     @Valid

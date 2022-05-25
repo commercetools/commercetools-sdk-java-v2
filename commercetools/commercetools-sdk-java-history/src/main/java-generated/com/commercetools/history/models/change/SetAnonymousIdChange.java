@@ -34,28 +34,28 @@ public interface SetAnonymousIdChange extends Change {
     String SET_ANONYMOUS_ID_CHANGE = "SetAnonymousIdChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setAnonymousId</code></p>>
+     *  <p>Shape of the action for <code>setAnonymousId</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

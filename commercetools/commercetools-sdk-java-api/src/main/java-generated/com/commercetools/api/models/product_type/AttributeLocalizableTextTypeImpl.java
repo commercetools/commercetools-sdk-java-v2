@@ -27,7 +27,7 @@ public class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTex
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

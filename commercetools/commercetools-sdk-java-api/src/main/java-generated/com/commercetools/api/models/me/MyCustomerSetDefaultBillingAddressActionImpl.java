@@ -40,7 +40,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressId() {
@@ -56,7 +56,7 @@ public class MyCustomerSetDefaultBillingAddressActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

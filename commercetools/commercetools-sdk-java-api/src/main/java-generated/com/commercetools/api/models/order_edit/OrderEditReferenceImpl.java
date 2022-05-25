@@ -40,7 +40,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>>
+     *  <p>Unique identifier of the referenced OrderEdit.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>>
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEdit getObj() {

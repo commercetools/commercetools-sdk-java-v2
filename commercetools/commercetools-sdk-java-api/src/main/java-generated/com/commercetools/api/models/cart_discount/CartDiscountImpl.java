@@ -105,7 +105,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CartDiscount.</p>>
+     *  <p>Unique identifier of the CartDiscount.</p>
      */
 
     public String getId() {
@@ -113,7 +113,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the cart discount.</p>>
+     *  <p>Current version of the CartDiscount.</p>
      */
 
     public Long getVersion() {
@@ -121,7 +121,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -129,7 +129,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -137,7 +137,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -145,7 +145,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -153,7 +153,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Name of the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -161,7 +161,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the CartDiscount.</p>>
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
      */
 
     public String getKey() {
@@ -169,7 +169,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Description of the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -177,7 +177,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Effect of the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
@@ -185,7 +185,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>A valid Cart predicate.</p>>
+     *  <p>Valid Cart Predicate.</p>
      */
 
     public String getCartPredicate() {
@@ -193,7 +193,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>>
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -201,7 +201,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>The string must contain a number between 0 and 1. All matching cart discounts are applied to a cart in the order defined by this field. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order is unambiguous among all cart discounts.</p>>
+     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
      */
 
     public String getSortOrder() {
@@ -209,7 +209,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Only active discount can be applied to the cart.</p>>
+     *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
      */
 
     public Boolean getIsActive() {
@@ -217,7 +217,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -225,7 +225,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -233,7 +233,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>States whether the discount can only be used in a connection with a DiscountCode.</p>>
+     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
      */
 
     public Boolean getRequiresDiscountCode() {
@@ -241,7 +241,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>>
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
@@ -249,7 +249,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <*  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>>
+     *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
      */
 
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
@@ -257,7 +257,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     <>
+     *  <p>Custom Fields of the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

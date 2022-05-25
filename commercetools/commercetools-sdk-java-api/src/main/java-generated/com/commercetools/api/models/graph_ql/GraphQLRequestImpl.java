@@ -39,7 +39,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getQuery() {
@@ -47,7 +47,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getOperationName() {
@@ -55,7 +55,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables() {

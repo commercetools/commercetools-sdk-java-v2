@@ -24,7 +24,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
     private Boolean value;
 
     /**
-     <>
+     *
      */
 
     public BooleanFieldBuilder value(final Boolean value) {

@@ -43,49 +43,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Subscription extends BaseResource, com.commercetools.api.models.DomainResource<Subscription> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Subscription.</p>>
+     *  <p>Unique identifier of the Subscription.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>>
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -93,7 +93,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public List<ChangeSubscription> getChanges();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -101,14 +101,14 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public Destination getDestination();
 
     /**
-     <*  <p>User-defined unique identifier of the Subscription.</p>>
+     *  <p>User-defined unique identifier of the Subscription.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -116,7 +116,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public List<MessageSubscription> getMessages();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -124,7 +124,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public DeliveryFormat getFormat();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("status")

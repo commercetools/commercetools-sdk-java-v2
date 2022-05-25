@@ -65,7 +65,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ShippingMethod.</p>>
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
      */
 
     public String getKey() {
@@ -73,7 +73,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -81,7 +81,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
@@ -89,7 +89,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDescription() {
@@ -97,7 +97,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
@@ -105,7 +105,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -113,7 +113,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> getZoneRates() {
@@ -121,7 +121,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <*  <p>If <code>true</code> the shipping method will be the default one in a project.</p>>
+     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
      */
 
     public Boolean getIsDefault() {
@@ -129,7 +129,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <*  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>>
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
      */
 
     public String getPredicate() {
@@ -137,7 +137,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

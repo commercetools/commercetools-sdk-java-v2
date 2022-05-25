@@ -31,7 +31,7 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     String SET_CHANGES = "setChanges";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("changes")

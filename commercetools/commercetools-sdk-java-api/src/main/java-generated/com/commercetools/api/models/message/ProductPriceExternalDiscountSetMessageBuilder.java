@@ -72,7 +72,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     private Boolean staged;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder id(final String id) {
@@ -81,7 +81,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder version(final Long version) {
@@ -90,7 +90,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -99,7 +99,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -108,7 +108,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -118,7 +118,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
@@ -128,7 +128,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
@@ -138,7 +138,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
@@ -148,7 +148,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -157,7 +157,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resource(
@@ -167,7 +167,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resource(
@@ -177,7 +177,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -186,7 +186,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,7 +198,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -208,7 +208,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder variantId(final Integer variantId) {
@@ -217,7 +217,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder variantKey(@Nullable final String variantKey) {
@@ -226,7 +226,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder sku(@Nullable final String sku) {
@@ -235,7 +235,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder priceId(final String priceId) {
@@ -244,7 +244,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
@@ -254,7 +254,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
@@ -264,7 +264,7 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceExternalDiscountSetMessageBuilder staged(final Boolean staged) {

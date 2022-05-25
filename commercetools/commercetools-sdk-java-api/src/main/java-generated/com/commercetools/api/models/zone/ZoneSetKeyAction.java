@@ -29,7 +29,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
      */
 
     @JsonProperty("key")

@@ -35,21 +35,21 @@ public interface PaymentLabel extends Label {
     String PAYMENT_LABEL = "PaymentLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -35,7 +35,7 @@ public class ImportSinkUpdateDraftImpl implements ImportSinkUpdateDraft, ModelBa
     }
 
     /**
-     <*  <p>Current version of the ImportSink.</p>>
+     *  <p>Current version of the ImportSink.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ImportSinkUpdateDraftImpl implements ImportSinkUpdateDraft, ModelBa
     }
 
     /**
-     <*  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {

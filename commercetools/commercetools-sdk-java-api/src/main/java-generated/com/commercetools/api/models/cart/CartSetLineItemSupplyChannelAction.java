@@ -34,14 +34,14 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     String SET_LINE_ITEM_SUPPLY_CHANNEL = "setLineItemSupplyChannel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

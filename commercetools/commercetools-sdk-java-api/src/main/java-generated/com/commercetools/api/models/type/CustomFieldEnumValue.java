@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldEnumValue {
 
     /**
-     <*  <p>Key of the value used as a programmatic identifier.</p>>
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Descriptive label of the value.</p>>
+     *  <p>Descriptive label of the value.</p>
      */
     @NotNull
     @JsonProperty("label")

@@ -42,14 +42,14 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     String PARCEL_REMOVED_FROM_DELIVERY = "ParcelRemovedFromDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

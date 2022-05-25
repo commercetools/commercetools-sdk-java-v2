@@ -40,14 +40,14 @@ public interface OrderShipmentStateChangedMessage extends OrderMessage {
     String ORDER_SHIPMENT_STATE_CHANGED = "OrderShipmentStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldShipmentState")

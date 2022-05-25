@@ -35,7 +35,7 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantityOnStock() {
@@ -43,7 +43,7 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getAvailableQuantity() {

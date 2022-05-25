@@ -34,21 +34,21 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discounted")

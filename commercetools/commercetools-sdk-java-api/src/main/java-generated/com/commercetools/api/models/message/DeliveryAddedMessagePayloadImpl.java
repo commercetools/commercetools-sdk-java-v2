@@ -36,7 +36,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {

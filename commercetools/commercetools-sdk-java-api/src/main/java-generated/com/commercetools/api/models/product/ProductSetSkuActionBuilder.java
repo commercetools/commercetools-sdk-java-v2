@@ -32,7 +32,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetSkuActionBuilder variantId(final Long variantId) {
@@ -41,7 +41,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     <*  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>>
+     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
      */
 
     public ProductSetSkuActionBuilder sku(@Nullable final String sku) {
@@ -50,7 +50,7 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetSkuActionBuilder staged(@Nullable final Boolean staged) {

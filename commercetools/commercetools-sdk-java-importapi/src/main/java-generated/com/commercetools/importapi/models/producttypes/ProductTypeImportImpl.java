@@ -42,7 +42,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -50,7 +50,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ProductType.name</code>.</p>>
+     *  <p>Maps to <code>ProductType.name</code>.</p>
      */
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ProductType.description</code>.</p>>
+     *  <p>Maps to <code>ProductType.description</code>.</p>
      */
 
     public String getDescription() {
@@ -66,7 +66,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     <*  <p>The <code>attributes</code> of ProductType.</p>>
+     *  <p>The <code>attributes</code> of ProductType.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {

@@ -35,21 +35,21 @@ public interface AddAttributeDefinitionChange extends Change {
     String ADD_ATTRIBUTE_DEFINITION_CHANGE = "AddAttributeDefinitionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addAttributeDefinition</code> on product types</p>>
+     *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

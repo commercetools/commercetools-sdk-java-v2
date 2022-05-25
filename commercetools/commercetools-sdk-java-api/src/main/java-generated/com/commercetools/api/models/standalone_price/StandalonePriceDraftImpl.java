@@ -70,7 +70,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>User-defined unique identifier for the StandalonePrice.</p>>
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
      */
 
     public String getKey() {
@@ -78,7 +78,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p>>
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
      */
 
     public String getSku() {
@@ -86,7 +86,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the money value of this Price.</p>>
+     *  <p>Sets the money value of this Price.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -94,7 +94,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the country for which this Price is valid.</p>>
+     *  <p>Sets the country for which this Price is valid.</p>
      */
 
     public String getCountry() {
@@ -102,7 +102,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the CustomerGroup for which this Price is valid.</p>>
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
@@ -110,7 +110,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the product distribution Channel for which this Price is valid.</p>>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -118,7 +118,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the date from which the Price is valid.</p>>
+     *  <p>Sets the date from which the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -126,7 +126,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the date until the Price is valid.</p>>
+     *  <p>Sets the date until the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -134,7 +134,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets price tiers.</p>>
+     *  <p>Sets price tiers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
@@ -142,7 +142,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>>
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -150,7 +150,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Custom Fields for the StandalonePrice.</p>>
+     *  <p>Custom Fields for the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

@@ -47,7 +47,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     <*  <p>Update action for <code>setOrderTotalTax</code></p>>
+     *  <p>Update action for <code>setOrderTotalTax</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -71,7 +71,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -79,7 +79,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {

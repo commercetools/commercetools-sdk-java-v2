@@ -31,7 +31,7 @@ public class ChannelUpdateActionImpl implements ChannelUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

@@ -26,7 +26,7 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public ExternalOAuthFailedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalOAuthFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalOAuthFailedErrorBuilder addValue(final String key, final java.lang.Object value) {

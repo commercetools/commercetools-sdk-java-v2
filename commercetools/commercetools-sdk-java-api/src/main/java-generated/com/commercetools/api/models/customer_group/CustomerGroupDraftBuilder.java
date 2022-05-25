@@ -33,7 +33,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
 
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
@@ -42,7 +42,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     <*  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
      */
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {
@@ -51,7 +51,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
 
     public CustomerGroupDraftBuilder custom(
@@ -61,7 +61,7 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
 
     public CustomerGroupDraftBuilder custom(

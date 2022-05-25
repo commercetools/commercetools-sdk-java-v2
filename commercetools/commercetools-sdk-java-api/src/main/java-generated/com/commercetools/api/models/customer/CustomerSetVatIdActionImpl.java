@@ -35,7 +35,7 @@ public class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction, Model
     }
 
     /**
-     <*  <p>If not defined, the vat Id is unset.</p>>
+     *  <p>If not defined, the vat Id is unset.</p>
      */
 
     public String getVatId() {

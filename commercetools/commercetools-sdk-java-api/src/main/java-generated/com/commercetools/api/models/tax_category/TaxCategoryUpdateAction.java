@@ -39,7 +39,7 @@ public interface TaxCategoryUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<TaxCategoryUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

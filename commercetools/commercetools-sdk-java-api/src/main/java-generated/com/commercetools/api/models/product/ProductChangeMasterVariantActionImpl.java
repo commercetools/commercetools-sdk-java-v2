@@ -42,7 +42,7 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -58,7 +58,7 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

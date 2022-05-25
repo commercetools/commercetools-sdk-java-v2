@@ -32,14 +32,14 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

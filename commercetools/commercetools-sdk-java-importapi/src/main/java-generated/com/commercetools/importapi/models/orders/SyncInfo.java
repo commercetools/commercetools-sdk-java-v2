@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SyncInfo {
 
     /**
-     <*  <p>Maps to <code>SyncInfo.channel</code></p>>
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface SyncInfo {
     public ChannelKeyReference getChannel();
 
     /**
-     <*  <p>Maps to <code>SyncInfo.externalId</code></p>>
+     *  <p>Maps to <code>SyncInfo.externalId</code></p>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     <*  <p>Maps to <code>SyncInfo.syncedAt</code></p>>
+     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
      */
     @NotNull
     @JsonProperty("syncedAt")

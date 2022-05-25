@@ -33,14 +33,14 @@ public interface CategoryUpdate extends
         com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

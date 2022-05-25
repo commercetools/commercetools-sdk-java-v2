@@ -36,7 +36,7 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {

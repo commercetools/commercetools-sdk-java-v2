@@ -39,7 +39,7 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -55,7 +55,7 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {

@@ -32,7 +32,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("code")

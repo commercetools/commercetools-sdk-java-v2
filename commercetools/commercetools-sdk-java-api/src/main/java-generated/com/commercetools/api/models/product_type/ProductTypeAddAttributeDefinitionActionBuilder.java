@@ -26,7 +26,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
     private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(
@@ -37,7 +37,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(

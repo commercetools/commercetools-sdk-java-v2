@@ -31,7 +31,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
     /**
-     <*  <p>Update action for <code>changeTarget</code> on cart discounts</p>>
+     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
      */
 
     public ChangeTargetChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTargetChangeBuilder previousValue(

@@ -42,7 +42,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     private com.commercetools.api.models.product.FacetResults facets;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ProductProjectionPagedSearchResponseBuilder limit(final Long limit) {
@@ -51,7 +51,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder count(final Long count) {
@@ -60,7 +60,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder total(@Nullable final Long total) {
@@ -69,7 +69,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ProductProjectionPagedSearchResponseBuilder offset(final Long offset) {
@@ -78,7 +78,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder results(
@@ -88,7 +88,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder results(
@@ -98,7 +98,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder plusResults(
@@ -111,7 +111,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder plusResults(
@@ -124,7 +124,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder withResults(
@@ -135,7 +135,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder facets(
@@ -145,7 +145,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductProjectionPagedSearchResponseBuilder facets(

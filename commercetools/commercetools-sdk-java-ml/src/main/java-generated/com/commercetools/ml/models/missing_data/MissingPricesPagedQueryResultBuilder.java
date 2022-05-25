@@ -37,7 +37,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     private com.commercetools.ml.models.missing_data.MissingPricesMeta meta;
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder count(final Long count) {
@@ -46,7 +46,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder total(final Long total) {
@@ -55,7 +55,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public MissingPricesPagedQueryResultBuilder offset(final Long offset) {
@@ -64,7 +64,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder results(
@@ -74,7 +74,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder results(
@@ -84,7 +84,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder plusResults(
@@ -97,7 +97,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder plusResults(
@@ -110,7 +110,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder withResults(
@@ -121,7 +121,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder meta(
@@ -131,7 +131,7 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
     }
 
     /**
-     <>
+     *
      */
 
     public MissingPricesPagedQueryResultBuilder meta(

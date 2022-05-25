@@ -36,7 +36,7 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
     }
 
     /**
-     <*  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>>
+     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {

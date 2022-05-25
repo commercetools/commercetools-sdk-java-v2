@@ -34,7 +34,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     private com.commercetools.history.models.common.SearchKeywords nextValue;
 
     /**
-     <*  <p>Update action for <code>setSearchKeywords</code></p>>
+     *  <p>Update action for <code>setSearchKeywords</code></p>
      */
 
     public SetSearchKeywordsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     <>
+     *
      */
 
     public SetSearchKeywordsChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     <>
+     *
      */
 
     public SetSearchKeywordsChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     <>
+     *
      */
 
     public SetSearchKeywordsChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     <>
+     *
      */
 
     public SetSearchKeywordsChangeBuilder nextValue(
@@ -82,7 +82,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     <>
+     *
      */
 
     public SetSearchKeywordsChangeBuilder nextValue(

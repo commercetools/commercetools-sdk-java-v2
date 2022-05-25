@@ -45,7 +45,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
     /**
-     <*  <p>User-defined unique identifier for the Channel.</p>>
+     *  <p>User-defined unique identifier for the Channel.</p>
      */
 
     public ChannelDraftBuilder key(final String key) {
@@ -54,7 +54,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      */
 
     public ChannelDraftBuilder roles(@Nullable final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
@@ -63,7 +63,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      */
 
     public ChannelDraftBuilder roles(
@@ -73,7 +73,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>>
+     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
      */
 
     public ChannelDraftBuilder plusRoles(
@@ -86,7 +86,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Name of the Channel.</p>>
+     *  <p>Name of the Channel.</p>
      */
 
     public ChannelDraftBuilder name(
@@ -96,7 +96,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Name of the Channel.</p>>
+     *  <p>Name of the Channel.</p>
      */
 
     public ChannelDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -105,7 +105,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Description of the Channel.</p>>
+     *  <p>Description of the Channel.</p>
      */
 
     public ChannelDraftBuilder description(
@@ -115,7 +115,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Description of the Channel.</p>>
+     *  <p>Description of the Channel.</p>
      */
 
     public ChannelDraftBuilder description(
@@ -125,7 +125,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Address where the Channel is located.</p>>
+     *  <p>Address where the Channel is located.</p>
      */
 
     public ChannelDraftBuilder address(
@@ -135,7 +135,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Address where the Channel is located.</p>>
+     *  <p>Address where the Channel is located.</p>
      */
 
     public ChannelDraftBuilder address(@Nullable final com.commercetools.api.models.common.BaseAddress address) {
@@ -144,7 +144,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Custom fields defined for the Channel.</p>>
+     *  <p>Custom fields defined for the Channel.</p>
      */
 
     public ChannelDraftBuilder custom(
@@ -154,7 +154,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>Custom fields defined for the Channel.</p>>
+     *  <p>Custom fields defined for the Channel.</p>
      */
 
     public ChannelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -163,7 +163,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
      */
 
     public ChannelDraftBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
@@ -172,7 +172,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     <*  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
      */
 
     public ChannelDraftBuilder geoLocation(

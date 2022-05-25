@@ -27,7 +27,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     private Boolean isSearchable;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeIsSearchableActionBuilder attributeName(final String attributeName) {
@@ -36,7 +36,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeIsSearchableActionBuilder isSearchable(final Boolean isSearchable) {

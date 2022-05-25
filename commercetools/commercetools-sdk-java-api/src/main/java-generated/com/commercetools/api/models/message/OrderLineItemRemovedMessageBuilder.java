@@ -78,7 +78,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder id(final String id) {
@@ -87,7 +87,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder version(final Long version) {
@@ -96,7 +96,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -105,7 +105,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -114,7 +114,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedBy(
@@ -124,7 +124,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder lastModifiedBy(
@@ -134,7 +134,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder createdBy(
@@ -144,7 +144,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder createdBy(
@@ -154,7 +154,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -163,7 +163,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -172,7 +172,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder resource(
@@ -182,7 +182,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -191,7 +191,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
@@ -203,7 +203,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder resourceUserProvidedIdentifiers(
@@ -213,7 +213,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder lineItemId(final String lineItemId) {
@@ -222,7 +222,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder removedQuantity(final Long removedQuantity) {
@@ -231,7 +231,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newQuantity(final Long newQuantity) {
@@ -240,7 +240,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newState(final com.commercetools.api.models.order.ItemState... newState) {
@@ -249,7 +249,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newState(
@@ -259,7 +259,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder plusNewState(
@@ -272,7 +272,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder plusNewState(
@@ -285,7 +285,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder withNewState(
@@ -296,7 +296,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder newTotalPrice(
@@ -306,7 +306,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public OrderLineItemRemovedMessageBuilder newTotalPrice(
@@ -316,7 +316,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newTaxedPrice(
@@ -326,7 +326,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newTaxedPrice(
@@ -336,7 +336,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newPrice(
@@ -346,7 +346,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newPrice(
@@ -356,7 +356,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newShippingDetail(
@@ -367,7 +367,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemRemovedMessageBuilder newShippingDetail(

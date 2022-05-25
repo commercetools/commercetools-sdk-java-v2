@@ -31,7 +31,7 @@ public interface ReferenceExistsError extends ErrorObject {
     String REFERENCE_EXISTS = "ReferenceExists";
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     @JsonProperty("referencedBy")

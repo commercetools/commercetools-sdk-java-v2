@@ -27,7 +27,7 @@ public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedS
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

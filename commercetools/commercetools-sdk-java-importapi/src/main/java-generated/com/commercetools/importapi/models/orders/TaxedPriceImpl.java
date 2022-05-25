@@ -43,7 +43,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getTotalNet() {
@@ -51,7 +51,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getTotalGross() {
@@ -59,7 +59,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions() {
@@ -67,7 +67,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>>
+     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getTotalTax() {

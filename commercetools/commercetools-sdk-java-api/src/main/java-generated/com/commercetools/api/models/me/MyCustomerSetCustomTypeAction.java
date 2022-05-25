@@ -33,14 +33,14 @@ public interface MyCustomerSetCustomTypeAction extends MyCustomerUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>>
+     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the MyCustomer.</p>>
+     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
      */
     @Valid
     @JsonProperty("fields")

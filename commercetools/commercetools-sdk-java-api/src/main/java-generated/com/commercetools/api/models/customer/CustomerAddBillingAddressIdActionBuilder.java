@@ -29,7 +29,7 @@ public class CustomerAddBillingAddressIdActionBuilder implements Builder<Custome
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public CustomerAddBillingAddressIdActionBuilder addressId(@Nullable final String addressId) {
@@ -38,7 +38,7 @@ public class CustomerAddBillingAddressIdActionBuilder implements Builder<Custome
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddBillingAddressIdActionBuilder addressKey(@Nullable final String addressKey) {

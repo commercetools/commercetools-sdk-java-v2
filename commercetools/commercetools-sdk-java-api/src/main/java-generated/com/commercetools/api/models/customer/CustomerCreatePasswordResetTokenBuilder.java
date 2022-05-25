@@ -29,7 +29,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     private Long ttlMinutes;
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatePasswordResetTokenBuilder email(final String email) {
@@ -38,7 +38,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {

@@ -24,7 +24,7 @@ public class CartDiscountChangeStackingModeActionBuilder implements Builder<Cart
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
 
     /**
-     <>
+     *  <p>New value to set.</p>
      */
 
     public CartDiscountChangeStackingModeActionBuilder stackingMode(

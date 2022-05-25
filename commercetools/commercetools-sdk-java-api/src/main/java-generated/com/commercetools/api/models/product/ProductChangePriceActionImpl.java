@@ -43,7 +43,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     <*  <p>ID of the EmbeddedPrice</p>>
+     *  <p>ID of the EmbeddedPrice</p>
      */
 
     public String getPriceId() {
@@ -59,7 +59,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -67,7 +67,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

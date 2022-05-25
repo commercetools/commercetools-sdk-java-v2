@@ -54,7 +54,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public StoreDeletedMessageBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder version(final Long version) {
@@ -72,7 +72,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +81,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -90,7 +90,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreDeletedMessageBuilder lastModifiedBy(
@@ -100,7 +100,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreDeletedMessageBuilder lastModifiedBy(
@@ -110,7 +110,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreDeletedMessageBuilder createdBy(
@@ -120,7 +120,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public StoreDeletedMessageBuilder createdBy(
@@ -130,7 +130,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -139,7 +139,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public StoreDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -148,7 +148,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public StoreDeletedMessageBuilder resource(
@@ -158,7 +158,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -167,7 +167,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -179,7 +179,7 @@ public class StoreDeletedMessageBuilder implements Builder<StoreDeletedMessage> 
     }
 
     /**
-     <>
+     *
      */
 
     public StoreDeletedMessageBuilder resourceUserProvidedIdentifiers(

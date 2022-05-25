@@ -58,7 +58,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the MyPayment.</p>>
+     *  <p>Unique identifier of the MyPayment.</p>
      */
 
     public String getId() {
@@ -66,7 +66,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -74,7 +74,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>A reference to the customer this payment belongs to.</p>>
+     *  <p>A reference to the customer this payment belongs to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -82,7 +82,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -90,7 +90,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
@@ -98,7 +98,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -106,7 +106,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
@@ -114,7 +114,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

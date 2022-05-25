@@ -100,21 +100,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorObject {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("code")
     public String getCode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonAnyGetter

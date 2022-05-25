@@ -37,42 +37,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft> {
 
     /**
-     <*  <p>User-defined unique identifier for the ShippingMethod.</p>>
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("localizedName")
     public LocalizedString getLocalizedName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("localizedDescription")
     public LocalizedString getLocalizedDescription();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -80,7 +80,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -88,21 +88,21 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public List<ZoneRateDraft> getZoneRates();
 
     /**
-     <*  <p>If <code>true</code> the shipping method will be the default one in a project.</p>>
+     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
      */
     @NotNull
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
     /**
-     <*  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>>
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
      */
 
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")

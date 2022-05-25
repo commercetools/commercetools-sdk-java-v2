@@ -31,42 +31,42 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("discountCode")
     public String getDiscountCode();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("reason")
     public String getReason();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("dicountCodeId")
     public String getDicountCodeId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validityCheckTime")

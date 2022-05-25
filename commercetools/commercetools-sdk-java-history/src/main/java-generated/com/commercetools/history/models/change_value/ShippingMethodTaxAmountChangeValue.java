@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodTaxAmountChangeValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ShippingMethodTaxAmountChangeValue {
     public TaxedPrice getTaxedPrice();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid

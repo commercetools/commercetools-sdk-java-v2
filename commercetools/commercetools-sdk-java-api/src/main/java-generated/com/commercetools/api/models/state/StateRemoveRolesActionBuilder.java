@@ -24,7 +24,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
-     <*  <p>Roles to remove from the State.</p>>
+     *  <p>Roles to remove from the State.</p>
      */
 
     public StateRemoveRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -33,7 +33,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     }
 
     /**
-     <*  <p>Roles to remove from the State.</p>>
+     *  <p>Roles to remove from the State.</p>
      */
 
     public StateRemoveRolesActionBuilder roles(
@@ -43,7 +43,7 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
     }
 
     /**
-     <*  <p>Roles to remove from the State.</p>>
+     *  <p>Roles to remove from the State.</p>
      */
 
     public StateRemoveRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {

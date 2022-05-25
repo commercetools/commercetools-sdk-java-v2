@@ -27,35 +27,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TrackingData {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("trackingId")
     public String getTrackingId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("carrier")
     public String getCarrier();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("provider")
     public String getProvider();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isReturn")

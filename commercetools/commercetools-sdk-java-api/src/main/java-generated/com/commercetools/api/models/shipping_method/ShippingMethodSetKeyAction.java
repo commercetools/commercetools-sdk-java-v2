@@ -29,7 +29,7 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     <*  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>>
+     *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
      */
 
     @JsonProperty("key")

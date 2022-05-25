@@ -40,7 +40,7 @@ public class StagedOrderSetLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StagedOrderSetLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class StagedOrderSetLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

@@ -39,7 +39,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     <*  <p>The ID of the ImportOperation.</p>>
+     *  <p>The ID of the ImportOperation.</p>
      */
 
     public String getOperationId() {
@@ -47,7 +47,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     <*  <p>The validation state of the ImportOperation.</p>>
+     *  <p>The validation state of the ImportOperation.</p>
      */
 
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
@@ -55,7 +55,7 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {

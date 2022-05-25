@@ -43,7 +43,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>>
+     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxCalculationMode getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxCalculationMode getNextValue() {

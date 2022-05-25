@@ -37,7 +37,7 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -45,7 +45,7 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getRemovedImageUrls() {

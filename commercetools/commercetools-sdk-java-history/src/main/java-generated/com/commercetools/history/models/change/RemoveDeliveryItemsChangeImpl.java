@@ -39,7 +39,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     }
 
     /**
-     <*  <p>Update action for <code>removeDelivery</code></p>>
+     *  <p>Update action for <code>removeDelivery</code></p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Delivery getPreviousValue() {

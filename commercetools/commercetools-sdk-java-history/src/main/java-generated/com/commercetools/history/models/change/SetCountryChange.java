@@ -34,28 +34,28 @@ public interface SetCountryChange extends Change {
     String SET_COUNTRY_CHANGE = "SetCountryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCountry</code></p>>
+     *  <p>Update action for <code>setCountry</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("nextValue")

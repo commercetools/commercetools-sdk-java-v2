@@ -117,7 +117,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>>
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order. It should be unique across a project. Once it's set it cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -125,7 +125,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.CustomerKeyReference getCustomer() {
@@ -133,7 +133,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.customerEmail</code>.</p>>
+     *  <p>Maps to <code>Order.customerEmail</code>.</p>
      */
 
     public String getCustomerEmail() {
@@ -141,7 +141,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.lineItems</code>.</p>>
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> getLineItems() {
@@ -149,7 +149,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.customLineItems</code></p>>
+     *  <p>Maps to <code>Order.customLineItems</code></p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> getCustomLineItems() {
@@ -157,7 +157,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.totalPrice</code>.</p>>
+     *  <p>Maps to <code>Order.totalPrice</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
@@ -165,7 +165,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.taxedPrice</code>.</p>>
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.TaxedPrice getTaxedPrice() {
@@ -173,7 +173,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.shippingAddress</code>.</p>>
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getShippingAddress() {
@@ -181,7 +181,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.billingAddress</code>.</p>>
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getBillingAddress() {
@@ -189,7 +189,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.customerGroup</code>.</p>>
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -197,7 +197,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.country</code>.</p>>
+     *  <p>Maps to <code>Order.country</code>.</p>
      */
 
     public String getCountry() {
@@ -205,7 +205,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.orderState</code>.</p>>
+     *  <p>Maps to <code>Order.orderState</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.OrderState getOrderState() {
@@ -213,7 +213,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.shipmentState</code>.</p>>
+     *  <p>Maps to <code>Order.shipmentState</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.ShipmentState getShipmentState() {
@@ -221,7 +221,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.paymentState</code>.</p>>
+     *  <p>Maps to <code>Order.paymentState</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.PaymentState getPaymentState() {
@@ -229,7 +229,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.shippingInfo</code>.</p>>
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.ShippingInfoImportDraft getShippingInfo() {
@@ -237,7 +237,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.completedAt</code>.</p>>
+     *  <p>Maps to <code>Order.completedAt</code>.</p>
      */
 
     public java.time.ZonedDateTime getCompletedAt() {
@@ -245,7 +245,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.custom</code>.</p>>
+     *  <p>Maps to <code>Order.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -253,7 +253,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.inventoryMode</code>.</p>>
+     *  <p>Maps to <code>Order.inventoryMode</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.InventoryMode getInventoryMode() {
@@ -261,7 +261,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.taxRoundingMode</code>.</p>>
+     *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.RoundingMode getTaxRoundingMode() {
@@ -269,7 +269,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.taxCalculationMode</code>.</p>>
+     *  <p>Maps to <code>Order.taxCalculationMode</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.TaxCalculationMode getTaxCalculationMode() {
@@ -277,7 +277,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.origin</code>.</p>>
+     *  <p>Maps to <code>Order.origin</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.CartOrigin getOrigin() {
@@ -285,7 +285,7 @@ public class OrderImportImpl implements OrderImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>>
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Address> getItemShippingAddresses() {

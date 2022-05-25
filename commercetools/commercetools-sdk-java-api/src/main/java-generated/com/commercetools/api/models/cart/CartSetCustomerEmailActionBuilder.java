@@ -24,7 +24,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
     private String email;
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomerEmailActionBuilder email(final String email) {

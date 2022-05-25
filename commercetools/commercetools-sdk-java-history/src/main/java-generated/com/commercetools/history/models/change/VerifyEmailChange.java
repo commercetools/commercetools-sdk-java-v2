@@ -32,14 +32,14 @@ public interface VerifyEmailChange extends Change {
     String VERIFY_EMAIL_CHANGE = "VerifyEmailChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")

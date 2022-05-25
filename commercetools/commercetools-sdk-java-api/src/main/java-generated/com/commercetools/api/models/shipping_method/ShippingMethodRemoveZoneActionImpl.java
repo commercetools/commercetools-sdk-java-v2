@@ -36,7 +36,7 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

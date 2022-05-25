@@ -81,7 +81,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
+     *  <p>Unique identifier of the InventoryEntry.</p>
      */
 
     public String getId() {
@@ -89,7 +89,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -97,7 +97,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -105,7 +105,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -113,7 +113,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -121,7 +121,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -129,7 +129,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the InventoryEntry.</p>>
+     *  <p>User-defined unique identifier of the InventoryEntry.</p>
      */
 
     public String getKey() {
@@ -137,7 +137,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -145,7 +145,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Connection to a particular supplier.</p>>
+     *  <p>Connection to a particular supplier.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -153,7 +153,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Overall amount of stock. (available + reserved)</p>>
+     *  <p>Overall amount of stock. (available + reserved)</p>
      */
 
     public Long getQuantityOnStock() {
@@ -161,7 +161,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>>
+     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
      */
 
     public Long getAvailableQuantity() {
@@ -169,7 +169,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>The time period in days, that tells how often this inventory entry is restocked.</p>>
+     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
      */
 
     public Long getRestockableInDays() {
@@ -177,7 +177,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <*  <p>The date and time of the next restock.</p>>
+     *  <p>The date and time of the next restock.</p>
      */
 
     public java.time.ZonedDateTime getExpectedDelivery() {
@@ -185,7 +185,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -34,49 +34,49 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     String ADD_VARIANT = "addVariant";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("prices")
     public List<PriceDraft> getPrices();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("assets")

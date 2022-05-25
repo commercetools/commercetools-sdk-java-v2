@@ -54,7 +54,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder projectKey(final String projectKey) {
@@ -63,7 +63,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public MessageDeliveryPayloadBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -72,7 +72,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public MessageDeliveryPayloadBuilder resource(
@@ -82,7 +82,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -94,7 +94,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
@@ -104,7 +104,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder id(final String id) {
@@ -113,7 +113,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder version(final Long version) {
@@ -122,7 +122,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -131,7 +131,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -140,7 +140,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder sequenceNumber(final Long sequenceNumber) {
@@ -149,7 +149,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder resourceVersion(final Long resourceVersion) {
@@ -158,7 +158,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(
@@ -170,7 +170,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     <>
+     *
      */
 
     public MessageDeliveryPayloadBuilder payloadNotIncluded(

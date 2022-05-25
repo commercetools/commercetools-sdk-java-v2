@@ -27,7 +27,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetChangesActionBuilder changes(
@@ -37,7 +37,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetChangesActionBuilder changes(
@@ -47,7 +47,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetChangesActionBuilder plusChanges(
@@ -60,7 +60,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetChangesActionBuilder plusChanges(
@@ -74,7 +74,7 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
     }
 
     /**
-     <>
+     *
      */
 
     public SubscriptionSetChangesActionBuilder withChanges(

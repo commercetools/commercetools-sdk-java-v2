@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SimilarProductPair {
 
     /**
-     <*  <p>The probability of product similarity.</p>>
+     *  <p>The probability of product similarity.</p>
      */
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

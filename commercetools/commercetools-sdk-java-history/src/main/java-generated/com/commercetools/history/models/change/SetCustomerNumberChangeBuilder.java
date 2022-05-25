@@ -30,7 +30,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setCustomerNumber</code></p>>
+     *  <p>Shape of the action for <code>setCustomerNumber</code></p>
      */
 
     public SetCustomerNumberChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerNumberChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetCustomerNumberChangeBuilder implements Builder<SetCustomerNumber
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomerNumberChangeBuilder nextValue(final String nextValue) {

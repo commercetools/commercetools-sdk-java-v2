@@ -39,7 +39,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.FacetTypes getType() {
@@ -47,7 +47,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -55,7 +55,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getProductCount() {

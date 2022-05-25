@@ -43,7 +43,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsOnStock() {
@@ -51,7 +51,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getRestockableInDays() {
@@ -59,7 +59,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getAvailableQuantity() {
@@ -67,7 +67,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap getChannels() {

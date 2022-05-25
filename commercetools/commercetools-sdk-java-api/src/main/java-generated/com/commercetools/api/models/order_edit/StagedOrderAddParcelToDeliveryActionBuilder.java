@@ -36,7 +36,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
@@ -45,7 +45,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
@@ -55,7 +55,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
@@ -65,7 +65,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
@@ -75,7 +75,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
@@ -85,7 +85,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder items(
@@ -95,7 +95,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder items(
@@ -105,7 +105,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
@@ -118,7 +118,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
@@ -131,7 +131,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderAddParcelToDeliveryActionBuilder withItems(

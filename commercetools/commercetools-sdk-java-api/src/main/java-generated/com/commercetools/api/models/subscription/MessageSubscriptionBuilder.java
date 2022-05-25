@@ -29,7 +29,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     private java.util.List<String> types;
 
     /**
-     <>
+     *
      */
 
     public MessageSubscriptionBuilder resourceTypeId(final String resourceTypeId) {
@@ -38,7 +38,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     }
 
     /**
-     <>
+     *
      */
 
     public MessageSubscriptionBuilder types(@Nullable final String... types) {
@@ -47,7 +47,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     }
 
     /**
-     <>
+     *
      */
 
     public MessageSubscriptionBuilder types(@Nullable final java.util.List<String> types) {
@@ -56,7 +56,7 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     }
 
     /**
-     <>
+     *
      */
 
     public MessageSubscriptionBuilder plusTypes(@Nullable final String... types) {

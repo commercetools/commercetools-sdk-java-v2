@@ -36,7 +36,7 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {

@@ -29,7 +29,7 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     String SET_LAST_NAME = "setLastName";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lastName")

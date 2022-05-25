@@ -61,7 +61,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the CustomerGroup.</p>>
+     *  <p>Unique identifier of the CustomerGroup.</p>
      */
 
     public String getId() {
@@ -69,7 +69,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the CustomerGroup.</p>>
+     *  <p>Current version of the CustomerGroup.</p>
      */
 
     public Long getVersion() {
@@ -77,7 +77,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the CustomerGroup was initially created.</p>>
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -85,7 +85,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the CustomerGroup was last updated.</p>>
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -93,7 +93,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -101,7 +101,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -109,7 +109,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the CustomerGroup.</p>>
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
      */
 
     public String getKey() {
@@ -117,7 +117,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Unique name of the CustomerGroup.</p>>
+     *  <p>Unique name of the CustomerGroup.</p>
      */
 
     public String getName() {
@@ -125,7 +125,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the CustomerGroup.</p>>
+     *  <p>Custom Fields for the CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

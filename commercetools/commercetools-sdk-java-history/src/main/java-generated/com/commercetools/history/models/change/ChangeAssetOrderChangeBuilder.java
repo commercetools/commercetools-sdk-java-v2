@@ -31,7 +31,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
@@ -73,7 +73,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder plusPreviousValue(
@@ -87,7 +87,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder withPreviousValue(
@@ -99,7 +99,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder nextValue(
@@ -109,7 +109,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder nextValue(
@@ -119,7 +119,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder plusNextValue(
@@ -132,7 +132,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder plusNextValue(
@@ -145,7 +145,7 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeAssetOrderChangeBuilder withNextValue(

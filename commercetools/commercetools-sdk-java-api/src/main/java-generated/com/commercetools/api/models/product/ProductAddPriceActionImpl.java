@@ -46,7 +46,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -54,7 +54,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.PriceDraft getPrice() {
@@ -78,7 +78,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

@@ -28,8 +28,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     private com.commercetools.api.models.common.Money value;
 
     /**
-     <*  <p>Minimum quantity this Price tier is valid for.</p>
-    *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>>
+     *  <p>Minimum quantity this Price tier is valid for.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
      */
 
     public PriceTierDraftBuilder minimumQuantity(final Long minimumQuantity) {
@@ -38,8 +38,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     <*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-    *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      */
 
     public PriceTierDraftBuilder value(
@@ -49,8 +49,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     <*  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
-    *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      */
 
     public PriceTierDraftBuilder value(final com.commercetools.api.models.common.Money value) {

@@ -24,7 +24,7 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
     private String message;
 
     /**
-     <>
+     *
      */
 
     public InvalidTokenErrorBuilder message(final String message) {

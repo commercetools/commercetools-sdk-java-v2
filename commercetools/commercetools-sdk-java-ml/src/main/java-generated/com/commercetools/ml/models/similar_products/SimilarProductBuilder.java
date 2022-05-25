@@ -33,7 +33,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
     /**
-     <*  <p>Reference to Product</p>>
+     *  <p>Reference to Product</p>
      */
 
     public SimilarProductBuilder product(
@@ -43,7 +43,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-     <*  <p>Reference to Product</p>>
+     *  <p>Reference to Product</p>
      */
 
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
@@ -52,7 +52,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-     <*  <p>ID of the ProductVariant that was compared.</p>>
+     *  <p>ID of the ProductVariant that was compared.</p>
      */
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
@@ -61,7 +61,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-     <*  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>>
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      */
 
     public SimilarProductBuilder meta(
@@ -71,7 +71,7 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     }
 
     /**
-     <*  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>>
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
      */
 
     public SimilarProductBuilder meta(

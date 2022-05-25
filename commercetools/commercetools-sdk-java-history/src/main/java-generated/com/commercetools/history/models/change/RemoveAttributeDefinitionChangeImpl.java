@@ -39,7 +39,7 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
     }
 
     /**
-     <*  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>>
+     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.AttributeDefinition getPreviousValue() {

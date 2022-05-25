@@ -35,7 +35,7 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
     }
 
     /**
-     <*  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>If <code>text</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public String getText() {

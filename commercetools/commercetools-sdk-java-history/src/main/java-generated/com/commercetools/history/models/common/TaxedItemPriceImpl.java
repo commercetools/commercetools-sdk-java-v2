@@ -35,7 +35,7 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getTotalNet() {
@@ -43,7 +43,7 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getTotalGross() {

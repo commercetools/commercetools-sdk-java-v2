@@ -36,7 +36,7 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices() {

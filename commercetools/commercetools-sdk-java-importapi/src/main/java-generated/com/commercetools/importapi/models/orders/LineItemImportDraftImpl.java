@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
- *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
+ *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
@@ -69,7 +69,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.productId</code>.</p>>
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
@@ -77,7 +77,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.name</code>.</p>>
+     *  <p>Maps to <code>LineItem.name</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -85,7 +85,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant() {
@@ -93,7 +93,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.price</code>.</p>>
+     *  <p>Maps to <code>LineItem.price</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.LineItemPrice getPrice() {
@@ -101,7 +101,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.quantity</code>.</p>>
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
      */
 
     public Double getQuantity() {
@@ -109,7 +109,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState() {
@@ -117,7 +117,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
@@ -125,7 +125,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
@@ -133,7 +133,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.taxRate</code>.</p>>
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      */
 
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
@@ -141,7 +141,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to LineItem.shippingDetails.</p>>
+     *  <p>Maps to LineItem.shippingDetails.</p>
      */
 
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {

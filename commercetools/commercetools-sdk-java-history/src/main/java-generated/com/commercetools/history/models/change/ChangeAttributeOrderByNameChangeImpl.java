@@ -43,7 +43,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     <*  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>>
+     *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getNextValue() {

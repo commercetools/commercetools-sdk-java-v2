@@ -32,7 +32,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     private java.util.List<String> tags;
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
@@ -41,7 +41,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
@@ -50,7 +50,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetTagsActionBuilder tags(@Nullable final String... tags) {
@@ -59,7 +59,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -68,7 +68,7 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {

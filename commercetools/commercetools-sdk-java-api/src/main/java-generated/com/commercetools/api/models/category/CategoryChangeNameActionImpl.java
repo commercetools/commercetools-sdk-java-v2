@@ -35,7 +35,7 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

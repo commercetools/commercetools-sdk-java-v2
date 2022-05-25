@@ -43,7 +43,7 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setText</code></p>>
+     *  <p>Shape of the action for <code>setText</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

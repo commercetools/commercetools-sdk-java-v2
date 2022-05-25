@@ -51,7 +51,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -59,7 +59,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -75,7 +75,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -83,7 +83,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -91,7 +91,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {

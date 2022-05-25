@@ -31,7 +31,7 @@ public class ImageSearchConfigUpdateActionImpl implements ImageSearchConfigUpdat
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

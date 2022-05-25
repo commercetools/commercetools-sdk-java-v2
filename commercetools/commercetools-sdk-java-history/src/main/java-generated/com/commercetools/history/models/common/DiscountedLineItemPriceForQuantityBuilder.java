@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
@@ -37,7 +37,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
@@ -49,7 +49,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(

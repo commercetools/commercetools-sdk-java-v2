@@ -31,7 +31,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     <>
+     *
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
@@ -40,7 +40,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
@@ -52,7 +52,7 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(

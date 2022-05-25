@@ -30,11 +30,11 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     private Integer fractionDigits;
 
     /**
-     <*  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      */
 
     public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {
@@ -43,7 +43,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     /**
-     <*  <p>Currency code compliant to ISO 4217.</p>>
+     *  <p>Currency code compliant to ISO 4217.</p>
      */
 
     public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {
@@ -52,7 +52,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     /**
-     <*  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>>
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
      */
 
     public CentPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {

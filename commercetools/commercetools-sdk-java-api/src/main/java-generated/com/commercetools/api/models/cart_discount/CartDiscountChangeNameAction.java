@@ -34,7 +34,7 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     <>
+     *  <p>New value to set.</p>
      */
     @NotNull
     @Valid

@@ -30,7 +30,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
     private String topicArn;
 
     /**
-     <>
+     *
      */
 
     public SnsDestinationBuilder accessKey(final String accessKey) {
@@ -39,7 +39,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
     }
 
     /**
-     <>
+     *
      */
 
     public SnsDestinationBuilder accessSecret(final String accessSecret) {
@@ -48,7 +48,7 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
     }
 
     /**
-     <>
+     *
      */
 
     public SnsDestinationBuilder topicArn(final String topicArn) {

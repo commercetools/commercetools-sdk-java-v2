@@ -36,7 +36,7 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -44,7 +44,7 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
     }
 
     /**
-     <*  <p>Resource type the Custom Field can reference.</p>>
+     *  <p>Resource type the Custom Field can reference.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {

@@ -35,7 +35,7 @@ public class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescri
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescri
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getDescription() {

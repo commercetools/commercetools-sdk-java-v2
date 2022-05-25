@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceDraftImport {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -46,63 +46,63 @@ public interface PriceDraftImport {
     public TypedMoney getValue();
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>References a customer group by key.</p>>
+     *  <p>References a customer group by key.</p>
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     <*  <p>References a channel by key.</p>>
+     *  <p>References a channel by key.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelKeyReference getChannel();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>The custom fields for this category.</p>>
+     *  <p>The custom fields for this category.</p>
      */
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("key")

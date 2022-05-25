@@ -35,7 +35,7 @@ public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {

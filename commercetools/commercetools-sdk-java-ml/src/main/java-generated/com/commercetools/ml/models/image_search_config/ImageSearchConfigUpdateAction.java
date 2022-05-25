@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImageSearchConfigUpdateAction {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

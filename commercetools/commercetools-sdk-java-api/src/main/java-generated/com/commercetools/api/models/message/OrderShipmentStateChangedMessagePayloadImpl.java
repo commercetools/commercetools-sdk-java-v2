@@ -40,7 +40,7 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -56,7 +56,7 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {

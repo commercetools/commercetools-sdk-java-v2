@@ -30,7 +30,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     <*  <p>Name of a custom field.</p>>
+     *  <p>Name of a custom field.</p>
      */
 
     public CustomFieldExpandedValueBuilder name(final String name) {
@@ -39,7 +39,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     <>
+     *
      */
 
     public CustomFieldExpandedValueBuilder value(final java.lang.Object value) {
@@ -48,7 +48,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     <>
+     *
      */
 
     public CustomFieldExpandedValueBuilder label(
@@ -58,7 +58,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     <>
+     *
      */
 
     public CustomFieldExpandedValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {

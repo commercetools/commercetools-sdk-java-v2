@@ -31,7 +31,7 @@ public class ShippingRateInputDraftImpl implements ShippingRateInputDraft, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

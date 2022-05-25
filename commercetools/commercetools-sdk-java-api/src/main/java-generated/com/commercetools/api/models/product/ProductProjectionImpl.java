@@ -114,7 +114,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <*  <p>The unique ID of the Product.</p>>
+     *  <p>The unique ID of the Product.</p>
      */
 
     public String getId() {
@@ -122,7 +122,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the Product.</p>>
+     *  <p>The current version of the Product.</p>
      */
 
     public Long getVersion() {
@@ -130,7 +130,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -138,7 +138,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -146,7 +146,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <*  <p>User-specific unique identifier of the Product.</p>>
+     *  <p>User-specific unique identifier of the Product.</p>
      */
 
     public String getKey() {
@@ -154,7 +154,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -162,7 +162,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -170,7 +170,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -178,7 +178,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -186,7 +186,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <*  <p>References to categories the product is in.</p>>
+     *  <p>References to categories the product is in.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
@@ -194,7 +194,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -202,7 +202,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -210,7 +210,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -218,7 +218,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -226,7 +226,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -234,7 +234,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getHasStagedChanges() {
@@ -242,7 +242,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPublished() {
@@ -250,7 +250,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -258,7 +258,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -266,7 +266,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -274,7 +274,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -282,7 +282,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {

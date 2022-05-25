@@ -47,7 +47,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -55,7 +55,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -63,7 +63,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -71,7 +71,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> getResults() {
@@ -79,7 +79,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta() {

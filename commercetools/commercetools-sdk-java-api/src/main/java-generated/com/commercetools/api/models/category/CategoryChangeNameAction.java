@@ -34,7 +34,7 @@ public interface CategoryChangeNameAction extends CategoryUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

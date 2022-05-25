@@ -36,14 +36,14 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     String MISSING_ROLE_ON_CHANNEL = "MissingRoleOnChannel";
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-     <*  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>>
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
      */
     @NotNull
     @JsonProperty("missingRole")

@@ -35,35 +35,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSinkPagedResponse {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <*  <p>The total number of results matching the query.</p>>
+     *  <p>The total number of results matching the query.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-     <*  <p>The array of Import Sinks matching the query.</p>>
+     *  <p>The array of Import Sinks matching the query.</p>
      */
     @NotNull
     @Valid

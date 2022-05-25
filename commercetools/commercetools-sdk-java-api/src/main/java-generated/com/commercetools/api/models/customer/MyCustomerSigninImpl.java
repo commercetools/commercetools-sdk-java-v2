@@ -42,7 +42,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -50,7 +50,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPassword() {
@@ -58,7 +58,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getActiveCartSignInMode() {
@@ -66,7 +66,7 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getUpdateProductData() {

@@ -34,14 +34,14 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     String SHIPPING_METHOD = "shipping-method";
 
     /**
-     <*  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
     @Valid
     @JsonProperty("obj")
     public ShippingMethod getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>>
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
      */
     @NotNull
     @JsonProperty("id")

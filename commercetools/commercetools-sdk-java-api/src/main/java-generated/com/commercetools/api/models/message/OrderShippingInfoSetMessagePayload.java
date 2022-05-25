@@ -32,14 +32,14 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldShippingInfo")

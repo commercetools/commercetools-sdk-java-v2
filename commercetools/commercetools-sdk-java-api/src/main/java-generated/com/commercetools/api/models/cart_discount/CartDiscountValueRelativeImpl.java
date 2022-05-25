@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountValueRelative
+ *  <p>Discounts the CartDiscountTarget relative to its price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueRelativeImpl implements CartDiscountValueRelative, ModelBase {
@@ -35,7 +35,7 @@ public class CartDiscountValueRelativeImpl implements CartDiscountValueRelative,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class CartDiscountValueRelativeImpl implements CartDiscountValueRelative,
     }
 
     /**
-     <>
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      */
 
     public Long getPermyriad() {

@@ -16,12 +16,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductPriceModeEnum {
 
     /**
-    	<p>The platform uses the prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">Product</a>.</p>
+    	<p>The API uses the prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">Product</a>.</p>
 
     */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
     /**
-    	<p>The platform uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
+    	<p>The API uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
 
     */
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;

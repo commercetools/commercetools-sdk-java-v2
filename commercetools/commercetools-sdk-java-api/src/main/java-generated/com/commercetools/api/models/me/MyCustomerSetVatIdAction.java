@@ -29,7 +29,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
     String SET_VAT_ID = "setVatId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("vatId")

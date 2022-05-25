@@ -40,7 +40,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
@@ -49,7 +49,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock(final Long newQuantityOnStock) {
@@ -58,7 +58,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
@@ -67,7 +67,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity(final Long newAvailableQuantity) {
@@ -76,7 +76,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
@@ -86,7 +86,7 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(

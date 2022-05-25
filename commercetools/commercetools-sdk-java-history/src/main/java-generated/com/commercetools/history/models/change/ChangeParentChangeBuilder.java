@@ -31,7 +31,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeParent</code></p>>
+     *  <p>Shape of the action for <code>changeParent</code></p>
      */
 
     public ChangeParentChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeParentChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeParentChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeParentChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeParentChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

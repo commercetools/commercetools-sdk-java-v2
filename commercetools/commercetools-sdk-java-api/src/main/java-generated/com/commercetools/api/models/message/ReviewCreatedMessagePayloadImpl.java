@@ -35,7 +35,7 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.review.Review getReview() {

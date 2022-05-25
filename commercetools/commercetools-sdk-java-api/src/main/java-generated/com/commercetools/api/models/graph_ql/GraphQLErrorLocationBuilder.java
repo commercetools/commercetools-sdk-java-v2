@@ -27,7 +27,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
     private Integer column;
 
     /**
-     <>
+     *
      */
 
     public GraphQLErrorLocationBuilder line(final Integer line) {
@@ -36,7 +36,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
     }
 
     /**
-     <>
+     *
      */
 
     public GraphQLErrorLocationBuilder column(final Integer column) {

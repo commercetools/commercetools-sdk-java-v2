@@ -37,7 +37,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemProductSlug</code></p>>
+     *  <p>Update action for <code>setLineItemProductSlug</code></p>
      */
 
     public SetLineItemProductSlugChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder variant(final String variant) {
@@ -75,7 +75,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder nextValue(
@@ -85,7 +85,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder nextValue(
@@ -95,7 +95,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder previousValue(
@@ -105,7 +105,7 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemProductSlugChangeBuilder previousValue(

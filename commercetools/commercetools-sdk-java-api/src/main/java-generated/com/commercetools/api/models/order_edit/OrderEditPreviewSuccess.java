@@ -35,7 +35,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     String PREVIEW_SUCCESS = "PreviewSuccess";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public StagedOrder getPreview();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

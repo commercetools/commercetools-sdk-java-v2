@@ -32,7 +32,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     String CHANGE_GROUPS = "changeGroups";
 
     /**
-     <*  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>>
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      */
     @NotNull
     @JsonProperty("groups")

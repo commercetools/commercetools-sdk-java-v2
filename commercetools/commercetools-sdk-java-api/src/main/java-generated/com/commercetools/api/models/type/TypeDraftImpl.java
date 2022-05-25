@@ -47,7 +47,7 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Type.</p>>
+     *  <p>User-defined unique identifier for the Type.</p>
      */
 
     public String getKey() {
@@ -55,7 +55,7 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Type.</p>>
+     *  <p>Name of the Type.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -63,7 +63,7 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Type.</p>>
+     *  <p>Description of the Type.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -71,7 +71,7 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>Resources and/or data types for which the Type is defined.</p>>
+     *  <p>Resources and/or data types for which the Type is defined.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
@@ -79,7 +79,7 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>Defines Custom Fields.</p>>
+     *  <p>Defines Custom Fields.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {

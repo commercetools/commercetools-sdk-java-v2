@@ -26,7 +26,7 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
     private String middleName;
 
     /**
-     <>
+     *
      */
 
     public CustomerSetMiddleNameActionBuilder middleName(@Nullable final String middleName) {

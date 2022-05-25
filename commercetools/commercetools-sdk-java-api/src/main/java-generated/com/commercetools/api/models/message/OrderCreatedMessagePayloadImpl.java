@@ -35,7 +35,7 @@ public class OrderCreatedMessagePayloadImpl implements OrderCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class OrderCreatedMessagePayloadImpl implements OrderCreatedMessagePayloa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Order getOrder() {

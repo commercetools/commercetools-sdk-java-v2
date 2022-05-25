@@ -57,7 +57,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -65,7 +65,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -73,7 +73,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -81,7 +81,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -89,7 +89,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -97,7 +97,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -105,7 +105,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <*  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>>
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -113,7 +113,7 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Asset.</p>>
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

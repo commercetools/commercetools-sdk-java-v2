@@ -47,7 +47,7 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
     }
 
     /**
-     <*  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getNextValue() {
@@ -71,7 +71,7 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -79,7 +79,7 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getAddress() {

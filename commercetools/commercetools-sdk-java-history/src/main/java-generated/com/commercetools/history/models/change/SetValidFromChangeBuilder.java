@@ -30,7 +30,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setValidFrom</code></p>>
+     *  <p>Shape of the action for <code>setValidFrom</code></p>
      */
 
     public SetValidFromChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetValidFromChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetValidFromChangeBuilder nextValue(final String nextValue) {

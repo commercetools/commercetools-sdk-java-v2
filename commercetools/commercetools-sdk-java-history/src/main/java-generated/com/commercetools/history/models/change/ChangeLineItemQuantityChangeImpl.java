@@ -50,7 +50,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <*  <p>Update action for <code>changeLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -74,7 +74,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -82,7 +82,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
 
     public Integer getNextValue() {
@@ -90,7 +90,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
 
     public Integer getPreviousValue() {

@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRate {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ShippingRate {
     public Money getPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,14 +50,14 @@ public interface ShippingRate {
     public Money getFreeAbove();
 
     /**
-     <*  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>>
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
      */
     @NotNull
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

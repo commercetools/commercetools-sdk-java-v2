@@ -34,7 +34,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     String CHANGE_DESCRIPTION = "changeDescription";
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

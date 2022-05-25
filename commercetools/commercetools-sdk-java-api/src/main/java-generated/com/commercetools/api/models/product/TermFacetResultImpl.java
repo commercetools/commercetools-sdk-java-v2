@@ -51,7 +51,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.FacetTypes getType() {
@@ -59,7 +59,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
@@ -67,7 +67,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getMissing() {
@@ -75,7 +75,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -83,7 +83,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getOther() {
@@ -91,7 +91,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {

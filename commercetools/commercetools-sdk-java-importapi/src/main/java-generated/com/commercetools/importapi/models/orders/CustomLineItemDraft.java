@@ -39,12 +39,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItemDraft {
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface CustomLineItemDraft {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,14 +60,14 @@ public interface CustomLineItemDraft {
     public TypedMoney getMoney();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxedPrice")
     public CustomLineItemTaxedPrice getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -75,56 +75,56 @@ public interface CustomLineItemDraft {
     public TypedMoney getTotalPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-     <*  <p>References a tax category by key.</p>>
+     *  <p>References a tax category by key.</p>
      */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingDetails")

@@ -34,7 +34,7 @@ public interface OrderPatchImportRequest extends ImportRequest {
     String ORDER_PATCH = "order-patch";
 
     /**
-     <*  <p>The order patches of this request</p>>
+     *  <p>The order patches of this request</p>
      */
     @NotNull
     @Valid

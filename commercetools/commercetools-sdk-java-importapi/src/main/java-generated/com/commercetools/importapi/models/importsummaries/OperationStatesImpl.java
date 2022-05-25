@@ -50,7 +50,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>processing</code> state.</p>>
+     *  <p>The number of resources in the <code>processing</code> state.</p>
      */
 
     public Long getProcessing() {
@@ -58,7 +58,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>validationFailed</code> state.</p>>
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
      */
 
     public Long getValidationFailed() {
@@ -66,7 +66,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>unresolved</code> state.</p>>
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
      */
 
     public Long getUnresolved() {
@@ -74,7 +74,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>>
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
      */
 
     public Long getWaitForMasterVariant() {
@@ -82,7 +82,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>imported</code> state.</p>>
+     *  <p>The number of resources in the <code>imported</code> state.</p>
      */
 
     public Long getImported() {
@@ -90,7 +90,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     <*  <p>The number of resources in the <code>rejected</code> state.</p>>
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
      */
 
     public Long getRejected() {

@@ -26,7 +26,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public InvalidInputErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidInputErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class InvalidInputErrorBuilder implements Builder<InvalidInputError> {
     }
 
     /**
-     <>
+     *
      */
 
     public InvalidInputErrorBuilder addValue(final String key, final java.lang.Object value) {

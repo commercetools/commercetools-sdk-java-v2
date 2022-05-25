@@ -33,7 +33,7 @@ public interface DateTimeSetField extends CustomField {
     String DATE_TIME_SET = "DateTimeSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

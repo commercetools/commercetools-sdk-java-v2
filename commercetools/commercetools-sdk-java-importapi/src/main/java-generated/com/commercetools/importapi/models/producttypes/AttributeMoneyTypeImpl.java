@@ -27,7 +27,7 @@ public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

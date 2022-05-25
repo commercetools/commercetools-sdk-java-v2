@@ -30,7 +30,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
     private Integer position;
 
     /**
-     <>
+     *
      */
 
     public CategoryAddAssetActionBuilder asset(
@@ -40,7 +40,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
@@ -49,7 +49,7 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
     }
 
     /**
-     <*  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>>
+     *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
      */
 
     public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {

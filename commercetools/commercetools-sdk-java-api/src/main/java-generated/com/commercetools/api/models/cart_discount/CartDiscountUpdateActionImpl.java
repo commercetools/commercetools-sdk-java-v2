@@ -31,7 +31,7 @@ public class CartDiscountUpdateActionImpl implements CartDiscountUpdateAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

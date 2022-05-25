@@ -35,21 +35,21 @@ public interface AddFieldDefinitionChange extends Change {
     String ADD_FIELD_DEFINITION_CHANGE = "AddFieldDefinitionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -24,7 +24,7 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
     private String key;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodKeyReferenceBuilder key(final String key) {

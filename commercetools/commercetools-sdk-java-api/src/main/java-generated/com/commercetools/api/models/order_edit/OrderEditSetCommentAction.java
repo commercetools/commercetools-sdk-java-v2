@@ -29,7 +29,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     String SET_COMMENT = "setComment";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("comment")

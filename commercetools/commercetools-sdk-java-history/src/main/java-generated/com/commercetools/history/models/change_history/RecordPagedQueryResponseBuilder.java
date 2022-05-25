@@ -37,7 +37,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
@@ -46,7 +46,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
 
     public RecordPagedQueryResponseBuilder count(final Integer count) {
@@ -55,7 +55,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      */
 
     public RecordPagedQueryResponseBuilder total(final Integer total) {
@@ -64,7 +64,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public RecordPagedQueryResponseBuilder offset(final Integer offset) {
@@ -73,7 +73,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public RecordPagedQueryResponseBuilder results(
@@ -83,7 +83,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public RecordPagedQueryResponseBuilder results(
@@ -93,7 +93,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public RecordPagedQueryResponseBuilder plusResults(
@@ -106,7 +106,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public RecordPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     <>
+     *
      */
 
     public RecordPagedQueryResponseBuilder withResults(

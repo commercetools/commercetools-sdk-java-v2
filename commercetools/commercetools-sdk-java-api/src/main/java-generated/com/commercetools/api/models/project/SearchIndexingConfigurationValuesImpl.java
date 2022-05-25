@@ -40,7 +40,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     }
 
     /**
-     <*  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>>
+     *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
@@ -48,7 +48,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     }
 
     /**
-     <*  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>>
+     *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -56,7 +56,7 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {

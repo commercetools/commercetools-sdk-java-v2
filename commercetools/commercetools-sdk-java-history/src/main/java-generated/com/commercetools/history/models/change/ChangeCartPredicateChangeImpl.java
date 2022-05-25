@@ -43,7 +43,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeCartPredicate</code></p>>
+     *  <p>Shape of the action for <code>changeCartPredicate</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

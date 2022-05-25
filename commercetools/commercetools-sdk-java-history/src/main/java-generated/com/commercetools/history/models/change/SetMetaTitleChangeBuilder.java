@@ -31,7 +31,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMetaTitle</code></p>>
+     *  <p>Shape of the action for <code>setMetaTitle</code></p>
      */
 
     public SetMetaTitleChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaTitleChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaTitleChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaTitleChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaTitleChangeBuilder nextValue(

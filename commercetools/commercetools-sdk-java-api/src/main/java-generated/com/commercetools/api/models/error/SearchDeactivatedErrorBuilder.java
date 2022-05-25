@@ -26,7 +26,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public SearchDeactivatedErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     }
 
     /**
-     <>
+     *
      */
 
     public SearchDeactivatedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
     }
 
     /**
-     <>
+     *
      */
 
     public SearchDeactivatedErrorBuilder addValue(final String key, final java.lang.Object value) {

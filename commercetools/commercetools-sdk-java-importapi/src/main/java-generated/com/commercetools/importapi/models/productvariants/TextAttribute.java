@@ -32,7 +32,7 @@ public interface TextAttribute extends Attribute {
     String TEXT = "text";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

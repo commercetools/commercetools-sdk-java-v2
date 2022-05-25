@@ -31,7 +31,7 @@ public class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

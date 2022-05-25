@@ -24,7 +24,7 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
     private com.commercetools.api.models.project.OrderSearchStatus status;
 
     /**
-     <*  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>>
+     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
      */
 
     public ProjectChangeOrderSearchStatusActionBuilder status(

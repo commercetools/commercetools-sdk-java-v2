@@ -43,7 +43,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     <*  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>>
+     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedPrice getNextValue() {
@@ -67,7 +67,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {

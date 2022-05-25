@@ -28,7 +28,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
     /**
-     <>
+     *
      */
 
     public AddTextLineItemChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddTextLineItemChangeBuilder nextValue(
@@ -47,7 +47,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     <>
+     *
      */
 
     public AddTextLineItemChangeBuilder nextValue(

@@ -80,6 +80,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    @Deprecated
     private Long lastMessageSequenceNumber;
 
     private com.commercetools.api.models.cart.CartReference cart;
@@ -189,7 +190,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
 
     public String getId() {
@@ -197,7 +198,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the order.</p>>
+     *  <p>The current version of the order.</p>
      */
 
     public Long getVersion() {
@@ -205,7 +206,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -213,7 +214,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -221,7 +222,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -229,7 +230,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -237,7 +238,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>This field will only be present if it was set for Order Import</p>>
+     *  <p>This field will only be present if it was set for Order Import</p>
      */
 
     public java.time.ZonedDateTime getCompletedAt() {
@@ -245,7 +246,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>>
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -253,7 +254,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerId() {
@@ -261,7 +262,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerEmail() {
@@ -269,7 +270,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -277,7 +278,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -285,7 +286,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
@@ -293,7 +294,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
@@ -301,7 +302,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -309,7 +310,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>The taxes are calculated based on the shipping address.</p>>
+     *  <p>The taxes are calculated based on the shipping address.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -317,7 +318,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -325,7 +326,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Address getBillingAddress() {
@@ -333,7 +334,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -341,7 +342,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -349,7 +350,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>>
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -357,7 +358,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>>
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
      */
 
     public String getCountry() {
@@ -365,7 +366,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>One of the four predefined OrderStates.</p>>
+     *  <p>One of the four predefined OrderStates.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -373,7 +374,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>This reference can point to a state in a custom workflow.</p>>
+     *  <p>This reference can point to a state in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -381,7 +382,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -389,7 +390,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -397,7 +398,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Set if the ShippingMethod is set.</p>>
+     *  <p>Set if the ShippingMethod is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
@@ -405,7 +406,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
@@ -413,7 +414,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
@@ -421,7 +422,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
@@ -429,15 +430,15 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>>
+     *  <p>Internal-only field.</p>
      */
-
+    @Deprecated
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
 
     /**
-     <*  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>>
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -445,7 +446,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -453,7 +454,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
@@ -461,7 +462,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -469,7 +470,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -477,7 +478,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
@@ -485,7 +486,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>>
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -493,7 +494,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>>
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
@@ -501,7 +502,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Contains addresses for orders with multiple shipping addresses.</p>>
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
@@ -509,7 +510,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     <*  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>>
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
@@ -659,6 +660,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
     }

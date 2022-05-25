@@ -52,7 +52,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     private Integer variantId;
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder addedAt(final String addedAt) {
@@ -61,7 +61,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder custom(
@@ -71,7 +71,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
@@ -80,7 +80,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder id(final String id) {
@@ -89,7 +89,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder name(
@@ -99,7 +99,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
@@ -108,7 +108,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder productId(final String productId) {
@@ -117,7 +117,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder productSlug(
@@ -127,7 +127,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder productSlug(final com.commercetools.history.models.common.LocalizedString productSlug) {
@@ -136,7 +136,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder productType(
@@ -146,7 +146,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder productType(final com.commercetools.history.models.common.Reference productType) {
@@ -155,7 +155,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder quantity(final Integer quantity) {
@@ -164,7 +164,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder variant(
@@ -174,7 +174,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder variant(final com.commercetools.history.models.common.Variant variant) {
@@ -183,7 +183,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemBuilder variantId(final Integer variantId) {

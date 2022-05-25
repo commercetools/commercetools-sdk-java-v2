@@ -36,7 +36,7 @@ public interface CustomerTitleSetMessage extends Message {
     String CUSTOMER_TITLE_SET = "CustomerTitleSet";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")

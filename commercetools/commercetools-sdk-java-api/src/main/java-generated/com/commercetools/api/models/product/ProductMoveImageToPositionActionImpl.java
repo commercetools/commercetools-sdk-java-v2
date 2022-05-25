@@ -49,7 +49,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -57,7 +57,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -65,7 +65,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -73,7 +73,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <*  <p>The URL of the image</p>>
+     *  <p>The URL of the image</p>
      */
 
     public String getImageUrl() {
@@ -81,7 +81,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <>
+     *
      */
 
     public Long getPosition() {
@@ -89,7 +89,7 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

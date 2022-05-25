@@ -36,21 +36,21 @@ public interface AddLocationChange extends Change {
     String ADD_LOCATION_CHANGE = "AddLocationChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addLocation</code> on zones</p>>
+     *  <p>Update action for <code>addLocation</code> on zones</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddLocationChange extends Change {
     public Location getPreviousValue();
 
     /**
-     <*  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>>
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
      */
     @NotNull
     @Valid

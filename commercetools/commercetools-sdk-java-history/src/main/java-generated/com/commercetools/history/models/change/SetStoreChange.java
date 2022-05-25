@@ -36,21 +36,21 @@ public interface SetStoreChange extends Change {
     String SET_STORE_CHANGE = "SetStoreChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setStore</code></p>>
+     *  <p>Shape of the action for <code>setStore</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetStoreChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -51,7 +51,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The time at which the transaction took place.</p>>
+     *  <p>The time at which the transaction took place.</p>
      */
 
     public java.time.ZonedDateTime getTimestamp() {
@@ -59,7 +59,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The type of this transaction.</p>>
+     *  <p>The type of this transaction.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionType getType() {
@@ -67,7 +67,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getAmount() {
@@ -75,7 +75,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>>
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
      */
 
     public String getInteractionId() {
@@ -83,7 +83,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>>
+     *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
      */
 
     public com.commercetools.api.models.payment.TransactionState getState() {
@@ -91,7 +91,7 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the Transaction.</p>>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

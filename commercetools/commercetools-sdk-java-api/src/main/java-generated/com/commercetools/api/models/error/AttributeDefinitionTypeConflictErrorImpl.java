@@ -51,7 +51,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingProductTypeId() {
@@ -83,7 +83,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingProductTypeName() {
@@ -91,7 +91,7 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingAttributeName() {

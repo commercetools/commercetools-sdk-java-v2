@@ -31,7 +31,7 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

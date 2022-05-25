@@ -24,7 +24,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     private Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityMapBuilder values(
@@ -34,7 +34,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantChannelAvailabilityMapBuilder addValue(final String key,

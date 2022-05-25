@@ -34,28 +34,28 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION_CHANGE = "SetDeleteDaysAfterLastModificationChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>>
+     *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

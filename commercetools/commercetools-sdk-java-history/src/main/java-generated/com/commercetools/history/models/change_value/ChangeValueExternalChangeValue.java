@@ -31,7 +31,7 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     String EXTERNAL = "external";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

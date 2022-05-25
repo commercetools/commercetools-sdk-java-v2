@@ -48,70 +48,70 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Customizable<Payment> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Payment.</p>>
+     *  <p>Unique identifier of the Payment.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>A reference to the customer this payment belongs to.</p>>
+     *  <p>A reference to the customer this payment belongs to.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     <*  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-     <*  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>>
+     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
      */
 
     @JsonProperty("interfaceId")
     public String getInterfaceId();
 
     /**
-     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
      */
     @NotNull
     @Valid
@@ -119,7 +119,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public TypedMoney getAmountPlanned();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -127,7 +127,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public PaymentMethodInfo getPaymentMethodInfo();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -135,7 +135,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public PaymentStatus getPaymentStatus();
 
     /**
-     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
      */
     @NotNull
     @Valid
@@ -143,7 +143,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public List<Transaction> getTransactions();
 
     /**
-     <*  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
+     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
      */
     @NotNull
     @Valid
@@ -151,14 +151,14 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public List<CustomFields> getInterfaceInteractions();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     <*  <p>User-defined unique identifier of the Payment.</p>>
+     *  <p>User-defined unique identifier of the Payment.</p>
      */
 
     @JsonProperty("key")

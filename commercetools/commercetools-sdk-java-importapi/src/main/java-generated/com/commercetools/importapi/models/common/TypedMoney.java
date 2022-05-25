@@ -36,28 +36,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoney {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("centAmount")
     public Long getCentAmount();
 
     /**
-     <*  <p>The currency code compliant to ISO 4217.</p>>
+     *  <p>The currency code compliant to ISO 4217.</p>
      */
     @NotNull
     @JsonProperty("currencyCode")

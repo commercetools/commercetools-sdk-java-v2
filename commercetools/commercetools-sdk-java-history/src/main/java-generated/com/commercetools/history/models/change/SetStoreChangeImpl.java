@@ -43,7 +43,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setStore</code></p>>
+     *  <p>Shape of the action for <code>setStore</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

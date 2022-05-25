@@ -39,7 +39,7 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

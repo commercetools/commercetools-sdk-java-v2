@@ -34,28 +34,28 @@ public interface SetExpectedDeliveryChange extends Change {
     String SET_EXPECTED_DELIVERY_CHANGE = "SetExpectedDeliveryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setExpectedDelivery</code></p>>
+     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

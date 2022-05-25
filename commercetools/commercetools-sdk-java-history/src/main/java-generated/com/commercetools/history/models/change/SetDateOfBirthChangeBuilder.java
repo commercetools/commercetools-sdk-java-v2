@@ -30,7 +30,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setDateOfBirth</code></p>>
+     *  <p>Shape of the action for <code>setDateOfBirth</code></p>
      */
 
     public SetDateOfBirthChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetDateOfBirthChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetDateOfBirthChangeBuilder nextValue(final String nextValue) {

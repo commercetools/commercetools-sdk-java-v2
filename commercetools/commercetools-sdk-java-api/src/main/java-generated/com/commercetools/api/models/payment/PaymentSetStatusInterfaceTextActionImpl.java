@@ -35,7 +35,7 @@ public class PaymentSetStatusInterfaceTextActionImpl implements PaymentSetStatus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class PaymentSetStatusInterfaceTextActionImpl implements PaymentSetStatus
     }
 
     /**
-     <>
+     *
      */
 
     public String getInterfaceText() {

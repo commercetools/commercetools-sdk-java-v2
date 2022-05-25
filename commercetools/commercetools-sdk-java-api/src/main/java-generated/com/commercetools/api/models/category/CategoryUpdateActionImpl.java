@@ -31,7 +31,7 @@ public class CategoryUpdateActionImpl implements CategoryUpdateAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

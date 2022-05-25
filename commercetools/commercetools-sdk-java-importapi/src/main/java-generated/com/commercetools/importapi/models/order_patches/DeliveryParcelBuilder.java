@@ -36,7 +36,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder deliveryId(final String deliveryId) {
@@ -45,7 +45,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder measurements(
@@ -56,7 +56,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder measurements(
@@ -66,7 +66,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder trackingData(
@@ -76,7 +76,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder trackingData(
@@ -86,7 +86,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder items(
@@ -96,7 +96,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder items(
@@ -106,7 +106,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder plusItems(
@@ -119,7 +119,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder plusItems(
@@ -132,7 +132,7 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryParcelBuilder withItems(

@@ -31,7 +31,7 @@ public class TypeUpdateActionImpl implements TypeUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

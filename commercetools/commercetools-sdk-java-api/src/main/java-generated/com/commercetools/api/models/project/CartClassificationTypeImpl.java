@@ -37,7 +37,7 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-     <*  <p>Can be one of the following or absent.</p>>
+     *  <p>Can be one of the following or absent.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
@@ -45,7 +45,7 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-     <*  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>>
+     *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {

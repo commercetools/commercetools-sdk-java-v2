@@ -34,7 +34,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     String SET_CART_TOTAL_TAX = "setCartTotalTax";
 
     /**
-     <*  <p>The total gross amount of the cart (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public Money getExternalTotalGross();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxPortions")

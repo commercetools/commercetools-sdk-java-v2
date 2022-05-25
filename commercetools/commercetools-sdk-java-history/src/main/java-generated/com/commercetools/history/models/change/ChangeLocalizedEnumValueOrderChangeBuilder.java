@@ -37,7 +37,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder fieldName(final String fieldName) {
@@ -55,7 +55,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder attributeName(final String attributeName) {
@@ -64,7 +64,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusNextValue(
@@ -97,7 +97,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusNextValue(
@@ -111,7 +111,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder withNextValue(
@@ -123,7 +123,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder previousValue(
@@ -133,7 +133,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder previousValue(
@@ -143,7 +143,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusPreviousValue(
@@ -156,7 +156,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder plusPreviousValue(
@@ -170,7 +170,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder withPreviousValue(

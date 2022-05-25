@@ -34,14 +34,14 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     String ORDER_STATE_CHANGED = "OrderStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldOrderState")

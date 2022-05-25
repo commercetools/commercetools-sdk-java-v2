@@ -47,7 +47,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingEnumKey() {
@@ -79,7 +79,7 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getConflictingAttributeName() {

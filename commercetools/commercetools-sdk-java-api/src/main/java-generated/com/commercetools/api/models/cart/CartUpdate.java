@@ -33,14 +33,14 @@ public interface CartUpdate
         extends com.commercetools.api.models.ResourceUpdate<CartUpdate, CartUpdateAction, CartUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

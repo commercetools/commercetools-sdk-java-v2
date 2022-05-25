@@ -35,14 +35,14 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     String CLASSIFICATION = "Classification";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid

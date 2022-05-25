@@ -26,7 +26,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
     private String externalId;
 
     /**
-     <*  <p>If not defined, the external ID is unset.</p>>
+     *  <p>If not defined, the external ID is unset.</p>
      */
 
     public CustomerSetExternalIdActionBuilder externalId(@Nullable final String externalId) {

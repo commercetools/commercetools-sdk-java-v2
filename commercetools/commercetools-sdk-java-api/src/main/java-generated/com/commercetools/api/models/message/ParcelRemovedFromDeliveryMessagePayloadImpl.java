@@ -39,7 +39,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Parcel getParcel() {

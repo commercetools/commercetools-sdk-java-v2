@@ -28,7 +28,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     private com.commercetools.history.models.common.FieldDefinition previousValue;
 
     /**
-     <*  <p>Update action for <code>removeFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
      */
 
     public RemoveFieldDefinitionChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFieldDefinitionChangeBuilder previousValue(
@@ -47,7 +47,7 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFieldDefinitionChangeBuilder previousValue(

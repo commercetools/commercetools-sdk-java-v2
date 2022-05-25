@@ -47,7 +47,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -55,7 +55,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -63,7 +63,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -71,7 +71,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -79,7 +79,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

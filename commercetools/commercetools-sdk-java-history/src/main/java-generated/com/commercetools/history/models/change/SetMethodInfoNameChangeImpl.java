@@ -43,7 +43,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     <*  <p>Shape of the action for <code>setMethodInfoName</code></p>>
+     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

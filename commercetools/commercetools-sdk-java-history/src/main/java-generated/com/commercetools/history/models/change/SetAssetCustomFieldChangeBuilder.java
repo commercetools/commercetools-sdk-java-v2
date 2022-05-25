@@ -38,7 +38,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     private java.lang.Object previousValue;
 
     /**
-     <*  <p>Update action for <code>setAssetCustomField</code></p>>
+     *  <p>Update action for <code>setAssetCustomField</code></p>
      */
 
     public SetAssetCustomFieldChangeBuilder change(final String change) {
@@ -47,7 +47,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder name(final String name) {
@@ -56,7 +56,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
@@ -65,7 +65,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder asset(
@@ -75,7 +75,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder asset(
@@ -85,7 +85,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -94,7 +94,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     <>
+     *
      */
 
     public SetAssetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

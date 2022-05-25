@@ -34,7 +34,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     String ADD_PRODUCT_SELECTION = "addProductSelection";
 
     /**
-     <*  <p>Resource Identifier of a Product Selection</p>>
+     *  <p>Resource Identifier of a Product Selection</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     <*  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>>
+     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
      */
 
     @JsonProperty("active")

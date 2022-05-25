@@ -38,7 +38,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
     private String assetKey;
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveAssetActionBuilder variantId(@Nullable final Long variantId) {
@@ -47,7 +47,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveAssetActionBuilder sku(@Nullable final String sku) {
@@ -56,7 +56,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveAssetActionBuilder staged(@Nullable final Boolean staged) {
@@ -65,7 +65,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
@@ -74,7 +74,7 @@ public class ProductRemoveAssetActionBuilder implements Builder<ProductRemoveAss
     }
 
     /**
-     <>
+     *
      */
 
     public ProductRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {

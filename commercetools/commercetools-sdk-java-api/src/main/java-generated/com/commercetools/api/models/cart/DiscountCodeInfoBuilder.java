@@ -28,7 +28,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.api.models.cart.DiscountCodeState state;
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -39,7 +39,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder discountCode(
@@ -49,7 +49,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountCodeInfoBuilder state(final com.commercetools.api.models.cart.DiscountCodeState state) {

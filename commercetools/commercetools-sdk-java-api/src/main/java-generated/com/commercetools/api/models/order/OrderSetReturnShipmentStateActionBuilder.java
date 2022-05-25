@@ -27,7 +27,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
@@ -36,7 +36,7 @@ public class OrderSetReturnShipmentStateActionBuilder implements Builder<OrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetReturnShipmentStateActionBuilder shipmentState(

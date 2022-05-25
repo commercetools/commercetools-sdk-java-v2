@@ -141,7 +141,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Customer.</p>>
+     *  <p>Unique identifier of the Customer.</p>
      */
 
     public String getId() {
@@ -149,7 +149,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the customer.</p>>
+     *  <p>The current version of the customer.</p>
      */
 
     public Long getVersion() {
@@ -157,7 +157,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -165,7 +165,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -173,7 +173,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -181,7 +181,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -189,7 +189,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>>
+     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
      */
 
     public String getCustomerNumber() {
@@ -197,7 +197,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>>
+     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
      */
 
     public String getEmail() {
@@ -205,7 +205,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>>
+     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
      */
 
     public String getPassword() {
@@ -213,7 +213,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getFirstName() {
@@ -221,7 +221,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {
@@ -229,7 +229,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMiddleName() {
@@ -237,7 +237,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getTitle() {
@@ -245,7 +245,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.LocalDate getDateOfBirth() {
@@ -253,7 +253,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCompanyName() {
@@ -261,7 +261,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getVatId() {
@@ -269,7 +269,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The addresses have unique IDs in the addresses list</p>>
+     *  <p>The addresses have unique IDs in the addresses list</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
@@ -277,7 +277,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The address ID in the addresses list</p>>
+     *  <p>The address ID in the addresses list</p>
      */
 
     public String getDefaultShippingAddressId() {
@@ -285,7 +285,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The IDs from the addresses list which are used as shipping addresses</p>>
+     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
      */
 
     public java.util.List<String> getShippingAddressIds() {
@@ -293,7 +293,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The address ID in the addresses list</p>>
+     *  <p>The address ID in the addresses list</p>
      */
 
     public String getDefaultBillingAddressId() {
@@ -301,7 +301,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>The IDs from the addresses list which are used as billing addresses</p>>
+     *  <p>The IDs from the addresses list which are used as billing addresses</p>
      */
 
     public java.util.List<String> getBillingAddressIds() {
@@ -309,7 +309,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsEmailVerified() {
@@ -317,7 +317,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {
@@ -325,7 +325,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -333,7 +333,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -341,7 +341,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {
@@ -349,7 +349,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSalutation() {
@@ -357,7 +357,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Customer.</p>>
+     *  <p>User-defined unique identifier of the Customer.</p>
      */
 
     public String getKey() {
@@ -365,7 +365,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>>
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -373,7 +373,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     <*  <p>Defines whether a Customer has a password.</p>>
+     *  <p>Defines whether a Customer has a password.</p>
      */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {

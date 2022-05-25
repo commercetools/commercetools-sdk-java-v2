@@ -43,7 +43,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPublished() {
@@ -51,7 +51,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductData getCurrent() {
@@ -59,7 +59,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductData getStaged() {
@@ -67,7 +67,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getHasStagedChanges() {

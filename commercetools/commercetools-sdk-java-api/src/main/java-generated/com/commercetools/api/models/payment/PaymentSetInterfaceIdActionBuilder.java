@@ -24,7 +24,7 @@ public class PaymentSetInterfaceIdActionBuilder implements Builder<PaymentSetInt
     private String interfaceId;
 
     /**
-     <>
+     *
      */
 
     public PaymentSetInterfaceIdActionBuilder interfaceId(final String interfaceId) {

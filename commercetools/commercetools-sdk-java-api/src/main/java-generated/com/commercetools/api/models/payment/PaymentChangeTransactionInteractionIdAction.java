@@ -33,14 +33,14 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
     String CHANGE_TRANSACTION_INTERACTION_ID = "changeTransactionInteractionId";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("interactionId")

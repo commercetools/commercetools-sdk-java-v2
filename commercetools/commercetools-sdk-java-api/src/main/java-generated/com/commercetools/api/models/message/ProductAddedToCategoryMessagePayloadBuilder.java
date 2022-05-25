@@ -28,7 +28,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -38,7 +38,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
@@ -48,7 +48,7 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductAddedToCategoryMessagePayloadBuilder staged(final Boolean staged) {

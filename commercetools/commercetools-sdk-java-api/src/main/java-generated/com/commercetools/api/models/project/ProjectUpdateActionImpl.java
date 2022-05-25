@@ -31,7 +31,7 @@ public class ProjectUpdateActionImpl implements ProjectUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

@@ -30,7 +30,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
-     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -42,7 +42,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     <*  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>>
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      */
 
     public SearchIndexingConfigurationBuilder products(
@@ -52,7 +52,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     <*  <p>Configuration for the Order Search feature.</p>>
+     *  <p>Configuration for the Order Search feature.</p>
      */
 
     public SearchIndexingConfigurationBuilder orders(
@@ -63,7 +63,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     <*  <p>Configuration for the Order Search feature.</p>>
+     *  <p>Configuration for the Order Search feature.</p>
      */
 
     public SearchIndexingConfigurationBuilder orders(

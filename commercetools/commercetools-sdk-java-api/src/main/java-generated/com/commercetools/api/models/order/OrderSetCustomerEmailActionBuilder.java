@@ -26,7 +26,7 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
     private String email;
 
     /**
-     <>
+     *
      */
 
     public OrderSetCustomerEmailActionBuilder email(@Nullable final String email) {

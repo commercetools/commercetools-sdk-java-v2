@@ -34,7 +34,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     String ADD_ASSET = "addAsset";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     public AssetDraft getAsset();
 
     /**
-     <*  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>>
+     *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
      */
 
     @JsonProperty("position")

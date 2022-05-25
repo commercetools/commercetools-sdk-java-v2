@@ -33,28 +33,28 @@ public interface AddPropertyChange extends Change {
     String ADD_PROPERTY_CHANGE = "AddPropertyChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>addProperty</code> on custom objects</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Value path to the property that was added</p>>
+     *  <p>Value path to the property that was added</p>
      */
     @NotNull
     @JsonProperty("path")
     public String getPath();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

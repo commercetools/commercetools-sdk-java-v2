@@ -34,28 +34,28 @@ public interface SetRestockableInDaysChange extends Change {
     String SET_RESTOCKABLE_IN_DAYS_CHANGE = "SetRestockableInDaysChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setRestockableInDays</code></p>>
+     *  <p>Shape of the action for <code>setRestockableInDays</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

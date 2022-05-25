@@ -39,7 +39,7 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
     }
 
     /**
-     <>
+     *
      */
 
     public String getUri() {
@@ -55,7 +55,7 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAccessKey() {

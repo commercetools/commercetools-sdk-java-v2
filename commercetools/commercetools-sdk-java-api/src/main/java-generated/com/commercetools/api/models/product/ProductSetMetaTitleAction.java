@@ -32,14 +32,14 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     String SET_META_TITLE = "setMetaTitle";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

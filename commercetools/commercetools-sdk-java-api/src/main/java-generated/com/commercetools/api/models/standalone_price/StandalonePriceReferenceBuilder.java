@@ -30,7 +30,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     private com.commercetools.api.models.standalone_price.StandalonePrice obj;
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
 
     public StandalonePriceReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     }
 
     /**
-     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
      */
 
     public StandalonePriceReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     }
 
     /**
-     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
      */
 
     public StandalonePriceReferenceBuilder obj(

@@ -28,7 +28,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
@@ -37,7 +37,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder state(
@@ -47,7 +47,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder state(
@@ -57,7 +57,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder plusState(
@@ -70,7 +70,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder plusState(
@@ -83,7 +83,7 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportLineItemStateActionBuilder withState(

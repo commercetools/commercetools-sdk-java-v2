@@ -28,7 +28,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
     private com.commercetools.api.models.product_type.AttributePlainEnumValue value;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder attributeName(final String attributeName) {
@@ -37,7 +37,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(
@@ -48,7 +48,7 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddPlainEnumValueActionBuilder value(

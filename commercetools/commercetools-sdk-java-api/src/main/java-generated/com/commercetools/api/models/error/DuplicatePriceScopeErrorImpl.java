@@ -43,7 +43,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getConflictingPrices() {

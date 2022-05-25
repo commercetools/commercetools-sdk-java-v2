@@ -33,7 +33,7 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
     String CHANGE_DESTINATION = "changeDestination";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

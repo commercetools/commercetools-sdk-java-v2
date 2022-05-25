@@ -42,7 +42,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ProductType.</p>>
+     *  <p>User-defined unique identifier for the ProductType.</p>
      */
 
     public String getKey() {
@@ -50,7 +50,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getDescription() {
@@ -66,7 +66,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {

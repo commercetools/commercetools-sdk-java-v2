@@ -35,7 +35,7 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {

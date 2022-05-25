@@ -35,7 +35,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     <>
+     *
      */
 
     public String getEmail() {
@@ -43,7 +43,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTtlMinutes() {

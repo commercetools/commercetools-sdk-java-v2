@@ -32,7 +32,7 @@ public interface GeoJsonPoint extends GeoJson {
     String POINT = "Point";
 
     /**
-     <*  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
      */
     @NotNull
     @JsonProperty("coordinates")

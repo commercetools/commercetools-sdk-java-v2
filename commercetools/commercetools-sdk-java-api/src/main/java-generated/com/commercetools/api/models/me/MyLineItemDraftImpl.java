@@ -62,7 +62,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -70,7 +70,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -78,7 +78,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -86,7 +86,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -94,7 +94,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -102,7 +102,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -110,7 +110,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -118,7 +118,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Container for line item specific address(es).</p>>
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -126,7 +126,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {

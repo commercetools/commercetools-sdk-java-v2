@@ -28,7 +28,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.payment.TransactionState state;
 
     /**
-     <>
+     *
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder transactionId(final String transactionId) {
@@ -37,7 +37,7 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder state(

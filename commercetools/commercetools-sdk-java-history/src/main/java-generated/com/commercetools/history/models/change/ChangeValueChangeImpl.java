@@ -43,7 +43,7 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>>
+     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ChangeValueChangeValue getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ChangeValueChangeValue getPreviousValue() {

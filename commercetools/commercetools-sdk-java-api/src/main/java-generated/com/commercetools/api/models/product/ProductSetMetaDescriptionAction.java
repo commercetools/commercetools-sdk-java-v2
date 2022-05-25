@@ -32,14 +32,14 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     String SET_META_DESCRIPTION = "setMetaDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")

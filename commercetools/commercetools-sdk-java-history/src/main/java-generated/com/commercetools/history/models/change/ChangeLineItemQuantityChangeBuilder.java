@@ -37,7 +37,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     private Integer previousValue;
 
     /**
-     <*  <p>Update action for <code>changeLineItemQuantity</code></p>>
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
      */
 
     public ChangeLineItemQuantityChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLineItemQuantityChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLineItemQuantityChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeLineItemQuantityChangeBuilder lineItemId(final String lineItemId) {
@@ -75,7 +75,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
 
     public ChangeLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
@@ -84,7 +84,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     <*  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
      */
 
     public ChangeLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {

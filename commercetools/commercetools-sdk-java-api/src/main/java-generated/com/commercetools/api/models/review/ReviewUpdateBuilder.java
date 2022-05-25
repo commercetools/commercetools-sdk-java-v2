@@ -28,7 +28,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     private java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder actions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder plusActions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewUpdateBuilder withActions(

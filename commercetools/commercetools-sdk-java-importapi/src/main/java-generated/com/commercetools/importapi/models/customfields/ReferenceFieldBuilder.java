@@ -25,7 +25,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
     private com.commercetools.importapi.models.common.KeyReference value;
 
     /**
-     <*  <p>References a resource by key</p>>
+     *  <p>References a resource by key</p>
      */
 
     public ReferenceFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
@@ -34,7 +34,7 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
     }
 
     /**
-     <*  <p>References a resource by key</p>>
+     *  <p>References a resource by key</p>
      */
 
     public ReferenceFieldBuilder value(

@@ -57,7 +57,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     private com.commercetools.api.models.customer.Customer customer;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public CustomerCreatedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomerCreatedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomerCreatedMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomerCreatedMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public CustomerCreatedMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CustomerCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +151,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public CustomerCreatedMessageBuilder resource(
@@ -161,7 +161,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +170,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +182,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder customer(
@@ -202,7 +202,7 @@ public class CustomerCreatedMessageBuilder implements Builder<CustomerCreatedMes
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerCreatedMessageBuilder customer(final com.commercetools.api.models.customer.Customer customer) {

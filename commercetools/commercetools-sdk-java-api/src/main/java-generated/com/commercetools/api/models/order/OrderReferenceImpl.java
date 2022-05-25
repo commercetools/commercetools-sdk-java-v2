@@ -40,7 +40,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.Order getObj() {

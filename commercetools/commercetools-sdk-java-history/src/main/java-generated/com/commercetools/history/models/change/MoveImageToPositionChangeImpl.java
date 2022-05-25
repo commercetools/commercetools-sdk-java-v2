@@ -47,7 +47,7 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
     }
 
     /**
-     <*  <p>Update actions for moving images</p>>
+     *  <p>Update actions for moving images</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
@@ -79,7 +79,7 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {

@@ -21,12 +21,12 @@ public interface ProcessingState {
     */
     ProcessingState PROCESSING = ProcessingStateEnum.PROCESSING;
     /**
-    	<p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the platform constraints.</p>
+    	<p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</p>
 
     */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    	<p>Import Request contains key references to resources that are currently not present in the platform.</p>
+    	<p>Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</p>
 
     */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
@@ -41,7 +41,7 @@ public interface ProcessingState {
     */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    	<p>Resource could not be imported. References were resolved, but the system could not import the data into the platform due to an internal server error and the limit of retry has been reached.</p>
+    	<p>Resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the limit of retry has been reached.</p>
 
     */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;

@@ -30,7 +30,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -40,7 +40,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaKeywordsActionBuilder metaKeywords(
@@ -50,7 +50,7 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {

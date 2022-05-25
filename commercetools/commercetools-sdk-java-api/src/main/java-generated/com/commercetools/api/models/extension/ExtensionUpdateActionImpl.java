@@ -31,7 +31,7 @@ public class ExtensionUpdateActionImpl implements ExtensionUpdateAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

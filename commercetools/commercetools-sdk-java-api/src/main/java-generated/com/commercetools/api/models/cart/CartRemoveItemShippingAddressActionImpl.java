@@ -35,7 +35,7 @@ public class CartRemoveItemShippingAddressActionImpl implements CartRemoveItemSh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartRemoveItemShippingAddressActionImpl implements CartRemoveItemSh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddressKey() {

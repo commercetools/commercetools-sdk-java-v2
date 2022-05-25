@@ -24,7 +24,7 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
     private String email;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerChangeEmailActionBuilder email(final String email) {

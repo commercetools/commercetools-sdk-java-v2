@@ -48,7 +48,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -56,7 +56,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -64,7 +64,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -72,7 +72,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     <*  <p>Reference to a Customer.</p>>
+     *  <p>Reference to a Customer.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
@@ -80,7 +80,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {

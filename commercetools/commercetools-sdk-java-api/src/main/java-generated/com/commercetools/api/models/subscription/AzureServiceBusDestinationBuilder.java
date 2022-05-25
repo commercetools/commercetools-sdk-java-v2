@@ -24,7 +24,7 @@ public class AzureServiceBusDestinationBuilder implements Builder<AzureServiceBu
     private String connectionString;
 
     /**
-     <>
+     *
      */
 
     public AzureServiceBusDestinationBuilder connectionString(final String connectionString) {

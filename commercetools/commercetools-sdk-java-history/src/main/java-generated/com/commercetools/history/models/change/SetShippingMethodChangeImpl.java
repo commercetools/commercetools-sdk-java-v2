@@ -43,7 +43,7 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     <*  <p>Update action for <code>setShippingMethod</code></p>>
+     *  <p>Update action for <code>setShippingMethod</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue() {
@@ -67,7 +67,7 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodChangeValue getPreviousValue() {

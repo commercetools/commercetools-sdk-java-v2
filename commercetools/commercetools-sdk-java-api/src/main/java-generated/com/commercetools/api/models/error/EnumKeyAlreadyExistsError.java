@@ -34,14 +34,14 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
     String ENUM_KEY_ALREADY_EXISTS = "EnumKeyAlreadyExists";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("conflictingAttributeName")

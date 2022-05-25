@@ -30,7 +30,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
+     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
+     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
+     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
+     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
      */
 
     public DiscountCodeSetCustomTypeActionBuilder fields(

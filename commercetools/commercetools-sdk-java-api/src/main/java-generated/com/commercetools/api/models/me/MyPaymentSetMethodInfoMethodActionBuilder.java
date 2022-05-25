@@ -26,7 +26,7 @@ public class MyPaymentSetMethodInfoMethodActionBuilder implements Builder<MyPaym
     private String method;
 
     /**
-     <>
+     *
      */
 
     public MyPaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {

@@ -34,7 +34,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     private String previousValue;
 
     /**
-     <*  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
      */
 
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTransactionTimestampChangeBuilder transaction(
@@ -55,7 +55,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTransactionTimestampChangeBuilder transaction(
@@ -65,7 +65,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTransactionTimestampChangeBuilder nextValue(final String nextValue) {
@@ -74,7 +74,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeTransactionTimestampChangeBuilder previousValue(final String previousValue) {

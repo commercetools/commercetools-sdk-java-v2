@@ -35,7 +35,7 @@ public class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderNumber() {

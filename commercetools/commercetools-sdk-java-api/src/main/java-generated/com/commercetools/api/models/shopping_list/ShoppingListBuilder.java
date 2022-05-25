@@ -75,7 +75,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingList.</p>>
+     *  <p>Unique identifier of the ShoppingList.</p>
      */
 
     public ShoppingListBuilder id(final String id) {
@@ -84,7 +84,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>The current version of the shopping list.</p>>
+     *  <p>The current version of the shopping list.</p>
      */
 
     public ShoppingListBuilder version(final Long version) {
@@ -93,7 +93,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -102,7 +102,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -111,7 +111,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ShoppingListBuilder lastModifiedBy(
@@ -121,7 +121,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ShoppingListBuilder lastModifiedBy(
@@ -131,7 +131,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ShoppingListBuilder createdBy(
@@ -141,7 +141,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ShoppingListBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -150,7 +150,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder custom(
@@ -160,7 +160,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -169,7 +169,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder customer(
@@ -179,7 +179,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder customer(
@@ -189,7 +189,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
@@ -198,7 +198,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder description(
@@ -208,7 +208,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder description(
@@ -218,7 +218,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ShoppingList.</p>>
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
      */
 
     public ShoppingListBuilder key(@Nullable final String key) {
@@ -227,7 +227,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder lineItems(
@@ -237,7 +237,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder lineItems(
@@ -247,7 +247,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder plusLineItems(
@@ -260,7 +260,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder plusLineItems(
@@ -274,7 +274,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder withLineItems(
@@ -286,7 +286,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder name(
@@ -296,7 +296,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -305,7 +305,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
      */
 
     public ShoppingListBuilder slug(
@@ -315,7 +315,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
      */
 
     public ShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -324,7 +324,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder textLineItems(
@@ -334,7 +334,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder textLineItems(
@@ -344,7 +344,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder plusTextLineItems(
@@ -357,7 +357,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder plusTextLineItems(
@@ -371,7 +371,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder withTextLineItems(
@@ -383,7 +383,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <*  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
@@ -392,7 +392,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder store(
@@ -402,7 +402,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {

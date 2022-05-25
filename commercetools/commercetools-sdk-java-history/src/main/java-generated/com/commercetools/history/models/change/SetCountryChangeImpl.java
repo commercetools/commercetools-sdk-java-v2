@@ -43,7 +43,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setCountry</code></p>>
+     *  <p>Update action for <code>setCountry</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getNextValue() {

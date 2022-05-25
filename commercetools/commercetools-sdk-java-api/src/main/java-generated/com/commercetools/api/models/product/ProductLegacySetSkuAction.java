@@ -32,14 +32,14 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
     String LEGACY_SET_SKU = "legacySetSku";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")

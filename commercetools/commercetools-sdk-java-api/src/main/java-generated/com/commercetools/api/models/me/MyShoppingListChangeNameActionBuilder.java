@@ -25,7 +25,7 @@ public class MyShoppingListChangeNameActionBuilder implements Builder<MyShopping
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class MyShoppingListChangeNameActionBuilder implements Builder<MyShopping
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public MyShoppingListChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

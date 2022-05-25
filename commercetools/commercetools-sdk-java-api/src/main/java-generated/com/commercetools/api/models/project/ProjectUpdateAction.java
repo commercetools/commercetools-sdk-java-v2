@@ -32,7 +32,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl.class, name = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl.class, name = ProjectChangeLanguagesAction.CHANGE_LANGUAGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionImpl.class, name = ProjectChangeMessagesEnabledAction.CHANGE_MESSAGES_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeNameActionImpl.class, name = ProjectChangeNameAction.CHANGE_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionImpl.class, name = ProjectChangeOrderSearchStatusAction.CHANGE_ORDER_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionImpl.class, name = ProjectChangeProductSearchIndexingEnabledAction.CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED),
@@ -45,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProjectUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ProjectUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")
@@ -73,10 +72,6 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
 
     public static com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder changeMessagesConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder changeMessagesEnabledBuilder() {
-        return com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder.of();
     }
 
     public static com.commercetools.api.models.project.ProjectChangeNameActionBuilder changeNameBuilder() {

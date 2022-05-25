@@ -34,7 +34,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     String DUPLICATE_VARIANT_VALUES = "DuplicateVariantValues";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

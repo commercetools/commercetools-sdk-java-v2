@@ -40,7 +40,7 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public com.commercetools.api.models.category.CategoryReference getCategory() {
@@ -56,7 +56,7 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

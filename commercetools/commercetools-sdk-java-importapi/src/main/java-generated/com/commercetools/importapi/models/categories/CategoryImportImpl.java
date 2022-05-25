@@ -74,7 +74,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -82,7 +82,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.name</code>.</p>>
+     *  <p>Maps to <code>Category.name</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -90,7 +90,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
@@ -98,7 +98,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.description</code>.</p>>
+     *  <p>Maps to <code>Category.description</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
@@ -106,7 +106,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>>
+     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
@@ -114,7 +114,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.orderHint</code>.</p>>
+     *  <p>Maps to <code>Category.orderHint</code>.</p>
      */
 
     public String getOrderHint() {
@@ -122,7 +122,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.externalId</code>.</p>>
+     *  <p>Maps to <code>Category.externalId</code>.</p>
      */
 
     public String getExternalId() {
@@ -130,7 +130,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.metaTitle</code>.</p>>
+     *  <p>Maps to <code>Category.metaTitle</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
@@ -138,7 +138,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.metaDescription</code>.</p>>
+     *  <p>Maps to <code>Category.metaDescription</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
@@ -146,7 +146,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Category.metaKeywords</code>.</p>>
+     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
@@ -154,7 +154,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
@@ -162,7 +162,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields for this Category.</p>>
+     *  <p>The custom fields for this Category.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

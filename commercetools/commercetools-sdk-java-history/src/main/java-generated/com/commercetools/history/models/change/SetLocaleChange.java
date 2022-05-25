@@ -34,28 +34,28 @@ public interface SetLocaleChange extends Change {
     String SET_LOCALE_CHANGE = "SetLocaleChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLocale</code> on reviews</p>>
+     *  <p>Update action for <code>setLocale</code> on reviews</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>A locale of IETF language tag.</p>>
+     *  <p>A locale of IETF language tag.</p>
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <*  <p>A locale of IETF language tag.</p>>
+     *  <p>A locale of IETF language tag.</p>
      */
     @NotNull
     @JsonProperty("nextValue")

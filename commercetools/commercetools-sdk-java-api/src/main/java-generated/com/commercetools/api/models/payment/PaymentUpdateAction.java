@@ -32,14 +32,10 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionStateActionImpl.class, name = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionImpl.class, name = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountPaidActionImpl.class, name = PaymentSetAmountPaidAction.SET_AMOUNT_PAID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountRefundedActionImpl.class, name = PaymentSetAmountRefundedAction.SET_AMOUNT_REFUNDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAnonymousIdActionImpl.class, name = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAuthorizationActionImpl.class, name = PaymentSetAuthorizationAction.SET_AUTHORIZATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomFieldActionImpl.class, name = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomTypeActionImpl.class, name = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomerActionImpl.class, name = PaymentSetCustomerAction.SET_CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetExternalIdActionImpl.class, name = PaymentSetExternalIdAction.SET_EXTERNAL_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetInterfaceIdActionImpl.class, name = PaymentSetInterfaceIdAction.SET_INTERFACE_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetKeyActionImpl.class, name = PaymentSetKeyAction.SET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = PaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE),
@@ -56,7 +52,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PaymentUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<PaymentUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")
@@ -86,20 +82,8 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
         return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder.of();
     }
 
-    public static com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder setAmountPaidBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder setAmountRefundedBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder.of();
-    }
-
     public static com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
         return com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder setAuthorizationBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder.of();
     }
 
     public static com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
@@ -112,10 +96,6 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
 
     public static com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder setCustomerBuilder() {
         return com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder setExternalIdBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder.of();
     }
 
     public static com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder setInterfaceIdBuilder() {

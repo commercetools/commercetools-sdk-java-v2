@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartDiscountDraft extends com.commercetools.api.models.CustomizableDraft<CartDiscountDraft> {
 
     /**
-     <>
+     *  <p>Name of the CartDiscount.</p>
      */
     @NotNull
     @Valid
@@ -45,21 +45,21 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getName();
 
     /**
-     <*  <p>User-defined unique identifier for the CartDiscount.</p>>
+     *  <p>User-defined unique identifier for the CartDiscount.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *  <p>Description of the CartDiscount.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <>
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
      */
     @NotNull
     @Valid
@@ -67,63 +67,63 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public CartDiscountValueDraft getValue();
 
     /**
-     <*  <p>A valid Cart predicate.</p>>
+     *  <p>Valid Cart Predicate.</p>
      */
     @NotNull
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
 
     /**
-     <*  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>>
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
      */
     @Valid
     @JsonProperty("target")
     public CartDiscountTarget getTarget();
 
     /**
-     <*  <p>The string must contain a number between 0 and 1. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order must be unambiguous among all cart discounts.</p>>
+     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
      */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-     <*  <p>Only active discount can be applied to the cart. Defaults to <code>true</code>.</p>>
+     *  <p>Only active Discounts can be applied to the Cart.</p>
      */
 
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-     <>
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     <>
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     <*  <p>States whether the discount can only be used in a connection with a DiscountCode. Defaults to <code>false</code>.</p>>
+     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
      */
 
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();
 
     /**
-     <*  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>>
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
      */
 
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();
 
     /**
-     <>
+     *  <p>Custom Fields of the CartDiscount.</p>
      */
     @Valid
     @JsonProperty("custom")

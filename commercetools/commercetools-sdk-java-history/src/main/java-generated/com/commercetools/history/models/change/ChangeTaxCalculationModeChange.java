@@ -35,28 +35,28 @@ public interface ChangeTaxCalculationModeChange extends Change {
     String CHANGE_TAX_CALCULATION_MODE_CHANGE = "ChangeTaxCalculationModeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>>
+     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public TaxCalculationMode getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>An Image uploaded to the commercetools platform is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p>
+ *  <p>An Image uploaded to commercetools Composable Commerce is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Image {
 
     /**
-     <*  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>>
+     *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     <*  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>>
+     *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      */
     @NotNull
     @Valid
@@ -47,7 +47,7 @@ public interface Image {
     public AssetDimensions getDimensions();
 
     /**
-     <*  <p>Custom label that can be used, for example, as an image description.</p>>
+     *  <p>Custom label that can be used, for example, as an image description.</p>
      */
 
     @JsonProperty("label")

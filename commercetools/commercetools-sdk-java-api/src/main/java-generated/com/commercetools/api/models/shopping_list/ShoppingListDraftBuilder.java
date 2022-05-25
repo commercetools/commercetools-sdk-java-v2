@@ -57,7 +57,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public ShoppingListDraftBuilder custom(
@@ -67,7 +67,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -76,7 +76,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder customer(
@@ -87,7 +87,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder customer(
@@ -97,7 +97,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     public ShoppingListDraftBuilder deleteDaysAfterLastModification(
@@ -107,7 +107,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder description(
@@ -117,7 +117,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder description(
@@ -127,7 +127,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ShoppingList.</p>>
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
      */
 
     public ShoppingListDraftBuilder key(@Nullable final String key) {
@@ -136,7 +136,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder lineItems(
@@ -146,7 +146,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder lineItems(
@@ -156,7 +156,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder plusLineItems(
@@ -169,7 +169,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder plusLineItems(
@@ -183,7 +183,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder withLineItems(
@@ -195,7 +195,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder name(
@@ -205,7 +205,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -214,7 +214,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
      */
 
     public ShoppingListDraftBuilder slug(
@@ -224,7 +224,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
      */
 
     public ShoppingListDraftBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -233,7 +233,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder textLineItems(
@@ -243,7 +243,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder textLineItems(
@@ -253,7 +253,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder plusTextLineItems(
@@ -266,7 +266,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder plusTextLineItems(
@@ -280,7 +280,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder withTextLineItems(
@@ -292,7 +292,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <*  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
@@ -301,7 +301,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder store(
@@ -311,7 +311,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListDraftBuilder store(

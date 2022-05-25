@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeDefinition {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,19 +43,19 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
     @NotNull
     @Valid
@@ -63,40 +63,40 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isSearchable")

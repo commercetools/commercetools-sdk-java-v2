@@ -39,42 +39,42 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE = "ChangeLocalizedEnumValueLabelChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -82,7 +82,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

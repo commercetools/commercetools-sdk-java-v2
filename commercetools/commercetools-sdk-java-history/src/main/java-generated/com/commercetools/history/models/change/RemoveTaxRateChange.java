@@ -36,21 +36,21 @@ public interface RemoveTaxRateChange extends Change {
     String REMOVE_TAX_RATE_CHANGE = "RemoveTaxRateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeTaxRate</code> on tax categories</p>>
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface RemoveTaxRateChange extends Change {
     public TaxRate getPreviousValue();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid

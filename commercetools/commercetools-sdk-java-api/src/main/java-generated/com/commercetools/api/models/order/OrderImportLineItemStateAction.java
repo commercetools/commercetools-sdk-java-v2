@@ -34,14 +34,14 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
     String IMPORT_LINE_ITEM_STATE = "importLineItemState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

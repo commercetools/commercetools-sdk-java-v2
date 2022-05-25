@@ -34,7 +34,7 @@ public interface LocalizedStringSetField extends CustomField {
     String LOCALIZED_STRING_SET = "LocalizedStringSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -32,28 +32,28 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("assetOrder")

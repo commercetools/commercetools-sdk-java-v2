@@ -33,14 +33,14 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     String CHANGE_ATTRIBUTE_NAME = "changeAttributeName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newAttributeName")

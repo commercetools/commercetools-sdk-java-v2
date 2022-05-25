@@ -28,7 +28,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionOrderValueBuilder name(final String name) {
@@ -37,7 +37,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionOrderValueBuilder label(
@@ -47,7 +47,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     <>
+     *
      */
 
     public FieldDefinitionOrderValueBuilder label(final com.commercetools.history.models.common.LocalizedString label) {

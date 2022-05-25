@@ -10,13 +10,20 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SelectionMode
+ *  <p>Defines which matching items are to be discounted.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface SelectionMode {
 
-    SelectionMode CHEAPEST = SelectionModeEnum.CHEAPEST;
+    /**
+    	<p>Select the cheapest items.</p>
 
+    */
+    SelectionMode CHEAPEST = SelectionModeEnum.CHEAPEST;
+    /**
+    	<p>Select the most expensive items.</p>
+
+    */
     SelectionMode MOST_EXPENSIVE = SelectionModeEnum.MOST_EXPENSIVE;
 
     enum SelectionModeEnum implements SelectionMode {

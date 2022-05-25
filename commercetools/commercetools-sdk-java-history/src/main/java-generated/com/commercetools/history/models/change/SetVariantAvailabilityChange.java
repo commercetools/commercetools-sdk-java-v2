@@ -38,35 +38,35 @@ public interface SetVariantAvailabilityChange extends Change {
     String SET_VARIANT_AVAILABILITY_CHANGE = "SetVariantAvailabilityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setVariantAvailability</code></p>>
+     *  <p>Update action for <code>setVariantAvailability</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface SetVariantAvailabilityChange extends Change {
     public ProductVariantAvailability getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

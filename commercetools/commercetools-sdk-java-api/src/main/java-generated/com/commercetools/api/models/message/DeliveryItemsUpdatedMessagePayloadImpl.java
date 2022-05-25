@@ -43,7 +43,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -67,7 +67,7 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {

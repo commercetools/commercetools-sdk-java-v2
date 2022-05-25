@@ -33,7 +33,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
@@ -42,7 +42,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,7 +51,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetDescriptionActionBuilder description(
@@ -61,7 +61,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetDescriptionActionBuilder description(

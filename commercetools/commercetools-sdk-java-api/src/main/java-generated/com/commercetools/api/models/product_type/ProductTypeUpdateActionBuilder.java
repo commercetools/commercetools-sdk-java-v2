@@ -31,10 +31,6 @@ public class ProductTypeUpdateActionBuilder {
         return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder.of();
     }
 
-    public com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder changeAttributeOrderBuilder() {
-        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder.of();
-    }
-
     public com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder changeAttributeOrderByNameBuilder() {
         return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder.of();
     }

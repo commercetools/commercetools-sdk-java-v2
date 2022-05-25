@@ -39,7 +39,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     private java.util.List<com.commercetools.api.models.product.Product> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ProductPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,7 +48,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -66,7 +66,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ProductPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +75,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder results(final com.commercetools.api.models.product.Product... results) {
@@ -84,7 +84,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.product.Product... results) {
@@ -106,7 +106,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder plusResults(
@@ -119,7 +119,7 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPagedQueryResponseBuilder withResults(

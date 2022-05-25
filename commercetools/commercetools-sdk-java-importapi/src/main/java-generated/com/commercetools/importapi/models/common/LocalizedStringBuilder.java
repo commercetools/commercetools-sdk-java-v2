@@ -24,7 +24,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringBuilder values(final Map<String, String> values) {
@@ -33,7 +33,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedStringBuilder addValue(final String key, final String value) {

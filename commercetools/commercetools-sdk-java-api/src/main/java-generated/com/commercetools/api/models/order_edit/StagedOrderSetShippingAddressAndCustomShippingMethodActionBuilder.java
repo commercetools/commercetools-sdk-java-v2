@@ -40,7 +40,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(
@@ -50,7 +50,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(
@@ -60,7 +60,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName(
@@ -70,7 +70,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(
@@ -81,7 +81,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(
@@ -91,7 +91,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(
@@ -103,7 +103,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(
@@ -113,7 +113,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(
@@ -124,7 +124,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(

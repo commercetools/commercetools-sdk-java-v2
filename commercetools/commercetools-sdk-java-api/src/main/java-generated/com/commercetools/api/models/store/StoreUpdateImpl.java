@@ -35,7 +35,7 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreUpdateAction> getActions() {

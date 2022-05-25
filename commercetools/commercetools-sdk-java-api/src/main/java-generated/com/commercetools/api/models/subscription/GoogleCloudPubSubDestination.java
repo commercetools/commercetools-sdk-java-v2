@@ -33,14 +33,14 @@ public interface GoogleCloudPubSubDestination extends Destination {
     String GOOGLE_CLOUD_PUB_SUB = "GoogleCloudPubSub";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("projectId")
     public String getProjectId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("topic")

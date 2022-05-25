@@ -24,7 +24,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     private java.util.List<java.time.ZonedDateTime> value;
 
     /**
-     <>
+     *
      */
 
     public DateTimeSetFieldBuilder value(final java.time.ZonedDateTime... value) {
@@ -33,7 +33,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public DateTimeSetFieldBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
@@ -42,7 +42,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public DateTimeSetFieldBuilder plusValue(final java.time.ZonedDateTime... value) {

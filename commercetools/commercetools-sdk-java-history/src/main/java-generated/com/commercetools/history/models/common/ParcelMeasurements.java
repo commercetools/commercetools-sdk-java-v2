@@ -33,28 +33,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelMeasurements {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("heightInMillimeter")
     public Integer getHeightInMillimeter();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lengthInMillimeter")
     public Integer getLengthInMillimeter();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("widthInMillimeter")
     public Integer getWidthInMillimeter();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("weightInGram")

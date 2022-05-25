@@ -34,7 +34,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
     /**
-     <*  <p>Update action for <code>setAttribute</code></p>>
+     *  <p>Update action for <code>setAttribute</code></p>
      */
 
     public SetAttributeChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAttributeChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAttributeChangeBuilder previousValue(
@@ -63,7 +63,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAttributeChangeBuilder previousValue(
@@ -73,7 +73,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAttributeChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetAttributeChangeBuilder nextValue(

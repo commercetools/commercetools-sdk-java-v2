@@ -34,7 +34,7 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

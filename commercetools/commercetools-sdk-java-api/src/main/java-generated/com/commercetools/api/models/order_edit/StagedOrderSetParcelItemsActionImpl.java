@@ -39,7 +39,7 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -55,7 +55,7 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {

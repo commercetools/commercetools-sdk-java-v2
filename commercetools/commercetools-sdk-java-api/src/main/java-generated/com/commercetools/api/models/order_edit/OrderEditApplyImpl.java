@@ -35,7 +35,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getEditVersion() {
@@ -43,7 +43,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getResourceVersion() {

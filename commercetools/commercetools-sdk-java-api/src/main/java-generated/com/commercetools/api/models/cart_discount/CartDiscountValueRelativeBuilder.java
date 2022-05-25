@@ -24,7 +24,7 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
     private Long permyriad;
 
     /**
-     <>
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      */
 
     public CartDiscountValueRelativeBuilder permyriad(final Long permyriad) {

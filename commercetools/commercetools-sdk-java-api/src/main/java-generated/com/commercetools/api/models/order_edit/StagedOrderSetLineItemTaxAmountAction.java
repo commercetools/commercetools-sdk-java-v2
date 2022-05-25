@@ -35,14 +35,14 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     String SET_LINE_ITEM_TAX_AMOUNT = "setLineItemTaxAmount";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxAmount")

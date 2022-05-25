@@ -27,7 +27,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
     private String topic;
 
     /**
-     <>
+     *
      */
 
     public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
@@ -36,7 +36,7 @@ public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudP
     }
 
     /**
-     <>
+     *
      */
 
     public GoogleCloudPubSubDestinationBuilder topic(final String topic) {

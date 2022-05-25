@@ -31,7 +31,7 @@ public class FieldTypeImpl implements FieldType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

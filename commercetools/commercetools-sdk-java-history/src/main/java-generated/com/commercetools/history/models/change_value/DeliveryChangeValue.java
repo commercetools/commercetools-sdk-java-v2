@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryChangeValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -44,7 +44,7 @@ public interface DeliveryChangeValue {
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface DeliveryChangeValue {
     public Address getAddress();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

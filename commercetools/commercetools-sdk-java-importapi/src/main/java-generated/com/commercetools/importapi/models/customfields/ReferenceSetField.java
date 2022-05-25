@@ -34,7 +34,7 @@ public interface ReferenceSetField extends CustomField {
     String REFERENCE_SET = "ReferenceSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

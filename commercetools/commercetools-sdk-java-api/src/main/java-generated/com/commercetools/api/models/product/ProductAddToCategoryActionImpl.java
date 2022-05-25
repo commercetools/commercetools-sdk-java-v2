@@ -43,7 +43,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
@@ -59,7 +59,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderHint() {
@@ -67,7 +67,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

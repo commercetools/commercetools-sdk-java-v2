@@ -36,7 +36,7 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {

@@ -32,14 +32,14 @@ public interface UnpublishChange extends Change {
     String UNPUBLISH_CHANGE = "UnpublishChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")

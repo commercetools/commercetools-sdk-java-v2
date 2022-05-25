@@ -36,21 +36,21 @@ public interface SetLocalizedDescriptionChange extends Change {
     String SET_LOCALIZED_DESCRIPTION_CHANGE = "SetLocalizedDescriptionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setDescription</code></p>>
+     *  <p>Shape of the action for <code>setDescription</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetLocalizedDescriptionChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

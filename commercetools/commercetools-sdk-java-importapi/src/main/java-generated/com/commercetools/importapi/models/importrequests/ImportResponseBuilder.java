@@ -25,7 +25,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
     /**
-     <>
+     *
      */
 
     public ImportResponseBuilder operationStatus(
@@ -35,7 +35,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImportResponseBuilder operationStatus(
@@ -45,7 +45,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImportResponseBuilder plusOperationStatus(
@@ -58,7 +58,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImportResponseBuilder plusOperationStatus(
@@ -73,7 +73,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     <>
+     *
      */
 
     public ImportResponseBuilder withOperationStatus(

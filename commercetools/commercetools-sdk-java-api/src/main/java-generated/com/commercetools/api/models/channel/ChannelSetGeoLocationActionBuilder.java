@@ -27,7 +27,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
     /**
-     <*  <p>Value to set.</p>>
+     *  <p>Value to set.</p>
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
@@ -37,7 +37,7 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     }
 
     /**
-     <*  <p>Value to set.</p>>
+     *  <p>Value to set.</p>
      */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(

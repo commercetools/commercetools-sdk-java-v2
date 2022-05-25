@@ -31,7 +31,7 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxAmount")

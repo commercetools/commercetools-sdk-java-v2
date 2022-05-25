@@ -35,7 +35,7 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<Integer> getCoordinates() {

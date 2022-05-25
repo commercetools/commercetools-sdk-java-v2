@@ -30,7 +30,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public ChannelSetAddressCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
 
     public ChannelSetAddressCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      */
 
     public ChannelSetAddressCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class ChannelSetAddressCustomTypeActionBuilder implements Builder<Channel
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      */
 
     public ChannelSetAddressCustomTypeActionBuilder fields(

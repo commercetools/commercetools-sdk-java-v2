@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerCreatePasswordResetToken {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("ttlMinutes")

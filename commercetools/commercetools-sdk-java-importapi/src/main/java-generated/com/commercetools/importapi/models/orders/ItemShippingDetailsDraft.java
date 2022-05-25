@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemShippingDetailsDraft {
 
     /**
-     <*  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>>
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      */
     @NotNull
     @Valid

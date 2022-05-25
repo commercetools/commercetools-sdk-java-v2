@@ -33,7 +33,7 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     String CHANGE_CARTS_CONFIGURATION = "changeCartsConfiguration";
 
     /**
-     <*  <p>Configuration for the Carts feature.</p>>
+     *  <p>Configuration for the Carts feature.</p>
      */
     @NotNull
     @Valid

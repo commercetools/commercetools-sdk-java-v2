@@ -42,7 +42,7 @@ public interface ProductRemovedFromCategoryMessage extends Message {
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductRemovedFromCategoryMessage extends Message {
     public CategoryReference getCategory();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

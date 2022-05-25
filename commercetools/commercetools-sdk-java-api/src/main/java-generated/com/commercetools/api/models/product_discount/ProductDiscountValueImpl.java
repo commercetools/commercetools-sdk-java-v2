@@ -31,7 +31,7 @@ public class ProductDiscountValueImpl implements ProductDiscountValue, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

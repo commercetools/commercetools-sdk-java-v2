@@ -34,21 +34,21 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldAddress")

@@ -46,7 +46,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -54,7 +54,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -62,7 +62,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -70,7 +70,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -78,7 +78,7 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {

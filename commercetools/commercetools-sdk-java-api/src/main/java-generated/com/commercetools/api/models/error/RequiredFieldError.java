@@ -33,7 +33,7 @@ public interface RequiredFieldError extends ErrorObject {
     String REQUIRED_FIELD = "RequiredField";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("field")

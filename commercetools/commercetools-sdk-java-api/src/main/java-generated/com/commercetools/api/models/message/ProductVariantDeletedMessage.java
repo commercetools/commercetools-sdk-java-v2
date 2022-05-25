@@ -42,7 +42,7 @@ public interface ProductVariantDeletedMessage extends Message {
     String PRODUCT_VARIANT_DELETED = "ProductVariantDeleted";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface ProductVariantDeletedMessage extends Message {
     public ProductVariant getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedImageUrls")

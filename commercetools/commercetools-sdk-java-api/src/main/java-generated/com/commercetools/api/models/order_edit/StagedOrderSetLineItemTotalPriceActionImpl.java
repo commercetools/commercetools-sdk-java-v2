@@ -39,7 +39,7 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {

@@ -28,7 +28,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     private com.commercetools.api.models.common.Money totalPrice;
 
     /**
-     <>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder price(
@@ -38,7 +38,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder price(final com.commercetools.api.models.common.Money price) {
@@ -47,7 +47,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(
@@ -57,7 +57,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public ExternalLineItemTotalPriceBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {

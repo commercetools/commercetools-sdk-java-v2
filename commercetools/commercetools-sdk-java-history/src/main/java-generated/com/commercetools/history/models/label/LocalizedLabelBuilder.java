@@ -25,7 +25,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     private com.commercetools.history.models.common.LocalizedString value;
 
     /**
-     <>
+     *
      */
 
     public LocalizedLabelBuilder value(
@@ -35,7 +35,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public LocalizedLabelBuilder value(final com.commercetools.history.models.common.LocalizedString value) {

@@ -26,7 +26,7 @@ public class ProductSetKeyActionBuilder implements Builder<ProductSetKeyAction> 
     private String key;
 
     /**
-     <*  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>>
+     *  <p>User-specific unique identifier for the product. If left blank or set to <code>null</code>, the product key is unset/removed.</p>
      */
 
     public ProductSetKeyActionBuilder key(@Nullable final String key) {

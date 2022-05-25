@@ -24,7 +24,7 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     private String id;
 
     /**
-     <>
+     *
      */
 
     public CategoryReferenceBuilder id(final String id) {

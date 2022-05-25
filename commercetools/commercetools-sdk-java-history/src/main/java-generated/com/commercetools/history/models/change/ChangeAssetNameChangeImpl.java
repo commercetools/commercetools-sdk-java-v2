@@ -47,7 +47,7 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>changeAssetName</code></p>>
+     *  <p>Update action for <code>changeAssetName</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -71,7 +71,7 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {

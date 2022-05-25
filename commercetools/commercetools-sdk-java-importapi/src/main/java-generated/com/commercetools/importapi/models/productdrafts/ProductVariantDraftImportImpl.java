@@ -50,7 +50,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -58,7 +58,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -66,7 +66,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
@@ -74,7 +74,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -82,7 +82,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
@@ -90,7 +90,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {

@@ -28,7 +28,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
@@ -39,7 +39,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(

@@ -37,7 +37,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta;
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder count(final Long count) {
@@ -46,7 +46,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder total(final Long total) {
@@ -55,7 +55,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public SimilarProductsPagedQueryResultBuilder offset(final Long offset) {
@@ -64,7 +64,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder results(
@@ -74,7 +74,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder results(
@@ -84,7 +84,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder plusResults(
@@ -97,7 +97,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder plusResults(
@@ -111,7 +111,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder withResults(
@@ -123,7 +123,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder meta(
@@ -135,7 +135,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     <>
+     *
      */
 
     public SimilarProductsPagedQueryResultBuilder meta(

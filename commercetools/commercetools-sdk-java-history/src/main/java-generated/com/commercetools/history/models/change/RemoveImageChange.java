@@ -37,28 +37,28 @@ public interface RemoveImageChange extends Change {
     String REMOVE_IMAGE_CHANGE = "RemoveImageChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update actions for removing images</p>>
+     *  <p>Update actions for removing images</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface RemoveImageChange extends Change {
     public List<Image> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

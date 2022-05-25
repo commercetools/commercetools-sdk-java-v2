@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalTaxAmountDraft {
 
     /**
-     <*  <p>The total gross amount of the item (totalNet + taxes).</p>>
+     *  <p>The total gross amount of the item (totalNet + taxes).</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ExternalTaxAmountDraft {
     public Money getTotalGross();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

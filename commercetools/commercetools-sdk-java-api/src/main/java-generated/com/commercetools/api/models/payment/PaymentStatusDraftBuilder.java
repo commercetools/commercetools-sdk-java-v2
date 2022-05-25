@@ -33,7 +33,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
@@ -42,7 +42,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
@@ -51,7 +51,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentStatusDraftBuilder state(
@@ -61,7 +61,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public PaymentStatusDraftBuilder state(

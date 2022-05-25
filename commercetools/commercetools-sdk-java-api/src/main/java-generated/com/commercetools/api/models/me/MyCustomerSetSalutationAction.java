@@ -29,7 +29,7 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
     String SET_SALUTATION = "setSalutation";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("salutation")

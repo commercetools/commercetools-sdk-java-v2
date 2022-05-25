@@ -55,7 +55,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.ProductReference getProduct() {
@@ -63,7 +63,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.ProductTypeReference getProductType() {
@@ -71,7 +71,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <*  <p>ID of a ProductVariant.</p>>
+     *  <p>ID of a ProductVariant.</p>
      */
 
     public Integer getVariantId() {
@@ -79,7 +79,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public java.util.List<String> getMissingAttributeValues() {
@@ -87,7 +87,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <*  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>>
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
      */
 
     public java.util.List<String> getMissingAttributeNames() {
@@ -95,7 +95,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {
@@ -103,7 +103,7 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {

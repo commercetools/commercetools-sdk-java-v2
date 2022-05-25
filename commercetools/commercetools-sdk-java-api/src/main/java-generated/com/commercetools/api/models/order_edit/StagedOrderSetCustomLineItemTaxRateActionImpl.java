@@ -40,7 +40,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -56,7 +56,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

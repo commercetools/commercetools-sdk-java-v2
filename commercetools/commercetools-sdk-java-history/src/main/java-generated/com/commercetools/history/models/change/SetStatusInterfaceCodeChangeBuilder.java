@@ -30,7 +30,7 @@ public class SetStatusInterfaceCodeChangeBuilder implements Builder<SetStatusInt
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>>
+     *  <p>Shape of the action for <code>setStatusInterfaceCode</code></p>
      */
 
     public SetStatusInterfaceCodeChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetStatusInterfaceCodeChangeBuilder implements Builder<SetStatusInt
     }
 
     /**
-     <>
+     *
      */
 
     public SetStatusInterfaceCodeChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetStatusInterfaceCodeChangeBuilder implements Builder<SetStatusInt
     }
 
     /**
-     <>
+     *
      */
 
     public SetStatusInterfaceCodeChangeBuilder nextValue(final String nextValue) {

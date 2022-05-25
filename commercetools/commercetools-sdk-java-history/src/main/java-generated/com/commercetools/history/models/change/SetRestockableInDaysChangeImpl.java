@@ -43,7 +43,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     <*  <p>Shape of the action for <code>setRestockableInDays</code></p>>
+     *  <p>Shape of the action for <code>setRestockableInDays</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {

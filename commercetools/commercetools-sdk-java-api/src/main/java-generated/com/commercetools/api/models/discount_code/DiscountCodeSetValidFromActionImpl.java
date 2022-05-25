@@ -35,7 +35,7 @@ public class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidF
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidF
     }
 
     /**
-     <*  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {

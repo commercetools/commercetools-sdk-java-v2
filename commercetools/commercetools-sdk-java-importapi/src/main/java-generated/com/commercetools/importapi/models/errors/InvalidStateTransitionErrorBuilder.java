@@ -30,7 +30,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
     /**
-     <>
+     *
      */
 
     public InvalidStateTransitionErrorBuilder message(final String message) {
@@ -39,7 +39,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
 
     public InvalidStateTransitionErrorBuilder currentState(
@@ -49,7 +49,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
 
     public InvalidStateTransitionErrorBuilder newState(

@@ -27,7 +27,7 @@ public class MissingPricesProductLevelBuilder implements Builder<MissingPricesPr
     private Long missingPrices;
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public MissingPricesProductLevelBuilder total(final Long total) {
@@ -36,7 +36,7 @@ public class MissingPricesProductLevelBuilder implements Builder<MissingPricesPr
     }
 
     /**
-     <*  <p>Number of products missing prices.</p>>
+     *  <p>Number of products missing prices.</p>
      */
 
     public MissingPricesProductLevelBuilder missingPrices(final Long missingPrices) {

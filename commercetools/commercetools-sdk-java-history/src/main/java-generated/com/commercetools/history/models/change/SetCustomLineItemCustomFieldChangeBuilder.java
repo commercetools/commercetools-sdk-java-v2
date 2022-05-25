@@ -38,7 +38,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     private java.lang.Object previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder change(final String change) {
@@ -47,7 +47,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder name(final String name) {
@@ -56,7 +56,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder customLineItem(
@@ -67,7 +67,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder customLineItem(
@@ -77,7 +77,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder customLineItemId(final String customLineItemId) {
@@ -86,7 +86,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -95,7 +95,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {

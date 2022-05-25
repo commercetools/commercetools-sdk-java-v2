@@ -33,21 +33,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldExpandedValue {
 
     /**
-     <*  <p>Name of a custom field.</p>>
+     *  <p>Name of a custom field.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")
     public Object getValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

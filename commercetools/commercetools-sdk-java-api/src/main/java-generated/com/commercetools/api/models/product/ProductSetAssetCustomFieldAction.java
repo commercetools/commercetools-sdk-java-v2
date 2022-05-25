@@ -32,49 +32,49 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     String SET_ASSET_CUSTOM_FIELD = "setAssetCustomField";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     <*  <p>Name of the Custom Field.</p>>
+     *  <p>Name of the Custom Field.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     @JsonProperty("value")

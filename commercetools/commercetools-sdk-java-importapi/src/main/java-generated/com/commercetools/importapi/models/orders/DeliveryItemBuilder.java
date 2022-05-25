@@ -27,7 +27,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     private Double quantity;
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemBuilder id(final String id) {
@@ -36,7 +36,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemBuilder quantity(final Double quantity) {

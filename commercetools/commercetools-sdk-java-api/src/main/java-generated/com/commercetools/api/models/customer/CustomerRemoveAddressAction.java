@@ -29,14 +29,14 @@ public interface CustomerRemoveAddressAction extends CustomerUpdateAction {
     String REMOVE_ADDRESS = "removeAddress";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

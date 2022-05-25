@@ -34,7 +34,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("force")

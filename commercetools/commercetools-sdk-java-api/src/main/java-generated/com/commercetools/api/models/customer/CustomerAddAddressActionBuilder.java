@@ -25,7 +25,7 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public CustomerAddAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddAddressActionBuilder address(final com.commercetools.api.models.common.BaseAddress address) {

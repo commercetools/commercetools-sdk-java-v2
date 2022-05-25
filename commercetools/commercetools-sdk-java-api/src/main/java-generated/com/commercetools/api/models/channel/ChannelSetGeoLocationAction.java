@@ -32,7 +32,7 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
     String SET_GEO_LOCATION = "setGeoLocation";
 
     /**
-     <*  <p>Value to set.</p>>
+     *  <p>Value to set.</p>
      */
     @Valid
     @JsonProperty("geoLocation")

@@ -61,7 +61,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder id(final String id) {
@@ -70,7 +70,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder version(final Long version) {
@@ -79,7 +79,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -88,7 +88,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedAt(
@@ -98,7 +98,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
@@ -108,7 +108,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
@@ -118,7 +118,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
@@ -128,7 +128,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
@@ -138,7 +138,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -147,7 +147,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
@@ -157,7 +157,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
@@ -167,7 +167,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -176,7 +176,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -188,7 +188,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,7 +198,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lineItemId(final String lineItemId) {
@@ -207,7 +207,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
@@ -218,7 +218,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(

@@ -35,7 +35,7 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
     @NotNull
     @Valid

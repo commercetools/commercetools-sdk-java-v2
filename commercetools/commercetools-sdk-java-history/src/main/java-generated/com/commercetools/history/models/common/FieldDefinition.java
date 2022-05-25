@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FieldDefinition {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-     <*  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>>
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -57,7 +57,7 @@ public interface FieldDefinition {
     public LocalizedString getLabel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("inputHint")

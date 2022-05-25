@@ -35,35 +35,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSink {
 
     /**
-     <*  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
+     *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
      */
 
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
     /**
-     <*  <p>The version of the ImportSink.</p>>
+     *  <p>The version of the ImportSink.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>The time when the ImportSink was created.</p>>
+     *  <p>The time when the ImportSink was created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>The last time when the ImportSink was modified.</p>>
+     *  <p>The last time when the ImportSink was modified.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

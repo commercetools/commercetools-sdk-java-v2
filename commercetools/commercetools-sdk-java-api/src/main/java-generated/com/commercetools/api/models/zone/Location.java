@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Location {
 
     /**
-     <*  <p>Country code of the geographic location.</p>>
+     *  <p>Country code of the geographic location.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <*  <p>State within the country.</p>>
+     *  <p>State within the country.</p>
      */
 
     @JsonProperty("state")

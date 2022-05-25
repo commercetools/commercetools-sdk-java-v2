@@ -32,7 +32,7 @@ public interface StateSetRolesAction extends StateUpdateAction {
     String SET_ROLES = "setRoles";
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @NotNull
     @JsonProperty("roles")

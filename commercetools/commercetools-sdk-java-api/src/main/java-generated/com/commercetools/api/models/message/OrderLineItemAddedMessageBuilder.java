@@ -60,7 +60,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     private Long addedQuantity;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public OrderLineItemAddedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemAddedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemAddedMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemAddedMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public OrderLineItemAddedMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public OrderLineItemAddedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder lineItem(
@@ -205,7 +205,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder lineItem(final com.commercetools.api.models.cart.LineItem lineItem) {
@@ -214,7 +214,7 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
     }
 
     /**
-     <>
+     *
      */
 
     public OrderLineItemAddedMessageBuilder addedQuantity(final Long addedQuantity) {

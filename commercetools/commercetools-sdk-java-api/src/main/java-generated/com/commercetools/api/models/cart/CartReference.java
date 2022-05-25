@@ -34,14 +34,14 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
     String CART = "cart";
 
     /**
-     <*  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Cart getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart.</p>>
+     *  <p>Unique identifier of the referenced Cart.</p>
      */
     @NotNull
     @JsonProperty("id")

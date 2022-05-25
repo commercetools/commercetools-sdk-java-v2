@@ -36,7 +36,7 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingAddressActionImpl implements StagedOrderSetSh
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

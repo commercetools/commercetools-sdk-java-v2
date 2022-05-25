@@ -31,7 +31,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
@@ -40,7 +40,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder externalTaxRate(
@@ -51,7 +51,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomLineItemTaxRateActionBuilder externalTaxRate(

@@ -33,7 +33,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     private java.time.ZonedDateTime returnDate;
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder items(final com.commercetools.importapi.models.order_patches.ReturnItemDraft... items) {
@@ -42,7 +42,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder items(
@@ -52,7 +52,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder plusItems(
@@ -65,7 +65,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder plusItems(
@@ -79,7 +79,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReturnInfoBuilder withItems(
@@ -91,7 +91,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>>
+     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
      */
 
     public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
@@ -100,7 +100,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     <*  <p>Maps to <code>ReturnInfo.returnDate</code></p>>
+     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
      */
 
     public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {

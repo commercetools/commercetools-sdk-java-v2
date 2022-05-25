@@ -34,7 +34,7 @@ public interface ReferenceAttribute extends Attribute {
     String REFERENCE = "reference";
 
     /**
-     <*  <p>References a resource by key.</p>>
+     *  <p>References a resource by key.</p>
      */
     @NotNull
     @Valid

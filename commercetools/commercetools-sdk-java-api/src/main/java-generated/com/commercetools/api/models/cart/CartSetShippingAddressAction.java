@@ -32,7 +32,7 @@ public interface CartSetShippingAddressAction extends CartUpdateAction {
     String SET_SHIPPING_ADDRESS = "setShippingAddress";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")

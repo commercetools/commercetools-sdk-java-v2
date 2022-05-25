@@ -35,35 +35,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface RecordPagedQueryResponse {
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Integer getOffset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

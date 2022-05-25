@@ -34,28 +34,28 @@ public interface ChangeGroupsChange extends Change {
     String CHANGE_GROUPS_CHANGE = "ChangeGroupsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeGroups</code> on stores</p>>
+     *  <p>Update action for <code>changeGroups</code> on stores</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

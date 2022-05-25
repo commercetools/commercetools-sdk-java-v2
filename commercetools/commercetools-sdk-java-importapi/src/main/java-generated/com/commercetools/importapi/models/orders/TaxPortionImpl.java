@@ -38,7 +38,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -46,7 +46,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getRate() {
@@ -54,7 +54,7 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getAmount() {

@@ -39,7 +39,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -47,7 +47,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     <*  <p>The type of the referenced resource.</p>>
+     *  <p>The type of the referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
@@ -55,7 +55,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getContainer() {

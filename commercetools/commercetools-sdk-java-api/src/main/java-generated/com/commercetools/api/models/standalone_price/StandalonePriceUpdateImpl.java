@@ -35,7 +35,7 @@ public class StandalonePriceUpdateImpl implements StandalonePriceUpdate, ModelBa
     }
 
     /**
-     <*  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>>
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class StandalonePriceUpdateImpl implements StandalonePriceUpdate, ModelBa
     }
 
     /**
-     <*  <p>Update actions to be performed on the StandalonePrice.</p>>
+     *  <p>Update actions to be performed on the StandalonePrice.</p>
      */
 
     public java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> getActions() {

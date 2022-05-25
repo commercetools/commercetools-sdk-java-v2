@@ -31,7 +31,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     private com.commercetools.history.models.common.TaxedPrice previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>>
+     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
@@ -60,7 +60,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(
@@ -70,7 +70,7 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(

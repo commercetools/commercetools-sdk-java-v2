@@ -34,14 +34,14 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
     String CHANGE_PLAIN_ENUM_VALUE_LABEL = "changePlainEnumValueLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -48,7 +48,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private Boolean isSearchable;
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder type(final com.commercetools.importapi.models.producttypes.AttributeType type) {
@@ -57,7 +57,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder type(
@@ -67,7 +67,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -76,12 +76,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeDefinitionBuilder label(
@@ -91,12 +91,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeDefinitionBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {
@@ -105,7 +105,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -114,7 +114,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder attributeConstraint(
@@ -124,12 +124,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -139,12 +139,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>>
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -154,7 +154,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder inputHint(
@@ -164,7 +164,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionBuilder isSearchable(@Nullable final Boolean isSearchable) {

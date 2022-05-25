@@ -27,7 +27,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
     private String uriPath;
 
     /**
-     <*  <p>The ID for the task. Used to find the status of the task.</p>>
+     *  <p>The ID for the task. Used to find the status of the task.</p>
      */
 
     public TaskTokenBuilder taskId(final String taskId) {
@@ -36,7 +36,7 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
     }
 
     /**
-     <*  <p>The URI path to poll for the status of the task.</p>>
+     *  <p>The URI path to poll for the status of the task.</p>
      */
 
     public TaskTokenBuilder uriPath(final String uriPath) {

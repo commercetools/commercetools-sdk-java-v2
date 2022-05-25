@@ -33,21 +33,21 @@ public interface ReviewLabel extends Label {
     String REVIEW_LABEL = "ReviewLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("title")

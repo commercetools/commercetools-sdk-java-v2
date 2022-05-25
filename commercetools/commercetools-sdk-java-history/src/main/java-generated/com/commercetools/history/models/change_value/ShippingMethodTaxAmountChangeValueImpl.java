@@ -36,7 +36,7 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxedPrice getTaxedPrice() {
@@ -44,7 +44,7 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getTaxRate() {

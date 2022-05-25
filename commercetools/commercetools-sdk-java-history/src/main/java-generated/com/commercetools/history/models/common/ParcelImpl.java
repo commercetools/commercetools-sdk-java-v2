@@ -46,7 +46,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -54,7 +54,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCreatedAt() {
@@ -62,7 +62,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ParcelMeasurements getMeasurements() {
@@ -70,7 +70,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TrackingData getTrackingData() {
@@ -78,7 +78,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {

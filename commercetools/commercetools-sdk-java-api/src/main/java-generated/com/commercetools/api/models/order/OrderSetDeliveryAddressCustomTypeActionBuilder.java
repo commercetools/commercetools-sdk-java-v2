@@ -34,7 +34,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -43,7 +43,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder type(
@@ -53,7 +53,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder type(
@@ -63,7 +63,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder fields(
@@ -73,7 +73,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
      */
 
     public OrderSetDeliveryAddressCustomTypeActionBuilder fields(

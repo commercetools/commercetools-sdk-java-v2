@@ -29,7 +29,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
     private Long quantity;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListRemoveTextLineItemActionBuilder textLineItemId(final String textLineItemId) {
@@ -38,7 +38,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListRemoveTextLineItemActionBuilder quantity(@Nullable final Long quantity) {

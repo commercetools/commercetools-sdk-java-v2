@@ -35,7 +35,7 @@ public class CartSetCountryActionImpl implements CartSetCountryAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartSetCountryActionImpl implements CartSetCountryAction, ModelBase
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {

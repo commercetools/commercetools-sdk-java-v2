@@ -24,7 +24,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     private java.util.List<Double> value;
 
     /**
-     <>
+     *
      */
 
     public NumberSetFieldBuilder value(final Double... value) {
@@ -33,7 +33,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public NumberSetFieldBuilder value(final java.util.List<Double> value) {
@@ -42,7 +42,7 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public NumberSetFieldBuilder plusValue(final Double... value) {

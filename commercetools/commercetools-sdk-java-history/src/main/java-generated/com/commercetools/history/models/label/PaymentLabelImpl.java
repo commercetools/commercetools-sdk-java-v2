@@ -39,7 +39,7 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -55,7 +55,7 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getAmountPlanned() {

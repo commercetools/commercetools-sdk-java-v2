@@ -36,7 +36,7 @@ public class ShoppingListChangeNameActionImpl implements ShoppingListChangeNameA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShoppingListChangeNameActionImpl implements ShoppingListChangeNameA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

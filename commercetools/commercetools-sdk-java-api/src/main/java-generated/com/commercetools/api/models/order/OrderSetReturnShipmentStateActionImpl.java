@@ -39,7 +39,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     <>
+     *
      */
 
     public String getReturnItemId() {
@@ -55,7 +55,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {

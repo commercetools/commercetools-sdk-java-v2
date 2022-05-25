@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Location {
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("state")

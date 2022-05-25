@@ -25,7 +25,7 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeTaxCalculationModeActionBuilder taxCalculationMode(

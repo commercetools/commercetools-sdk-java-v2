@@ -47,7 +47,7 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -55,7 +55,7 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -63,7 +63,7 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -71,8 +71,8 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -80,7 +80,7 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {

@@ -35,7 +35,7 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
     }
 
     /**
-     <*  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>>
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
      */
 
     public java.util.List<String> getGroups() {

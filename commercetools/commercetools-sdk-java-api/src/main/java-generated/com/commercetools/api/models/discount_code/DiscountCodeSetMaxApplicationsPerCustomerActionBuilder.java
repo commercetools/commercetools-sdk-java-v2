@@ -27,7 +27,7 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
     private Long maxApplicationsPerCustomer;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public DiscountCodeSetMaxApplicationsPerCustomerActionBuilder maxApplicationsPerCustomer(

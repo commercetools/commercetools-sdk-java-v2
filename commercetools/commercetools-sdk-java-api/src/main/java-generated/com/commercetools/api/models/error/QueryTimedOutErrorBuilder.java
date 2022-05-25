@@ -26,7 +26,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public QueryTimedOutErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     }
 
     /**
-     <>
+     *
      */
 
     public QueryTimedOutErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
     }
 
     /**
-     <>
+     *
      */
 
     public QueryTimedOutErrorBuilder addValue(final String key, final java.lang.Object value) {

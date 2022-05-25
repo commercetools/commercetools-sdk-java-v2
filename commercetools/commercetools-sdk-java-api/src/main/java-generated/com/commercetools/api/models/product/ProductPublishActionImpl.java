@@ -35,7 +35,7 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

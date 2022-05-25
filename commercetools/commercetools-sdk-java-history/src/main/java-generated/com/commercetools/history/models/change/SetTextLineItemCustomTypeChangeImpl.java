@@ -47,7 +47,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     <*  <p>Update action for <code>setTextLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
@@ -71,7 +71,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -79,7 +79,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {

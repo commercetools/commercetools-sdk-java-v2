@@ -35,28 +35,28 @@ public interface ChangeStackingModeChange extends Change {
     String CHANGE_STACKING_MODE_CHANGE = "ChangeStackingModeChange";
 
     /**
-     <*  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>>
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public StackingMode getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

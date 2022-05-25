@@ -38,35 +38,35 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER_CHANGE = "ChangeLocalizedEnumValueOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public List<LocalizedEnumValue> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

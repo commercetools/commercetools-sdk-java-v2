@@ -43,7 +43,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> getNextValue() {

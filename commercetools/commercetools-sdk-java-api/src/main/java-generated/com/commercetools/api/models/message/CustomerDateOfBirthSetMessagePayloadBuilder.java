@@ -26,7 +26,7 @@ public class CustomerDateOfBirthSetMessagePayloadBuilder implements Builder<Cust
     private java.time.LocalDate dateOfBirth;
 
     /**
-     <>
+     *
      */
 
     public CustomerDateOfBirthSetMessagePayloadBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {

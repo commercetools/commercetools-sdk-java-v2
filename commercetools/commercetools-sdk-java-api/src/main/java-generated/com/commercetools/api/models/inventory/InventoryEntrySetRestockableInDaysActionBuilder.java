@@ -27,7 +27,7 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
     private Long restockableInDays;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntrySetRestockableInDaysActionBuilder restockableInDays(@Nullable final Long restockableInDays) {

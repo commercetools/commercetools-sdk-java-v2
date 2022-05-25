@@ -34,7 +34,7 @@ public class CustomFieldEnumValueImpl implements CustomFieldEnumValue, ModelBase
     }
 
     /**
-     <*  <p>Key of the value used as a programmatic identifier.</p>>
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {
@@ -42,7 +42,7 @@ public class CustomFieldEnumValueImpl implements CustomFieldEnumValue, ModelBase
     }
 
     /**
-     <*  <p>Descriptive label of the value.</p>>
+     *  <p>Descriptive label of the value.</p>
      */
 
     public String getLabel() {

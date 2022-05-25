@@ -36,7 +36,7 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
     }
 
     /**
-     <*  <p>Partially hidden on retrieval for security reasons.</p>>
+     *  <p>Partially hidden on retrieval for security reasons.</p>
      */
 
     public String getHeaderValue() {

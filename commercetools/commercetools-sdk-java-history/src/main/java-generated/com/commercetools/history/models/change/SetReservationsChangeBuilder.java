@@ -31,7 +31,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
     /**
-     <*  <p>Update action for <code>setReservations</code> on inventories</p>>
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
      */
 
     public SetReservationsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder nextValue(
@@ -60,7 +60,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder plusNextValue(
@@ -73,7 +73,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder plusNextValue(
@@ -86,7 +86,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder withNextValue(
@@ -97,7 +97,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder previousValue(
@@ -107,7 +107,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder previousValue(
@@ -117,7 +117,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder plusPreviousValue(
@@ -130,7 +130,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder plusPreviousValue(
@@ -143,7 +143,7 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetReservationsChangeBuilder withPreviousValue(

@@ -30,7 +30,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>>
+     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     <*  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>>
+     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
      */
 
     public MyCustomerSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the MyCustomer.</p>>
+     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the MyCustomer.</p>>
+     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
      */
 
     public MyCustomerSetCustomTypeActionBuilder fields(

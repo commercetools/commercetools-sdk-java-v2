@@ -30,7 +30,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>>
+     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder type(
@@ -40,7 +40,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     <*  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>>
+     *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder type(
@@ -50,7 +50,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the MyShoppingList.</p>>
+     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder fields(
@@ -60,7 +60,7 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the MyShoppingList.</p>>
+     *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
      */
 
     public MyShoppingListSetCustomTypeActionBuilder fields(

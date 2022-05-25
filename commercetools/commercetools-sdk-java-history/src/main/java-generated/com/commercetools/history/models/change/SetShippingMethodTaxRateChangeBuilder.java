@@ -34,7 +34,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     private com.commercetools.history.models.common.TaxRate previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingMethodTaxRate</code></p>>
+     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
      */
 
     public SetShippingMethodTaxRateChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodTaxRateChangeBuilder taxMode(
@@ -53,7 +53,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
@@ -63,7 +63,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetShippingMethodTaxRateChangeBuilder nextValue(
@@ -73,7 +73,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(
@@ -83,7 +83,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public SetShippingMethodTaxRateChangeBuilder previousValue(

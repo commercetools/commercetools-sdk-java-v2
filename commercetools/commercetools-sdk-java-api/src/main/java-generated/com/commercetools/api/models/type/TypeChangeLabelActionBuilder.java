@@ -28,7 +28,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     <*  <p>Name of the Field Definition to update.</p>>
+     *  <p>Name of the Field Definition to update.</p>
      */
 
     public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
@@ -37,7 +37,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public TypeChangeLabelActionBuilder label(
@@ -47,7 +47,7 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

@@ -39,7 +39,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     /**
-     <*  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>>
+     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
      */
 
     public ProductVariantImportDraftBuilder id(@Nullable final Long id) {
@@ -48,7 +48,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The SKU of the existing variant.</p>>
+     *  <p>The SKU of the existing variant.</p>
      */
 
     public ProductVariantImportDraftBuilder sku(@Nullable final String sku) {
@@ -57,7 +57,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder prices(
@@ -67,7 +67,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder prices(
@@ -77,7 +77,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusPrices(
@@ -90,7 +90,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusPrices(
@@ -103,7 +103,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder withPrices(
@@ -114,7 +114,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder attributes(
@@ -124,7 +124,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder attributes(
@@ -134,7 +134,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusAttributes(
@@ -147,7 +147,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusAttributes(
@@ -160,7 +160,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder withAttributes(
@@ -171,7 +171,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder images(
@@ -181,7 +181,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder images(
@@ -191,7 +191,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusImages(
@@ -204,7 +204,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder plusImages(
@@ -217,7 +217,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     <*  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>>
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      */
 
     public ProductVariantImportDraftBuilder withImages(

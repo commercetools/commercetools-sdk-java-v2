@@ -35,21 +35,21 @@ public interface AddTransactionChange extends Change {
     String ADD_TRANSACTION_CHANGE = "AddTransactionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addTransaction</code> on payments</p>>
+     *  <p>Update action for <code>addTransaction</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

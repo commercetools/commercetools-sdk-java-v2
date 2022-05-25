@@ -40,7 +40,7 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
     }
 
     /**
-     <*  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>>
+     *  <p>Defines the Type that extends the ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the ShippingMethod.</p>>
+     *  <p>Sets the Custom Fields fields for the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

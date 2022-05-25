@@ -27,7 +27,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public OrderSetBillingAddressActionBuilder address(
@@ -37,7 +37,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetBillingAddressActionBuilder address(

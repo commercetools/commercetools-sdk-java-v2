@@ -35,14 +35,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Reference {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")

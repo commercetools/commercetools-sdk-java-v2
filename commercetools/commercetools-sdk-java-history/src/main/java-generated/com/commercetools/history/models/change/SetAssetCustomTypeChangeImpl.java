@@ -47,7 +47,7 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     }
 
     /**
-     <*  <p>Update action for <code>setAssetCustomType</code></p>>
+     *  <p>Update action for <code>setAssetCustomType</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
@@ -71,7 +71,7 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -79,7 +79,7 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {

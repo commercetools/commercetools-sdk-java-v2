@@ -25,7 +25,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     <*  <p>The new name to be set for the ProductSelection.</p>>
+     *  <p>The new name to be set for the ProductSelection.</p>
      */
 
     public ProductSelectionChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
     }
 
     /**
-     <*  <p>The new name to be set for the ProductSelection.</p>>
+     *  <p>The new name to be set for the ProductSelection.</p>
      */
 
     public ProductSelectionChangeNameActionBuilder name(

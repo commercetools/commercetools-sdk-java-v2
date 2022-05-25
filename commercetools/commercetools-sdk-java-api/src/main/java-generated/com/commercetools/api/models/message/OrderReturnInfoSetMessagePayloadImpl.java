@@ -36,7 +36,7 @@ public class OrderReturnInfoSetMessagePayloadImpl implements OrderReturnInfoSetM
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderReturnInfoSetMessagePayloadImpl implements OrderReturnInfoSetM
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {

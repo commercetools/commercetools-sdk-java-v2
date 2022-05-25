@@ -31,7 +31,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     private com.commercetools.history.models.change_value.EnumValue previousValue;
 
     /**
-     <*  <p>Update action for <code>removeEnumValues</code> on product types</p>>
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      */
 
     public RemoveEnumValuesChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public RemoveEnumValuesChangeBuilder attributeName(final String attributeName) {
@@ -49,7 +49,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveEnumValuesChangeBuilder previousValue(
@@ -59,7 +59,7 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveEnumValuesChangeBuilder previousValue(

@@ -45,7 +45,7 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-     <*  <p>Importance of the <code>name</code> attribute in overall similarity.</p>>
+     *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
      */
 
     public Long getName() {
@@ -53,7 +53,7 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-     <*  <p>Importance of the <code>description</code> attribute in overall similarity.</p>>
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      */
 
     public Long getDescription() {
@@ -61,7 +61,7 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-     <*  <p>Importance of the <code>description</code> attribute in overall similarity.</p>>
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
      */
 
     public Long getAttribute() {
@@ -69,7 +69,7 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-     <*  <p>Importance of the number of product variants in overall similarity.</p>>
+     *  <p>Importance of the number of product variants in overall similarity.</p>
      */
 
     public Long getVariantCount() {
@@ -77,7 +77,7 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-     <*  <p>Importance of the <code>price</code> attribute in overall similarity.</p>>
+     *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
      */
 
     public Long getPrice() {

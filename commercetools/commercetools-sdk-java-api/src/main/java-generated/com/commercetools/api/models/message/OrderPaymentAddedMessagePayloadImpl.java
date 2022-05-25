@@ -36,7 +36,7 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
     }
 
     /**
-     <*  <p>Reference to a Payment.</p>>
+     *  <p>Reference to a Payment.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentReference getPayment() {

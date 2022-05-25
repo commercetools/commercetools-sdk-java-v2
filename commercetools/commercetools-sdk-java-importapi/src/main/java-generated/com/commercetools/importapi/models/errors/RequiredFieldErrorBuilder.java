@@ -27,7 +27,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     private String field;
 
     /**
-     <>
+     *
      */
 
     public RequiredFieldErrorBuilder message(final String message) {
@@ -36,7 +36,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     public RequiredFieldErrorBuilder field(final String field) {

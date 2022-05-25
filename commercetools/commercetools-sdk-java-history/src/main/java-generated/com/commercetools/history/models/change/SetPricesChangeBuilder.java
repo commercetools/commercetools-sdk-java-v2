@@ -37,7 +37,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
 
     /**
-     <*  <p>Update action for <code>setPrices</code></p>>
+     *  <p>Update action for <code>setPrices</code></p>
      */
 
     public SetPricesChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder catalogData(final String catalogData) {
@@ -55,7 +55,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder variant(final String variant) {
@@ -64,7 +64,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder previousValue(final com.commercetools.history.models.common.Price... previousValue) {
@@ -73,7 +73,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder previousValue(
@@ -83,7 +83,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder plusPreviousValue(
@@ -96,7 +96,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder plusPreviousValue(
@@ -109,7 +109,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder withPreviousValue(
@@ -120,7 +120,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder nextValue(final com.commercetools.history.models.common.Price... nextValue) {
@@ -129,7 +129,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder nextValue(
@@ -139,7 +139,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder plusNextValue(final com.commercetools.history.models.common.Price... nextValue) {
@@ -151,7 +151,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder plusNextValue(
@@ -164,7 +164,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetPricesChangeBuilder withNextValue(

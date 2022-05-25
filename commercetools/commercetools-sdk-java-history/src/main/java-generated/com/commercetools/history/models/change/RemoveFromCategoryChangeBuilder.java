@@ -34,7 +34,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     <*  <p>Update action for <code>addToCategory</code></p>>
+     *  <p>Update action for <code>addToCategory</code></p>
      */
 
     public RemoveFromCategoryChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder category(
@@ -53,7 +53,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
@@ -62,7 +62,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder previousValue(
@@ -82,7 +82,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
@@ -95,7 +95,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
@@ -108,7 +108,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder withPreviousValue(
@@ -119,7 +119,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder nextValue(
@@ -129,7 +129,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder nextValue(
@@ -139,7 +139,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder plusNextValue(
@@ -152,7 +152,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder plusNextValue(
@@ -165,7 +165,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveFromCategoryChangeBuilder withNextValue(

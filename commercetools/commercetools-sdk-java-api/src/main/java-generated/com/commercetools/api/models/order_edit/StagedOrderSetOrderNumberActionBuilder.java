@@ -26,7 +26,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
     private String orderNumber;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {

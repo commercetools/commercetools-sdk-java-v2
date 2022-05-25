@@ -28,7 +28,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     private java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder actions(final com.commercetools.api.models.customer.CustomerUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder plusActions(
@@ -69,7 +69,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder plusActions(
@@ -82,7 +82,7 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerUpdateBuilder withActions(

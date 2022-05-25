@@ -43,7 +43,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getField() {

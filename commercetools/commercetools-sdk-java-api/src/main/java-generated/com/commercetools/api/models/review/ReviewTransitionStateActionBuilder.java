@@ -30,7 +30,7 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
     private Boolean force;
 
     /**
-     <>
+     *
      */
 
     public ReviewTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
     }
 
     /**
-     <>
+     *
      */
 
     public ReviewTransitionStateActionBuilder force(@Nullable final Boolean force) {

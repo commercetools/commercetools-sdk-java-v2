@@ -43,14 +43,14 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     String DELIVERY_ITEMS_UPDATED = "DeliveryItemsUpdated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -35,7 +35,7 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -43,7 +43,7 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {

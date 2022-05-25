@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The request body to import ProductVariants. Contains data for ProductVariants to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to import ProductVariants. Contains data for ProductVariants to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductVariantImportRequest extends ImportRequest {
     String PRODUCT_VARIANT = "product-variant";
 
     /**
-     <*  <p>The product variant import resources of this request.</p>>
+     *  <p>The product variant import resources of this request.</p>
      */
     @NotNull
     @Valid

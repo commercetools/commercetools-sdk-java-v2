@@ -24,7 +24,7 @@ public class ProductKeyReferenceBuilder implements Builder<ProductKeyReference> 
     private String key;
 
     /**
-     <>
+     *
      */
 
     public ProductKeyReferenceBuilder key(final String key) {

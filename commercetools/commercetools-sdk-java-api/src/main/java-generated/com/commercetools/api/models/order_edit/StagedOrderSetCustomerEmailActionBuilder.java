@@ -26,7 +26,7 @@ public class StagedOrderSetCustomerEmailActionBuilder implements Builder<StagedO
     private String email;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetCustomerEmailActionBuilder email(@Nullable final String email) {

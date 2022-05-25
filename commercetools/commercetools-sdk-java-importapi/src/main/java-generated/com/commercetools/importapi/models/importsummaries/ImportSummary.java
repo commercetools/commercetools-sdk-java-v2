@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSummary {
 
     /**
-     <*  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>>
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface ImportSummary {
     public OperationStates getStates();
 
     /**
-     <*  <p>The total number of ImportOperations received for this Import Summary.</p>>
+     *  <p>The total number of ImportOperations received for this Import Summary.</p>
      */
     @NotNull
     @JsonProperty("total")

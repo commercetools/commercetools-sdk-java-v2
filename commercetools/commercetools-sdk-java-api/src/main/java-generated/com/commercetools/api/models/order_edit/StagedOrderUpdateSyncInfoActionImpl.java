@@ -44,7 +44,7 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -60,7 +60,7 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {
@@ -68,7 +68,7 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getSyncedAt() {

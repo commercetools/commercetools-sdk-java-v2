@@ -34,7 +34,7 @@ public interface ProductSelectionDeletedMessagePayload extends MessagePayload {
     String PRODUCT_SELECTION_DELETED = "ProductSelectionDeleted";
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid

@@ -50,7 +50,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <*  <p>Update action for <code>transitionLineItemState</code></p>>
+     *  <p>Update action for <code>transitionLineItemState</code></p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -74,7 +74,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <>
+     *
      */
 
     public String getStateId() {
@@ -82,7 +82,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ItemState> getNextValue() {
@@ -90,7 +90,7 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.ItemState> getPreviousValue() {

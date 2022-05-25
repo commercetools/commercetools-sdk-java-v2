@@ -30,7 +30,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setTitle</code></p>>
+     *  <p>Shape of the action for <code>setTitle</code></p>
      */
 
     public SetTitleChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetTitleChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetTitleChangeBuilder nextValue(final String nextValue) {

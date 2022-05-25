@@ -47,7 +47,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -63,7 +63,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -71,8 +71,8 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
@@ -80,7 +80,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {

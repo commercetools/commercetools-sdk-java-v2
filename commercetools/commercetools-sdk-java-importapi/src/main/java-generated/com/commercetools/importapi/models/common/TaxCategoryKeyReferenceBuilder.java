@@ -24,7 +24,7 @@ public class TaxCategoryKeyReferenceBuilder implements Builder<TaxCategoryKeyRef
     private String key;
 
     /**
-     <>
+     *
      */
 
     public TaxCategoryKeyReferenceBuilder key(final String key) {

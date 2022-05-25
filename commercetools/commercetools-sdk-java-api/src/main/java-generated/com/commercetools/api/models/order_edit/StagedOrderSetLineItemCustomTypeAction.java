@@ -36,21 +36,21 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     String SET_LINE_ITEM_CUSTOM_TYPE = "setLineItemCustomType";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
     @Valid
     @JsonProperty("fields")

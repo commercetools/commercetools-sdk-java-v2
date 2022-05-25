@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountCodeInfo {
 
     /**
-     <*  <p>References a discount code by key.</p>>
+     *  <p>References a discount code by key.</p>
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface DiscountCodeInfo {
     public DiscountCodeKeyReference getDiscountCode();
 
     /**
-     <*  <p>Maps to <code>DiscountCodeInfo.state</code></p>>
+     *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
      */
 
     @JsonProperty("state")

@@ -35,7 +35,7 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
     }
 
     /**
-     <*  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>>
+     *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {

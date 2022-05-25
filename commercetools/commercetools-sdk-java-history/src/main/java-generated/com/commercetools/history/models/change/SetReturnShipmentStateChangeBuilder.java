@@ -30,7 +30,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     private com.commercetools.history.models.common.ReturnShipmentState previousValue;
 
     /**
-     <*  <p>Update action for <code>setReturnShipmentState</code></p>>
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
      */
 
     public SetReturnShipmentStateChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     }
 
     /**
-     <>
+     *
      */
 
     public SetReturnShipmentStateChangeBuilder nextValue(
@@ -49,7 +49,7 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     }
 
     /**
-     <>
+     *
      */
 
     public SetReturnShipmentStateChangeBuilder previousValue(

@@ -31,7 +31,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>transitionState</code></p>>
+     *  <p>Shape of the action for <code>transitionState</code></p>
      */
 
     public TransitionStateChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionStateChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionStateChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionStateChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     <>
+     *
      */
 
     public TransitionStateChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {

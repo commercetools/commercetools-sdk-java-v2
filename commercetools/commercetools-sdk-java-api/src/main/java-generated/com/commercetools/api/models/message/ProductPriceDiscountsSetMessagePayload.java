@@ -33,7 +33,7 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -43,7 +43,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <*  <p>Can be one of the following or absent.</p>>
+     *  <p>Can be one of the following or absent.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
@@ -51,7 +51,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getValue() {
@@ -59,8 +59,8 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -68,7 +68,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsMatching() {

@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssetDimensions {
 
     /**
-     <*  <p>Width of the Asset source.</p>>
+     *  <p>Width of the Asset source.</p>
      */
     @NotNull
     @JsonProperty("w")
     public Integer getW();
 
     /**
-     <*  <p>Height of the Asset source.</p>>
+     *  <p>Height of the Asset source.</p>
      */
     @NotNull
     @JsonProperty("h")

@@ -34,21 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssetSource {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("uri")
     public String getUri();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -56,7 +56,7 @@ public interface AssetSource {
     public AssetDimensions getDimensions();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("contentType")

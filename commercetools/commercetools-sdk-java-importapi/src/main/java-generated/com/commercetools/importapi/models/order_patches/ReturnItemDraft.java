@@ -31,35 +31,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItemDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("comment")
     public String getComment();
 
     /**
-     <*  <p>Maps to <code>ReturnItem.shipmentState</code></p>>
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      */
     @NotNull
     @JsonProperty("shipmentState")

@@ -40,7 +40,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

@@ -40,7 +40,7 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -56,7 +56,7 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.OrderState getOldOrderState() {

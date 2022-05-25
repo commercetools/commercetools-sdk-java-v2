@@ -50,7 +50,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
+     *  <p>Unique identifier of the Parcel.</p>
      */
 
     public String getId() {
@@ -58,7 +58,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -66,7 +66,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -74,7 +74,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -82,7 +82,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -90,7 +90,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields of this parcel.</p>>
+     *  <p>Custom Fields of this parcel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -51,7 +51,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {
@@ -59,7 +59,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -67,7 +67,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -75,7 +75,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {
@@ -83,7 +83,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -91,7 +91,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields of this return item.</p>>
+     *  <p>Custom Fields of this return item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

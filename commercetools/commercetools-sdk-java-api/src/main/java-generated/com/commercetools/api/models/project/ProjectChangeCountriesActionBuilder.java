@@ -24,7 +24,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     private java.util.List<String> countries;
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProjectChangeCountriesActionBuilder countries(final String... countries) {
@@ -33,7 +33,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
@@ -42,7 +42,7 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {

@@ -25,7 +25,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
     /**
-     <>
+     *
      */
 
     public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetRange... ranges) {
@@ -34,7 +34,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public RangeFacetResultBuilder ranges(
@@ -44,7 +44,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public RangeFacetResultBuilder plusRanges(final com.commercetools.api.models.product.FacetRange... ranges) {
@@ -56,7 +56,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public RangeFacetResultBuilder plusRanges(
@@ -69,7 +69,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     <>
+     *
      */
 
     public RangeFacetResultBuilder withRanges(

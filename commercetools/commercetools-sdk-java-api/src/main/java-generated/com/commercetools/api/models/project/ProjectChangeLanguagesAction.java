@@ -32,7 +32,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     String CHANGE_LANGUAGES = "changeLanguages";
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @JsonProperty("languages")

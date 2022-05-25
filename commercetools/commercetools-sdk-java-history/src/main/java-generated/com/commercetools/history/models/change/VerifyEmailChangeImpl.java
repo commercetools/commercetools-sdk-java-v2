@@ -35,7 +35,7 @@ public class VerifyEmailChangeImpl implements VerifyEmailChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class VerifyEmailChangeImpl implements VerifyEmailChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {

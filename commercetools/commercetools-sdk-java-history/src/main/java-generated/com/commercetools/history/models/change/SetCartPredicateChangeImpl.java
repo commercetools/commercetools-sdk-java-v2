@@ -43,7 +43,7 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
     }
 
     /**
-     <*  <p>Shape of the action for <code>setCartPredicate</code></p>>
+     *  <p>Shape of the action for <code>setCartPredicate</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

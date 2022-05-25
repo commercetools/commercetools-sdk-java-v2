@@ -35,21 +35,21 @@ public interface RemoveDiscountCodeChange extends Change {
     String REMOVE_DISCOUNT_CODE_CHANGE = "RemoveDiscountCodeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeDiscountCode</code></p>>
+     *  <p>Update action for <code>removeDiscountCode</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

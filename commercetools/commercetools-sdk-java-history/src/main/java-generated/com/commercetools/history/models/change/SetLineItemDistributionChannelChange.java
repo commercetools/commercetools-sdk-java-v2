@@ -39,21 +39,21 @@ public interface SetLineItemDistributionChannelChange extends Change {
     String SET_LINE_ITEM_DISTRIBUTION_CHANNEL_CHANGE = "SetLineItemDistributionChannelChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemDistributionChannel</code></p>>
+     *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
     public Reference getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

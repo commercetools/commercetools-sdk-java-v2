@@ -35,7 +35,7 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

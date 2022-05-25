@@ -48,7 +48,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -56,7 +56,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -64,7 +64,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
@@ -72,7 +72,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getPreviousValue() {
@@ -80,7 +80,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getNextValue() {

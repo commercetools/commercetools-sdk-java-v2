@@ -39,7 +39,7 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
     }
 
     /**
-     <*  <p>Update action for <code>addFieldDefinition</code> on payments</p>>
+     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.FieldDefinition getNextValue() {

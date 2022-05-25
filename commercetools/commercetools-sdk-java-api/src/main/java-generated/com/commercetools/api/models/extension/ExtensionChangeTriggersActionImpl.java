@@ -36,7 +36,7 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {

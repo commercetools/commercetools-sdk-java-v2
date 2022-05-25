@@ -51,7 +51,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <*  <p>When the text line item was added to the shopping list.</p>>
+     *  <p>When the text line item was added to the shopping list.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -59,7 +59,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -67,7 +67,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -75,7 +75,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the TextLineItem.</p>>
+     *  <p>Unique identifier of the TextLineItem.</p>
      */
 
     public String getId() {
@@ -83,7 +83,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -91,7 +91,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {

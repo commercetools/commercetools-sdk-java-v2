@@ -35,7 +35,7 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getInterfaceId() {

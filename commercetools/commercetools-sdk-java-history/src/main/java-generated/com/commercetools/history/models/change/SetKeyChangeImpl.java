@@ -43,7 +43,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setKey</code></p>>
+     *  <p>Shape of the action for <code>setKey</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

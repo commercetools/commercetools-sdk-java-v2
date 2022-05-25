@@ -31,7 +31,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder type(
@@ -41,7 +41,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder type(
@@ -51,7 +51,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder fields(
@@ -61,7 +61,7 @@ public class StagedOrderSetBillingAddressCustomTypeActionBuilder
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      */
 
     public StagedOrderSetBillingAddressCustomTypeActionBuilder fields(

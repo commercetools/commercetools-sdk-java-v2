@@ -40,7 +40,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category.</p>>
+     *  <p>Unique identifier of the referenced Category.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>>
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
      */
 
     public com.commercetools.api.models.category.Category getObj() {

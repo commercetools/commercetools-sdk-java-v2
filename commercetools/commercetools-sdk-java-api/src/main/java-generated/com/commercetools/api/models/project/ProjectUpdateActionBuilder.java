@@ -35,10 +35,6 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder.of();
     }
 
-    public com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder changeMessagesEnabledBuilder() {
-        return com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder.of();
-    }
-
     public com.commercetools.api.models.project.ProjectChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.project.ProjectChangeNameActionBuilder.of();
     }

@@ -33,7 +33,7 @@ public interface AttributeSetType extends AttributeType {
     String SET = "set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

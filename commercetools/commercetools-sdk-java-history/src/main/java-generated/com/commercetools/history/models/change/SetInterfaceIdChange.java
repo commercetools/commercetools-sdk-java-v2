@@ -34,28 +34,28 @@ public interface SetInterfaceIdChange extends Change {
     String SET_INTERFACE_ID_CHANGE = "SetInterfaceIdChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setInterfaceId</code></p>>
+     *  <p>Shape of the action for <code>setInterfaceId</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

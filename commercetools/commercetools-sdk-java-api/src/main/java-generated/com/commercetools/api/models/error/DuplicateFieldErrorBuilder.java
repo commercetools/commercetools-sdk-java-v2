@@ -38,7 +38,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     private com.commercetools.api.models.common.Reference conflictingResource;
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder message(final String message) {
@@ -47,7 +47,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,7 +56,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +68,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
@@ -77,7 +77,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
@@ -86,7 +86,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DuplicateFieldErrorBuilder conflictingResource(
@@ -96,7 +96,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DuplicateFieldErrorBuilder conflictingResource(

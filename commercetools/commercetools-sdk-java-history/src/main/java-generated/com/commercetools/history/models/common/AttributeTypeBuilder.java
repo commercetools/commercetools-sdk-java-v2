@@ -24,7 +24,7 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
     private String name;
 
     /**
-     <>
+     *
      */
 
     public AttributeTypeBuilder name(final String name) {

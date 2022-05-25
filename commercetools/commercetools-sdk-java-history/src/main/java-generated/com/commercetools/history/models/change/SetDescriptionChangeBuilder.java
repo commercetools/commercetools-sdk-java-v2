@@ -30,7 +30,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setDescription</code></p>>
+     *  <p>Shape of the action for <code>setDescription</code></p>
      */
 
     public SetDescriptionChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetDescriptionChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetDescriptionChangeBuilder nextValue(final String nextValue) {

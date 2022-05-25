@@ -33,7 +33,7 @@ public interface StoreSetProductSelectionsAction extends StoreUpdateAction {
     String SET_PRODUCT_SELECTIONS = "setProductSelections";
 
     /**
-     <*  <p>The total of Product Selections to be set for this Store.</p>>
+     *  <p>The total of Product Selections to be set for this Store.</p>
      */
     @NotNull
     @Valid

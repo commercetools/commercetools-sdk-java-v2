@@ -29,7 +29,7 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
     String SET_ORDER_NUMBER = "setOrderNumber";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("orderNumber")

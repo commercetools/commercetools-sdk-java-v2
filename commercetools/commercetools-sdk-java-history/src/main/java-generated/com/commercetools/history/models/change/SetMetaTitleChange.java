@@ -36,21 +36,21 @@ public interface SetMetaTitleChange extends Change {
     String SET_META_TITLE_CHANGE = "SetMetaTitleChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setMetaTitle</code></p>>
+     *  <p>Shape of the action for <code>setMetaTitle</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetMetaTitleChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

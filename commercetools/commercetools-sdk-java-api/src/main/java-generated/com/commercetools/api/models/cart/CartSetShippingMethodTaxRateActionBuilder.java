@@ -27,7 +27,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(
@@ -38,7 +38,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetShippingMethodTaxRateActionBuilder externalTaxRate(

@@ -27,7 +27,7 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     private String newAttributeName;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeAttributeNameActionBuilder attributeName(final String attributeName) {
@@ -36,7 +36,7 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeAttributeNameActionBuilder newAttributeName(final String newAttributeName) {

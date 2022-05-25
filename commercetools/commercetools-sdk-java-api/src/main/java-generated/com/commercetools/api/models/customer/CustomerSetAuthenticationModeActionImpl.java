@@ -40,7 +40,7 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthMode() {
@@ -56,7 +56,7 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-     <*  <p>Required when <code>authMode</code> is <code>Password</code></p>>
+     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
      */
 
     public String getPassword() {

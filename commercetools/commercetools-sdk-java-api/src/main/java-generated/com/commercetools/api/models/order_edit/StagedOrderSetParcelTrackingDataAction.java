@@ -35,14 +35,14 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")

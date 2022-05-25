@@ -39,7 +39,7 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {
@@ -55,7 +55,7 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {

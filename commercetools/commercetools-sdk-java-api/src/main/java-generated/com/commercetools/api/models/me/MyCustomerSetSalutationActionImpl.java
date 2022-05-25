@@ -35,7 +35,7 @@ public class MyCustomerSetSalutationActionImpl implements MyCustomerSetSalutatio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerSetSalutationActionImpl implements MyCustomerSetSalutatio
     }
 
     /**
-     <>
+     *
      */
 
     public String getSalutation() {

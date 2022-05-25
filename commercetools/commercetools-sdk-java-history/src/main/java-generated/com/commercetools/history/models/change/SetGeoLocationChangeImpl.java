@@ -43,7 +43,7 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for <code>setGeoLocation</code></p>>
+     *  <p>Update action for <code>setGeoLocation</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.GeoLocation getNextValue() {
@@ -67,7 +67,7 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.GeoLocation getPreviousValue() {

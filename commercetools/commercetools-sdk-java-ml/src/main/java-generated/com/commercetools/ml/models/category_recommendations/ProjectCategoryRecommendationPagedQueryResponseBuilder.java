@@ -38,7 +38,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
@@ -47,7 +47,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
@@ -56,7 +56,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
@@ -65,7 +65,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
@@ -75,7 +75,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -98,7 +98,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -113,7 +113,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
@@ -126,7 +126,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(
@@ -139,7 +139,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProjectCategoryRecommendationPagedQueryResponseBuilder meta(

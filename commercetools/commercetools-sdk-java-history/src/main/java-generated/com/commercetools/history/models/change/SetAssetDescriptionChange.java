@@ -38,21 +38,21 @@ public interface SetAssetDescriptionChange extends Change {
     String SET_ASSET_DESCRIPTION_CHANGE = "SetAssetDescriptionChange";
 
     /**
-     <*  <p>Update action for <code>setAssetDescription</code></p>>
+     *  <p>Update action for <code>setAssetDescription</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetAssetDescriptionChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetAssetDescriptionChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

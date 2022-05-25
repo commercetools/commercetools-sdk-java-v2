@@ -46,7 +46,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Integer getLimit() {
@@ -54,7 +54,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -62,7 +62,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
 
     public Long getCount() {
@@ -70,7 +70,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     <*  <p>The total number of results matching the query.</p>>
+     *  <p>The total number of results matching the query.</p>
      */
 
     public Long getTotal() {
@@ -78,7 +78,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     <*  <p>The array of Import Containers matching the query.</p>>
+     *  <p>The array of Import Containers matching the query.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> getResults() {

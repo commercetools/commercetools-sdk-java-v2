@@ -34,28 +34,28 @@ public interface ChangeEmailChange extends Change {
     String CHANGE_EMAIL_CHANGE = "ChangeEmailChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeEmail</code></p>>
+     *  <p>Shape of the action for <code>changeEmail</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

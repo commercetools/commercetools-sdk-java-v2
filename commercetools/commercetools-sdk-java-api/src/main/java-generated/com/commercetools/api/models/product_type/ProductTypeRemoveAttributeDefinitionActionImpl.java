@@ -36,7 +36,7 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
     }
 
     /**
-     <*  <p>The name of the attribute to remove.</p>>
+     *  <p>The name of the attribute to remove.</p>
      */
 
     public String getName() {

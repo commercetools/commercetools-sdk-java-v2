@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductData extends ProductDataLike {
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid
@@ -46,7 +46,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -54,21 +54,21 @@ public interface ProductData extends ProductDataLike {
     public List<CategoryReference> getCategories();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("categoryOrderHints")
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid
@@ -76,28 +76,28 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -105,7 +105,7 @@ public interface ProductData extends ProductDataLike {
     public ProductVariant getMasterVariant();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -113,7 +113,7 @@ public interface ProductData extends ProductDataLike {
     public List<ProductVariant> getVariants();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

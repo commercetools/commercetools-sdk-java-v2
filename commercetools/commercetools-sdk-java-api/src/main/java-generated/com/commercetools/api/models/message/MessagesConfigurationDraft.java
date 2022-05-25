@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessagesConfigurationDraft {
 
     /**
-     <*  <p>Setting to <code>true</code> activates the Messages Query feature.</p>>
+     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
      */
     @NotNull
     @JsonProperty("enabled")
     public Boolean getEnabled();
 
     /**
-     <*  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>>
+     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      */
     @NotNull
     @JsonProperty("deleteDaysAfterCreation")

@@ -41,21 +41,21 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("address")
     public Address getAddress();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("oldAddress")

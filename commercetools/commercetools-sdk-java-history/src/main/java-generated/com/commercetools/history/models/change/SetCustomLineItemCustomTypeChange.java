@@ -39,21 +39,21 @@ public interface SetCustomLineItemCustomTypeChange extends Change {
     String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetCustomLineItemCustomTypeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetCustomLineItemCustomTypeChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetCustomLineItemCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

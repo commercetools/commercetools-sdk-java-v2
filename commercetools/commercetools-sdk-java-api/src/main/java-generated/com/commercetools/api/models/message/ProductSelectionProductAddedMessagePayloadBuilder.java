@@ -26,7 +26,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(
@@ -36,7 +36,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
 
     public ProductSelectionProductAddedMessagePayloadBuilder product(

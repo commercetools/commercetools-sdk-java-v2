@@ -27,7 +27,7 @@ public class ChangeValueExternalChangeValueImpl implements ChangeValueExternalCh
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

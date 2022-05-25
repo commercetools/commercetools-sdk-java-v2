@@ -39,7 +39,7 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getResource() {

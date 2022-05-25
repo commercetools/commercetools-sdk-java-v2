@@ -34,7 +34,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

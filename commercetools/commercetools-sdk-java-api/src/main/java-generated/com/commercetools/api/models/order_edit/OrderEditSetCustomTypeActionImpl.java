@@ -40,7 +40,7 @@ public class OrderEditSetCustomTypeActionImpl implements OrderEditSetCustomTypeA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class OrderEditSetCustomTypeActionImpl implements OrderEditSetCustomTypeA
     }
 
     /**
-     <*  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>>
+     *  <p>Defines the Type that extends the OrderEdit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the OrderEdit.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class OrderEditSetCustomTypeActionImpl implements OrderEditSetCustomTypeA
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the OrderEdit.</p>>
+     *  <p>Sets the Custom Fields fields for the OrderEdit.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

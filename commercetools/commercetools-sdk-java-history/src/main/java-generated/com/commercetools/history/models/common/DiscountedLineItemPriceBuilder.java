@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     private java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder value(
@@ -38,7 +38,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder value(final com.commercetools.history.models.common.Money value) {
@@ -47,7 +47,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -57,7 +57,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder includedDiscounts(
@@ -67,7 +67,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -80,7 +80,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
@@ -94,7 +94,7 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceBuilder withIncludedDiscounts(

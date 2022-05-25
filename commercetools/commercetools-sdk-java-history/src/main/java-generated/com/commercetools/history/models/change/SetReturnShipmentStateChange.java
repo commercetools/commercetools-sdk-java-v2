@@ -35,28 +35,28 @@ public interface SetReturnShipmentStateChange extends Change {
     String SET_RETURN_SHIPMENT_STATE_CHANGE = "SetReturnShipmentStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setReturnShipmentState</code></p>>
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public ReturnShipmentState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

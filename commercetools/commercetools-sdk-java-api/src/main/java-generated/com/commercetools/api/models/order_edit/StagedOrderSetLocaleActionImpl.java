@@ -35,7 +35,7 @@ public class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getLocale() {

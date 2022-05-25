@@ -35,84 +35,84 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariant {
 
     /**
-     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
+     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
      */
     @NotNull
     @JsonProperty("id")
     public Long getId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("prices")
     public List<Price> getPrices();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("price")
     public Price getPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("assets")
     public List<Asset> getAssets();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("availability")
     public ProductVariantAvailability getAvailability();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isMatchingVariant")
     public Boolean getIsMatchingVariant();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("scopedPrice")
     public ScopedPrice getScopedPrice();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("scopedPriceDiscounted")

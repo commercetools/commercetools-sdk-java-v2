@@ -39,21 +39,21 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     String SET_CUSTOM_LINE_ITEM_TAX_CATEGORY_CHANGE = "SetCustomLineItemTaxCategoryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -76,7 +76,7 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     public Reference getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -40,7 +40,7 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -56,7 +56,7 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

@@ -28,7 +28,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     private com.commercetools.history.models.common.Money totalGross;
 
     /**
-     <>
+     *
      */
 
     public TaxedItemPriceBuilder totalNet(
@@ -38,7 +38,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedItemPriceBuilder totalNet(final com.commercetools.history.models.common.Money totalNet) {
@@ -47,7 +47,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedItemPriceBuilder totalGross(
@@ -57,7 +57,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxedItemPriceBuilder totalGross(final com.commercetools.history.models.common.Money totalGross) {

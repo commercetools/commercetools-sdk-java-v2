@@ -31,7 +31,7 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getResourceTypeId() {

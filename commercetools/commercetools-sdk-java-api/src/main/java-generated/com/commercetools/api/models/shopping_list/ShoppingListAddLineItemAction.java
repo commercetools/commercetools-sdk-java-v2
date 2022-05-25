@@ -34,42 +34,42 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
     @Valid
     @JsonProperty("custom")

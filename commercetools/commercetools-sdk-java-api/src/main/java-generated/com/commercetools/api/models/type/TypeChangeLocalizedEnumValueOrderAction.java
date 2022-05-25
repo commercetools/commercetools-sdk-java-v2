@@ -33,14 +33,14 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
     /**
-     <*  <p><code>name</code> of the Field Definition to update.</p>>
+     *  <p><code>name</code> of the Field Definition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
      */
     @NotNull
     @JsonProperty("keys")

@@ -41,7 +41,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     private java.util.List<String> tags;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder variantId(@Nullable final Long variantId) {
@@ -50,7 +50,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder sku(@Nullable final String sku) {
@@ -59,7 +59,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder staged(@Nullable final Boolean staged) {
@@ -68,7 +68,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
@@ -77,7 +77,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
@@ -86,7 +86,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder tags(@Nullable final String... tags) {
@@ -95,7 +95,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -104,7 +104,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {

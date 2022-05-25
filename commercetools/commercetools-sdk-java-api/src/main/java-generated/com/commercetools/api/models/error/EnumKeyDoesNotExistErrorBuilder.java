@@ -32,7 +32,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     private String conflictingAttributeName;
 
     /**
-     <>
+     *
      */
 
     public EnumKeyDoesNotExistErrorBuilder message(final String message) {
@@ -41,7 +41,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -50,7 +50,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -62,7 +62,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyDoesNotExistErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
@@ -71,7 +71,7 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
     }
 
     /**
-     <>
+     *
      */
 
     public EnumKeyDoesNotExistErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

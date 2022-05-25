@@ -40,7 +40,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     private java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder limit(final Long limit) {
@@ -49,7 +49,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder offset(final Long offset) {
@@ -58,7 +58,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder count(final Long count) {
@@ -67,7 +67,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -76,7 +76,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>References to ProductSelection that are assigned to the Product.</p>>
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder results(
@@ -86,7 +86,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>References to ProductSelection that are assigned to the Product.</p>>
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder results(
@@ -96,7 +96,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>References to ProductSelection that are assigned to the Product.</p>>
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder plusResults(
@@ -109,7 +109,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>References to ProductSelection that are assigned to the Product.</p>>
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder plusResults(
@@ -123,7 +123,7 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>References to ProductSelection that are assigned to the Product.</p>>
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
      */
 
     public AssignedProductSelectionPagedQueryResponseBuilder withResults(

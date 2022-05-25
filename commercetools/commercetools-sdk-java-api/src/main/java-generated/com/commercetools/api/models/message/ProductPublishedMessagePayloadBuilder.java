@@ -31,7 +31,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
@@ -40,7 +40,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -49,7 +49,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -61,7 +61,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder productProjection(
@@ -72,7 +72,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder productProjection(
@@ -82,7 +82,7 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPublishedMessagePayloadBuilder scope(

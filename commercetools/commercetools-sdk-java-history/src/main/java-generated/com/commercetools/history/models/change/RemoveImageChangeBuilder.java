@@ -34,7 +34,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-     <*  <p>Update actions for removing images</p>>
+     *  <p>Update actions for removing images</p>
      */
 
     public RemoveImageChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder previousValue(
@@ -72,7 +72,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder plusPreviousValue(
@@ -85,7 +85,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder plusPreviousValue(
@@ -98,7 +98,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder withPreviousValue(
@@ -109,7 +109,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {
@@ -118,7 +118,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder nextValue(
@@ -128,7 +128,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder plusNextValue(final com.commercetools.history.models.common.Image... nextValue) {
@@ -140,7 +140,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder plusNextValue(
@@ -153,7 +153,7 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveImageChangeBuilder withNextValue(

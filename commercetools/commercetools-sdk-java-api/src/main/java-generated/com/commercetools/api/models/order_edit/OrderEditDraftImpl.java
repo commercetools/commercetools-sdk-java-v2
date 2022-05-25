@@ -50,7 +50,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the OrderEdit.</p>>
+     *  <p>User-defined unique identifier for the OrderEdit.</p>
      */
 
     public String getKey() {
@@ -58,7 +58,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>The order to be updated with this edit.</p>>
+     *  <p>The order to be updated with this edit.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getResource() {
@@ -66,7 +66,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>The actions to apply to <code>resource</code>.</p>>
+     *  <p>The actions to apply to <code>resource</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
@@ -74,7 +74,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -82,7 +82,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>This field can be used to add additional textual information regarding the edit.</p>>
+     *  <p>This field can be used to add additional textual information regarding the edit.</p>
      */
 
     public String getComment() {
@@ -90,7 +90,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     <*  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>>
+     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
      */
 
     public Boolean getDryRun() {

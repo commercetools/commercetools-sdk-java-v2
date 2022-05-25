@@ -37,28 +37,28 @@ public interface SetLineItemShippingDetailsChange extends Change {
     String SET_LINE_ITEM_SHIPPING_DETAILS_CHANGE = "SetLineItemShippingDetailsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setLineItemShippingDetails</code></p>>
+     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public ItemShippingDetails getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

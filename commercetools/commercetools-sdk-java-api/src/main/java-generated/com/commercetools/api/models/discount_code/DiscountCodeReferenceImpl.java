@@ -40,7 +40,7 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>>
+     *  <p>Unique identifier of the referenced DiscountCode.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
     }
 
     /**
-     <*  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>>
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCode getObj() {

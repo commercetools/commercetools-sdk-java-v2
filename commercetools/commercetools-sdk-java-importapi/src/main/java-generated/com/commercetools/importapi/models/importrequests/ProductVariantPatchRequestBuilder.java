@@ -25,7 +25,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
     /**
-     <*  <p>The product variant patches of this request.</p>>
+     *  <p>The product variant patches of this request.</p>
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -35,7 +35,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     <*  <p>The product variant patches of this request.</p>>
+     *  <p>The product variant patches of this request.</p>
      */
 
     public ProductVariantPatchRequestBuilder patches(
@@ -45,7 +45,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     <*  <p>The product variant patches of this request.</p>>
+     *  <p>The product variant patches of this request.</p>
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -58,7 +58,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     <*  <p>The product variant patches of this request.</p>>
+     *  <p>The product variant patches of this request.</p>
      */
 
     public ProductVariantPatchRequestBuilder plusPatches(
@@ -72,7 +72,7 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
     }
 
     /**
-     <*  <p>The product variant patches of this request.</p>>
+     *  <p>The product variant patches of this request.</p>
      */
 
     public ProductVariantPatchRequestBuilder withPatches(

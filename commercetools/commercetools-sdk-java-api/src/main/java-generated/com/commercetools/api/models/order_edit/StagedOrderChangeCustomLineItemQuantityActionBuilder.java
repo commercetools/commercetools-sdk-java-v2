@@ -28,7 +28,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     private Long quantity;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
@@ -37,7 +37,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {

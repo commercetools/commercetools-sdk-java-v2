@@ -36,7 +36,7 @@ public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStat
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStat
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {

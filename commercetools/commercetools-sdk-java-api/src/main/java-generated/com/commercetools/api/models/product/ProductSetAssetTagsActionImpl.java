@@ -53,7 +53,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -61,7 +61,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -69,7 +69,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -77,7 +77,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {
@@ -85,7 +85,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -93,7 +93,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -101,7 +101,7 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getTags() {

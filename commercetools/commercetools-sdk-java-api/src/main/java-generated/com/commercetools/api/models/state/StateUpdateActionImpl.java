@@ -31,7 +31,7 @@ public class StateUpdateActionImpl implements StateUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

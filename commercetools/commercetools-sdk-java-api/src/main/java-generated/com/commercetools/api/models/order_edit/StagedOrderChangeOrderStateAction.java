@@ -34,7 +34,7 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     String CHANGE_ORDER_STATE = "changeOrderState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("orderState")

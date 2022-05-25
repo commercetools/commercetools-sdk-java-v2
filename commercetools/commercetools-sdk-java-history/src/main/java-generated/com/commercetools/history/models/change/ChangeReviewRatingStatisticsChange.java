@@ -36,21 +36,21 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     String CHANGE_REVIEW_RATING_STATISTICS_CHANGE = "ChangeReviewRatingStatisticsChange";
 
     /**
-     <*  <p>Update action for <code>changeReviewRatingStatistics</code></p>>
+     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public ReviewRatingStatistics getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -42,7 +42,7 @@ public interface OrderStateTransitionMessage extends OrderMessage {
     String ORDER_STATE_TRANSITION = "OrderStateTransition";
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -50,14 +50,14 @@ public interface OrderStateTransitionMessage extends OrderMessage {
     public StateReference getState();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("force")

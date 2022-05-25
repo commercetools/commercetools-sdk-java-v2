@@ -30,7 +30,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>>
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
      */
 
     public ProductSelectionReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
      */
 
     public ProductSelectionReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
      */
 
     public ProductSelectionReferenceBuilder obj(

@@ -40,7 +40,7 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
     }
 
     /**
-     <*  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>>
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -56,7 +56,7 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Payment.</p>>
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

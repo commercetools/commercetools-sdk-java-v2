@@ -39,7 +39,7 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -55,7 +55,7 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
     }
 
     /**
-     <*  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>>
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
      */
 
     public String getAssetKey() {

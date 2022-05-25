@@ -39,7 +39,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     <*  <p>The offending variant values.</p>>
+     *  <p>The offending variant values.</p>
      */
 
     public com.commercetools.importapi.models.errors.VariantValues getVariantValues() {

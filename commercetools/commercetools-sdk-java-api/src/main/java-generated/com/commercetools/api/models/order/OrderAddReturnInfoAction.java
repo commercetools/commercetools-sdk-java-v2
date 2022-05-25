@@ -34,14 +34,14 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     String ADD_RETURN_INFO = "addReturnInfo";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public List<ReturnItemDraft> getItems();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("returnDate")

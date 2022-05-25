@@ -93,7 +93,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public String getId() {
@@ -101,7 +101,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -109,7 +109,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -117,7 +117,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -125,7 +125,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -133,7 +133,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -141,7 +141,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public Long getSequenceNumber() {
@@ -149,7 +149,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -157,7 +157,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public Long getResourceVersion() {
@@ -165,7 +165,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -173,7 +173,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
@@ -181,7 +181,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {
@@ -189,7 +189,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariantKey() {
@@ -197,7 +197,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -205,7 +205,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public String getPriceId() {
@@ -213,7 +213,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -221,7 +221,7 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

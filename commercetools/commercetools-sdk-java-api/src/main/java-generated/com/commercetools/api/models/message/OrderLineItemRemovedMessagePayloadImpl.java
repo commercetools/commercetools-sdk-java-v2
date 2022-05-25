@@ -63,7 +63,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -71,7 +71,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -79,7 +79,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public Long getRemovedQuantity() {
@@ -87,7 +87,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public Long getNewQuantity() {
@@ -95,7 +95,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
@@ -103,7 +103,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
@@ -111,7 +111,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
@@ -119,7 +119,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -127,7 +127,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {

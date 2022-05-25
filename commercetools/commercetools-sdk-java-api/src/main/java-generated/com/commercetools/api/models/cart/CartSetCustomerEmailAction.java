@@ -32,7 +32,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")

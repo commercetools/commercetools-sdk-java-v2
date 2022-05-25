@@ -35,7 +35,7 @@ public class CartChangeTaxModeActionImpl implements CartChangeTaxModeAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CartChangeTaxModeActionImpl implements CartChangeTaxModeAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {

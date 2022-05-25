@@ -39,7 +39,7 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>removeAddress</code> action.</p>>
+     *  <p>Update action for <code>removeAddress</code> action.</p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

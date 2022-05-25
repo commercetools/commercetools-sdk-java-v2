@@ -43,7 +43,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     <*  <p>Update action for <code>removeEnumValues</code> on product types</p>>
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -67,7 +67,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.EnumValue getPreviousValue() {

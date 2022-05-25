@@ -37,14 +37,14 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public ProductProjection getProductProjection();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("scope")

@@ -27,7 +27,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
     private java.time.ZonedDateTime expectedDelivery;
 
     /**
-     <>
+     *
      */
 
     public InventoryEntrySetExpectedDeliveryActionBuilder expectedDelivery(

@@ -40,7 +40,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>>
+     *  <p>Unique identifier of the referenced ShoppingList.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
      */
 
     public com.commercetools.api.models.shopping_list.ShoppingList getObj() {

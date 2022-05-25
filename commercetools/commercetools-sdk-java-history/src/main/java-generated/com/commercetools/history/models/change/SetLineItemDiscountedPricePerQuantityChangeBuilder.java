@@ -38,7 +38,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     private com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>>
+     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder change(final String change) {
@@ -47,7 +47,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
@@ -57,7 +57,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder lineItem(
@@ -67,7 +67,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder variant(final String variant) {
@@ -76,7 +76,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
@@ -88,7 +88,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder nextValue(
@@ -98,7 +98,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder previousValue(
@@ -110,7 +110,7 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPricePerQuantityChangeBuilder previousValue(

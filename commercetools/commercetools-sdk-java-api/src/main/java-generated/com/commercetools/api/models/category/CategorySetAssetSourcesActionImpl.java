@@ -43,7 +43,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -59,7 +59,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {
@@ -67,7 +67,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {

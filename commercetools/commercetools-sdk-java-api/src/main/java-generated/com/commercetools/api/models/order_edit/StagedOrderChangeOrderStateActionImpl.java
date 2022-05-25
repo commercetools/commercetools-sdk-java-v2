@@ -36,7 +36,7 @@ public class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeO
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeO
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {

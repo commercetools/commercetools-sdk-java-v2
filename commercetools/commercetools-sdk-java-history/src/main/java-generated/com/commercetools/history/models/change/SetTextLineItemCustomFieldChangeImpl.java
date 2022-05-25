@@ -54,7 +54,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -62,7 +62,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <*  <p>Update action for <code>setTextLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
      */
 
     public String getChange() {
@@ -70,7 +70,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -78,7 +78,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomTypeId() {
@@ -86,7 +86,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
@@ -94,7 +94,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -102,7 +102,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

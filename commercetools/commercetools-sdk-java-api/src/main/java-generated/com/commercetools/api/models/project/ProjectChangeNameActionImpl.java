@@ -35,7 +35,7 @@ public class ProjectChangeNameActionImpl implements ProjectChangeNameAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ProjectChangeNameActionImpl implements ProjectChangeNameAction, Mod
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public String getName() {

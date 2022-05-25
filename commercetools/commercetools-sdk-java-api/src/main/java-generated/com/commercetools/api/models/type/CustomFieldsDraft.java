@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldsDraft {
 
     /**
-     <*  <p><code>id</code> or <code>key</code> of the Type.</p>>
+     *  <p><code>id</code> or <code>key</code> of the Type.</p>
      */
     @NotNull
     @Valid
@@ -39,7 +39,7 @@ public interface CustomFieldsDraft {
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Object containing the Custom Fields for the customized resource or data type.</p>>
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
      */
     @Valid
     @JsonProperty("fields")

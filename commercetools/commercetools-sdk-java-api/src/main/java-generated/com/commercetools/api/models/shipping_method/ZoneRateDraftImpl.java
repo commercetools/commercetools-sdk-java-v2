@@ -35,7 +35,7 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
@@ -43,7 +43,7 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>The array must not contain two shipping rates with the same currency.</p>>
+     *  <p>The array must not contain two shipping rates with the same currency.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates() {

@@ -47,7 +47,7 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
     }
 
     /**
-     <*  <p>Update action for <code>setShippingMethodTaxRate</code></p>>
+     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
@@ -71,7 +71,7 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {
@@ -79,7 +79,7 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {

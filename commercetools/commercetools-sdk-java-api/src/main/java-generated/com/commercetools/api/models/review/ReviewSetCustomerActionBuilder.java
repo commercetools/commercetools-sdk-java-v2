@@ -27,7 +27,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     <*  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public ReviewSetCustomerActionBuilder customer(
@@ -38,7 +38,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     }
 
     /**
-     <*  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>>
+     *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
      */
 
     public ReviewSetCustomerActionBuilder customer(

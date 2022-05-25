@@ -36,7 +36,7 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {

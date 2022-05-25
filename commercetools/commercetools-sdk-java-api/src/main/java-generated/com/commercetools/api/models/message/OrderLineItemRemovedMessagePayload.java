@@ -42,28 +42,28 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     String ORDER_LINE_ITEM_REMOVED = "OrderLineItemRemoved";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedQuantity")
     public Long getRemovedQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newQuantity")
     public Long getNewQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -71,7 +71,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     public List<ItemState> getNewState();
 
     /**
-     <*  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>>
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
      */
     @NotNull
     @Valid
@@ -79,21 +79,21 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     public TypedMoney getNewTotalPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("newTaxedPrice")
     public TaxedItemPrice getNewTaxedPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("newPrice")
     public Price getNewPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("newShippingDetail")

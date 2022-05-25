@@ -36,21 +36,21 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
     String SET_SHIPPING_INFO_TAXED_PRICE_CHANGE = "SetShippingInfoTaxedPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>>
+     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetShippingInfoTaxedPriceChange extends Change {
     public TaxedPrice getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

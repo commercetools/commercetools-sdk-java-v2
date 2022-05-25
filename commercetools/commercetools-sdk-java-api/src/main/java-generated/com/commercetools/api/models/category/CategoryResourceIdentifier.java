@@ -31,14 +31,14 @@ public interface CategoryResourceIdentifier
     String CATEGORY = "category";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     @JsonProperty("key")

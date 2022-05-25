@@ -31,7 +31,7 @@ public class MyCustomerUpdateActionImpl implements MyCustomerUpdateAction, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

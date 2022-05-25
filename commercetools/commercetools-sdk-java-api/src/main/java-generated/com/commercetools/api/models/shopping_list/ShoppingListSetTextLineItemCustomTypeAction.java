@@ -35,21 +35,21 @@ public interface ShoppingListSetTextLineItemCustomTypeAction extends ShoppingLis
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE = "setTextLineItemCustomType";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-     <*  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>>
+     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the TextLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
      */
     @Valid
     @JsonProperty("fields")

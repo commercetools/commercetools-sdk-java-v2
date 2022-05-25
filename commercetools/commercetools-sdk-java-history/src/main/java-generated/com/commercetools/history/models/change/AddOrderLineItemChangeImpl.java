@@ -43,7 +43,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LineItem getPreviousValue() {
@@ -67,7 +67,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LineItem getNextValue() {

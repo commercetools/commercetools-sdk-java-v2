@@ -36,7 +36,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -63,7 +63,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder prices(
@@ -73,7 +73,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -85,7 +85,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder plusPrices(
@@ -98,7 +98,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder withPrices(
@@ -109,7 +109,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetPricesActionBuilder staged(@Nullable final Boolean staged) {

@@ -25,7 +25,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldEnumTypeBuilder values(final com.commercetools.api.models.type.CustomFieldEnumValue... values) {
@@ -34,7 +34,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldEnumTypeBuilder values(
@@ -44,7 +44,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -57,7 +57,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldEnumTypeBuilder plusValues(
@@ -70,7 +70,7 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
     }
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
 
     public CustomFieldEnumTypeBuilder withValues(

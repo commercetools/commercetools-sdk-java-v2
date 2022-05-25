@@ -46,7 +46,7 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -54,7 +54,7 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     <*  <p>Update action for <code>setShippingRateInput</code></p>>
+     *  <p>Update action for <code>setShippingRateInput</code></p>
      */
 
     public String getChange() {
@@ -62,7 +62,7 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -70,7 +70,7 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

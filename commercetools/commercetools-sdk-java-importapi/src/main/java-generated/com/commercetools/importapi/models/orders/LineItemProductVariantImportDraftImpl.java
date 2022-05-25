@@ -48,7 +48,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariant.product</code>.</p>>
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -56,7 +56,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
      */
 
     public String getSku() {
@@ -64,7 +64,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> getPrices() {
@@ -72,7 +72,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -80,7 +80,7 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {

@@ -40,7 +40,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
@@ -49,7 +49,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder quantity(final Long quantity) {
@@ -58,7 +58,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder fromState(
@@ -68,7 +68,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder fromState(
@@ -78,7 +78,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder toState(
@@ -88,7 +88,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder toState(
@@ -98,7 +98,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder actualTransitionDate(

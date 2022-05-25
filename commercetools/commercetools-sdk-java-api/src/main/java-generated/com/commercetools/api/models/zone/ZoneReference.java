@@ -34,14 +34,14 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     String ZONE = "zone";
 
     /**
-     <*  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>>
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Zone getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Zone.</p>>
+     *  <p>Unique identifier of the referenced Zone.</p>
      */
     @NotNull
     @JsonProperty("id")

@@ -32,7 +32,7 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("customer")

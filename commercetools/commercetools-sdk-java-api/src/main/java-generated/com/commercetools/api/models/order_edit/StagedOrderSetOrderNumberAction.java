@@ -30,7 +30,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     String SET_ORDER_NUMBER = "setOrderNumber";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("orderNumber")

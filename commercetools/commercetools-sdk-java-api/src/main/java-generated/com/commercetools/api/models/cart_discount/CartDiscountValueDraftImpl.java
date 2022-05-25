@@ -31,7 +31,7 @@ public class CartDiscountValueDraftImpl implements CartDiscountValueDraft, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

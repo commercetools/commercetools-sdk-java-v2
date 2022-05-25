@@ -37,28 +37,28 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     String ADD_PARCEL_TO_DELIVERY = "addParcelToDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

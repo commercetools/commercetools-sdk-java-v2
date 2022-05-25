@@ -33,7 +33,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public OrderUpdateSyncInfoActionBuilder channel(
@@ -44,7 +44,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public OrderUpdateSyncInfoActionBuilder channel(
@@ -54,7 +54,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
@@ -63,7 +63,7 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     }
 
     /**
-     <>
+     *
      */
 
     public OrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {

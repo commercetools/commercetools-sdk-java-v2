@@ -28,7 +28,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     private java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder actions(final com.commercetools.api.models.payment.PaymentUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder plusActions(final com.commercetools.api.models.payment.PaymentUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentUpdateBuilder withActions(

@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeType {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("name")

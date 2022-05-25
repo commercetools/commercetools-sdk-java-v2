@@ -41,7 +41,7 @@ public interface OrderImportedMessage extends OrderMessage {
     String ORDER_IMPORTED = "OrderImported";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

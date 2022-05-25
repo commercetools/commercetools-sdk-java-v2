@@ -38,7 +38,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     private com.commercetools.api.models.state.StateReference toState;
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
@@ -47,7 +47,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate(
@@ -57,7 +57,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
@@ -66,7 +66,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -76,7 +76,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
@@ -86,7 +86,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
@@ -96,7 +96,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(

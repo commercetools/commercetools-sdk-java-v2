@@ -35,28 +35,28 @@ public interface SqsDestination extends Destination {
     String SQS = "SQS";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("accessSecret")
     public String getAccessSecret();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("queueUrl")
     public String getQueueUrl();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("region")

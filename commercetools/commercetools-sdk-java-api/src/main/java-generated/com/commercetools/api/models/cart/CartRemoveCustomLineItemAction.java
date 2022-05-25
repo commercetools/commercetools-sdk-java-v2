@@ -32,7 +32,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     String REMOVE_CUSTOM_LINE_ITEM = "removeCustomLineItem";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")

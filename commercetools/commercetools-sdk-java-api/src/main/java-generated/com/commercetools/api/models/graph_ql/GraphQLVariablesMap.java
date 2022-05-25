@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface GraphQLVariablesMap {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonAnyGetter

@@ -26,7 +26,7 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
     private Boolean updateProductData;
 
     /**
-     <>
+     *
      */
 
     public MyCartRecalculateActionBuilder updateProductData(@Nullable final Boolean updateProductData) {

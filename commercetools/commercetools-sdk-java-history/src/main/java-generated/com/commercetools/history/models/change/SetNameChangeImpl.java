@@ -43,7 +43,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setName</code></p>>
+     *  <p>Shape of the action for <code>setName</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

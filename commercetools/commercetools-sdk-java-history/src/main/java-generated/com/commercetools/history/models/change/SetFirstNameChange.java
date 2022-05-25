@@ -34,28 +34,28 @@ public interface SetFirstNameChange extends Change {
     String SET_FIRST_NAME_CHANGE = "SetFirstNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setFirstName</code></p>>
+     *  <p>Shape of the action for <code>setFirstName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

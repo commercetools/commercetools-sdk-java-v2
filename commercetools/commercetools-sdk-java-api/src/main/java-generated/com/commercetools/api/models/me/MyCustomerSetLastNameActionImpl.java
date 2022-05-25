@@ -35,7 +35,7 @@ public class MyCustomerSetLastNameActionImpl implements MyCustomerSetLastNameAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyCustomerSetLastNameActionImpl implements MyCustomerSetLastNameAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getLastName() {

@@ -28,7 +28,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     private java.util.List<com.commercetools.api.models.me.MyShoppingListUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder plusActions(
@@ -83,7 +83,7 @@ public class MyShoppingListUpdateBuilder implements Builder<MyShoppingListUpdate
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListUpdateBuilder withActions(

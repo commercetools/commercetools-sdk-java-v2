@@ -33,7 +33,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -42,7 +42,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,7 +51,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -61,7 +61,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -71,7 +71,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -84,7 +84,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -97,7 +97,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     <>
+     *
      */
 
     public CategorySetAssetSourcesActionBuilder withSources(

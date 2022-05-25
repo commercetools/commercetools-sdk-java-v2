@@ -25,7 +25,7 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
 
     public OrderAddPaymentActionBuilder payment(
@@ -36,7 +36,7 @@ public class OrderAddPaymentActionBuilder implements Builder<OrderAddPaymentActi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
 
     public OrderAddPaymentActionBuilder payment(

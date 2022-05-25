@@ -31,7 +31,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     private com.commercetools.history.models.common.LineItem nextValue;
 
     /**
-     <>
+     *
      */
 
     public AddOrderLineItemChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddOrderLineItemChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddOrderLineItemChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddOrderLineItemChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class AddOrderLineItemChangeBuilder implements Builder<AddOrderLineItemCh
     }
 
     /**
-     <>
+     *
      */
 
     public AddOrderLineItemChangeBuilder nextValue(final com.commercetools.history.models.common.LineItem nextValue) {

@@ -28,7 +28,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
 
     public ResultItemBuilder imageUrl(final String imageUrl) {
@@ -37,7 +37,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
 
     public ResultItemBuilder productVariants(
@@ -47,7 +47,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
 
     public ResultItemBuilder productVariants(
@@ -57,7 +57,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
 
     public ResultItemBuilder plusProductVariants(
@@ -70,7 +70,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
 
     public ResultItemBuilder plusProductVariants(
@@ -83,7 +83,7 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
 
     public ResultItemBuilder withProductVariants(

@@ -35,7 +35,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getText() {
@@ -43,7 +43,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer() {

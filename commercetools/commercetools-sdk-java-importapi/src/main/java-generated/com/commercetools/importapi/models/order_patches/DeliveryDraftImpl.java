@@ -40,7 +40,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -48,7 +48,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -56,7 +56,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> getParcels() {

@@ -32,7 +32,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>>
+     *  <p><code>name</code> of the FieldDefinition to remove. The removal of a FieldDefinition deletes asynchronously all Custom Fields using the FieldDefinition as well.</p>
      */
     @NotNull
     @JsonProperty("fieldName")

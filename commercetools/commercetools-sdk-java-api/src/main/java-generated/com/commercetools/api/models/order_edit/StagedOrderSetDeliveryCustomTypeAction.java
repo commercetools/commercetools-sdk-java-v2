@@ -36,21 +36,21 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     String SET_DELIVERY_CUSTOM_TYPE = "setDeliveryCustomType";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
+     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the Delivery.</p>
      */
     @Valid
     @JsonProperty("fields")

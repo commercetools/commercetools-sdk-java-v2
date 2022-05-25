@@ -38,7 +38,7 @@ public class HitImpl implements Hit, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Order.</p>>
+     *  <p>Unique identifier of the Order.</p>
      */
 
     public String getId() {
@@ -46,7 +46,7 @@ public class HitImpl implements Hit, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Order.</p>>
+     *  <p>Current version of the Order.</p>
      */
 
     public Long getVersion() {
@@ -54,7 +54,7 @@ public class HitImpl implements Hit, ModelBase {
     }
 
     /**
-     <*  <p>The higher the value is, the more relevant the hit is for the search request.</p>>
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
      */
 
     public Double getRelevance() {

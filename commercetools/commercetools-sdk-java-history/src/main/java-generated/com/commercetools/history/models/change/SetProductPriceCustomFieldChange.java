@@ -37,28 +37,28 @@ public interface SetProductPriceCustomFieldChange extends Change {
     String SET_PRODUCT_PRICE_CUSTOM_FIELD_CHANGE = "SetProductPriceCustomFieldChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setProductPriceCustomField</code></p>>
+     *  <p>Update action for <code>setProductPriceCustomField</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public CustomFields getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

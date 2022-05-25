@@ -39,7 +39,7 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalNet() {
@@ -47,7 +47,7 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>TaxedItemPrice fields can not be used in query predicates.</p>>
+     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalGross() {
@@ -55,7 +55,7 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalTax() {

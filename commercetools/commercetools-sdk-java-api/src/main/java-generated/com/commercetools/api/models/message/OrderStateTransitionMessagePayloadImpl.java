@@ -44,7 +44,7 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -52,7 +52,7 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -60,7 +60,7 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getOldState() {
@@ -68,7 +68,7 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getForce() {

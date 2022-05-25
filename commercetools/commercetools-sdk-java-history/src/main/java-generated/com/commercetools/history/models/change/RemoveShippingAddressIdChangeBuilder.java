@@ -34,7 +34,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     private com.commercetools.history.models.common.Address address;
 
     /**
-     <*  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
      */
 
     public RemoveShippingAddressIdChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder nextValue(final String... nextValue) {
@@ -52,7 +52,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
@@ -61,7 +61,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
@@ -73,7 +73,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder previousValue(final String... previousValue) {
@@ -82,7 +82,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
@@ -91,7 +91,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
@@ -103,7 +103,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder address(
@@ -113,7 +113,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveShippingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {

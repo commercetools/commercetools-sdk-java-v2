@@ -44,7 +44,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -52,7 +52,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -60,7 +60,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -68,7 +68,7 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {

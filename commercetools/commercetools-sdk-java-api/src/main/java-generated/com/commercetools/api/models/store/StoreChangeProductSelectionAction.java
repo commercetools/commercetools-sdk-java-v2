@@ -34,7 +34,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     String CHANGE_PRODUCT_SELECTION_ACTIVE = "changeProductSelectionActive";
 
     /**
-     <*  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>>
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     public ResourceIdentifier getProductSelection();
 
     /**
-     <*  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>>
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
      */
 
     @JsonProperty("active")

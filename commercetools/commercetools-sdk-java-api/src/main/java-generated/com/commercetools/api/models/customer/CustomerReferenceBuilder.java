@@ -30,7 +30,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     private com.commercetools.api.models.customer.Customer obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Customer.</p>>
+     *  <p>Unique identifier of the referenced Customer.</p>
      */
 
     public CustomerReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      */
 
     public CustomerReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      */
 
     public CustomerReferenceBuilder obj(@Nullable final com.commercetools.api.models.customer.Customer obj) {

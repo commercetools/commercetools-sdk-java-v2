@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ValidFromAndUntilValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("validFrom")
     public String getValidFrom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("validUntil")

@@ -37,7 +37,7 @@ public interface CustomerGroupUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<CustomerGroupUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

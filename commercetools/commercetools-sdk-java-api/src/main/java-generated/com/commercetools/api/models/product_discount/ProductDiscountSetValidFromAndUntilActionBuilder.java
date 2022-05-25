@@ -30,7 +30,7 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
     private java.time.ZonedDateTime validUntil;
 
     /**
-     <*  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>>
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
      */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validFrom(
@@ -40,7 +40,7 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
     }
 
     /**
-     <*  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>>
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
      */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validUntil(

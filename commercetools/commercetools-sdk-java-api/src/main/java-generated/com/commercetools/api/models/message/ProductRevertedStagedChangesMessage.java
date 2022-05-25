@@ -39,7 +39,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("removedImageUrls")

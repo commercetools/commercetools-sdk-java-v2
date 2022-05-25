@@ -24,7 +24,7 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
     private String name;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeNameActionBuilder name(final String name) {

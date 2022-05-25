@@ -60,7 +60,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder name(
@@ -70,7 +70,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -79,7 +79,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>>
+     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
      */
 
     public CategoryDraftBuilder slug(
@@ -89,7 +89,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>>
+     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
      */
 
     public CategoryDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -98,7 +98,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder description(
@@ -108,7 +108,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder description(
@@ -118,7 +118,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>>
+     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
      */
 
     public CategoryDraftBuilder parent(
@@ -129,7 +129,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>>
+     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
      */
 
     public CategoryDraftBuilder parent(
@@ -139,7 +139,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>>
+     *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
      */
 
     public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {
@@ -148,7 +148,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder externalId(@Nullable final String externalId) {
@@ -157,7 +157,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaTitle(
@@ -167,7 +167,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaTitle(
@@ -177,7 +177,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaDescription(
@@ -187,7 +187,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaDescription(
@@ -197,7 +197,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaKeywords(
@@ -207,7 +207,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder metaKeywords(
@@ -217,7 +217,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CategoryDraftBuilder custom(
@@ -227,7 +227,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -236,7 +236,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -245,7 +245,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder assets(
@@ -255,7 +255,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder plusAssets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -267,7 +267,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder plusAssets(
@@ -280,7 +280,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public CategoryDraftBuilder withAssets(
@@ -291,7 +291,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the Category.</p>>
+     *  <p>User-defined unique identifier for the Category.</p>
      */
 
     public CategoryDraftBuilder key(@Nullable final String key) {

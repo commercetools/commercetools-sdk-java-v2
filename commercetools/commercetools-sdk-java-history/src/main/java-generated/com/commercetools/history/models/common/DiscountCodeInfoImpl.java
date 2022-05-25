@@ -36,7 +36,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getDiscountCode() {
@@ -44,7 +44,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountCodeState getState() {

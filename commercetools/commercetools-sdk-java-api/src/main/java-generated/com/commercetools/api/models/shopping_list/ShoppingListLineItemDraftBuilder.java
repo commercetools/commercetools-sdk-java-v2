@@ -42,7 +42,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     private Long variantId;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -51,7 +51,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -61,7 +61,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public ShoppingListLineItemDraftBuilder custom(
@@ -71,7 +71,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
@@ -80,7 +80,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
@@ -89,7 +89,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
@@ -98,7 +98,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {

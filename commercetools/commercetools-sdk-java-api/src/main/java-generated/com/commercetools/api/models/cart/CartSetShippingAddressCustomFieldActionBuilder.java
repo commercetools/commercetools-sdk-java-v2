@@ -30,7 +30,7 @@ public class CartSetShippingAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     <*  <p>Name of the Custom Field.</p>>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public CartSetShippingAddressCustomFieldActionBuilder name(final String name) {
@@ -39,7 +39,7 @@ public class CartSetShippingAddressCustomFieldActionBuilder
     }
 
     /**
-     <*  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      */
 
     public CartSetShippingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {

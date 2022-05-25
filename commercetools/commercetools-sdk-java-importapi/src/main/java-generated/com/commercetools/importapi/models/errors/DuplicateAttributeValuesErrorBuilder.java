@@ -28,7 +28,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
@@ -37,7 +37,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -47,7 +47,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
@@ -57,7 +57,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -70,7 +70,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
@@ -84,7 +84,7 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(

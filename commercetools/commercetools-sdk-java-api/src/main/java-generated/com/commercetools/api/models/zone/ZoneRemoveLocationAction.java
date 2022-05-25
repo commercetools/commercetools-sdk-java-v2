@@ -33,7 +33,7 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     String REMOVE_LOCATION = "removeLocation";
 
     /**
-     <*  <p>Location to be removed from the Zone.</p>>
+     *  <p>Location to be removed from the Zone.</p>
      */
     @NotNull
     @Valid

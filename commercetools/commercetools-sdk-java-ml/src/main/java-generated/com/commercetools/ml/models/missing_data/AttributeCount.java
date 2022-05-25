@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeCount {
 
     /**
-     <*  <p>Number of attributes defined in the product type.</p>>
+     *  <p>Number of attributes defined in the product type.</p>
      */
     @NotNull
     @JsonProperty("productTypeAttributes")
     public Integer getProductTypeAttributes();
 
     /**
-     <*  <p>Number of attributes defined in the variant.</p>>
+     *  <p>Number of attributes defined in the variant.</p>
      */
     @NotNull
     @JsonProperty("variantAttributes")
     public Integer getVariantAttributes();
 
     /**
-     <*  <p>Number of attributes missing values in the variant.</p>>
+     *  <p>Number of attributes missing values in the variant.</p>
      */
     @NotNull
     @JsonProperty("missingAttributeValues")

@@ -31,7 +31,7 @@ public class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

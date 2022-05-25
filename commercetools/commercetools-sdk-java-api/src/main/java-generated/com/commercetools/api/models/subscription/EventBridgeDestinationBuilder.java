@@ -27,7 +27,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     private String accountId;
 
     /**
-     <*  <p>AWS region to which commercetools sends the events.</p>>
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
      */
 
     public EventBridgeDestinationBuilder region(final String region) {
@@ -36,7 +36,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     }
 
     /**
-     <*  <p>ID of the AWS account that receives events from the commercetools platform.</p>>
+     *  <p>ID of the AWS account that receives events.</p>
      */
 
     public EventBridgeDestinationBuilder accountId(final String accountId) {

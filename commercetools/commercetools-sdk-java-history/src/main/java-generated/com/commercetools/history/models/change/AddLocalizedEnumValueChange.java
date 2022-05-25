@@ -37,35 +37,35 @@ public interface AddLocalizedEnumValueChange extends Change {
     String ADD_LOCALIZED_ENUM_VALUE_CHANGE = "AddLocalizedEnumValueChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>>
+     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

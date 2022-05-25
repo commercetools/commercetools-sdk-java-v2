@@ -32,21 +32,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCustomerChangePassword {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("currentPassword")
     public String getCurrentPassword();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newPassword")

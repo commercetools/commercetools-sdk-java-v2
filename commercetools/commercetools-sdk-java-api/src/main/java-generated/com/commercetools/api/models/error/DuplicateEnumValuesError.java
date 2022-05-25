@@ -33,7 +33,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     String DUPLICATE_ENUM_VALUES = "DuplicateEnumValues";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("duplicates")

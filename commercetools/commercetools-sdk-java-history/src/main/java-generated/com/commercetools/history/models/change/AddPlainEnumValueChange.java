@@ -36,28 +36,28 @@ public interface AddPlainEnumValueChange extends Change {
     String ADD_PLAIN_ENUM_VALUE_CHANGE = "AddPlainEnumValueChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addPlainEnumValue</code> on product types</p>>
+     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -35,28 +35,28 @@ public interface ChangeStateTypeChange extends Change {
     String CHANGE_STATE_TYPE_CHANGE = "ChangeStateTypeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeType</code> on state</p>>
+     *  <p>Update action for <code>changeType</code> on state</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public StateType getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -34,21 +34,21 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     String CHANGE_ADDRESS = "changeAddress";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

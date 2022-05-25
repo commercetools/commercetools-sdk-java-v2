@@ -39,7 +39,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getKeys() {

@@ -34,7 +34,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     private com.commercetools.history.models.common.ParcelMeasurements previousValue;
 
     /**
-     <*  <p>Update action for <code>setParcelMeasurements</code></p>>
+     *  <p>Update action for <code>setParcelMeasurements</code></p>
      */
 
     public SetParcelMeasurementsChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder parcel(
@@ -54,7 +54,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder parcel(
@@ -64,7 +64,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder nextValue(
@@ -74,7 +74,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder nextValue(
@@ -84,7 +84,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder previousValue(
@@ -95,7 +95,7 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
-     <>
+     *
      */
 
     public SetParcelMeasurementsChangeBuilder previousValue(

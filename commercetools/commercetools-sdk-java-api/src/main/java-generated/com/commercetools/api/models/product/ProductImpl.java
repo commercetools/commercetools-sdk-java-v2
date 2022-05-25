@@ -78,7 +78,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Product.</p>>
+     *  <p>Unique identifier of the Product.</p>
      */
 
     public String getId() {
@@ -86,7 +86,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>The current version of the product.</p>>
+     *  <p>The current version of the product.</p>
      */
 
     public Long getVersion() {
@@ -94,7 +94,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -102,7 +102,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -110,7 +110,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -118,7 +118,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -126,7 +126,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>>
+     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
      */
 
     public String getKey() {
@@ -134,7 +134,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -142,7 +142,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>The product data in the master catalog.</p>>
+     *  <p>The product data in the master catalog.</p>
      */
 
     public com.commercetools.api.models.product.ProductCatalogData getMasterData() {
@@ -150,7 +150,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -158,7 +158,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -166,7 +166,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for this product.</p>>
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
@@ -174,7 +174,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     <*  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>>
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

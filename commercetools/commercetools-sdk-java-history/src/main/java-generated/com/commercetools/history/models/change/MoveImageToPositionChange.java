@@ -37,28 +37,28 @@ public interface MoveImageToPositionChange extends Change {
     String MOVE_IMAGE_TO_POSITION_CHANGE = "MoveImageToPositionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update actions for moving images</p>>
+     *  <p>Update actions for moving images</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface MoveImageToPositionChange extends Change {
     public List<Image> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

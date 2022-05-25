@@ -34,7 +34,7 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
     @NotNull
     @Valid

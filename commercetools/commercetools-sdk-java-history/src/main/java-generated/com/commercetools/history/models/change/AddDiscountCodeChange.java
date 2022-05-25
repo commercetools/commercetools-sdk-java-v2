@@ -35,21 +35,21 @@ public interface AddDiscountCodeChange extends Change {
     String ADD_DISCOUNT_CODE_CHANGE = "AddDiscountCodeChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addDiscountCode</code></p>>
+     *  <p>Update action for <code>addDiscountCode</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

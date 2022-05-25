@@ -39,21 +39,21 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     String TRANSITION_LINE_ITEM_STATE = "transitionLineItemState";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid
@@ -61,7 +61,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public StateResourceIdentifier getFromState();
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid
@@ -69,7 +69,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public StateResourceIdentifier getToState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("actualTransitionDate")

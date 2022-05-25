@@ -24,7 +24,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
     private String customLineItemId;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {

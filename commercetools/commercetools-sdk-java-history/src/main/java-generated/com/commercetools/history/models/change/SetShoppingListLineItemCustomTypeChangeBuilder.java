@@ -35,7 +35,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder change(final String change) {
@@ -44,7 +44,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
@@ -76,7 +76,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(
@@ -96,7 +96,7 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(

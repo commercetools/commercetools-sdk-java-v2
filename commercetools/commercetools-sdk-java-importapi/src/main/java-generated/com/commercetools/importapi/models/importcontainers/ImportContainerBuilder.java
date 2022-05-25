@@ -38,7 +38,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     <*  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
+     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      */
 
     public ImportContainerBuilder key(final String key) {
@@ -47,7 +47,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     <*  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public ImportContainerBuilder resourceType(
@@ -57,7 +57,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     <*  <p>The version of the ImportContainer.</p>>
+     *  <p>The version of the ImportContainer.</p>
      */
 
     public ImportContainerBuilder version(final Long version) {
@@ -66,7 +66,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     <*  <p>The time when the ImportContainer was created.</p>>
+     *  <p>The time when the ImportContainer was created.</p>
      */
 
     public ImportContainerBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -75,7 +75,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     <*  <p>The last time when the ImportContainer was modified.</p>>
+     *  <p>The last time when the ImportContainer was modified.</p>
      */
 
     public ImportContainerBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

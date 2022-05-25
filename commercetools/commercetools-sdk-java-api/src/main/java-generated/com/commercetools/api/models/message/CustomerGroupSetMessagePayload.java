@@ -32,7 +32,7 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     String CUSTOMER_GROUP_SET = "CustomerGroupSet";
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
     @Valid
     @JsonProperty("customerGroup")

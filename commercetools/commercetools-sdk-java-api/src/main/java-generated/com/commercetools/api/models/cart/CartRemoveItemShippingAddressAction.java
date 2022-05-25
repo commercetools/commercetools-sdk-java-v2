@@ -32,7 +32,7 @@ public interface CartRemoveItemShippingAddressAction extends CartUpdateAction {
     String REMOVE_ITEM_SHIPPING_ADDRESS = "removeItemShippingAddress";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("addressKey")

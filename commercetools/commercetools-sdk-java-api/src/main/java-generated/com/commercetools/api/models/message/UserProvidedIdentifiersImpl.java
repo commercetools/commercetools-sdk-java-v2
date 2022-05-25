@@ -53,7 +53,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <*  <p>User-provided unique identifier of the resource.</p>>
+     *  <p>User-provided unique identifier of the resource.</p>
      */
 
     public String getKey() {
@@ -61,7 +61,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getExternalId() {
@@ -69,7 +69,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getOrderNumber() {
@@ -77,7 +77,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerNumber() {
@@ -85,7 +85,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -93,7 +93,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -101,7 +101,7 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-     <*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>>
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
      */
 
     public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {

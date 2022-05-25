@@ -25,7 +25,7 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
     private com.commercetools.api.models.payment.TransactionDraft transaction;
 
     /**
-     <>
+     *
      */
 
     public MyPaymentAddTransactionActionBuilder transaction(
@@ -35,7 +35,7 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
     }
 
     /**
-     <>
+     *
      */
 
     public MyPaymentAddTransactionActionBuilder transaction(

@@ -36,7 +36,7 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.category.Category getCategory() {

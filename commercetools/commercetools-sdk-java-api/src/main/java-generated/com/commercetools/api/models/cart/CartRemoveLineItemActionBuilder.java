@@ -39,7 +39,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -48,7 +48,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -57,8 +57,8 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartRemoveLineItemActionBuilder externalPrice(
@@ -68,8 +68,8 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public CartRemoveLineItemActionBuilder externalPrice(
@@ -79,7 +79,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder externalTotalPrice(
@@ -91,7 +91,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder externalTotalPrice(
@@ -101,7 +101,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -113,7 +113,7 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
     }
 
     /**
-     <>
+     *
      */
 
     public CartRemoveLineItemActionBuilder shippingDetailsToRemove(

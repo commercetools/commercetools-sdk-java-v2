@@ -37,7 +37,7 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -45,7 +45,7 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {

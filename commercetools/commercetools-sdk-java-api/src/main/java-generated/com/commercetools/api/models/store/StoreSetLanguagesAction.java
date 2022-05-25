@@ -29,7 +29,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     String SET_LANGUAGES = "setLanguages";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("languages")

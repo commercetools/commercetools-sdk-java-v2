@@ -30,7 +30,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>>
+     *  <p>Unique identifier of the referenced ProductDiscount.</p>
      */
 
     public ProductDiscountReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
      */
 
     public ProductDiscountReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     }
 
     /**
-     <*  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
      */
 
     public ProductDiscountReferenceBuilder obj(

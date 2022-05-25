@@ -35,35 +35,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReviewRatingStatistics {
 
     /**
-     <*  <p>Average rating of one target This number is rounded with 5 decimals.</p>>
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      */
     @NotNull
     @JsonProperty("averageRating")
     public Double getAverageRating();
 
     /**
-     <*  <p>Highest rating of one target</p>>
+     *  <p>Highest rating of one target</p>
      */
     @NotNull
     @JsonProperty("highestRating")
     public Double getHighestRating();
 
     /**
-     <*  <p>Lowest rating of one target</p>>
+     *  <p>Lowest rating of one target</p>
      */
     @NotNull
     @JsonProperty("lowestRating")
     public Double getLowestRating();
 
     /**
-     <*  <p>Number of ratings taken into account</p>>
+     *  <p>Number of ratings taken into account</p>
      */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-     <*  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>>
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      */
     @NotNull
     @Valid

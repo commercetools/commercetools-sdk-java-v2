@@ -33,7 +33,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     private String region;
 
     /**
-     <>
+     *
      */
 
     public SqsDestinationBuilder accessKey(final String accessKey) {
@@ -42,7 +42,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     <>
+     *
      */
 
     public SqsDestinationBuilder accessSecret(final String accessSecret) {
@@ -51,7 +51,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     <>
+     *
      */
 
     public SqsDestinationBuilder queueUrl(final String queueUrl) {
@@ -60,7 +60,7 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
     }
 
     /**
-     <>
+     *
      */
 
     public SqsDestinationBuilder region(final String region) {

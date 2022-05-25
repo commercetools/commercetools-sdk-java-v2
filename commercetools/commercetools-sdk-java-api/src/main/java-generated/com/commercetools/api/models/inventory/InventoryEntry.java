@@ -44,98 +44,98 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
         com.commercetools.api.models.Customizable<InventoryEntry> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the InventoryEntry.</p>>
+     *  <p>Unique identifier of the InventoryEntry.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the InventoryEntry.</p>>
+     *  <p>User-defined unique identifier of the InventoryEntry.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <*  <p>Connection to a particular supplier.</p>>
+     *  <p>Connection to a particular supplier.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-     <*  <p>Overall amount of stock. (available + reserved)</p>>
+     *  <p>Overall amount of stock. (available + reserved)</p>
      */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-     <*  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>>
+     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
      */
     @NotNull
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
 
     /**
-     <*  <p>The time period in days, that tells how often this inventory entry is restocked.</p>>
+     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     <*  <p>The date and time of the next restock.</p>>
+     *  <p>The date and time of the next restock.</p>
      */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")

@@ -32,7 +32,7 @@ public interface NumberField extends CustomField {
     String NUMBER = "Number";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

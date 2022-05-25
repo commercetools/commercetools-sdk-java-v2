@@ -31,7 +31,7 @@ public class ChangeValueChangeValueImpl implements ChangeValueChangeValue, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

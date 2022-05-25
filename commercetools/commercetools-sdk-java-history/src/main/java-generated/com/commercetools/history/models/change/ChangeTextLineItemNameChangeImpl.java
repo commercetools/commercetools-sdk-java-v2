@@ -47,7 +47,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     <*  <p>Update action for <code>changeTextLineItemName</code></p>>
+     *  <p>Update action for <code>changeTextLineItemName</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
@@ -71,7 +71,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {

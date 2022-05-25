@@ -71,7 +71,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -79,7 +79,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>>
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -87,7 +87,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getDeactivatedAt() {
@@ -95,7 +95,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>>
+     *  <p>Unique identifier of the ShoppingListLineItem.</p>
      */
 
     public String getId() {
@@ -103,7 +103,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -111,7 +111,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -119,7 +119,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
@@ -127,7 +127,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <*  <p>Reference to a ProductType.</p>>
+     *  <p>Reference to a ProductType.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -135,7 +135,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -143,7 +143,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
@@ -151,7 +151,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {

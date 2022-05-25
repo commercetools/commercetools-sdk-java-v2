@@ -71,7 +71,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -79,7 +79,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
@@ -87,7 +87,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -95,7 +95,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -103,7 +103,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -111,7 +111,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -119,7 +119,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -127,7 +127,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -135,7 +135,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -143,7 +143,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -151,7 +151,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {

@@ -43,7 +43,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     <*  <p>Shape of the action for <code>setDistributionChannels</code></p>>
+     *  <p>Shape of the action for <code>setDistributionChannels</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

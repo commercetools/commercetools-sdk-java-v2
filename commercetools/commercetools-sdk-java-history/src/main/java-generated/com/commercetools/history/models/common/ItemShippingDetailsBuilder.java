@@ -28,7 +28,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     private Boolean valid;
 
     /**
-     <>
+     *
      */
 
     public ItemShippingDetailsBuilder targets(
@@ -38,7 +38,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     <>
+     *
      */
 
     public ItemShippingDetailsBuilder targets(
@@ -48,7 +48,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     <>
+     *
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -61,7 +61,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     <>
+     *
      */
 
     public ItemShippingDetailsBuilder plusTargets(
@@ -74,7 +74,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     <>
+     *
      */
 
     public ItemShippingDetailsBuilder withTargets(
@@ -85,7 +85,7 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
-     <*  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>>
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
      */
 
     public ItemShippingDetailsBuilder valid(final Boolean valid) {

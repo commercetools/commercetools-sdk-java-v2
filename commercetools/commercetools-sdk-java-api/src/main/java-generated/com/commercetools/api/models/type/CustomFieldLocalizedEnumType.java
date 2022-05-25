@@ -33,7 +33,7 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
     String LOCALIZED_ENUM = "LocalizedEnum";
 
     /**
-     <*  <p>Allowed values.</p>>
+     *  <p>Allowed values.</p>
      */
     @NotNull
     @Valid

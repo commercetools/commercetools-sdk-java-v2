@@ -27,7 +27,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
     private String label;
 
     /**
-     <*  <p>Key of the value used as a programmatic identifier.</p>>
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public CustomFieldEnumValueBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
     }
 
     /**
-     <*  <p>Descriptive label of the value.</p>>
+     *  <p>Descriptive label of the value.</p>
      */
 
     public CustomFieldEnumValueBuilder label(final String label) {

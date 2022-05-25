@@ -47,7 +47,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getQuantity() {
@@ -55,7 +55,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -63,7 +63,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -71,7 +71,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getComment() {
@@ -79,7 +79,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>ReturnItem.shipmentState</code></p>>
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.ReturnShipmentState getShipmentState() {

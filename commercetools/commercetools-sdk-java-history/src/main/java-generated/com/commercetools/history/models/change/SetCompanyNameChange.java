@@ -34,28 +34,28 @@ public interface SetCompanyNameChange extends Change {
     String SET_COMPANY_NAME_CHANGE = "SetCompanyNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setCompanyName</code></p>>
+     *  <p>Shape of the action for <code>setCompanyName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

@@ -31,7 +31,7 @@ public class CartUpdateActionImpl implements CartUpdateAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

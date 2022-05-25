@@ -34,7 +34,7 @@ public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
     String ADD_TRANSACTION = "addTransaction";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

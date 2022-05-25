@@ -36,21 +36,21 @@ public interface RemoveShoppingListLineItemChange extends Change {
     String REMOVE_SHOPPING_LIST_LINE_ITEM_CHANGE = "RemoveShoppingListLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface RemoveShoppingListLineItemChange extends Change {
     public LineItem getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

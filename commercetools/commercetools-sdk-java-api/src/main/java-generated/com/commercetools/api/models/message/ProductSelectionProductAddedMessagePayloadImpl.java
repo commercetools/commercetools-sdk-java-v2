@@ -37,7 +37,7 @@ public class ProductSelectionProductAddedMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -45,7 +45,7 @@ public class ProductSelectionProductAddedMessagePayloadImpl
     }
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {

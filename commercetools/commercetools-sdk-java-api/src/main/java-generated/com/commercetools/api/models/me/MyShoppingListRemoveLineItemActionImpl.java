@@ -39,7 +39,7 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
     }
 
     /**
-     <>
+     *
      */
 
     public Long getQuantity() {

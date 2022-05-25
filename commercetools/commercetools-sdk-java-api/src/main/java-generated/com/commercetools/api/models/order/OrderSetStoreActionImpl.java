@@ -36,7 +36,7 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

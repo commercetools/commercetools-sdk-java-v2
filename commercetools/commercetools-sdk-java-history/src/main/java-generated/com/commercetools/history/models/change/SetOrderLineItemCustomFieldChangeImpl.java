@@ -58,7 +58,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -66,7 +66,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemCustomField</code></p>>
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
      */
 
     public String getChange() {
@@ -74,7 +74,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomTypeId() {
@@ -82,7 +82,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -90,7 +90,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -98,7 +98,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -106,7 +106,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getNextValue() {
@@ -114,7 +114,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

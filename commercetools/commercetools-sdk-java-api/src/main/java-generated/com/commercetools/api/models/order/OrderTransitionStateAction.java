@@ -34,7 +34,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     <*  <p>ResourceIdentifier to a State.</p>>
+     *  <p>ResourceIdentifier to a State.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("force")

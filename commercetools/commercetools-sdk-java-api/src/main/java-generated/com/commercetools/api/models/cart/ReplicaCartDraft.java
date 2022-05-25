@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReplicaCartDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("reference")
     public Object getReference();
 
     /**
-     <*  <p>User-specific unique identifier of the cart.</p>>
+     *  <p>User-specific unique identifier of the cart.</p>
      */
 
     @JsonProperty("key")

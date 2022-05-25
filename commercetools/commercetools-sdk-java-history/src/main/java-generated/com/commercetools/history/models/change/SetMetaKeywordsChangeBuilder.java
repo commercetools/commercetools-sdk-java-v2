@@ -31,7 +31,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setMetaKeywords</code></p>>
+     *  <p>Shape of the action for <code>setMetaKeywords</code></p>
      */
 
     public SetMetaKeywordsChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaKeywordsChangeBuilder previousValue(
@@ -50,7 +50,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaKeywordsChangeBuilder previousValue(
@@ -60,7 +60,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaKeywordsChangeBuilder nextValue(
@@ -70,7 +70,7 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
     }
 
     /**
-     <>
+     *
      */
 
     public SetMetaKeywordsChangeBuilder nextValue(

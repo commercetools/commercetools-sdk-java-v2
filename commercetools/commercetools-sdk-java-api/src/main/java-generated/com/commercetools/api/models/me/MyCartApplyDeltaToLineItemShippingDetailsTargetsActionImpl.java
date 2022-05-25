@@ -40,7 +40,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -56,7 +56,7 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {

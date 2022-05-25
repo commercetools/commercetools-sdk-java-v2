@@ -31,7 +31,7 @@ public class MessagePayloadImpl implements MessagePayload, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

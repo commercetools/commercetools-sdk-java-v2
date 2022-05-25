@@ -43,14 +43,14 @@ public interface ProductImageAddedMessage extends Message {
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ProductImageAddedMessage extends Message {
     public Image getImage();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("staged")

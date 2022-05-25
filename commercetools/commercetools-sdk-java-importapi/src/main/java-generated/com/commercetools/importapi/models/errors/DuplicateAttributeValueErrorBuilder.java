@@ -28,7 +28,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
     /**
-     <>
+     *
      */
 
     public DuplicateAttributeValueErrorBuilder message(final String message) {
@@ -37,7 +37,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <*  <p>The attribute in conflict.</p>>
+     *  <p>The attribute in conflict.</p>
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(
@@ -47,7 +47,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     <*  <p>The attribute in conflict.</p>>
+     *  <p>The attribute in conflict.</p>
      */
 
     public DuplicateAttributeValueErrorBuilder attribute(

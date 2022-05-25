@@ -60,7 +60,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Boolean scopedPriceDiscounted;
 
     /**
-     <*  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>>
+     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
      */
 
     public ProductVariantBuilder id(final Long id) {
@@ -69,7 +69,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder sku(@Nullable final String sku) {
@@ -78,7 +78,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
      */
 
     public ProductVariantBuilder key(@Nullable final String key) {
@@ -87,7 +87,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.common.Price... prices) {
@@ -96,7 +96,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder prices(
@@ -106,7 +106,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusPrices(@Nullable final com.commercetools.api.models.common.Price... prices) {
@@ -118,7 +118,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusPrices(
@@ -131,7 +131,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder withPrices(
@@ -142,7 +142,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder attributes(
@@ -152,7 +152,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder attributes(
@@ -162,7 +162,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -175,7 +175,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -188,7 +188,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder withAttributes(
@@ -199,7 +199,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder price(
@@ -209,7 +209,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder price(@Nullable final com.commercetools.api.models.common.Price price) {
@@ -218,7 +218,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -227,7 +227,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder images(
@@ -237,7 +237,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -249,7 +249,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusImages(
@@ -262,7 +262,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder withImages(
@@ -273,7 +273,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -282,7 +282,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder assets(
@@ -292,7 +292,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -304,7 +304,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder plusAssets(
@@ -317,7 +317,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder withAssets(
@@ -328,7 +328,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder availability(
@@ -339,7 +339,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder availability(
@@ -349,7 +349,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder isMatchingVariant(@Nullable final Boolean isMatchingVariant) {
@@ -358,7 +358,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -368,7 +368,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -378,7 +378,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     <>
+     *
      */
 
     public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {

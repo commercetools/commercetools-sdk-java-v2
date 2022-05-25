@@ -34,7 +34,7 @@ public interface OrderReturnInfoAddedMessagePayload extends OrderMessagePayload 
     String RETURN_INFO_ADDED = "ReturnInfoAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

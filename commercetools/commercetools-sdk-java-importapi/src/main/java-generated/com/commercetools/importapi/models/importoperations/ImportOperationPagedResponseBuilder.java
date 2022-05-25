@@ -37,7 +37,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
@@ -46,7 +46,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public ImportOperationPagedResponseBuilder offset(final Long offset) {
@@ -55,7 +55,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The actual number of results returned.</p>>
+     *  <p>The actual number of results returned.</p>
      */
 
     public ImportOperationPagedResponseBuilder count(final Long count) {
@@ -64,7 +64,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The total number of import operations matching the query.</p>>
+     *  <p>The total number of import operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder total(final Long total) {
@@ -73,7 +73,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The array of Import Operations matching the query.</p>>
+     *  <p>The array of Import Operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -83,7 +83,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The array of Import Operations matching the query.</p>>
+     *  <p>The array of Import Operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder results(
@@ -93,7 +93,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The array of Import Operations matching the query.</p>>
+     *  <p>The array of Import Operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -106,7 +106,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The array of Import Operations matching the query.</p>>
+     *  <p>The array of Import Operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder plusResults(
@@ -120,7 +120,7 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-     <*  <p>The array of Import Operations matching the query.</p>>
+     *  <p>The array of Import Operations matching the query.</p>
      */
 
     public ImportOperationPagedResponseBuilder withResults(

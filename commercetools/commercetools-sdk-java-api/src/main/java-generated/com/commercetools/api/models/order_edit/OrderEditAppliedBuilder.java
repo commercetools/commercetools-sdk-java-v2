@@ -31,7 +31,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     private com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit;
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedBuilder appliedAt(final java.time.ZonedDateTime appliedAt) {
@@ -40,7 +40,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedBuilder excerptBeforeEdit(
@@ -51,7 +51,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedBuilder excerptBeforeEdit(
@@ -61,7 +61,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedBuilder excerptAfterEdit(
@@ -71,7 +71,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderEditAppliedBuilder excerptAfterEdit(

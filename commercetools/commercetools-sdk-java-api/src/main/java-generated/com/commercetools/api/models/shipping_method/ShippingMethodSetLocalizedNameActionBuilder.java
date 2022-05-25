@@ -27,7 +27,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(
@@ -37,7 +37,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(

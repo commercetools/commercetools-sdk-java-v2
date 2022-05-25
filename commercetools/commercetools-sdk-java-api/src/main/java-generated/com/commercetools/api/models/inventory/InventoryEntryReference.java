@@ -34,14 +34,14 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     String INVENTORY_ENTRY = "inventory-entry";
 
     /**
-     <*  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
      */
     @Valid
     @JsonProperty("obj")
     public InventoryEntry getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>>
+     *  <p>Unique identifier of the referenced InventoryEntry.</p>
      */
     @NotNull
     @JsonProperty("id")

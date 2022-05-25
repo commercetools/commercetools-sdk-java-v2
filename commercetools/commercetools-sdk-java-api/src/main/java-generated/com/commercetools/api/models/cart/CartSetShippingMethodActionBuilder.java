@@ -30,7 +30,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public CartSetShippingMethodActionBuilder shippingMethod(
@@ -42,7 +42,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     <*  <p>ResourceIdentifier to a ShippingMethod.</p>>
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      */
 
     public CartSetShippingMethodActionBuilder shippingMethod(
@@ -52,7 +52,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetShippingMethodActionBuilder externalTaxRate(
@@ -63,7 +63,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetShippingMethodActionBuilder externalTaxRate(

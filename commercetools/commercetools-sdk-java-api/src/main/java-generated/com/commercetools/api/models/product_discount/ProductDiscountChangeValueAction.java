@@ -33,7 +33,7 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
     String CHANGE_VALUE = "changeValue";
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

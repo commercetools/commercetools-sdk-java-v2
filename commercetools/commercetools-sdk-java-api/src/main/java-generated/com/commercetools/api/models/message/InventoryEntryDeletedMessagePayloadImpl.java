@@ -39,7 +39,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -55,7 +55,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {

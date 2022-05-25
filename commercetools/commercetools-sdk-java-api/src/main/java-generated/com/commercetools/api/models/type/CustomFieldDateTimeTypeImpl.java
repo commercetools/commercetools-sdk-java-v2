@@ -27,7 +27,7 @@ public class CustomFieldDateTimeTypeImpl implements CustomFieldDateTimeType, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

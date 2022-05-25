@@ -33,7 +33,7 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("externalTaxAmount")

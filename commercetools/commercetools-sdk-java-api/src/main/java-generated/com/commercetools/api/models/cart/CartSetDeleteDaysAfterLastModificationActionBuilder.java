@@ -27,7 +27,7 @@ public class CartSetDeleteDaysAfterLastModificationActionBuilder
     private Integer deleteDaysAfterLastModification;
 
     /**
-     <>
+     *
      */
 
     public CartSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(

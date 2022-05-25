@@ -35,7 +35,7 @@ public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, Mod
     }
 
     /**
-     <*  <p>The type of the referenced resource.</p>>
+     *  <p>The type of the referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

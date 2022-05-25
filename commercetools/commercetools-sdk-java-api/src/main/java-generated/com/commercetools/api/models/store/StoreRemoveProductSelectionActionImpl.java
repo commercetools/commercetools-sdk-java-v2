@@ -36,7 +36,7 @@ public class StoreRemoveProductSelectionActionImpl implements StoreRemoveProduct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreRemoveProductSelectionActionImpl implements StoreRemoveProduct
     }
 
     /**
-     <*  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>>
+     *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
      */
 
     public com.commercetools.api.models.common.ResourceIdentifier getProductSelection() {

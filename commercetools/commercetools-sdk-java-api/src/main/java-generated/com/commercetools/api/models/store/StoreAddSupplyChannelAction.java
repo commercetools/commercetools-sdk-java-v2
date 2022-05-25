@@ -32,7 +32,7 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     String ADD_SUPPLY_CHANNEL = "addSupplyChannel";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("supplyChannel")

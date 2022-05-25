@@ -35,7 +35,7 @@ public class CustomImpl implements Custom, ModelBase {
     }
 
     /**
-     <*  <p>The type that provides the field definitions for this object.</p>>
+     *  <p>The type that provides the field definitions for this object.</p>
      */
 
     public com.commercetools.importapi.models.common.TypeKeyReference getType() {
@@ -43,7 +43,7 @@ public class CustomImpl implements Custom, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields of this object.</p>>
+     *  <p>The custom fields of this object.</p>
      */
 
     public com.commercetools.importapi.models.customfields.FieldContainer getFields() {

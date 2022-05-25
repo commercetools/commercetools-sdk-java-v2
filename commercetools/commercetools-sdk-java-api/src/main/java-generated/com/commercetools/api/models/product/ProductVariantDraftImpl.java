@@ -50,7 +50,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -58,7 +58,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>>
+     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
      */
 
     public String getKey() {
@@ -66,7 +66,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -74,7 +74,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -82,7 +82,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -90,7 +90,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {

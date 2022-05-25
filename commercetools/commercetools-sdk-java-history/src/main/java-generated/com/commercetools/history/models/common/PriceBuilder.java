@@ -28,7 +28,7 @@ public class PriceBuilder implements Builder<Price> {
     private com.commercetools.history.models.common.Money value;
 
     /**
-     <>
+     *
      */
 
     public PriceBuilder id(final String id) {
@@ -37,7 +37,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceBuilder value(
@@ -47,7 +47,7 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
-     <>
+     *
      */
 
     public PriceBuilder value(final com.commercetools.history.models.common.Money value) {

@@ -27,7 +27,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
@@ -39,7 +39,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     /**
-     <*  <p>Reference to a CustomerGroup.</p>>
+     *  <p>Reference to a CustomerGroup.</p>
      */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(

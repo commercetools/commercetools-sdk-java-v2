@@ -36,7 +36,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     private java.lang.Object ratingsDistribution;
 
     /**
-     <*  <p>Average rating of one target This number is rounded with 5 decimals.</p>>
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
      */
 
     public ReviewRatingStatisticsBuilder averageRating(final Integer averageRating) {
@@ -45,7 +45,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     <*  <p>Highest rating of one target</p>>
+     *  <p>Highest rating of one target</p>
      */
 
     public ReviewRatingStatisticsBuilder highestRating(final Integer highestRating) {
@@ -54,7 +54,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     <*  <p>Lowest rating of one target</p>>
+     *  <p>Lowest rating of one target</p>
      */
 
     public ReviewRatingStatisticsBuilder lowestRating(final Integer lowestRating) {
@@ -63,7 +63,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     <*  <p>Number of ratings taken into account</p>>
+     *  <p>Number of ratings taken into account</p>
      */
 
     public ReviewRatingStatisticsBuilder count(final Integer count) {
@@ -72,7 +72,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     <*  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>>
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      */
 
     public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {

@@ -60,7 +60,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <>
+     *
      */
 
     public LineItemDraftBuilder productId(@Nullable final String productId) {
@@ -69,7 +69,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemDraftBuilder variantId(@Nullable final Long variantId) {
@@ -78,7 +78,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemDraftBuilder sku(@Nullable final String sku) {
@@ -87,7 +87,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>>
+     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
      */
 
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
@@ -96,7 +96,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>>
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
      */
 
     public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -105,7 +105,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public LineItemDraftBuilder supplyChannel(
@@ -116,7 +116,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>>
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      */
 
     public LineItemDraftBuilder supplyChannel(
@@ -126,7 +126,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -138,7 +138,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>>
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      */
 
     public LineItemDraftBuilder distributionChannel(
@@ -148,7 +148,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public LineItemDraftBuilder externalTaxRate(
@@ -159,7 +159,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>>
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
      */
 
     public LineItemDraftBuilder externalTaxRate(
@@ -169,7 +169,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public LineItemDraftBuilder custom(
@@ -179,7 +179,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -188,7 +188,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalPrice(
@@ -198,7 +198,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
@@ -207,7 +207,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -219,7 +219,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>>
+     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public LineItemDraftBuilder externalTotalPrice(
@@ -229,7 +229,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Container for line item specific address(es).</p>>
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public LineItemDraftBuilder shippingDetails(
@@ -240,7 +240,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
-     <*  <p>Container for line item specific address(es).</p>>
+     *  <p>Container for line item specific address(es).</p>
      */
 
     public LineItemDraftBuilder shippingDetails(

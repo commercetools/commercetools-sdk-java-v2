@@ -37,7 +37,7 @@ public interface SubscriptionUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<SubscriptionUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

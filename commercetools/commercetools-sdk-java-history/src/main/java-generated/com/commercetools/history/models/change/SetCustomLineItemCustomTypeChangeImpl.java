@@ -51,7 +51,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemCustomType</code></p>>
+     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -75,7 +75,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -83,7 +83,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -91,7 +91,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {

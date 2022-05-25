@@ -33,14 +33,14 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
     String SET_BILLING_ADDRESS_CUSTOM_TYPE = "setBillingAddressCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>>
+     *  <p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p>
      */
     @Valid
     @JsonProperty("fields")

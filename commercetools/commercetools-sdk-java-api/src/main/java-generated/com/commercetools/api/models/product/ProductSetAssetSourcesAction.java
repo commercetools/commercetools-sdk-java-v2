@@ -34,42 +34,42 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
     String SET_ASSET_SOURCES = "setAssetSources";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

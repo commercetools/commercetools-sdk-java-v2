@@ -30,7 +30,7 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
     private String addressKey;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
@@ -39,7 +39,7 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {

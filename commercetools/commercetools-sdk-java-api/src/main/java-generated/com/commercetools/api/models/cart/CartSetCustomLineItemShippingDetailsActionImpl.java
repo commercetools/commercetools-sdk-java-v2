@@ -40,7 +40,7 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -56,7 +56,7 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

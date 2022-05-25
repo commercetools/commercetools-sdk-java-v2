@@ -28,7 +28,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
     /**
-     <>
+     *
      */
 
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnItemId(final String returnItemId) {
@@ -37,7 +37,7 @@ public class OrderReturnShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReturnShipmentStateChangedMessagePayloadBuilder returnShipmentState(

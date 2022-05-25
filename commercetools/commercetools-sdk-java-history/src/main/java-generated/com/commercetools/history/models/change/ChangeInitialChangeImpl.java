@@ -43,7 +43,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeInitial</code></p>>
+     *  <p>Shape of the action for <code>changeInitial</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getNextValue() {

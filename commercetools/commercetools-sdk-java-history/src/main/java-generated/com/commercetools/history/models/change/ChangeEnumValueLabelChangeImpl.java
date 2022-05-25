@@ -50,7 +50,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <*  <p>Update action for <code>changeEnumValueLabel</code> on types</p>>
+     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public String getFieldName() {
@@ -74,7 +74,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <*  <p>Key of the values that was updated</p>>
+     *  <p>Key of the values that was updated</p>
      */
 
     public String getValueKey() {
@@ -82,7 +82,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -90,7 +90,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

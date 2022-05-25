@@ -29,7 +29,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     private java.lang.Object resource;
 
     /**
-     <>
+     *
      */
 
     public ResourceUpdateErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     }
 
     /**
-     <>
+     *
      */
 
     public ResourceUpdateErrorBuilder resource(@Nullable final java.lang.Object resource) {

@@ -33,7 +33,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
@@ -42,7 +42,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
+     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>>
+     *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the Delivery.</p>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class OrderSetDeliveryCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Delivery.</p>>
+     *  <p>Sets the Custom Fields fields for the Delivery.</p>
      */
 
     public OrderSetDeliveryCustomTypeActionBuilder fields(

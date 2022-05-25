@@ -44,35 +44,35 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newQuantityOnStock")
     public Long getNewQuantityOnStock();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("oldAvailableQuantity")
     public Long getOldAvailableQuantity();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")

@@ -29,14 +29,14 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     String ADD_BILLING_ADDRESS_ID = "addBillingAddressId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

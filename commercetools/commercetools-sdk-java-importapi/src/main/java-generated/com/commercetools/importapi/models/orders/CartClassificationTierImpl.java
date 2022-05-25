@@ -47,7 +47,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateTierType getType() {
@@ -55,7 +55,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getValue() {
@@ -63,7 +63,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.common.Money getPrice() {
@@ -71,7 +71,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
@@ -79,7 +79,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getIsMatching() {

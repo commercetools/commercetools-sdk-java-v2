@@ -32,7 +32,7 @@ public interface TextSetAttribute extends Attribute {
     String TEXT_SET = "text-set";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

@@ -43,7 +43,7 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeIsActive</code></p>>
+     *  <p>Shape of the action for <code>changeIsActive</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getNextValue() {

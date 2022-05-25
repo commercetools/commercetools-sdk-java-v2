@@ -47,7 +47,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -63,7 +63,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -71,7 +71,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
@@ -79,7 +79,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-     <*  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>>
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {

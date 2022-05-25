@@ -37,7 +37,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     private com.commercetools.history.models.common.Price nextValue;
 
     /**
-     <*  <p>Update action for changing prices</p>>
+     *  <p>Update action for changing prices</p>
      */
 
     public ChangePriceChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder catalogData(final String catalogData) {
@@ -55,7 +55,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder priceId(final String priceId) {
@@ -64,7 +64,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder previousValue(
@@ -74,7 +74,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder previousValue(final com.commercetools.history.models.common.Price previousValue) {
@@ -83,7 +83,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder nextValue(
@@ -93,7 +93,7 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {

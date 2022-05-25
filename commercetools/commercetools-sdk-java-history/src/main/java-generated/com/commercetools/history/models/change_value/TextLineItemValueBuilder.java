@@ -28,7 +28,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     <>
+     *
      */
 
     public TextLineItemValueBuilder id(final String id) {
@@ -37,7 +37,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemValueBuilder name(
@@ -47,7 +47,7 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemValueBuilder name(final com.commercetools.history.models.common.LocalizedString name) {

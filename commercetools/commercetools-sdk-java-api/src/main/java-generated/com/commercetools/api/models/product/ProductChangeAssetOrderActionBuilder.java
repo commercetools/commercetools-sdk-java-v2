@@ -35,7 +35,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     private java.util.List<String> assetOrder;
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder variantId(@Nullable final Long variantId) {
@@ -44,7 +44,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder sku(@Nullable final String sku) {
@@ -53,7 +53,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder staged(@Nullable final Boolean staged) {
@@ -62,7 +62,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
@@ -71,7 +71,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
@@ -80,7 +80,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     <>
+     *
      */
 
     public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {

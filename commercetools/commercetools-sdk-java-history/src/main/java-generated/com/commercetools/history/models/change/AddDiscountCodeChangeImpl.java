@@ -39,7 +39,7 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
     }
 
     /**
-     <*  <p>Update action for <code>addDiscountCode</code></p>>
+     *  <p>Update action for <code>addDiscountCode</code></p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountCodeInfo getNextValue() {

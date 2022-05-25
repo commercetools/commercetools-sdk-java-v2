@@ -39,7 +39,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -47,7 +47,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCurrentPassword() {
@@ -55,7 +55,7 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewPassword() {

@@ -38,28 +38,28 @@ public interface SetOrderTotalTaxChange extends Change {
     String SET_ORDER_TOTAL_TAX_CHANGE = "SetOrderTotalTaxChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setOrderTotalTax</code></p>>
+     *  <p>Update action for <code>setOrderTotalTax</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -67,7 +67,7 @@ public interface SetOrderTotalTaxChange extends Change {
     public Money getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -39,7 +39,7 @@ public class OrderImportLineItemStateActionImpl implements OrderImportLineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class OrderImportLineItemStateActionImpl implements OrderImportLineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -55,7 +55,7 @@ public class OrderImportLineItemStateActionImpl implements OrderImportLineItemSt
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {

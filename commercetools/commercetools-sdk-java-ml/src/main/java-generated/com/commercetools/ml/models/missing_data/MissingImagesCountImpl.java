@@ -35,7 +35,7 @@ public class MissingImagesCountImpl implements MissingImagesCount, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getMissingImages() {
@@ -43,7 +43,7 @@ public class MissingImagesCountImpl implements MissingImagesCount, ModelBase {
     }
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public Long getTotal() {

@@ -39,7 +39,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
@@ -48,7 +48,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -57,8 +57,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalPrice(
@@ -68,8 +68,8 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalPrice(
@@ -79,7 +79,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
@@ -91,7 +91,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder externalTotalPrice(
@@ -101,7 +101,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(
@@ -113,7 +113,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderRemoveLineItemActionBuilder shippingDetailsToRemove(

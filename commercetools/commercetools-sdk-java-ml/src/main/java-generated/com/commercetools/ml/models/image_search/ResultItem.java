@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResultItem {
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-     <*  <p>An array of product variants containing the image URL.</p>>
+     *  <p>An array of product variants containing the image URL.</p>
      */
     @NotNull
     @Valid

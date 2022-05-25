@@ -35,7 +35,7 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
     String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
     public StateReference getState();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("force")

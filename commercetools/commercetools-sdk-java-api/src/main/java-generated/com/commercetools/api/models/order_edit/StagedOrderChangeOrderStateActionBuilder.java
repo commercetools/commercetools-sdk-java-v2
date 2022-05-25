@@ -24,7 +24,7 @@ public class StagedOrderChangeOrderStateActionBuilder implements Builder<StagedO
     private com.commercetools.api.models.order.OrderState orderState;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderChangeOrderStateActionBuilder orderState(

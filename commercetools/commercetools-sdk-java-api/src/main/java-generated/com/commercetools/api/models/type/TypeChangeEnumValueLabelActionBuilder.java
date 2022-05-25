@@ -28,7 +28,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
 
     public TypeChangeEnumValueLabelActionBuilder fieldName(final String fieldName) {
@@ -37,7 +37,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(
@@ -47,7 +47,7 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public TypeChangeEnumValueLabelActionBuilder value(

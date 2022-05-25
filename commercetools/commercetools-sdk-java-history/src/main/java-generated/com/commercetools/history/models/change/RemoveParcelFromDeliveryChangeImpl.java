@@ -43,7 +43,7 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     <*  <p>Update action for <code>removeParcelFromDelivery</code></p>>
+     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -67,7 +67,7 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Parcel getPreviousValue() {

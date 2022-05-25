@@ -36,28 +36,28 @@ public interface AddParcelToDeliveryChange extends Change {
     String ADD_PARCEL_TO_DELIVERY_CHANGE = "AddParcelToDeliveryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addParcelToDelivery</code></p>>
+     *  <p>Update action for <code>addParcelToDelivery</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

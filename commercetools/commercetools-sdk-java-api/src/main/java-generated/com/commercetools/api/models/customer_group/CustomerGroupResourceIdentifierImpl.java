@@ -39,7 +39,7 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
     }
 
     /**
-     <*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>>
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -47,7 +47,7 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public String getId() {
@@ -55,7 +55,7 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public String getKey() {

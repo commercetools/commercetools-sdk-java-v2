@@ -35,7 +35,7 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -43,7 +43,7 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {

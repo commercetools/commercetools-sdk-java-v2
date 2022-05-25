@@ -68,7 +68,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -76,7 +76,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -84,7 +84,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>If true, searches data from staged products in addition to published products.</p>>
+     *  <p>If true, searches data from staged products in addition to published products.</p>
      */
 
     public Boolean getStaged() {
@@ -92,7 +92,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Maximum number of products to scan.</p>>
+     *  <p>Maximum number of products to scan.</p>
      */
 
     public Long getProductSetLimit() {
@@ -100,7 +100,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
      */
 
     public Boolean getIncludeVariants() {
@@ -108,7 +108,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>If used, only checks if a product variant has a price in the provided currency code.</p>>
+     *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
      */
 
     public String getCurrencyCode() {
@@ -116,7 +116,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>If true, checks if there are prices for the specified date range and time.</p>>
+     *  <p>If true, checks if there are prices for the specified date range and time.</p>
      */
 
     public Boolean getCheckDate() {
@@ -124,7 +124,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>>
+     *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -132,7 +132,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>>
+     *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -140,7 +140,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
      */
 
     public java.util.List<String> getProductIds() {
@@ -148,7 +148,7 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
      */
 
     public java.util.List<String> getProductTypeIds() {

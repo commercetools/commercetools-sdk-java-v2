@@ -39,7 +39,7 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewAttributeName() {

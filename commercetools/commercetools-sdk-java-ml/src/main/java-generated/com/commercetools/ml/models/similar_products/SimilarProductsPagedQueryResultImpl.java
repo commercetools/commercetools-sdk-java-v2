@@ -46,7 +46,7 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
     }
 
     /**
-     <>
+     *
      */
 
     public Long getCount() {
@@ -54,7 +54,7 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
     }
 
     /**
-     <>
+     *
      */
 
     public Long getTotal() {
@@ -62,7 +62,7 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -70,7 +70,7 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> getResults() {
@@ -78,7 +78,7 @@ public class SimilarProductsPagedQueryResultImpl implements SimilarProductsPaged
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta getMeta() {

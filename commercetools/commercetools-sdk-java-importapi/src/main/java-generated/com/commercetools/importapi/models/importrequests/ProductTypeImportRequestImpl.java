@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The request body to import ProductTypes. Contains data for ProductTypes to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to import ProductTypes. Contains data for ProductTypes to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, ModelBase {
@@ -37,7 +37,7 @@ public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, M
     }
 
     /**
-     <*  <p>The type of the import resource.</p>>
+     *  <p>The type of the import resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
@@ -45,7 +45,7 @@ public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, M
     }
 
     /**
-     <*  <p>The product type import resources of this request.</p>>
+     *  <p>The product type import resources of this request.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> getResources() {

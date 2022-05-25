@@ -32,7 +32,7 @@ public interface PaymentSetMethodInfoInterfaceAction extends PaymentUpdateAction
     String SET_METHOD_INFO_INTERFACE = "setMethodInfoInterface";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("interface")

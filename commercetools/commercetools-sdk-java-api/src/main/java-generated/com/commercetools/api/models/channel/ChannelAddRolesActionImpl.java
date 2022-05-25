@@ -36,7 +36,7 @@ public class ChannelAddRolesActionImpl implements ChannelAddRolesAction, ModelBa
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ChannelAddRolesActionImpl implements ChannelAddRolesAction, ModelBa
     }
 
     /**
-     <*  <p>Value to append to the array.</p>>
+     *  <p>Value to append to the array.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {

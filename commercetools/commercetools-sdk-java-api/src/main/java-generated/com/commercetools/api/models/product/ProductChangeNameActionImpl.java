@@ -39,7 +39,7 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -55,7 +55,7 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

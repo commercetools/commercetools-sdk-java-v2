@@ -34,7 +34,7 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
     String UPDATE_ITEM_SHIPPING_ADDRESS = "updateItemShippingAddress";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -39,7 +39,7 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>addReturnInfo</code></p>>
+     *  <p>Update action for <code>addReturnInfo</code></p>
      */
 
     public String getChange() {
@@ -55,7 +55,7 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.ReturnInfo getNextValue() {

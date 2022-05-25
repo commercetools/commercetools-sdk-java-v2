@@ -32,7 +32,7 @@ public interface BooleanAttribute extends Attribute {
     String BOOLEAN = "boolean";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

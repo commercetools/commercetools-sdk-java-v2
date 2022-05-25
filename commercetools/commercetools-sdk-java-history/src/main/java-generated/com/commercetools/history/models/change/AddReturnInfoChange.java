@@ -35,21 +35,21 @@ public interface AddReturnInfoChange extends Change {
     String ADD_RETURN_INFO_CHANGE = "AddReturnInfoChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addReturnInfo</code></p>>
+     *  <p>Update action for <code>addReturnInfo</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

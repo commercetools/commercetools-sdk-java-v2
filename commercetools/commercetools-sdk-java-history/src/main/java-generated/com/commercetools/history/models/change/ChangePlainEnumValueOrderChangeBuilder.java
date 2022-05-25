@@ -34,7 +34,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
 
     /**
-     <*  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>>
+     *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
      */
 
     public ChangePlainEnumValueOrderChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public ChangePlainEnumValueOrderChangeBuilder attributeName(final String attributeName) {
@@ -52,7 +52,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder nextValue(
@@ -72,7 +72,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder plusNextValue(
@@ -85,7 +85,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder plusNextValue(
@@ -98,7 +98,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder withNextValue(
@@ -109,7 +109,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder previousValue(
@@ -119,7 +119,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder previousValue(
@@ -129,7 +129,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder plusPreviousValue(
@@ -142,7 +142,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder plusPreviousValue(
@@ -156,7 +156,7 @@ public class ChangePlainEnumValueOrderChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     <>
+     *
      */
 
     public ChangePlainEnumValueOrderChangeBuilder withPreviousValue(

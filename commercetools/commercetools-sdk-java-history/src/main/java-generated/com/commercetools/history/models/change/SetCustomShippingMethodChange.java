@@ -36,21 +36,21 @@ public interface SetCustomShippingMethodChange extends Change {
     String SET_CUSTOM_SHIPPING_METHOD_CHANGE = "SetCustomShippingMethodChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCustomShippingMethod</code></p>>
+     *  <p>Update action for <code>setCustomShippingMethod</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetCustomShippingMethodChange extends Change {
     public CustomShippingMethodChangeValue getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

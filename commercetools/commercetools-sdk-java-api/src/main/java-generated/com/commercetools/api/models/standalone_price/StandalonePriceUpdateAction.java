@@ -36,7 +36,7 @@ public interface StandalonePriceUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StandalonePriceUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

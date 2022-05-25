@@ -37,21 +37,21 @@ public interface ChangeTransactionInteractionIdChange extends Change {
     String CHANGE_TRANSACTION_INTERACTION_ID_CHANGE = "ChangeTransactionInteractionIdChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface ChangeTransactionInteractionIdChange extends Change {
     public TransactionChangeValue getTransaction();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

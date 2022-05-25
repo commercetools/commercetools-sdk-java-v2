@@ -25,7 +25,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public CartAddItemShippingAddressActionBuilder address(
@@ -35,7 +35,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
     }
 
     /**
-     <>
+     *
      */
 
     public CartAddItemShippingAddressActionBuilder address(

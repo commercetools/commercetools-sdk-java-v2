@@ -25,7 +25,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -35,7 +35,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
@@ -45,7 +45,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -58,7 +58,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
@@ -72,7 +72,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
 
     public OrderEditSetStagedActionsActionBuilder withStagedActions(

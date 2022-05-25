@@ -30,7 +30,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     private com.commercetools.api.models.type.Type obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Type.</p>>
+     *  <p>Unique identifier of the referenced Type.</p>
      */
 
     public TypeReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
      */
 
     public TypeReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
      */
 
     public TypeReferenceBuilder obj(@Nullable final com.commercetools.api.models.type.Type obj) {

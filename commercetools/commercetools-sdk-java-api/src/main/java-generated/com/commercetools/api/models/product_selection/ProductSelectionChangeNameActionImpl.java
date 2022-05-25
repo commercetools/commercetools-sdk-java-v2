@@ -36,7 +36,7 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
     }
 
     /**
-     <*  <p>The new name to be set for the ProductSelection.</p>>
+     *  <p>The new name to be set for the ProductSelection.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

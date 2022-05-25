@@ -45,7 +45,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Long getLimit() {
@@ -53,7 +53,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Long getOffset() {
@@ -61,7 +61,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-     <*  <p>Actual number of results returned.</p>>
+     *  <p>Actual number of results returned.</p>
      */
 
     public Long getCount() {
@@ -69,7 +69,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-     <*  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>>
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public Long getTotal() {
@@ -77,7 +77,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-     <*  <p>APIClients matching the query.</p>>
+     *  <p>APIClients matching the query.</p>
      */
 
     public java.util.List<com.commercetools.api.models.api_client.ApiClient> getResults() {

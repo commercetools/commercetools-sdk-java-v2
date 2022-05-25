@@ -26,7 +26,7 @@ public class CustomerSetFirstNameActionBuilder implements Builder<CustomerSetFir
     private String firstName;
 
     /**
-     <>
+     *
      */
 
     public CustomerSetFirstNameActionBuilder firstName(@Nullable final String firstName) {

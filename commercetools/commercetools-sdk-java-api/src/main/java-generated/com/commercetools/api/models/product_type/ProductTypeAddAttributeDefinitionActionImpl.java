@@ -36,7 +36,7 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute() {

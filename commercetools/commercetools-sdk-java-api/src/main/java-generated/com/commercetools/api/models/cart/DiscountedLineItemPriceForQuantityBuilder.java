@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
@@ -37,7 +37,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
@@ -48,7 +48,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     <>
+     *
      */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(

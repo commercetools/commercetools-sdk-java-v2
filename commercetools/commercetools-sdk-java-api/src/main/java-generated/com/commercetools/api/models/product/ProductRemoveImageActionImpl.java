@@ -45,7 +45,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -53,7 +53,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVariantId() {
@@ -61,7 +61,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -69,7 +69,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     <*  <p>The URL of the image.</p>>
+     *  <p>The URL of the image.</p>
      */
 
     public String getImageUrl() {
@@ -77,7 +77,7 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

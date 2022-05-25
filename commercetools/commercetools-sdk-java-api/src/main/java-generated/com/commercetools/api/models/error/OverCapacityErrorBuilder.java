@@ -26,7 +26,7 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <>
+     *
      */
 
     public OverCapacityErrorBuilder message(final String message) {
@@ -35,7 +35,7 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OverCapacityErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -44,7 +44,7 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
     }
 
     /**
-     <>
+     *
      */
 
     public OverCapacityErrorBuilder addValue(final String key, final java.lang.Object value) {

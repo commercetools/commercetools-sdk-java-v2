@@ -35,7 +35,7 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateInputType getType() {
@@ -43,7 +43,7 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
     }
 
     /**
-     <>
+     *
      */
 
     public Double getScore() {

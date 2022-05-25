@@ -30,7 +30,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomObject.</p>>
+     *  <p>Unique identifier of the referenced CustomObject.</p>
      */
 
     public CustomObjectReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      */
 
     public CustomObjectReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     <*  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      */
 
     public CustomObjectReferenceBuilder obj(

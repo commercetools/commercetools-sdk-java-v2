@@ -24,7 +24,7 @@ public class IronMqDestinationBuilder implements Builder<IronMqDestination> {
     private String uri;
 
     /**
-     <>
+     *
      */
 
     public IronMqDestinationBuilder uri(final String uri) {

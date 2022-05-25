@@ -42,7 +42,7 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-     <*  <p>ID of the specified Product.</p>>
+     *  <p>ID of the specified Product.</p>
      */
 
     public String getProductId() {
@@ -50,7 +50,7 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-     <*  <p>ID of the specified Product Variant.</p>>
+     *  <p>ID of the specified Product Variant.</p>
      */
 
     public Integer getVariantId() {
@@ -58,7 +58,7 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-     <*  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>>
+     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      */
 
     public Boolean getStaged() {
@@ -66,7 +66,7 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-     <*  <p>Specified Price of the specified Product Variant.</p>>
+     *  <p>Specified Price of the specified Product Variant.</p>
      */
 
     public com.commercetools.api.models.common.QueryPrice getPrice() {

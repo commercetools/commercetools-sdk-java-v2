@@ -39,7 +39,7 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -55,7 +55,7 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {

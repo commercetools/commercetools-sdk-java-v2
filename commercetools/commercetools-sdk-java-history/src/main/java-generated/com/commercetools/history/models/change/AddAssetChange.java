@@ -36,21 +36,21 @@ public interface AddAssetChange extends Change {
     String ADD_ASSET_CHANGE = "AddAssetChange";
 
     /**
-     <*  <p>Update action for <code>addAsset</code></p>>
+     *  <p>Update action for <code>addAsset</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface AddAssetChange extends Change {
     public Asset getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

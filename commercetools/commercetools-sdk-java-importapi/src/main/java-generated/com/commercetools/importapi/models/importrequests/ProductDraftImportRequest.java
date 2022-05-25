@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductDraftImportRequest extends ImportRequest {
     String PRODUCT_DRAFT = "product-draft";
 
     /**
-     <*  <p>The product draft import resources of this request.</p>>
+     *  <p>The product draft import resources of this request.</p>
      */
     @NotNull
     @Valid

@@ -25,7 +25,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     private com.commercetools.api.models.order.Order order;
 
     /**
-     <>
+     *
      */
 
     public OrderCreatedMessagePayloadBuilder order(
@@ -35,7 +35,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     }
 
     /**
-     <>
+     *
      */
 
     public OrderCreatedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {

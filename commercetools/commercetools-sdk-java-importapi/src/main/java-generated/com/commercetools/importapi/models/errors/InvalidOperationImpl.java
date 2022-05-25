@@ -35,7 +35,7 @@ public class InvalidOperationImpl implements InvalidOperation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class InvalidOperationImpl implements InvalidOperation, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

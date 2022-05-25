@@ -60,7 +60,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductDeletedMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductDeletedMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductDeletedMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductDeletedMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -154,7 +154,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductDeletedMessageBuilder resource(
@@ -164,7 +164,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -173,7 +173,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -185,7 +185,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder resourceUserProvidedIdentifiers(
@@ -195,7 +195,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final String... removedImageUrls) {
@@ -204,7 +204,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
@@ -213,7 +213,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
@@ -225,7 +225,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder currentProjection(
@@ -236,7 +236,7 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
     }
 
     /**
-     <>
+     *
      */
 
     public ProductDeletedMessageBuilder currentProjection(

@@ -35,28 +35,28 @@ public interface ChangeShipmentStateChange extends Change {
     String CHANGE_SHIPMENT_STATE_CHANGE = "ChangeShipmentStateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeShipmentState</code></p>>
+     *  <p>Update action for <code>changeShipmentState</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public ShipmentState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

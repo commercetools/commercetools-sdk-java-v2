@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SubscriptionDraft {
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("changes")
     public List<ChangeSubscription> getChanges();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -46,21 +46,21 @@ public interface SubscriptionDraft {
     public Destination getDestination();
 
     /**
-     <*  <p>User-defined unique identifier for the Subscription.</p>>
+     *  <p>User-defined unique identifier for the Subscription.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("format")

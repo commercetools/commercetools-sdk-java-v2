@@ -35,7 +35,7 @@ public class MyPaymentUpdateImpl implements MyPaymentUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class MyPaymentUpdateImpl implements MyPaymentUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> getActions() {

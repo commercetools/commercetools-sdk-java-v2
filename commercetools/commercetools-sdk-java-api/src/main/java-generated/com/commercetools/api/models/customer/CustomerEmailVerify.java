@@ -30,14 +30,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerEmailVerify {
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("tokenValue")

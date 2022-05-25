@@ -36,14 +36,14 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

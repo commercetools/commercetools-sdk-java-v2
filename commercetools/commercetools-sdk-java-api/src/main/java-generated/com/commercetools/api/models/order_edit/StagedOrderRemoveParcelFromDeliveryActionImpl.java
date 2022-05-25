@@ -36,7 +36,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getParcelId() {

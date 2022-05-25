@@ -38,21 +38,21 @@ public interface ChangeTransactionStateChange extends Change {
     String CHANGE_TRANSACTION_STATE_CHANGE = "ChangeTransactionStateChange";
 
     /**
-     <*  <p>Update action for <code>changeTransactionState</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,14 +60,14 @@ public interface ChangeTransactionStateChange extends Change {
     public TransactionChangeValue getTransaction();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public TransactionState getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

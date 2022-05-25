@@ -28,7 +28,7 @@ public class PaymentChangeTransactionTimestampActionBuilder
     private java.time.ZonedDateTime timestamp;
 
     /**
-     <>
+     *
      */
 
     public PaymentChangeTransactionTimestampActionBuilder transactionId(final String transactionId) {
@@ -37,7 +37,7 @@ public class PaymentChangeTransactionTimestampActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentChangeTransactionTimestampActionBuilder timestamp(final java.time.ZonedDateTime timestamp) {

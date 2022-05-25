@@ -33,14 +33,14 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>>
+     *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the DiscountCode.</p>>
+     *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
      */
     @Valid
     @JsonProperty("fields")

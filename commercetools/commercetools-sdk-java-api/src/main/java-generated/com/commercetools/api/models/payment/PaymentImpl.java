@@ -90,7 +90,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Payment.</p>>
+     *  <p>Unique identifier of the Payment.</p>
      */
 
     public String getId() {
@@ -98,7 +98,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -106,7 +106,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -114,7 +114,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -122,7 +122,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -130,7 +130,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -138,7 +138,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>A reference to the customer this payment belongs to.</p>>
+     *  <p>A reference to the customer this payment belongs to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -146,7 +146,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>>
+     *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
      */
 
     public String getAnonymousId() {
@@ -154,7 +154,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>>
+     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
      */
 
     public String getInterfaceId() {
@@ -162,7 +162,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>>
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
@@ -170,7 +170,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
@@ -178,7 +178,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.payment.PaymentStatus getPaymentStatus() {
@@ -186,7 +186,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>>
+     *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
@@ -194,7 +194,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>>
+     *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
      */
 
     public java.util.List<com.commercetools.api.models.type.CustomFields> getInterfaceInteractions() {
@@ -202,7 +202,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -210,7 +210,7 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Payment.</p>>
+     *  <p>User-defined unique identifier of the Payment.</p>
      */
 
     public String getKey() {

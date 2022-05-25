@@ -29,7 +29,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
@@ -38,7 +38,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder state(
@@ -48,7 +48,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder state(
@@ -58,7 +58,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder plusState(
@@ -71,7 +71,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder plusState(
@@ -84,7 +84,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderImportCustomLineItemStateActionBuilder withState(

@@ -28,7 +28,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
@@ -37,7 +37,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public StagedOrderSetReturnShipmentStateActionBuilder shipmentState(

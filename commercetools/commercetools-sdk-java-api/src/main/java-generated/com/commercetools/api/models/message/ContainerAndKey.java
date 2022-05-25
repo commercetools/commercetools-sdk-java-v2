@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ContainerAndKey {
 
     /**
-     <*  <p>User-defined identifier that is unique within the given container.</p>>
+     *  <p>User-defined identifier that is unique within the given container.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Namespace to group Custom Objects.</p>>
+     *  <p>Namespace to group Custom Objects.</p>
      */
     @NotNull
     @JsonProperty("container")

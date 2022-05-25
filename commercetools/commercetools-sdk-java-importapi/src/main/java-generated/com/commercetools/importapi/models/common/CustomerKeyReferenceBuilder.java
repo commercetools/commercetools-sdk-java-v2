@@ -24,7 +24,7 @@ public class CustomerKeyReferenceBuilder implements Builder<CustomerKeyReference
     private String key;
 
     /**
-     <>
+     *
      */
 
     public CustomerKeyReferenceBuilder key(final String key) {

@@ -117,7 +117,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Address.</p>>
+     *  <p>Unique identifier of the Address.</p>
      */
 
     public String getId() {
@@ -125,7 +125,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Address.</p>>
+     *  <p>User-defined unique identifier of the Address.</p>
      */
 
     public String getKey() {
@@ -133,7 +133,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -141,7 +141,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Title of the contact, for example 'Dr.'</p>>
+     *  <p>Title of the contact, for example 'Dr.'</p>
      */
 
     public String getTitle() {
@@ -149,7 +149,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>>
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      */
 
     public String getSalutation() {
@@ -157,7 +157,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Given name (first name) of the contact.</p>>
+     *  <p>Given name (first name) of the contact.</p>
      */
 
     public String getFirstName() {
@@ -165,7 +165,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Family name (last name) of the contact.</p>>
+     *  <p>Family name (last name) of the contact.</p>
      */
 
     public String getLastName() {
@@ -173,7 +173,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the street.</p>>
+     *  <p>Name of the street.</p>
      */
 
     public String getStreetName() {
@@ -181,7 +181,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Street number.</p>>
+     *  <p>Street number.</p>
      */
 
     public String getStreetNumber() {
@@ -189,7 +189,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Further information on the street address.</p>>
+     *  <p>Further information on the street address.</p>
      */
 
     public String getAdditionalStreetInfo() {
@@ -197,7 +197,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Postal code.</p>>
+     *  <p>Postal code.</p>
      */
 
     public String getPostalCode() {
@@ -205,7 +205,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the city.</p>>
+     *  <p>Name of the city.</p>
      */
 
     public String getCity() {
@@ -213,7 +213,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the region.</p>>
+     *  <p>Name of the region.</p>
      */
 
     public String getRegion() {
@@ -221,7 +221,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the state, for example, Colorado.</p>>
+     *  <p>Name of the state, for example, Colorado.</p>
      */
 
     public String getState() {
@@ -229,7 +229,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the company.</p>>
+     *  <p>Name of the company.</p>
      */
 
     public String getCompany() {
@@ -237,7 +237,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Name of the department.</p>>
+     *  <p>Name of the department.</p>
      */
 
     public String getDepartment() {
@@ -245,7 +245,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Number or name of the building.</p>>
+     *  <p>Number or name of the building.</p>
      */
 
     public String getBuilding() {
@@ -253,7 +253,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Number or name of the apartment.</p>>
+     *  <p>Number or name of the apartment.</p>
      */
 
     public String getApartment() {
@@ -261,7 +261,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Post office box number.</p>>
+     *  <p>Post office box number.</p>
      */
 
     public String getPOBox() {
@@ -269,7 +269,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Phone number of the contact.</p>>
+     *  <p>Phone number of the contact.</p>
      */
 
     public String getPhone() {
@@ -277,7 +277,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Mobile phone number of the contact.</p>>
+     *  <p>Mobile phone number of the contact.</p>
      */
 
     public String getMobile() {
@@ -285,7 +285,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Email address of the contact.</p>>
+     *  <p>Email address of the contact.</p>
      */
 
     public String getEmail() {
@@ -293,7 +293,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Fax number of the contact.</p>>
+     *  <p>Fax number of the contact.</p>
      */
 
     public String getFax() {
@@ -301,7 +301,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>Further information on the Address.</p>>
+     *  <p>Further information on the Address.</p>
      */
 
     public String getAdditionalAddressInfo() {
@@ -309,7 +309,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     }
 
     /**
-     <*  <p>ID for the contact used in an external system.</p>>
+     *  <p>ID for the contact used in an external system.</p>
      */
 
     public String getExternalId() {

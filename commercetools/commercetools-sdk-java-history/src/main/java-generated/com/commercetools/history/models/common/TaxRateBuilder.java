@@ -43,7 +43,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     /**
-     <*  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>>
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
      */
 
     public TaxRateBuilder id(final String id) {
@@ -52,7 +52,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder name(final String name) {
@@ -61,7 +61,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <*  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>>
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
      */
 
     public TaxRateBuilder amount(final Integer amount) {
@@ -70,7 +70,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
@@ -79,7 +79,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public TaxRateBuilder country(final String country) {
@@ -88,7 +88,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <*  <p>The state in the country</p>>
+     *  <p>The state in the country</p>
      */
 
     public TaxRateBuilder state(final String state) {
@@ -97,7 +97,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate... subRates) {
@@ -106,7 +106,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder subRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
@@ -115,7 +115,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder plusSubRates(final com.commercetools.history.models.common.SubRate... subRates) {
@@ -127,7 +127,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder plusSubRates(
@@ -140,7 +140,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-     <>
+     *
      */
 
     public TaxRateBuilder withSubRates(

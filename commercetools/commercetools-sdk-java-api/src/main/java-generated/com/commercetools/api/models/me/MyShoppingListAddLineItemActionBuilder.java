@@ -42,7 +42,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -60,7 +60,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -69,7 +69,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -78,7 +78,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -87,7 +87,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(
@@ -97,7 +97,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public MyShoppingListAddLineItemActionBuilder custom(

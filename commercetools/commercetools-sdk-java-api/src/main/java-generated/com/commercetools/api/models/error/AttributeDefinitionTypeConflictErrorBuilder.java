@@ -35,7 +35,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     private String conflictingAttributeName;
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeId(final String conflictingProductTypeId) {
@@ -74,7 +74,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingProductTypeName(
@@ -84,7 +84,7 @@ public class AttributeDefinitionTypeConflictErrorBuilder implements Builder<Attr
     }
 
     /**
-     <>
+     *
      */
 
     public AttributeDefinitionTypeConflictErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {

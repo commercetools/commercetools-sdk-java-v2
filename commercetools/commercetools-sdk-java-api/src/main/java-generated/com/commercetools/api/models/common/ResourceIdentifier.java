@@ -78,21 +78,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceIdentifier {
 
     /**
-     <*  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>>
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
      */
 
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>>
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
      */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>>
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
      */
 
     @JsonProperty("key")

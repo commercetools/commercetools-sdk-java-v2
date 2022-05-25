@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SetCartScoreShippingRateInputValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("score")

@@ -30,28 +30,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LastModifiedBy extends ClientLogging {
 
     /**
-     <*  <p><code>id</code> of the APIClient which modified the resource.</p>>
+     *  <p><code>id</code> of the APIClient which modified the resource.</p>
      */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-     <*  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
      */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-     <*  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>>
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     <*  <p>Indicates the anonymous session during which the resource was modified.</p>>
+     *  <p>Indicates the anonymous session during which the resource was modified.</p>
      */
 
     @JsonProperty("anonymousId")

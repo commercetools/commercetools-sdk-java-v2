@@ -33,7 +33,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     /**
-     <*  <p>The ID of the ImportOperation.</p>>
+     *  <p>The ID of the ImportOperation.</p>
      */
 
     public ImportOperationStatusBuilder operationId(@Nullable final String operationId) {
@@ -42,7 +42,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation state of the ImportOperation.</p>>
+     *  <p>The validation state of the ImportOperation.</p>
      */
 
     public ImportOperationStatusBuilder state(
@@ -52,7 +52,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public ImportOperationStatusBuilder errors(
@@ -62,7 +62,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public ImportOperationStatusBuilder errors(
@@ -72,7 +72,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public ImportOperationStatusBuilder plusErrors(
@@ -85,7 +85,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public ImportOperationStatusBuilder plusErrors(
@@ -98,7 +98,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     <*  <p>The validation errors for the ImportOperation. See Errors.</p>>
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
      */
 
     public ImportOperationStatusBuilder withErrors(

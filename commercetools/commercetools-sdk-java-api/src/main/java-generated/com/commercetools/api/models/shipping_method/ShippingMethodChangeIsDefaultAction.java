@@ -32,7 +32,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     String CHANGE_IS_DEFAULT = "changeIsDefault";
 
     /**
-     <*  <p>Only one ShippingMethod in a project can be default.</p>>
+     *  <p>Only one ShippingMethod in a project can be default.</p>
      */
     @NotNull
     @JsonProperty("isDefault")

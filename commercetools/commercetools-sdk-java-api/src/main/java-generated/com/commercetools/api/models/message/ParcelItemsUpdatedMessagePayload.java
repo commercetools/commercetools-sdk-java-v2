@@ -36,21 +36,21 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
     public List<DeliveryItem> getItems();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

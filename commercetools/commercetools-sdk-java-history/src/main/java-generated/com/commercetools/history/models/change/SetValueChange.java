@@ -32,28 +32,28 @@ public interface SetValueChange extends Change {
     String SET_VALUE_CHANGE = "SetValueChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setValue</code> on custom objects</p>>
+     *  <p>Update action for <code>setValue</code> on custom objects</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

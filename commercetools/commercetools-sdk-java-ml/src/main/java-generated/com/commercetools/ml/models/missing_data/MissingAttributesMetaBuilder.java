@@ -33,7 +33,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     private java.util.List<String> productTypeIds;
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesMetaBuilder productLevel(
@@ -44,7 +44,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesMetaBuilder productLevel(
@@ -54,7 +54,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesMetaBuilder variantLevel(
@@ -65,7 +65,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <>
+     *
      */
 
     public MissingAttributesMetaBuilder variantLevel(
@@ -75,7 +75,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
      */
 
     public MissingAttributesMetaBuilder productTypeIds(@Nullable final String... productTypeIds) {
@@ -84,7 +84,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
      */
 
     public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
@@ -93,7 +93,7 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     }
 
     /**
-     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
      */
 
     public MissingAttributesMetaBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {

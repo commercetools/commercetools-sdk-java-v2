@@ -32,7 +32,7 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("email")

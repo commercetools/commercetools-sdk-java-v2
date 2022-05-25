@@ -40,7 +40,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
@@ -48,7 +48,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     <*  <p>Identifies, which return tracking ID is connected to this particular return.</p>>
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -56,7 +56,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.time.ZonedDateTime getReturnDate() {

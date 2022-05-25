@@ -38,7 +38,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
     private String assetKey;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetKeyActionBuilder variantId(@Nullable final Long variantId) {
@@ -47,7 +47,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetKeyActionBuilder sku(@Nullable final String sku) {
@@ -56,7 +56,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetKeyActionBuilder staged(@Nullable final Boolean staged) {
@@ -65,7 +65,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAssetKeyActionBuilder assetId(final String assetId) {
@@ -74,7 +74,7 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
     }
 
     /**
-     <*  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>>
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
      */
 
     public ProductSetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {

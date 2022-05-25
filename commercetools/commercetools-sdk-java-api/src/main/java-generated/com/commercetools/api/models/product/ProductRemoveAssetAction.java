@@ -29,35 +29,35 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
     String REMOVE_ASSET = "removeAsset";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("assetKey")

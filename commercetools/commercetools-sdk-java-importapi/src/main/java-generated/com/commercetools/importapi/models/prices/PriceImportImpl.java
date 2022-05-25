@@ -79,7 +79,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -87,7 +87,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.value</code>.</p>>
+     *  <p>Maps to <code>Price.value</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -95,7 +95,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.county</code>.</p>>
+     *  <p>Maps to <code>Price.county</code>.</p>
      */
 
     public String getCountry() {
@@ -103,7 +103,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -111,7 +111,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -119,7 +119,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -127,7 +127,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>>
+     *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -135,7 +135,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
 
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
@@ -143,7 +143,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>>
+     *  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      */
 
     public Boolean getPublish() {
@@ -151,7 +151,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
@@ -159,7 +159,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The custom fields for this price.</p>>
+     *  <p>The custom fields for this price.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -167,7 +167,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -175,7 +175,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     <*  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
+     *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {

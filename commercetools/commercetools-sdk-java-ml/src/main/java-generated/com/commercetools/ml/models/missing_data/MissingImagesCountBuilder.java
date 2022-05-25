@@ -27,7 +27,7 @@ public class MissingImagesCountBuilder implements Builder<MissingImagesCount> {
     private Long total;
 
     /**
-     <>
+     *
      */
 
     public MissingImagesCountBuilder missingImages(final Long missingImages) {
@@ -36,7 +36,7 @@ public class MissingImagesCountBuilder implements Builder<MissingImagesCount> {
     }
 
     /**
-     <*  <p>Number of products scanned.</p>>
+     *  <p>Number of products scanned.</p>
      */
 
     public MissingImagesCountBuilder total(final Long total) {

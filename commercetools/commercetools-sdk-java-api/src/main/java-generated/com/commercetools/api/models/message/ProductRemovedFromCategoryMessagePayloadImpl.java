@@ -41,7 +41,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -49,7 +49,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-     <*  <p>Reference to a Category.</p>>
+     *  <p>Reference to a Category.</p>
      */
 
     public com.commercetools.api.models.category.CategoryReference getCategory() {
@@ -57,7 +57,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getStaged() {

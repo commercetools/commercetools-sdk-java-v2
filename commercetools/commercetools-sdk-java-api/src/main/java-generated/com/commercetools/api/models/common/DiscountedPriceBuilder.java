@@ -28,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
     /**
-     <*  <p>Money value of the discounted price.</p>>
+     *  <p>Money value of the discounted price.</p>
      */
 
     public DiscountedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
@@ -37,7 +37,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <*  <p>Money value of the discounted price.</p>>
+     *  <p>Money value of the discounted price.</p>
      */
 
     public DiscountedPriceBuilder value(
@@ -47,7 +47,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <*  <p>ProductDiscount related to the discounted price.</p>>
+     *  <p>ProductDiscount related to the discounted price.</p>
      */
 
     public DiscountedPriceBuilder discount(
@@ -59,7 +59,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     <*  <p>ProductDiscount related to the discounted price.</p>>
+     *  <p>ProductDiscount related to the discounted price.</p>
      */
 
     public DiscountedPriceBuilder discount(

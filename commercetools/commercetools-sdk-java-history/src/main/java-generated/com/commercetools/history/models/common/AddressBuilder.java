@@ -96,7 +96,7 @@ public class AddressBuilder implements Builder<Address> {
     private String externalId;
 
     /**
-     <*  <p>Unique ID of the Address.</p>>
+     *  <p>Unique ID of the Address.</p>
      */
 
     public AddressBuilder id(final String id) {
@@ -105,7 +105,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder key(final String key) {
@@ -114,7 +114,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder title(final String title) {
@@ -123,7 +123,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder salutation(final String salutation) {
@@ -132,7 +132,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder firstName(final String firstName) {
@@ -141,7 +141,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder lastName(final String lastName) {
@@ -150,7 +150,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder streetName(final String streetName) {
@@ -159,7 +159,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder streetNumber(final String streetNumber) {
@@ -168,7 +168,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder additionalStreetInfo(final String additionalStreetInfo) {
@@ -177,7 +177,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder postalCode(final String postalCode) {
@@ -186,7 +186,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder city(final String city) {
@@ -195,7 +195,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder region(final String region) {
@@ -204,7 +204,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder state(final String state) {
@@ -213,7 +213,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public AddressBuilder country(final String country) {
@@ -222,7 +222,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder company(final String company) {
@@ -231,7 +231,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder department(final String department) {
@@ -240,7 +240,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder building(final String building) {
@@ -249,7 +249,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder apartment(final String apartment) {
@@ -258,7 +258,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder pOBox(final String pOBox) {
@@ -267,7 +267,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder phone(final String phone) {
@@ -276,7 +276,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder mobile(final String mobile) {
@@ -285,7 +285,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder email(final String email) {
@@ -294,7 +294,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder fax(final String fax) {
@@ -303,7 +303,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder additionalAddressInfo(final String additionalAddressInfo) {
@@ -312,7 +312,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     <>
+     *
      */
 
     public AddressBuilder externalId(final String externalId) {

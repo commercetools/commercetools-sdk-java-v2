@@ -34,14 +34,14 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     String STATE = "state";
 
     /**
-     <*  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
      */
     @Valid
     @JsonProperty("obj")
     public State getObj();
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
+     *  <p>Unique identifier of the referenced State.</p>
      */
     @NotNull
     @JsonProperty("id")

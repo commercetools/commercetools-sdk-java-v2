@@ -32,7 +32,7 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     String CHANGE_STATUS = "changeStatus";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("status")

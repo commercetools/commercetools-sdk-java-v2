@@ -38,28 +38,28 @@ public interface SetOrderTaxedPriceChange extends Change {
     String SET_ORDER_TAXED_PRICE_CHANGE = "SetOrderTaxedPriceChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setOrderTaxedPrice</code></p>>
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -67,7 +67,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     public TaxedItemPrice getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

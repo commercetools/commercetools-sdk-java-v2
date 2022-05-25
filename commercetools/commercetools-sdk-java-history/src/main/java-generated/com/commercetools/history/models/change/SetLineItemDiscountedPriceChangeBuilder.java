@@ -37,7 +37,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
 
     /**
-     <*  <p>Update action for <code>setLineItemDiscountedPrice</code></p>>
+     *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
      */
 
     public SetLineItemDiscountedPriceChangeBuilder change(final String change) {
@@ -46,7 +46,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
@@ -56,7 +56,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder lineItem(
@@ -66,7 +66,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder variant(final String variant) {
@@ -75,7 +75,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
@@ -86,7 +86,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder nextValue(
@@ -96,7 +96,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder previousValue(
@@ -107,7 +107,7 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     <>
+     *
      */
 
     public SetLineItemDiscountedPriceChangeBuilder previousValue(

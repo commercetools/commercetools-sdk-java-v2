@@ -31,7 +31,7 @@ public class DestinationImpl implements Destination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

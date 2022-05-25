@@ -63,7 +63,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder createdBy(
@@ -129,7 +129,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder createdBy(
@@ -139,7 +139,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +148,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -157,7 +157,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DeliveryItemsUpdatedMessageBuilder resource(
@@ -167,7 +167,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -176,7 +176,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -188,7 +188,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,7 +198,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder deliveryId(final String deliveryId) {
@@ -207,7 +207,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -216,7 +216,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder items(
@@ -226,7 +226,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder plusItems(
@@ -239,7 +239,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder plusItems(
@@ -252,7 +252,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder withItems(
@@ -263,7 +263,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder oldItems(
@@ -273,7 +273,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder oldItems(
@@ -283,7 +283,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder plusOldItems(
@@ -296,7 +296,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder plusOldItems(
@@ -309,7 +309,7 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryItemsUpdatedMessageBuilder withOldItems(

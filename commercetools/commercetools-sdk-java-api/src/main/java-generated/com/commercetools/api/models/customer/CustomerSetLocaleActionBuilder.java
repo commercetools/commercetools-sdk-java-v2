@@ -26,7 +26,7 @@ public class CustomerSetLocaleActionBuilder implements Builder<CustomerSetLocale
     private String locale;
 
     /**
-     <>
+     *
      */
 
     public CustomerSetLocaleActionBuilder locale(@Nullable final String locale) {

@@ -33,7 +33,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     private java.time.ZonedDateTime returnDate;
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
@@ -42,7 +42,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder items(final com.commercetools.api.models.order.ReturnItemDraft... items) {
@@ -51,7 +51,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder items(
@@ -61,7 +61,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder plusItems(
@@ -74,7 +74,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder plusItems(
@@ -87,7 +87,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder withItems(
@@ -98,7 +98,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     <>
+     *
      */
 
     public OrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {

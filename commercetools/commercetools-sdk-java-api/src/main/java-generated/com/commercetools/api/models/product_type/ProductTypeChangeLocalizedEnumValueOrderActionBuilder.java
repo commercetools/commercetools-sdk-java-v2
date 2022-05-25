@@ -29,7 +29,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName(final String attributeName) {
@@ -38,7 +38,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -48,7 +48,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values(
@@ -58,7 +58,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -71,7 +71,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder plusValues(
@@ -85,7 +85,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder withValues(

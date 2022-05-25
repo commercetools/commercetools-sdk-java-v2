@@ -34,14 +34,14 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     String ABSOLUTE = "absolute";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

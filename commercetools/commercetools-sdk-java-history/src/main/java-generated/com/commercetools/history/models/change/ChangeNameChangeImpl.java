@@ -43,7 +43,7 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeName</code></p>>
+     *  <p>Shape of the action for <code>changeName</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

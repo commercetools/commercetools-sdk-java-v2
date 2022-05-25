@@ -23,7 +23,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     <*  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>>
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
      */
 
     public FieldContainerBuilder values(final Map<String, java.lang.Object> values) {
@@ -32,7 +32,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-     <*  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>>
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
      */
 
     public FieldContainerBuilder addValue(final String key, final java.lang.Object value) {

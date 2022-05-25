@@ -34,7 +34,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     String PREVIEW_FAILURE = "PreviewFailure";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

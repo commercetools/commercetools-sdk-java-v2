@@ -42,7 +42,7 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -50,7 +50,7 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
     }
 
     /**
-     <*  <p>Update action for <code>removeProperty</code> on custom objects</p>>
+     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
      */
 
     public String getChange() {
@@ -58,7 +58,7 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
     }
 
     /**
-     <*  <p>Value path to the property that was removed</p>>
+     *  <p>Value path to the property that was removed</p>
      */
 
     public String getPath() {
@@ -66,7 +66,7 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getPreviousValue() {

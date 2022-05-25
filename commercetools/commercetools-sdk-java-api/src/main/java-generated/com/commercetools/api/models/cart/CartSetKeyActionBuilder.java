@@ -26,7 +26,7 @@ public class CartSetKeyActionBuilder implements Builder<CartSetKeyAction> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public CartSetKeyActionBuilder key(@Nullable final String key) {

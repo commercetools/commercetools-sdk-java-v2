@@ -30,7 +30,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     private com.commercetools.api.models.order.Order obj;
 
     /**
-     <*  <p>Unique ID of the referenced resource.</p>>
+     *  <p>Unique ID of the referenced resource.</p>
      */
 
     public OrderReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     <>
+     *
      */
 
     public OrderReferenceBuilder obj(@Nullable final com.commercetools.api.models.order.Order obj) {

@@ -35,7 +35,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     private Boolean updateProductData;
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSigninBuilder email(final String email) {
@@ -44,7 +44,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSigninBuilder password(final String password) {
@@ -53,7 +53,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSigninBuilder activeCartSignInMode(
@@ -63,7 +63,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     <>
+     *
      */
 
     public MyCustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {

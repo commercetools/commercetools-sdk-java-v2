@@ -73,7 +73,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public Integer getLimit() {
@@ -81,7 +81,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public Integer getOffset() {
@@ -89,7 +89,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>If true, searches data from staged products in addition to published products.</p>>
+     *  <p>If true, searches data from staged products in addition to published products.</p>
      */
 
     public Boolean getStaged() {
@@ -97,7 +97,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Maximum number of products to scan.</p>>
+     *  <p>Maximum number of products to scan.</p>
      */
 
     public Integer getProductSetLimit() {
@@ -105,7 +105,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>If true, searches all product variants. If false, only searches master variants.</p>>
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
      */
 
     public Boolean getIncludeVariants() {
@@ -113,7 +113,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>>
+     *  <p>Minimum attribute coverage of variants to display, applied to both coverage types.</p>
      */
 
     public Double getCoverageMin() {
@@ -121,7 +121,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>>
+     *  <p>Maximum attribute coverage of variants to display, applied to both coverage types.</p>
      */
 
     public Double getCoverageMax() {
@@ -129,7 +129,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>>
+     *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
      */
 
     public String getSortBy() {
@@ -137,7 +137,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>>
+     *  <p>If true, the <code>missingAttributeNames</code> will be included in the results.</p>
      */
 
     public Boolean getShowMissingAttributeNames() {
@@ -145,7 +145,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>>
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
      */
 
     public java.util.List<String> getProductIds() {
@@ -153,7 +153,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>>
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
      */
 
     public java.util.List<String> getProductTypeIds() {
@@ -161,7 +161,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-     <*  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>>
+     *  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
      */
 
     public String getAttributeName() {

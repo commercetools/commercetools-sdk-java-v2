@@ -24,7 +24,7 @@ public class CartDiscountLineItemsTargetBuilder implements Builder<CartDiscountL
     private String predicate;
 
     /**
-     <>
+     *  <p>Valid LineItem target predicate.</p>
      */
 
     public CartDiscountLineItemsTargetBuilder predicate(final String predicate) {

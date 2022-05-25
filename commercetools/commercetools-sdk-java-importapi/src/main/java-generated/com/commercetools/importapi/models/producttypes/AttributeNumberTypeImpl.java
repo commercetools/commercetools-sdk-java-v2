@@ -27,7 +27,7 @@ public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

@@ -27,7 +27,7 @@ public class ProductRevertStagedChangesActionImpl implements ProductRevertStaged
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

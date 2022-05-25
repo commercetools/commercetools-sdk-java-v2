@@ -46,7 +46,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -54,7 +54,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAccessKey() {
@@ -62,7 +62,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAccessSecret() {
@@ -70,7 +70,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getQueueUrl() {
@@ -78,7 +78,7 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getRegion() {

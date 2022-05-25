@@ -54,7 +54,7 @@ public interface MyCustomerUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<MyCustomerUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

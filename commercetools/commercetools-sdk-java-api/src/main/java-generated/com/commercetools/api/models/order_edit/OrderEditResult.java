@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderEditResult {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")

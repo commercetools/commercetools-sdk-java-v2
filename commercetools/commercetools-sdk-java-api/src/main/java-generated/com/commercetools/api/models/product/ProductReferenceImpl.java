@@ -40,7 +40,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Product.</p>>
+     *  <p>Unique identifier of the referenced Product.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
      */
 
     public com.commercetools.api.models.product.Product getObj() {

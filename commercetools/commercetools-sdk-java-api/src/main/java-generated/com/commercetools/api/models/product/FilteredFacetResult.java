@@ -32,14 +32,14 @@ public interface FilteredFacetResult extends FacetResult {
     String FILTER = "filter";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("productCount")

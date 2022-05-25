@@ -34,7 +34,7 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
     String SET_STAGED_ACTIONS = "setStagedActions";
 
     /**
-     <*  <p>The actions to edit the <code>resource</code>.</p>>
+     *  <p>The actions to edit the <code>resource</code>.</p>
      */
     @NotNull
     @Valid

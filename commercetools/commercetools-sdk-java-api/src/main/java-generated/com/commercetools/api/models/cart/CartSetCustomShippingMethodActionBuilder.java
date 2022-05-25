@@ -36,7 +36,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
@@ -45,7 +45,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingRate(
@@ -56,7 +56,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomShippingMethodActionBuilder shippingRate(
@@ -66,7 +66,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public CartSetCustomShippingMethodActionBuilder taxCategory(
@@ -78,7 +78,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public CartSetCustomShippingMethodActionBuilder taxCategory(
@@ -88,7 +88,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomShippingMethodActionBuilder externalTaxRate(
@@ -99,7 +99,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
-     <>
+     *
      */
 
     public CartSetCustomShippingMethodActionBuilder externalTaxRate(

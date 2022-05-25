@@ -33,14 +33,14 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     String SET_PARCEL_MEASUREMENTS = "setParcelMeasurements";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")

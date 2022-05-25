@@ -33,14 +33,14 @@ public interface ProductTypeUpdate extends
         com.commercetools.api.models.ResourceUpdate<ProductTypeUpdate, ProductTypeUpdateAction, ProductTypeUpdateBuilder> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

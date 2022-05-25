@@ -57,7 +57,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -151,7 +151,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public InventoryEntryCreatedMessageBuilder resource(
@@ -161,7 +161,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -170,7 +170,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -182,7 +182,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder resourceUserProvidedIdentifiers(
@@ -192,7 +192,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder inventoryEntry(
@@ -202,7 +202,7 @@ public class InventoryEntryCreatedMessageBuilder implements Builder<InventoryEnt
     }
 
     /**
-     <>
+     *
      */
 
     public InventoryEntryCreatedMessageBuilder inventoryEntry(

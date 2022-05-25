@@ -32,7 +32,7 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     String SET_LOCALIZED_DESCRIPTION = "setLocalizedDescription";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("localizedDescription")

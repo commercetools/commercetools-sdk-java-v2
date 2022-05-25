@@ -31,7 +31,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingMethod</code></p>>
+     *  <p>Update action for <code>setShippingMethod</code></p>
      */
 
     public SetShippingMethodChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodChangeBuilder nextValue(
@@ -52,7 +52,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodChangeBuilder previousValue(
@@ -74,7 +74,7 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingMethodChangeBuilder previousValue(

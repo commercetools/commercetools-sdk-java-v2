@@ -25,7 +25,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
     private com.commercetools.api.models.zone.Location location;
 
     /**
-     <*  <p>Location to be removed from the Zone.</p>>
+     *  <p>Location to be removed from the Zone.</p>
      */
 
     public ZoneRemoveLocationActionBuilder location(
@@ -35,7 +35,7 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
     }
 
     /**
-     <*  <p>Location to be removed from the Zone.</p>>
+     *  <p>Location to be removed from the Zone.</p>
      */
 
     public ZoneRemoveLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {

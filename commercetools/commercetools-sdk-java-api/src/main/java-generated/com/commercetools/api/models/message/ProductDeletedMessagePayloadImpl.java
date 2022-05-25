@@ -39,7 +39,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -55,7 +55,7 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {

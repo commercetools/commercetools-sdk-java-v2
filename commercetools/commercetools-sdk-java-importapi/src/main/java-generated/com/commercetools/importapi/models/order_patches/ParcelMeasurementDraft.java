@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelMeasurementDraft {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")

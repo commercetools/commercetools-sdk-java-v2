@@ -36,14 +36,14 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")
     public String getValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,7 +59,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public List<ShippingRatePriceTier> getTiers();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isMatching")

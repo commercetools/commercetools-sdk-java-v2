@@ -25,7 +25,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     /**
-     <>
+     *
      */
 
     public ReferenceSetFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference... value) {
@@ -34,7 +34,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceSetFieldBuilder value(
@@ -44,7 +44,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceSetFieldBuilder plusValue(final com.commercetools.importapi.models.common.KeyReference... value) {
@@ -56,7 +56,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceSetFieldBuilder plusValue(
@@ -69,7 +69,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     <>
+     *
      */
 
     public ReferenceSetFieldBuilder withValue(

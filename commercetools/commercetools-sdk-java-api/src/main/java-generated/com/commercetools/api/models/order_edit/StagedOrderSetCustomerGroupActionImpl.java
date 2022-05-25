@@ -36,7 +36,7 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
     }
 
     /**
-     <*  <p>ResourceIdentifier to a CustomerGroup.</p>>
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

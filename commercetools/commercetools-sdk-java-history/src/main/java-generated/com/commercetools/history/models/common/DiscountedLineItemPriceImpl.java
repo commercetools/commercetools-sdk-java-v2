@@ -35,7 +35,7 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getValue() {
@@ -43,7 +43,7 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> getIncludedDiscounts() {

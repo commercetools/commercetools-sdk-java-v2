@@ -46,126 +46,126 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
         com.commercetools.api.models.Customizable<Review> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Review.</p>>
+     *  <p>Unique identifier of the Review.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>The current version of the review.</p>>
+     *  <p>The current version of the review.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-     <*  <p>User-defined unique identifier of the Review.</p>>
+     *  <p>User-defined unique identifier of the Review.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("uniquenessValue")
     public String getUniquenessValue();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("authorName")
     public String getAuthorName();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("text")
     public String getText();
 
     /**
-     <*  <p>Identifies the target of the review. Can be a Product or a Channel</p>>
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
      */
 
     @JsonProperty("target")
     public Object getTarget();
 
     /**
-     <*  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>>
+     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
 
     /**
-     <*  <p>Number between -100 and 100 included.</p>>
+     *  <p>Number between -100 and 100 included.</p>
      */
 
     @JsonProperty("rating")
     public Integer getRating();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     <*  <p>The customer who created the review.</p>>
+     *  <p>The customer who created the review.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("custom")

@@ -37,21 +37,21 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     String CHANGE_SHOPPING_LIST_LINE_ITEM_QUANTITY_CHANGE = "ChangeShoppingListLineItemQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public ShoppingListLineItemValue getLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

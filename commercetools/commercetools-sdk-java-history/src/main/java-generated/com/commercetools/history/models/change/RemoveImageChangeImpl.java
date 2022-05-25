@@ -47,7 +47,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
-     <*  <p>Update actions for removing images</p>>
+     *  <p>Update actions for removing images</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getPreviousValue() {
@@ -79,7 +79,7 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.Image> getNextValue() {

@@ -32,7 +32,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
     private Long version;
 
     /**
-     <>
+     *
      */
 
     public CustomerResetPasswordBuilder tokenValue(final String tokenValue) {
@@ -41,7 +41,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerResetPasswordBuilder newPassword(final String newPassword) {
@@ -50,7 +50,7 @@ public class CustomerResetPasswordBuilder implements Builder<CustomerResetPasswo
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerResetPasswordBuilder version(@Nullable final Long version) {

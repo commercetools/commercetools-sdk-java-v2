@@ -26,7 +26,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     private String customerId;
 
     /**
-     <>
+     *
      */
 
     public OrderSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {

@@ -29,14 +29,14 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     String REMOVE_BILLING_ADDRESS_ID = "removeBillingAddressId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

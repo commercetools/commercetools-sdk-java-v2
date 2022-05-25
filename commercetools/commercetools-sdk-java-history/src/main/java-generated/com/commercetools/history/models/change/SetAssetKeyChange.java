@@ -37,21 +37,21 @@ public interface SetAssetKeyChange extends Change {
     String SET_ASSET_KEY_CHANGE = "SetAssetKeyChange";
 
     /**
-     <*  <p>Update action for <code>setAssetKey</code></p>>
+     *  <p>Update action for <code>setAssetKey</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface SetAssetKeyChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")

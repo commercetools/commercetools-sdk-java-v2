@@ -30,7 +30,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     String RESOURCE_NOT_FOUND = "ResourceNotFound";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("resource")

@@ -36,21 +36,21 @@ public interface ChangeSlugChange extends Change {
     String CHANGE_SLUG_CHANGE = "ChangeSlugChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>changeSlug</code></p>>
+     *  <p>Shape of the action for <code>changeSlug</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeSlugChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -44,7 +44,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -52,7 +52,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {
@@ -60,7 +60,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>>
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -68,7 +68,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the CustomLineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

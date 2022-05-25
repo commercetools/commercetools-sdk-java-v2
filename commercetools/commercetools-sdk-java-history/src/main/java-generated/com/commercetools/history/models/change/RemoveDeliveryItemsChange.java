@@ -35,21 +35,21 @@ public interface RemoveDeliveryItemsChange extends Change {
     String REMOVE_DELIVERY_ITEMS_CHANGE = "RemoveDeliveryItemsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>removeDelivery</code></p>>
+     *  <p>Update action for <code>removeDelivery</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

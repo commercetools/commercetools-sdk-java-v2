@@ -35,7 +35,7 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -43,7 +43,7 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

@@ -30,7 +30,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     private com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer;
 
     /**
-     <>
+     *
      */
 
     public SearchKeywordBuilder text(final String text) {
@@ -39,7 +39,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     <*  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>>
+     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
      */
 
     public SearchKeywordBuilder suggestTokenizer(
@@ -49,7 +49,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     <*  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>>
+     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
      */
 
     public SearchKeywordBuilder suggestTokenizer(

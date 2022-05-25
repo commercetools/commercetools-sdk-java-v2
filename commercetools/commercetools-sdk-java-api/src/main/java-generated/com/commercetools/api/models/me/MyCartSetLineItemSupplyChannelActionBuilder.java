@@ -30,7 +30,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     <>
+     *
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
@@ -39,7 +39,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(
@@ -50,7 +50,7 @@ public class MyCartSetLineItemSupplyChannelActionBuilder implements Builder<MyCa
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MyCartSetLineItemSupplyChannelActionBuilder supplyChannel(

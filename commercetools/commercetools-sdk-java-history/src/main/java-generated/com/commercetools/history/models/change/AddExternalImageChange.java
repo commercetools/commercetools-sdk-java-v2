@@ -37,28 +37,28 @@ public interface AddExternalImageChange extends Change {
     String ADD_EXTERNAL_IMAGE_CHANGE = "AddExternalImageChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update actions for adding an external image</p>>
+     *  <p>Update actions for adding an external image</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("catalogData")
     public String getCatalogData();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface AddExternalImageChange extends Change {
     public List<Image> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

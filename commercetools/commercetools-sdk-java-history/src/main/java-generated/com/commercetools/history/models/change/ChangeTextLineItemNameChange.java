@@ -38,21 +38,21 @@ public interface ChangeTextLineItemNameChange extends Change {
     String CHANGE_TEXT_LINE_ITEM_NAME_CHANGE = "ChangeTextLineItemNameChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeTextLineItemName</code></p>>
+     *  <p>Update action for <code>changeTextLineItemName</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface ChangeTextLineItemNameChange extends Change {
     public TextLineItemValue getTextLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface ChangeTextLineItemNameChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -36,7 +36,7 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -44,7 +44,7 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {

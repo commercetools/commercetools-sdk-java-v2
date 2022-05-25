@@ -24,7 +24,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     private java.util.List<String> fieldNames;
 
     /**
-     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final String... fieldNames) {
@@ -33,7 +33,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     }
 
     /**
-     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final java.util.List<String> fieldNames) {
@@ -42,7 +42,7 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
     }
 
     /**
-     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      */
 
     public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames(final String... fieldNames) {

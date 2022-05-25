@@ -30,7 +30,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <>
+     *
      */
 
     public OrderSetDeliveryAddressActionBuilder deliveryId(final String deliveryId) {
@@ -39,7 +39,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetDeliveryAddressActionBuilder address(
@@ -49,7 +49,7 @@ public class OrderSetDeliveryAddressActionBuilder implements Builder<OrderSetDel
     }
 
     /**
-     <>
+     *
      */
 
     public OrderSetDeliveryAddressActionBuilder address(

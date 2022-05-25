@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionType {
 
     /**
-     <*  <p>The following type of Product Selections is supported:</p>>
+     *  <p>The following type of Product Selections is supported:</p>
      */
     @NotNull
     @JsonProperty("type")

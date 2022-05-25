@@ -39,7 +39,7 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {

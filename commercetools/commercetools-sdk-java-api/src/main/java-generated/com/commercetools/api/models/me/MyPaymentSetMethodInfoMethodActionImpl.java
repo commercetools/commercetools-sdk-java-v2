@@ -35,7 +35,7 @@ public class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMetho
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMetho
     }
 
     /**
-     <>
+     *
      */
 
     public String getMethod() {

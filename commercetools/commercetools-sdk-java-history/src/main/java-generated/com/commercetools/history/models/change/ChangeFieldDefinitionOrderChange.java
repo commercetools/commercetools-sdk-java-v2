@@ -36,21 +36,21 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     String CHANGE_FIELD_DEFINITION_ORDER_CHANGE = "ChangeFieldDefinitionOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
+     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public List<FieldDefinitionOrderValue> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

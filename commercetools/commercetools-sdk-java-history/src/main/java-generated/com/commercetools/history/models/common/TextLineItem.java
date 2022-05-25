@@ -36,14 +36,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TextLineItem {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("addedAt")
     public String getAddedAt();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface TextLineItem {
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,14 +59,14 @@ public interface TextLineItem {
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface TextLineItem {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")

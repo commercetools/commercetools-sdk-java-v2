@@ -34,21 +34,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SetCartClassificationShippingRateInputValue {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

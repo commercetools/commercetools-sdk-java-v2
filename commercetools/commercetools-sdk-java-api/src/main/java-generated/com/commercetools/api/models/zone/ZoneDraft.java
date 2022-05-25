@@ -31,28 +31,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ZoneDraft {
 
     /**
-     <*  <p>User-defined unique identifier for the Zone.</p>>
+     *  <p>User-defined unique identifier for the Zone.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <*  <p>Name of the Zone.</p>>
+     *  <p>Name of the Zone.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     <*  <p>Description of the Zone.</p>>
+     *  <p>Description of the Zone.</p>
      */
 
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     <*  <p>List of locations that belong to the Zone.</p>>
+     *  <p>List of locations that belong to the Zone.</p>
      */
     @Valid
     @JsonProperty("locations")

@@ -63,7 +63,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     private com.commercetools.api.models.common.Address oldAddress;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public DeliveryAddressSetMessageBuilder id(final String id) {
@@ -72,7 +72,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -99,7 +99,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryAddressSetMessageBuilder lastModifiedBy(
@@ -109,7 +109,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryAddressSetMessageBuilder lastModifiedBy(
@@ -119,7 +119,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryAddressSetMessageBuilder createdBy(
@@ -129,7 +129,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public DeliveryAddressSetMessageBuilder createdBy(
@@ -139,7 +139,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -148,7 +148,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DeliveryAddressSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
@@ -157,7 +157,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public DeliveryAddressSetMessageBuilder resource(
@@ -167,7 +167,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -176,7 +176,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -188,7 +188,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
@@ -198,7 +198,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder deliveryId(final String deliveryId) {
@@ -207,7 +207,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder address(
@@ -217,7 +217,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder address(
@@ -227,7 +227,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder oldAddress(
@@ -237,7 +237,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     <>
+     *
      */
 
     public DeliveryAddressSetMessageBuilder oldAddress(

@@ -51,7 +51,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <*  <p>Update action for <code>setLineItemDiscountedPrice</code></p>>
+     *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -75,7 +75,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public String getVariant() {
@@ -83,7 +83,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getNextValue() {
@@ -91,7 +91,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getPreviousValue() {

@@ -43,7 +43,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -51,7 +51,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     <>
+     *
      */
 
     public String getLineItemId() {
@@ -59,7 +59,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     <*  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>>
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -67,7 +67,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the LineItem.</p>>
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

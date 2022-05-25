@@ -28,7 +28,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     private com.commercetools.history.models.common.TaxRate taxRate;
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
@@ -38,7 +38,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     <>
+     *
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
@@ -48,7 +48,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
@@ -58,7 +58,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(

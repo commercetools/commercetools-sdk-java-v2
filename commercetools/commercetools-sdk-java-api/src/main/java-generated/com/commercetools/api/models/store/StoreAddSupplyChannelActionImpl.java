@@ -36,7 +36,7 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

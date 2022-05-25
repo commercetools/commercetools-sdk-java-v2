@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<MyShoppingListDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -44,42 +44,42 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItemDraft> getLineItems();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItemDraft> getTextLineItems();
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <*  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>>
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("store")

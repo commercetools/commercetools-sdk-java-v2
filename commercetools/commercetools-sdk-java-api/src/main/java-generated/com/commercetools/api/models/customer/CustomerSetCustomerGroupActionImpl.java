@@ -36,7 +36,7 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
     }
 
     /**
-     <*  <p>If not defined, the customer group is unset.</p>>
+     *  <p>If not defined, the customer group is unset.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

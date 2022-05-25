@@ -67,7 +67,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getAddedAt() {
@@ -75,7 +75,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
@@ -83,7 +83,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {
@@ -91,7 +91,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -99,7 +99,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getProductId() {
@@ -107,7 +107,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getProductSlug() {
@@ -115,7 +115,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Reference getProductType() {
@@ -123,7 +123,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getQuantity() {
@@ -131,7 +131,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getVariant() {
@@ -139,7 +139,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getVariantId() {

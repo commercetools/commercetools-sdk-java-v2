@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportRequest {
 
     /**
-     <*  <p>The type of the import resource.</p>>
+     *  <p>The type of the import resource.</p>
      */
     @NotNull
     @JsonProperty("type")

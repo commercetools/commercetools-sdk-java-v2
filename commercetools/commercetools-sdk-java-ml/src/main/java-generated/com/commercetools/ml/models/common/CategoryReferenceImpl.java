@@ -35,7 +35,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.ml.models.common.ReferenceTypeId getTypeId() {
@@ -43,7 +43,7 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getId() {

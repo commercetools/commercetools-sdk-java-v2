@@ -43,7 +43,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeName</code></p>>
+     *  <p>Shape of the action for <code>changeName</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

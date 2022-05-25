@@ -37,35 +37,35 @@ public interface AddBillingAddressIdChange extends Change {
     String ADD_BILLING_ADDRESS_ID_CHANGE = "AddBillingAddressIdChange";
 
     /**
-     <*  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>>
+     *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")
     public List<String> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public List<String> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

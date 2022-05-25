@@ -33,21 +33,21 @@ public interface CustomObjectLabel extends Label {
     String CUSTOM_OBJECT_LABEL = "CustomObjectLabel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("container")

@@ -47,7 +47,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     <*  <p>Update action for <code>setDeliveryItems</code></p>>
+     *  <p>Update action for <code>setDeliveryItems</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -71,7 +71,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
@@ -79,7 +79,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {

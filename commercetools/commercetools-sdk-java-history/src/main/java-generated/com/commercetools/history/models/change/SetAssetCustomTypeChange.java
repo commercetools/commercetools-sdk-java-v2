@@ -38,21 +38,21 @@ public interface SetAssetCustomTypeChange extends Change {
     String SET_ASSET_CUSTOM_TYPE_CHANGE = "SetAssetCustomTypeChange";
 
     /**
-     <*  <p>Update action for <code>setAssetCustomType</code></p>>
+     *  <p>Update action for <code>setAssetCustomType</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetAssetCustomTypeChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetAssetCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

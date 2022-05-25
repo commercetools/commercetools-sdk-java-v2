@@ -27,7 +27,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     private String container;
 
     /**
-     <>
+     *
      */
 
     public CustomObjectLabelBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     <>
+     *
      */
 
     public CustomObjectLabelBuilder container(final String container) {

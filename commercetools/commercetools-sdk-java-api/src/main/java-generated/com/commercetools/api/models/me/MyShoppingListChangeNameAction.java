@@ -34,7 +34,7 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
     String CHANGE_NAME = "changeName";
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @NotNull
     @Valid

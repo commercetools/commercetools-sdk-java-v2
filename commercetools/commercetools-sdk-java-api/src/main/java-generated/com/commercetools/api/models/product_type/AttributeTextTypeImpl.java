@@ -27,7 +27,7 @@ public class AttributeTextTypeImpl implements AttributeTextType, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {

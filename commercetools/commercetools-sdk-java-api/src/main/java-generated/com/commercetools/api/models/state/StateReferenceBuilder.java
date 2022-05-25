@@ -30,7 +30,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     private com.commercetools.api.models.state.State obj;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced State.</p>>
+     *  <p>Unique identifier of the referenced State.</p>
      */
 
     public StateReferenceBuilder id(final String id) {
@@ -39,7 +39,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
      */
 
     public StateReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
      */
 
     public StateReferenceBuilder obj(@Nullable final com.commercetools.api.models.state.State obj) {

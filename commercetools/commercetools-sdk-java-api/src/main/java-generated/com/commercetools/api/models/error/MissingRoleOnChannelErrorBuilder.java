@@ -35,7 +35,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
     /**
-     <>
+     *
      */
 
     public MissingRoleOnChannelErrorBuilder message(final String message) {
@@ -44,7 +44,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     <>
+     *
      */
 
     public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -53,7 +53,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     <>
+     *
      */
 
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -65,7 +65,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -76,7 +76,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     <*  <p>ResourceIdentifier to a Channel.</p>>
+     *  <p>ResourceIdentifier to a Channel.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder channel(
@@ -86,7 +86,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     <*  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>>
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
      */
 
     public MissingRoleOnChannelErrorBuilder missingRole(

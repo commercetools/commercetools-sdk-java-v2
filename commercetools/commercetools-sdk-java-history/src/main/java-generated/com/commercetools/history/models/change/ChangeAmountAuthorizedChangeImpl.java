@@ -43,7 +43,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     <*  <p>Internal Update action for <code>changeAmountAuthorized</code></p>>
+     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {

@@ -50,7 +50,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -58,7 +58,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <*  <p>Update action for <code>setCategoryOrderHint</code></p>>
+     *  <p>Update action for <code>setCategoryOrderHint</code></p>
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -74,7 +74,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <>
+     *
      */
 
     public String getCategoryId() {
@@ -82,7 +82,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CategoryOrderHints getPreviousValue() {
@@ -90,7 +90,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.CategoryOrderHints getNextValue() {

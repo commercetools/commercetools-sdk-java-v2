@@ -35,7 +35,7 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomerId() {

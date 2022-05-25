@@ -39,7 +39,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -47,7 +47,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -55,7 +55,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

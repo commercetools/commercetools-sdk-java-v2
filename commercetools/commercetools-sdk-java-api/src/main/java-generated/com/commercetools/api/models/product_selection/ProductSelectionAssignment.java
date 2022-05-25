@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionAssignment {
 
     /**
-     <*  <p>Reference to a Product that is assigned to the ProductSelection.</p>>
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ProductSelectionAssignment {
     public ProductReference getProduct();
 
     /**
-     <*  <p>Reference to the ProductSelection that this assignment is part of.</p>>
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
      */
     @NotNull
     @Valid

@@ -29,7 +29,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
     /**
-     <>
+     *
      */
 
     public MaxResourceLimitExceededErrorBuilder message(final String message) {
@@ -38,7 +38,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     <>
+     *
      */
 
     public MaxResourceLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -47,7 +47,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     <>
+     *
      */
 
     public MaxResourceLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -59,7 +59,7 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public MaxResourceLimitExceededErrorBuilder exceededResource(

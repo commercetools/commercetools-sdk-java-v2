@@ -35,15 +35,15 @@ public interface CartValueTier extends ShippingRatePriceTier {
     String CART_VALUE = "CartValue";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("minimumCentAmount")
     public Long getMinimumCentAmount();
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface CartValueTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("isMatching")

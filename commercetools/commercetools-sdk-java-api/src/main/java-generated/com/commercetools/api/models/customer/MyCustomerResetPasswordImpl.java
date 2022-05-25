@@ -35,7 +35,7 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getTokenValue() {
@@ -43,7 +43,7 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewPassword() {

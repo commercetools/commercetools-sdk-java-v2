@@ -51,7 +51,7 @@ public interface MyShoppingListUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<MyShoppingListUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

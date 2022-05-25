@@ -35,7 +35,7 @@ public class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleNameAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleNameAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getMiddleName() {

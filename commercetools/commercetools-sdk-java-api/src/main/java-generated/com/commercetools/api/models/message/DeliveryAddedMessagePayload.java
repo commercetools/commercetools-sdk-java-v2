@@ -34,7 +34,7 @@ public interface DeliveryAddedMessagePayload extends OrderMessagePayload {
     String DELIVERY_ADDED = "DeliveryAdded";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

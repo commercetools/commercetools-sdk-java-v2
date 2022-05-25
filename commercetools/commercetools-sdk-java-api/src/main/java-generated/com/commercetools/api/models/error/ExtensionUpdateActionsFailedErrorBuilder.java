@@ -38,7 +38,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder message(final String message) {
@@ -47,7 +47,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder values(final Map<String, java.lang.Object> values) {
@@ -56,7 +56,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder addValue(final String key, final java.lang.Object value) {
@@ -68,7 +68,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -78,7 +78,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
@@ -88,7 +88,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(
@@ -98,7 +98,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(
@@ -108,7 +108,7 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
     }
 
     /**
-     <>
+     *
      */
 
     public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(

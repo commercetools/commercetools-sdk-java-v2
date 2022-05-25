@@ -34,7 +34,7 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
     String ADD_DISTRIBUTION_CHANNEL = "addDistributionChannel";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

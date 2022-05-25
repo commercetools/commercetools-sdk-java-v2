@@ -30,7 +30,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
@@ -39,7 +39,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
@@ -49,7 +49,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(

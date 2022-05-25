@@ -29,14 +29,14 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     <*  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>>
+     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

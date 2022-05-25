@@ -28,7 +28,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     private java.lang.Object previousValue;
 
     /**
-     <*  <p>Update action for <code>setShippingRateInput</code></p>>
+     *  <p>Update action for <code>setShippingRateInput</code></p>
      */
 
     public SetShippingRateInputChangeBuilder change(final String change) {
@@ -37,7 +37,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateInputChangeBuilder nextValue(final java.lang.Object nextValue) {
@@ -46,7 +46,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     <>
+     *
      */
 
     public SetShippingRateInputChangeBuilder previousValue(final java.lang.Object previousValue) {

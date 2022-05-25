@@ -33,14 +33,14 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     String CHANGE_ENUM_VALUE_ORDER = "changeEnumValueOrder";
 
     /**
-     <*  <p><code>name</code> of the FieldDefinition to update.</p>>
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-     <*  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>>
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
      */
     @NotNull
     @JsonProperty("keys")

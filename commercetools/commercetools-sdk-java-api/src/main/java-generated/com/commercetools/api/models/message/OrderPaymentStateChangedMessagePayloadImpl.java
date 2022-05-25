@@ -40,7 +40,7 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -48,7 +48,7 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -56,7 +56,7 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.PaymentState getOldPaymentState() {

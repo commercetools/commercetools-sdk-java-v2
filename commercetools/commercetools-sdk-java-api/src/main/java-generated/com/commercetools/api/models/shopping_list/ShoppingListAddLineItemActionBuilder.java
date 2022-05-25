@@ -42,7 +42,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
@@ -60,7 +60,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
@@ -69,7 +69,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
@@ -78,7 +78,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -87,7 +87,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder custom(
@@ -97,7 +97,7 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
     }
 
     /**
-     <*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>>
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      */
 
     public ShoppingListAddLineItemActionBuilder custom(

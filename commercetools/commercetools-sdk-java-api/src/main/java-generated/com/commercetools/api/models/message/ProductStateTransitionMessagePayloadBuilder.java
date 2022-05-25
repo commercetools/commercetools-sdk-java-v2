@@ -28,7 +28,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     private Boolean force;
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -38,7 +38,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public ProductStateTransitionMessagePayloadBuilder state(
@@ -48,7 +48,7 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-     <>
+     *
      */
 
     public ProductStateTransitionMessagePayloadBuilder force(final Boolean force) {

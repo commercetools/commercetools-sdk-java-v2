@@ -32,7 +32,7 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
     @Valid
     @JsonProperty("description")

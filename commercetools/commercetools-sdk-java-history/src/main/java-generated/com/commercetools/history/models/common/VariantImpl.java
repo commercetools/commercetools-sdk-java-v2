@@ -38,7 +38,7 @@ public class VariantImpl implements Variant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Integer getId() {
@@ -46,7 +46,7 @@ public class VariantImpl implements Variant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getSku() {
@@ -54,7 +54,7 @@ public class VariantImpl implements Variant, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

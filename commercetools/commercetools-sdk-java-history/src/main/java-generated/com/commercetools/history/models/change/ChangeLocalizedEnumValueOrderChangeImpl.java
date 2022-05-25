@@ -51,7 +51,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -59,7 +59,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>>
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
      */
 
     public String getChange() {
@@ -67,7 +67,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>The name of the field definition updated.</p>>
+     *  <p>The name of the field definition updated.</p>
      */
 
     public String getFieldName() {
@@ -75,7 +75,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
 
     public String getAttributeName() {
@@ -83,7 +83,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getNextValue() {
@@ -91,7 +91,7 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getPreviousValue() {

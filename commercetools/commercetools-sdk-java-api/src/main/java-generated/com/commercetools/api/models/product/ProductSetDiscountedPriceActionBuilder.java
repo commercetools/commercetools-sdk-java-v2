@@ -33,7 +33,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     /**
-     <>
+     *
      */
 
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {
@@ -42,7 +42,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetDiscountedPriceActionBuilder staged(@Nullable final Boolean staged) {
@@ -51,7 +51,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetDiscountedPriceActionBuilder discounted(
@@ -61,7 +61,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetDiscountedPriceActionBuilder discounted(

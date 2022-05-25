@@ -30,7 +30,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setAnonymousId</code></p>>
+     *  <p>Shape of the action for <code>setAnonymousId</code></p>
      */
 
     public SetAnonymousIdChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetAnonymousIdChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
     }
 
     /**
-     <>
+     *
      */
 
     public SetAnonymousIdChangeBuilder nextValue(final String nextValue) {

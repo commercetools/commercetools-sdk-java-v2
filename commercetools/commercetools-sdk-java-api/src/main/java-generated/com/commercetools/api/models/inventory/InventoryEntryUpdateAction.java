@@ -42,7 +42,7 @@ public interface InventoryEntryUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<InventoryEntryUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

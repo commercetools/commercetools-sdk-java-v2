@@ -27,7 +27,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     /**
-     <*  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>>
+     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(
@@ -37,7 +37,7 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     }
 
     /**
-     <*  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>>
+     *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
      */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(

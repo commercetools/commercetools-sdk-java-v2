@@ -33,7 +33,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder sku(@Nullable final String sku) {
@@ -42,7 +42,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder prices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
@@ -51,7 +51,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder prices(
@@ -61,7 +61,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder plusPrices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
@@ -73,7 +73,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder plusPrices(
@@ -86,7 +86,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder withPrices(
@@ -97,7 +97,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder attributes(
@@ -107,7 +107,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder attributes(
@@ -117,7 +117,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder plusAttributes(
@@ -130,7 +130,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder plusAttributes(
@@ -144,7 +144,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     <>
+     *
      */
 
     public VariantValuesBuilder withAttributes(

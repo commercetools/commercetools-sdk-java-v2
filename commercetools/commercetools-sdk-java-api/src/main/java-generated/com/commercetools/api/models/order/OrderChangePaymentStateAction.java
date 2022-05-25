@@ -29,7 +29,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     String CHANGE_PAYMENT_STATE = "changePaymentState";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("paymentState")

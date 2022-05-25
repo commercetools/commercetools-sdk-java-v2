@@ -33,7 +33,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     <>
+     *
      */
 
     public OrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
@@ -42,7 +42,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     }
 
     /**
-     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      */
 
     public OrderSetParcelCustomTypeActionBuilder type(
@@ -52,7 +52,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     }
 
     /**
-     <*  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>>
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
      */
 
     public OrderSetParcelCustomTypeActionBuilder type(
@@ -62,7 +62,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
      */
 
     public OrderSetParcelCustomTypeActionBuilder fields(
@@ -72,7 +72,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     }
 
     /**
-     <*  <p>Sets the Custom Fields fields for the Parcel.</p>>
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
      */
 
     public OrderSetParcelCustomTypeActionBuilder fields(

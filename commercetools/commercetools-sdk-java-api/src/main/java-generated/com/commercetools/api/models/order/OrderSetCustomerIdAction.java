@@ -29,7 +29,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("customerId")

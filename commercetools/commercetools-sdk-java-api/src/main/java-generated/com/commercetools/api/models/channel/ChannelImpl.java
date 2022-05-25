@@ -82,7 +82,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the Channel.</p>>
+     *  <p>Unique identifier of the Channel.</p>
      */
 
     public String getId() {
@@ -90,7 +90,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Current version of the Channel.</p>>
+     *  <p>Current version of the Channel.</p>
      */
 
     public Long getVersion() {
@@ -98,7 +98,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Channel was initially created.</p>>
+     *  <p>Date and time (UTC) the Channel was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -106,7 +106,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Date and time (UTC) the Channel was last updated.</p>>
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -114,7 +114,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -122,7 +122,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -130,7 +130,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier of the Channel.</p>>
+     *  <p>User-defined unique identifier of the Channel.</p>
      */
 
     public String getKey() {
@@ -138,7 +138,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Roles of the Channel.</p>>
+     *  <p>Roles of the Channel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
@@ -146,7 +146,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Name of the Channel.</p>>
+     *  <p>Name of the Channel.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -154,7 +154,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Description of the Channel.</p>>
+     *  <p>Description of the Channel.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -162,7 +162,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>>
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -170,7 +170,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Statistics about the review ratings taken into account for the Channel.</p>>
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
@@ -178,7 +178,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields defined for the Channel.</p>>
+     *  <p>Custom Fields defined for the Channel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -186,7 +186,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-     <*  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
      */
 
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {

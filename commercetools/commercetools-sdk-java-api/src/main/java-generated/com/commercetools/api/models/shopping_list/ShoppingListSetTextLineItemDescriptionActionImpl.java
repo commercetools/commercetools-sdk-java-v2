@@ -40,7 +40,7 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
     }
 
     /**
-     <>
+     *
      */
 
     public String getTextLineItemId() {
@@ -56,7 +56,7 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
     }
 
     /**
-     <*  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>>
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

@@ -42,77 +42,77 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperation {
 
     /**
-     <*  <p>The version of the ImportOperation.</p>>
+     *  <p>The version of the ImportOperation.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <*  <p>The key of the importContainer.</p>>
+     *  <p>The key of the importContainer.</p>
      */
     @NotNull
     @JsonProperty("importContainerKey")
     public String getImportContainerKey();
 
     /**
-     <*  <p>The key of the resource.</p>>
+     *  <p>The key of the resource.</p>
      */
     @NotNull
     @JsonProperty("resourceKey")
     public String getResourceKey();
 
     /**
-     <*  <p>The ID of the ImportOperation.</p>>
+     *  <p>The ID of the ImportOperation.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>>
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
      */
     @NotNull
     @JsonProperty("state")
     public ProcessingState getState();
 
     /**
-     <*  <p>The version of the impmorted resource when the import was successful.</p>>
+     *  <p>The version of the impmorted resource when the import was successful.</p>
      */
 
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
     /**
-     <*  <p>Contains an error if the import of the resource was not successful. See Errors.</p>>
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
      */
     @Valid
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
 
     /**
-     <*  <p>In case of unresolved status this array will show the unresolved references</p>>
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
      */
     @Valid
     @JsonProperty("unresolvedReferences")
     public List<UnresolvedReferences> getUnresolvedReferences();
 
     /**
-     <*  <p>The time when the ImportOperation was created.</p>>
+     *  <p>The time when the ImportOperation was created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <*  <p>The last time When the ImportOperation was modified.</p>>
+     *  <p>The last time When the ImportOperation was modified.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     <*  <p>The expiration time of the ImportOperation.</p>>
+     *  <p>The expiration time of the ImportOperation.</p>
      */
     @NotNull
     @JsonProperty("expiresAt")

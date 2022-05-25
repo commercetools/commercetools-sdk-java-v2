@@ -34,28 +34,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImageSearchResponse {
 
     /**
-     <*  <p>The maximum number of results to return from a query.</p>>
+     *  <p>The maximum number of results to return from a query.</p>
      */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
     @NotNull
     @JsonProperty("offset")
     public Double getOffset();
 
     /**
-     <*  <p>The total number of product images that were have been analyzed.</p>>
+     *  <p>The total number of product images that were have been analyzed.</p>
      */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-     <*  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>>
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
      */
     @NotNull
     @Valid

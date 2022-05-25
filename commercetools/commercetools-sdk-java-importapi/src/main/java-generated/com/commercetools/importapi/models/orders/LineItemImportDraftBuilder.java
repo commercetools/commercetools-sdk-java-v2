@@ -54,7 +54,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     <*  <p>Maps to <code>LineItem.productId</code>.</p>>
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
      */
 
     public LineItemImportDraftBuilder product(
@@ -64,7 +64,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.productId</code>.</p>>
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
      */
 
     public LineItemImportDraftBuilder product(
@@ -74,7 +74,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.name</code>.</p>>
+     *  <p>Maps to <code>LineItem.name</code>.</p>
      */
 
     public LineItemImportDraftBuilder name(
@@ -84,7 +84,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.name</code>.</p>>
+     *  <p>Maps to <code>LineItem.name</code>.</p>
      */
 
     public LineItemImportDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
@@ -93,7 +93,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      */
 
     public LineItemImportDraftBuilder variant(
@@ -105,7 +105,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>ProductVariantImportDraft</code>.</p>>
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      */
 
     public LineItemImportDraftBuilder variant(
@@ -115,7 +115,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.price</code>.</p>>
+     *  <p>Maps to <code>LineItem.price</code>.</p>
      */
 
     public LineItemImportDraftBuilder price(
@@ -125,7 +125,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.price</code>.</p>>
+     *  <p>Maps to <code>LineItem.price</code>.</p>
      */
 
     public LineItemImportDraftBuilder price(final com.commercetools.importapi.models.orders.LineItemPrice price) {
@@ -134,7 +134,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.quantity</code>.</p>>
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
      */
 
     public LineItemImportDraftBuilder quantity(final Double quantity) {
@@ -143,7 +143,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder state(
@@ -153,7 +153,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder state(
@@ -163,7 +163,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder plusState(
@@ -176,7 +176,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder plusState(
@@ -189,7 +189,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <>
+     *
      */
 
     public LineItemImportDraftBuilder withState(
@@ -200,7 +200,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      */
 
     public LineItemImportDraftBuilder supplyChannel(
@@ -211,7 +211,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      */
 
     public LineItemImportDraftBuilder supplyChannel(
@@ -221,7 +221,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      */
 
     public LineItemImportDraftBuilder distributionChannel(
@@ -233,7 +233,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      */
 
     public LineItemImportDraftBuilder distributionChannel(
@@ -243,7 +243,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.taxRate</code>.</p>>
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      */
 
     public LineItemImportDraftBuilder taxRate(
@@ -253,7 +253,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to <code>LineItem.taxRate</code>.</p>>
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
      */
 
     public LineItemImportDraftBuilder taxRate(
@@ -263,7 +263,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to LineItem.shippingDetails.</p>>
+     *  <p>Maps to LineItem.shippingDetails.</p>
      */
 
     public LineItemImportDraftBuilder shippingDetails(
@@ -275,7 +275,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     <*  <p>Maps to LineItem.shippingDetails.</p>>
+     *  <p>Maps to LineItem.shippingDetails.</p>
      */
 
     public LineItemImportDraftBuilder shippingDetails(

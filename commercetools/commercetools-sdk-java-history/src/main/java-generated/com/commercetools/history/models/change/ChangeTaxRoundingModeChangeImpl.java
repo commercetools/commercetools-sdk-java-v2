@@ -43,7 +43,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     <*  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>>
+     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.RoundingMode getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.RoundingMode getNextValue() {

@@ -31,7 +31,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("items")

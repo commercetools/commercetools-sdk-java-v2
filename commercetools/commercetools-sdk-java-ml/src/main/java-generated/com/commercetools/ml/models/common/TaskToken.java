@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaskToken {
 
     /**
-     <*  <p>The ID for the task. Used to find the status of the task.</p>>
+     *  <p>The ID for the task. Used to find the status of the task.</p>
      */
     @NotNull
     @JsonProperty("taskId")
     public String getTaskId();
 
     /**
-     <*  <p>The URI path to poll for the status of the task.</p>>
+     *  <p>The URI path to poll for the status of the task.</p>
      */
     @NotNull
     @JsonProperty("uriPath")

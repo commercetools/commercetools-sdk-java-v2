@@ -31,7 +31,7 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {

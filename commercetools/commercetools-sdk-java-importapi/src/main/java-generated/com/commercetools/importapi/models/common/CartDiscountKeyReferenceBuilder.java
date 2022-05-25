@@ -24,7 +24,7 @@ public class CartDiscountKeyReferenceBuilder implements Builder<CartDiscountKeyR
     private String key;
 
     /**
-     <>
+     *
      */
 
     public CartDiscountKeyReferenceBuilder key(final String key) {

@@ -32,7 +32,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     String LENUM = "lenum";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("value")

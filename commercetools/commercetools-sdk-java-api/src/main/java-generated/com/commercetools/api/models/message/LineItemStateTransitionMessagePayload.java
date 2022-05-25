@@ -39,28 +39,28 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public StateReference getFromState();
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
     @NotNull
     @Valid

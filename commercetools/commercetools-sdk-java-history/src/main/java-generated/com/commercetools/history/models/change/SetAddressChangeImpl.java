@@ -43,7 +43,7 @@ public class SetAddressChangeImpl implements SetAddressChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetAddressChangeImpl implements SetAddressChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>setAddress</code> action.</p>>
+     *  <p>Update action for <code>setAddress</code> action.</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetAddressChangeImpl implements SetAddressChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -67,7 +67,7 @@ public class SetAddressChangeImpl implements SetAddressChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

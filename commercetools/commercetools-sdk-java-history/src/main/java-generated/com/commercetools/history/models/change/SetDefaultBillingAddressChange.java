@@ -36,21 +36,21 @@ public interface SetDefaultBillingAddressChange extends Change {
     String SET_DEFAULT_BILLING_ADDRESS_CHANGE = "SetDefaultBillingAddressChange";
 
     /**
-     <*  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>>
+     *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface SetDefaultBillingAddressChange extends Change {
     public Address getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

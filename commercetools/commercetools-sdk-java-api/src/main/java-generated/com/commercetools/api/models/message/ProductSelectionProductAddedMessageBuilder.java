@@ -57,7 +57,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder id(final String id) {
@@ -66,7 +66,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder version(final Long version) {
@@ -75,7 +75,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -84,7 +84,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -93,7 +93,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder lastModifiedBy(
@@ -103,7 +103,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder lastModifiedBy(
@@ -113,7 +113,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder createdBy(
@@ -123,7 +123,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder createdBy(
@@ -133,7 +133,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -142,7 +142,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder resource(
@@ -152,7 +152,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder resource(
@@ -162,7 +162,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -171,7 +171,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -183,7 +183,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSelectionProductAddedMessageBuilder resourceUserProvidedIdentifiers(
@@ -193,7 +193,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder product(
@@ -203,7 +203,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     <*  <p>Reference to a Product.</p>>
+     *  <p>Reference to a Product.</p>
      */
 
     public ProductSelectionProductAddedMessageBuilder product(

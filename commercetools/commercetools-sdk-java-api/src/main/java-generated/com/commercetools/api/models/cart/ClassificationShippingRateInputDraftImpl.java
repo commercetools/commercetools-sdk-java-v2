@@ -35,7 +35,7 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -43,7 +43,7 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {

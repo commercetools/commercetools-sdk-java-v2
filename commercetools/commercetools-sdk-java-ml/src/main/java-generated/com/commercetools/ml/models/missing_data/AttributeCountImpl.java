@@ -39,7 +39,7 @@ public class AttributeCountImpl implements AttributeCount, ModelBase {
     }
 
     /**
-     <*  <p>Number of attributes defined in the product type.</p>>
+     *  <p>Number of attributes defined in the product type.</p>
      */
 
     public Integer getProductTypeAttributes() {
@@ -47,7 +47,7 @@ public class AttributeCountImpl implements AttributeCount, ModelBase {
     }
 
     /**
-     <*  <p>Number of attributes defined in the variant.</p>>
+     *  <p>Number of attributes defined in the variant.</p>
      */
 
     public Integer getVariantAttributes() {
@@ -55,7 +55,7 @@ public class AttributeCountImpl implements AttributeCount, ModelBase {
     }
 
     /**
-     <*  <p>Number of attributes missing values in the variant.</p>>
+     *  <p>Number of attributes missing values in the variant.</p>
      */
 
     public Integer getMissingAttributeValues() {

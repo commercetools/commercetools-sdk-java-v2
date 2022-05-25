@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedItemPrice {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface TaxedItemPrice {
     public TypedMoney getTotalNet();
 
     /**
-     <*  <p>TaxedItemPrice fields can not be used in query predicates.</p>>
+     *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface TaxedItemPrice {
     public TypedMoney getTotalGross();
 
     /**
-     <*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>>
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
      */
     @Valid
     @JsonProperty("totalTax")

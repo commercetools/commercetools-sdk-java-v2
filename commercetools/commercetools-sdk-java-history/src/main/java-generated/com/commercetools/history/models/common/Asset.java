@@ -35,14 +35,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Asset {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -50,7 +50,7 @@ public interface Asset {
     public LocalizedString getName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface Asset {
     public LocalizedString getDescription();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface Asset {
     public CustomFields getCustom();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("key")

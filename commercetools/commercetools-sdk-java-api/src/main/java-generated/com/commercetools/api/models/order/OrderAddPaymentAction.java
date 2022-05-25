@@ -34,7 +34,7 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     <*  <p>ResourceIdentifier to a Payment.</p>>
+     *  <p>ResourceIdentifier to a Payment.</p>
      */
     @NotNull
     @Valid

@@ -28,7 +28,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder attributeName(final String attributeName) {
@@ -37,7 +37,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(
@@ -48,7 +48,7 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeAddLocalizedEnumValueActionBuilder value(

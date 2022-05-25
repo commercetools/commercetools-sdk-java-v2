@@ -35,7 +35,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Sets the money value for the discounted price.</p>>
+     *  <p>Sets the money value for the discounted price.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -43,7 +43,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-     <*  <p>Relates the referenced ProductDiscount to the discounted price.</p>>
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
      */
 
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {

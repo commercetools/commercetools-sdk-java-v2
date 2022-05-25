@@ -63,7 +63,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     <>
+     *
      */
 
     public PriceImportBuilder key(final String key) {
@@ -72,7 +72,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Price.value</code>.</p>>
+     *  <p>Maps to <code>Price.value</code>.</p>
      */
 
     public PriceImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
@@ -81,7 +81,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Price.value</code>.</p>>
+     *  <p>Maps to <code>Price.value</code>.</p>
      */
 
     public PriceImportBuilder value(
@@ -91,7 +91,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Price.county</code>.</p>>
+     *  <p>Maps to <code>Price.county</code>.</p>
      */
 
     public PriceImportBuilder country(@Nullable final String country) {
@@ -100,7 +100,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validFrom</code>.</p>>
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
      */
 
     public PriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
@@ -109,7 +109,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Maps to <code>Price.validUntil</code>.</p>>
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
      */
 
     public PriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
@@ -118,7 +118,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
 
     public PriceImportBuilder customerGroup(
@@ -130,7 +130,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>>
+     *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      */
 
     public PriceImportBuilder customerGroup(
@@ -140,7 +140,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>>
+     *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
      */
 
     public PriceImportBuilder channel(
@@ -150,7 +150,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>>
+     *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
      */
 
     public PriceImportBuilder channel(
@@ -160,7 +160,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
 
     public PriceImportBuilder discounted(
@@ -170,7 +170,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Sets a discounted price from an external service.</p>>
+     *  <p>Sets a discounted price from an external service.</p>
      */
 
     public PriceImportBuilder discounted(
@@ -180,7 +180,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>>
+     *  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      */
 
     public PriceImportBuilder publish(@Nullable final Boolean publish) {
@@ -189,7 +189,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public PriceImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -198,7 +198,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public PriceImportBuilder tiers(
@@ -208,7 +208,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -220,7 +220,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public PriceImportBuilder plusTiers(
@@ -233,7 +233,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The tiered prices for this price.</p>>
+     *  <p>The tiered prices for this price.</p>
      */
 
     public PriceImportBuilder withTiers(
@@ -244,7 +244,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The custom fields for this price.</p>>
+     *  <p>The custom fields for this price.</p>
      */
 
     public PriceImportBuilder custom(
@@ -254,7 +254,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The custom fields for this price.</p>>
+     *  <p>The custom fields for this price.</p>
      */
 
     public PriceImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
@@ -263,7 +263,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public PriceImportBuilder productVariant(
@@ -275,7 +275,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>>
+     *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public PriceImportBuilder productVariant(
@@ -285,7 +285,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
+     *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      */
 
     public PriceImportBuilder product(
@@ -295,7 +295,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     <*  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>>
+     *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
      */
 
     public PriceImportBuilder product(final com.commercetools.importapi.models.common.ProductKeyReference product) {

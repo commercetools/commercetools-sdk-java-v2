@@ -27,7 +27,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetStoreActionBuilder store(
@@ -37,7 +37,7 @@ public class ShoppingListSetStoreActionBuilder implements Builder<ShoppingListSe
     }
 
     /**
-     <>
+     *
      */
 
     public ShoppingListSetStoreActionBuilder store(

@@ -35,7 +35,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     String ADD_SHIPPING_RATE = "addShippingRate";
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     public ZoneResourceIdentifier getZone();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

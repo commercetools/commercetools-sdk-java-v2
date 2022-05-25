@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingAttributesMeta {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -40,7 +40,7 @@ public interface MissingAttributesMeta {
     public MissingAttributesDetails getProductLevel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -48,7 +48,7 @@ public interface MissingAttributesMeta {
     public MissingAttributesDetails getVariantLevel();
 
     /**
-     <*  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>>
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
      */
 
     @JsonProperty("productTypeIds")

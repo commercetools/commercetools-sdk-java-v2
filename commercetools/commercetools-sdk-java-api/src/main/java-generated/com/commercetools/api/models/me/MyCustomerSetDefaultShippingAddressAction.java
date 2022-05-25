@@ -29,14 +29,14 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressId")
     public String getAddressId();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("addressKey")

@@ -41,21 +41,21 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     String SET_CUSTOM_LINE_ITEM_TAX_RATE_CHANGE = "SetCustomLineItemTaxRateChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setCustomLineItemTaxRate</code></p>>
+     *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -63,21 +63,21 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid
@@ -85,7 +85,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     public TaxRate getNextValue();
 
     /**
-     <*  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>>
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      */
     @NotNull
     @Valid

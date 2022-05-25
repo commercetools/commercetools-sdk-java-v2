@@ -36,7 +36,7 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {

@@ -26,7 +26,7 @@ public class CustomerSetTitleActionBuilder implements Builder<CustomerSetTitleAc
     private String title;
 
     /**
-     <>
+     *
      */
 
     public CustomerSetTitleActionBuilder title(@Nullable final String title) {

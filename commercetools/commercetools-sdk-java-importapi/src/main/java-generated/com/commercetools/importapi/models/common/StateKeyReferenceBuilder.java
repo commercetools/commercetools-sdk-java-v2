@@ -24,7 +24,7 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
     private String key;
 
     /**
-     <>
+     *
      */
 
     public StateKeyReferenceBuilder key(final String key) {

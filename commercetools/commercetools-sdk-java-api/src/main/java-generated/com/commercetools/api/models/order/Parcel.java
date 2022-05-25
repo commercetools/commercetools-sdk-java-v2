@@ -34,42 +34,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Parcel extends com.commercetools.api.models.Customizable<Parcel> {
 
     /**
-     <*  <p>Platform-generated unique identifier of the Parcel.</p>>
+     *  <p>Unique identifier of the Parcel.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-     <*  <p>The delivery items contained in this parcel.</p>>
+     *  <p>The delivery items contained in this parcel.</p>
      */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     /**
-     <*  <p>Custom Fields of this parcel.</p>>
+     *  <p>Custom Fields of this parcel.</p>
      */
     @Valid
     @JsonProperty("custom")

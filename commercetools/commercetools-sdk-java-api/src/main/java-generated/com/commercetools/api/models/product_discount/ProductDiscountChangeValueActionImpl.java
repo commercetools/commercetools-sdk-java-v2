@@ -36,7 +36,7 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
     }
 
     /**
-     <*  <p>New value to set. Must not be empty.</p>>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {

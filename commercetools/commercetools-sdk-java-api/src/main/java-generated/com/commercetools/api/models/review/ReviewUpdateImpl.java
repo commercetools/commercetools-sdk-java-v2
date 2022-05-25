@@ -35,7 +35,7 @@ public class ReviewUpdateImpl implements ReviewUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ReviewUpdateImpl implements ReviewUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> getActions() {

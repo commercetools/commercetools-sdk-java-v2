@@ -34,7 +34,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     private com.commercetools.history.models.common.Money previousValue;
 
     /**
-     <*  <p>Update action for <code>setOrderTotalTax</code></p>>
+     *  <p>Update action for <code>setOrderTotalTax</code></p>
      */
 
     public SetOrderTotalTaxChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTotalTaxChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -52,7 +52,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTotalTaxChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTotalTaxChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
@@ -71,7 +71,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTotalTaxChangeBuilder previousValue(
@@ -81,7 +81,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     <>
+     *
      */
 
     public SetOrderTotalTaxChangeBuilder previousValue(

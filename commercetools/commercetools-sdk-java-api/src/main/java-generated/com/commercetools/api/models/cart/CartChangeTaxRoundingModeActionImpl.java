@@ -36,7 +36,7 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {

@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChannelUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ChannelUpdateAction> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("action")

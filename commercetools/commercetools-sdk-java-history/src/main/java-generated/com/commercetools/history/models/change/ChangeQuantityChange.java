@@ -36,21 +36,21 @@ public interface ChangeQuantityChange extends Change {
     String CHANGE_QUANTITY_CHANGE = "ChangeQuantityChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeQuantityChange extends Change {
     public InventoryQuantityValue getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

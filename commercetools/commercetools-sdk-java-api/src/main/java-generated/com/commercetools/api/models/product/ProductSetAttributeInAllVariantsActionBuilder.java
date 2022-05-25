@@ -32,7 +32,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     private Boolean staged;
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder name(final String name) {
@@ -41,7 +41,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     }
 
     /**
-     <*  <p>The same update behavior as for Set Attribute applies.</p>>
+     *  <p>The same update behavior as for Set Attribute applies.</p>
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
@@ -50,7 +50,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final Boolean staged) {

@@ -36,14 +36,14 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     String RESOURCE_CREATED = "ResourceCreated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("modifiedAt")

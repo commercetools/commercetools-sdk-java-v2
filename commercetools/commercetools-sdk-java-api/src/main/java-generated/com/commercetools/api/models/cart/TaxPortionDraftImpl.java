@@ -38,7 +38,7 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getName() {
@@ -46,7 +46,7 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Double getRate() {
@@ -54,8 +54,8 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
     }
 
     /**
-     <*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>>
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmount() {

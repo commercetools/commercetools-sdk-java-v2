@@ -39,7 +39,7 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetId() {
@@ -55,7 +55,7 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
     }
 
     /**
-     <>
+     *
      */
 
     public String getAssetKey() {

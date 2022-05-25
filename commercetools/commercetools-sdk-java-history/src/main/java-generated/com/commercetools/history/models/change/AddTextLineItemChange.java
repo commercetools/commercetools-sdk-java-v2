@@ -35,21 +35,21 @@ public interface AddTextLineItemChange extends Change {
     String ADD_TEXT_LINE_ITEM_CHANGE = "AddTextLineItemChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

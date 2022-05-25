@@ -34,14 +34,14 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     <*  <p>Reference to a Channel.</p>>
+     *  <p>Reference to a Channel.</p>
      */
     @Valid
     @JsonProperty("distributionChannel")

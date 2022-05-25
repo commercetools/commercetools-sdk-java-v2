@@ -67,7 +67,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the given Price.</p>>
+     *  <p>Unique identifier of the given Price.</p>
      */
 
     public String getId() {
@@ -75,7 +75,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Money value of the given Price.</p>>
+     *  <p>Money value of the given Price.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -83,7 +83,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Country for which the given Price is valid.</p>>
+     *  <p>Country for which the given Price is valid.</p>
      */
 
     public String getCountry() {
@@ -91,7 +91,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>CustomerGroup for which the given Price is valid.</p>>
+     *  <p>CustomerGroup for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -99,7 +99,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>>
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -107,7 +107,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Date from which the given Price is valid.</p>>
+     *  <p>Date from which the given Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -115,7 +115,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Date until which the given Price is valid.</p>>
+     *  <p>Date until which the given Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -123,7 +123,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>DiscountedPrice you specify for the given Price.</p>>
+     *  <p>DiscountedPrice you specify for the given Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -131,7 +131,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Custom Fields for the Price.</p>>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -139,7 +139,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     <*  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>>
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {

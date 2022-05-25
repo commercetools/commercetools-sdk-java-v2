@@ -40,7 +40,7 @@ public class CartReferenceImpl implements CartReference, ModelBase {
     }
 
     /**
-     <*  <p>Type of referenced resource.</p>>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -48,7 +48,7 @@ public class CartReferenceImpl implements CartReference, ModelBase {
     }
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Cart.</p>>
+     *  <p>Unique identifier of the referenced Cart.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class CartReferenceImpl implements CartReference, ModelBase {
     }
 
     /**
-     <*  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>>
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
      */
 
     public com.commercetools.api.models.cart.Cart getObj() {

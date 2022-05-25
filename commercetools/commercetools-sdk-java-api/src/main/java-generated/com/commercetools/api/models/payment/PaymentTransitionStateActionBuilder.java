@@ -30,7 +30,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     private Boolean force;
 
     /**
-     <>
+     *
      */
 
     public PaymentTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentTransitionStateActionBuilder force(@Nullable final Boolean force) {

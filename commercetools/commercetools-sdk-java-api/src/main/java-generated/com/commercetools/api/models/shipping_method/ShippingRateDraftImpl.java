@@ -39,7 +39,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -47,7 +47,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>>
+     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
      */
 
     public com.commercetools.api.models.common.Money getFreeAbove() {
@@ -55,7 +55,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     <*  <p>A list of shipping rate price tiers.</p>>
+     *  <p>A list of shipping rate price tiers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {

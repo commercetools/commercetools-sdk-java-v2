@@ -34,14 +34,14 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     String TYPE = "type";
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced Type.</p>>
+     *  <p>Unique identifier of the referenced Type.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     <*  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
      */
     @Valid
     @JsonProperty("obj")

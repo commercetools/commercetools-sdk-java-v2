@@ -34,7 +34,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     <*  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>>
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
      */
 
     public String getCountry() {
@@ -42,7 +42,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getState() {

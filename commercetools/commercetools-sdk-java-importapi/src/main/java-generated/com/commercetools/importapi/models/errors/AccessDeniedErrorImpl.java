@@ -35,7 +35,7 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

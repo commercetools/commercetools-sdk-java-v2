@@ -43,7 +43,7 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
@@ -67,7 +67,7 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.InventoryQuantityValue getPreviousValue() {

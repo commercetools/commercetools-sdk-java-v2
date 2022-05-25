@@ -36,7 +36,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     <*  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>>
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
@@ -44,7 +44,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     <*  <p><code>Create</code> and <code>Update</code> requests are supported.</p>>
+     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
      */
 
     public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions() {

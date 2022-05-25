@@ -36,7 +36,7 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.Money getAmount() {

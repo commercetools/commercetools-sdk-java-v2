@@ -30,14 +30,14 @@ public interface DuplicateFieldError extends ErrorObject {
     String DUPLICATE_FIELD = "DuplicateField";
 
     /**
-     <*  <p>The name of the field.</p>>
+     *  <p>The name of the field.</p>
      */
 
     @JsonProperty("field")
     public String getField();
 
     /**
-     <*  <p>The offending duplicate value.</p>>
+     *  <p>The offending duplicate value.</p>
      */
 
     @JsonProperty("duplicateValue")

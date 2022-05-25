@@ -47,7 +47,7 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
     }
 
     /**
-     <*  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>>
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
@@ -71,7 +71,7 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {
@@ -79,7 +79,7 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {

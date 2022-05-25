@@ -43,7 +43,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy() {

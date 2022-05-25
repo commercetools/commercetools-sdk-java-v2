@@ -24,7 +24,7 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
     private String change;
 
     /**
-     <>
+     *
      */
 
     public PublishChangeBuilder change(final String change) {

@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssetDraft extends com.commercetools.api.models.CustomizableDraft<AssetDraft> {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public List<AssetSource> getSources();
 
     /**
-     <*  <p>Name of the Asset.</p>>
+     *  <p>Name of the Asset.</p>
      */
     @NotNull
     @Valid
@@ -49,28 +49,28 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     public LocalizedString getName();
 
     /**
-     <*  <p>Description of the Asset.</p>>
+     *  <p>Description of the Asset.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     <*  <p>Keywords for categorizing and organizing Assets.</p>>
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     @JsonProperty("tags")
     public List<String> getTags();
 
     /**
-     <*  <p>Custom Fields defined for the Asset.</p>>
+     *  <p>Custom Fields defined for the Asset.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-     <*  <p>User-defined unique identifier for the Asset.</p>>
+     *  <p>User-defined unique identifier for the Asset.</p>
      */
 
     @JsonProperty("key")

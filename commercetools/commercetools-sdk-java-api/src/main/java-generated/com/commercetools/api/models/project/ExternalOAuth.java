@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalOAuth {
 
     /**
-     <*  <p>URL with authorization header.</p>>
+     *  <p>URL with authorization header.</p>
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     <*  <p>Partially hidden on retrieval.</p>>
+     *  <p>Partially hidden on retrieval.</p>
      */
     @NotNull
     @JsonProperty("authorizationHeader")

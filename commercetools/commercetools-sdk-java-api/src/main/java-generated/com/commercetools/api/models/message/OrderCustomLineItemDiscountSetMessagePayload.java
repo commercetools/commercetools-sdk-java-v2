@@ -36,14 +36,14 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -51,7 +51,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxedPrice")

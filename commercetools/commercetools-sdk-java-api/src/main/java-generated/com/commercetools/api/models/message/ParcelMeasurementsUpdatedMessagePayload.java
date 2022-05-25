@@ -35,21 +35,21 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
     String PARCEL_MEASUREMENTS_UPDATED = "ParcelMeasurementsUpdated";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("measurements")

@@ -32,7 +32,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     String SET_DISTRIBUTION_CHANNELS = "setDistributionChannels";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("distributionChannels")

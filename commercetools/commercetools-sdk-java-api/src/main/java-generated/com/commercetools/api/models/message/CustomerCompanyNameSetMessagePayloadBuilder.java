@@ -26,7 +26,7 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
     private String companyName;
 
     /**
-     <>
+     *
      */
 
     public CustomerCompanyNameSetMessagePayloadBuilder companyName(@Nullable final String companyName) {

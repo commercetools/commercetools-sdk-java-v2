@@ -36,7 +36,7 @@ public class MyCustomerAddAddressActionImpl implements MyCustomerAddAddressActio
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class MyCustomerAddAddressActionImpl implements MyCustomerAddAddressActio
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

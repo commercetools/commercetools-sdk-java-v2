@@ -45,7 +45,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
     /**
-     <*  <p>User-defined unique identifier for the State.</p>>
+     *  <p>User-defined unique identifier for the State.</p>
      */
 
     public StateDraftBuilder key(final String key) {
@@ -54,7 +54,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Specify to which resource or object type the State is assigned to.</p>>
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
      */
 
     public StateDraftBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
@@ -63,7 +63,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Name of the State.</p>>
+     *  <p>Name of the State.</p>
      */
 
     public StateDraftBuilder name(
@@ -73,7 +73,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Name of the State.</p>>
+     *  <p>Name of the State.</p>
      */
 
     public StateDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -82,7 +82,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Description of the State.</p>>
+     *  <p>Description of the State.</p>
      */
 
     public StateDraftBuilder description(
@@ -92,7 +92,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Description of the State.</p>>
+     *  <p>Description of the State.</p>
      */
 
     public StateDraftBuilder description(
@@ -102,7 +102,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>>
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
      */
 
     public StateDraftBuilder initial(@Nullable final Boolean initial) {
@@ -111,7 +111,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>>
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      */
 
     public StateDraftBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -120,7 +120,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>>
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      */
 
     public StateDraftBuilder roles(
@@ -130,7 +130,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>>
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      */
 
     public StateDraftBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
@@ -142,12 +142,12 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public StateDraftBuilder transitions(
@@ -157,12 +157,12 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public StateDraftBuilder transitions(
@@ -172,12 +172,12 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public StateDraftBuilder plusTransitions(
@@ -190,12 +190,12 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public StateDraftBuilder plusTransitions(
@@ -209,12 +209,12 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     <*  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>>
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
      */
 
     public StateDraftBuilder withTransitions(

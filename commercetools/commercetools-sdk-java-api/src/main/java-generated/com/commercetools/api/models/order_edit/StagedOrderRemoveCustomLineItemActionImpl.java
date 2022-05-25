@@ -35,7 +35,7 @@ public class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRem
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRem
     }
 
     /**
-     <>
+     *
      */
 
     public String getCustomLineItemId() {

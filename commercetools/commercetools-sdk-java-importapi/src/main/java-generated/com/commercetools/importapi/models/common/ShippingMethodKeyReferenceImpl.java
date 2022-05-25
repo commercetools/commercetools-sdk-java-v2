@@ -35,7 +35,7 @@ public class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyReferenc
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyReferenc
     }
 
     /**
-     <*  <p>The type of the referenced resource.</p>>
+     *  <p>The type of the referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

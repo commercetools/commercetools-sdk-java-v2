@@ -27,7 +27,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     private java.util.List<String> keys;
 
     /**
-     <>
+     *
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder attributeName(final String attributeName) {
@@ -36,7 +36,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder keys(final String... keys) {
@@ -45,7 +45,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder keys(final java.util.List<String> keys) {
@@ -54,7 +54,7 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
     }
 
     /**
-     <>
+     *
      */
 
     public ProductTypeRemoveEnumValuesActionBuilder plusKeys(final String... keys) {

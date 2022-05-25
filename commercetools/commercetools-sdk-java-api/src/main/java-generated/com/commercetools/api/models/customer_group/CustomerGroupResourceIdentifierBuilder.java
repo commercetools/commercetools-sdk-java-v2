@@ -29,7 +29,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     private String key;
 
     /**
-     <*  <p>Platform-generated unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public CustomerGroupResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     }
 
     /**
-     <*  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>>
+     *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public CustomerGroupResourceIdentifierBuilder key(@Nullable final String key) {

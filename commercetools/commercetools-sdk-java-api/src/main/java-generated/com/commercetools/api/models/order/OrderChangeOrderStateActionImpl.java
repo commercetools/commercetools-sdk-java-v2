@@ -36,7 +36,7 @@ public class OrderChangeOrderStateActionImpl implements OrderChangeOrderStateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -44,7 +44,7 @@ public class OrderChangeOrderStateActionImpl implements OrderChangeOrderStateAct
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {

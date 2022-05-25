@@ -35,7 +35,7 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
     }
 
     /**
-     <*  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>>
+     *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
      */
 
     public Boolean getIsActive() {

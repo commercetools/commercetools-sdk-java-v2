@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CartDiscountPagedQueryResponse cartDiscountPagedQueryResponse = CartDiscountPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,17 +29,17 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results;
 
     /**
-     <*  <p>Number of results requested.</p>>
+     *  <p>Number of results requested.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder limit(final Long limit) {
@@ -48,25 +48,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
-     */
-
-    public CartDiscountPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     <>
-     */
-
-    public CartDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder offset(final Long offset) {
@@ -75,7 +57,25 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public CartDiscountPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
+    public CartDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>CartDiscounts matching the query.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
+     *  <p>CartDiscounts matching the query.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
+     *  <p>CartDiscounts matching the query.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
+     *  <p>CartDiscounts matching the query.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
-     <>
+     *  <p>CartDiscounts matching the query.</p>
      */
 
     public CartDiscountPagedQueryResponseBuilder withResults(
@@ -135,6 +135,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -144,27 +148,23 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> getResults() {
         return this.results;
     }
 
     public CartDiscountPagedQueryResponse build() {
         Objects.requireNonNull(limit, CartDiscountPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, CartDiscountPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, CartDiscountPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, CartDiscountPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, CartDiscountPagedQueryResponse.class + ": results is missing");
-        return new CartDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CartDiscountPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds CartDiscountPagedQueryResponse without checking for non null required values
      */
     public CartDiscountPagedQueryResponse buildUnchecked() {
-        return new CartDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CartDiscountPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static CartDiscountPagedQueryResponseBuilder of() {
@@ -174,9 +174,9 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     public static CartDiscountPagedQueryResponseBuilder of(final CartDiscountPagedQueryResponse template) {
         CartDiscountPagedQueryResponseBuilder builder = new CartDiscountPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

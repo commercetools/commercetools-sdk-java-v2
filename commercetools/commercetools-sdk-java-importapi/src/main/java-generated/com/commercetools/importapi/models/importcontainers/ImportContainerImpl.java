@@ -47,7 +47,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>>
+     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
      */
 
     public String getKey() {
@@ -55,7 +55,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     <*  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>>
+     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
@@ -63,7 +63,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     <*  <p>The version of the ImportContainer.</p>>
+     *  <p>The version of the ImportContainer.</p>
      */
 
     public Long getVersion() {
@@ -71,7 +71,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     <*  <p>The time when the ImportContainer was created.</p>>
+     *  <p>The time when the ImportContainer was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -79,7 +79,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     <*  <p>The last time when the ImportContainer was modified.</p>>
+     *  <p>The last time when the ImportContainer was modified.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {

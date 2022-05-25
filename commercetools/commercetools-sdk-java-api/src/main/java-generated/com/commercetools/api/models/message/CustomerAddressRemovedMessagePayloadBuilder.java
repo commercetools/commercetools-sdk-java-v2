@@ -25,7 +25,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
     private com.commercetools.api.models.common.Address address;
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(
@@ -35,7 +35,7 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
     }
 
     /**
-     <>
+     *
      */
 
     public CustomerAddressRemovedMessagePayloadBuilder address(

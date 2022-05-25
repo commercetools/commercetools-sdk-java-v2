@@ -43,7 +43,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -59,7 +59,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -67,7 +67,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     <*  <p>supported resource type identifiers:</p>>
+     *  <p>supported resource type identifiers:</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {

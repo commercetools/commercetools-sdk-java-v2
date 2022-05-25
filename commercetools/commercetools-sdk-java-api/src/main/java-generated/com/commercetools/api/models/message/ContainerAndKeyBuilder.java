@@ -27,7 +27,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     private String container;
 
     /**
-     <*  <p>User-defined identifier that is unique within the given container.</p>>
+     *  <p>User-defined identifier that is unique within the given container.</p>
      */
 
     public ContainerAndKeyBuilder key(final String key) {
@@ -36,7 +36,7 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
     }
 
     /**
-     <*  <p>Namespace to group Custom Objects.</p>>
+     *  <p>Namespace to group Custom Objects.</p>
      */
 
     public ContainerAndKeyBuilder container(final String container) {

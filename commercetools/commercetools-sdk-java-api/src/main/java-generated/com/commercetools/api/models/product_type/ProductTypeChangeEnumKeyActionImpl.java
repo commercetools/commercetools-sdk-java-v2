@@ -42,7 +42,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -50,7 +50,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     <>
+     *
      */
 
     public String getAttributeName() {
@@ -58,7 +58,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     <>
+     *
      */
 
     public String getKey() {
@@ -66,7 +66,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     <>
+     *
      */
 
     public String getNewKey() {

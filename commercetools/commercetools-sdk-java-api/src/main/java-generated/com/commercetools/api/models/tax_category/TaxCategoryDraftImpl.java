@@ -42,7 +42,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
     }
 
     /**
-     <*  <p>Name of the TaxCategory.</p>>
+     *  <p>Name of the TaxCategory.</p>
      */
 
     public String getName() {
@@ -50,7 +50,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
     }
 
     /**
-     <*  <p>Description of the TaxCategory.</p>>
+     *  <p>Description of the TaxCategory.</p>
      */
 
     public String getDescription() {
@@ -58,7 +58,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
     }
 
     /**
-     <*  <p>Tax rates and subrates of states and countries.</p>>
+     *  <p>Tax rates and subrates of states and countries.</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates() {
@@ -66,7 +66,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
     }
 
     /**
-     <*  <p>User-defined unique identifier for the TaxCategory.</p>>
+     *  <p>User-defined unique identifier for the TaxCategory.</p>
      */
 
     public String getKey() {

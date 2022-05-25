@@ -38,21 +38,21 @@ public interface SetTextLineItemDescriptionChange extends Change {
     String SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE = "SetTextLineItemDescriptionChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetTextLineItemDescriptionChange extends Change {
     public TextLineItemValue getTextLineItem();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetTextLineItemDescriptionChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

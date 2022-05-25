@@ -38,7 +38,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -46,7 +46,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -54,7 +54,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {

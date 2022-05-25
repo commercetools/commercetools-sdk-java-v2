@@ -29,7 +29,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     private Boolean force;
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -39,7 +39,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
@@ -49,7 +49,7 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder force(final Boolean force) {

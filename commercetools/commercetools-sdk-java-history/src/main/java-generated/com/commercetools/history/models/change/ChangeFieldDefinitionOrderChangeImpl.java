@@ -43,7 +43,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     <*  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>>
+     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getPreviousValue() {
@@ -67,7 +67,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getNextValue() {

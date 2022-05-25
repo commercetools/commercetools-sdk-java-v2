@@ -35,7 +35,7 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
     }
 
     /**
-     <*  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>>
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
      */
 
     public java.util.List<String> getFieldNames() {

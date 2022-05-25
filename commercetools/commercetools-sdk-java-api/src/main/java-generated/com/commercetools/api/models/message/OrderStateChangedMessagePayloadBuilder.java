@@ -27,7 +27,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
     /**
-     <>
+     *
      */
 
     public OrderStateChangedMessagePayloadBuilder orderState(
@@ -37,7 +37,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
     }
 
     /**
-     <>
+     *
      */
 
     public OrderStateChangedMessagePayloadBuilder oldOrderState(

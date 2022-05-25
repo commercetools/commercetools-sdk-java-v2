@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderExcerpt {
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface OrderExcerpt {
     public TypedMoney getTotalPrice();
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedPrice getTaxedPrice();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("version")

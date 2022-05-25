@@ -31,7 +31,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     private com.commercetools.history.models.change_value.CustomShippingMethodChangeValue previousValue;
 
     /**
-     <*  <p>Update action for <code>setCustomShippingMethod</code></p>>
+     *  <p>Update action for <code>setCustomShippingMethod</code></p>
      */
 
     public SetCustomShippingMethodChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomShippingMethodChangeBuilder nextValue(
@@ -52,7 +52,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomShippingMethodChangeBuilder nextValue(
@@ -62,7 +62,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomShippingMethodChangeBuilder previousValue(
@@ -74,7 +74,7 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
     }
 
     /**
-     <>
+     *
      */
 
     public SetCustomShippingMethodChangeBuilder previousValue(

@@ -37,28 +37,28 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     String CHANGE_PLAIN_ENUM_VALUE_ORDER_CHANGE = "ChangePlainEnumValueOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>>
+     *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <*  <p>The name of the attribute updated.</p>>
+     *  <p>The name of the attribute updated.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public List<EnumValue> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

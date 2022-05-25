@@ -31,7 +31,7 @@ public class StandalonePriceUpdateActionImpl implements StandalonePriceUpdateAct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {

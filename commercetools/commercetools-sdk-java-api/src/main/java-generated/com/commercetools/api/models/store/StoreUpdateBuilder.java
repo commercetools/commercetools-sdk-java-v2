@@ -28,7 +28,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder actions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder plusActions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     <>
+     *
      */
 
     public StoreUpdateBuilder withActions(

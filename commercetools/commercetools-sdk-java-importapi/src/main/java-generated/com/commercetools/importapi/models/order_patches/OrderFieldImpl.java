@@ -64,7 +64,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.returnInfo</code></p>>
+     *  <p>Maps to <code>Order.returnInfo</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.ReturnInfo getAddReturnInfo() {
@@ -72,7 +72,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.DeliveryParcel getAddParcelToDelivery() {
@@ -80,7 +80,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.delivery</code></p>>
+     *  <p>Maps to <code>Order.delivery</code></p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> getAddDeliveries() {
@@ -88,7 +88,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft getRemoveDelivery() {
@@ -96,7 +96,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>>
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery() {
@@ -104,7 +104,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.addressDraft</code></p>>
+     *  <p>Maps to <code>Order.addressDraft</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.DeliveryAddressDraft getSetDeliveryAddress() {
@@ -112,7 +112,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelMeasurements</code></p>>
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft getSetParcelMeasurements() {
@@ -120,7 +120,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelTrackingData</code></p>>
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
      */
 
     public com.commercetools.importapi.models.order_patches.ParcelTrackingData getSetParcelTrackingData() {
@@ -128,7 +128,7 @@ public class OrderFieldImpl implements OrderField, ModelBase {
     }
 
     /**
-     <*  <p>Maps to <code>Order.parcelItems</code></p>>
+     *  <p>Maps to <code>Order.parcelItems</code></p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> getSetParcelItems() {

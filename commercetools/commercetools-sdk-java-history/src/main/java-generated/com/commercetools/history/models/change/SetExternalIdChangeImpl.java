@@ -43,7 +43,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     <*  <p>Shape of the action for <code>setExternalId</code></p>>
+     *  <p>Shape of the action for <code>setExternalId</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

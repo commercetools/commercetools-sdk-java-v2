@@ -43,7 +43,7 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     <*  <p>Update action for <code>changePaymentState</code></p>>
+     *  <p>Update action for <code>changePaymentState</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.PaymentState getNextValue() {
@@ -67,7 +67,7 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.PaymentState getPreviousValue() {

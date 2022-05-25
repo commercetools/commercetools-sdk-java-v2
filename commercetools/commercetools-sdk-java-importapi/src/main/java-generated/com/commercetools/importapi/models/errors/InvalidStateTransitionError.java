@@ -35,14 +35,14 @@ public interface InvalidStateTransitionError extends ErrorObject {
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
     @NotNull
     @JsonProperty("currentState")
     public ProcessingState getCurrentState();
 
     /**
-     <*  <p>Every Import Operation is assigned with one of the following states.</p>>
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
      */
     @NotNull
     @JsonProperty("newState")

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The request body to import Prices. Contains data for EmbeddedPrices to be created or updated in a commercetools Project.</p>
+ *  <p>The request body to import Prices. Contains data for EmbeddedPrices to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface PriceImportRequest extends ImportRequest {
     String PRICE = "price";
 
     /**
-     <*  <p>The price import resources of this request.</p>>
+     *  <p>The price import resources of this request.</p>
      */
     @NotNull
     @Valid

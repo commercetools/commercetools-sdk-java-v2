@@ -35,7 +35,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     private java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
@@ -44,7 +44,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
@@ -53,7 +53,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <*  <p>Number of elements skipped.</p>>
+     *  <p>Number of elements skipped.</p>
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
@@ -62,7 +62,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
@@ -72,7 +72,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
@@ -82,7 +82,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -95,7 +95,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
@@ -111,7 +111,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(

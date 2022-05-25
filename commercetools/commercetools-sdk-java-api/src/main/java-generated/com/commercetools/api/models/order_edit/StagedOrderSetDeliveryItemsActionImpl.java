@@ -39,7 +39,7 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -47,7 +47,7 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     <>
+     *
      */
 
     public String getDeliveryId() {
@@ -55,7 +55,7 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {

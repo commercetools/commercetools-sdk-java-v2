@@ -33,7 +33,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     String REMOVE_DELIVERY = "removeDelivery";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")

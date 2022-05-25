@@ -39,7 +39,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     <*  <p>Name of a custom field.</p>>
+     *  <p>Name of a custom field.</p>
      */
 
     public String getName() {
@@ -47,7 +47,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getValue() {
@@ -55,7 +55,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

@@ -30,7 +30,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>setText</code></p>>
+     *  <p>Shape of the action for <code>setText</code></p>
      */
 
     public SetTextChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public SetTextChangeBuilder nextValue(final String nextValue) {

@@ -37,28 +37,28 @@ public interface SetDeliveryItemsChange extends Change {
     String SET_DELIVERY_ITEMS_CHANGE = "SetDeliveryItemsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setDeliveryItems</code></p>>
+     *  <p>Update action for <code>setDeliveryItems</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -66,7 +66,7 @@ public interface SetDeliveryItemsChange extends Change {
     public List<DeliveryItem> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

@@ -30,7 +30,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
     /**
-     <>
+     *
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
@@ -40,7 +40,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder shippingInfo(
@@ -50,7 +50,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
@@ -60,7 +60,7 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     }
 
     /**
-     <>
+     *
      */
 
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(

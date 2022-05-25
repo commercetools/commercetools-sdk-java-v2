@@ -33,14 +33,14 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
     /**
-     <*  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>>
+     *  <p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
      */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-     <*  <p>Sets the Custom Fields fields for the <code>address</code>.</p>>
+     *  <p>Sets the Custom Fields fields for the <code>address</code>.</p>
      */
     @Valid
     @JsonProperty("fields")

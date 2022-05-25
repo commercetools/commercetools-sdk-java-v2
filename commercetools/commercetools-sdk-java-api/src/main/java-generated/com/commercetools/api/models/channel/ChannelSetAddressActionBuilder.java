@@ -27,7 +27,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ChannelSetAddressActionBuilder address(
@@ -37,7 +37,7 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ChannelSetAddressActionBuilder address(

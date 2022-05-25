@@ -27,7 +27,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(
@@ -37,7 +37,7 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     }
 
     /**
-     <*  <p>Value to set. If empty, any existing value will be removed.</p>>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(

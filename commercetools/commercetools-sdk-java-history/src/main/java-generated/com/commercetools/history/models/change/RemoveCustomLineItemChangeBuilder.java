@@ -31,7 +31,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
     /**
-     <*  <p>Update action for adding and removing custom line items</p>>
+     *  <p>Update action for adding and removing custom line items</p>
      */
 
     public RemoveCustomLineItemChangeBuilder change(final String change) {
@@ -40,7 +40,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveCustomLineItemChangeBuilder nextValue(
@@ -50,7 +50,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveCustomLineItemChangeBuilder nextValue(
@@ -60,7 +60,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveCustomLineItemChangeBuilder previousValue(
@@ -70,7 +70,7 @@ public class RemoveCustomLineItemChangeBuilder implements Builder<RemoveCustomLi
     }
 
     /**
-     <>
+     *
      */
 
     public RemoveCustomLineItemChangeBuilder previousValue(

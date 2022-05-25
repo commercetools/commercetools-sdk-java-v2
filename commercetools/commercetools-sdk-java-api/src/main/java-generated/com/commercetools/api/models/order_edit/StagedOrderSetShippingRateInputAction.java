@@ -33,7 +33,7 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
 
     /**
-     <>
+     *
      */
     @Valid
     @JsonProperty("shippingRateInput")

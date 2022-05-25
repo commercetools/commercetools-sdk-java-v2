@@ -38,21 +38,21 @@ public interface SetParcelItemsChange extends Change {
     String SET_PARCEL_ITEMS_CHANGE = "SetParcelItemsChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>setParcelItems</code></p>>
+     *  <p>Update action for <code>setParcelItems</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface SetParcelItemsChange extends Change {
     public ParcelChangeValue getParcel();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -68,7 +68,7 @@ public interface SetParcelItemsChange extends Change {
     public List<DeliveryItem> getNextValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

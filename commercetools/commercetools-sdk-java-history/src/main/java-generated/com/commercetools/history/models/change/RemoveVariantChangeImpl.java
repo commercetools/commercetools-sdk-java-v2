@@ -47,7 +47,7 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -55,7 +55,7 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
     }
 
     /**
-     <*  <p>Update action for <code>removeVariant</code></p>>
+     *  <p>Update action for <code>removeVariant</code></p>
      */
 
     public String getChange() {
@@ -63,7 +63,7 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCatalogData() {
@@ -71,7 +71,7 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getPreviousValue() {
@@ -79,7 +79,7 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.history.models.common.Variant getNextValue() {

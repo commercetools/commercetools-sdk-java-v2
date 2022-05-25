@@ -28,7 +28,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionBuilder
     private Long quantity;
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId(final String textLineItemId) {
@@ -37,7 +37,7 @@ public class MyShoppingListChangeTextLineItemQuantityActionBuilder
     }
 
     /**
-     <>
+     *
      */
 
     public MyShoppingListChangeTextLineItemQuantityActionBuilder quantity(final Long quantity) {

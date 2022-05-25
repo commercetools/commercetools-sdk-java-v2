@@ -47,7 +47,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -55,7 +55,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     <>
+     *
      */
 
     public String getShippingMethodName() {
@@ -63,7 +63,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -71,7 +71,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     <*  <p>ResourceIdentifier to a TaxCategory.</p>>
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -79,7 +79,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
     }
 
     /**
-     <>
+     *
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

@@ -51,7 +51,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {
@@ -67,7 +67,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Map<String, java.lang.Object> values() {
@@ -75,7 +75,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public String getField() {
@@ -83,7 +83,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.lang.Object getDuplicateValue() {
@@ -91,7 +91,7 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getConflictingResource() {

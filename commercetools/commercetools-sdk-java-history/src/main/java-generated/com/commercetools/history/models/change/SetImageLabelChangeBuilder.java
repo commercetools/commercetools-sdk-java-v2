@@ -34,7 +34,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     private com.commercetools.history.models.common.Image nextValue;
 
     /**
-     <*  <p>Update action for <code>setImageLabel</code></p>>
+     *  <p>Update action for <code>setImageLabel</code></p>
      */
 
     public SetImageLabelChangeBuilder change(final String change) {
@@ -43,7 +43,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetImageLabelChangeBuilder catalogData(final String catalogData) {
@@ -52,7 +52,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetImageLabelChangeBuilder previousValue(
@@ -62,7 +62,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetImageLabelChangeBuilder previousValue(final com.commercetools.history.models.common.Image previousValue) {
@@ -71,7 +71,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetImageLabelChangeBuilder nextValue(
@@ -81,7 +81,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     <>
+     *
      */
 
     public SetImageLabelChangeBuilder nextValue(final com.commercetools.history.models.common.Image nextValue) {

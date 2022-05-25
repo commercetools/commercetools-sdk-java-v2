@@ -34,7 +34,7 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
     String CHANGE_NAME = "changeName";
 
     /**
-     <*  <p>The new name to be set for the ProductSelection.</p>>
+     *  <p>The new name to be set for the ProductSelection.</p>
      */
     @NotNull
     @Valid

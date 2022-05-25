@@ -34,28 +34,28 @@ public interface SetIsValidChange extends Change {
     String SET_IS_VALID_CHANGE = "SetIsValidChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Shape of the action for <code>setIsValid</code></p>>
+     *  <p>Shape of the action for <code>setIsValid</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("nextValue")

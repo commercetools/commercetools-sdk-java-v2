@@ -60,7 +60,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     private Boolean force;
 
     /**
-     <*  <p>Platform-generated unique identifier of the Message.</p>>
+     *  <p>Unique identifier of the Message.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder id(final String id) {
@@ -69,7 +69,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder version(final Long version) {
@@ -78,7 +78,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -87,7 +87,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -96,7 +96,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder lastModifiedBy(
@@ -106,7 +106,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder lastModifiedBy(
@@ -116,7 +116,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder createdBy(
@@ -126,7 +126,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>>
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder createdBy(
@@ -136,7 +136,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder sequenceNumber(final Long sequenceNumber) {
@@ -145,7 +145,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder resource(
@@ -155,7 +155,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder resource(
@@ -165,7 +165,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
@@ -174,7 +174,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -186,7 +186,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder resourceUserProvidedIdentifiers(
@@ -196,7 +196,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder state(
@@ -206,7 +206,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <*  <p>Reference to a State.</p>>
+     *  <p>Reference to a State.</p>
      */
 
     public PaymentStatusStateTransitionMessageBuilder state(
@@ -216,7 +216,7 @@ public class PaymentStatusStateTransitionMessageBuilder implements Builder<Payme
     }
 
     /**
-     <>
+     *
      */
 
     public PaymentStatusStateTransitionMessageBuilder force(final Boolean force) {

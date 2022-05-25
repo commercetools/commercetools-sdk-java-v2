@@ -32,7 +32,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     String CHANGE_IS_ACTIVE = "changeIsActive";
 
     /**
-     <>
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
      */
     @NotNull
     @JsonProperty("isActive")

@@ -25,7 +25,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
@@ -35,7 +35,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
@@ -45,7 +45,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
@@ -58,7 +58,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
@@ -73,7 +73,7 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
     }
 
     /**
-     <>
+     *
      */
 
     public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(

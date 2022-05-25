@@ -35,7 +35,7 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -43,7 +43,7 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
     }
 
     /**
-     <*  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>>
+     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      */
 
     public String getPredicate() {

@@ -24,7 +24,7 @@ public class ScoreShippingRateInputDraftBuilder implements Builder<ScoreShipping
     private Double score;
 
     /**
-     <>
+     *
      */
 
     public ScoreShippingRateInputDraftBuilder score(final Double score) {

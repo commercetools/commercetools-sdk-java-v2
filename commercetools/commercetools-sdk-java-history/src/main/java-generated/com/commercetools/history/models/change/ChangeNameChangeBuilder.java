@@ -30,7 +30,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     private String nextValue;
 
     /**
-     <*  <p>Shape of the action for <code>changeName</code></p>>
+     *  <p>Shape of the action for <code>changeName</code></p>
      */
 
     public ChangeNameChangeBuilder change(final String change) {
@@ -39,7 +39,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeNameChangeBuilder previousValue(final String previousValue) {
@@ -48,7 +48,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     }
 
     /**
-     <>
+     *
      */
 
     public ChangeNameChangeBuilder nextValue(final String nextValue) {

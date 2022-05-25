@@ -39,7 +39,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     private Integer quantity;
 
     /**
-     <*  <p>Defaults to the current date and time.</p>>
+     *  <p>Defaults to the current date and time.</p>
      */
 
     public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
@@ -48,7 +48,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public TextLineItemDraftBuilder custom(
@@ -58,7 +58,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <*  <p>The custom fields.</p>>
+     *  <p>The custom fields.</p>
      */
 
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -67,7 +67,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemDraftBuilder description(
@@ -77,7 +77,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemDraftBuilder description(
@@ -87,7 +87,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemDraftBuilder name(
@@ -97,7 +97,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <>
+     *
      */
 
     public TextLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -106,7 +106,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
-     <*  <p>Defaults to <code>1</code>.</p>>
+     *  <p>Defaults to <code>1</code>.</p>
      */
 
     public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {

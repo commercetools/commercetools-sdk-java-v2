@@ -33,7 +33,7 @@ public interface StandalonePriceReference extends Reference {
     String STANDALONE_PRICE = "standalone-price";
 
     /**
-     <*  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>>
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
      */
     @Valid
     @JsonProperty("obj")

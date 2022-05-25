@@ -37,21 +37,21 @@ public interface RemoveFromCategoryChange extends Change {
     String REMOVE_FROM_CATEGORY_CHANGE = "RemoveFromCategoryChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <*  <p>Update action for <code>addToCategory</code></p>>
+     *  <p>Update action for <code>addToCategory</code></p>
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -59,7 +59,7 @@ public interface RemoveFromCategoryChange extends Change {
     public Reference getCategory();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -67,7 +67,7 @@ public interface RemoveFromCategoryChange extends Change {
     public List<Reference> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

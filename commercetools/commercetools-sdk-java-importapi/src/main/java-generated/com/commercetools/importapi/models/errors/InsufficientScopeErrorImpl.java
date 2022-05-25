@@ -35,7 +35,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getCode() {
@@ -43,7 +43,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     <>
+     *
      */
 
     public String getMessage() {

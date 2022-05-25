@@ -40,14 +40,14 @@ public interface OrderPaymentStateChangedMessage extends OrderMessage {
     String ORDER_PAYMENT_STATE_CHANGED = "OrderPaymentStateChanged";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
     /**
-     <>
+     *
      */
 
     @JsonProperty("oldPaymentState")

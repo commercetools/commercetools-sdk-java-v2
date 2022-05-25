@@ -36,21 +36,21 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     String CHANGE_TEXT_LINE_ITEMS_ORDER_CHANGE = "ChangeTextLineItemsOrderChange";
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-     <>
+     *
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid
@@ -58,7 +58,7 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     public List<TextLineItemValue> getPreviousValue();
 
     /**
-     <>
+     *
      */
     @NotNull
     @Valid

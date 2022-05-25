@@ -43,7 +43,7 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
     }
 
     /**
-     <>
+     *
      */
 
     public String getType() {
@@ -51,7 +51,7 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
     }
 
     /**
-     <*  <p>Shape of the action for <code>setStatusInterfaceText</code></p>>
+     *  <p>Shape of the action for <code>setStatusInterfaceText</code></p>
      */
 
     public String getChange() {
@@ -59,7 +59,7 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
     }
 
     /**
-     <>
+     *
      */
 
     public String getPreviousValue() {
@@ -67,7 +67,7 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
     }
 
     /**
-     <>
+     *
      */
 
     public String getNextValue() {

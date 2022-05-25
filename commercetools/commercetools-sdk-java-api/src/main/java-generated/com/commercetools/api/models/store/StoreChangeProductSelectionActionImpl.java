@@ -40,7 +40,7 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
     }
 
     /**
-     <>
+     *
      */
 
     public String getAction() {
@@ -48,7 +48,7 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
     }
 
     /**
-     <*  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>>
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
      */
 
     public com.commercetools.api.models.common.ResourceIdentifier getProductSelection() {
@@ -56,7 +56,7 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
     }
 
     /**
-     <*  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>>
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {

@@ -39,7 +39,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Long getVersion() {
@@ -47,7 +47,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions() {
@@ -55,7 +55,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     <>
+     *
      */
 
     public Boolean getDryRun() {

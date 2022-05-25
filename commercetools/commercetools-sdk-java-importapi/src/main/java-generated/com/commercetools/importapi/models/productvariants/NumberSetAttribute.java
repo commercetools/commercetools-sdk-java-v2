@@ -13,14 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents an attribute whose value is a set of numbers.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This type represents an attribute whose value is a set of numbers.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     NumberSetAttribute numberSetAttribute = NumberSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
 
     String NUMBER_SET = "number-set";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public List<Double> getValue();

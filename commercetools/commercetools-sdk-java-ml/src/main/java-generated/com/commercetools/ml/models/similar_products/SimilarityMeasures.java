@@ -11,43 +11,52 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarityMeasures similarityMeasures = SimilarityMeasures.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SimilarityMeasuresImpl.class)
 public interface SimilarityMeasures {
 
     /**
-    *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
+     */
 
     @JsonProperty("name")
     public Long getName();
 
     /**
-    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     */
 
     @JsonProperty("description")
     public Long getDescription();
 
     /**
-    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     */
 
     @JsonProperty("attribute")
     public Long getAttribute();
 
     /**
-    *  <p>Importance of the number of product variants in overall similarity.</p>
-    */
+     *  <p>Importance of the number of product variants in overall similarity.</p>
+     */
 
     @JsonProperty("variantCount")
     public Long getVariantCount();
 
     /**
-    *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
+     */
 
     @JsonProperty("price")
     public Long getPrice();

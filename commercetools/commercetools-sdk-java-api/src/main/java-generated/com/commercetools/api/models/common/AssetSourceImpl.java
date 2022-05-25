@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Representation of an <a href="#asset">Asset</a> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Representation of an Asset in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceImpl implements AssetSource, ModelBase {
 
     private String uri;
@@ -42,29 +42,33 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-    *  <p>URI of the AssetSource.</p>
-    */
+     *  <p>URI of the AssetSource.</p>
+     */
+
     public String getUri() {
         return this.uri;
     }
 
     /**
-    *  <p>User-defined unique identifier of the AssetSource.</p>
-    */
+     *  <p>User-defined unique identifier of the AssetSource.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Width and height of the AssetSource.</p>
-    */
+     *  <p>Width and height of the AssetSource.</p>
+     */
+
     public com.commercetools.api.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
 
     /**
-    *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
-    */
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+     */
+
     public String getContentType() {
         return this.contentType;
     }

@@ -14,25 +14,52 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeShoppingListLineItemsOrderChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeShoppingListLineItemsOrderChange changeShoppingListLineItemsOrderChange = ChangeShoppingListLineItemsOrderChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeShoppingListLineItemsOrderChangeImpl.class)
 public interface ChangeShoppingListLineItemsOrderChange extends Change {
 
     String CHANGE_SHOPPING_LIST_LINE_ITEMS_ORDER_CHANGE = "ChangeShoppingListLineItemsOrderChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public List<ShoppingListLineItemValue> getPreviousValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

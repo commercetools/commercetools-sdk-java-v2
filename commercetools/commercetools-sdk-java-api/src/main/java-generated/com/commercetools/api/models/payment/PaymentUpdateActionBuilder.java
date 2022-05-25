@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentUpdateActionBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentUpdateActionBuilder {
 
     public com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder addInterfaceInteractionBuilder() {
@@ -32,20 +35,8 @@ public class PaymentUpdateActionBuilder {
         return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder.of();
     }
 
-    public com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder setAmountPaidBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder setAmountRefundedBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder.of();
-    }
-
     public com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
         return com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder setAuthorizationBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder.of();
     }
 
     public com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
@@ -58,10 +49,6 @@ public class PaymentUpdateActionBuilder {
 
     public com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder setCustomerBuilder() {
         return com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder setExternalIdBuilder() {
-        return com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder.of();
     }
 
     public com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder setInterfaceIdBuilder() {

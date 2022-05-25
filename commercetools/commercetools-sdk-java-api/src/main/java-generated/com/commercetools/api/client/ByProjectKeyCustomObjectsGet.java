@@ -17,9 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>For performance reasons, it is highly advisable to query for Custom Objects in a container by using the <code>container</code> field in the <code>where</code> predicate.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>For performance reasons, it is highly advisable to query for Custom Objects in a container by using the <code>container</code> field in the <code>where</code> predicate.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .customObjects()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ByProjectKeyCustomObjectsGet extends
         ApiMethod<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>
         implements

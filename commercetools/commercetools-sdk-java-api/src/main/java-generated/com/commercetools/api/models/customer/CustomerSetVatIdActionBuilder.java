@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetVatIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetVatIdAction customerSetVatIdAction = CustomerSetVatIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAction> {
 
     @Nullable
     private String vatId;
+
+    /**
+     *  <p>If not defined, the vat Id is unset.</p>
+     */
 
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
         this.vatId = vatId;

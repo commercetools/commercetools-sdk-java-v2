@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderShippingRateInputSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShippingRateInputSetMessagePayload orderShippingRateInputSetMessagePayload = OrderShippingRateInputSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingRateInputSetMessagePayloadBuilder
         implements Builder<OrderShippingRateInputSetMessagePayload> {
 
@@ -19,11 +30,19 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
+    /**
+     *
+     */
+
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
@@ -31,11 +50,19 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
         this.oldShippingRateInput = oldShippingRateInput;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {

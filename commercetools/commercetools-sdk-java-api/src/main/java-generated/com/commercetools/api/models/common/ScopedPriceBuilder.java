@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ScopedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ScopedPrice scopedPrice = ScopedPrice.builder()
+ *             .id("{id}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .currentValue(currentValueBuilder -> currentValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     private String id;
@@ -39,15 +53,27 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     *
+     */
+
     public ScopedPriceBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder value(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -55,10 +81,18 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
         this.currentValue = currentValue;
         return this;
     }
+
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder currentValue(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -66,10 +100,18 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public ScopedPriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public ScopedPriceBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -79,11 +121,19 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
+
     public ScopedPriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public ScopedPriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -91,20 +141,36 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
+
     public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ScopedPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ScopedPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ScopedPriceBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
@@ -112,17 +178,29 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ScopedPriceBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
 
+    /**
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
+
     public ScopedPriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

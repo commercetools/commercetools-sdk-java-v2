@@ -12,6 +12,22 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * CartUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartUpdateAction cartUpdateAction = CartUpdateAction.addCustomLineItemBuilder()
+ *             money(moneyBuilder -> moneyBuilder)
+ *             name(nameBuilder -> nameBuilder)
+ *             quantity(0.3)
+ *             slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddCustomLineItemActionImpl.class, name = CartAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartAddDiscountCodeActionImpl.class, name = CartAddDiscountCodeAction.ADD_DISCOUNT_CODE),
@@ -76,9 +92,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionImpl.class, name = CartUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CartUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = CartUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CartUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<CartUpdateAction> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

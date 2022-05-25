@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetDescriptionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDescriptionChange setDescriptionChange = SetDescriptionChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     private String nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setDescription</code></p>
+     */
+
     public SetDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDescriptionChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDescriptionChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

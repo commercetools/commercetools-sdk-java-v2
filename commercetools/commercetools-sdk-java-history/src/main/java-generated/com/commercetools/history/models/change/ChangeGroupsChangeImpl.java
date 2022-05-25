@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeGroupsChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
         this.type = CHANGE_GROUPS_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>changeGroups</code> on stores</p>
-    */
+     *  <p>Update action for <code>changeGroups</code> on stores</p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;

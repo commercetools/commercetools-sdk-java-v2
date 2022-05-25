@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderChangePaymentStateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChangePaymentStateAction, ModelBase {
 
     private String action;
@@ -32,9 +35,17 @@ public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChang
         this.action = CHANGE_PAYMENT_STATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyOrderFromCartDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase {
 
     private String id;
@@ -31,11 +34,16 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Cart from which the Platform creates an Order.</p>
-    */
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public Long getVersion() {
         return this.version;

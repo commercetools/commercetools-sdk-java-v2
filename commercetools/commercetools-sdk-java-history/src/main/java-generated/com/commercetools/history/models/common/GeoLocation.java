@@ -12,14 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GeoLocation
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeoLocation geoLocation = GeoLocation.builder()
+ *             .type("{type}")
+ *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoLocationImpl.class)
 public interface GeoLocation {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("coordinates")
     public List<Integer> getCoordinates();

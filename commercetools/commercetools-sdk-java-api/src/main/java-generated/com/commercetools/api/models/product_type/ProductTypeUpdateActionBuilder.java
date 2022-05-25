@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeUpdateActionBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeUpdateActionBuilder {
 
     public com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionBuilder addAttributeDefinitionBuilder() {
@@ -26,10 +29,6 @@ public class ProductTypeUpdateActionBuilder {
 
     public com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder changeAttributeNameBuilder() {
         return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder changeAttributeOrderBuilder() {
-        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderActionBuilder.of();
     }
 
     public com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder changeAttributeOrderByNameBuilder() {

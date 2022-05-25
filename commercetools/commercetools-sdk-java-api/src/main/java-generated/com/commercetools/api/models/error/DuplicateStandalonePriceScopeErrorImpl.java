@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateStandalonePriceScopeError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalonePriceScopeError, ModelBase {
 
     private String code;
@@ -66,54 +69,89 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
         this.code = DUPLICATE_STANDALONE_PRICE_SCOPE;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     *
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
-    */
+     *  <p>Reference to a StandalonePrice.</p>
+     */
+
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
         return this.conflictingStandalonePrice;
     }
+
+    /**
+     *
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     *
+     */
 
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

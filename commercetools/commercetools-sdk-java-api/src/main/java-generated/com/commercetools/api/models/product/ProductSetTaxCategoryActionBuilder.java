@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetTaxCategoryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetTaxCategoryAction productSetTaxCategoryAction = ProductSetTaxCategoryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTaxCategoryAction> {
 
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
+
+    /**
+     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -22,6 +37,10 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
                 .build();
         return this;
     }
+
+    /**
+     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

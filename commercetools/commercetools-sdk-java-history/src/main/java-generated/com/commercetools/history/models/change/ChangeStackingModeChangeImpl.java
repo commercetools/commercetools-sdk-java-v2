@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeStackingModeChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
         this.type = CHANGE_STACKING_MODE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
-    */
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.StackingMode getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.StackingMode getPreviousValue() {
         return this.previousValue;

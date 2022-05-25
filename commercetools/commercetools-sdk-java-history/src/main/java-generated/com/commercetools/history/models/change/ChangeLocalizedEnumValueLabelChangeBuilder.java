@@ -7,7 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeLocalizedEnumValueLabelChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .valueKey("{valueKey}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<ChangeLocalizedEnumValueLabelChange> {
 
     private String change;
@@ -22,25 +39,45 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
 
+    /**
+     *  <p>Key of the values that was updated</p>
+     */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -48,17 +85,29 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {

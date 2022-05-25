@@ -15,17 +15,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-prices">import Prices</a>. Contains data for <a href="/../api/projects/products#embeddedprice">EmbeddedPrices</a> to be created or updated in a commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The request body to import Prices. Contains data for EmbeddedPrices to be created or updated in a Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceImportRequest priceImportRequest = PriceImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceImportRequestImpl.class)
 public interface PriceImportRequest extends ImportRequest {
 
     String PRICE = "price";
 
     /**
-    *  <p>The price import resources of this request.</p>
-    */
+     *  <p>The price import resources of this request.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("resources")

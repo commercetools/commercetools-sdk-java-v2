@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetDeliveryAddressCustomFieldAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDeliveryAddressCustomFieldActionImpl implements CartSetDeliveryAddressCustomFieldAction, ModelBase {
 
     private String action;
@@ -38,26 +41,34 @@ public class CartSetDeliveryAddressCustomFieldActionImpl implements CartSetDeliv
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
     /**
-    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
-    */
+     *  <p>Name of the Custom Field.</p>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
-    *  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
-    *  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
-    */
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }

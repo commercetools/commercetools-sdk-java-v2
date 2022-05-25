@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StandalonePriceReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceReference standalonePriceReference = StandalonePriceReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceReference> {
 
     private String id;
@@ -17,16 +29,28 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     @Nullable
     private com.commercetools.api.models.standalone_price.StandalonePrice obj;
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     */
+
     public StandalonePriceReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     */
 
     public StandalonePriceReferenceBuilder obj(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     */
 
     public StandalonePriceReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.standalone_price.StandalonePrice obj) {

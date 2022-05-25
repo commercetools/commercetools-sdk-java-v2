@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditAddStagedActionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditAddStagedActionAction orderEditAddStagedActionAction = OrderEditAddStagedActionAction.builder()
+ *             .stagedAction(stagedActionBuilder -> stagedActionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditAddStagedActionAction> {
 
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
+
+    /**
+     *
+     */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(
             final com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction) {
         this.stagedAction = stagedAction;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAddStagedActionActionBuilder stagedAction(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {

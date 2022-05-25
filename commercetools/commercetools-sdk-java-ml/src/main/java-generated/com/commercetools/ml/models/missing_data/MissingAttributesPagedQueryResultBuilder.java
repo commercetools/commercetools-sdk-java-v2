@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingAttributesPagedQueryResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingAttributesPagedQueryResult missingAttributesPagedQueryResult = MissingAttributesPagedQueryResult.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .meta(metaBuilder -> metaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesPagedQueryResultBuilder implements Builder<MissingAttributesPagedQueryResult> {
 
     private Long count;
@@ -20,20 +36,36 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
 
     private com.commercetools.ml.models.missing_data.MissingAttributesMeta meta;
 
+    /**
+     *
+     */
+
     public MissingAttributesPagedQueryResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingAttributesPagedQueryResultBuilder total(final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public MissingAttributesPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingAttributesPagedQueryResultBuilder results(
             final com.commercetools.ml.models.missing_data.MissingAttributes... results) {
@@ -41,11 +73,19 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingAttributesPagedQueryResultBuilder plusResults(
             final com.commercetools.ml.models.missing_data.MissingAttributes... results) {
@@ -56,6 +96,10 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesPagedQueryResultBuilder plusResults(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
         if (this.results == null) {
@@ -65,6 +109,10 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesPagedQueryResultBuilder withResults(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
         this.results = new ArrayList<>();
@@ -72,11 +120,19 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesPagedQueryResultBuilder meta(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder, com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder> builder) {
         this.meta = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesMetaBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingAttributesPagedQueryResultBuilder meta(
             final com.commercetools.ml.models.missing_data.MissingAttributesMeta meta) {

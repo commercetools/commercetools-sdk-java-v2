@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeEnumKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeEnumKeyAction productTypeChangeEnumKeyAction = ProductTypeChangeEnumKeyAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .key("{key}")
+ *             .newKey("{newKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTypeChangeEnumKeyAction> {
 
     private String attributeName;
@@ -15,15 +29,27 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
 
     private String newKey;
 
+    /**
+     *
+     */
+
     public ProductTypeChangeEnumKeyActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeChangeEnumKeyActionBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangeEnumKeyActionBuilder newKey(final String newKey) {
         this.newKey = newKey;

@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeEnumTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeEnumType attributeEnumType = AttributeEnumType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values;
+
+    /**
+     *
+     */
 
     public AttributeEnumTypeBuilder values(
             final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue... values) {
@@ -18,11 +34,19 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeEnumTypeBuilder values(
             final java.util.List<com.commercetools.importapi.models.producttypes.AttributePlainEnumValue> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeEnumTypeBuilder plusValues(
             final com.commercetools.importapi.models.producttypes.AttributePlainEnumValue... values) {
@@ -33,6 +57,10 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeEnumTypeBuilder plusValues(
             Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {
         if (this.values == null) {
@@ -42,6 +70,10 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
             builder.apply(com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeEnumTypeBuilder withValues(
             Function<com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder, com.commercetools.importapi.models.producttypes.AttributePlainEnumValueBuilder> builder) {

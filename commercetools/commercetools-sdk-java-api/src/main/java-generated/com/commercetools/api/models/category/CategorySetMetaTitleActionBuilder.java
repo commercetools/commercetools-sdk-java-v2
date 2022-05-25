@@ -9,17 +9,36 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetMetaTitleActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetMetaTitleAction categorySetMetaTitleAction = CategorySetMetaTitleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetMetaTitleActionBuilder implements Builder<CategorySetMetaTitleAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaTitle;
+
+    /**
+     *
+     */
 
     public CategorySetMetaTitleActionBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategorySetMetaTitleActionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {

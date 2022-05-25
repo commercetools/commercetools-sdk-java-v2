@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StandalonePriceDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StandalonePriceDraft standalonePriceDraft = StandalonePriceDraft.builder()
+ *             .sku("{sku}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft> {
 
     @Nullable
@@ -43,15 +56,27 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     */
+
     public StandalonePriceDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     */
+
     public StandalonePriceDraftBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     */
 
     public StandalonePriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -59,15 +84,27 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     */
+
     public StandalonePriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
 
+    /**
+     *  <p>Sets the country for which this Price is valid.</p>
+     */
+
     public StandalonePriceDraftBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     */
 
     public StandalonePriceDraftBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -77,11 +114,19 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     */
+
     public StandalonePriceDraftBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     */
 
     public StandalonePriceDraftBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -90,21 +135,37 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     */
+
     public StandalonePriceDraftBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
 
+    /**
+     *  <p>Sets the date from which the Price is valid.</p>
+     */
+
     public StandalonePriceDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+     *  <p>Sets the date until the Price is valid.</p>
+     */
+
     public StandalonePriceDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+     *  <p>Sets price tiers.</p>
+     */
 
     public StandalonePriceDraftBuilder tiers(
             @Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
@@ -112,11 +173,19 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets price tiers.</p>
+     */
+
     public StandalonePriceDraftBuilder tiers(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+     *  <p>Sets price tiers.</p>
+     */
 
     public StandalonePriceDraftBuilder plusTiers(
             @Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
@@ -127,6 +196,10 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets price tiers.</p>
+     */
+
     public StandalonePriceDraftBuilder plusTiers(
             Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
         if (this.tiers == null) {
@@ -136,6 +209,10 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets price tiers.</p>
+     */
+
     public StandalonePriceDraftBuilder withTiers(
             Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
         this.tiers = new ArrayList<>();
@@ -143,11 +220,19 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     */
+
     public StandalonePriceDraftBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     */
 
     public StandalonePriceDraftBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
@@ -155,11 +240,19 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         return this;
     }
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     */
+
     public StandalonePriceDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     */
 
     public StandalonePriceDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

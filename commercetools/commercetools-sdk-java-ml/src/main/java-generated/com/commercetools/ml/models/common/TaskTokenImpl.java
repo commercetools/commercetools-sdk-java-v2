@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaskTokenImpl implements TaskToken, ModelBase {
 
     private String taskId;
@@ -34,15 +34,17 @@ public class TaskTokenImpl implements TaskToken, ModelBase {
     }
 
     /**
-    *  <p>The ID for the task. Used to find the status of the task.</p>
-    */
+     *  <p>The ID for the task. Used to find the status of the task.</p>
+     */
+
     public String getTaskId() {
         return this.taskId;
     }
 
     /**
-    *  <p>The URI path to poll for the status of the task.</p>
-    */
+     *  <p>The URI path to poll for the status of the task.</p>
+     */
+
     public String getUriPath() {
         return this.uriPath;
     }

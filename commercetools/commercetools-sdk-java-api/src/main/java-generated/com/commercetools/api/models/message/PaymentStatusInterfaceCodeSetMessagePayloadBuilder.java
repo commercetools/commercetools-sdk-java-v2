@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentStatusInterfaceCodeSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentStatusInterfaceCodeSetMessagePayload paymentStatusInterfaceCodeSetMessagePayload = PaymentStatusInterfaceCodeSetMessagePayload.builder()
+ *             .paymentId("{paymentId}")
+ *             .interfaceCode("{interfaceCode}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         implements Builder<PaymentStatusInterfaceCodeSetMessagePayload> {
 
@@ -14,10 +27,18 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
 
     private String interfaceCode;
 
+    /**
+     *
+     */
+
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(final String interfaceCode) {
         this.interfaceCode = interfaceCode;

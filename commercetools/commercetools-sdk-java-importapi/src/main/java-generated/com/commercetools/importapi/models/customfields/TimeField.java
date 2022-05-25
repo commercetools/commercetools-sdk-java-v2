@@ -14,14 +14,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A field with a time value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A field with a time value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TimeField timeField = TimeField.builder()
+ *             .value(LocalTime.parse("12:00:00.301"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeFieldImpl.class)
 public interface TimeField extends CustomField {
 
     String TIME = "Time";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public LocalTime getValue();

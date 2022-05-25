@@ -16,37 +16,65 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TextLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItem textLineItem = TextLineItem.builder()
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TextLineItemImpl.class)
 public interface TextLineItem extends com.commercetools.api.models.Customizable<TextLineItem> {
 
     /**
-    *  <p>When the text line item was added to the shopping list.</p>
-    */
+     *  <p>When the text line item was added to the shopping list.</p>
+     */
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Platform-generated unique identifier of the TextLineItem.</p>
-    */
+     *  <p>Unique identifier of the TextLineItem.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();

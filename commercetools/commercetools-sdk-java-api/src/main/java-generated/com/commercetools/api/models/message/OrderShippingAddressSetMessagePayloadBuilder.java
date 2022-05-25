@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderShippingAddressSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderShippingAddressSetMessagePayload orderShippingAddressSetMessagePayload = OrderShippingAddressSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<OrderShippingAddressSetMessagePayload> {
 
     @Nullable
@@ -18,11 +29,19 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
 
+    /**
+     *
+     */
+
     public OrderShippingAddressSetMessagePayloadBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderShippingAddressSetMessagePayloadBuilder address(
             @Nullable final com.commercetools.api.models.common.Address address) {
@@ -30,11 +49,19 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderShippingAddressSetMessagePayloadBuilder oldAddress(
             @Nullable final com.commercetools.api.models.common.Address oldAddress) {

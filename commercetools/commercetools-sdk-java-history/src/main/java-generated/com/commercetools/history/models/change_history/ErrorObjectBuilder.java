@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ErrorObjectBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorObject errorObject = ErrorObject.builder()
+ *             .code("{code}")
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectBuilder implements Builder<ErrorObject> {
 
     private String code;
 
     private String message;
 
+    /**
+     *
+     */
+
     public ErrorObjectBuilder code(final String code) {
         this.code = code;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ErrorObjectBuilder message(final String message) {
         this.message = message;

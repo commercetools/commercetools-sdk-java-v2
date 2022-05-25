@@ -12,45 +12,97 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * FacetRange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FacetRange facetRange = FacetRange.builder()
+ *             .from(0.3)
+ *             .fromStr("{fromStr}")
+ *             .to(0.3)
+ *             .toStr("{toStr}")
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .min(0.3)
+ *             .max(0.3)
+ *             .mean(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FacetRangeImpl.class)
 public interface FacetRange {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("from")
     public Double getFrom();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("fromStr")
     public String getFromStr();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("to")
     public Double getTo();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("toStr")
     public String getToStr();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
+    /**
+     *
+     */
+
     @JsonProperty("productCount")
     public Long getProductCount();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("total")
     public Double getTotal();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("min")
     public Double getMin();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("max")
     public Double getMax();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("mean")
     public Double getMean();

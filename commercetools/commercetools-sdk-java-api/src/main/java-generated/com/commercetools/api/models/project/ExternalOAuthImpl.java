@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint. For more information, see <a href="/../api/authorization#requesting-an-access-token-using-an-external-oauth-server">Requesting an access token using an external OAuth 2.0 server</a>.</p>
-*  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint. For more information, see Requesting an access token using an external OAuth 2.0 server.</p>
+ *  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
 
     private String url;
@@ -36,15 +36,17 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-    *  <p>URL with authorization header.</p>
-    */
+     *  <p>URL with authorization header.</p>
+     */
+
     public String getUrl() {
         return this.url;
     }
 
     /**
-    *  <p>Partially hidden on retrieval.</p>
-    */
+     *  <p>Partially hidden on retrieval.</p>
+     */
+
     public String getAuthorizationHeader() {
         return this.authorizationHeader;
     }

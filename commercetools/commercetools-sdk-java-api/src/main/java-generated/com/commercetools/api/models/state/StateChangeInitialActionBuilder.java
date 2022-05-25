@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateChangeInitialActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateChangeInitialAction stateChangeInitialAction = StateChangeInitialAction.builder()
+ *             .initial(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateChangeInitialActionBuilder implements Builder<StateChangeInitialAction> {
 
     private Boolean initial;
+
+    /**
+     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     */
 
     public StateChangeInitialActionBuilder initial(final Boolean initial) {
         this.initial = initial;

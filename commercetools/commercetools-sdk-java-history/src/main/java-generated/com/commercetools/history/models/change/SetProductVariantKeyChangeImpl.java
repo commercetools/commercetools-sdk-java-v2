@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetProductVariantKeyChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
         this.type = SET_PRODUCT_VARIANT_KEY_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setProductVariantKey</code></p>
-    */
+     *  <p>Update action for <code>setProductVariantKey</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     *
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public String getNextValue() {
         return this.nextValue;

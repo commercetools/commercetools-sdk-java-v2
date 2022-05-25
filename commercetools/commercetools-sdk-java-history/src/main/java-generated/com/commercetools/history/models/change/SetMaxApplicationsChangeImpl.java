@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetMaxApplicationsChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMaxApplicationsChangeImpl implements SetMaxApplicationsChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetMaxApplicationsChangeImpl implements SetMaxApplicationsChange, M
         this.type = SET_MAX_APPLICATIONS_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Shape of the action for <code>setMaxApplications</code></p>
-    */
+     *  <p>Shape of the action for <code>setMaxApplications</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public Integer getNextValue() {
         return this.nextValue;

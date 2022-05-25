@@ -14,24 +14,52 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelItemsUpdatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelItemsUpdatedMessagePayload parcelItemsUpdatedMessagePayload = ParcelItemsUpdatedMessagePayload.builder()
+ *             .parcelId("{parcelId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelItemsUpdatedMessagePayloadImpl.class)
 public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
 
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
 
+    /**
+     *
+     */
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("oldItems")

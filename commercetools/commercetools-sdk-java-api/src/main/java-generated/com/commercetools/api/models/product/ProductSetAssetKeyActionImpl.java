@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAssetKeyAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, ModelBase {
 
     private String action;
@@ -45,30 +48,50 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
         this.action = SET_ASSET_KEY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *
+     */
 
     public String getAssetId() {
         return this.assetId;
     }
 
     /**
-    *  <p>User-defined identifier for the asset.
-    *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
-    */
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }

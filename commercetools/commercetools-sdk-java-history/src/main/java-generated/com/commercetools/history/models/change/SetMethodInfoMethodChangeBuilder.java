@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetMethodInfoMethodChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetMethodInfoMethodChange setMethodInfoMethodChange = SetMethodInfoMethodChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMethodChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
 
     private String nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setMethodInfoMethod</code></p>
+     */
+
     public SetMethodInfoMethodChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetMethodInfoMethodChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetMethodInfoMethodChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

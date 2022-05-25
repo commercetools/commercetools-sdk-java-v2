@@ -17,7 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShippingRateInputChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingRateInputChangeImpl implements SetShippingRateInputChange, ModelBase {
 
     private String type;
@@ -42,20 +45,33 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
         this.type = SET_SHIPPING_RATE_INPUT_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setShippingRateInput</code></p>
-    */
+     *  <p>Update action for <code>setShippingRateInput</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

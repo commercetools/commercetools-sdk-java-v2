@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSearchRequest
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
 
     private com.commercetools.api.models.order.OrderSearchQuery query;
@@ -39,29 +42,33 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-    *  <p>The Order search query.</p>
-    */
+     *  <p>The Order search query.</p>
+     */
+
     public com.commercetools.api.models.order.OrderSearchQuery getQuery() {
         return this.query;
     }
 
     /**
-    *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
-    */
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
+
     public String getSort() {
         return this.sort;
     }
 
     /**
-    *  <p>The maximum number of search results to be returned.</p>
-    */
+     *  <p>The maximum number of search results to be returned.</p>
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>The number of search results to be skipped in the response for pagination.</p>
-    */
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     */
+
     public Integer getOffset() {
         return this.offset;
     }

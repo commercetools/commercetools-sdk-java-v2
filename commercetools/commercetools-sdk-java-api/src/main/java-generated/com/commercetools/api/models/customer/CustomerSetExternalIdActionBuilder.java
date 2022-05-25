@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetExternalIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetExternalIdAction customerSetExternalIdAction = CustomerSetExternalIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetExternalIdAction> {
 
     @Nullable
     private String externalId;
+
+    /**
+     *  <p>If not defined, the external ID is unset.</p>
+     */
 
     public CustomerSetExternalIdActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;

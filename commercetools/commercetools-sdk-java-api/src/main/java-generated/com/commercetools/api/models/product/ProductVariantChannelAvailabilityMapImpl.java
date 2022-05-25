@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantChannelAvailabilityMap
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap, ModelBase {
 
     private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
@@ -27,6 +30,10 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
 
     public ProductVariantChannelAvailabilityMapImpl() {
     }
+
+    /**
+     *
+     */
 
     public Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
         return values;

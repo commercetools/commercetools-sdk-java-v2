@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentTransactionStateChangedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentTransactionStateChangedMessagePayload paymentTransactionStateChangedMessagePayload = PaymentTransactionStateChangedMessagePayload.builder()
+ *             .transactionId("{transactionId}")
+ *             .state(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransactionStateChangedMessagePayloadBuilder
         implements Builder<PaymentTransactionStateChangedMessagePayload> {
 
@@ -14,10 +27,18 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.payment.TransactionState state;
 
+    /**
+     *
+     */
+
     public PaymentTransactionStateChangedMessagePayloadBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentTransactionStateChangedMessagePayloadBuilder state(
             final com.commercetools.api.models.payment.TransactionState state) {

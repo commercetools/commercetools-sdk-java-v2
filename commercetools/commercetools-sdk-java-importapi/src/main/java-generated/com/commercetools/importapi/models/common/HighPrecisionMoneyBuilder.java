@@ -8,7 +8,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * HighPrecisionMoneyBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     HighPrecisionMoney highPrecisionMoney = HighPrecisionMoney.builder()
+ *             .centAmount(0.3)
+ *             .currencyCode("{currencyCode}")
+ *             .preciseAmount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     @Nullable
@@ -20,20 +34,36 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     private Long preciseAmount;
 
+    /**
+     *
+     */
+
     public HighPrecisionMoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
+
+    /**
+     *
+     */
 
     public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
 
+    /**
+     *  <p>The currency code compliant to ISO 4217.</p>
+     */
+
     public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
+
+    /**
+     *
+     */
 
     public HighPrecisionMoneyBuilder preciseAmount(final Long preciseAmount) {
         this.preciseAmount = preciseAmount;

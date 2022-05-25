@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * UnresolvedReferencesBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UnresolvedReferences unresolvedReferences = UnresolvedReferences.builder()
+ *             .key("{key}")
+ *             .typeId(ReferenceType.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences> {
 
     private String key;
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     *
+     */
+
     public UnresolvedReferencesBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>The type of the referenced resource.</p>
+     */
 
     public UnresolvedReferencesBuilder typeId(final com.commercetools.importapi.models.common.ReferenceType typeId) {
         this.typeId = typeId;

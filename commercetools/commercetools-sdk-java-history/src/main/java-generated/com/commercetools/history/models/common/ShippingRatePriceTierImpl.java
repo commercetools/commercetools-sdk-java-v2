@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingRatePriceTier
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBase {
 
     private com.commercetools.history.models.common.ShippingRateTierType type;
@@ -27,6 +30,10 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
 
     public ShippingRatePriceTierImpl() {
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.ShippingRateTierType getType() {
         return this.type;

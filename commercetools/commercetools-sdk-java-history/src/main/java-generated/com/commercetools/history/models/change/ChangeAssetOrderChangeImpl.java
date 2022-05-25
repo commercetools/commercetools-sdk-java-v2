@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeAssetOrderChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, ModelBase {
 
     private String type;
@@ -39,17 +42,33 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
         this.type = CHANGE_ASSET_ORDER_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.LocalizedString> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.LocalizedString> getNextValue() {
         return this.nextValue;

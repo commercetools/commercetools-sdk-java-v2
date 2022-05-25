@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * RecordPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
+ *             .limit(1)
+ *             .count(1)
+ *             .total(1)
+ *             .offset(1)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQueryResponse> {
 
     private Integer limit;
@@ -20,25 +36,45 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *  <p>Actual number of results returned.</p>
+     */
 
     public RecordPagedQueryResponseBuilder count(final Integer count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     */
+
     public RecordPagedQueryResponseBuilder total(final Integer total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public RecordPagedQueryResponseBuilder offset(final Integer offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RecordPagedQueryResponseBuilder results(
             final com.commercetools.history.models.change_history.Record... results) {
@@ -46,11 +82,19 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
+    /**
+     *
+     */
+
     public RecordPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.history.models.change_history.Record> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RecordPagedQueryResponseBuilder plusResults(
             final com.commercetools.history.models.change_history.Record... results) {
@@ -61,6 +105,10 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
+    /**
+     *
+     */
+
     public RecordPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
         if (this.results == null) {
@@ -69,6 +117,10 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public RecordPagedQueryResponseBuilder withResults(
             Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {

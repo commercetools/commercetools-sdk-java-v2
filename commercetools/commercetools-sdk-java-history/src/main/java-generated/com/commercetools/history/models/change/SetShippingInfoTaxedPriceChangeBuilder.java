@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShippingInfoTaxedPriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShippingInfoTaxedPriceChange setShippingInfoTaxedPriceChange = SetShippingInfoTaxedPriceChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippingInfoTaxedPriceChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
 
     private com.commercetools.history.models.common.TaxedPrice previousValue;
 
+    /**
+     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
+     */
+
     public SetShippingInfoTaxedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
@@ -27,17 +49,29 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShippingInfoTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxedPrice previousValue) {

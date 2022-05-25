@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedLineItemPriceDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPriceDraft, ModelBase {
 
     private com.commercetools.importapi.models.common.Money value;
@@ -31,9 +34,17 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     public DiscountedLineItemPriceDraftImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> getIncludedDiscounts() {
         return this.includedDiscounts;

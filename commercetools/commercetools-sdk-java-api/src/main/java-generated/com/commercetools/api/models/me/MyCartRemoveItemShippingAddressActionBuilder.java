@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartRemoveItemShippingAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartRemoveItemShippingAddressAction myCartRemoveItemShippingAddressAction = MyCartRemoveItemShippingAddressAction.builder()
+ *             .addressKey("{addressKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRemoveItemShippingAddressActionBuilder implements Builder<MyCartRemoveItemShippingAddressAction> {
 
     private String addressKey;
+
+    /**
+     *
+     */
 
     public MyCartRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;

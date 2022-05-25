@@ -9,7 +9,25 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderCustomerSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerSetMessage orderCustomerSetMessage = OrderCustomerSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetMessage> {
 
     private String id;
@@ -47,25 +65,45 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public OrderCustomerSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderCustomerSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderCustomerSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderCustomerSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderCustomerSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -73,11 +111,19 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderCustomerSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderCustomerSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -85,21 +131,37 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderCustomerSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderCustomerSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public OrderCustomerSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public OrderCustomerSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -107,10 +169,18 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderCustomerSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -120,11 +190,19 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessageBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -132,11 +210,19 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *  <p>Reference to a Customer.</p>
+     */
+
     public OrderCustomerSetMessageBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessageBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -146,11 +232,19 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
+
     public OrderCustomerSetMessageBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Customer.</p>
+     */
 
     public OrderCustomerSetMessageBuilder oldCustomer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -158,11 +252,19 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
         return this;
     }
 
+    /**
+     *  <p>Reference to a Customer.</p>
+     */
+
     public OrderCustomerSetMessageBuilder oldCustomer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference oldCustomer) {
         this.oldCustomer = oldCustomer;
         return this;
     }
+
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessageBuilder oldCustomerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -171,6 +273,10 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public OrderCustomerSetMessageBuilder oldCustomerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {

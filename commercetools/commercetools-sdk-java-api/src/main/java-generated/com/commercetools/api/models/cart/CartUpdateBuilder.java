@@ -7,27 +7,56 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartUpdate cartUpdate = CartUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartUpdateBuilder implements Builder<CartUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions;
 
+    /**
+     *
+     */
+
     public CartUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartUpdateBuilder actions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartUpdateBuilder actions(final java.util.List<com.commercetools.api.models.cart.CartUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartUpdateBuilder plusActions(final com.commercetools.api.models.cart.CartUpdateAction... actions) {
         if (this.actions == null) {
@@ -37,6 +66,10 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartUpdateBuilder plusActions(
             Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {
         if (this.actions == null) {
@@ -45,6 +78,10 @@ public class CartUpdateBuilder implements Builder<CartUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.cart.CartUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartUpdateBuilder withActions(
             Function<com.commercetools.api.models.cart.CartUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart.CartUpdateAction>> builder) {

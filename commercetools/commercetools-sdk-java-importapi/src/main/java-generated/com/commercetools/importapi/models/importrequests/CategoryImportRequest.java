@@ -15,17 +15,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-categories">import Categories</a>. Contains data for <a href="/../api/projects/categories#category">Categories</a> to be created or updated in a commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The request body to import Categories. Contains data for Categories to be created or updated in a Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryImportRequest categoryImportRequest = CategoryImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryImportRequestImpl.class)
 public interface CategoryImportRequest extends ImportRequest {
 
     String CATEGORY = "category";
 
     /**
-    *  <p>The category import resources of this request.</p>
-    */
+     *  <p>The category import resources of this request.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("resources")

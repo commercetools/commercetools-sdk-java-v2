@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeLocalizedEnumValue
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumValue, ModelBase {
 
     private String key;
@@ -31,13 +34,18 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
     public AttributeLocalizedEnumValueImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }

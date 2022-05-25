@@ -9,7 +9,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReturnPaymentState
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReturnPaymentState {
 
     ReturnPaymentState NON_REFUNDABLE = ReturnPaymentStateEnum.NON_REFUNDABLE;

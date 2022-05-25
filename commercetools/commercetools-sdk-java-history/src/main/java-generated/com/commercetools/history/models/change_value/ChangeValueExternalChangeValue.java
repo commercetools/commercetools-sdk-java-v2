@@ -13,14 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Shape of the value for product discounts external value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for product discounts external value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeValueExternalChangeValue changeValueExternalChangeValue = ChangeValueExternalChangeValue.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueExternalChangeValueImpl.class)
 public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
 
     String EXTERNAL = "external";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

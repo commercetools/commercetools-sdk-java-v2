@@ -8,7 +8,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImportSinkBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSink importSink = ImportSink.builder()
+ *             .key("{key}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSinkBuilder implements Builder<ImportSink> {
 
     private String key;
@@ -22,10 +37,18 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     */
+
     public ImportSinkBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     */
 
     public ImportSinkBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
@@ -33,15 +56,27 @@ public class ImportSinkBuilder implements Builder<ImportSink> {
         return this;
     }
 
+    /**
+     *  <p>The version of the ImportSink.</p>
+     */
+
     public ImportSinkBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *  <p>The time when the ImportSink was created.</p>
+     */
+
     public ImportSinkBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     *  <p>The last time when the ImportSink was modified.</p>
+     */
 
     public ImportSinkBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;

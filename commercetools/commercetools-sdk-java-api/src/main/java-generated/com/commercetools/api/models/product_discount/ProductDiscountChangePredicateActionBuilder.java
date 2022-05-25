@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDiscountChangePredicateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountChangePredicateAction productDiscountChangePredicateAction = ProductDiscountChangePredicateAction.builder()
+ *             .predicate("{predicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountChangePredicateActionBuilder implements Builder<ProductDiscountChangePredicateAction> {
 
     private String predicate;
+
+    /**
+     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     */
 
     public ProductDiscountChangePredicateActionBuilder predicate(final String predicate) {
         this.predicate = predicate;

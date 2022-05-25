@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSetParcelCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetParcelCustomTypeAction orderSetParcelCustomTypeAction = OrderSetParcelCustomTypeAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetParcelCustomTypeAction> {
 
     private String parcelId;
@@ -20,10 +32,18 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     *
+     */
+
     public OrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     */
 
     public OrderSetParcelCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -31,17 +51,29 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     */
+
     public OrderSetParcelCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
 
+    /**
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     */
+
     public OrderSetParcelCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     */
 
     public OrderSetParcelCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

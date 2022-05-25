@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAttributeInAllVariantsAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAttributeInAllVariantsAction, ModelBase {
 
     private String action;
@@ -38,20 +41,33 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
         this.action = SET_ATTRIBUTE_IN_ALL_VARIANTS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>The same update behavior as for Set Attribute applies.</p>
-    */
+     *  <p>The same update behavior as for Set Attribute applies.</p>
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

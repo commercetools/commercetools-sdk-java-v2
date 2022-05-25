@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetInterfaceIdChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetInterfaceIdChange setInterfaceIdChange = SetInterfaceIdChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     private String nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setInterfaceId</code></p>
+     */
+
     public SetInterfaceIdChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetInterfaceIdChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetInterfaceIdChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

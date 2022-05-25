@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeAttributeConstraintChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .previousValue(AttributeConstraintEnum.NONE)
+ *             .nextValue(AttributeConstraintEnum.NONE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAttributeConstraintChange> {
 
     private String change;
@@ -17,21 +32,37 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
 
     private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;
 
+    /**
+     *
+     */
+
     public ChangeAttributeConstraintChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>name of the updated attribute</p>
+     */
 
     public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeAttributeConstraintChangeBuilder previousValue(
             final com.commercetools.history.models.common.AttributeConstraintEnum previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeAttributeConstraintChangeBuilder nextValue(
             final com.commercetools.history.models.common.AttributeConstraintEnum nextValue) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeSortOrderAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChangeSortOrderAction, ModelBase {
 
     private String action;
@@ -31,14 +34,18 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
         this.action = CHANGE_SORT_ORDER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>The string must contain a number between 0 and 1.
-    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
-    */
+     *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }

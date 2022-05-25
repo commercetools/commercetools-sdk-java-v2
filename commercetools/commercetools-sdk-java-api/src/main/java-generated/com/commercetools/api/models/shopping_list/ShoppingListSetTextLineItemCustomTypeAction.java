@@ -15,27 +15,42 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListSetTextLineItemCustomTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListSetTextLineItemCustomTypeAction shoppingListSetTextLineItemCustomTypeAction = ShoppingListSetTextLineItemCustomTypeAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListSetTextLineItemCustomTypeActionImpl.class)
 public interface ShoppingListSetTextLineItemCustomTypeAction extends ShoppingListUpdateAction {
 
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE = "setTextLineItemCustomType";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the TextLineItem with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
-    */
+     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the TextLineItem.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

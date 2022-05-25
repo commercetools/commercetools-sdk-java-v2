@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerCreateEmailToken
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, ModelBase {
 
     private String id;
@@ -35,15 +38,24 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the email token.</p>
-    */
+     *  <p>Unique identifier of the email token.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *
+     */
 
     public Long getTtlMinutes() {
         return this.ttlMinutes;

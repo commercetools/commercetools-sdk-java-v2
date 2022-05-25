@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SubscriptionChangeDestinationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionChangeDestinationAction subscriptionChangeDestinationAction = SubscriptionChangeDestinationAction.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionChangeDestinationActionBuilder implements Builder<SubscriptionChangeDestinationAction> {
 
     private com.commercetools.api.models.subscription.Destination destination;
+
+    /**
+     *
+     */
 
     public SubscriptionChangeDestinationActionBuilder destination(
             final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionChangeDestinationActionBuilder destination(
             Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {

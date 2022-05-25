@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private String currency;
@@ -83,83 +86,120 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     *
+     */
 
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>Default inventory mode is <code>None</code>.</p>
-    */
+     *  <p>Default inventory mode is <code>None</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyLineItemDraft> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *
+     */
 
     public String getLocale() {
         return this.locale;
     }
 
     /**
-    *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
-    */
+     *  <p>The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</p>
+     */
+
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
-    */
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
+
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;

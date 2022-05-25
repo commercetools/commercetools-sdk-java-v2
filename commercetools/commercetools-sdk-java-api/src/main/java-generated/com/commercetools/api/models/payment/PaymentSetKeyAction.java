@@ -10,17 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentSetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetKeyAction paymentSetKeyAction = PaymentSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetKeyActionImpl.class)
 public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
     String SET_KEY = "setKey";
 
     /**
-    *  <p>User-specific unique identifier for the payment (max.
-    *  256 characters).
-    *  If not provided an existing key will be removed.</p>
-    */
+     *  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

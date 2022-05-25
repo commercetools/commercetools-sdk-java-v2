@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelItemsUpdatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelItemsUpdatedMessagePayload parcelItemsUpdatedMessagePayload = ParcelItemsUpdatedMessagePayload.builder()
+ *             .parcelId("{parcelId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusOldItems(oldItemsBuilder -> oldItemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelItemsUpdatedMessagePayload> {
 
     private String parcelId;
@@ -21,15 +35,27 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems;
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelItemsUpdatedMessagePayloadBuilder items(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -37,11 +63,19 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
             final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -52,6 +86,10 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -61,6 +99,10 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -68,17 +110,29 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
         this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder oldItems(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
         this.oldItems = oldItems;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
             final com.commercetools.api.models.order.DeliveryItem... oldItems) {
@@ -89,6 +143,10 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelItemsUpdatedMessagePayloadBuilder plusOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.oldItems == null) {
@@ -97,6 +155,10 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelItemsUpdatedMessagePayloadBuilder withOldItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

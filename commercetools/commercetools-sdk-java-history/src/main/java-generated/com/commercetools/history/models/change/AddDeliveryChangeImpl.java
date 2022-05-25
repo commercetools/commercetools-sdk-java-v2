@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddDeliveryChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
         this.type = ADD_DELIVERY_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>addDelivery</code></p>
-    */
+     *  <p>Update action for <code>addDelivery</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;

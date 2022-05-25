@@ -10,15 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountSetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetKeyAction cartDiscountSetKeyAction = CartDiscountSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetKeyActionImpl.class)
 public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
 
     String SET_KEY = "setKey";
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

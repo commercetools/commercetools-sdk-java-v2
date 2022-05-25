@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShoppingListLineItemCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShoppingListLineItemCustomTypeChange setShoppingListLineItemCustomTypeChange = SetShoppingListLineItemCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShoppingListLineItemCustomTypeChangeBuilder
         implements Builder<SetShoppingListLineItemCustomTypeChange> {
 
@@ -19,10 +34,18 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
+     */
+
     public SetShoppingListLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
             Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
@@ -32,11 +55,19 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShoppingListLineItemCustomTypeChangeBuilder lineItem(
             final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.lineItem = lineItem;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -44,17 +75,29 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShoppingListLineItemCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {

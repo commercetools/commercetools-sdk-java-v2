@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountSetValidFromAndUntilActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetValidFromAndUntilAction cartDiscountSetValidFromAndUntilAction = CartDiscountSetValidFromAndUntilAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<CartDiscountSetValidFromAndUntilAction> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {

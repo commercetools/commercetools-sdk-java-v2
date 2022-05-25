@@ -12,6 +12,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * TaxCategoryUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryUpdateAction taxCategoryUpdateAction = TaxCategoryUpdateAction.addTaxRateBuilder()
+ *             taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionImpl.class, name = TaxCategoryAddTaxRateAction.ADD_TAX_RATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionImpl.class, name = TaxCategoryChangeNameAction.CHANGE_NAME),
@@ -21,10 +34,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategorySetKeyActionImpl.class, name = TaxCategorySetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = TaxCategoryUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = TaxCategoryUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TaxCategoryUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<TaxCategoryUpdateAction> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

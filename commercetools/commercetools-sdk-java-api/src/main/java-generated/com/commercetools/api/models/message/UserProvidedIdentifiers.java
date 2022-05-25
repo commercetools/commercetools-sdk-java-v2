@@ -13,39 +13,67 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * UserProvidedIdentifiers
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     UserProvidedIdentifiers userProvidedIdentifiers = UserProvidedIdentifiers.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = UserProvidedIdentifiersImpl.class)
 public interface UserProvidedIdentifiers {
 
     /**
-    *  <p>User-provided unique identifier of the resource.</p>
-    */
+     *  <p>User-provided unique identifier of the resource.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *
+     */
+
     @JsonProperty("externalId")
     public String getExternalId();
+
+    /**
+     *
+     */
 
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
+    /**
+     *
+     */
+
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
+
+    /**
+     *
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
     /**
-    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
-    */
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     */
     @Valid
     @JsonProperty("containerAndKey")
     public ContainerAndKey getContainerAndKey();

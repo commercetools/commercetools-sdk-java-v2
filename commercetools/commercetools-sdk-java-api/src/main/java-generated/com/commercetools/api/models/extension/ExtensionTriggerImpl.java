@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ExtensionTrigger
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
 
     private com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId;
@@ -33,15 +36,17 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-    *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
-    */
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+     */
+
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 
     /**
-    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
-    */
+     *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions() {
         return this.actions;
     }

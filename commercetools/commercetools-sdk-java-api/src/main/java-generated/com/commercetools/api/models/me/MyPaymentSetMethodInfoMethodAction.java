@@ -10,11 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyPaymentSetMethodInfoMethodAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyPaymentSetMethodInfoMethodAction myPaymentSetMethodInfoMethodAction = MyPaymentSetMethodInfoMethodAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentSetMethodInfoMethodActionImpl.class)
 public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateAction {
 
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
+
+    /**
+     *
+     */
 
     @JsonProperty("method")
     public String getMethod();

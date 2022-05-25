@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListAddLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListAddLineItemAction myShoppingListAddLineItemAction = MyShoppingListAddLineItemAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppingListAddLineItemAction> {
 
     @Nullable
@@ -30,36 +41,64 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     *
+     */
+
     public MyShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public MyShoppingListAddLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public MyShoppingListAddLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

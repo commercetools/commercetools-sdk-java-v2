@@ -15,22 +15,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingRoleOnChannelError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingRoleOnChannelError missingRoleOnChannelError = MissingRoleOnChannelError.builder()
+ *             .message("{message}")
+ *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingRoleOnChannelErrorImpl.class)
 public interface MissingRoleOnChannelError extends ErrorObject {
 
     String MISSING_ROLE_ON_CHANNEL = "MissingRoleOnChannel";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
     /**
-    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
-    */
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     */
     @NotNull
     @JsonProperty("missingRole")
     public ChannelRoleEnum getMissingRole();

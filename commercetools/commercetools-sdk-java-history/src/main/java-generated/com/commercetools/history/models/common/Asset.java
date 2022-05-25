@@ -13,29 +13,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Asset
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .custom(customBuilder -> customBuilder)
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetImpl.class)
 public interface Asset {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();

@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetParcelItemsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetParcelItemsChange setParcelItemsChange = SetParcelItemsChange.builder()
+ *             .change("{change}")
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+     *  <p>Update action for <code>setParcelItems</code></p>
+     */
+
     public SetParcelItemsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelItemsChangeBuilder parcel(
             Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
@@ -30,11 +53,19 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelItemsChangeBuilder nextValue(
             final com.commercetools.history.models.common.DeliveryItem... nextValue) {
@@ -42,11 +73,19 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelItemsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.DeliveryItem... nextValue) {
@@ -57,6 +96,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.nextValue == null) {
@@ -66,6 +109,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -73,17 +120,29 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder previousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelItemsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
@@ -94,6 +153,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelItemsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.previousValue == null) {
@@ -102,6 +165,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelItemsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {

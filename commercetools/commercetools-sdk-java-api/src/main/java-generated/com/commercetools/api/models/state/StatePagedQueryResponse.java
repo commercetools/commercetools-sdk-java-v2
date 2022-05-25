@@ -14,47 +14,56 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:State">State</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult with <code>results</code> containing an array of State.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StatePagedQueryResponse statePagedQueryResponse = StatePagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StatePagedQueryResponseImpl.class)
 public interface StatePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<State> {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
-    *  This field is returned by default.
-    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p><a href="ctp:api:type:State">States</a> matching the query.</p>
-    */
+     *  <p>States matching the query.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("results")

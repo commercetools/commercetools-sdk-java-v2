@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetDeliveryItemsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDeliveryItemsChange setDeliveryItemsChange = SetDeliveryItemsChange.builder()
+ *             .change("{change}")
+ *             .deliveryId("{deliveryId}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsChange> {
 
     private String change;
@@ -18,15 +33,27 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+     *  <p>Update action for <code>setDeliveryItems</code></p>
+     */
+
     public SetDeliveryItemsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDeliveryItemsChangeBuilder nextValue(
             final com.commercetools.history.models.common.DeliveryItem... nextValue) {
@@ -34,11 +61,19 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDeliveryItemsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.DeliveryItem... nextValue) {
@@ -49,6 +84,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.nextValue == null) {
@@ -58,6 +97,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -65,17 +108,29 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder previousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.DeliveryItem... previousValue) {
@@ -86,6 +141,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDeliveryItemsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.previousValue == null) {
@@ -94,6 +153,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDeliveryItemsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {

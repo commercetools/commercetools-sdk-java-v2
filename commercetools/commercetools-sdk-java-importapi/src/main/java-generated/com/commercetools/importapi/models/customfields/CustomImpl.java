@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomImpl implements Custom, ModelBase {
 
     private com.commercetools.importapi.models.common.TypeKeyReference type;
@@ -35,15 +35,17 @@ public class CustomImpl implements Custom, ModelBase {
     }
 
     /**
-    *  <p>The type that provides the field definitions for this object.</p>
-    */
+     *  <p>The type that provides the field definitions for this object.</p>
+     */
+
     public com.commercetools.importapi.models.common.TypeKeyReference getType() {
         return this.type;
     }
 
     /**
-    *  <p>The custom fields of this object.</p>
-    */
+     *  <p>The custom fields of this object.</p>
+     */
+
     public com.commercetools.importapi.models.customfields.FieldContainer getFields() {
         return this.fields;
     }

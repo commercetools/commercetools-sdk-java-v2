@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CentPrecisionMoneyDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CentPrecisionMoneyDraft centPrecisionMoneyDraft = CentPrecisionMoneyDraft.builder()
+ *             .centAmount(0.3)
+ *             .currencyCode("{currencyCode}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMoneyDraft> {
 
     private Long centAmount;
@@ -18,15 +31,31 @@ public class CentPrecisionMoneyDraftBuilder implements Builder<CentPrecisionMone
     @Nullable
     private Integer fractionDigits;
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     */
+
     public CentPrecisionMoneyDraftBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
 
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
+
     public CentPrecisionMoneyDraftBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
+
+    /**
+     *  <p>This field is optional for cent precision. If provided, it must be equal to the default number of fraction digits for the specified currency.</p>
+     */
 
     public CentPrecisionMoneyDraftBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;

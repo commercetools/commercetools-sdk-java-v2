@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddressBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Address address = Address.builder()
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressBuilder implements Builder<Address> {
 
     @Nullable
@@ -89,136 +101,244 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     *
+     */
+
     public AddressBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Address.</p>
+     */
 
     public AddressBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public AddressBuilder country(final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     */
 
     public AddressBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
 
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     */
+
     public AddressBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     */
 
     public AddressBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     */
+
     public AddressBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
+
+    /**
+     *  <p>Name of the street.</p>
+     */
 
     public AddressBuilder streetName(@Nullable final String streetName) {
         this.streetName = streetName;
         return this;
     }
 
+    /**
+     *  <p>Street number.</p>
+     */
+
     public AddressBuilder streetNumber(@Nullable final String streetNumber) {
         this.streetNumber = streetNumber;
         return this;
     }
+
+    /**
+     *  <p>Further information on the street address.</p>
+     */
 
     public AddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
         this.additionalStreetInfo = additionalStreetInfo;
         return this;
     }
 
+    /**
+     *  <p>Postal code.</p>
+     */
+
     public AddressBuilder postalCode(@Nullable final String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
+
+    /**
+     *  <p>Name of the city.</p>
+     */
 
     public AddressBuilder city(@Nullable final String city) {
         this.city = city;
         return this;
     }
 
+    /**
+     *  <p>Name of the region.</p>
+     */
+
     public AddressBuilder region(@Nullable final String region) {
         this.region = region;
         return this;
     }
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     */
 
     public AddressBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
+    /**
+     *  <p>Name of the company.</p>
+     */
+
     public AddressBuilder company(@Nullable final String company) {
         this.company = company;
         return this;
     }
+
+    /**
+     *  <p>Name of the department.</p>
+     */
 
     public AddressBuilder department(@Nullable final String department) {
         this.department = department;
         return this;
     }
 
+    /**
+     *  <p>Number or name of the building.</p>
+     */
+
     public AddressBuilder building(@Nullable final String building) {
         this.building = building;
         return this;
     }
+
+    /**
+     *  <p>Number or name of the apartment.</p>
+     */
 
     public AddressBuilder apartment(@Nullable final String apartment) {
         this.apartment = apartment;
         return this;
     }
 
+    /**
+     *  <p>Post office box number.</p>
+     */
+
     public AddressBuilder pOBox(@Nullable final String pOBox) {
         this.pOBox = pOBox;
         return this;
     }
+
+    /**
+     *  <p>Phone number of the contact.</p>
+     */
 
     public AddressBuilder phone(@Nullable final String phone) {
         this.phone = phone;
         return this;
     }
 
+    /**
+     *  <p>Mobile phone number of the contact.</p>
+     */
+
     public AddressBuilder mobile(@Nullable final String mobile) {
         this.mobile = mobile;
         return this;
     }
+
+    /**
+     *  <p>Email address of the contact.</p>
+     */
 
     public AddressBuilder email(@Nullable final String email) {
         this.email = email;
         return this;
     }
 
+    /**
+     *  <p>Fax number of the contact.</p>
+     */
+
     public AddressBuilder fax(@Nullable final String fax) {
         this.fax = fax;
         return this;
     }
+
+    /**
+     *  <p>Further information on the Address.</p>
+     */
 
     public AddressBuilder additionalAddressInfo(@Nullable final String additionalAddressInfo) {
         this.additionalAddressInfo = additionalAddressInfo;
         return this;
     }
 
+    /**
+     *  <p>ID for the contact used in an external system.</p>
+     */
+
     public AddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+     *  <p>Custom Fields defined for the Address.</p>
+     */
 
     public AddressBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Custom Fields defined for the Address.</p>
+     */
 
     public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

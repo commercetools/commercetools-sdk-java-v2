@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderReturnInfoSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReturnInfoSetMessagePayload orderReturnInfoSetMessagePayload = OrderReturnInfoSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderReturnInfoSetMessagePayload> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
+
+    /**
+     *
+     */
 
     public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
             @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
@@ -21,11 +36,19 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
             @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
         this.returnInfo = returnInfo;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
             @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
@@ -36,6 +59,10 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
         if (this.returnInfo == null) {
@@ -44,6 +71,10 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(
             Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {

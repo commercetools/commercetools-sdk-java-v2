@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryReference inventoryEntryReference = InventoryEntryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryReference> {
 
     private String id;
@@ -17,16 +29,28 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     @Nullable
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
+    /**
+     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     */
+
     public InventoryEntryReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     */
 
     public InventoryEntryReferenceBuilder obj(
             Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     */
 
     public InventoryEntryReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.inventory.InventoryEntry obj) {

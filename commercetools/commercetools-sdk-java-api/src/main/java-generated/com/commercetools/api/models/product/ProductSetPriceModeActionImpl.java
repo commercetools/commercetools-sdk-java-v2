@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetPriceModeAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
         this.action = SET_PRICE_MODE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
-    */
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     */
+
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;
     }

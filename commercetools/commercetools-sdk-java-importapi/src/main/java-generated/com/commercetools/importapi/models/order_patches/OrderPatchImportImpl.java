@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Representation for an update of an <a href="/../api/projects/orders#order">Order</a>. Use this type to import updates for existing
-*  <a href="/../api/projects/orders#order">Orders</a> in a commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
 
     private String orderNumber;
@@ -36,15 +35,17 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
-    */
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
 
     /**
-    *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
-    */
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     */
+
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {
         return this.fields;
     }

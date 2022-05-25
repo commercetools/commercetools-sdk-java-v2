@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingRate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateImpl implements ShippingRate, ModelBase {
 
     private com.commercetools.history.models.common.Money price;
@@ -39,20 +42,33 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     public ShippingRateImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
 
     /**
-    *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
-    */
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     */
+
     public Boolean getIsMatching() {
         return this.isMatching;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> getTiers() {
         return this.tiers;

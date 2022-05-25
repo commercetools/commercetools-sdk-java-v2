@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeInputHintActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeInputHintAction productTypeChangeInputHintAction = ProductTypeChangeInputHintAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newValue(TextInputHint.SINGLE_LINE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductTypeChangeInputHintAction> {
 
     private String attributeName;
 
     private com.commercetools.api.models.product_type.TextInputHint newValue;
 
+    /**
+     *
+     */
+
     public ProductTypeChangeInputHintActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangeInputHintActionBuilder newValue(
             final com.commercetools.api.models.product_type.TextInputHint newValue) {

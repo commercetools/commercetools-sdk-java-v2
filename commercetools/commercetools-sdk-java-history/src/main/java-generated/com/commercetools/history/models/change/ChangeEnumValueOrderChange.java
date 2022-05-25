@@ -14,35 +14,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeEnumValueOrderChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeEnumValueOrderChange changeEnumValueOrderChange = ChangeEnumValueOrderChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeEnumValueOrderChangeImpl.class)
 public interface ChangeEnumValueOrderChange extends Change {
 
     String CHANGE_ENUM_VALUE_ORDER_CHANGE = "ChangeEnumValueOrderChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
-    */
+     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the field/attribute definition updated.</p>
-    */
+     *  <p>The name of the field/attribute definition updated.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public List<EnumValue> getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

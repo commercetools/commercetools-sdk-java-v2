@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantChannelAvailabilityBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
 
     @Nullable
@@ -20,15 +31,27 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     @Nullable
     private Long availableQuantity;
 
+    /**
+     *
+     */
+
     public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;

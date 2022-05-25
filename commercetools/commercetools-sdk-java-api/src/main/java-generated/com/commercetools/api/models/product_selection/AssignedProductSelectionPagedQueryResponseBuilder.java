@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssignedProductSelectionPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssignedProductSelectionPagedQueryResponse assignedProductSelectionPagedQueryResponse = AssignedProductSelectionPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductSelectionPagedQueryResponseBuilder
         implements Builder<AssignedProductSelectionPagedQueryResponse> {
 
@@ -24,25 +39,45 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
 
     private java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public AssignedProductSelectionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
 
     public AssignedProductSelectionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     */
+
     public AssignedProductSelectionPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
     public AssignedProductSelectionPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
 
     public AssignedProductSelectionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_selection.AssignedProductSelection... results) {
@@ -50,11 +85,19 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
+
     public AssignedProductSelectionPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
 
     public AssignedProductSelectionPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.product_selection.AssignedProductSelection... results) {
@@ -65,6 +108,10 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
+
     public AssignedProductSelectionPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder, com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder> builder) {
         if (this.results == null) {
@@ -74,6 +121,10 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
             builder.apply(com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
 
     public AssignedProductSelectionPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder, com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder> builder) {

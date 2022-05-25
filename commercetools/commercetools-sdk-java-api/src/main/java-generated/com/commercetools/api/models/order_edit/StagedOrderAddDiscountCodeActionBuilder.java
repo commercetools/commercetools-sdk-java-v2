@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderAddDiscountCodeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddDiscountCodeAction stagedOrderAddDiscountCodeAction = StagedOrderAddDiscountCodeAction.builder()
+ *             .code("{code}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOrderAddDiscountCodeAction> {
 
     private String code;
+
+    /**
+     *
+     */
 
     public StagedOrderAddDiscountCodeActionBuilder code(final String code) {
         this.code = code;

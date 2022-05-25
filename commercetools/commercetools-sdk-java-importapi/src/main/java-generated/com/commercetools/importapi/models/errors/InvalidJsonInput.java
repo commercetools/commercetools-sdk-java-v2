@@ -11,11 +11,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An invalid JSON input has been sent to the service.
-*  Either the JSON is syntactically incorrect or the JSON has an unexpected shape, for example, a required field is missing.
-*  The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>An invalid JSON input has been sent to the service. Either the JSON is syntactically incorrect or the JSON has an unexpected shape, for example, a required field is missing. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidJsonInput invalidJsonInput = InvalidJsonInput.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidJsonInputImpl.class)
 public interface InvalidJsonInput extends ErrorObject {
 

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPrice
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
     private com.commercetools.api.models.common.TypedMoney totalNet;
@@ -39,24 +42,34 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     public TaxedPriceImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.TypedMoney getTotalGross() {
         return this.totalGross;
     }
 
     /**
-    *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
-    */
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.cart.TaxPortion> getTaxPortions() {
         return this.taxPortions;
     }
 
     /**
-    *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
-    */
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalTax() {
         return this.totalTax;
     }

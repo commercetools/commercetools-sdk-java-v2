@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerAddressRemovedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddressRemovedMessagePayload, ModelBase {
 
     private String type;
@@ -32,9 +35,17 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
         this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;

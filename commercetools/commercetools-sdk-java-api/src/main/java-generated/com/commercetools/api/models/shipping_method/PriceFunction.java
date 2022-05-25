@@ -12,17 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PriceFunction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PriceFunction priceFunction = PriceFunction.builder()
+ *             .currencyCode("{currencyCode}")
+ *             .function("{function}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceFunctionImpl.class)
 public interface PriceFunction {
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
     @NotNull
     @JsonProperty("currencyCode")
     public String getCurrencyCode();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("function")
     public String getFunction();

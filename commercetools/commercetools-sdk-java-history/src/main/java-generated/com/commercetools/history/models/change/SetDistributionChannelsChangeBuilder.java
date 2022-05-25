@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetDistributionChannelsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDistributionChannelsChange setDistributionChannelsChange = SetDistributionChannelsChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDistributionChannelsChangeBuilder implements Builder<SetDistributionChannelsChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setDistributionChannels</code></p>
+     */
+
     public SetDistributionChannelsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDistributionChannelsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -27,11 +49,19 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDistributionChannelsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -42,6 +72,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.previousValue == null) {
@@ -51,6 +85,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -58,17 +96,29 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDistributionChannelsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
@@ -79,6 +129,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDistributionChannelsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.nextValue == null) {
@@ -87,6 +141,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDistributionChannelsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

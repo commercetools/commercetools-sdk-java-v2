@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportRequestImpl implements ImportRequest, ModelBase {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
@@ -31,8 +31,9 @@ public class ImportRequestImpl implements ImportRequest, ModelBase {
     }
 
     /**
-    *  <p>The type of the import resource.</p>
-    */
+     *  <p>The type of the import resource.</p>
+     */
+
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }

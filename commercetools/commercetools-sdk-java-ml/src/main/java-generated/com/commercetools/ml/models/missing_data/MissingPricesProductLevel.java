@@ -12,20 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingPricesProductLevel
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingPricesProductLevel missingPricesProductLevel = MissingPricesProductLevel.builder()
+ *             .total(0.3)
+ *             .missingPrices(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingPricesProductLevelImpl.class)
 public interface MissingPricesProductLevel extends MissingPricesProductCount {
 
     /**
-    *  <p>Number of products scanned.</p>
-    */
+     *  <p>Number of products scanned.</p>
+     */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p>Number of products missing prices.</p>
-    */
+     *  <p>Number of products missing prices.</p>
+     */
     @NotNull
     @JsonProperty("missingPrices")
     public Long getMissingPrices();

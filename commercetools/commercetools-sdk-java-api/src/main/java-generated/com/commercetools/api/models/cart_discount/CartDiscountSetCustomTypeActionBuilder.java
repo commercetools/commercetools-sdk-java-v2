@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountSetCustomTypeAction cartDiscountSetCustomTypeAction = CartDiscountSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDiscountSetCustomTypeAction> {
 
     @Nullable
@@ -18,11 +29,19 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     */
+
     public CartDiscountSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     */
 
     public CartDiscountSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +49,19 @@ public class CartDiscountSetCustomTypeActionBuilder implements Builder<CartDisco
         return this;
     }
 
+    /**
+     *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     */
+
     public CartDiscountSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     */
 
     public CartDiscountSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentChangeTransactionInteractionIdAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeTransactionInteractionIdActionImpl
         implements PaymentChangeTransactionInteractionIdAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class PaymentChangeTransactionInteractionIdActionImpl
         this.action = CHANGE_TRANSACTION_INTERACTION_ID;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     *
+     */
 
     public String getInteractionId() {
         return this.interactionId;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SearchIndexingConfigurationValues
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConfigurationValues, ModelBase {
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
@@ -37,22 +40,25 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
     }
 
     /**
-    *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
-    */
+     *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+     */
+
     public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
         return this.status;
     }
 
     /**
-    *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
-    */
+     *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }

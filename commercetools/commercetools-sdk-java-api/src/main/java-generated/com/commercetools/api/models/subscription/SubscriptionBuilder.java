@@ -9,7 +9,27 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SubscriptionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Subscription subscription = Subscription.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusChanges(changesBuilder -> changesBuilder)
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .plusMessages(messagesBuilder -> messagesBuilder)
+ *             .format(formatBuilder -> formatBuilder)
+ *             .status(SubscriptionHealthStatus.HEALTHY)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionBuilder implements Builder<Subscription> {
 
     private String id;
@@ -39,25 +59,45 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
 
+    /**
+     *  <p>Unique identifier of the Subscription.</p>
+     */
+
     public SubscriptionBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -65,11 +105,19 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
+
     public SubscriptionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -77,21 +125,37 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
+
     public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder changes(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder changes(
             final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder plusChanges(
             final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
@@ -102,6 +166,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder plusChanges(
             Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         if (this.changes == null) {
@@ -112,6 +180,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder withChanges(
             Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
         this.changes = new ArrayList<>();
@@ -120,10 +192,18 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder destination(final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder destination(
             Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
@@ -131,10 +211,18 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Subscription.</p>
+     */
+
     public SubscriptionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder messages(
             final com.commercetools.api.models.subscription.MessageSubscription... messages) {
@@ -142,11 +230,19 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder messages(
             final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder plusMessages(
             final com.commercetools.api.models.subscription.MessageSubscription... messages) {
@@ -157,6 +253,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder plusMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         if (this.messages == null) {
@@ -167,6 +267,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder withMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         this.messages = new ArrayList<>();
@@ -175,16 +279,28 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionBuilder format(final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder format(
             Function<com.commercetools.api.models.subscription.DeliveryFormatBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryFormat>> builder) {
         this.format = builder.apply(com.commercetools.api.models.subscription.DeliveryFormatBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionBuilder status(final com.commercetools.api.models.subscription.SubscriptionHealthStatus status) {
         this.status = status;

@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAssetTagsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetTagsAction productSetAssetTagsAction = ProductSetAssetTagsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAssetTagsAction> {
 
     @Nullable
@@ -29,40 +40,72 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     @Nullable
     private java.util.List<String> tags;
 
+    /**
+     *
+     */
+
     public ProductSetAssetTagsActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetTagsActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetTagsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetTagsActionBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {

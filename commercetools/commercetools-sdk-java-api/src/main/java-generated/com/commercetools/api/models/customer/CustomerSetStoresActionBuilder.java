@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetStoresActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetStoresAction customerSetStoresAction = CustomerSetStoresAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStoresAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
+    /**
+     *
+     */
 
     public CustomerSetStoresActionBuilder stores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
@@ -21,11 +36,19 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerSetStoresActionBuilder stores(
             @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerSetStoresActionBuilder plusStores(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
@@ -36,6 +59,10 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerSetStoresActionBuilder plusStores(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         if (this.stores == null) {
@@ -44,6 +71,10 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerSetStoresActionBuilder withStores(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {

@@ -13,22 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Defines an allowed value of a <a href="ctp:api:type:CustomFieldEnumType">CustomFieldEnumType</a> field.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldEnumValue customFieldEnumValue = CustomFieldEnumValue.builder()
+ *             .key("{key}")
+ *             .label("{label}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldEnumValueImpl.class)
 public interface CustomFieldEnumValue {
 
     /**
-    *  <p>Key of the value used as a programmatic identifier.</p>
-    */
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Descriptive label of the value.</p>
-    */
+     *  <p>Descriptive label of the value.</p>
+     */
     @NotNull
     @JsonProperty("label")
     public String getLabel();

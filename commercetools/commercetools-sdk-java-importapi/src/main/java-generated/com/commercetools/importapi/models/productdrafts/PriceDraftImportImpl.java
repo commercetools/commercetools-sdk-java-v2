@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation of a Price Draft for the import purpose.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation of a Price Draft for the import purpose.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
 
     private com.commercetools.importapi.models.common.TypedMoney value;
@@ -66,59 +66,81 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     public PriceDraftImportImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>References a customer group by key.</p>
-    */
+     *  <p>References a customer group by key.</p>
+     */
+
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>References a channel by key.</p>
-    */
+     *  <p>References a channel by key.</p>
+     */
+
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>The custom fields for this category.</p>
-    */
+     *  <p>The custom fields for this category.</p>
+     */
+
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Sets a discounted price from an external service.</p>
-    */
+     *  <p>Sets a discounted price from an external service.</p>
+     */
+
     public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>The tiered prices for this price.</p>
-    */
+     *  <p>The tiered prices for this price.</p>
+     */
+
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *
+     */
 
     public String getKey() {
         return this.key;

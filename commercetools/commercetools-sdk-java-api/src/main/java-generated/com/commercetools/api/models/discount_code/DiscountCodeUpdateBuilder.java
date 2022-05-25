@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeUpdate discountCodeUpdate = DiscountCodeUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions;
 
+    /**
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
+
     public DiscountCodeUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the DiscountCode.</p>
+     */
 
     public DiscountCodeUpdateBuilder actions(
             final com.commercetools.api.models.discount_code.DiscountCodeUpdateAction... actions) {
@@ -25,11 +46,19 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the DiscountCode.</p>
+     */
+
     public DiscountCodeUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the DiscountCode.</p>
+     */
 
     public DiscountCodeUpdateBuilder plusActions(
             final com.commercetools.api.models.discount_code.DiscountCodeUpdateAction... actions) {
@@ -40,6 +69,10 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the DiscountCode.</p>
+     */
+
     public DiscountCodeUpdateBuilder plusActions(
             Function<com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.discount_code.DiscountCodeUpdateAction>> builder) {
         if (this.actions == null) {
@@ -49,6 +82,10 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
             builder.apply(com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the DiscountCode.</p>
+     */
 
     public DiscountCodeUpdateBuilder withActions(
             Function<com.commercetools.api.models.discount_code.DiscountCodeUpdateActionBuilder, Builder<? extends com.commercetools.api.models.discount_code.DiscountCodeUpdateAction>> builder) {

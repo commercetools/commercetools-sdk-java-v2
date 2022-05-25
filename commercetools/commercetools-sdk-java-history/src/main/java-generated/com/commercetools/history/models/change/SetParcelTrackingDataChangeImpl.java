@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetParcelTrackingDataChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
         this.type = SET_PARCEL_TRACKING_DATA_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setParcelTrackingData</code></p>
-    */
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
         return this.parcel;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.TrackingData getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.TrackingData getPreviousValue() {
         return this.previousValue;

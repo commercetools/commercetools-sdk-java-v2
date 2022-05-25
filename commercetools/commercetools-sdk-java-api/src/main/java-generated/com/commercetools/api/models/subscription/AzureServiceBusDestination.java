@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AzureServiceBusDestination
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AzureServiceBusDestination azureServiceBusDestination = AzureServiceBusDestination.builder()
+ *             .connectionString("{connectionString}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
 
     String AZURE_SERVICE_BUS = "AzureServiceBus";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("connectionString")
     public String getConnectionString();

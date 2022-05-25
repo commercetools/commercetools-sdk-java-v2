@@ -13,34 +13,47 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ZoneDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneDraft zoneDraft = ZoneDraft.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneDraftImpl.class)
 public interface ZoneDraft {
 
     /**
-    *  <p>User-defined unique identifier for the Zone.</p>
-    */
+     *  <p>User-defined unique identifier for the Zone.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Name of the Zone.</p>
-    */
+     *  <p>Name of the Zone.</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Description of the Zone.</p>
-    */
+     *  <p>Description of the Zone.</p>
+     */
 
     @JsonProperty("description")
     public String getDescription();
 
     /**
-    *  <p>List of locations that belong to the Zone.</p>
-    */
+     *  <p>List of locations that belong to the Zone.</p>
+     */
     @Valid
     @JsonProperty("locations")
     public List<Location> getLocations();

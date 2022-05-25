@@ -13,34 +13,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderPagedSearchResponse
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPagedSearchResponse orderPagedSearchResponse = OrderPagedSearchResponse.builder()
+ *             .total(0.3)
+ *             .plusHits(hitsBuilder -> hitsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderPagedSearchResponseImpl.class)
 public interface OrderPagedSearchResponse {
 
     /**
-    *  <p>Total number of results matching the query.</p>
-    */
+     *  <p>Total number of results matching the query.</p>
+     */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("hits")

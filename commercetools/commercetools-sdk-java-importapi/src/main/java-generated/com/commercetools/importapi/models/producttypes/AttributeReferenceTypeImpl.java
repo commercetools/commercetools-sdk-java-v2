@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeReferenceType
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeReferenceTypeImpl implements AttributeReferenceType, ModelBase {
 
     private String name;
@@ -32,13 +35,18 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
         this.name = REFERENCE;
     }
 
+    /**
+     *
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>The type of the referenced resource.</p>
-    */
+     *  <p>The type of the referenced resource.</p>
+     */
+
     public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId() {
         return this.referenceTypeId;
     }

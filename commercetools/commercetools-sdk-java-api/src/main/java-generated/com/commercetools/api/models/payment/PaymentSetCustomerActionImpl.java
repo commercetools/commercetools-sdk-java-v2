@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentSetCustomerAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
         this.action = SET_CUSTOMER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>A reference to the customer this payment belongs to.</p>
-    */
+     *  <p>A reference to the customer this payment belongs to.</p>
+     */
+
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }

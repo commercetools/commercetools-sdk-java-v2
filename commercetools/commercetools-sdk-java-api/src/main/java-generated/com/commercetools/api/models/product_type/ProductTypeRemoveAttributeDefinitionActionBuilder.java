@@ -6,11 +6,27 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeRemoveAttributeDefinitionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeRemoveAttributeDefinitionAction productTypeRemoveAttributeDefinitionAction = ProductTypeRemoveAttributeDefinitionAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveAttributeDefinitionActionBuilder
         implements Builder<ProductTypeRemoveAttributeDefinitionAction> {
 
     private String name;
+
+    /**
+     *  <p>The name of the attribute to remove.</p>
+     */
 
     public ProductTypeRemoveAttributeDefinitionActionBuilder name(final String name) {
         this.name = name;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OutOfStockError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
 
     private String code;
@@ -43,21 +46,41 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
         this.code = OUT_OF_STOCK;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<String> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getSkus() {
         return this.skus;

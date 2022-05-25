@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReturnInfo
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoImpl implements ReturnInfo, ModelBase {
 
     private java.util.List<com.commercetools.api.models.order.ReturnItem> items;
@@ -35,16 +38,25 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     public ReturnInfoImpl() {
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItem> getItems() {
         return this.items;
     }
 
     /**
-    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-    */
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     */
+
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;

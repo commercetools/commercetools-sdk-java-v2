@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderPagedSearchResponse
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, ModelBase {
 
     private Long total;
@@ -39,29 +42,33 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-    *  <p>Total number of results matching the query.</p>
-    */
+     *  <p>Total number of results matching the query.</p>
+     */
+
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Actual results.</p>
-    */
+     *  <p>Actual results.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.order.Hit> getHits() {
         return this.hits;
     }

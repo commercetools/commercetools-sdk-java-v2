@@ -13,35 +13,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSearchRequest
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSearchRequest orderSearchRequest = OrderSearchRequest.builder()
+ *             .query(queryBuilder -> queryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSearchRequestImpl.class)
 public interface OrderSearchRequest {
 
     /**
-    *  <p>The Order search query.</p>
-    */
+     *  <p>The Order search query.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("query")
     public OrderSearchQuery getQuery();
 
     /**
-    *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
-    */
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
 
     @JsonProperty("sort")
     public String getSort();
 
     /**
-    *  <p>The maximum number of search results to be returned.</p>
-    */
+     *  <p>The maximum number of search results to be returned.</p>
+     */
 
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>The number of search results to be skipped in the response for pagination.</p>
-    */
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     */
 
     @JsonProperty("offset")
     public Integer getOffset();

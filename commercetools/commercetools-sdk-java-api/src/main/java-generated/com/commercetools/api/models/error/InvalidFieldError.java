@@ -12,19 +12,43 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InvalidFieldError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidFieldError invalidFieldError = InvalidFieldError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
     String INVALID_FIELD = "InvalidField";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("field")
     public String getField();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("invalidValue")
     public Object getInvalidValue();
+
+    /**
+     *
+     */
 
     @JsonProperty("allowedValues")
     public List<Object> getAllowedValues();

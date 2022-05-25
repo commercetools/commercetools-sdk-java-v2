@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetTransitionsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTransitionsChange setTransitionsChange = SetTransitionsChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setTransitions</code></p>
+     */
+
     public SetTransitionsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTransitionsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -27,11 +49,19 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTransitionsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTransitionsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -42,6 +72,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTransitionsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.previousValue == null) {
@@ -51,6 +85,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTransitionsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -58,16 +96,28 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTransitionsChangeBuilder nextValue(final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTransitionsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTransitionsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
@@ -78,6 +128,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTransitionsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.nextValue == null) {
@@ -86,6 +140,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTransitionsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

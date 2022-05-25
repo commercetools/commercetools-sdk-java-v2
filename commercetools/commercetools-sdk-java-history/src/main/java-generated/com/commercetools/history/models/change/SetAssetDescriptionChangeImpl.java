@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAssetDescriptionChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
         this.type = SET_ASSET_DESCRIPTION_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setAssetDescription</code></p>
-    */
+     *  <p>Update action for <code>setAssetDescription</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;

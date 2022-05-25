@@ -14,28 +14,46 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPriceDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPriceDraft taxedPriceDraft = TaxedPriceDraft.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedPriceDraftImpl.class)
 public interface TaxedPriceDraft {
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
     public Money getTotalGross();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("taxPortions")

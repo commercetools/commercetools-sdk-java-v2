@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreUpdate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreUpdateImpl implements StoreUpdate, ModelBase {
 
     private Long version;
@@ -31,9 +34,17 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
     public StoreUpdateImpl() {
     }
 
+    /**
+     *
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.store.StoreUpdateAction> getActions() {
         return this.actions;

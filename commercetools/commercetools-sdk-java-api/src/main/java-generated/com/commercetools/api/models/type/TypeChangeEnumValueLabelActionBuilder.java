@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeEnumValueLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeEnumValueLabelAction typeChangeEnumValueLabelAction = TypeChangeEnumValueLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChangeEnumValueLabelAction> {
 
     private String fieldName;
 
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
+
     public TypeChangeEnumValueLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public TypeChangeEnumValueLabelActionBuilder value(
             Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public TypeChangeEnumValueLabelActionBuilder value(
             final com.commercetools.api.models.type.CustomFieldEnumValue value) {

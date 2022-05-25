@@ -17,9 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creating a category produces the CategoryCreated message.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Creating a category produces the CategoryCreated message.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .categories()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCategoriesPost extends
         BodyApiMethod<ByProjectKeyCategoriesPost, com.commercetools.api.models.category.Category, com.commercetools.api.models.category.CategoryDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesPost>,

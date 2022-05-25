@@ -12,40 +12,59 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MultiBuyLineItemsTarget
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MultiBuyLineItemsTarget multiBuyLineItemsTarget = MultiBuyLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MultiBuyLineItemsTargetImpl.class)
 public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
 
     String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
 
     /**
-    *  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>
-    */
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     */
 
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
 
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     */
     @NotNull
     @JsonProperty("selectionMode")
     public SelectionMode getSelectionMode();

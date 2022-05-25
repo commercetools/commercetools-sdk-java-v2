@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartAddLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartAddLineItemAction cartAddLineItemAction = CartAddLineItemAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemAction> {
 
     @Nullable
@@ -45,17 +56,29 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public CartAddLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public CartAddLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddLineItemActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -65,11 +88,19 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public CartAddLineItemActionBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddLineItemActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -78,31 +109,55 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddLineItemActionBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddLineItemActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddLineItemActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -111,11 +166,20 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public CartAddLineItemActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
 
     public CartAddLineItemActionBuilder externalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -123,11 +187,20 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public CartAddLineItemActionBuilder externalPrice(
             @Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddLineItemActionBuilder externalTotalPrice(
             Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
@@ -137,11 +210,19 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddLineItemActionBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddLineItemActionBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -149,6 +230,10 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddLineItemActionBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

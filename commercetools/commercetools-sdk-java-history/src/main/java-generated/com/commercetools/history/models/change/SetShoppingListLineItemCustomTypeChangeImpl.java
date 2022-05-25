@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShoppingListLineItemCustomTypeChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingListLineItemCustomTypeChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setLineItemCustomType</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;

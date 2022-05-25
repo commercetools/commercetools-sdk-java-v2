@@ -13,12 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreSetDistributionChannelsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreSetDistributionChannelsAction storeSetDistributionChannelsAction = StoreSetDistributionChannelsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreSetDistributionChannelsActionImpl.class)
 public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
 
     String SET_DISTRIBUTION_CHANNELS = "setDistributionChannels";
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelResourceIdentifier> getDistributionChannels();

@@ -13,16 +13,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderReturnShipmentStateChangedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderReturnShipmentStateChangedMessagePayload orderReturnShipmentStateChangedMessagePayload = OrderReturnShipmentStateChangedMessagePayload.builder()
+ *             .returnItemId("{returnItemId}")
+ *             .returnShipmentState(ReturnShipmentState.ADVISED)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMessagePayload {
 
     String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("returnShipmentState")
     public ReturnShipmentState getReturnShipmentState();

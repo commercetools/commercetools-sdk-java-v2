@@ -14,27 +14,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SearchIndexingConfigurationValues
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SearchIndexingConfigurationValues searchIndexingConfigurationValues = SearchIndexingConfigurationValues.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingConfigurationValuesImpl.class)
 public interface SearchIndexingConfigurationValues {
 
     /**
-    *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
-    */
+     *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+     */
 
     @JsonProperty("status")
     public SearchIndexingConfigurationStatus getStatus();
 
     /**
-    *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
-    */
+     *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+     */
 
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();

@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SubscriptionSetMessagesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionSetMessagesAction subscriptionSetMessagesAction = SubscriptionSetMessagesAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionSetMessagesActionBuilder implements Builder<SubscriptionSetMessagesAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+
+    /**
+     *
+     */
 
     public SubscriptionSetMessagesActionBuilder messages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
@@ -21,11 +36,19 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionSetMessagesActionBuilder messages(
             @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionSetMessagesActionBuilder plusMessages(
             @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
@@ -36,6 +59,10 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
         return this;
     }
 
+    /**
+     *
+     */
+
     public SubscriptionSetMessagesActionBuilder plusMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
         if (this.messages == null) {
@@ -45,6 +72,10 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
                 .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SubscriptionSetMessagesActionBuilder withMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {

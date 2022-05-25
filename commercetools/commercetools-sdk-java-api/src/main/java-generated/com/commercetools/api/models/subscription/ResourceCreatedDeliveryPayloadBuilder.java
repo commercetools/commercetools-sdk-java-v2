@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ResourceCreatedDeliveryPayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceCreatedDeliveryPayload resourceCreatedDeliveryPayload = ResourceCreatedDeliveryPayload.builder()
+ *             .projectKey("{projectKey}")
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .version(0.3)
+ *             .modifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCreatedDeliveryPayload> {
 
     private String projectKey;
@@ -23,10 +38,18 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     private java.time.ZonedDateTime modifiedAt;
 
+    /**
+     *
+     */
+
     public ResourceCreatedDeliveryPayloadBuilder projectKey(final String projectKey) {
         this.projectKey = projectKey;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public ResourceCreatedDeliveryPayloadBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
@@ -34,11 +57,19 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public ResourceCreatedDeliveryPayloadBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -48,16 +79,28 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
         return this;
     }
 
+    /**
+     *
+     */
+
     public ResourceCreatedDeliveryPayloadBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ResourceCreatedDeliveryPayloadBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ResourceCreatedDeliveryPayloadBuilder modifiedAt(final java.time.ZonedDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;

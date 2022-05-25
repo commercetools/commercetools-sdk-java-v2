@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPriceDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPriceDraft taxedPriceDraft = TaxedPriceDraft.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     private com.commercetools.api.models.common.Money totalNet;
@@ -16,16 +30,31 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public TaxedPriceDraftBuilder totalNet(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalNet = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public TaxedPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
 
     public TaxedPriceDraftBuilder totalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -33,21 +62,38 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public TaxedPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedPriceDraftBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
         this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxedPriceDraftBuilder taxPortions(
             final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
         this.taxPortions = taxPortions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedPriceDraftBuilder plusTaxPortions(
             final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
@@ -58,6 +104,10 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxedPriceDraftBuilder plusTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
         if (this.taxPortions == null) {
@@ -66,6 +116,10 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedPriceDraftBuilder withTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {

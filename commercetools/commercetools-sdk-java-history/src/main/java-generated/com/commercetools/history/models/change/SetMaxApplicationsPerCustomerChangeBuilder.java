@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetMaxApplicationsPerCustomerChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetMaxApplicationsPerCustomerChange setMaxApplicationsPerCustomerChange = SetMaxApplicationsPerCustomerChange.builder()
+ *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMaxApplicationsPerCustomerChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
 
     private Integer nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     */
+
     public SetMaxApplicationsPerCustomerChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetMaxApplicationsPerCustomerChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetMaxApplicationsPerCustomerChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

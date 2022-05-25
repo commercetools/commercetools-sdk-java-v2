@@ -13,13 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SimilarProductSearchRequestMeta
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductSearchRequestMeta similarProductSearchRequestMeta = SimilarProductSearchRequestMeta.builder()
+ *             .similarityMeasures(similarityMeasuresBuilder -> similarityMeasuresBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SimilarProductSearchRequestMetaImpl.class)
 public interface SimilarProductSearchRequestMeta {
 
     /**
-    *  <p>The SimilarityMeasures used in this search.</p>
-    */
+     *  <p>The SimilarityMeasures used in this search.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("similarityMeasures")

@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetTextLineItemCustomFieldChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTextLineItemCustomFieldChange setTextLineItemCustomFieldChange = SetTextLineItemCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customTypeId("{customTypeId}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextLineItemCustomFieldChange> {
 
     private String change;
@@ -22,20 +37,36 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     private java.lang.Object previousValue;
 
+    /**
+     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     */
+
     public SetTextLineItemCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTextLineItemCustomFieldChangeBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTextLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTextLineItemCustomFieldChangeBuilder textLineItem(
             Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
@@ -44,16 +75,28 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTextLineItemCustomFieldChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTextLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTextLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

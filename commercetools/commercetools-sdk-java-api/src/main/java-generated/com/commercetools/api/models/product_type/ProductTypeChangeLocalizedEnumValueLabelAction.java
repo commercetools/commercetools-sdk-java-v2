@@ -13,16 +13,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeLocalizedEnumValueLabelAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeLocalizedEnumValueLabelAction productTypeChangeLocalizedEnumValueLabelAction = ProductTypeChangeLocalizedEnumValueLabelAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newValue(newValueBuilder -> newValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductTypeUpdateAction {
 
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("newValue")

@@ -8,7 +8,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MultiBuyLineItemsTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MultiBuyLineItemsTarget multiBuyLineItemsTarget = MultiBuyLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItemsTarget> {
 
     private String predicate;
@@ -22,25 +37,45 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
 
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
+    /**
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     */
+
     public MultiBuyLineItemsTargetBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     */
 
     public MultiBuyLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
 
+    /**
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     */
+
     public MultiBuyLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
 
+    /**
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     */
+
     public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
+
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     */
 
     public MultiBuyLineItemsTargetBuilder selectionMode(
             final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {

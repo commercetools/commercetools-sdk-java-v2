@@ -14,9 +14,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Field type for <a href="ctp:api:type:LocalizedString">LocalizedString</a> values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Field type for LocalizedString values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedStringType, ModelBase {
 
     private String name;
@@ -25,6 +25,10 @@ public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedS
     CustomFieldLocalizedStringTypeImpl() {
         this.name = LOCALIZED_STRING;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;

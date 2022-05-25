@@ -6,7 +6,23 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeEnumValueLabelChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeEnumValueLabelChange changeEnumValueLabelChange = ChangeEnumValueLabelChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .valueKey("{valueKey}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValueLabelChange> {
 
     private String change;
@@ -19,25 +35,45 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     private String nextValue;
 
+    /**
+     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     */
+
     public ChangeEnumValueLabelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     */
 
     public ChangeEnumValueLabelChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
+    /**
+     *  <p>Key of the values that was updated</p>
+     */
+
     public ChangeEnumValueLabelChangeBuilder valueKey(final String valueKey) {
         this.valueKey = valueKey;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeEnumValueLabelChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeEnumValueLabelChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDiscountSetValidFromAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSetValidFromAction, ModelBase {
 
     private String action;
@@ -31,15 +34,18 @@ public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSet
         this.action = SET_VALID_FROM;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set.
-    *  If empty, any existing value will be removed.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }

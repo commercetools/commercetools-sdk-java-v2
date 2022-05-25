@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation sent to the server when updating an import container.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation sent to the server when updating an import container.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraft, ModelBase {
 
     private Long version;
@@ -35,16 +35,17 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
     }
 
     /**
-    *  <p>Current version of the ImportContainer.</p>
-    */
+     *  <p>Current version of the ImportContainer.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportContainer is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
-    */
+     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     */
+
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }

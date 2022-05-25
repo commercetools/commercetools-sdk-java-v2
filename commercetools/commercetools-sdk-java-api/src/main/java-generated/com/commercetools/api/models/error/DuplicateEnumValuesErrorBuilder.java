@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateEnumValuesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateEnumValuesError duplicateEnumValuesError = DuplicateEnumValuesError.builder()
+ *             .message("{message}")
+ *             .plusDuplicates(duplicatesBuilder -> duplicatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumValuesError> {
 
     private String message;
@@ -15,15 +28,27 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
 
     private java.util.List<String> duplicates;
 
+    /**
+     *
+     */
+
     public DuplicateEnumValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateEnumValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateEnumValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -33,15 +58,27 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateEnumValuesErrorBuilder duplicates(final String... duplicates) {
         this.duplicates = new ArrayList<>(Arrays.asList(duplicates));
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateEnumValuesErrorBuilder duplicates(final java.util.List<String> duplicates) {
         this.duplicates = duplicates;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateEnumValuesErrorBuilder plusDuplicates(final String... duplicates) {
         if (this.duplicates == null) {

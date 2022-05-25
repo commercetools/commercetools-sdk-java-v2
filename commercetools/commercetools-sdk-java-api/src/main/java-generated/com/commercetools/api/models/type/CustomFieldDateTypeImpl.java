@@ -14,9 +14,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Field type for <a href="ctp:api:type:Date">Date</a> values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Field type for Date values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
 
     private String name;
@@ -25,6 +25,10 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
     CustomFieldDateTypeImpl() {
         this.name = DATE;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;

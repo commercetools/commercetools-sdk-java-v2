@@ -15,22 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResultItem resultItem = ResultItem.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .plusProductVariants(productVariantsBuilder -> productVariantsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResultItemImpl.class)
 public interface ResultItem {
 
     /**
-    *  <p>The URL of the image.</p>
-    */
+     *  <p>The URL of the image.</p>
+     */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("productVariants")

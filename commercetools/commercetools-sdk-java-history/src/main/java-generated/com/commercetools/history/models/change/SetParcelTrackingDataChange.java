@@ -15,33 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetParcelTrackingDataChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetParcelTrackingDataChange setParcelTrackingDataChange = SetParcelTrackingDataChange.builder()
+ *             .change("{change}")
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetParcelTrackingDataChangeImpl.class)
 public interface SetParcelTrackingDataChange extends Change {
 
     String SET_PARCEL_TRACKING_DATA_CHANGE = "SetParcelTrackingDataChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setParcelTrackingData</code></p>
-    */
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("parcel")
     public ParcelChangeValue getParcel();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public TrackingData getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

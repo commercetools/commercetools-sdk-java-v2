@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeStackingModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeStackingModeAction cartDiscountChangeStackingModeAction = CartDiscountChangeStackingModeAction.builder()
+ *             .stackingMode(StackingMode.STACKING)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeStackingModeActionBuilder implements Builder<CartDiscountChangeStackingModeAction> {
 
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
+
+    /**
+     *  <p>New value to set.</p>
+     */
 
     public CartDiscountChangeStackingModeActionBuilder stackingMode(
             final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {

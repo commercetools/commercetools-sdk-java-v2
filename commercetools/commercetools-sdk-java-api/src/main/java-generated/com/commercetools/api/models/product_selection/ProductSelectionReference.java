@@ -15,9 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a ProductSelection.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionReference productSelectionReference = ProductSelectionReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionReferenceImpl.class)
 public interface ProductSelectionReference
         extends Reference, com.commercetools.api.models.Identifiable<ProductSelection> {
@@ -25,15 +35,15 @@ public interface ProductSelectionReference
     String PRODUCT_SELECTION = "product-selection";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for ProductSelections.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public ProductSelection getObj();

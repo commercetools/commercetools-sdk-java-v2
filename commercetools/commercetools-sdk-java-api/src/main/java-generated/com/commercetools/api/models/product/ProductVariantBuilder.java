@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariant productVariant = ProductVariant.builder()
+ *             .id(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private Long id;
@@ -47,31 +59,55 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     @Nullable
     private Boolean scopedPriceDiscounted;
 
+    /**
+     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
+     */
+
     public ProductVariantBuilder id(final Long id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
+
     public ProductVariantBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.common.Price... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder prices(
             @Nullable final java.util.List<com.commercetools.api.models.common.Price> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusPrices(@Nullable final com.commercetools.api.models.common.Price... prices) {
         if (this.prices == null) {
@@ -80,6 +116,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         this.prices.addAll(Arrays.asList(prices));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
@@ -90,6 +130,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder withPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.prices = new ArrayList<>();
@@ -97,17 +141,29 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder attributes(
             @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder attributes(
             @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusAttributes(
             @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
@@ -118,6 +174,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder plusAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         if (this.attributes == null) {
@@ -127,6 +187,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder withAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         this.attributes = new ArrayList<>();
@@ -134,27 +198,47 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder price(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder price(@Nullable final com.commercetools.api.models.common.Price price) {
         this.price = price;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder images(
             @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
         this.images = images;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
         if (this.images == null) {
@@ -163,6 +247,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         this.images.addAll(Arrays.asList(images));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusImages(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
@@ -173,6 +261,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder withImages(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
         this.images = new ArrayList<>();
@@ -180,16 +272,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder assets(
             @Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         if (this.assets == null) {
@@ -198,6 +302,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         this.assets.addAll(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder plusAssets(
             Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
@@ -208,12 +316,20 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder withAssets(
             Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder availability(
             Function<com.commercetools.api.models.product.ProductVariantAvailabilityBuilder, com.commercetools.api.models.product.ProductVariantAvailabilityBuilder> builder) {
@@ -222,16 +338,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder availability(
             @Nullable final com.commercetools.api.models.product.ProductVariantAvailability availability) {
         this.availability = availability;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder isMatchingVariant(@Nullable final Boolean isMatchingVariant) {
         this.isMatchingVariant = isMatchingVariant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder scopedPrice(
             Function<com.commercetools.api.models.common.ScopedPriceBuilder, com.commercetools.api.models.common.ScopedPriceBuilder> builder) {
@@ -239,11 +367,19 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantBuilder scopedPrice(
             @Nullable final com.commercetools.api.models.common.ScopedPrice scopedPrice) {
         this.scopedPrice = scopedPrice;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {
         this.scopedPriceDiscounted = scopedPriceDiscounted;

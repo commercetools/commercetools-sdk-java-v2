@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListChangeTextLineItemNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListChangeTextLineItemNameAction shoppingListChangeTextLineItemNameAction = ShoppingListChangeTextLineItemNameAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListChangeTextLineItemNameActionBuilder
         implements Builder<ShoppingListChangeTextLineItemNameAction> {
 
@@ -15,16 +28,28 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     *
+     */
+
     public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListChangeTextLineItemNameActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CreatedByBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CreatedBy createdBy = CreatedBy.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CreatedByBuilder implements Builder<CreatedBy> {
 
     @Nullable
@@ -24,15 +35,27 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     @Nullable
     private String anonymousId;
 
+    /**
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     */
+
     public CreatedByBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
         return this;
     }
 
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     */
+
     public CreatedByBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
     }
+
+    /**
+     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     */
 
     public CreatedByBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -40,10 +63,18 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
         return this;
     }
 
+    /**
+     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     */
+
     public CreatedByBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     */
 
     public CreatedByBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;

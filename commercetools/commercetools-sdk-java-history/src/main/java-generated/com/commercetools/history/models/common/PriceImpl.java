@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Price
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImpl implements Price, ModelBase {
 
     private String id;
@@ -31,9 +34,17 @@ public class PriceImpl implements Price, ModelBase {
     public PriceImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Money getValue() {
         return this.value;

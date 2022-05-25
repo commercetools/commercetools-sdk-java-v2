@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetReturnShipmentStateChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
         this.type = SET_RETURN_SHIPMENT_STATE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setReturnShipmentState</code></p>
-    */
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.ReturnShipmentState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.ReturnShipmentState getPreviousValue() {
         return this.previousValue;

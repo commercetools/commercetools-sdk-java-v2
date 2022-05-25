@@ -9,7 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductType productType = ProductType.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name("{name}")
+ *             .description("{description}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeBuilder implements Builder<ProductType> {
 
     private String id;
@@ -36,25 +53,45 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
+    /**
+     *  <p>Unique identifier for the ProductType.</p>
+     */
+
     public ProductTypeBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>The current version of the product type.</p>
+     */
 
     public ProductTypeBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductTypeBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -62,11 +99,19 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ProductTypeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductTypeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -74,25 +119,45 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ProductTypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the ProductType.</p>
+     */
 
     public ProductTypeBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder description(final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeBuilder attributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
@@ -100,11 +165,19 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder attributes(
             @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeBuilder plusAttributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
@@ -115,6 +188,10 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeBuilder plusAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
         if (this.attributes == null) {
@@ -124,6 +201,10 @@ public class ProductTypeBuilder implements Builder<ProductType> {
                 .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeBuilder withAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {

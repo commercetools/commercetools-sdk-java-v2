@@ -12,41 +12,67 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangePlainEnumValueLabelChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangePlainEnumValueLabelChange changePlainEnumValueLabelChange = ChangePlainEnumValueLabelChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .valueKey("{valueKey}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangePlainEnumValueLabelChangeImpl.class)
 public interface ChangePlainEnumValueLabelChange extends Change {
 
     String CHANGE_PLAIN_ENUM_VALUE_LABEL_CHANGE = "ChangePlainEnumValueLabelChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
-    */
+     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-    *  <p>Key of the values that was updated</p>
-    */
+     *  <p>Key of the values that was updated</p>
+     */
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();

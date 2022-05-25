@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewPagedQueryResponse reviewPagedQueryResponse = ReviewPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQueryResponse> {
 
     private Long limit;
@@ -23,36 +38,64 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
 
     private java.util.List<com.commercetools.api.models.review.Review> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public ReviewPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReviewPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReviewPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ReviewPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReviewPagedQueryResponseBuilder results(final com.commercetools.api.models.review.Review... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReviewPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.review.Review> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReviewPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.review.Review... results) {
         if (this.results == null) {
@@ -62,6 +105,10 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReviewPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
         if (this.results == null) {
@@ -70,6 +117,10 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
         this.results.add(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReviewPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {

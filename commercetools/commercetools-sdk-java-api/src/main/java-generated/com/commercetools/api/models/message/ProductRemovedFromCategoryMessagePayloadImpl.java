@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductRemovedFromCategoryMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovedFromCategoryMessagePayloadImpl
         implements ProductRemovedFromCategoryMessagePayload, ModelBase {
 
@@ -37,16 +40,25 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
-    */
+     *  <p>Reference to a Category.</p>
+     */
+
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

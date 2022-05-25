@@ -15,33 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeAssetNameChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeAssetNameChange changeAssetNameChange = ChangeAssetNameChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeAssetNameChangeImpl.class)
 public interface ChangeAssetNameChange extends Change {
 
     String CHANGE_ASSET_NAME_CHANGE = "ChangeAssetNameChange";
 
     /**
-    *  <p>Update action for <code>changeAssetName</code></p>
-    */
+     *  <p>Update action for <code>changeAssetName</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderRemovePaymentActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderRemovePaymentAction stagedOrderRemovePaymentAction = StagedOrderRemovePaymentAction.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrderRemovePaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+
+    /**
+     *  <p>ResourceIdentifier to a Payment.</p>
+     */
 
     public StagedOrderRemovePaymentActionBuilder payment(
             Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
@@ -18,6 +34,10 @@ public class StagedOrderRemovePaymentActionBuilder implements Builder<StagedOrde
                 .build();
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Payment.</p>
+     */
 
     public StagedOrderRemovePaymentActionBuilder payment(
             final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {

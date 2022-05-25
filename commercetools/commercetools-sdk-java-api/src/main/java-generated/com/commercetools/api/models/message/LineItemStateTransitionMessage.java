@@ -15,35 +15,68 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemStateTransitionMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemStateTransitionMessage lineItemStateTransitionMessage = LineItemStateTransitionMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .lineItemId("{lineItemId}")
+ *             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemStateTransitionMessageImpl.class)
 public interface LineItemStateTransitionMessage extends OrderMessage {
 
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("toState")

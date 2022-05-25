@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAssetSourcesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetSourcesChange setAssetSourcesChange = SetAssetSourcesChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
 
+    /**
+     *  <p>Update action for <code>setAssetSources</code></p>
+     */
+
     public SetAssetSourcesChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetSourcesChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
@@ -29,11 +52,19 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetSourcesChangeBuilder nextValue(
             final com.commercetools.history.models.common.AssetSource... nextValue) {
@@ -41,11 +72,19 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.AssetSource> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetSourcesChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.AssetSource... nextValue) {
@@ -56,6 +95,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
         if (this.nextValue == null) {
@@ -65,6 +108,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -72,17 +119,29 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder previousValue(
             final com.commercetools.history.models.common.AssetSource... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.AssetSource> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetSourcesChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.AssetSource... previousValue) {
@@ -93,6 +152,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetSourcesChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {
         if (this.previousValue == null) {
@@ -101,6 +164,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetSourcesChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.AssetSourceBuilder, com.commercetools.history.models.common.AssetSourceBuilder> builder) {

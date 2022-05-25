@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Adds a value to an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.
-*  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, ModelBase {
 
     private String action;
@@ -39,20 +38,26 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
         this.action = ADD_ENUM_VALUE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
     }

@@ -6,22 +6,46 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PendingOperationErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PendingOperationError pendingOperationError = PendingOperationError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PendingOperationErrorBuilder implements Builder<PendingOperationError> {
 
     private String message;
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     *
+     */
+
     public PendingOperationErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public PendingOperationErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PendingOperationErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

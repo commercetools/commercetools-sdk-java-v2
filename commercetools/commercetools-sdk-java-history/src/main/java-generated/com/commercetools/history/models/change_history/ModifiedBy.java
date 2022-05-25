@@ -15,59 +15,62 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Information about the user or the API client who performed the change. This is a variant of
-*  <a href="/types#lastmodifiedby">LastModifiedBy</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ModifiedBy modifiedBy = ModifiedBy.builder()
+ *             .id("{id}")
+ *             .type("{type}")
+ *             .isPlatformClient(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ModifiedByImpl.class)
 public interface ModifiedBy {
 
     /**
-    *  <p><a href="/general-concepts#identifier">ID</a> of the Merchant Center user who made the change.
-    *  Present only if the change was made in the Merchant Center.</p>
-    */
+     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Indicates whether the change was made by a user or the API client with or without an
-    *  <a href="/client-logging#external-user-ids">External user ID</a>.</p>
-    */
+     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p><a href="/types#reference">Reference</a> to the
-    *  <a href="/projects/customers#customer">Customer</a> who made the change. Present only if
-    *  the change was made using a token from the <a href="/authorization#password-flow">Password
-    *  Flow</a>.</p>
-    */
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     */
     @Valid
     @JsonProperty("customer")
     public Reference getCustomer();
 
     /**
-    *  <p>Present only if the change was made using a token from an <a href="/authorization#tokens-for-anonymous-sessions">Anonymous
-    *  Session</a>.</p>
-    */
+     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-    *  <p><a href="/general-concepts#identifier">ID</a> of the <a href="/projects/api-clients#apiclient">API
-    *  Client</a> that made the change. Present only if
-    *  the change was made using an API Client.</p>
-    */
+     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-    *  <p><code>true</code> if the change was made via Merchant Center or <a href="https://impex.europe-west1.gcp.commercetools.com/">ImpEx</a>.</p>
-    */
+     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     */
     @NotNull
     @JsonProperty("isPlatformClient")
     public Boolean getIsPlatformClient();

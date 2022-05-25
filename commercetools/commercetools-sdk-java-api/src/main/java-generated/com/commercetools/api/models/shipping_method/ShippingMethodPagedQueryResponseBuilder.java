@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodPagedQueryResponse shippingMethodPagedQueryResponse = ShippingMethodPagedQueryResponse.builder()
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodPagedQueryResponseBuilder implements Builder<ShippingMethodPagedQueryResponse> {
 
     @Nullable
@@ -25,25 +38,45 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodPagedQueryResponseBuilder results(
             final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
@@ -51,11 +84,19 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
@@ -66,6 +107,10 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
         if (this.results == null) {
@@ -75,6 +120,10 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
                 .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {

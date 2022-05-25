@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeNameAction productTypeChangeAttributeNameAction = ProductTypeChangeAttributeNameAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newAttributeName("{newAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeNameActionBuilder implements Builder<ProductTypeChangeAttributeNameAction> {
 
     private String attributeName;
 
     private String newAttributeName;
 
+    /**
+     *
+     */
+
     public ProductTypeChangeAttributeNameActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangeAttributeNameActionBuilder newAttributeName(final String newAttributeName) {
         this.newAttributeName = newAttributeName;

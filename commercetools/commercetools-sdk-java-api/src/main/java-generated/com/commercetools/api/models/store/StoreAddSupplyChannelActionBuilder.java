@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreAddSupplyChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreAddSupplyChannelAction storeAddSupplyChannelAction = StoreAddSupplyChannelAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSupplyChannelAction> {
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+
+    /**
+     *
+     */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -21,6 +36,10 @@ public class StoreAddSupplyChannelActionBuilder implements Builder<StoreAddSuppl
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreAddSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

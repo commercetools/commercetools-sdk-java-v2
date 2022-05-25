@@ -9,7 +9,10 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * UpdateType
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface UpdateType {
 
     UpdateType ADD_ADDRESS = UpdateTypeEnum.ADD_ADDRESS;

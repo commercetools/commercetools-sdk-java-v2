@@ -15,35 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItemStateTransitionMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemStateTransitionMessagePayload customLineItemStateTransitionMessagePayload = CustomLineItemStateTransitionMessagePayload.builder()
+ *             .customLineItemId("{customLineItemId}")
+ *             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemStateTransitionMessagePayloadImpl.class)
 public interface CustomLineItemStateTransitionMessagePayload extends OrderMessagePayload {
 
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("transitionDate")
     public ZonedDateTime getTransitionDate();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateReference getFromState();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("toState")

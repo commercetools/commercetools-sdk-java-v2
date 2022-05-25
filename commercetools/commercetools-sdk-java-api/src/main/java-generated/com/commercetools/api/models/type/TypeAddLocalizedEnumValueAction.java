@@ -14,25 +14,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Adds a value to a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a>.
-*  This update action can be used to update a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldLocalizedEnumType">CustomFieldLocalizedEnumType</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Adds a value to a LocalizedEnumType. This update action can be used to update a LocalizedEnumType FieldDefinition and a SetType FieldDefinition of CustomFieldLocalizedEnumType.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeAddLocalizedEnumValueAction typeAddLocalizedEnumValueAction = TypeAddLocalizedEnumValueAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeAddLocalizedEnumValueActionImpl.class)
 public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
 
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
-    */
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

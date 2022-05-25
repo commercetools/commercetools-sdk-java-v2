@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListChangeLineItemsOrderAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListChangeLineItemsOrderAction myShoppingListChangeLineItemsOrderAction = MyShoppingListChangeLineItemsOrderAction.builder()
+ *             .plusLineItemOrder(lineItemOrderBuilder -> lineItemOrderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListChangeLineItemsOrderActionImpl.class)
 public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingListUpdateAction {
 
     String CHANGE_LINE_ITEMS_ORDER = "changeLineItemsOrder";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemOrder")
     public List<String> getLineItemOrder();

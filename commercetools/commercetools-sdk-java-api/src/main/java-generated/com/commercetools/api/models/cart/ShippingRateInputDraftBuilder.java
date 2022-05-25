@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingRateInputDraftBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateInputDraftBuilder {
 
     public com.commercetools.api.models.cart.ClassificationShippingRateInputDraftBuilder classificationBuilder() {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private String productId;
@@ -70,83 +73,98 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     public LineItemDraftImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     *
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p>The amount of a <code>LineItem</code>in the cart.
-    *  Must be a positive integer.</p>
-    */
+     *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-    *  <p>When the line item was added to the cart. Optional for backwards
-    *  compatibility reasons only.</p>
-    */
+     *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+     */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-    *  <p>By providing supply channel information, you can unique identify
-    *  inventory entries that should be reserved.
-    *  The provided channel should have
-    *  the InventorySupply role.</p>
-    */
+     *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>The channel is used to select a ProductPrice.
-    *  The provided channel should have the ProductDistribution role.</p>
-    */
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
     /**
-    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+     */
+
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
-    */
+     *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     */
+
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
 
     /**
-    *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
-    */
+     *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     */
+
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
     }
 
     /**
-    *  <p>Container for line item specific address(es).</p>
-    */
+     *  <p>Container for line item specific address(es).</p>
+     */
+
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }

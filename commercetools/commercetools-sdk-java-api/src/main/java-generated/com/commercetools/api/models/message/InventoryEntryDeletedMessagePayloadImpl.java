@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryDeletedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDeletedMessagePayload, ModelBase {
 
     private String type;
@@ -35,17 +38,26 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
         this.type = INVENTORY_ENTRY_DELETED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }

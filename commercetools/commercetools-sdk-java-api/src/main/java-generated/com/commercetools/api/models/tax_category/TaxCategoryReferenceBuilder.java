@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxCategoryReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryReference taxCategoryReference = TaxCategoryReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference> {
 
     private String id;
@@ -17,16 +29,28 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
+    /**
+     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     */
+
     public TaxCategoryReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     */
 
     public TaxCategoryReferenceBuilder obj(
             Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     */
 
     public TaxCategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.tax_category.TaxCategory obj) {
         this.obj = obj;

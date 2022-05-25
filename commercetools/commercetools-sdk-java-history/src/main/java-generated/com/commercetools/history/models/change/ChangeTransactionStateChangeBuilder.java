@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTransactionStateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionStateChange changeTransactionStateChange = ChangeTransactionStateChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue(TransactionState.INITIAL)
+ *             .previousValue(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransactionStateChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     private com.commercetools.history.models.common.TransactionState previousValue;
 
+    /**
+     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     */
+
     public ChangeTransactionStateChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTransactionStateChangeBuilder transaction(
             Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
@@ -31,17 +54,29 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTransactionStateChangeBuilder transaction(
             final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
         this.transaction = transaction;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTransactionStateChangeBuilder nextValue(
             final com.commercetools.history.models.common.TransactionState nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTransactionStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TransactionState previousValue) {

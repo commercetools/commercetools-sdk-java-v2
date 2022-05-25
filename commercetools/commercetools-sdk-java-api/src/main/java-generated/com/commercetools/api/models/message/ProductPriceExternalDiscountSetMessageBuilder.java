@@ -9,7 +9,28 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductPriceExternalDiscountSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceExternalDiscountSetMessage productPriceExternalDiscountSetMessage = ProductPriceExternalDiscountSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .variantId(1)
+ *             .priceId("{priceId}")
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<ProductPriceExternalDiscountSetMessage> {
 
     private String id;
@@ -50,25 +71,45 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
 
     private Boolean staged;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -76,11 +117,19 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -88,16 +137,28 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
@@ -105,16 +166,28 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -124,31 +197,55 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder variantKey(@Nullable final String variantKey) {
         this.variantKey = variantKey;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
@@ -156,11 +253,19 @@ public class ProductPriceExternalDiscountSetMessageBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPriceExternalDiscountSetMessageBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPriceExternalDiscountSetMessageBuilder staged(final Boolean staged) {
         this.staged = staged;

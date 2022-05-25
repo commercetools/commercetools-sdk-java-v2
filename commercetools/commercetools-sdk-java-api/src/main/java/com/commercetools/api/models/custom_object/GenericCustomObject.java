@@ -12,6 +12,10 @@ import com.commercetools.api.models.common.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ *
+ * @param <TValue> The type of the value of this custom object.
+ */
 @JsonDeserialize(as = GenericCustomObjectImpl.class)
 public interface GenericCustomObject<TValue>
         extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>>,

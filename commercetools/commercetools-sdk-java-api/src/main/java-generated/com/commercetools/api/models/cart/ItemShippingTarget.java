@@ -12,22 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ItemShippingTarget
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+ *             .addressKey("{addressKey}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
 public interface ItemShippingTarget {
 
     /**
-    *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
-    */
+     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     */
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-    *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
-    *  Only positive values are allowed.
-    *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
-    */
+     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

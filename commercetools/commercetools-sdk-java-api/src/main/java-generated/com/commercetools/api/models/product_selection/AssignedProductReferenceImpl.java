@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssignedProductReference
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductReferenceImpl implements AssignedProductReference, ModelBase {
 
     private com.commercetools.api.models.product.ProductReference product;
@@ -29,8 +32,9 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
     }
 
     /**
-    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
-    */
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }

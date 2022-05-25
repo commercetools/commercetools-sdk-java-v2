@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAssetTagsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetTagsChange setAssetTagsChange = SetAssetTagsChange.builder()
+ *             .change("{change}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     private java.util.List<String> previousValue;
 
+    /**
+     *  <p>Update action for <code>setAssetTags</code></p>
+     */
+
     public SetAssetTagsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetTagsChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
@@ -29,20 +52,36 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetTagsChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetTagsChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetTagsChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
         if (this.nextValue == null) {
@@ -52,15 +91,27 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetTagsChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetTagsChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetTagsChangeBuilder plusPreviousValue(final String... previousValue) {
         if (this.previousValue == null) {

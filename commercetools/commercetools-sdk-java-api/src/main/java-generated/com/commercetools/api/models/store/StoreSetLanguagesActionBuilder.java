@@ -8,21 +8,44 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreSetLanguagesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreSetLanguagesAction storeSetLanguagesAction = StoreSetLanguagesAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguagesAction> {
 
     @Nullable
     private java.util.List<String> languages;
+
+    /**
+     *
+     */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {
         if (this.languages == null) {

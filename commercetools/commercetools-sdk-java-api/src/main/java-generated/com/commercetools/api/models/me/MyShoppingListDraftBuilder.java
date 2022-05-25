@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListDraft myShoppingListDraft = MyShoppingListDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -32,16 +44,28 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -49,11 +73,19 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListDraftBuilder lineItems(
             @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft... lineItems) {
@@ -61,11 +93,19 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder lineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListDraftBuilder plusLineItems(
             @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft... lineItems) {
@@ -76,6 +116,10 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder plusLineItems(
             Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
         if (this.lineItems == null) {
@@ -86,6 +130,10 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder withLineItems(
             Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
         this.lineItems = new ArrayList<>();
@@ -94,17 +142,29 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder textLineItems(
             @Nullable final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {
         this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder textLineItems(
             @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
         this.textLineItems = textLineItems;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListDraftBuilder plusTextLineItems(
             @Nullable final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {
@@ -115,6 +175,10 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder plusTextLineItems(
             Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
         if (this.textLineItems == null) {
@@ -125,6 +189,10 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder withTextLineItems(
             Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
         this.textLineItems = new ArrayList<>();
@@ -133,11 +201,19 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *  <p>The custom fields.</p>
+     */
+
     public MyShoppingListDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
 
     public MyShoppingListDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -145,17 +221,29 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
+
     public MyShoppingListDraftBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListDraftBuilder store(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListDraftBuilder store(
             @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {

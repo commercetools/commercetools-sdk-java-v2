@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetCustomLineItemTaxAmountAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomLineItemTaxAmountActionImpl
         implements StagedOrderSetCustomLineItemTaxAmountAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class StagedOrderSetCustomLineItemTaxAmountActionImpl
         this.action = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;

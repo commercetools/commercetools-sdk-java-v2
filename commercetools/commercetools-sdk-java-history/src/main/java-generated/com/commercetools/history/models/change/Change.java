@@ -12,6 +12,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * Change
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Change change = Change.addAddressChangeBuilder()
+ *             change("{change}")
+ *             nextValue(nextValueBuilder -> nextValueBuilder)
+ *             previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAddressChangeImpl.class, name = AddAddressChange.ADD_ADDRESS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAssetChangeImpl.class, name = AddAssetChange.ADD_ASSET_CHANGE),
@@ -268,13 +283,19 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.VerifyEmailChangeImpl.class, name = VerifyEmailChange.VERIFY_EMAIL_CHANGE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeImpl.class, visible = true)
 @JsonDeserialize(as = ChangeImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Change {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

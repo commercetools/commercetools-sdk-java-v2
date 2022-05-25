@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantDraft productVariantDraft = ProductVariantDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> {
 
     @Nullable
@@ -30,26 +41,46 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     @Nullable
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
 
     public ProductVariantDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder prices(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder plusPrices(
             @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
@@ -60,6 +91,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder plusPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         if (this.prices == null) {
@@ -69,6 +104,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder withPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
@@ -76,17 +115,29 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder attributes(
             @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder attributes(
             @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder plusAttributes(
             @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
@@ -97,6 +148,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder plusAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         if (this.attributes == null) {
@@ -106,6 +161,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder withAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         this.attributes = new ArrayList<>();
@@ -113,16 +172,28 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder images(
             @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
         this.images = images;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
         if (this.images == null) {
@@ -131,6 +202,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         this.images.addAll(Arrays.asList(images));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder plusImages(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
@@ -141,6 +216,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder withImages(
             Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
         this.images = new ArrayList<>();
@@ -148,16 +227,28 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder assets(
             @Nullable final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder plusAssets(
             @Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -168,6 +259,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductVariantDraftBuilder plusAssets(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
         if (this.assets == null) {
@@ -176,6 +271,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductVariantDraftBuilder withAssets(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {

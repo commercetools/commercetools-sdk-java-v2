@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerFirstNameSetMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerFirstNameSetMessagePayloadImpl implements CustomerFirstNameSetMessagePayload, ModelBase {
 
     private String type;
@@ -31,9 +34,17 @@ public class CustomerFirstNameSetMessagePayloadImpl implements CustomerFirstName
         this.type = CUSTOMER_FIRST_NAME_SET;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getFirstName() {
         return this.firstName;

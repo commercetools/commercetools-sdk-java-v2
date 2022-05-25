@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a product type by key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>References a product type by key.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, ModelBase {
 
     private String key;
@@ -34,13 +34,18 @@ public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, Mod
         this.typeId = ReferenceType.findEnum("product-type");
     }
 
+    /**
+     *
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The type of the referenced resource.</p>
-    */
+     *  <p>The type of the referenced resource.</p>
+     */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

@@ -15,24 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Customer.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerReference customerReference = CustomerReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerReferenceImpl.class)
 public interface CustomerReference extends Reference, com.commercetools.api.models.Identifiable<Customer> {
 
     String CUSTOMER = "customer";
 
     /**
-    *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Customers.</p>
-    */
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Customer getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Customer">Customer</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced Customer.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

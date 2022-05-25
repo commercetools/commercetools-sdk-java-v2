@@ -14,6 +14,9 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 
+/**
+ * Accessor for retrieving type safe attribute values
+ */
 public class AttributeAccessor {
     public static Map<String, Object> asAttributeMap(final ProductVariant variant) {
         return variant.getAttributes().stream().collect(Collectors.toMap(Attribute::getName, Attribute::getValue));

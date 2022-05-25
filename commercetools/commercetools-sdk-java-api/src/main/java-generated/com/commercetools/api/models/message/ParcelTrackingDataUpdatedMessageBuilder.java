@@ -9,7 +9,27 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelTrackingDataUpdatedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelTrackingDataUpdatedMessage parcelTrackingDataUpdatedMessage = ParcelTrackingDataUpdatedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .deliveryId("{deliveryId}")
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTrackingDataUpdatedMessage> {
 
     private String id;
@@ -42,25 +62,45 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -68,11 +108,19 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -80,16 +128,28 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
@@ -97,16 +157,28 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -116,27 +188,47 @@ public class ParcelTrackingDataUpdatedMessageBuilder implements Builder<ParcelTr
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelTrackingDataUpdatedMessageBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelTrackingDataUpdatedMessageBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {

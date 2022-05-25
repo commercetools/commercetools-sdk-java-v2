@@ -6,22 +6,46 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EnumValueIsUsedErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumValueIsUsedError enumValueIsUsedError = EnumValueIsUsedError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumValueIsUsedErrorBuilder implements Builder<EnumValueIsUsedError> {
 
     private String message;
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     *
+     */
+
     public EnumValueIsUsedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumValueIsUsedErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumValueIsUsedErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

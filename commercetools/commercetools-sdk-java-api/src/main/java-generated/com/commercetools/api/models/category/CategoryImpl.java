@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Category
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImpl implements Category, ModelBase {
 
     private String id;
@@ -98,108 +101,153 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Category.</p>
-    */
+     *  <p>Unique identifier of the Category.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the category.</p>
-    */
+     *  <p>The current version of the category.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>human-readable identifiers usually used as deep-link URL to the related category.
-    *  Each slug is unique across a project, but a category can have the same slug for different languages.</p>
-    */
+     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Contains the parent path towards the root category.</p>
-    */
+     *  <p>Contains the parent path towards the root category.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getAncestors() {
         return this.ancestors;
     }
 
     /**
-    *  <p>A category that is the parent of this category in the category tree.</p>
-    */
+     *  <p>A category that is the parent of this category in the category tree.</p>
+     */
+
     public com.commercetools.api.models.category.CategoryReference getParent() {
         return this.parent;
     }
 
     /**
-    *  <p>An attribute as base for a custom category order in one level.</p>
-    */
+     *  <p>An attribute as base for a custom category order in one level.</p>
+     */
+
     public String getOrderHint() {
         return this.orderHint;
     }
+
+    /**
+     *
+     */
 
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Can be used to store images, icons or movies related to this category.</p>
-    */
+     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Category.</p>
-    */
+     *  <p>User-defined unique identifier of the Category.</p>
+     */
+
     public String getKey() {
         return this.key;
     }

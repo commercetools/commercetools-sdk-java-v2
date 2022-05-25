@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .key("{key}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetBuilder implements Builder<Asset> {
 
     private String key;
@@ -27,20 +41,36 @@ public class AssetBuilder implements Builder<Asset> {
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     */
+
     public AssetBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder sources(final com.commercetools.importapi.models.common.AssetSource... sources) {
         this.sources = new ArrayList<>(Arrays.asList(sources));
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder sources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder plusSources(final com.commercetools.importapi.models.common.AssetSource... sources) {
         if (this.sources == null) {
@@ -49,6 +79,10 @@ public class AssetBuilder implements Builder<Asset> {
         this.sources.addAll(Arrays.asList(sources));
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder plusSources(
             Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSourceBuilder> builder) {
@@ -59,6 +93,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder withSources(
             Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSourceBuilder> builder) {
         this.sources = new ArrayList<>();
@@ -66,16 +104,43 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public AssetBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public AssetBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public AssetBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -83,21 +148,42 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public AssetBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -107,11 +193,19 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     */
+
     public AssetBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     */
 
     public AssetBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;

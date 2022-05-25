@@ -17,9 +17,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Gets the current or staged representation of a product by its ID from a specific Store.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Gets the current or staged representation of a product by its ID from a specific Store.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .productProjections()
+ *            .withKey("{key}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet extends
         ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet, com.commercetools.api.models.product.ProductProjection>
         implements

@@ -15,33 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShoppingListLineItemCustomTypeChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShoppingListLineItemCustomTypeChange setShoppingListLineItemCustomTypeChange = SetShoppingListLineItemCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetShoppingListLineItemCustomTypeChangeImpl.class)
 public interface SetShoppingListLineItemCustomTypeChange extends Change {
 
     String SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetShoppingListLineItemCustomTypeChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setLineItemCustomType</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("lineItem")
     public ShoppingListLineItemValue getLineItem();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")
     public CustomFields getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")

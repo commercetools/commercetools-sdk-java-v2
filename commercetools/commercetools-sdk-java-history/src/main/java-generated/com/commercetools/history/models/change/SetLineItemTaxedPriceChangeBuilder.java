@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemTaxedPriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemTaxedPriceChange setLineItemTaxedPriceChange = SetLineItemTaxedPriceChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTaxedPriceChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
+     */
+
     public SetLineItemTaxedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemTaxedPriceChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -31,16 +55,28 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxedPriceChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxedPriceChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemTaxedPriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
@@ -48,17 +84,29 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxedPriceChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemTaxedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxedItemPrice previousValue) {

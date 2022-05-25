@@ -13,16 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetLineItemShippingDetailsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetLineItemShippingDetailsAction cartSetLineItemShippingDetailsAction = CartSetLineItemShippingDetailsAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetLineItemShippingDetailsActionImpl.class)
 public interface CartSetLineItemShippingDetailsAction extends CartUpdateAction {
 
     String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();

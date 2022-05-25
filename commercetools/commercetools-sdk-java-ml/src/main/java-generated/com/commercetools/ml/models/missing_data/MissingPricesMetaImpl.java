@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingPricesMeta
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
 
     private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
@@ -32,9 +35,17 @@ public class MissingPricesMetaImpl implements MissingPricesMeta, ModelBase {
     public MissingPricesMetaImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.ml.models.missing_data.MissingPricesProductLevel getProductLevel() {
         return this.productLevel;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.ml.models.missing_data.MissingPricesVariantLevel getVariantLevel() {
         return this.variantLevel;

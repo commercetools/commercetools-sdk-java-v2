@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemDistributionChannelChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemDistributionChannelChange setLineItemDistributionChannelChange = SetLineItemDistributionChannelChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetLineItemDistributionChannelChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
+     */
+
     public SetLineItemDistributionChannelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemDistributionChannelChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -31,16 +55,28 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemDistributionChannelChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemDistributionChannelChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemDistributionChannelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -48,17 +84,29 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemDistributionChannelChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemDistributionChannelChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemDistributionChannelChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {

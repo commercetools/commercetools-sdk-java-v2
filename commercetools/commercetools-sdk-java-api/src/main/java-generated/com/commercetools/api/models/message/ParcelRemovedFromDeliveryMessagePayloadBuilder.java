@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelRemovedFromDeliveryMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelRemovedFromDeliveryMessagePayload parcelRemovedFromDeliveryMessagePayload = ParcelRemovedFromDeliveryMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         implements Builder<ParcelRemovedFromDeliveryMessagePayload> {
 
@@ -15,16 +28,28 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     private com.commercetools.api.models.order.Parcel parcel;
 
+    /**
+     *
+     */
+
     public ParcelRemovedFromDeliveryMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
             Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
         this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelRemovedFromDeliveryMessagePayloadBuilder parcel(
             final com.commercetools.api.models.order.Parcel parcel) {

@@ -17,10 +17,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>If the customer exists in the commercetools project but the stores field references a different store,
-*  this method returns a ResourceNotFound error.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>If the customer exists in the project but the stores field references a different store, this method returns a ResourceNotFound error.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .customers()
+ *            .withKey("{key}")
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends
         BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost>,

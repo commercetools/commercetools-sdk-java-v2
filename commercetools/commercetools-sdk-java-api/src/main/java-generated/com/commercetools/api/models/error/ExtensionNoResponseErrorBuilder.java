@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ExtensionNoResponseErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionNoResponseError extensionNoResponseError = ExtensionNoResponseError.builder()
+ *             .message("{message}")
+ *             .extensionId("{extensionId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoResponseError> {
 
     private String message;
@@ -20,15 +33,27 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
     @Nullable
     private String extensionKey;
 
+    /**
+     *
+     */
+
     public ExtensionNoResponseErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExtensionNoResponseErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExtensionNoResponseErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -38,10 +63,18 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExtensionNoResponseErrorBuilder extensionId(final String extensionId) {
         this.extensionId = extensionId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExtensionNoResponseErrorBuilder extensionKey(@Nullable final String extensionKey) {
         this.extensionKey = extensionKey;

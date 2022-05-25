@@ -7,21 +7,45 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReferenceSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceSetField referenceSetField = ReferenceSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
 
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
+
+    /**
+     *
+     */
 
     public ReferenceSetFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferenceSetFieldBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferenceSetFieldBuilder plusValue(final com.commercetools.importapi.models.common.KeyReference... value) {
         if (this.value == null) {
@@ -31,6 +55,10 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferenceSetFieldBuilder plusValue(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
         if (this.value == null) {
@@ -39,6 +67,10 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
         this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferenceSetFieldBuilder withValue(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {

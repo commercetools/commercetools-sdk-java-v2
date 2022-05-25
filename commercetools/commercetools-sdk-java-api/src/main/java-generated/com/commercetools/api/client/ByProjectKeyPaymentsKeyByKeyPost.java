@@ -16,7 +16,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .payments()
+ *            .withKey("{key}")
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentsKeyByKeyPost extends
         BodyApiMethod<ByProjectKeyPaymentsKeyByKeyPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyPaymentsKeyByKeyPost>,

@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemTaxCategoryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemTaxCategoryChange setCustomLineItemTaxCategoryChange = SetCustomLineItemTaxCategoryChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCustomLineItemTaxCategoryChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
+     */
+
     public SetCustomLineItemTaxCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -32,16 +56,28 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxCategoryChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -49,17 +85,29 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxCategoryChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemTaxCategoryChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {

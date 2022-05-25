@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private String id;
@@ -77,6 +80,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    @Deprecated
     private Long lastMessageSequenceNumber;
 
     private com.commercetools.api.models.cart.CartReference cart;
@@ -186,232 +190,329 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Order.</p>
-    */
+     *  <p>Unique identifier of the Order.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the order.</p>
-    */
+     *  <p>The current version of the order.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>This field will only be present if it was set for Order Import</p>
-    */
+     *  <p>This field will only be present if it was set for Order Import</p>
+     */
+
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
 
     /**
-    *  <p>String that uniquely identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique across a project.
-    *  Once it's set it cannot be changed.</p>
-    */
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     */
+
     public String getOrderNumber() {
         return this.orderNumber;
     }
 
+    /**
+     *
+     */
+
     public String getCustomerId() {
         return this.customerId;
     }
+
+    /**
+     *
+     */
 
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
     /**
-    *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
         return this.customLineItems;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
 
     /**
-    *  <p>The taxes are calculated based on the shipping address.</p>
-    */
+     *  <p>The taxes are calculated based on the shipping address.</p>
+     */
+
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
     /**
-    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-    */
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     */
+
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group.
-    *  Used for product variant price selection.</p>
-    */
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-    *  Used for product variant price selection.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>One of the four predefined OrderStates.</p>
-    */
+     *  <p>One of the four predefined OrderStates.</p>
+     */
+
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
 
     /**
-    *  <p>This reference can point to a state in a custom workflow.</p>
-    */
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
     /**
-    *  <p>Set if the ShippingMethod is set.</p>
-    */
+     *  <p>Set if the ShippingMethod is set.</p>
+     */
+
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
         return this.syncInfo;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;
     }
 
     /**
-    *  <p>The sequence number of the last order message produced by changes to this order.
-    *  <code>0</code> means, that no messages were created yet.</p>
-    */
+     *  <p>Internal-only field.</p>
+     */
+    @Deprecated
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
 
     /**
-    *  <p>Set when this order was created from a cart.
-    *  The cart will have the state <code>Ordered</code>.</p>
-    */
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.CartReference getCart() {
         return this.cart;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
         return this.paymentInfo;
     }
+
+    /**
+     *
+     */
 
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
         return this.origin;
     }
 
     /**
-    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-    */
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     */
+
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
     /**
-    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-    */
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
         return this.refusedGifts;
     }
@@ -559,6 +660,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
     }

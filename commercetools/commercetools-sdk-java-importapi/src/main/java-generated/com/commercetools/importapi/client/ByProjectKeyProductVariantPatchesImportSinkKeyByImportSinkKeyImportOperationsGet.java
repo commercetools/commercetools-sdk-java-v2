@@ -19,9 +19,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves all product-variant-patches import operations of an import sink key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Retrieves all product-variant-patches import operations of an import sink key.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> result = apiRoot
+ *            .withProjectKeyValue("{projectKey}")
+ *            .productVariantPatches()
+ *            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
+ *            .importOperations()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet extends
         ApiMethod<ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>
         implements

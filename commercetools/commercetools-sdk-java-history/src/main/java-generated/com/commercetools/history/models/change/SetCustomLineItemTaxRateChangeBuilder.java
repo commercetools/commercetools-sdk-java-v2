@@ -7,7 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemTaxRateChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemTaxRateChange setCustomLineItemTaxRateChange = SetCustomLineItemTaxRateChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomLineItemTaxRateChange> {
 
     private String change;
@@ -22,10 +39,18 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
+     */
+
     public SetCustomLineItemTaxRateChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemTaxRateChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -34,16 +59,28 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxRateChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemTaxRateChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemTaxRateChangeBuilder taxMode(
             final com.commercetools.history.models.common.TaxMode taxMode) {
@@ -51,11 +88,19 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public SetCustomLineItemTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetCustomLineItemTaxRateChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -63,11 +108,19 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public SetCustomLineItemTaxRateChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetCustomLineItemTaxRateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {

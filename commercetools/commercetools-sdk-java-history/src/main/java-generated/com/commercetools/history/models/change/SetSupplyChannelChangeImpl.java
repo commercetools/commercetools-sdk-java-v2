@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetSupplyChannelChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSupplyChannelChangeImpl implements SetSupplyChannelChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetSupplyChannelChangeImpl implements SetSupplyChannelChange, Model
         this.type = SET_SUPPLY_CHANNEL_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Shape of the action for <code>setSupplyChannel</code></p>
-    */
+     *  <p>Shape of the action for <code>setSupplyChannel</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;

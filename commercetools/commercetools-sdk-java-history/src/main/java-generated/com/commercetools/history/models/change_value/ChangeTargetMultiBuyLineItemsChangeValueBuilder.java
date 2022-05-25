@@ -6,7 +6,23 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTargetMultiBuyLineItemsChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTargetMultiBuyLineItemsChangeValue changeTargetMultiBuyLineItemsChangeValue = ChangeTargetMultiBuyLineItemsChangeValue.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .maxOccurrence(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
         implements Builder<ChangeTargetMultiBuyLineItemsChangeValue> {
 
@@ -20,25 +36,45 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
 
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
+    /**
+     *
+     */
+
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     */
 
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
 
+    /**
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     */
+
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
 
+    /**
+     *  <p>Maximum number of applications of this discount.</p>
+     */
+
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder selectionMode(
             final com.commercetools.history.models.common.SelectionMode selectionMode) {

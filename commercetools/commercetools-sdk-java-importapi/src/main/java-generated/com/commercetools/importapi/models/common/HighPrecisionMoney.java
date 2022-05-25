@@ -12,12 +12,30 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * HighPrecisionMoney
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     HighPrecisionMoney highPrecisionMoney = HighPrecisionMoney.builder()
+ *             .centAmount(0.3)
+ *             .currencyCode("{currencyCode}")
+ *             .preciseAmount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
     String HIGH_PRECISION = "highPrecision";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();

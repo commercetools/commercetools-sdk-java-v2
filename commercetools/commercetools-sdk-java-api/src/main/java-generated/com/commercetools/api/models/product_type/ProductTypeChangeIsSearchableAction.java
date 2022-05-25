@@ -12,16 +12,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeIsSearchableAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeIsSearchableAction productTypeChangeIsSearchableAction = ProductTypeChangeIsSearchableAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .isSearchable(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
 
     String CHANGE_IS_SEARCHABLE = "changeIsSearchable";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();

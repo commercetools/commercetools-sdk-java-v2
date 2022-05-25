@@ -13,32 +13,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentMethodInfo
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentMethodInfo paymentMethodInfo = PaymentMethodInfo.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentMethodInfoImpl.class)
 public interface PaymentMethodInfo {
 
     /**
-    *  <p>The interface that handles the payment (usually a PSP).
-    *  Cannot be changed once it has been set.
-    *  The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
-    */
+     *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
+     */
 
     @JsonProperty("paymentInterface")
     public String getPaymentInterface();
 
     /**
-    *  <p>The payment method that is used, e.g.
-    *  e.g.
-    *  a conventional string representing Credit Card, Cash Advance etc.</p>
-    */
+     *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
+     */
 
     @JsonProperty("method")
     public String getMethod();
 
     /**
-    *  <p>A human-readable, localized name for the payment method, e.g.
-    *  'Credit Card'.</p>
-    */
+     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();

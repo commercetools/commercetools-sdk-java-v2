@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImportSummaryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSummary importSummary = ImportSummary.builder()
+ *             .states(statesBuilder -> statesBuilder)
+ *             .total(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
 
     private Long total;
+
+    /**
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     */
 
     public ImportSummaryBuilder states(
             Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder> builder) {
@@ -21,11 +38,19 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         return this;
     }
 
+    /**
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     */
+
     public ImportSummaryBuilder states(
             final com.commercetools.importapi.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
+
+    /**
+     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     */
 
     public ImportSummaryBuilder total(final Long total) {
         this.total = total;

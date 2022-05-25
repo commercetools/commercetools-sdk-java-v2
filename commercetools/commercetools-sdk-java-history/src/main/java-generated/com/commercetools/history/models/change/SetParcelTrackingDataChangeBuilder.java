@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetParcelTrackingDataChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetParcelTrackingDataChange setParcelTrackingDataChange = SetParcelTrackingDataChange.builder()
+ *             .change("{change}")
+ *             .parcel(parcelBuilder -> parcelBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrackingDataChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     private com.commercetools.history.models.common.TrackingData previousValue;
 
+    /**
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     */
+
     public SetParcelTrackingDataChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelTrackingDataChangeBuilder parcel(
             Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
@@ -30,11 +53,19 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelTrackingDataChangeBuilder parcel(
             final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelTrackingDataChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
@@ -42,17 +73,29 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelTrackingDataChangeBuilder nextValue(
             final com.commercetools.history.models.common.TrackingData nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetParcelTrackingDataChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetParcelTrackingDataChangeBuilder previousValue(
             final com.commercetools.history.models.common.TrackingData previousValue) {

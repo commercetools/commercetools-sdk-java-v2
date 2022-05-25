@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelTrackingDataUpdatedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTrackingDataUpdatedMessagePayload, ModelBase {
 
     private String type;
@@ -39,17 +42,33 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     *
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;

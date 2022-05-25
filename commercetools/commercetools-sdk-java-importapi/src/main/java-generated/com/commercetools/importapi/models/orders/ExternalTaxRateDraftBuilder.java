@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ExternalTaxRateDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExternalTaxRateDraft externalTaxRateDraft = ExternalTaxRateDraft.builder()
+ *             .name("{name}")
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft> {
 
     private String name;
@@ -28,25 +41,45 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     @Nullable
     private Boolean includedInPrice;
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExternalTaxRateDraftBuilder amount(@Nullable final Double amount) {
         this.amount = amount;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder country(final String country) {
         this.country = country;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExternalTaxRateDraftBuilder subRates(
             @Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -54,11 +87,19 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder subRates(
             @Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExternalTaxRateDraftBuilder plusSubRates(
             @Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
@@ -69,6 +110,10 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder plusSubRates(
             Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
         if (this.subRates == null) {
@@ -78,12 +123,20 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
+    /**
+     *
+     */
+
     public ExternalTaxRateDraftBuilder withSubRates(
             Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
         this.subRates = new ArrayList<>();
         this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ExternalTaxRateDraftBuilder includedInPrice(@Nullable final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;

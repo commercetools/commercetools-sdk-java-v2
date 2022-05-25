@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariant productVariant = ProductVariant.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .staged(true)
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -16,21 +30,37 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private Integer variantId;
 
+    /**
+     *  <p>The product that contains this variant.</p>
+     */
+
     public ProductVariantBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>The product that contains this variant.</p>
+     */
+
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
     }
 
+    /**
+     *  <p>The state of the product variant.</p>
+     */
+
     public ProductVariantBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *  <p>The id of the product variant.</p>
+     */
 
     public ProductVariantBuilder variantId(final Integer variantId) {
         this.variantId = variantId;

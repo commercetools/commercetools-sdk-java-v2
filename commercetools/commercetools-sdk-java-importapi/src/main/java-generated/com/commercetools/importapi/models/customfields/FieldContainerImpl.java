@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Maps the custom field names to the actual values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Maps the custom field names to the actual values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldContainerImpl implements FieldContainer, ModelBase {
 
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
@@ -32,8 +32,9 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
     }
 
     /**
-    *  <p>Mapping from the custom field name to the actual value.</p>
-    */
+     *  <p>Mapping from the custom field name to the actual value.</p>
+     */
+
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> values() {
         return values;
     }

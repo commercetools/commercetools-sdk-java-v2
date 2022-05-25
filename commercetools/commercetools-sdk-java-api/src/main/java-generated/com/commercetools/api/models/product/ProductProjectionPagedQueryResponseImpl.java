@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductProjectionPagedQueryResponse
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionPagedQueryResponseImpl implements ProductProjectionPagedQueryResponse, ModelBase {
 
     private Long limit;
@@ -43,26 +46,40 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     *
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
         return this.results;

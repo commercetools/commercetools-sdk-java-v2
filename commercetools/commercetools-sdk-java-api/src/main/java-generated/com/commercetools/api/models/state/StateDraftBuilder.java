@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateDraft stateDraft = StateDraft.builder()
+ *             .key("{key}")
+ *             .type(StateTypeEnum.ORDER_STATE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateDraftBuilder implements Builder<StateDraft> {
 
     private String key;
@@ -31,15 +44,27 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
+    /**
+     *  <p>User-defined unique identifier for the State.</p>
+     */
+
     public StateDraftBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
+     */
+
     public StateDraftBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
         return this;
     }
+
+    /**
+     *  <p>Name of the State.</p>
+     */
 
     public StateDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -47,10 +72,18 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the State.</p>
+     */
+
     public StateDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Description of the State.</p>
+     */
 
     public StateDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -58,27 +91,47 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Description of the State.</p>
+     */
+
     public StateDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     */
+
     public StateDraftBuilder initial(@Nullable final Boolean initial) {
         this.initial = initial;
         return this;
     }
+
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     */
 
     public StateDraftBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
 
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     */
+
     public StateDraftBuilder roles(
             @Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     */
 
     public StateDraftBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
         if (this.roles == null) {
@@ -88,17 +141,44 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
+
     public StateDraftBuilder transitions(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
 
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
+
     public StateDraftBuilder transitions(
             @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
         this.transitions = transitions;
         return this;
     }
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateDraftBuilder plusTransitions(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
@@ -109,6 +189,15 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
+
     public StateDraftBuilder plusTransitions(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         if (this.transitions == null) {
@@ -118,6 +207,15 @@ public class StateDraftBuilder implements Builder<StateDraft> {
                 .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateDraftBuilder withTransitions(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImageSearchConfigRequest
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest, ModelBase {
 
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
@@ -29,8 +32,9 @@ public class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest, M
     }
 
     /**
-    *  <p>The list of update actions to be performed on the project.</p>
-    */
+     *  <p>The list of update actions to be performed on the project.</p>
+     */
+
     public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions() {
         return this.actions;
     }

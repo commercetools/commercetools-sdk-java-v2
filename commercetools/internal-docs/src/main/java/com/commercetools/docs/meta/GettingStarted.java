@@ -4,7 +4,7 @@ package com.commercetools.docs.meta;
 /**
  * <h2 id=about-clients>About the client</h2>
  *
- * <p>The commercetools platform client communicates asynchronously with the API via HTTPS
+ * <p>The commercetools Composable Commerce client communicates asynchronously with the API via HTTPS
  * and it takes care about authentication.</p>
  *
  * <p>The client uses Java objects to formulate an HTTP request, performs the request and

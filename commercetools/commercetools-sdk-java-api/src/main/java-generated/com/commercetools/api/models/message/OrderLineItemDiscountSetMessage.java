@@ -16,30 +16,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemDiscountSetMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemDiscountSetMessage orderLineItemDiscountSetMessage = OrderLineItemDiscountSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .lineItemId("{lineItemId}")
+ *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemDiscountSetMessageImpl.class)
 public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     String ORDER_LINE_ITEM_DISCOUNT_SET = "OrderLineItemDiscountSet";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();

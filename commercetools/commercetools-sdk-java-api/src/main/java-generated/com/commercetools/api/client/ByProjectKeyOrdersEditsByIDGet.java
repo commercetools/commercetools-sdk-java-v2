@@ -16,7 +16,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .orders()
+ *            .edits()
+ *            .withId("{ID}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersEditsByIDGet
         extends ApiMethod<ByProjectKeyOrdersEditsByIDGet, com.commercetools.api.models.order_edit.OrderEdit>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsByIDGet>,

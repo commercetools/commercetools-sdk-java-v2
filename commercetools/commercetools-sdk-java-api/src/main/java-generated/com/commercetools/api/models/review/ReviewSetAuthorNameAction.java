@@ -10,15 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewSetAuthorNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewSetAuthorNameAction reviewSetAuthorNameAction = ReviewSetAuthorNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
     String SET_AUTHOR_NAME = "setAuthorName";
 
     /**
-    *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     @JsonProperty("authorName")
     public String getAuthorName();

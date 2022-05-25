@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangePlainEnumValueLabelAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangePlainEnumValueLabelActionImpl
         implements ProductTypeChangePlainEnumValueLabelAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class ProductTypeChangePlainEnumValueLabelActionImpl
         this.action = CHANGE_PLAIN_ENUM_VALUE_LABEL;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue() {
         return this.newValue;

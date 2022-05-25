@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>ResourceIdentifier to a ProductDiscount.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountResourceIdentifierImpl implements ProductDiscountResourceIdentifier, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -39,22 +39,25 @@ public class ProductDiscountResourceIdentifierImpl implements ProductDiscountRes
     }
 
     /**
-    *  <p>Type of referenced resource. If given, it must match the expected <a href="ctp:api:type:ReferenceTypeId">ReferenceTypeId</a> of the referenced resource.</p>
-    */
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced ProductDiscount. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public String getKey() {
         return this.key;
     }

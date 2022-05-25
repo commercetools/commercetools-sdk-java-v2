@@ -17,10 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the
-*  CartDraft has a predicate which does not match the cart.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the CartDraft has a predicate which does not match the cart.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .carts()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartsPost extends
         BodyApiMethod<ByProjectKeyCartsPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.cart.CartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartsPost>,

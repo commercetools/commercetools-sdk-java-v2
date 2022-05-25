@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetParcelTrackingDataActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetParcelTrackingDataAction stagedOrderSetParcelTrackingDataAction = StagedOrderSetParcelTrackingDataAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<StagedOrderSetParcelTrackingDataAction> {
 
     private String parcelId;
@@ -17,16 +29,28 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    /**
+     *
+     */
+
     public StagedOrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetParcelTrackingDataActionBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {

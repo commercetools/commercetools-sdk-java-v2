@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingRoleOnChannelErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingRoleOnChannelError missingRoleOnChannelError = MissingRoleOnChannelError.builder()
+ *             .message("{message}")
+ *             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnChannelError> {
 
     private String message;
@@ -21,15 +34,27 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
+    /**
+     *
+     */
+
     public MissingRoleOnChannelErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingRoleOnChannelErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingRoleOnChannelErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -39,6 +64,10 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public MissingRoleOnChannelErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
@@ -46,11 +75,19 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public MissingRoleOnChannelErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     */
 
     public MissingRoleOnChannelErrorBuilder missingRole(
             final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {

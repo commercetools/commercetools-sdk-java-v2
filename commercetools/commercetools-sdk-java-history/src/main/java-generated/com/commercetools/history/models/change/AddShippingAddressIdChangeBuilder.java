@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddShippingAddressIdChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddShippingAddressIdChange addShippingAddressIdChange = AddShippingAddressIdChange.builder()
+ *             .change("{change}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .address(addressBuilder -> addressBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAddressIdChange> {
 
     private String change;
@@ -18,20 +33,36 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+     */
+
     public AddShippingAddressIdChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddShippingAddressIdChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddShippingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
         if (this.nextValue == null) {
@@ -41,15 +72,27 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddShippingAddressIdChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddShippingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddShippingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
         if (this.previousValue == null) {
@@ -59,11 +102,19 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddShippingAddressIdChangeBuilder address(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddShippingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {
         this.address = address;

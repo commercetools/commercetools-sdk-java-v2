@@ -6,22 +6,46 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SyntaxErrorErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SyntaxErrorError syntaxErrorError = SyntaxErrorError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyntaxErrorErrorBuilder implements Builder<SyntaxErrorError> {
 
     private String message;
 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
+    /**
+     *
+     */
+
     public SyntaxErrorErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SyntaxErrorErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SyntaxErrorErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {

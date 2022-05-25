@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GraphQLResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLResponse graphQLResponse = GraphQLResponse.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
 
     @Nullable
@@ -18,21 +29,37 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     @Nullable
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
+    /**
+     *
+     */
+
     public GraphQLResponseBuilder data(@Nullable final java.lang.Object data) {
         this.data = data;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GraphQLResponseBuilder errors(@Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
 
+    /**
+     *
+     */
+
     public GraphQLResponseBuilder errors(
             @Nullable final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
         this.errors = errors;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GraphQLResponseBuilder plusErrors(
             @Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
@@ -43,6 +70,10 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public GraphQLResponseBuilder plusErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
         if (this.errors == null) {
@@ -51,6 +82,10 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public GraphQLResponseBuilder withErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {

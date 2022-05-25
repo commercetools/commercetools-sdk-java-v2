@@ -13,7 +13,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductUnpublishAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishActionImpl implements ProductUnpublishAction, ModelBase {
 
     private String action;
@@ -22,6 +25,10 @@ public class ProductUnpublishActionImpl implements ProductUnpublishAction, Model
     ProductUnpublishActionImpl() {
         this.action = UNPUBLISH;
     }
+
+    /**
+     *
+     */
 
     public String getAction() {
         return this.action;

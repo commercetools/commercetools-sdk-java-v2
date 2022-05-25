@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListSetAnonymousIdAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnonymousIdAction, ModelBase {
 
     private String action;
@@ -31,14 +34,18 @@ public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnon
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
-    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
-    */
+     *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+     */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }

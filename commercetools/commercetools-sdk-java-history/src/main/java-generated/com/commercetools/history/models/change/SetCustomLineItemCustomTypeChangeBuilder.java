@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemCustomTypeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemCustomTypeChange setCustomLineItemCustomTypeChange = SetCustomLineItemCustomTypeChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCustomLineItemCustomTypeChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     */
+
     public SetCustomLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemCustomTypeChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -32,16 +56,28 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemCustomTypeChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemCustomTypeChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -49,17 +85,29 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemCustomTypeChangeBuilder nextValue(
             final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemCustomTypeChangeBuilder previousValue(
             final com.commercetools.history.models.common.CustomFields previousValue) {

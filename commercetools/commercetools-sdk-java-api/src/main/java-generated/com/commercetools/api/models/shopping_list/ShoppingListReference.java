@@ -15,24 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a ShoppingList.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListReference shoppingListReference = ShoppingListReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListReferenceImpl.class)
 public interface ShoppingListReference extends Reference, com.commercetools.api.models.Identifiable<ShoppingList> {
 
     String SHOPPING_LIST = "shopping-list";
 
     /**
-    *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for ShoppingLists.</p>
-    */
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public ShoppingList getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

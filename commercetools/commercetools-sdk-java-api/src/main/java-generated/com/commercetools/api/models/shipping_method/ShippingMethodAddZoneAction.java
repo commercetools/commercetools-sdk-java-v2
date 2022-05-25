@@ -14,12 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodAddZoneAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodAddZoneAction shippingMethodAddZoneAction = ShippingMethodAddZoneAction.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodAddZoneActionImpl.class)
 public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction {
 
     String ADD_ZONE = "addZone";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("zone")

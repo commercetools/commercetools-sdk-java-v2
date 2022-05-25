@@ -13,22 +13,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The item's shipping target.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The item's shipping target.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+ *             .addressKey("{addressKey}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
 public interface ItemShippingTarget {
 
     /**
-    *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
-    */
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     */
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     /**
-    *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
-    */
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();

@@ -13,17 +13,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReplicaCartDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReplicaCartDraft replicaCartDraft = ReplicaCartDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReplicaCartDraftImpl.class)
 public interface ReplicaCartDraft {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("reference")
     public Object getReference();
 
     /**
-    *  <p>User-specific unique identifier of the cart.</p>
-    */
+     *  <p>User-specific unique identifier of the cart.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

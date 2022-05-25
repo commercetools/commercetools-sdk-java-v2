@@ -6,17 +6,37 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Attribute attribute = Attribute.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeBuilder implements Builder<Attribute> {
 
     private String name;
 
     private java.lang.Object value;
 
+    /**
+     *
+     */
+
     public AttributeBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>A valid JSON value, based on an AttributeDefinition.</p>
+     */
 
     public AttributeBuilder value(final java.lang.Object value) {
         this.value = value;

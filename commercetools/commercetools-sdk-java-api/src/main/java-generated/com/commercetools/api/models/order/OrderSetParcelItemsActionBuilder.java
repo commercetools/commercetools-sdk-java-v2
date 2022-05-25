@@ -7,28 +7,57 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSetParcelItemsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetParcelItemsAction orderSetParcelItemsAction = OrderSetParcelItemsAction.builder()
+ *             .parcelId("{parcelId}")
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelItemsAction> {
 
     private String parcelId;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     *
+     */
+
     public OrderSetParcelItemsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderSetParcelItemsActionBuilder items(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderSetParcelItemsActionBuilder items(
             final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderSetParcelItemsActionBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
         if (this.items == null) {
@@ -38,6 +67,10 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderSetParcelItemsActionBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -46,6 +79,10 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderSetParcelItemsActionBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

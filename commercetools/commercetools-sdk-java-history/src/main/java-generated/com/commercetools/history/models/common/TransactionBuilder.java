@@ -7,7 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TransactionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Transaction transaction = Transaction.builder()
+ *             .id("{id}")
+ *             .timestamp("{timestamp}")
+ *             .type(TransactionType.AUTHORIZATION)
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .interactionId("{interactionId}")
+ *             .state(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionBuilder implements Builder<Transaction> {
 
     private String id;
@@ -22,20 +39,36 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     private com.commercetools.history.models.common.TransactionState state;
 
+    /**
+     *  <p>The unique ID of this object.</p>
+     */
+
     public TransactionBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>The time at which the transaction took place.</p>
+     */
 
     public TransactionBuilder timestamp(final String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TransactionBuilder type(final com.commercetools.history.models.common.TransactionType type) {
         this.type = type;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TransactionBuilder amount(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -43,15 +76,27 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TransactionBuilder amount(final com.commercetools.history.models.common.Money amount) {
         this.amount = amount;
         return this;
     }
 
+    /**
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     */
+
     public TransactionBuilder interactionId(final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TransactionBuilder state(final com.commercetools.history.models.common.TransactionState state) {
         this.state = state;

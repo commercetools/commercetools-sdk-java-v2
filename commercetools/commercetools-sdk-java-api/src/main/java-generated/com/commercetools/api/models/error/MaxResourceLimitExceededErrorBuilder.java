@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MaxResourceLimitExceededErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
+ *             .message("{message}")
+ *             .exceededResource(ReferenceTypeId.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResourceLimitExceededError> {
 
     private String message;
@@ -15,15 +28,27 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
 
     private com.commercetools.api.models.common.ReferenceTypeId exceededResource;
 
+    /**
+     *
+     */
+
     public MaxResourceLimitExceededErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MaxResourceLimitExceededErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MaxResourceLimitExceededErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -32,6 +57,10 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
         values.put(key, value);
         return this;
     }
+
+    /**
+     *  <p>supported resource type identifiers:</p>
+     */
 
     public MaxResourceLimitExceededErrorBuilder exceededResource(
             final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {

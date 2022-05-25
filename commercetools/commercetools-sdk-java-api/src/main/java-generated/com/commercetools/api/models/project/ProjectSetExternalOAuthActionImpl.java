@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectSetExternalOAuthAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAuthAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
         this.action = SET_EXTERNAL_O_AUTH;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
         return this.externalOAuth;
     }

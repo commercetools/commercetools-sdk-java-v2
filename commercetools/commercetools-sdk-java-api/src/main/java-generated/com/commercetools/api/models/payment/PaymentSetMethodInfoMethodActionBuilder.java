@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentSetMethodInfoMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentSetMethodInfoMethodAction paymentSetMethodInfoMethodAction = PaymentSetMethodInfoMethodAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentSetMethodInfoMethodAction> {
 
     @Nullable
     private String method;
+
+    /**
+     *  <p>If not provided, the method is unset.</p>
+     */
 
     public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {
         this.method = method;

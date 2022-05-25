@@ -14,24 +14,45 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartClassificationTier
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartClassificationTier cartClassificationTier = CartClassificationTier.builder()
+ *             .value("{value}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
     String CART_CLASSIFICATION = "CartClassification";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public String getValue();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
+
+    /**
+     *
+     */
 
     @JsonProperty("isMatching")
     public Boolean getIsMatching();

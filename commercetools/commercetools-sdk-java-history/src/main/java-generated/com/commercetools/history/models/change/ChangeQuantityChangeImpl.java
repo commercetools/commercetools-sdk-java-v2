@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Update action for <code>changeQuantity</code> on inventories</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Update action for <code>changeQuantity</code> on inventories</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase {
 
     private String type;
@@ -42,17 +42,33 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
         this.type = CHANGE_QUANTITY_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.InventoryQuantityValue getPreviousValue() {
         return this.previousValue;

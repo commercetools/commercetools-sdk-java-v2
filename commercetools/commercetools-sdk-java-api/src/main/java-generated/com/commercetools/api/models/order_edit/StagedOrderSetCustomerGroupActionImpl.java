@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetCustomerGroupAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCustomerGroupAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
         this.action = SET_CUSTOMER_GROUP;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }

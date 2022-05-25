@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyPaymentSetMethodInfoInterfaceActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyPaymentSetMethodInfoInterfaceAction myPaymentSetMethodInfoInterfaceAction = MyPaymentSetMethodInfoInterfaceAction.builder()
+ *             .interface("{interface}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentSetMethodInfoInterfaceActionBuilder implements Builder<MyPaymentSetMethodInfoInterfaceAction> {
 
     private String _interface;
+
+    /**
+     *
+     */
 
     public MyPaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {
         this._interface = _interface;

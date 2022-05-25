@@ -12,17 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Money
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Money money = Money.builder()
+ *             .centAmount(0.3)
+ *             .currencyCode("{currencyCode}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("centAmount")
     public Long getCentAmount();
 
     /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>The currency code compliant to ISO 4217.</p>
+     */
     @NotNull
     @JsonProperty("currencyCode")
     public String getCurrencyCode();

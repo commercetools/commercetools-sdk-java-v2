@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSelectionRemoveProductAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionRemoveProductActionImpl implements ProductSelectionRemoveProductAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class ProductSelectionRemoveProductActionImpl implements ProductSelection
         this.action = REMOVE_PRODUCT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>ResourceIdentifier to Product</p>
-    */
+     *  <p>ResourceIdentifier to Product</p>
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }

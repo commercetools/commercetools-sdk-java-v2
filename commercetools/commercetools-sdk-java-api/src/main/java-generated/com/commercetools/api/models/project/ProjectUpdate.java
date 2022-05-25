@@ -13,21 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectUpdate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectUpdate projectUpdate = ProjectUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectUpdateImpl.class)
 public interface ProjectUpdate
         extends com.commercetools.api.models.ResourceUpdate<ProjectUpdate, ProjectUpdateAction, ProjectUpdateBuilder> {
 
     /**
-    *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
-    */
+     *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>Update actions to be performed on the Project.</p>
-    */
+     *  <p>Update actions to be performed on the Project.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("actions")

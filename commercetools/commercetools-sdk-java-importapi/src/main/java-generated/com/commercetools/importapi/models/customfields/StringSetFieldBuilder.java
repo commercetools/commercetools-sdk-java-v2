@@ -6,20 +6,44 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StringSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StringSetField stringSetField = StringSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StringSetFieldBuilder implements Builder<StringSetField> {
 
     private java.util.List<String> value;
+
+    /**
+     *
+     */
 
     public StringSetFieldBuilder value(final String... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     *
+     */
+
     public StringSetFieldBuilder value(final java.util.List<String> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StringSetFieldBuilder plusValue(final String... value) {
         if (this.value == null) {

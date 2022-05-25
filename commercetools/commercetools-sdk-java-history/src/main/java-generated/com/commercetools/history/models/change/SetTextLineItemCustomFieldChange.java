@@ -14,40 +14,74 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetTextLineItemCustomFieldChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTextLineItemCustomFieldChange setTextLineItemCustomFieldChange = SetTextLineItemCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customTypeId("{customTypeId}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetTextLineItemCustomFieldChangeImpl.class)
 public interface SetTextLineItemCustomFieldChange extends Change {
 
     String SET_TEXT_LINE_ITEM_CUSTOM_FIELD_CHANGE = "SetTextLineItemCustomFieldChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setTextLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("textLineItem")
     public TextLineItemValue getTextLineItem();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Object getPreviousValue();

@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InvalidFieldErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidFieldError invalidFieldError = InvalidFieldError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
 
     private String message;
@@ -23,30 +36,54 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     @Nullable
     private Long resourceIndex;
 
+    /**
+     *
+     */
+
     public InvalidFieldErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     *  <p>The name of the field.</p>
+     */
 
     public InvalidFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
 
+    /**
+     *  <p>The invalid value.</p>
+     */
+
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
+
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     */
 
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
 
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     */
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
+
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
         if (this.allowedValues == null) {
@@ -55,6 +92,10 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         this.allowedValues.addAll(Arrays.asList(allowedValues));
         return this;
     }
+
+    /**
+     *
+     */
 
     public InvalidFieldErrorBuilder resourceIndex(@Nullable final Long resourceIndex) {
         this.resourceIndex = resourceIndex;

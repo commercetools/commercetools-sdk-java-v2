@@ -14,23 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The representation sent to the server when updating an <a href="#importsink">ImportSink</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation sent to the server when updating an ImportSink.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSinkUpdateDraft importSinkUpdateDraft = ImportSinkUpdateDraft.builder()
+ *             .version(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportSinkUpdateDraftImpl.class)
 public interface ImportSinkUpdateDraft {
 
     /**
-    *  <p>Current version of the ImportSink.</p>
-    */
+     *  <p>Current version of the ImportSink.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
-    */
+     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     */
 
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();

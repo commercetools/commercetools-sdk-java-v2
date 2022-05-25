@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeStackingModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeStackingModeAction cartDiscountChangeStackingModeAction = CartDiscountChangeStackingModeAction.builder()
+ *             .stackingMode(StackingMode.STACKING)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
     String CHANGE_STACKING_MODE = "changeStackingMode";
 
+    /**
+     *  <p>New value to set.</p>
+     */
     @NotNull
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();

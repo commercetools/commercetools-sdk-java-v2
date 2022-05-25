@@ -10,10 +10,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This data type represents the supported resource types.
-*  The value must be one of the following:</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This data type represents the supported resource types. The value must be one of the following:</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ChangeHistoryResourceType {
 
     ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;

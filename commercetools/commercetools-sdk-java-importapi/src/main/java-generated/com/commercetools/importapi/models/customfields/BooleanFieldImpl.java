@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A field with a boolean value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A field with a boolean value.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BooleanFieldImpl implements BooleanField, ModelBase {
 
     private String type;
@@ -35,11 +35,16 @@ public class BooleanFieldImpl implements BooleanField, ModelBase {
     }
 
     /**
-    *  <p>The type of this field.</p>
-    */
+     *  <p>The type of this field.</p>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public Boolean getValue() {
         return this.value;

@@ -7,6 +7,9 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+/**
+ * @param <T> the type of the map value
+ */
 public class MapAccessor<T> {
     private final Map<String, T> map;
 

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxRate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateImpl implements TaxRate, ModelBase {
 
     private String id;
@@ -48,32 +51,57 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     public TaxRateImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *
+     */
+
     public Double getAmount() {
         return this.amount;
     }
+
+    /**
+     *
+     */
 
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *
+     */
+
     public String getState() {
         return this.state;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.prices.SubRate> getSubRates() {
         return this.subRates;

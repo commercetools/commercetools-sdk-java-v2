@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeCartDiscountsChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeCartDiscountsChangeImpl implements ChangeCartDiscountsChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class ChangeCartDiscountsChangeImpl implements ChangeCartDiscountsChange,
         this.type = CHANGE_CART_DISCOUNTS_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
-    */
+     *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {
         return this.nextValue;

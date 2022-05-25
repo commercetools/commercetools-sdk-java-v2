@@ -12,20 +12,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCustomerSignin
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerSignin myCustomerSignin = MyCustomerSignin.builder()
+ *             .email("{email}")
+ *             .password("{password}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSigninImpl.class)
 public interface MyCustomerSignin {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
+    /**
+     *
+     */
+
     @JsonProperty("activeCartSignInMode")
     public AnonymousCartSignInMode getActiveCartSignInMode();
+
+    /**
+     *
+     */
 
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();

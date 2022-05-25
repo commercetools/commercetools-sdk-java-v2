@@ -15,26 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This action sets or removes the custom type for an existing CustomerGroup.
-*  If present, this action overwrites any existing <a href="/../api/projects/custom-fields">custom</a> type and fields.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing custom type and fields.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupSetCustomTypeAction customerGroupSetCustomTypeAction = CustomerGroupSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupSetCustomTypeActionImpl.class)
 public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAction {
 
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the CustomerGroup with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
-    */
+     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the CustomerGroup.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

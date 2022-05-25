@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GraphQLErrorLocationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GraphQLErrorLocation graphQLErrorLocation = GraphQLErrorLocation.builder()
+ *             .line(1)
+ *             .column(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation> {
 
     private Integer line;
 
     private Integer column;
 
+    /**
+     *
+     */
+
     public GraphQLErrorLocationBuilder line(final Integer line) {
         this.line = line;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GraphQLErrorLocationBuilder column(final Integer column) {
         this.column = column;

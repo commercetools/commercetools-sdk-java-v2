@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeStatusUpdateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeStatusUpdateAction changeStatusUpdateAction = ChangeStatusUpdateAction.builder()
+ *             .status(ImageSearchConfigStatus.ON)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStatusUpdateActionBuilder implements Builder<ChangeStatusUpdateAction> {
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
+
+    /**
+     *
+     */
 
     public ChangeStatusUpdateActionBuilder status(
             final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AzureEventGridDestination
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AzureEventGridDestinationImpl implements AzureEventGridDestination, ModelBase {
 
     private String type;
@@ -35,13 +38,25 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
         this.type = EVENT_GRID;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     *
+     */
 
     public String getAccessKey() {
         return this.accessKey;

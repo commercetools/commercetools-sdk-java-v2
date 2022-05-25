@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DeliveryBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Delivery delivery = Delivery.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .plusParcels(parcelsBuilder -> parcelsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryBuilder implements Builder<Delivery> {
 
     private String id;
@@ -23,25 +38,45 @@ public class DeliveryBuilder implements Builder<Delivery> {
     @Nullable
     private com.commercetools.importapi.models.common.Address address;
 
+    /**
+     *
+     */
+
     public DeliveryBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder items(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder items(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder plusItems(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
         if (this.items == null) {
@@ -50,6 +85,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         this.items.addAll(Arrays.asList(items));
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder plusItems(
             Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
@@ -60,6 +99,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder withItems(
             Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -67,15 +110,27 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder parcels(final com.commercetools.importapi.models.orders.Parcel... parcels) {
         this.parcels = new ArrayList<>(Arrays.asList(parcels));
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder parcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels) {
         this.parcels = parcels;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder plusParcels(final com.commercetools.importapi.models.orders.Parcel... parcels) {
         if (this.parcels == null) {
@@ -84,6 +139,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder plusParcels(
             Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
@@ -94,6 +153,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder withParcels(
             Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
         this.parcels = new ArrayList<>();
@@ -101,11 +164,19 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryBuilder address(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryBuilder address(@Nullable final com.commercetools.importapi.models.common.Address address) {
         this.address = address;

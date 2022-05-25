@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryChangeNameAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, ModelBase {
 
     private String action;
@@ -31,9 +34,17 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
         this.action = CHANGE_NAME;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

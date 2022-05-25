@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CloudEventsFormat
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CloudEventsFormat cloudEventsFormat = CloudEventsFormat.builder()
+ *             .cloudEventsVersion("{cloudEventsVersion}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CloudEventsFormatImpl.class)
 public interface CloudEventsFormat extends DeliveryFormat {
 
     String CLOUD_EVENTS = "CloudEvents";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("cloudEventsVersion")
     public String getCloudEventsVersion();

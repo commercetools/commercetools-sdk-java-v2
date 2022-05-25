@@ -14,43 +14,66 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Shape of the value for cart discounts multiBuyLineItems target.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for cart discounts multiBuyLineItems target.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTargetMultiBuyLineItemsChangeValue changeTargetMultiBuyLineItemsChangeValue = ChangeTargetMultiBuyLineItemsChangeValue.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .maxOccurrence(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetMultiBuyLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetChangeValue {
 
     String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     */
     @NotNull
     @JsonProperty("triggerQuantity")
     public Integer getTriggerQuantity();
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     */
     @NotNull
     @JsonProperty("discountedQuantity")
     public Integer getDiscountedQuantity();
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of applications of this discount.</p>
+     */
     @NotNull
     @JsonProperty("maxOccurrence")
     public Integer getMaxOccurrence();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("selectionMode")
     public SelectionMode getSelectionMode();

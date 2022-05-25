@@ -16,7 +16,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPayment>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .me()
+ *            .payments()
+ *            .withKey("{key}")
+ *            .delete()
+ *            .withVersion(version)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMePaymentsKeyByKeyDelete
         extends ApiMethod<ByProjectKeyMePaymentsKeyByKeyDelete, com.commercetools.api.models.me.MyPayment>
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMePaymentsKeyByKeyDelete>,

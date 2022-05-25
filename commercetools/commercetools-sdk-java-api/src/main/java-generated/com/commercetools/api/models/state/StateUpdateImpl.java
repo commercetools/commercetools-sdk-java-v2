@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateUpdate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateUpdateImpl implements StateUpdate, ModelBase {
 
     private Long version;
@@ -32,15 +35,17 @@ public class StateUpdateImpl implements StateUpdate, ModelBase {
     }
 
     /**
-    *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
-    */
+     *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Update actions to be performed on the State.</p>
-    */
+     *  <p>Update actions to be performed on the State.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions() {
         return this.actions;
     }

@@ -7,28 +7,57 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentUpdate paymentUpdate = PaymentUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions;
 
+    /**
+     *
+     */
+
     public PaymentUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentUpdateBuilder actions(final com.commercetools.api.models.payment.PaymentUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     *
+     */
+
     public PaymentUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentUpdateBuilder plusActions(final com.commercetools.api.models.payment.PaymentUpdateAction... actions) {
         if (this.actions == null) {
@@ -38,6 +67,10 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public PaymentUpdateBuilder plusActions(
             Function<com.commercetools.api.models.payment.PaymentUpdateActionBuilder, Builder<? extends com.commercetools.api.models.payment.PaymentUpdateAction>> builder) {
         if (this.actions == null) {
@@ -46,6 +79,10 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.payment.PaymentUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentUpdateBuilder withActions(
             Function<com.commercetools.api.models.payment.PaymentUpdateActionBuilder, Builder<? extends com.commercetools.api.models.payment.PaymentUpdateAction>> builder) {

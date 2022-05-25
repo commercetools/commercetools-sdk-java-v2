@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TextLineItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItemDraft textLineItemDraft = TextLineItemDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     @Nullable
@@ -26,10 +38,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     @Nullable
     private Integer quantity;
 
+    /**
+     *  <p>Defaults to the current date and time.</p>
+     */
+
     public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
 
     public TextLineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -37,10 +57,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return this;
     }
 
+    /**
+     *  <p>The custom fields.</p>
+     */
+
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -48,11 +76,19 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TextLineItemDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -60,10 +96,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TextLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Defaults to <code>1</code>.</p>
+     */
 
     public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
         this.quantity = quantity;

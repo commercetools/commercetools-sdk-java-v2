@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>GeoJSON Geometry represents a <a href="https://datatracker.ietf.org/doc/html/rfc7946#section-3.1">Geometry Object</a> as defined in the GeoJSON standard.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeoJsonImpl implements GeoJson, ModelBase {
 
     private String type;
@@ -29,6 +29,10 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
 
     public GeoJsonImpl() {
     }
+
+    /**
+     *
+     */
 
     public String getType() {
         return this.type;

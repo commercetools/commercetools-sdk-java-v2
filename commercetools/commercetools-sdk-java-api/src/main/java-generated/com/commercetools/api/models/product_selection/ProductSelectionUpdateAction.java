@@ -12,6 +12,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ProductSelectionUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionUpdateAction productSelectionUpdateAction = ProductSelectionUpdateAction.addProductBuilder()
+ *             product(productBuilder -> productBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionAddProductActionImpl.class, name = ProductSelectionAddProductAction.ADD_PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionImpl.class, name = ProductSelectionChangeNameAction.CHANGE_NAME),
@@ -21,10 +34,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl.class, name = ProductSelectionSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductSelectionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductSelectionUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<ProductSelectionUpdateAction> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

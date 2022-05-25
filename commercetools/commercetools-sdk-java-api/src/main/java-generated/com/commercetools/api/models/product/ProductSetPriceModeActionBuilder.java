@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetPriceModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetPriceModeAction productSetPriceModeAction = ProductSetPriceModeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPriceModeAction> {
 
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
+    /**
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     */
 
     public ProductSetPriceModeActionBuilder priceMode(
             @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {

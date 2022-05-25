@@ -9,7 +9,27 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditAppliedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditAppliedMessage orderEditAppliedMessage = OrderEditAppliedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .edit(editBuilder -> editBuilder)
+ *             .result(resultBuilder -> resultBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedMessage> {
 
     private String id;
@@ -39,25 +59,45 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public OrderEditAppliedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAppliedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderEditAppliedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -65,11 +105,19 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderEditAppliedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderEditAppliedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -77,21 +125,37 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderEditAppliedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public OrderEditAppliedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public OrderEditAppliedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -99,10 +163,18 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -112,11 +184,19 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
+
+    /**
+     *  <p>Reference to a OrderEdit.</p>
+     */
 
     public OrderEditAppliedMessageBuilder edit(
             Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
@@ -124,16 +204,28 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
         return this;
     }
 
+    /**
+     *  <p>Reference to a OrderEdit.</p>
+     */
+
     public OrderEditAppliedMessageBuilder edit(final com.commercetools.api.models.order_edit.OrderEditReference edit) {
         this.edit = edit;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAppliedMessageBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAppliedMessageBuilder result(
             final com.commercetools.api.models.order_edit.OrderEditApplied result) {

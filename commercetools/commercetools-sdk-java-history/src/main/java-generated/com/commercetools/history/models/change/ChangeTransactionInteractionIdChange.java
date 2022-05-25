@@ -14,32 +14,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTransactionInteractionIdChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionInteractionIdChange changeTransactionInteractionIdChange = ChangeTransactionInteractionIdChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue("{nextValue}")
+ *             .previousValue("{previousValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTransactionInteractionIdChangeImpl.class)
 public interface ChangeTransactionInteractionIdChange extends Change {
 
     String CHANGE_TRANSACTION_INTERACTION_ID_CHANGE = "ChangeTransactionInteractionIdChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
-    */
+     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("transaction")
     public TransactionChangeValue getTransaction();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();

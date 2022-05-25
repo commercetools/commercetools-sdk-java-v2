@@ -13,15 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetCustomerGroupAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomerGroupAction cartSetCustomerGroupAction = CartSetCustomerGroupAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomerGroupActionImpl.class)
 public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();

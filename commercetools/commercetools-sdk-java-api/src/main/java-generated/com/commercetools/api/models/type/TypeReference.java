@@ -15,25 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Type">Type</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Type.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeReference typeReference = TypeReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeReferenceImpl.class)
 public interface TypeReference extends Reference, com.commercetools.api.models.Identifiable<Type> {
 
     String TYPE = "type";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced Type.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Contains the representation of the expanded Type.
-    *  Only present in responses to requests with <a href="ctp:api:type:Expansion">Reference Expansion</a> for Types.</p>
-    */
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Type getObj();

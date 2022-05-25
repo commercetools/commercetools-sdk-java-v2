@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see <a href="/../api/projects/products#price-selection">price selection</a>.
-*  Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase {
 
     private String key;
@@ -71,79 +70,89 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-    *  <p>User-defined unique identifier for the StandalonePrice.</p>
-    */
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Specifies to which <a href="ctp:api:type:ProductVariant">ProductVariant</a> the Platform associates this Price.
-    *  It is not validated to exist in product variants.</p>
-    */
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p>Sets the money value of this Price.</p>
-    */
+     *  <p>Sets the money value of this Price.</p>
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Sets the country for which this Price is valid.</p>
-    */
+     *  <p>Sets the country for which this Price is valid.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>Sets the <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
-    */
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Sets the product distribution <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
-    */
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Sets the date from which the Price is valid.</p>
-    */
+     *  <p>Sets the date from which the Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Sets the date until the Price is valid.</p>
-    */
+     *  <p>Sets the date until the Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>Sets price tiers.</p>
-    */
+     *  <p>Sets price tiers.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }
 
     /**
-    *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
-    */
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     */
+
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Custom Fields for the StandalonePrice.</p>
-    */
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

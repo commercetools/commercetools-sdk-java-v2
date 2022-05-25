@@ -13,16 +13,43 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentTransactionStateChangedMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentTransactionStateChangedMessage paymentTransactionStateChangedMessage = PaymentTransactionStateChangedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .transactionId("{transactionId}")
+ *             .state(TransactionState.INITIAL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentTransactionStateChangedMessageImpl.class)
 public interface PaymentTransactionStateChangedMessage extends Message {
 
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("state")
     public TransactionState getState();

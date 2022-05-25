@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartValueTierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartValueTier cartValueTier = CartValueTier.builder()
+ *             .minimumCentAmount(1)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartValueTierBuilder implements Builder<CartValueTier> {
 
     private Long minimumCentAmount;
@@ -19,10 +32,19 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
     @Nullable
     private Boolean isMatching;
 
+    /**
+     *
+     */
+
     public CartValueTierBuilder minimumCentAmount(final Long minimumCentAmount) {
         this.minimumCentAmount = minimumCentAmount;
         return this;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
 
     public CartValueTierBuilder price(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -30,10 +52,19 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public CartValueTierBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartValueTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;

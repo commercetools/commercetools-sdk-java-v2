@@ -6,7 +6,23 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeInputHintChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeInputHintChange changeInputHintChange = ChangeInputHintChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(TextInputHint.SINGLE_LINE)
+ *             .previousValue(TextInputHint.SINGLE_LINE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChange> {
 
     private String change;
@@ -19,26 +35,46 @@ public class ChangeInputHintChangeBuilder implements Builder<ChangeInputHintChan
 
     private com.commercetools.history.models.common.TextInputHint previousValue;
 
+    /**
+     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     */
+
     public ChangeInputHintChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     */
 
     public ChangeInputHintChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     */
+
     public ChangeInputHintChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeInputHintChangeBuilder nextValue(
             final com.commercetools.history.models.common.TextInputHint nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeInputHintChangeBuilder previousValue(
             final com.commercetools.history.models.common.TextInputHint previousValue) {

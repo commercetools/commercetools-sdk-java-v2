@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentStatusDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     @Nullable
@@ -21,21 +32,37 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    /**
+     *
+     */
+
     public PaymentStatusDraftBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public PaymentStatusDraftBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
 
     public PaymentStatusDraftBuilder state(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {

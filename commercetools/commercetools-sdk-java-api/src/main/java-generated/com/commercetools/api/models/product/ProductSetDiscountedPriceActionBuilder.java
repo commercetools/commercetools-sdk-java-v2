@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetDiscountedPriceActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetDiscountedPriceAction productSetDiscountedPriceAction = ProductSetDiscountedPriceAction.builder()
+ *             .priceId("{priceId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSetDiscountedPriceAction> {
 
     private String priceId;
@@ -20,21 +32,37 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     @Nullable
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
+    /**
+     *
+     */
+
     public ProductSetDiscountedPriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetDiscountedPriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetDiscountedPriceActionBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetDiscountedPriceActionBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLabel
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLabelImpl implements OrderLabel, ModelBase {
 
     private String type;
@@ -35,13 +38,25 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
         this.type = ORDER_LABEL;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public String getCustomerEmail() {
         return this.customerEmail;
     }
+
+    /**
+     *
+     */
 
     public String getOrderNumber() {
         return this.orderNumber;

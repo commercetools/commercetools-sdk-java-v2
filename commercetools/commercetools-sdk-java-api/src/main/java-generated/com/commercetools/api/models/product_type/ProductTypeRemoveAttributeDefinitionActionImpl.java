@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeRemoveAttributeDefinitionAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveAttributeDefinitionActionImpl
         implements ProductTypeRemoveAttributeDefinitionAction, ModelBase {
 
@@ -32,13 +35,18 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
         this.action = REMOVE_ATTRIBUTE_DEFINITION;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>The name of the attribute to remove.</p>
-    */
+     *  <p>The name of the attribute to remove.</p>
+     */
+
     public String getName() {
         return this.name;
     }

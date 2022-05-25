@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeDefinition
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     private com.commercetools.importapi.models.producttypes.AttributeType type;
@@ -56,49 +59,75 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     public AttributeDefinitionImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.producttypes.AttributeType getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
     }
 
+    /**
+     *
+     */
+
     public Boolean getIsRequired() {
         return this.isRequired;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint() {
         return this.attributeConstraint;
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint() {
         return this.inputHint;
     }
+
+    /**
+     *
+     */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;

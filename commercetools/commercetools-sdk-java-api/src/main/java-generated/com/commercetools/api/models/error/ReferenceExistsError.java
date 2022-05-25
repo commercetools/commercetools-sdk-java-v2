@@ -11,15 +11,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReferenceExistsError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceExistsError referenceExistsError = ReferenceExistsError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceExistsErrorImpl.class)
 public interface ReferenceExistsError extends ErrorObject {
 
     String REFERENCE_EXISTS = "ReferenceExists";
 
     /**
-    *  <p>supported resource type identifiers:</p>
-    */
+     *  <p>supported resource type identifiers:</p>
+     */
 
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();

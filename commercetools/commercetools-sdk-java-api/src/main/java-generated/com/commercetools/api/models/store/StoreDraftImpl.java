@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     private String key;
@@ -52,47 +55,56 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the store.
-    *  The <code>key</code> is mandatory and immutable.
-    *  It is used to reference the store.</p>
-    */
+     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The name of the store</p>
-    */
+     *  <p>The name of the store</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
     /**
-    *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
-    */
+     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
         return this.distributionChannels;
     }
 
     /**
-    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
-    */
+     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
         return this.supplyChannels;
     }
 
     /**
-    *  <p>Set of ResourceIdentifiers of Product Selections along with settings.
-    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
-    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
-    */
+     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;

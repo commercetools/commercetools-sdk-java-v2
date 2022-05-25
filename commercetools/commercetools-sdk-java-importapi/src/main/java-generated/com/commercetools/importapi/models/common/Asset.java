@@ -14,54 +14,75 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Asset
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .key("{key}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetImpl.class)
 public interface Asset {
 
     /**
-    *  <p>User-defined identifier for the asset.
-    *  Asset keys are unique inside their container (a product variant or a category).</p>
-    */
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("sources")
     public List<AssetSource> getSources();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
+
+    /**
+     *
+     */
 
     @JsonProperty("tags")
     public List<String> getTags();
 
     /**
-    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
-    */
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();

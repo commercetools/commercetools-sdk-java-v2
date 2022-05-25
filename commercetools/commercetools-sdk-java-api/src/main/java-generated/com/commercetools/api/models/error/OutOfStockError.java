@@ -12,16 +12,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OutOfStockError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OutOfStockError outOfStockError = OutOfStockError.builder()
+ *             .message("{message}")
+ *             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+ *             .plusSkus(skusBuilder -> skusBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
     String OUT_OF_STOCK = "OutOfStock";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("skus")
     public List<String> getSkus();

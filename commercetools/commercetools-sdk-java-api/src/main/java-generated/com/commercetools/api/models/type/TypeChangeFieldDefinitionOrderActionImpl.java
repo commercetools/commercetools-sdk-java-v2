@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeFieldDefinitionOrderAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeFieldDefinitionOrderAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
         this.action = CHANGE_FIELD_DEFINITION_ORDER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
-    */
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     */
+
     public java.util.List<String> getFieldNames() {
         return this.fieldNames;
     }

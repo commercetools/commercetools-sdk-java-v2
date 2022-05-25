@@ -13,25 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Changes the order of <a href="ctp:api:type:CustomFieldLocalizedEnumValue">LocalizedEnumValues</a> in a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition.
-*  This update action can be used to update a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> of <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinitions.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Changes the order of LocalizedEnumValues in a LocalizedEnumType FieldDefinition. This update action can be used to update a LocalizedEnumType FieldDefinition and a SetType of LocalizedEnumType FieldDefinitions.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeLocalizedEnumValueOrderAction typeChangeLocalizedEnumValueOrderAction = TypeChangeLocalizedEnumValueOrderAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .plusKeys(keysBuilder -> keysBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueOrderActionImpl.class)
 public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateAction {
 
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
-    */
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     */
     @NotNull
     @JsonProperty("keys")
     public List<String> getKeys();

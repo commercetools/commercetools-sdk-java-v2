@@ -14,60 +14,74 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateDraft stateDraft = StateDraft.builder()
+ *             .key("{key}")
+ *             .type(StateTypeEnum.ORDER_STATE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateDraftImpl.class)
 public interface StateDraft {
 
     /**
-    *  <p>User-defined unique identifier for the State.</p>
-    */
+     *  <p>User-defined unique identifier for the State.</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Specify to which resource or object type the State is assigned to.</p>
-    */
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
+     */
     @NotNull
     @JsonProperty("type")
     public StateTypeEnum getType();
 
     /**
-    *  <p>Name of the State.</p>
-    */
+     *  <p>Name of the State.</p>
+     */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>Description of the State.</p>
-    */
+     *  <p>Description of the State.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
-    */
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     */
 
     @JsonProperty("initial")
     public Boolean getInitial();
 
     /**
-    *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
-    */
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     */
 
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();
 
     /**
-    *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
-    *  <ul>
-    *  <li>If, for example, the current State is the <em>Initial</em> State of <a href="ctp:api:type:StateTypeEnum">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="ctp:api:type:StateResourceIdentifier">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
-    *  <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
-    *  <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
     @Valid
     @JsonProperty("transitions")
     public List<StateResourceIdentifier> getTransitions();

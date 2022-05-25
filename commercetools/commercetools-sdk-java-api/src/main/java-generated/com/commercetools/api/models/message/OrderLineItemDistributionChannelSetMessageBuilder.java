@@ -9,7 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemDistributionChannelSetMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemDistributionChannelSetMessage orderLineItemDistributionChannelSetMessage = OrderLineItemDistributionChannelSetMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessageBuilder
         implements Builder<OrderLineItemDistributionChannelSetMessage> {
 
@@ -41,20 +60,36 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedAt(
             final java.time.ZonedDateTime lastModifiedAt) {
@@ -62,11 +97,19 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -74,11 +117,19 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -86,10 +137,18 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
@@ -97,16 +156,28 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -116,16 +187,28 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessageBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -133,6 +216,10 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {

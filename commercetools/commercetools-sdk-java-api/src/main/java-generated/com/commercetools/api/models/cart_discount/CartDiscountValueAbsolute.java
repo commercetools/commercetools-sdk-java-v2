@@ -8,27 +8,43 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *  <p>Discounts the CartDiscountTarget by an absolute amount (not allowed for MultiBuyLineItemsTarget and MultiBuyCustomLineItemsTarget).</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueAbsolute cartDiscountValueAbsolute = CartDiscountValueAbsolute.builder()
+ *             .plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueAbsoluteImpl.class)
 public interface CartDiscountValueAbsolute extends CartDiscountValue {
 
     String ABSOLUTE = "absolute";
 
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("money")
-    public List<TypedMoney> getMoney();
+    public List<CentPrecisionMoney> getMoney();
 
     @JsonIgnore
-    public void setMoney(final TypedMoney... money);
+    public void setMoney(final CentPrecisionMoney... money);
 
-    public void setMoney(final List<TypedMoney> money);
+    public void setMoney(final List<CentPrecisionMoney> money);
 
     public static CartDiscountValueAbsolute of() {
         return new CartDiscountValueAbsoluteImpl();

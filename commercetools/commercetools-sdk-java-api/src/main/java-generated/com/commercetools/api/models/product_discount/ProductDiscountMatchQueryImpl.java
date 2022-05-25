@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDiscountMatchQuery
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery, ModelBase {
 
     private String productId;
@@ -39,30 +42,33 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
     }
 
     /**
-    *  <p>ID of the specified Product.</p>
-    */
+     *  <p>ID of the specified Product.</p>
+     */
+
     public String getProductId() {
         return this.productId;
     }
 
     /**
-    *  <p>ID of the specified Product Variant.</p>
-    */
+     *  <p>ID of the specified Product Variant.</p>
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
 
     /**
-    *  <p>Controls which <a href="/../api/projects/productProjections#current--staged">projected representation</a> is applied for the query.
-    *  Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
-    */
+     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-    *  <p>Specified Price of the specified Product Variant.</p>
-    */
+     *  <p>Specified Price of the specified Product Variant.</p>
+     */
+
     public com.commercetools.api.models.common.QueryPrice getPrice() {
         return this.price;
     }

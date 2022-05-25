@@ -14,13 +14,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssignedProductReference
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssignedProductReference assignedProductReference = AssignedProductReference.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssignedProductReferenceImpl.class)
 public interface AssignedProductReference {
 
     /**
-    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
-    */
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("product")

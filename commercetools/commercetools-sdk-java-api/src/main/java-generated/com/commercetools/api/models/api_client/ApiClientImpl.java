@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ApiClient
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiClientImpl implements ApiClient, ModelBase {
 
     private String id;
@@ -58,66 +61,73 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the APIClient.
-    *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
-    */
+     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Name of the APIClient.</p>
-    */
+     *  <p>Name of the APIClient.</p>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
-    */
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     */
+
     public String getScope() {
         return this.scope;
     }
 
     /**
-    *  <p>Only shown once in the response of creating the APIClient.
-    *  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
-    */
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     */
+
     public String getSecret() {
         return this.secret;
     }
 
     /**
-    *  <p>Date of the last day this APIClient was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
-    */
+     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     */
+
     public java.time.LocalDate getLastUsedAt() {
         return this.lastUsedAt;
     }
 
     /**
-    *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
-    */
+     *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     */
+
     public java.time.ZonedDateTime getDeleteAt() {
         return this.deleteAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the APIClient was initially created at.</p>
-    */
+     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
-    */
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     */
+
     public Integer getAccessTokenValiditySeconds() {
         return this.accessTokenValiditySeconds;
     }
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
-    */
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     */
+
     public Integer getRefreshTokenValiditySeconds() {
         return this.refreshTokenValiditySeconds;
     }

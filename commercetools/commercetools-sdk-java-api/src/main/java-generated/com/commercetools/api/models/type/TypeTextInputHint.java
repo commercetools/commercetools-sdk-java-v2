@@ -10,9 +10,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>. Following values are supported:</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Provides a visual representation type for this field. It is only relevant for string-based field types like CustomFieldStringType and CustomFieldLocalizedStringType. Following values are supported:</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TypeTextInputHint {
 
     /**

@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetLineItemSupplyChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetLineItemSupplyChannelAction cartSetLineItemSupplyChannelAction = CartSetLineItemSupplyChannelAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSetLineItemSupplyChannelAction> {
 
     private String lineItemId;
@@ -17,10 +29,18 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     *
+     */
+
     public CartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartSetLineItemSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -28,6 +48,10 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
                 .build();
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartSetLineItemSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

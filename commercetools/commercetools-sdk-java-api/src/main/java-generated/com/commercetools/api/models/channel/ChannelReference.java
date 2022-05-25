@@ -15,25 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Channel.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelReference channelReference = ChannelReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelReferenceImpl.class)
 public interface ChannelReference extends Reference, com.commercetools.api.models.Identifiable<Channel> {
 
     String CHANNEL = "channel";
 
     /**
-    *  <p>Contains the representation of the expanded Channel.
-    *  Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Channels.</p>
-    */
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Channel getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced Channel.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

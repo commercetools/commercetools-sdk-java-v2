@@ -14,21 +14,42 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxPortionDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxPortionDraft taxPortionDraft = TaxPortionDraft.builder()
+ *             .rate(0.3)
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxPortionDraftImpl.class)
 public interface TaxPortionDraft {
+
+    /**
+     *
+     */
 
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("rate")
     public Double getRate();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("amount")

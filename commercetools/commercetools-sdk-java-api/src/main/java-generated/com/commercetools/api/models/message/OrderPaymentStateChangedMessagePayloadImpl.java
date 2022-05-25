@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderPaymentStateChangedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentStateChangedMessagePayload, ModelBase {
 
     private String type;
@@ -36,13 +39,25 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
         this.type = ORDER_PAYMENT_STATE_CHANGED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.PaymentState getOldPaymentState() {
         return this.oldPaymentState;

@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemImportDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemImportDraft lineItemImportDraft = LineItemImportDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> {
 
     @Nullable
@@ -41,10 +56,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+     */
+
     public LineItemImportDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
+
+    /**
+     *  <p>The product name.</p>
+     */
 
     public LineItemImportDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -52,10 +75,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>The product name.</p>
+     */
+
     public LineItemImportDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder variant(
             Function<com.commercetools.api.models.order.ProductVariantImportDraftBuilder, com.commercetools.api.models.order.ProductVariantImportDraftBuilder> builder) {
@@ -63,11 +94,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemImportDraftBuilder variant(
             final com.commercetools.api.models.order.ProductVariantImportDraft variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder price(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
@@ -75,26 +114,46 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemImportDraftBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemImportDraftBuilder state(@Nullable final com.commercetools.api.models.order.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder state(
             @Nullable final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder plusState(@Nullable final com.commercetools.api.models.order.ItemState... state) {
         if (this.state == null) {
@@ -103,6 +162,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         this.state.addAll(Arrays.asList(state));
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder plusState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
@@ -113,12 +176,20 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemImportDraftBuilder withState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.state = new ArrayList<>();
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     */
 
     public LineItemImportDraftBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -127,11 +198,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     */
+
     public LineItemImportDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     */
 
     public LineItemImportDraftBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -141,11 +220,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     */
+
     public LineItemImportDraftBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
@@ -153,11 +240,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemImportDraftBuilder taxRate(
             @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
 
     public LineItemImportDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -165,11 +260,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>The custom fields.</p>
+     */
+
     public LineItemImportDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -177,6 +280,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemImportDraftBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

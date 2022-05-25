@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Shape of the value for cart discounts line item target.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for cart discounts line item target.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineItemsChangeValue, ModelBase {
 
     private String type;
@@ -34,9 +34,17 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
         this.type = LINE_ITEMS;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getPredicate() {
         return this.predicate;

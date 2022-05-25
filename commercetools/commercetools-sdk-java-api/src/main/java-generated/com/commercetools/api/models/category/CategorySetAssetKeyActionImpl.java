@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetAssetKeyAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction, ModelBase {
 
     private String action;
@@ -35,18 +38,26 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
         this.action = SET_ASSET_KEY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getAssetId() {
         return this.assetId;
     }
 
     /**
-    *  <p>User-defined identifier for the asset.
-    *  If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
-    */
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }

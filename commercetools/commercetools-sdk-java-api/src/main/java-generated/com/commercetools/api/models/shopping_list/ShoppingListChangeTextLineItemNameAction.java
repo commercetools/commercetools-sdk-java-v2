@@ -14,19 +14,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListChangeTextLineItemNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListChangeTextLineItemNameAction shoppingListChangeTextLineItemNameAction = ShoppingListChangeTextLineItemNameAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeTextLineItemNameActionImpl.class)
 public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUpdateAction {
 
     String CHANGE_TEXT_LINE_ITEM_NAME = "changeTextLineItemName";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")

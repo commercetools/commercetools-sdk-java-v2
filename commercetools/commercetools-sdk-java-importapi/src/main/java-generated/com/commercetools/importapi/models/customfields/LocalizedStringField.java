@@ -15,22 +15,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A field with a localized string value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A field with a localized string value.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizedStringField localizedStringField = LocalizedStringField.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizedStringFieldImpl.class)
 public interface LocalizedStringField extends CustomField {
 
     String LOCALIZED_STRING = "LocalizedString";
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

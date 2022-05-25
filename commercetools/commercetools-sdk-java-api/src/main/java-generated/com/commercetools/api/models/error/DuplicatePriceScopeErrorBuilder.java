@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicatePriceScopeErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
+ *             .message("{message}")
+ *             .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceScopeError> {
 
     private String message;
@@ -16,15 +29,27 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
 
     private java.util.List<com.commercetools.api.models.common.Price> conflictingPrices;
 
+    /**
+     *
+     */
+
     public DuplicatePriceScopeErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicatePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicatePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -34,17 +59,29 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
             final com.commercetools.api.models.common.Price... conflictingPrices) {
         this.conflictingPrices = new ArrayList<>(Arrays.asList(conflictingPrices));
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicatePriceScopeErrorBuilder conflictingPrices(
             final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
         this.conflictingPrices = conflictingPrices;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
             final com.commercetools.api.models.common.Price... conflictingPrices) {
@@ -55,6 +92,10 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         if (this.conflictingPrices == null) {
@@ -63,6 +104,10 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         this.conflictingPrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicatePriceScopeErrorBuilder withConflictingPrices(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {

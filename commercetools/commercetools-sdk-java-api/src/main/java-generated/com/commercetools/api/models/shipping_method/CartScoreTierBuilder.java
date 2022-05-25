@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartScoreTierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartScoreTier cartScoreTier = CartScoreTier.builder()
+ *             .score(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     private Double score;
@@ -23,10 +35,19 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     @Nullable
     private Boolean isMatching;
 
+    /**
+     *
+     */
+
     public CartScoreTierBuilder score(final Double score) {
         this.score = score;
         return this;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
 
     public CartScoreTierBuilder price(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -34,10 +55,19 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartScoreTierBuilder priceFunction(
             Function<com.commercetools.api.models.shipping_method.PriceFunctionBuilder, com.commercetools.api.models.shipping_method.PriceFunctionBuilder> builder) {
@@ -46,11 +76,19 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartScoreTierBuilder priceFunction(
             @Nullable final com.commercetools.api.models.shipping_method.PriceFunction priceFunction) {
         this.priceFunction = priceFunction;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartScoreTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;

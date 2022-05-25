@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DeliveryChangeValue
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
@@ -36,13 +39,25 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     public DeliveryChangeValueImpl() {
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
         return this.parcels;

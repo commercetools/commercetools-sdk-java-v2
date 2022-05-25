@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderUpdateActionBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderUpdateActionBuilder {
 
     public com.commercetools.api.models.order.OrderAddDeliveryActionBuilder addDeliveryBuilder() {

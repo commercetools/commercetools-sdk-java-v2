@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderReturnShipmentStateChangedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadImpl
         implements OrderReturnShipmentStateChangedMessagePayload, ModelBase {
 
@@ -36,13 +39,25 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
         this.type = ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public String getReturnItemId() {
         return this.returnItemId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.ReturnShipmentState getReturnShipmentState() {
         return this.returnShipmentState;

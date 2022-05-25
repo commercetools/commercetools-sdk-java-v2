@@ -12,14 +12,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeValue
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeValue attributeValue = AttributeValue.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeValueImpl.class)
 public interface AttributeValue {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public Object getValue();

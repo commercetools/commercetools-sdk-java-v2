@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerCreatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerCreatedMessagePayload customerCreatedMessagePayload = CustomerCreatedMessagePayload.builder()
+ *             .customer(customerBuilder -> customerBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCreatedMessagePayload> {
 
     private com.commercetools.api.models.customer.Customer customer;
+
+    /**
+     *
+     */
 
     public CustomerCreatedMessagePayloadBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerCreatedMessagePayloadBuilder customer(
             final com.commercetools.api.models.customer.Customer customer) {

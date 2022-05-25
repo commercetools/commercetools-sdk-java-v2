@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangePriceAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangePriceActionImpl implements ProductChangePriceAction, ModelBase {
 
     private String action;
@@ -39,20 +42,33 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
         this.action = CHANGE_PRICE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
-    */
+     *  <p>ID of the EmbeddedPrice</p>
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateChangeKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateChangeKeyAction stateChangeKeyAction = StateChangeKeyAction.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction> {
 
     private String key;
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public StateChangeKeyActionBuilder key(final String key) {
         this.key = key;

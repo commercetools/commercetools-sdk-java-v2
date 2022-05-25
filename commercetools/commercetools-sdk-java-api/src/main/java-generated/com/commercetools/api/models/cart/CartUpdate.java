@@ -13,15 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartUpdate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartUpdate cartUpdate = CartUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartUpdateImpl.class)
 public interface CartUpdate
         extends com.commercetools.api.models.ResourceUpdate<CartUpdate, CartUpdateAction, CartUpdateBuilder> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("actions")

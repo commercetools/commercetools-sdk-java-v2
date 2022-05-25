@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSelectionSetting
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingImpl implements ProductSelectionSetting, ModelBase {
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
@@ -33,15 +36,17 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
     }
 
     /**
-    *  <p>Reference to a Product Selection</p>
-    */
+     *  <p>Reference to a Product Selection</p>
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
 
     /**
-    *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     */
+
     public Boolean getActive() {
         return this.active;
     }

@@ -14,12 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListStoreSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListStoreSetMessagePayload shoppingListStoreSetMessagePayload = ShoppingListStoreSetMessagePayload.builder()
+ *             .store(storeBuilder -> storeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListStoreSetMessagePayloadImpl.class)
 public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
 
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("store")

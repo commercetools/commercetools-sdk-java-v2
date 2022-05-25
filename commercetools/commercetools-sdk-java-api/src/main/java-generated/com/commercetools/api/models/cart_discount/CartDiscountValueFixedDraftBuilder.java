@@ -7,21 +7,45 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountValueFixedDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountValueFixedDraft cartDiscountValueFixedDraft = CartDiscountValueFixedDraft.builder()
+ *             .plusMoney(moneyBuilder -> moneyBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountValueFixedDraft> {
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
+
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     */
 
     public CartDiscountValueFixedDraftBuilder money(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
 
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     */
+
     public CartDiscountValueFixedDraftBuilder money(
             final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
         return this;
     }
+
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     */
 
     public CartDiscountValueFixedDraftBuilder plusMoney(final com.commercetools.api.models.common.Money... money) {
         if (this.money == null) {
@@ -31,6 +55,10 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return this;
     }
 
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     */
+
     public CartDiscountValueFixedDraftBuilder plusMoney(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         if (this.money == null) {
@@ -39,6 +67,10 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     */
 
     public CartDiscountValueFixedDraftBuilder withMoney(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {

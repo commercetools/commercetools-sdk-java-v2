@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Channel
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelImpl implements Channel, ModelBase {
 
     private String id;
@@ -79,99 +82,113 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Channel.</p>
-    */
+     *  <p>Unique identifier of the Channel.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the Channel.</p>
-    */
+     *  <p>Current version of the Channel.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the Channel was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the Channel was initially created.</p>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the Channel was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Channel.</p>
-    */
+     *  <p>User-defined unique identifier of the Channel.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Roles of the Channel.</p>
-    */
+     *  <p>Roles of the Channel.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
 
     /**
-    *  <p>Name of the Channel.</p>
-    */
+     *  <p>Name of the Channel.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Description of the Channel.</p>
-    */
+     *  <p>Description of the Channel.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
-    */
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for the Channel.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     */
+
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
 
     /**
-    *  <p>Custom Fields defined for the Channel.</p>
-    */
+     *  <p>Custom Fields defined for the Channel.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
-    */
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel.</p>
+     */
+
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
         return this.geoLocation;
     }

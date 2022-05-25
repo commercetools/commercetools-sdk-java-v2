@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetPricesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetPricesAction productSetPricesAction = ProductSetPricesAction.builder()
+ *             .plusPrices(pricesBuilder -> pricesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAction> {
 
     @Nullable
@@ -23,26 +35,46 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductSetPricesActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetPricesActionBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetPricesActionBuilder prices(
             final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetPricesActionBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
         if (this.prices == null) {
@@ -51,6 +83,10 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         this.prices.addAll(Arrays.asList(prices));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetPricesActionBuilder plusPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
@@ -61,12 +97,20 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetPricesActionBuilder withPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
         this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetPricesActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

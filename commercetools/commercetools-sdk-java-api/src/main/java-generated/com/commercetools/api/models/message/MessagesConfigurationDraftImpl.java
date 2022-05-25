@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Defines the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature for the Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Defines the configuration for the Messages Query feature for the Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraft, ModelBase {
 
     private Boolean enabled;
@@ -35,15 +35,17 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
     }
 
     /**
-    *  <p>Setting to <code>true</code> activates the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
-    */
+     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     */
+
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     /**
-    *  <p>Specifies the number of days each Message should be available via the <a href="/../api/projects/messages">Messages Query</a> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
-    */
+     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     */
+
     public Integer getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
     }

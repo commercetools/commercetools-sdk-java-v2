@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductRevertedStagedChangesMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRevertedStagedChangesMessagePayload productRevertedStagedChangesMessagePayload = ProductRevertedStagedChangesMessagePayload.builder()
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRevertedStagedChangesMessagePayloadImpl.class)
 public interface ProductRevertedStagedChangesMessagePayload extends MessagePayload {
 
     String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();

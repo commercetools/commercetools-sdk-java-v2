@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreSetDistributionChannelsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreSetDistributionChannelsAction storeSetDistributionChannelsAction = StoreSetDistributionChannelsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreSetDistributionChannelsAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
+
+    /**
+     *
+     */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
@@ -21,11 +36,19 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
             @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
         this.distributionChannels = distributionChannels;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
@@ -36,6 +59,10 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         if (this.distributionChannels == null) {
@@ -45,6 +72,10 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreSetDistributionChannelsActionBuilder withDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {

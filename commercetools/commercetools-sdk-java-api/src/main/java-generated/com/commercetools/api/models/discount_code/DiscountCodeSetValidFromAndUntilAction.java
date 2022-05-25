@@ -11,22 +11,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeSetValidFromAndUntilAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetValidFromAndUntilAction discountCodeSetValidFromAndUntilAction = DiscountCodeSetValidFromAndUntilAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidFromAndUntilActionImpl.class)
 public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpdateAction {
 
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-    *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();

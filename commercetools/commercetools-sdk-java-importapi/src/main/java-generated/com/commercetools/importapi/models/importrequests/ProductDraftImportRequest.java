@@ -15,17 +15,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-productdrafts">import ProductDrafts</a>. Contains data for <a href="/../api/projects/products#productdraft">Products</a> to be created or updated in a commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDraftImportRequest productDraftImportRequest = ProductDraftImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDraftImportRequestImpl.class)
 public interface ProductDraftImportRequest extends ImportRequest {
 
     String PRODUCT_DRAFT = "product-draft";
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("resources")

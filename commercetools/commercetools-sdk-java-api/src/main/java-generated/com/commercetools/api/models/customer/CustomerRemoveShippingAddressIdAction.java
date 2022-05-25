@@ -10,14 +10,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerRemoveShippingAddressIdAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerRemoveShippingAddressIdAction customerRemoveShippingAddressIdAction = CustomerRemoveShippingAddressIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerRemoveShippingAddressIdActionImpl.class)
 public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAction {
 
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
+    /**
+     *
+     */
+
     @JsonProperty("addressId")
     public String getAddressId();
+
+    /**
+     *
+     */
 
     @JsonProperty("addressKey")
     public String getAddressKey();

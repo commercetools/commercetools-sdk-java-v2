@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangeMasterVariantAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeMasterVariantActionImpl implements ProductChangeMasterVariantAction, ModelBase {
 
     private String action;
@@ -38,17 +41,33 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
         this.action = CHANGE_MASTER_VARIANT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

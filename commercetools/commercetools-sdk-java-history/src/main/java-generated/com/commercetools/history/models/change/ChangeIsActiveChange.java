@@ -12,27 +12,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeIsActiveChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeIsActiveChange changeIsActiveChange = ChangeIsActiveChange.builder()
+ *             .change("{change}")
+ *             .previousValue(true)
+ *             .nextValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeIsActiveChangeImpl.class)
 public interface ChangeIsActiveChange extends Change {
 
     String CHANGE_IS_ACTIVE_CHANGE = "ChangeIsActiveChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Shape of the action for <code>changeIsActive</code></p>
-    */
+     *  <p>Shape of the action for <code>changeIsActive</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Boolean getNextValue();

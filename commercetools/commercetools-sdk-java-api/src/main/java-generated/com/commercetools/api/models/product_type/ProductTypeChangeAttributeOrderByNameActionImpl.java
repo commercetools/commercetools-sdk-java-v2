@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeOrderByNameAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeOrderByNameActionImpl
         implements ProductTypeChangeAttributeOrderByNameAction, ModelBase {
 
@@ -33,9 +36,17 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
         this.action = CHANGE_ATTRIBUTE_ORDER_BY_NAME;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getAttributeNames() {
         return this.attributeNames;

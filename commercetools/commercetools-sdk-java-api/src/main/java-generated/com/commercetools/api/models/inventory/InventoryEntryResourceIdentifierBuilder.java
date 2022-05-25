@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryResourceIdentifier inventoryEntryResourceIdentifier = InventoryEntryResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryResourceIdentifierBuilder implements Builder<InventoryEntryResourceIdentifier> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class InventoryEntryResourceIdentifierBuilder implements Builder<Inventor
     @Nullable
     private String key;
 
+    /**
+     *  <p>Unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public InventoryEntryResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced InventoryEntry. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public InventoryEntryResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductAddPriceAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBase {
 
     private String action;
@@ -42,21 +45,41 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
         this.action = ADD_PRICE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

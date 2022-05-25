@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListSetTextLineItemDescriptionAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetTextLineItemDescriptionActionImpl
         implements ShoppingListSetTextLineItemDescriptionAction, ModelBase {
 
@@ -36,17 +39,26 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
         this.action = SET_TEXT_LINE_ITEM_DESCRIPTION;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }

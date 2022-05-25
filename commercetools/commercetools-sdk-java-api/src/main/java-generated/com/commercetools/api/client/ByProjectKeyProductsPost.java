@@ -17,11 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>To create a new product, send a representation that is going to become the initial staged representation
-*  of the new product in the master catalog. If price selection query parameters are provided,
-*  the selected prices will be added to the response.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>To create a new product, send a representation that is going to become the initial staged representation of the new product in the master catalog. If price selection query parameters are provided, the selected prices will be added to the response.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .products()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsPost extends
         BodyApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductDraft>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>,

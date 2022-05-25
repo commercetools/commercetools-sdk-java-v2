@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetDeleteDaysAfterLastModificationAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDeleteDaysAfterLastModificationActionImpl
         implements CartSetDeleteDaysAfterLastModificationAction, ModelBase {
 
@@ -33,9 +36,17 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;

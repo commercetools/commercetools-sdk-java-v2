@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypePagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypePagedQueryResponse productTypePagedQueryResponse = ProductTypePagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypePagedQueryResponseBuilder implements Builder<ProductTypePagedQueryResponse> {
 
     private Long limit;
@@ -23,25 +38,45 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
 
     private java.util.List<com.commercetools.api.models.product_type.ProductType> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public ProductTypePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypePagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public ProductTypePagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypePagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_type.ProductType... results) {
@@ -49,11 +84,19 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product_type.ProductType> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypePagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.product_type.ProductType... results) {
@@ -64,6 +107,10 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypePagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
         if (this.results == null) {
@@ -72,6 +119,10 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
         this.results.add(builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypePagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {

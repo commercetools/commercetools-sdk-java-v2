@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingConfigurationImpl implements SearchIndexingConfiguration, ModelBase {
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
@@ -36,15 +36,17 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-    *  <p>Configuration for the <a href="/../api/projects/products-search">Product Projection Search</a> and <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoints.</p>
-    */
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     */
+
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
         return this.products;
     }
 
     /**
-    *  <p>Configuration for the <a href="/../api/projects/order-search">Order Search</a> feature.</p>
-    */
+     *  <p>Configuration for the Order Search feature.</p>
+     */
+
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {
         return this.orders;
     }

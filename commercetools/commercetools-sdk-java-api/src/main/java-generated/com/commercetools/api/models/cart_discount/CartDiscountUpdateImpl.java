@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountUpdate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
 
     private Long version;
@@ -31,9 +34,17 @@ public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
     public CartDiscountUpdateImpl() {
     }
 
+    /**
+     *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> getActions() {
         return this.actions;

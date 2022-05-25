@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartSetCountryAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, Model
         this.action = SET_COUNTRY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }

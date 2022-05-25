@@ -7,7 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemTaxAmountChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemTaxAmountChange setLineItemTaxAmountChange = SetLineItemTaxAmountChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
+ *             .taxMode(TaxMode.PLATFORM)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTaxAmountChange> {
 
     private String change;
@@ -22,10 +39,18 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     */
+
     public SetLineItemTaxAmountChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemTaxAmountChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -33,21 +58,37 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxAmountChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxAmountChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemTaxAmountChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetLineItemTaxAmountChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
@@ -55,17 +96,29 @@ public class SetLineItemTaxAmountChangeBuilder implements Builder<SetLineItemTax
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public SetLineItemTaxAmountChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public SetLineItemTaxAmountChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public SetLineItemTaxAmountChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {

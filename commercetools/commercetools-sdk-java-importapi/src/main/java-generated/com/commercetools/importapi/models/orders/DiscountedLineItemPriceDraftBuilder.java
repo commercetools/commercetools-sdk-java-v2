@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedLineItemPriceDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLineItemPriceDraft> {
 
     private com.commercetools.importapi.models.common.Money value;
 
     private java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts;
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceDraftBuilder value(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
@@ -20,10 +37,18 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.importapi.models.common.Money value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
             final com.commercetools.importapi.models.orders.DiscountedLineItemPortion... includedDiscounts) {
@@ -31,11 +56,19 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
             final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
             final com.commercetools.importapi.models.orders.DiscountedLineItemPortion... includedDiscounts) {
@@ -46,6 +79,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
             Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder> builder) {
         if (this.includedDiscounts == null) {
@@ -55,6 +92,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
             builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
             Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder> builder) {

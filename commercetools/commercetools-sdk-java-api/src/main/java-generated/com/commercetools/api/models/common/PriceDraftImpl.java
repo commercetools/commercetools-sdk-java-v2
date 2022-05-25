@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PriceDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money value;
@@ -60,71 +63,79 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
     }
 
     /**
-    *  <p>Money value of this Price.</p>
-    */
+     *  <p>Money value of this Price.</p>
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the specified country.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
-    */
+     *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
-    */
+     *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>Set this field to add a DiscountedPrice from an external service.</p>
-    *  <p>The commercetools Platform sets this field automatically if at least one <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> applies.
-    *  The DiscountedPrice must reference a ProductDiscount with:</p>
-    *  <ul>
-    *  <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-    *  <li>A <a href="ctp:api:type:ProductDiscountValueExternal">ProductDiscountValue</a> of type <code>external</code>.</li>
-    *  <li>A <code>predicate</code> that matches the <a href="ctp:api:type:ProductVariant">ProductVariant</a> the Price is referenced from.</li>
-    *  </ul>
-    */
+     *  <p>Set this field to add a DiscountedPrice from an external service.</p>
+     *  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <ul>
+     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *  </ul>
+     */
+
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Set this field to specify different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities.</p>
-    */
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }
 
     /**
-    *  <p>Custom Fields for the Price.</p>
-    */
+     *  <p>Custom Fields for the Price.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

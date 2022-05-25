@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetVariantAvailabilityChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityChange, ModelBase {
 
     private String type;
@@ -46,28 +49,49 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
         this.type = SET_VARIANT_AVAILABILITY_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setVariantAvailability</code></p>
-    */
+     *  <p>Update action for <code>setVariantAvailability</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     *
+     */
+
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.ProductVariantAvailability getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.ProductVariantAvailability getNextValue() {
         return this.nextValue;

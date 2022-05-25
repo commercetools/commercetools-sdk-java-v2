@@ -12,38 +12,82 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReturnItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnItem returnItem = ReturnItem.builder()
+ *             .id("{id}")
+ *             .quantity(1)
+ *             .type("{type}")
+ *             .comment("{comment}")
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .lastModifiedAt("{lastModifiedAt}")
+ *             .createdAt("{createdAt}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnItemImpl.class)
 public interface ReturnItem {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("comment")
     public String getComment();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public String getLastModifiedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("createdAt")
     public String getCreatedAt();

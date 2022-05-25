@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetImageLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetImageLabelAction productSetImageLabelAction = ProductSetImageLabelAction.builder()
+ *             .imageUrl("{imageUrl}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImageLabelAction> {
 
     @Nullable
@@ -25,25 +37,45 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductSetImageLabelActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetImageLabelActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     *  <p>The URL of the image.</p>
+     */
+
     public ProductSetImageLabelActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
+    /**
+     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+     */
+
     public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
         this.label = label;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetImageLabelActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

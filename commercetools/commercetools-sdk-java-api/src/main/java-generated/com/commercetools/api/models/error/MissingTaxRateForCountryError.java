@@ -12,18 +12,43 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingTaxRateForCountryError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingTaxRateForCountryError missingTaxRateForCountryError = MissingTaxRateForCountryError.builder()
+ *             .message("{message}")
+ *             .taxCategoryId("{taxCategoryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
 
     String MISSING_TAX_RATE_FOR_COUNTRY = "MissingTaxRateForCountry";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("taxCategoryId")
     public String getTaxCategoryId();
 
+    /**
+     *
+     */
+
     @JsonProperty("country")
     public String getCountry();
+
+    /**
+     *
+     */
 
     @JsonProperty("state")
     public String getState();

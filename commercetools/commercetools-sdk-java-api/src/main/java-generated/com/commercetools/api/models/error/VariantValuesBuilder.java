@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * VariantValuesBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     VariantValues variantValues = VariantValues.builder()
+ *             .plusPrices(pricesBuilder -> pricesBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantValuesBuilder implements Builder<VariantValues> {
 
     @Nullable
@@ -19,20 +32,36 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    /**
+     *
+     */
+
     public VariantValuesBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
+    /**
+     *
+     */
+
     public VariantValuesBuilder prices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
         if (this.prices == null) {
@@ -41,6 +70,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         this.prices.addAll(Arrays.asList(prices));
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder plusPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
@@ -51,6 +84,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public VariantValuesBuilder withPrices(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
@@ -58,16 +95,28 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public VariantValuesBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder attributes(
             final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
         if (this.attributes == null) {
@@ -77,6 +126,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public VariantValuesBuilder plusAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
         if (this.attributes == null) {
@@ -85,6 +138,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public VariantValuesBuilder withAttributes(
             Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {

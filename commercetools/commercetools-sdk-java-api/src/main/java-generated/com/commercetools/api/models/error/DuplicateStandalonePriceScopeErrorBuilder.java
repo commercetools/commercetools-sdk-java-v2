@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateStandalonePriceScopeErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateStandalonePriceScopeError duplicateStandalonePriceScopeError = DuplicateStandalonePriceScopeError.builder()
+ *             .message("{message}")
+ *             .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+ *             .sku("{sku}")
+ *             .currency("{currency}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<DuplicateStandalonePriceScopeError> {
 
     private String message;
@@ -37,15 +52,27 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     *
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -55,6 +82,10 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
         return this;
     }
 
+    /**
+     *  <p>Reference to a StandalonePrice.</p>
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder> builder) {
         this.conflictingStandalonePrice = builder
@@ -63,26 +94,46 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
         return this;
     }
 
+    /**
+     *  <p>Reference to a StandalonePrice.</p>
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder conflictingStandalonePrice(
             final com.commercetools.api.models.standalone_price.StandalonePriceReference conflictingStandalonePrice) {
         this.conflictingStandalonePrice = conflictingStandalonePrice;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder currency(final String currency) {
         this.currency = currency;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -92,11 +143,19 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -105,16 +164,28 @@ public class DuplicateStandalonePriceScopeErrorBuilder implements Builder<Duplic
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateStandalonePriceScopeErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateStandalonePriceScopeErrorBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;

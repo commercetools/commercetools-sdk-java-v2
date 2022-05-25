@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSetReturnInfoActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSetReturnInfoAction orderSetReturnInfoAction = OrderSetReturnInfoAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnInfoAction> {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
+
+    /**
+     *
+     */
 
     public OrderSetReturnInfoActionBuilder items(
             @Nullable final com.commercetools.api.models.order.ReturnInfoDraft... items) {
@@ -21,11 +36,19 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderSetReturnInfoActionBuilder items(
             @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderSetReturnInfoActionBuilder plusItems(
             @Nullable final com.commercetools.api.models.order.ReturnInfoDraft... items) {
@@ -36,6 +59,10 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderSetReturnInfoActionBuilder plusItems(
             Function<com.commercetools.api.models.order.ReturnInfoDraftBuilder, com.commercetools.api.models.order.ReturnInfoDraftBuilder> builder) {
         if (this.items == null) {
@@ -44,6 +71,10 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
         this.items.add(builder.apply(com.commercetools.api.models.order.ReturnInfoDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderSetReturnInfoActionBuilder withItems(
             Function<com.commercetools.api.models.order.ReturnInfoDraftBuilder, com.commercetools.api.models.order.ReturnInfoDraftBuilder> builder) {

@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSelectionAssignmentBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionAssignment productSelectionAssignment = ProductSelectionAssignment.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionAssignmentBuilder implements Builder<ProductSelectionAssignment> {
 
     private com.commercetools.api.models.product.ProductReference product;
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
+
+    /**
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
 
     public ProductSelectionAssignmentBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
@@ -20,11 +37,19 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return this;
     }
 
+    /**
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
+
     public ProductSelectionAssignmentBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
+
+    /**
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     */
 
     public ProductSelectionAssignmentBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
@@ -33,6 +58,10 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     */
 
     public ProductSelectionAssignmentBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {

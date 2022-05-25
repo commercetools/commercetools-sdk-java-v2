@@ -17,64 +17,93 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ScopedPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ScopedPrice scopedPrice = ScopedPrice.builder()
+ *             .id("{id}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .currentValue(currentValueBuilder -> currentValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ScopedPriceImpl.class)
 public interface ScopedPrice extends com.commercetools.api.models.Customizable<ScopedPrice> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("currentValue")
     public TypedMoney getCurrentValue();
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
+    /**
+     *
+     */
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
+
+    /**
+     *
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

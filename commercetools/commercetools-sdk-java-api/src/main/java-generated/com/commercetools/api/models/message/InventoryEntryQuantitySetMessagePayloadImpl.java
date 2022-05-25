@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryQuantitySetMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEntryQuantitySetMessagePayload, ModelBase {
 
     private String type;
@@ -47,29 +50,50 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public Long getOldQuantityOnStock() {
         return this.oldQuantityOnStock;
     }
 
+    /**
+     *
+     */
+
     public Long getNewQuantityOnStock() {
         return this.newQuantityOnStock;
     }
 
+    /**
+     *
+     */
+
     public Long getOldAvailableQuantity() {
         return this.oldAvailableQuantity;
     }
+
+    /**
+     *
+     */
 
     public Long getNewAvailableQuantity() {
         return this.newAvailableQuantity;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }

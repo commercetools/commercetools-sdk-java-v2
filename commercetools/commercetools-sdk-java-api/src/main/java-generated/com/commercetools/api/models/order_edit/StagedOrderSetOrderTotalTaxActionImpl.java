@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetOrderTotalTaxAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrderTotalTaxAction, ModelBase {
 
     private String action;
@@ -36,17 +39,26 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
         this.action = SET_ORDER_TOTAL_TAX;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
         return this.externalTotalGross;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
         return this.externalTaxPortions;

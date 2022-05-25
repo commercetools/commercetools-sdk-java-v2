@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelItems
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelItemsImpl implements ParcelItems, ModelBase {
 
     private String parcelId;
@@ -31,9 +34,17 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
     public ParcelItemsImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
         return this.items;

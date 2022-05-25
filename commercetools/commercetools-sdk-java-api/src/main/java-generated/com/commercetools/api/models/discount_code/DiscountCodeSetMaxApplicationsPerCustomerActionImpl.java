@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeSetMaxApplicationsPerCustomerAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
         implements DiscountCodeSetMaxApplicationsPerCustomerAction, ModelBase {
 
@@ -33,13 +36,18 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
         this.action = SET_MAX_APPLICATIONS_PER_CUSTOMER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }

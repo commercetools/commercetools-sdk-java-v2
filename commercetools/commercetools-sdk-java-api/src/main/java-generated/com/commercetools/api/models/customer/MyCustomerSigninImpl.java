@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCustomerSignin
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
 
     private String email;
@@ -38,17 +41,33 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
     public MyCustomerSigninImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *
+     */
 
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getActiveCartSignInMode() {
         return this.activeCartSignInMode;
     }
+
+    /**
+     *
+     */
 
     public Boolean getUpdateProductData() {
         return this.updateProductData;

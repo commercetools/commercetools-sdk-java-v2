@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SimilarProductSearchRequestMetaBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductSearchRequestMeta similarProductSearchRequestMeta = SimilarProductSearchRequestMeta.builder()
+ *             .similarityMeasures(similarityMeasuresBuilder -> similarityMeasuresBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarProductSearchRequestMeta> {
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
+
+    /**
+     *  <p>The SimilarityMeasures used in this search.</p>
+     */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
             Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
@@ -19,6 +35,10 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
                 .build();
         return this;
     }
+
+    /**
+     *  <p>The SimilarityMeasures used in this search.</p>
+     */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
             final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {

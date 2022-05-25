@@ -11,15 +11,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeSetValidFromAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeSetValidFromAction discountCodeSetValidFromAction = DiscountCodeSetValidFromAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
 
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-    *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();

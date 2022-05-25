@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductPublishedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPublishedMessagePayload productPublishedMessagePayload = ProductPublishedMessagePayload.builder()
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
+ *             .scope(ProductPublishScope.ALL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPublishedMessagePayload> {
 
     private java.util.List<String> removedImageUrls;
@@ -16,15 +30,27 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    /**
+     *
+     */
+
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPublishedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
         if (this.removedImageUrls == null) {
@@ -34,6 +60,10 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPublishedMessagePayloadBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
@@ -41,11 +71,19 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductPublishedMessagePayloadBuilder productProjection(
             final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductPublishedMessagePayloadBuilder scope(
             final com.commercetools.api.models.cart.ProductPublishScope scope) {

@@ -13,15 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeSetDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeSetDescriptionAction typeSetDescriptionAction = TypeSetDescriptionAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeSetDescriptionActionImpl.class)
 public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
     String SET_DESCRIPTION = "setDescription";
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();

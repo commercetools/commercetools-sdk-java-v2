@@ -15,33 +15,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantDraft productVariantDraft = ProductVariantDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantDraftImpl.class)
 public interface ProductVariantDraft {
+
+    /**
+     *
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-    *  <p>User-defined unique identifier for the ProductVariant.
-    *  <em>ProductVariant keys are different from Product keys.</em></p>
-    */
+     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("prices")
     public List<PriceDraft> getPrices();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("assets")
     public List<AssetDraft> getAssets();

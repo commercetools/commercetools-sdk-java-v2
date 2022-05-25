@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Review">Review</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Review.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewReferenceImpl implements ReviewReference, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -40,22 +40,25 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
     }
 
     /**
-    *  <p>Type of referenced resource.</p>
-    */
+     *  <p>Type of referenced resource.</p>
+     */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Review">Review</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced Review.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Reviews.</p>
-    */
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     */
+
     public com.commercetools.api.models.review.Review getObj() {
         return this.obj;
     }

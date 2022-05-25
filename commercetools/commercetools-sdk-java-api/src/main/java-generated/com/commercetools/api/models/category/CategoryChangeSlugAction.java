@@ -14,16 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryChangeSlugAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryChangeSlugAction categoryChangeSlugAction = CategoryChangeSlugAction.builder()
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeSlugActionImpl.class)
 public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
     String CHANGE_SLUG = "changeSlug";
 
     /**
-    *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
-    *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
-    */
+     *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("slug")

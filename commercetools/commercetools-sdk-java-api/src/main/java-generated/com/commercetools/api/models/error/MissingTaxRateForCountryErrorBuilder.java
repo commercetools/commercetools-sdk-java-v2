@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingTaxRateForCountryErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingTaxRateForCountryError missingTaxRateForCountryError = MissingTaxRateForCountryError.builder()
+ *             .message("{message}")
+ *             .taxCategoryId("{taxCategoryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxRateForCountryError> {
 
     private String message;
@@ -23,15 +36,27 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
     @Nullable
     private String state;
 
+    /**
+     *
+     */
+
     public MissingTaxRateForCountryErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingTaxRateForCountryErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingTaxRateForCountryErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -41,15 +66,27 @@ public class MissingTaxRateForCountryErrorBuilder implements Builder<MissingTaxR
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingTaxRateForCountryErrorBuilder taxCategoryId(final String taxCategoryId) {
         this.taxCategoryId = taxCategoryId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingTaxRateForCountryErrorBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingTaxRateForCountryErrorBuilder state(@Nullable final String state) {
         this.state = state;

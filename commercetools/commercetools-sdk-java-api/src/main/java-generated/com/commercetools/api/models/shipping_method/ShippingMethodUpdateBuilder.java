@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodUpdate shippingMethodUpdate = ShippingMethodUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions;
 
+    /**
+     *
+     */
+
     public ShippingMethodUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodUpdateBuilder actions(
             final com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction... actions) {
@@ -25,11 +46,19 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodUpdateBuilder plusActions(
             final com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction... actions) {
@@ -40,6 +69,10 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodUpdateBuilder plusActions(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction>> builder) {
         if (this.actions == null) {
@@ -49,6 +82,10 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
             builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodUpdateBuilder withActions(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction>> builder) {

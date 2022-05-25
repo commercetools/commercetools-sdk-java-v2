@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateSetRolesAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
 
     private String action;
@@ -32,14 +35,18 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
         this.action = SET_ROLES;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set.
-    *  If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

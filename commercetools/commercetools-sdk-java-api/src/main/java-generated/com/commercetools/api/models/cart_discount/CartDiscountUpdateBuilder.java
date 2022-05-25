@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountUpdate cartDiscountUpdate = CartDiscountUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> actions;
 
+    /**
+     *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
+
     public CartDiscountUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
 
     public CartDiscountUpdateBuilder actions(
             final com.commercetools.api.models.cart_discount.CartDiscountUpdateAction... actions) {
@@ -25,11 +46,19 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
+
     public CartDiscountUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
 
     public CartDiscountUpdateBuilder plusActions(
             final com.commercetools.api.models.cart_discount.CartDiscountUpdateAction... actions) {
@@ -40,6 +69,10 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
+
     public CartDiscountUpdateBuilder plusActions(
             Function<com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountUpdateAction>> builder) {
         if (this.actions == null) {
@@ -49,6 +82,10 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
             builder.apply(com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the CartDiscount.</p>
+     */
 
     public CartDiscountUpdateBuilder withActions(
             Function<com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountUpdateAction>> builder) {

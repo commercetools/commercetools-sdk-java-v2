@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Money
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyImpl implements Money, ModelBase {
 
     private com.commercetools.importapi.models.common.MoneyType type;
@@ -39,21 +42,34 @@ public class MoneyImpl implements Money, ModelBase {
         this.type = MoneyType.findEnum("centPrecision");
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.common.MoneyType getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
+
+    /**
+     *
+     */
 
     public Long getCentAmount() {
         return this.centAmount;
     }
 
     /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>The currency code compliant to ISO 4217.</p>
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }

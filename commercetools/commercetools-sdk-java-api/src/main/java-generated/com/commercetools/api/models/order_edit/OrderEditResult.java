@@ -12,6 +12,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * OrderEditResult
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditResult orderEditResult = OrderEditResult.appliedBuilder()
+ *             appliedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             excerptBeforeEdit(excerptBeforeEditBuilder -> excerptBeforeEditBuilder)
+ *             excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditAppliedImpl.class, name = OrderEditApplied.APPLIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl.class, name = OrderEditNotProcessed.NOT_PROCESSED),
@@ -19,9 +34,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = OrderEditPreviewSuccess.PREVIEW_SUCCESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = OrderEditResultImpl.class, visible = true)
 @JsonDeserialize(as = OrderEditResultImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface OrderEditResult {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

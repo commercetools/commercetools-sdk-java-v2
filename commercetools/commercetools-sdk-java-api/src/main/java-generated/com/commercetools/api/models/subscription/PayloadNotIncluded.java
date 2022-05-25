@@ -12,14 +12,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PayloadNotIncluded
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PayloadNotIncluded payloadNotIncluded = PayloadNotIncluded.builder()
+ *             .reason("{reason}")
+ *             .payloadType("{payloadType}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PayloadNotIncludedImpl.class)
 public interface PayloadNotIncluded {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("reason")
     public String getReason();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("payloadType")
     public String getPayloadType();

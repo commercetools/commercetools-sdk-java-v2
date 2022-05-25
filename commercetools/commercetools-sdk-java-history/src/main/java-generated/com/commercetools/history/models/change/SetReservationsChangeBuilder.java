@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetReservationsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetReservationsChange setReservationsChange = SetReservationsChange.builder()
+ *             .change("{change}")
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReservationsChangeBuilder implements Builder<SetReservationsChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
+    /**
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
+     */
+
     public SetReservationsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetReservationsChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reservation... nextValue) {
@@ -27,11 +49,19 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetReservationsChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reservation... nextValue) {
@@ -42,6 +72,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
         if (this.nextValue == null) {
@@ -51,6 +85,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
         this.nextValue = new ArrayList<>();
@@ -58,17 +96,29 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reservation... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetReservationsChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reservation... previousValue) {
@@ -79,6 +129,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetReservationsChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
         if (this.previousValue == null) {
@@ -87,6 +141,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetReservationsChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {

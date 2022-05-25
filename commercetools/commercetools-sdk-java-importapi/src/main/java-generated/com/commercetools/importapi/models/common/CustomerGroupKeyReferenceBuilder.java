@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerGroupKeyReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupKeyReference customerGroupKeyReference = CustomerGroupKeyReference.builder()
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupKeyReferenceBuilder implements Builder<CustomerGroupKeyReference> {
 
     private String key;
+
+    /**
+     *
+     */
 
     public CustomerGroupKeyReferenceBuilder key(final String key) {
         this.key = key;

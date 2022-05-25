@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListLineItem
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase {
 
     private java.time.ZonedDateTime addedAt;
@@ -67,60 +70,89 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     public ShoppingListLineItemImpl() {
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getDeactivatedAt() {
         return this.deactivatedAt;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
-    */
+     *  <p>Unique identifier of the ShoppingListLineItem.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public String getProductId() {
         return this.productId;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
         return this.productSlug;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
-    */
+     *  <p>Reference to a ProductType.</p>
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
+
+    /**
+     *
+     */
 
     public Integer getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;

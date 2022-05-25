@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ErrorResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorResponse errorResponse = ErrorResponse.builder()
+ *             .statusCode(1)
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorResponseBuilder implements Builder<ErrorResponse> {
 
     private Integer statusCode;
@@ -25,25 +38,45 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    /**
+     *  <p>The http status code of the response.</p>
+     */
+
     public ErrorResponseBuilder statusCode(final Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+
+    /**
+     *  <p>Describes the error.</p>
+     */
 
     public ErrorResponseBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
+     */
+
     public ErrorResponseBuilder error(@Nullable final String error) {
         this.error = error;
         return this;
     }
 
+    /**
+     *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
+     */
+
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
         this.error_description = error_description;
         return this;
     }
+
+    /**
+     *  <p>The errors that caused this error response.</p>
+     */
 
     public ErrorResponseBuilder errors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
@@ -51,11 +84,19 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     *  <p>The errors that caused this error response.</p>
+     */
+
     public ErrorResponseBuilder errors(
             @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
+
+    /**
+     *  <p>The errors that caused this error response.</p>
+     */
 
     public ErrorResponseBuilder plusErrors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
@@ -66,6 +107,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     *  <p>The errors that caused this error response.</p>
+     */
+
     public ErrorResponseBuilder plusErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
         if (this.errors == null) {
@@ -74,6 +119,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The errors that caused this error response.</p>
+     */
 
     public ErrorResponseBuilder withErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {

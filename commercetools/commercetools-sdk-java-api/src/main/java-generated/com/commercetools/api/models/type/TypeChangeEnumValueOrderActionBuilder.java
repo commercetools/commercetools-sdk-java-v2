@@ -6,27 +6,56 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeEnumValueOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeEnumValueOrderAction typeChangeEnumValueOrderAction = TypeChangeEnumValueOrderAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .plusKeys(keysBuilder -> keysBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChangeEnumValueOrderAction> {
 
     private String fieldName;
 
     private java.util.List<String> keys;
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
+
     public TypeChangeEnumValueOrderActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     */
 
     public TypeChangeEnumValueOrderActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
 
+    /**
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     */
+
     public TypeChangeEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
+
+    /**
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     */
 
     public TypeChangeEnumValueOrderActionBuilder plusKeys(final String... keys) {
         if (this.keys == null) {

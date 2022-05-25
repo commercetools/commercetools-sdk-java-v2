@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MessageSubscriptionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MessageSubscription messageSubscription = MessageSubscription.builder()
+ *             .resourceTypeId("{resourceTypeId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageSubscriptionBuilder implements Builder<MessageSubscription> {
 
     private String resourceTypeId;
@@ -16,20 +28,36 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
     @Nullable
     private java.util.List<String> types;
 
+    /**
+     *
+     */
+
     public MessageSubscriptionBuilder resourceTypeId(final String resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessageSubscriptionBuilder types(@Nullable final String... types) {
         this.types = new ArrayList<>(Arrays.asList(types));
         return this;
     }
 
+    /**
+     *
+     */
+
     public MessageSubscriptionBuilder types(@Nullable final java.util.List<String> types) {
         this.types = types;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessageSubscriptionBuilder plusTypes(@Nullable final String... types) {
         if (this.types == null) {

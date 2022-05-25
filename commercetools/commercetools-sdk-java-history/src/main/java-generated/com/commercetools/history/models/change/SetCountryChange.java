@@ -12,33 +12,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCountryChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCountryChange setCountryChange = SetCountryChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCountryChangeImpl.class)
 public interface SetCountryChange extends Change {
 
     String SET_COUNTRY_CHANGE = "SetCountryChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setCountry</code></p>
-    */
+     *  <p>Update action for <code>setCountry</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();

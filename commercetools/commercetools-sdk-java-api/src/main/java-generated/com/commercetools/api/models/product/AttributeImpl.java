@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Attribute
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeImpl implements Attribute, ModelBase {
 
     private String name;
@@ -30,13 +33,18 @@ public class AttributeImpl implements Attribute, ModelBase {
     public AttributeImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>A valid JSON value, based on an AttributeDefinition.</p>
-    */
+     *  <p>A valid JSON value, based on an AttributeDefinition.</p>
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }

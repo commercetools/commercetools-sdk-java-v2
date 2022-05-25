@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemDraft customLineItemDraft = CustomLineItemDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> {
 
     private com.commercetools.importapi.models.common.LocalizedString name;
@@ -43,27 +59,57 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public CustomLineItemDraftBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public CustomLineItemDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder money(final com.commercetools.importapi.models.common.TypedMoney money) {
         this.money = money;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder money(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.money = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder taxedPrice(
             Function<com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder, com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder> builder) {
@@ -72,11 +118,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder taxedPrice(
             @Nullable final com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder totalPrice(
             final com.commercetools.importapi.models.common.TypedMoney totalPrice) {
@@ -84,21 +138,37 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder totalPrice(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
         this.totalPrice = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder quantity(final Double quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder state(
             @Nullable final com.commercetools.importapi.models.orders.ItemState... state) {
@@ -106,11 +176,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder state(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder plusState(
             @Nullable final com.commercetools.importapi.models.orders.ItemState... state) {
@@ -121,6 +199,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder plusState(
             Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
         if (this.state == null) {
@@ -130,12 +212,20 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder withState(
             Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
         this.state = new ArrayList<>();
         this.state.add(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>References a tax category by key.</p>
+     */
 
     public CustomLineItemDraftBuilder taxCategory(
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
@@ -144,11 +234,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *  <p>References a tax category by key.</p>
+     */
+
     public CustomLineItemDraftBuilder taxCategory(
             @Nullable final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder taxRate(
             Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
@@ -156,11 +254,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder taxRate(
             @Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder externalTaxRate(
             Function<com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder, com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder> builder) {
@@ -169,11 +275,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder externalTaxRate(
             @Nullable final com.commercetools.importapi.models.orders.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
             @Nullable final com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft... discountedPricePerQuantity) {
@@ -181,11 +295,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder discountedPricePerQuantity(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
             @Nullable final com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft... discountedPricePerQuantity) {
@@ -196,6 +318,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder plusDiscountedPricePerQuantity(
             Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder> builder) {
         if (this.discountedPricePerQuantity == null) {
@@ -206,6 +332,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder withDiscountedPricePerQuantity(
             Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder> builder) {
         this.discountedPricePerQuantity = new ArrayList<>();
@@ -214,6 +344,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemDraftBuilder shippingDetails(
             Function<com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder, com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder> builder) {
         this.shippingDetails = builder
@@ -221,6 +355,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemDraftBuilder shippingDetails(
             @Nullable final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {

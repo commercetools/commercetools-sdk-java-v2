@@ -21,86 +21,118 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Product
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Product product = Product.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .masterData(masterDataBuilder -> masterDataBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductImpl.class)
 public interface Product extends BaseResource, com.commercetools.api.models.DomainResource<Product>,
         com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Product.</p>
-    */
+     *  <p>Unique identifier of the Product.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the product.</p>
-    */
+     *  <p>The current version of the product.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the Product.
-    *  <em>Product keys are different from ProductVariant keys.</em></p>
-    */
+     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public ProductTypeReference getProductType();
 
     /**
-    *  <p>The product data in the master catalog.</p>
-    */
+     *  <p>The product data in the master catalog.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("masterData")
     public ProductCatalogData getMasterData();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
     @Valid
     @JsonProperty("reviewRatingStatistics")
     public ReviewRatingStatistics getReviewRatingStatistics();
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
-    */
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     */
 
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();

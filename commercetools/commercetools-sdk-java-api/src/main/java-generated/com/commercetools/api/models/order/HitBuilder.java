@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * HitBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Hit hit = Hit.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .relevance(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HitBuilder implements Builder<Hit> {
 
     private String id;
@@ -15,15 +29,27 @@ public class HitBuilder implements Builder<Hit> {
 
     private Double relevance;
 
+    /**
+     *  <p>Unique identifier of the Order.</p>
+     */
+
     public HitBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+     *  <p>Current version of the Order.</p>
+     */
+
     public HitBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     */
 
     public HitBuilder relevance(final Double relevance) {
         this.relevance = relevance;

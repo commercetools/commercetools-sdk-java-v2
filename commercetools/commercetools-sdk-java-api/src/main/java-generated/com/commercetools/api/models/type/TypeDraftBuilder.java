@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeDraft typeDraft = TypeDraft.builder()
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     private String key;
@@ -24,10 +38,18 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
+    /**
+     *  <p>User-defined unique identifier for the Type.</p>
+     */
+
     public TypeDraftBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>Name of the Type.</p>
+     */
 
     public TypeDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -35,10 +57,18 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Type.</p>
+     */
+
     public TypeDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Description of the Type.</p>
+     */
 
     public TypeDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -46,22 +76,38 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>Description of the Type.</p>
+     */
+
     public TypeDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
+
     public TypeDraftBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
         this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
         return this;
     }
+
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
 
     public TypeDraftBuilder resourceTypeIds(
             final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
         this.resourceTypeIds = resourceTypeIds;
         return this;
     }
+
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
 
     public TypeDraftBuilder plusResourceTypeIds(
             final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
@@ -72,17 +118,29 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
+
     public TypeDraftBuilder fieldDefinitions(
             @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
         this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
+
     public TypeDraftBuilder fieldDefinitions(
             @Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
         this.fieldDefinitions = fieldDefinitions;
         return this;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
 
     public TypeDraftBuilder plusFieldDefinitions(
             @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
@@ -93,6 +151,10 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
+
     public TypeDraftBuilder plusFieldDefinitions(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
         if (this.fieldDefinitions == null) {
@@ -101,6 +163,10 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
 
     public TypeDraftBuilder withFieldDefinitions(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {

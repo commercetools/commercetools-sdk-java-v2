@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DeliveryItemsUpdatedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpdatedMessagePayload, ModelBase {
 
     private String type;
@@ -39,17 +42,33 @@ public class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryItemsUpda
         this.type = DELIVERY_ITEMS_UPDATED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getOldItems() {
         return this.oldItems;

@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangePriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangePriceChange changePriceChange = ChangePriceChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .priceId("{priceId}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
 
     private String change;
@@ -20,20 +36,36 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+     *  <p>Update action for changing prices</p>
+     */
+
     public ChangePriceChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangePriceChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangePriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangePriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
@@ -41,16 +73,28 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangePriceChangeBuilder previousValue(final com.commercetools.history.models.common.Price previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangePriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangePriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {
         this.nextValue = nextValue;

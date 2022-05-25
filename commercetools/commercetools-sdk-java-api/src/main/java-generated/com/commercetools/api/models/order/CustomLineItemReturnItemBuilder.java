@@ -9,7 +9,25 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItemReturnItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItemReturnItem customLineItemReturnItem = CustomLineItemReturnItem.builder()
+ *             .id("{id}")
+ *             .quantity(0.3)
+ *             .shipmentState(ReturnShipmentState.ADVISED)
+ *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemReturnItem> {
 
     private String id;
@@ -32,20 +50,36 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
 
     private String customLineItemId;
 
+    /**
+     *  <p>Unique identifier of the ReturnItem.</p>
+     */
+
     public CustomLineItemReturnItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemReturnItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemReturnItemBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemReturnItemBuilder shipmentState(
             final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
@@ -53,11 +87,19 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemReturnItemBuilder paymentState(
             final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     */
 
     public CustomLineItemReturnItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -65,21 +107,37 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
         return this;
     }
 
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     */
+
     public CustomLineItemReturnItemBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemReturnItemBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;

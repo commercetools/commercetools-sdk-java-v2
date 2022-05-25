@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartRecalculateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBase {
 
     private String action;
@@ -31,15 +34,18 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
         this.action = RECALCULATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated.
-    *  If set to <code>false</code>, only the prices and tax rates of the line item will be updated.
-    *  Notice that if the Product's <a href="ctp:api:type:Product">priceMode</a> value is <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a>, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
-    */
+     *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated. If set to <code>false</code>, only the prices and tax rates of the line item will be updated. Notice that if the Product's priceMode value is <code>Embedded</code> ProductPriceMode, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
+     */
+
     public Boolean getUpdateProductData() {
         return this.updateProductData;
     }

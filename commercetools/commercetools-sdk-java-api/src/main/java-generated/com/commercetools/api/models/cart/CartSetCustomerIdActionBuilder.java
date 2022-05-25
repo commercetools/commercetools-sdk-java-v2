@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetCustomerIdActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCustomerIdAction cartSetCustomerIdAction = CartSetCustomerIdAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerIdAction> {
 
     @Nullable
     private String customerId;
+
+    /**
+     *  <p>If set, a customer with the given ID must exist in the project.</p>
+     */
 
     public CartSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;

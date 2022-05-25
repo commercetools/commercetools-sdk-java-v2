@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Present on resources modified after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     private String clientId;
@@ -43,29 +43,33 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-    *  <p><code>id</code> of the <a href="ctp:api:type:ApiClient">APIClient</a> which modified the resource.</p>
-    */
+     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     */
+
     public String getClientId() {
         return this.clientId;
     }
 
     /**
-    *  <p><a href="/../api/client-logging#external-user-ids">External user ID</a> provided by <code>X-External-User-ID</code> HTTP Header.</p>
-    */
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     */
+
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
     /**
-    *  <p>Indicates the <a href="ctp:api:type:Customer">Customer</a> who modified the resource using a token from the <a href="/authorization#password-flow">password flow</a>.</p>
-    */
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     */
+
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>Indicates the <a href="/../api/authorization#tokens-for-anonymous-sessions">anonymous session</a> during which the resource was modified.</p>
-    */
+     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }

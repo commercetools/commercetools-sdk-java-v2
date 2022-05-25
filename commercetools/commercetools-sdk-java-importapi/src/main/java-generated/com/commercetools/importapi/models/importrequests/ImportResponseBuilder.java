@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImportResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportResponse importResponse = ImportResponse.builder()
+ *             .plusOperationStatus(operationStatusBuilder -> operationStatusBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportResponseBuilder implements Builder<ImportResponse> {
 
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
+
+    /**
+     *
+     */
 
     public ImportResponseBuilder operationStatus(
             final com.commercetools.importapi.models.importoperations.ImportOperationStatus... operationStatus) {
@@ -18,11 +34,19 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ImportResponseBuilder operationStatus(
             final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
         this.operationStatus = operationStatus;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ImportResponseBuilder plusOperationStatus(
             final com.commercetools.importapi.models.importoperations.ImportOperationStatus... operationStatus) {
@@ -32,6 +56,10 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         this.operationStatus.addAll(Arrays.asList(operationStatus));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ImportResponseBuilder plusOperationStatus(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {
@@ -43,6 +71,10 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
                     .build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ImportResponseBuilder withOperationStatus(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {

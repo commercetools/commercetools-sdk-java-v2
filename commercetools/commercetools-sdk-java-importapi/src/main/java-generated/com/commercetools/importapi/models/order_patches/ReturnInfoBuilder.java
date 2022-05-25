@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReturnInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnInfo returnInfo = ReturnInfo.builder()
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     private java.util.List<com.commercetools.importapi.models.order_patches.ReturnItemDraft> items;
@@ -20,16 +32,28 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     @Nullable
     private java.time.ZonedDateTime returnDate;
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder items(final com.commercetools.importapi.models.order_patches.ReturnItemDraft... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReturnInfoBuilder items(
             final java.util.List<com.commercetools.importapi.models.order_patches.ReturnItemDraft> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReturnInfoBuilder plusItems(
             final com.commercetools.importapi.models.order_patches.ReturnItemDraft... items) {
@@ -40,6 +64,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder plusItems(
             Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder> builder) {
         if (this.items == null) {
@@ -50,6 +78,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder withItems(
             Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder> builder) {
         this.items = new ArrayList<>();
@@ -58,10 +90,18 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     */
+
     public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     */
 
     public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;

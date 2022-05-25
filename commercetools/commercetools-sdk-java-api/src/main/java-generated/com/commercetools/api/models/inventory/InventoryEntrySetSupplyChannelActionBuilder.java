@@ -9,11 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntrySetSupplyChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntrySetSupplyChannelAction inventoryEntrySetSupplyChannelAction = InventoryEntrySetSupplyChannelAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<InventoryEntrySetSupplyChannelAction> {
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+
+    /**
+     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -21,6 +36,10 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
                 .build();
         return this;
     }
+
+    /**
+     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

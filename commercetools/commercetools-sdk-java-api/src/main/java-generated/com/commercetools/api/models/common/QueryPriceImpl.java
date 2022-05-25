@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * QueryPrice
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QueryPriceImpl implements QueryPrice, ModelBase {
 
     private String id;
@@ -64,71 +67,81 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the given Price.</p>
-    */
+     *  <p>Unique identifier of the given Price.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Money value of the given Price.</p>
-    */
+     *  <p>Money value of the given Price.</p>
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Country for which the given Price is valid.</p>
-    */
+     *  <p>Country for which the given Price is valid.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which the given Price is valid.</p>
-    */
+     *  <p>CustomerGroup for which the given Price is valid.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which the given Price is valid.</p>
-    */
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Date from which the given Price is valid.</p>
-    */
+     *  <p>Date from which the given Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Date until which the given Price is valid.</p>
-    */
+     *  <p>Date until which the given Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p><a href="ctp:api:type:DiscountedPrice">DiscountedPrice</a> you specify for the given Price.</p>
-    */
+     *  <p>DiscountedPrice you specify for the given Price.</p>
+     */
+
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Custom Fields for the Price.</p>
-    */
+     *  <p>Custom Fields for the Price.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Price tier applied when the minimum quantity for the <a href="ctp:api:type:LineItem">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
-    */
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }

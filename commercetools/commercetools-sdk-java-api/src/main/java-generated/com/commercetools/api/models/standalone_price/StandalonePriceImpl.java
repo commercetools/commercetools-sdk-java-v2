@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StandalonePrice
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     private String id;
@@ -90,121 +93,137 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the StandalonePrice.</p>
-    */
+     *  <p>Unique identifier of the StandalonePrice.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the StandalonePrice.</p>
-    */
+     *  <p>Current version of the StandalonePrice.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the StandalonePrice.</p>
-    */
+     *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>SKU of the <a href="ctp:api:type:ProductVariant">ProductVariant</a> to which this Price is associated.</p>
-    */
+     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p>Money value of this Price.</p>
-    */
+     *  <p>Money value of this Price.</p>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Country for which this Price is valid.</p>
-    */
+     *  <p>Country for which this Price is valid.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
-    */
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Product distribution <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
-    */
+     *  <p>Product distribution Channel for which this Price is valid.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Date from which the Price is valid.</p>
-    */
+     *  <p>Date from which the Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Date until the Price is valid.</p>
-    */
+     *  <p>Date until the Price is valid.</p>
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>Price tiers if any are defined.</p>
-    */
+     *  <p>Price tiers if any are defined.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
 
     /**
-    *  <p>Set if a matching <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> exists. If set, the Platform uses the <code>discounted</code> value for the <a href="/../api/projects/carts#lineitem-price-selection">LineItem Price selection</a>.
-    *  When a <a href="/../api/projects/productDiscounts#productdiscountvaluerelative">relative discount</a> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">half down rounding</a>.</p>
-    */
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     */
+
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Custom Fields for the StandalonePrice.</p>
-    */
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

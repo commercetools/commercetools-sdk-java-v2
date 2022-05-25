@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemRemovedMessage
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMessage, ModelBase {
 
     private String id;
@@ -99,91 +102,152 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Message.</p>
-    */
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *
+     */
 
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
 
     /**
-    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="ctp:api:type:ChannelReference">ChannelReference</a>.  A referenced resource can be embedded through <a href="/general-concepts#reference-expansion">Reference Expansion</a>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-    */
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
+
+    /**
+     *
+     */
 
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *
+     */
 
     public Long getRemovedQuantity() {
         return this.removedQuantity;
     }
 
+    /**
+     *
+     */
+
     public Long getNewQuantity() {
         return this.newQuantity;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
         return this.newState;
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getNewTotalPrice() {
         return this.newTotalPrice;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
         return this.newTaxedPrice;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.Price getNewPrice() {
         return this.newPrice;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {
         return this.newShippingDetail;

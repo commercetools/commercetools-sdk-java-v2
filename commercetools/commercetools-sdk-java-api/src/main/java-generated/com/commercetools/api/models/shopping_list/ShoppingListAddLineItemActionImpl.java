@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListAddLineItemAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineItemAction, ModelBase {
 
     private String action;
@@ -50,33 +53,58 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
         this.action = ADD_LINE_ITEM;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *
+     */
+
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

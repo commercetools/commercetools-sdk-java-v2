@@ -14,36 +14,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderCustomerSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerSetMessagePayloadImpl.class)
 public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
 
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
-    */
+     *  <p>Reference to a Customer.</p>
+     */
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();

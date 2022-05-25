@@ -10,14 +10,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderCustomerEmailSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderCustomerEmailSetMessagePayload orderCustomerEmailSetMessagePayload = OrderCustomerEmailSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerEmailSetMessagePayloadImpl.class)
 public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload {
 
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
+    /**
+     *
+     */
+
     @JsonProperty("email")
     public String getEmail();
+
+    /**
+     *
+     */
 
     @JsonProperty("oldEmail")
     public String getOldEmail();

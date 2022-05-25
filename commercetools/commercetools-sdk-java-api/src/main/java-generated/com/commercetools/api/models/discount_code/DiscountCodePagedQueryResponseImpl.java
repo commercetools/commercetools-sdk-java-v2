@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult with <code>results</code> containing an array of DiscountCode.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodePagedQueryResponseImpl implements DiscountCodePagedQueryResponse, ModelBase {
 
     private Long limit;
@@ -46,40 +46,41 @@ public class DiscountCodePagedQueryResponseImpl implements DiscountCodePagedQuer
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
+
     public Long getCount() {
         return this.count;
     }
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
-    *  This field is returned by default.
-    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p><a href="ctp:api:type:DiscountCode">DiscountCodes</a> matching the query.</p>
-    */
+     *  <p>DiscountCodes matching the query.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.discount_code.DiscountCode> getResults() {
         return this.results;
     }

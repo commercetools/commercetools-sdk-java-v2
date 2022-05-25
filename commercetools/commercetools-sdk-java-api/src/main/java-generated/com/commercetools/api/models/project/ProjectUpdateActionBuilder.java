@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectUpdateActionBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectUpdateActionBuilder {
 
     public com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionBuilder changeCartsConfigurationBuilder() {
@@ -30,10 +33,6 @@ public class ProjectUpdateActionBuilder {
 
     public com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder changeMessagesConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder changeMessagesEnabledBuilder() {
-        return com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder.of();
     }
 
     public com.commercetools.api.models.project.ProjectChangeNameActionBuilder changeNameBuilder() {

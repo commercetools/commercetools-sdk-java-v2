@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangeAssetOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangeAssetOrderAction productChangeAssetOrderAction = ProductChangeAssetOrderAction.builder()
+ *             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChangeAssetOrderAction> {
 
     @Nullable
@@ -22,30 +34,54 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
 
     private java.util.List<String> assetOrder;
 
+    /**
+     *
+     */
+
     public ProductChangeAssetOrderActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangeAssetOrderActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductChangeAssetOrderActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
         this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
         if (this.assetOrder == null) {

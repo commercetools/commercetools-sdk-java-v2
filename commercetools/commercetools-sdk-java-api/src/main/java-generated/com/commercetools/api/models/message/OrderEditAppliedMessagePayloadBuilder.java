@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditAppliedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditAppliedMessagePayload orderEditAppliedMessagePayload = OrderEditAppliedMessagePayload.builder()
+ *             .edit(editBuilder -> editBuilder)
+ *             .result(resultBuilder -> resultBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditAppliedMessagePayload> {
 
     private com.commercetools.api.models.order_edit.OrderEditReference edit;
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
+
+    /**
+     *  <p>Reference to a OrderEdit.</p>
+     */
 
     public OrderEditAppliedMessagePayloadBuilder edit(
             Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
@@ -20,17 +37,29 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
         return this;
     }
 
+    /**
+     *  <p>Reference to a OrderEdit.</p>
+     */
+
     public OrderEditAppliedMessagePayloadBuilder edit(
             final com.commercetools.api.models.order_edit.OrderEditReference edit) {
         this.edit = edit;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderEditAppliedMessagePayloadBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderEditAppliedMessagePayloadBuilder result(
             final com.commercetools.api.models.order_edit.OrderEditApplied result) {

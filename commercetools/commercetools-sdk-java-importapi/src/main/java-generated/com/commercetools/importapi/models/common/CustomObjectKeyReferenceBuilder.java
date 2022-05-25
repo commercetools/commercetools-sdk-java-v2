@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomObjectKeyReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectKeyReference customObjectKeyReference = CustomObjectKeyReference.builder()
+ *             .key("{key}")
+ *             .container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectKeyReferenceBuilder implements Builder<CustomObjectKeyReference> {
 
     private String key;
 
     private String container;
 
+    /**
+     *
+     */
+
     public CustomObjectKeyReferenceBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomObjectKeyReferenceBuilder container(final String container) {
         this.container = container;

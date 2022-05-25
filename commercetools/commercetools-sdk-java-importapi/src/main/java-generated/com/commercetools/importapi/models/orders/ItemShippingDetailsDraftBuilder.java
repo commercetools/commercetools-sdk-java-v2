@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ItemShippingDetailsDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
+ *             .plusTargets(targetsBuilder -> targetsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDetailsDraft> {
 
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
+
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     */
 
     public ItemShippingDetailsDraftBuilder targets(
             final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
@@ -18,11 +34,19 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     */
+
     public ItemShippingDetailsDraftBuilder targets(
             final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
         this.targets = targets;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
             final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
@@ -33,6 +57,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     */
+
     public ItemShippingDetailsDraftBuilder plusTargets(
             Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
         if (this.targets == null) {
@@ -42,6 +70,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
                 .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     */
 
     public ItemShippingDetailsDraftBuilder withTargets(
             Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {

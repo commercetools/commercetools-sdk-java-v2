@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangeMasterVariantActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangeMasterVariantAction productChangeMasterVariantAction = ProductChangeMasterVariantAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeMasterVariantActionBuilder implements Builder<ProductChangeMasterVariantAction> {
 
     @Nullable
@@ -20,15 +31,27 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductChangeMasterVariantActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductChangeMasterVariantActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangeMasterVariantActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

@@ -14,36 +14,78 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MessageDeliveryPayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MessageDeliveryPayload messageDeliveryPayload = MessageDeliveryPayload.builder()
+ *             .projectKey("{projectKey}")
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resourceVersion(0.3)
+ *             .payloadNotIncluded(payloadNotIncludedBuilder -> payloadNotIncludedBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MessageDeliveryPayloadImpl.class)
 public interface MessageDeliveryPayload extends DeliveryPayload {
 
     String MESSAGE = "Message";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("sequenceNumber")
     public Long getSequenceNumber();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("payloadNotIncluded")

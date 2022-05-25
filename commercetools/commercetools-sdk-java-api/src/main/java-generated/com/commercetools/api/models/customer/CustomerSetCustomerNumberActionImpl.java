@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetCustomerNumberAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerNumberAction, ModelBase {
 
     private String action;
@@ -31,14 +34,18 @@ public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerN
         this.action = SET_CUSTOMER_NUMBER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>It should be <strong>unique</strong> across a project.
-    *  Once it's set, it cannot be changed.</p>
-    */
+     *  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>
+     */
+
     public String getCustomerNumber() {
         return this.customerNumber;
     }

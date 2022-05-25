@@ -9,7 +9,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Type type = Type.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
+ *             .plusFieldDefinitions(fieldDefinitionsBuilder -> fieldDefinitionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeBuilder implements Builder<Type> {
 
     private String id;
@@ -37,25 +56,45 @@ public class TypeBuilder implements Builder<Type> {
 
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
+    /**
+     *  <p>Unique identifier of the Type.</p>
+     */
+
     public TypeBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Current version of the Type.</p>
+     */
 
     public TypeBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Type was initially created.</p>
+     */
+
     public TypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Type was last updated.</p>
+     */
+
     public TypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TypeBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -63,11 +102,19 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public TypeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public TypeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -75,15 +122,27 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public TypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Type.</p>
+     */
+
     public TypeBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>Name of the Type.</p>
+     */
 
     public TypeBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -91,10 +150,18 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Type.</p>
+     */
+
     public TypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Description of the Type.</p>
+     */
 
     public TypeBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -102,21 +169,37 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Description of the Type.</p>
+     */
+
     public TypeBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
 
     public TypeBuilder resourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
         this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
         return this;
     }
 
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
+
     public TypeBuilder resourceTypeIds(
             final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
         this.resourceTypeIds = resourceTypeIds;
         return this;
     }
+
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
 
     public TypeBuilder plusResourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
         if (this.resourceTypeIds == null) {
@@ -126,16 +209,28 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
+
     public TypeBuilder fieldDefinitions(final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
         this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
 
     public TypeBuilder fieldDefinitions(
             final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
         this.fieldDefinitions = fieldDefinitions;
         return this;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
 
     public TypeBuilder plusFieldDefinitions(
             final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
@@ -146,6 +241,10 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
+
     public TypeBuilder plusFieldDefinitions(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
         if (this.fieldDefinitions == null) {
@@ -154,6 +253,10 @@ public class TypeBuilder implements Builder<Type> {
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     */
 
     public TypeBuilder withFieldDefinitions(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {

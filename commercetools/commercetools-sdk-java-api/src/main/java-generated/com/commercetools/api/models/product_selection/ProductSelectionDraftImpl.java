@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSelectionDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBase {
 
     private String key;
@@ -36,22 +39,25 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-    *  <p>User-defined unique identifier for the ProductSelection.</p>
-    */
+     *  <p>User-defined unique identifier for the ProductSelection.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
-    */
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Custom Fields of this ProductSelection.</p>
-    */
+     *  <p>Custom Fields of this ProductSelection.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

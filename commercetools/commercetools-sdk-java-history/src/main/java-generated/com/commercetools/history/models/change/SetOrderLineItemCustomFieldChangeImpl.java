@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetOrderLineItemCustomFieldChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCustomFieldChange, ModelBase {
 
     private String type;
@@ -54,36 +57,65 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
         this.type = SET_ORDER_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public String getCustomTypeId() {
         return this.customTypeId;
     }
 
+    /**
+     *
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     *
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;

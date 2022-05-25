@@ -14,12 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderChangeTaxCalculationModeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderChangeTaxCalculationModeAction stagedOrderChangeTaxCalculationModeAction = StagedOrderChangeTaxCalculationModeAction.builder()
+ *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeTaxCalculationModeActionImpl.class)
 public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUpdateAction {
 
     String CHANGE_TAX_CALCULATION_MODE = "changeTaxCalculationMode";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();

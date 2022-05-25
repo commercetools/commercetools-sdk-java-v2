@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AWSLambdaDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AWSLambdaDestination aWSLambdaDestination = AWSLambdaDestination.builder()
+ *             .arn("{arn}")
+ *             .accessKey("{accessKey}")
+ *             .accessSecret("{accessSecret}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination> {
 
     private String arn;
@@ -15,15 +29,27 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     private String accessSecret;
 
+    /**
+     *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
+     */
+
     public AWSLambdaDestinationBuilder arn(final String arn) {
         this.arn = arn;
         return this;
     }
 
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     */
+
     public AWSLambdaDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
+
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     */
 
     public AWSLambdaDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;

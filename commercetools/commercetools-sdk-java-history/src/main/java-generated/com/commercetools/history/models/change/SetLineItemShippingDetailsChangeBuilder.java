@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemShippingDetailsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemShippingDetailsChange setLineItemShippingDetailsChange = SetLineItemShippingDetailsChange.builder()
+ *             .change("{change}")
+ *             .lineItemId("{lineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineItemShippingDetailsChange> {
 
     private String change;
@@ -18,15 +33,27 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     */
+
     public SetLineItemShippingDetailsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemShippingDetailsChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemShippingDetailsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
@@ -34,11 +61,19 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemShippingDetailsChangeBuilder nextValue(
             final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
@@ -46,6 +81,10 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemShippingDetailsChangeBuilder previousValue(
             final com.commercetools.history.models.common.ItemShippingDetails previousValue) {

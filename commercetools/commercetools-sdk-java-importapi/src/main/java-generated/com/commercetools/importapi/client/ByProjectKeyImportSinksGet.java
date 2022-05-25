@@ -17,9 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves all import sinks of a project key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Retrieves all import sinks of a project key.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> result = apiRoot
+ *            .withProjectKeyValue("{projectKey}")
+ *            .importSinks()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImportSinksGet extends
         ApiMethod<ByProjectKeyImportSinksGet, com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>
         implements com.commercetools.importapi.client.Secured_by_view_import_sinksTrait<ByProjectKeyImportSinksGet> {

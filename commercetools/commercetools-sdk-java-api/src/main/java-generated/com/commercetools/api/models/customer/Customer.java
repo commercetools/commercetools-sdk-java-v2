@@ -22,7 +22,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Customer
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Customer customer = Customer.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .email("{email}")
+ *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .isEmailVerified(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerImpl.class)
 public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer>,
         com.commercetools.api.models.Referencable<Customer>,
@@ -30,163 +49,212 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         com.commercetools.api.models.Customizable<Customer> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Customer.</p>
-    */
+     *  <p>Unique identifier of the Customer.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the customer.</p>
-    */
+     *  <p>The current version of the customer.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer.
-    *  It should be unique across a project.
-    *  Once the field was set it cannot be changed anymore.</p>
-    */
+     *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
+     */
 
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
     /**
-    *  <p>The customer's email address and the main identifier of uniqueness for a customer account.
-    *  Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project.
-    *  For more information, see Email uniquenes.</p>
-    */
+     *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
     /**
-    *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
-    */
+     *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+     */
 
     @JsonProperty("password")
     public String getPassword();
 
+    /**
+     *
+     */
+
     @JsonProperty("firstName")
     public String getFirstName();
+
+    /**
+     *
+     */
 
     @JsonProperty("lastName")
     public String getLastName();
 
+    /**
+     *
+     */
+
     @JsonProperty("middleName")
     public String getMiddleName();
+
+    /**
+     *
+     */
 
     @JsonProperty("title")
     public String getTitle();
 
+    /**
+     *
+     */
+
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 
+    /**
+     *
+     */
+
     @JsonProperty("companyName")
     public String getCompanyName();
+
+    /**
+     *
+     */
 
     @JsonProperty("vatId")
     public String getVatId();
 
     /**
-    *  <p>The addresses have unique IDs in the addresses list</p>
-    */
+     *  <p>The addresses have unique IDs in the addresses list</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("addresses")
     public List<Address> getAddresses();
 
     /**
-    *  <p>The address ID in the addresses list</p>
-    */
+     *  <p>The address ID in the addresses list</p>
+     */
 
     @JsonProperty("defaultShippingAddressId")
     public String getDefaultShippingAddressId();
 
     /**
-    *  <p>The IDs from the addresses list which are used as shipping addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as shipping addresses</p>
+     */
 
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
     /**
-    *  <p>The address ID in the addresses list</p>
-    */
+     *  <p>The address ID in the addresses list</p>
+     */
 
     @JsonProperty("defaultBillingAddressId")
     public String getDefaultBillingAddressId();
 
     /**
-    *  <p>The IDs from the addresses list which are used as billing addresses</p>
-    */
+     *  <p>The IDs from the addresses list which are used as billing addresses</p>
+     */
 
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("isEmailVerified")
     public Boolean getIsEmailVerified();
 
+    /**
+     *
+     */
+
     @JsonProperty("externalId")
     public String getExternalId();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *
+     */
+
     @JsonProperty("locale")
     public String getLocale();
+
+    /**
+     *
+     */
 
     @JsonProperty("salutation")
     public String getSalutation();
 
     /**
-    *  <p>User-defined unique identifier of the Customer.</p>
-    */
+     *  <p>User-defined unique identifier of the Customer.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>References to the stores the customer account is associated with.
-    *  If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
-    *  If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
-    */
+     *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+     */
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
 
     /**
-    *  <p>Defines whether a Customer has a password.</p>
-    */
+     *  <p>Defines whether a Customer has a password.</p>
+     */
 
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();

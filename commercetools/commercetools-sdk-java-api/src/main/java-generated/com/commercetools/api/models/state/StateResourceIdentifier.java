@@ -12,24 +12,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>ResourceIdentifier to a State.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateResourceIdentifier stateResourceIdentifier = StateResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateResourceIdentifierImpl.class)
 public interface StateResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<State> {
 
     String STATE = "state";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:State">State</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:State">State</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

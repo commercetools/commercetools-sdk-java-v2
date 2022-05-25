@@ -12,16 +12,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AzureEventGridDestination
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AzureEventGridDestination azureEventGridDestination = AzureEventGridDestination.builder()
+ *             .uri("{uri}")
+ *             .accessKey("{accessKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
 
     String EVENT_GRID = "EventGrid";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("uri")
     public String getUri();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();

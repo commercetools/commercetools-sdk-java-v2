@@ -9,7 +9,30 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscount cartDiscount = CartDiscount.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name(nameBuilder -> nameBuilder)
+ *             .value(valueBuilder -> valueBuilder)
+ *             .cartPredicate("{cartPredicate}")
+ *             .sortOrder("{sortOrder}")
+ *             .isActive(true)
+ *             .requiresDiscountCode(true)
+ *             .plusReferences(referencesBuilder -> referencesBuilder)
+ *             .stackingMode(StackingMode.STACKING)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     private String id;
@@ -60,25 +83,45 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     *  <p>Unique identifier of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Current version of the CartDiscount.</p>
+     */
 
     public CartDiscountBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     */
+
     public CartDiscountBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     */
+
     public CartDiscountBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CartDiscountBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -86,11 +129,19 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
+
     public CartDiscountBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CartDiscountBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -98,10 +149,18 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public CartDiscountBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     */
 
     public CartDiscountBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -109,15 +168,27 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     */
 
     public CartDiscountBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -125,16 +196,28 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *  <p>Effect of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder value(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *  <p>Effect of the CartDiscount.</p>
+     */
 
     public CartDiscountBuilder value(
             Function<com.commercetools.api.models.cart_discount.CartDiscountValueBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValue>> builder) {
@@ -142,10 +225,18 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Valid Cart Predicate.</p>
+     */
+
     public CartDiscountBuilder cartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
     }
+
+    /**
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     */
 
     public CartDiscountBuilder target(
             @Nullable final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
@@ -153,47 +244,83 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     */
+
     public CartDiscountBuilder target(
             Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
         this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     */
+
     public CartDiscountBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
+
+    /**
+     *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
+     */
 
     public CartDiscountBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     */
+
     public CartDiscountBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     */
 
     public CartDiscountBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
 
+    /**
+     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     */
+
     public CartDiscountBuilder requiresDiscountCode(final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
         return this;
     }
+
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     */
 
     public CartDiscountBuilder references(final com.commercetools.api.models.common.Reference... references) {
         this.references = new ArrayList<>(Arrays.asList(references));
         return this;
     }
 
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     */
+
     public CartDiscountBuilder references(
             final java.util.List<com.commercetools.api.models.common.Reference> references) {
         this.references = references;
         return this;
     }
+
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     */
 
     public CartDiscountBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
         if (this.references == null) {
@@ -202,6 +329,10 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         this.references.addAll(Arrays.asList(references));
         return this;
     }
+
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     */
 
     public CartDiscountBuilder plusReferences(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -212,6 +343,10 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     */
+
     public CartDiscountBuilder withReferences(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.references = new ArrayList<>();
@@ -219,17 +354,29 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    /**
+     *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
+     */
+
     public CartDiscountBuilder stackingMode(
             final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
         this.stackingMode = stackingMode;
         return this;
     }
 
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     */
+
     public CartDiscountBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     */
 
     public CartDiscountBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

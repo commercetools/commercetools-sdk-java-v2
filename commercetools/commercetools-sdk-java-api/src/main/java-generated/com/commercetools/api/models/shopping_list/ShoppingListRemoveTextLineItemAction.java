@@ -12,15 +12,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListRemoveTextLineItemAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListRemoveTextLineItemAction shoppingListRemoveTextLineItemAction = ShoppingListRemoveTextLineItemAction.builder()
+ *             .textLineItemId("{textLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListRemoveTextLineItemActionImpl.class)
 public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdateAction {
 
     String REMOVE_TEXT_LINE_ITEM = "removeTextLineItem";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *
+     */
 
     @JsonProperty("quantity")
     public Long getQuantity();

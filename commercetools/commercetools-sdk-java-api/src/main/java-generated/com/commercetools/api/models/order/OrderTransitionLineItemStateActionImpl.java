@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderTransitionLineItemStateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLineItemStateAction, ModelBase {
 
     private String action;
@@ -47,31 +50,49 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
         this.action = TRANSITION_LINE_ITEM_STATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
         return this.fromState;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
         return this.toState;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getActualTransitionDate() {
         return this.actualTransitionDate;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetLineItemTaxRateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
         this.action = SET_LINE_ITEM_TAX_RATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

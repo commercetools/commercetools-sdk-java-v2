@@ -14,20 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductRemovedFromCategoryMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemovedFromCategoryMessagePayload productRemovedFromCategoryMessagePayload = ProductRemovedFromCategoryMessagePayload.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemovedFromCategoryMessagePayloadImpl.class)
 public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload {
 
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
-    */
+     *  <p>Reference to a Category.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();

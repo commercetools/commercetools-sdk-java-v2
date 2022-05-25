@@ -7,21 +7,45 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentInfo paymentInfo = PaymentInfo.builder()
+ *             .plusPayments(paymentsBuilder -> paymentsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInfoBuilder implements Builder<PaymentInfo> {
 
     private java.util.List<com.commercetools.history.models.common.Reference> payments;
+
+    /**
+     *
+     */
 
     public PaymentInfoBuilder payments(final com.commercetools.history.models.common.Reference... payments) {
         this.payments = new ArrayList<>(Arrays.asList(payments));
         return this;
     }
 
+    /**
+     *
+     */
+
     public PaymentInfoBuilder payments(
             final java.util.List<com.commercetools.history.models.common.Reference> payments) {
         this.payments = payments;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentInfoBuilder plusPayments(final com.commercetools.history.models.common.Reference... payments) {
         if (this.payments == null) {
@@ -31,6 +55,10 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public PaymentInfoBuilder plusPayments(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.payments == null) {
@@ -39,6 +67,10 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentInfoBuilder withPayments(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

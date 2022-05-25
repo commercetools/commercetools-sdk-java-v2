@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelMeasurementsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelMeasurements parcelMeasurements = ParcelMeasurements.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     @Nullable
@@ -23,20 +34,36 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
     @Nullable
     private Integer weightInGram;
 
+    /**
+     *
+     */
+
     public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Integer heightInMillimeter) {
         this.heightInMillimeter = heightInMillimeter;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Integer lengthInMillimeter) {
         this.lengthInMillimeter = lengthInMillimeter;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Integer widthInMillimeter) {
         this.widthInMillimeter = widthInMillimeter;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelMeasurementsBuilder weightInGram(@Nullable final Integer weightInGram) {
         this.weightInGram = weightInGram;

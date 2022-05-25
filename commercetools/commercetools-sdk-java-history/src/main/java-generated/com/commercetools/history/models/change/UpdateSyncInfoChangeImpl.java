@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * UpdateSyncInfoChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
         this.type = UPDATE_SYNC_INFO_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>updateSyncInfo</code></p>
-    */
+     *  <p>Update action for <code>updateSyncInfo</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public String getChannelId() {
         return this.channelId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.SyncInfo getNextValue() {
         return this.nextValue;

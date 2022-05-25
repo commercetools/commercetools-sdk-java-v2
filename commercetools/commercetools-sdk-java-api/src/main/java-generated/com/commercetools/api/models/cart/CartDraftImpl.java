@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDraftImpl implements CartDraft, ModelBase {
 
     private String currency;
@@ -123,172 +126,201 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>A three-digit currency code as per ISO 4217.</p>
+     */
+
     public String getCurrency() {
         return this.currency;
     }
 
     /**
-    *  <p>User-defined unique identifier for the Cart.</p>
-    */
+     *  <p>User-defined unique identifier for the Cart.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Id of an existing Customer.</p>
-    */
+     *  <p>Id of an existing Customer.</p>
+     */
+
     public String getCustomerId() {
         return this.customerId;
     }
+
+    /**
+     *
+     */
 
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
     /**
-    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group.
-    *  Can be set explicitly when no <code>customerId</code> is present.</p>
-    */
+     *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
+     */
+
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
     /**
-    *  <p>Assigns the new cart to the store.
-    *  The store assignment can not be modified.</p>
-    */
+     *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
+     */
+
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>Default inventory mode is <code>None</code>.</p>
-    */
+     *  <p>Default inventory mode is <code>None</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
     /**
-    *  <p>The default tax mode is <code>Platform</code>.</p>
-    */
+     *  <p>The default tax mode is <code>Platform</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
     /**
-    *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
-    */
+     *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
     /**
-    *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
-    */
+     *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.cart.LineItemDraft> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> getCustomLineItems() {
         return this.customLineItems;
     }
 
     /**
-    *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-    */
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
+     */
+
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.BaseAddress getBillingAddress() {
         return this.billingAddress;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
 
     /**
-    *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
+     */
+
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {
         return this.externalTaxRateForShippingMethod;
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>Must be one of the languages supported for this project</p>
-    */
+     *  <p>Must be one of the languages supported for this project</p>
+     */
+
     public String getLocale() {
         return this.locale;
     }
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
-    */
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
+
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
     /**
-    *  <p>The default origin is <code>Customer</code>.</p>
-    */
+     *  <p>The default origin is <code>Customer</code>.</p>
+     */
+
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
         return this.origin;
     }
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.
-    *  Based on the definition of ShippingRateInputType.
-    *  If CartClassification is defined, it must be ClassificationShippingRateInput.
-    *  If CartScore is defined, it must be ScoreShippingRateInput.
-    *  Otherwise it can not bet set.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     */
+
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
     }
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.
-    *  Line items will use these keys to reference the addresses under their <code>shippingDetails</code>.
-    *  The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
-    *  Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
     /**
-    *  <p>The code of existing DiscountCodes.</p>
-    */
+     *  <p>The code of existing DiscountCodes.</p>
+     */
+
     public java.util.List<String> getDiscountCodes() {
         return this.discountCodes;
     }

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartChangeTaxRoundingModeAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundingModeAction, ModelBase {
 
     private String action;
@@ -32,9 +35,17 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
         this.action = CHANGE_TAX_ROUNDING_MODE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;

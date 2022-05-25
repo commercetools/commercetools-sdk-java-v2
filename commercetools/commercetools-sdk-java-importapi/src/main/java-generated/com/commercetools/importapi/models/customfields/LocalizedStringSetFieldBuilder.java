@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LocalizedStringSetFieldBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LocalizedStringSetField localizedStringSetField = LocalizedStringSetField.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSetField> {
 
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
+
+    /**
+     *
+     */
 
     public LocalizedStringSetFieldBuilder value(
             final com.commercetools.importapi.models.common.LocalizedString... value) {
@@ -18,11 +34,19 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return this;
     }
 
+    /**
+     *
+     */
+
     public LocalizedStringSetFieldBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LocalizedStringSetFieldBuilder plusValue(
             final com.commercetools.importapi.models.common.LocalizedString... value) {
@@ -33,6 +57,10 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return this;
     }
 
+    /**
+     *
+     */
+
     public LocalizedStringSetFieldBuilder plusValue(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         if (this.value == null) {
@@ -41,6 +69,10 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public LocalizedStringSetFieldBuilder withValue(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {

@@ -13,41 +13,58 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewRatingStatistics
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
+ *             .averageRating(1)
+ *             .highestRating(1)
+ *             .lowestRating(1)
+ *             .count(1)
+ *             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewRatingStatisticsImpl.class)
 public interface ReviewRatingStatistics {
 
     /**
-    *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
-    */
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     */
     @NotNull
     @JsonProperty("averageRating")
     public Integer getAverageRating();
 
     /**
-    *  <p>Highest rating of one target</p>
-    */
+     *  <p>Highest rating of one target</p>
+     */
     @NotNull
     @JsonProperty("highestRating")
     public Integer getHighestRating();
 
     /**
-    *  <p>Lowest rating of one target</p>
-    */
+     *  <p>Lowest rating of one target</p>
+     */
     @NotNull
     @JsonProperty("lowestRating")
     public Integer getLowestRating();
 
     /**
-    *  <p>Number of ratings taken into account</p>
-    */
+     *  <p>Number of ratings taken into account</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Integer getCount();
 
     /**
-    *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
-    */
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("ratingsDistribution")

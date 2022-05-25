@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This type represents an attribute whose value is a localized text.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This type represents an attribute whose value is a localized text.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizableTextSetAttributeImpl implements LocalizableTextSetAttribute, ModelBase {
 
     private String name;
@@ -39,17 +39,24 @@ public class LocalizableTextSetAttributeImpl implements LocalizableTextSetAttrib
     }
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions.
-    *  The name is required if this type is used in a product variant and must not be set when
-    *  used in a product variant patch.</p>
-    */
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.LocalizedString> getValue() {
         return this.value;

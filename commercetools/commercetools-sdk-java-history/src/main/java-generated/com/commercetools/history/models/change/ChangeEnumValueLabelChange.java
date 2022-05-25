@@ -12,41 +12,67 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeEnumValueLabelChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeEnumValueLabelChange changeEnumValueLabelChange = ChangeEnumValueLabelChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .valueKey("{valueKey}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeEnumValueLabelChangeImpl.class)
 public interface ChangeEnumValueLabelChange extends Change {
 
     String CHANGE_ENUM_VALUE_LABEL_CHANGE = "ChangeEnumValueLabelChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
-    */
+     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>Key of the values that was updated</p>
-    */
+     *  <p>Key of the values that was updated</p>
+     */
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();

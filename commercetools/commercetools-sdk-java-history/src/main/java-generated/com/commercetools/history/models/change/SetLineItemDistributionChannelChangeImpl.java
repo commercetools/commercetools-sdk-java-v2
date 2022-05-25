@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemDistributionChannelChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDistributionChannelChange, ModelBase {
 
     private String type;
@@ -47,28 +50,49 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
         this.type = SET_LINE_ITEM_DISTRIBUTION_CHANNEL_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
-    */
+     *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     *
+     */
+
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;

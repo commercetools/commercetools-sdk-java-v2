@@ -13,12 +13,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductPriceDiscountsSetMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPriceDiscountsSetMessagePayload productPriceDiscountsSetMessagePayload = ProductPriceDiscountsSetMessagePayload.builder()
+ *             .plusUpdatedPrices(updatedPricesBuilder -> updatedPricesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceDiscountsSetMessagePayloadImpl.class)
 public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
 
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("updatedPrices")

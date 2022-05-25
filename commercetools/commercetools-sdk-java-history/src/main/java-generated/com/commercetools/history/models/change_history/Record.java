@@ -18,94 +18,111 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A Record captures the differences in a resource between one version and the next.
-*  (Recall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Record record = Record.builder()
+ *             .version(1)
+ *             .previousVersion(1)
+ *             .type("{type}")
+ *             .modifiedBy(modifiedByBuilder -> modifiedByBuilder)
+ *             .modifiedAt("{modifiedAt}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .previousLabel(previousLabelBuilder -> previousLabelBuilder)
+ *             .plusChanges(changesBuilder -> changesBuilder)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .plusStores(storesBuilder -> storesBuilder)
+ *             .withoutChanges(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RecordImpl.class)
 public interface Record {
 
     /**
-    *  <p>Version of the resource after the change.</p>
-    */
+     *  <p>Version of the resource after the change.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Integer getVersion();
 
     /**
-    *  <p>Version of the resource before the change.</p>
-    */
+     *  <p>Version of the resource before the change.</p>
+     */
     @NotNull
     @JsonProperty("previousVersion")
     public Integer getPreviousVersion();
 
     /**
-    *  <p>Type of the change (creation, update or deletion).</p>
-    */
+     *  <p>Type of the change (creation, update or deletion).</p>
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Information about the user or the API client who performed the change.</p>
-    */
+     *  <p>Information about the user or the API client who performed the change.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("modifiedBy")
     public ModifiedBy getModifiedBy();
 
     /**
-    *  <p>Date and time when the change was made.</p>
-    */
+     *  <p>Date and time when the change was made.</p>
+     */
     @NotNull
     @JsonProperty("modifiedAt")
     public String getModifiedAt();
 
     /**
-    *  <p>Information that describes the resource after the change.</p>
-    */
+     *  <p>Information that describes the resource after the change.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("label")
     public Label getLabel();
 
     /**
-    *  <p>Information that describes the resource before the change.</p>
-    */
+     *  <p>Information that describes the resource before the change.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousLabel")
     public Label getPreviousLabel();
 
     /**
-    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.
-    *  The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
-    */
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("changes")
     public List<Change> getChanges();
 
     /**
-    *  <p>Reference to the changed resource.</p>
-    */
+     *  <p>Reference to the changed resource.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("resource")
     public Reference getResource();
 
     /**
-    *  <p>References to the <a href="ctp:api:type:Store">Stores</a> attached to the <a href="ctp:history:type:Change">Change</a>.</p>
-    */
+     *  <p>References to the Stores attached to the Change.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("stores")
     public List<KeyReference> getStores();
 
     /**
-    *  <p><code>true</code> if no change was detected.
-    *  The version number of the resource can be increased even without any change in the resource.</p>
-    */
+     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     */
     @NotNull
     @JsonProperty("withoutChanges")
     public Boolean getWithoutChanges();

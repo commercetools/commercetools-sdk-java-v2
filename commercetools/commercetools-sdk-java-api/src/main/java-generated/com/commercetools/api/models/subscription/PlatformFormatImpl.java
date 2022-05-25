@@ -13,7 +13,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PlatformFormat
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PlatformFormatImpl implements PlatformFormat, ModelBase {
 
     private String type;
@@ -22,6 +25,10 @@ public class PlatformFormatImpl implements PlatformFormat, ModelBase {
     PlatformFormatImpl() {
         this.type = PLATFORM;
     }
+
+    /**
+     *
+     */
 
     public String getType() {
         return this.type;

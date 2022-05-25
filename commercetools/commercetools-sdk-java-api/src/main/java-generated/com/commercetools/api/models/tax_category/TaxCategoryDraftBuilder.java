@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxCategoryDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxCategoryDraft taxCategoryDraft = TaxCategoryDraft.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
 
     private String name;
@@ -23,15 +35,27 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     @Nullable
     private String key;
 
+    /**
+     *  <p>Name of the TaxCategory.</p>
+     */
+
     public TaxCategoryDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *  <p>Description of the TaxCategory.</p>
+     */
+
     public TaxCategoryDraftBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     */
 
     public TaxCategoryDraftBuilder rates(
             @Nullable final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
@@ -39,11 +63,19 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return this;
     }
 
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     */
+
     public TaxCategoryDraftBuilder rates(
             @Nullable final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates) {
         this.rates = rates;
         return this;
     }
+
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     */
 
     public TaxCategoryDraftBuilder plusRates(
             @Nullable final com.commercetools.api.models.tax_category.TaxRateDraft... rates) {
@@ -54,6 +86,10 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return this;
     }
 
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     */
+
     public TaxCategoryDraftBuilder plusRates(
             Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
         if (this.rates == null) {
@@ -63,12 +99,20 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return this;
     }
 
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     */
+
     public TaxCategoryDraftBuilder withRates(
             Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
         this.rates = new ArrayList<>();
         this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the TaxCategory.</p>
+     */
 
     public TaxCategoryDraftBuilder key(@Nullable final String key) {
         this.key = key;

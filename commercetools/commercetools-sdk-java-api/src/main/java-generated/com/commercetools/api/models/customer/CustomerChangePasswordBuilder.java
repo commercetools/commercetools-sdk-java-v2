@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerChangePasswordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerChangePassword customerChangePassword = CustomerChangePassword.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .currentPassword("{currentPassword}")
+ *             .newPassword("{newPassword}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangePasswordBuilder implements Builder<CustomerChangePassword> {
 
     private String id;
@@ -17,20 +32,36 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     private String newPassword;
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     */
+
     public CustomerChangePasswordBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerChangePasswordBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerChangePasswordBuilder currentPassword(final String currentPassword) {
         this.currentPassword = currentPassword;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerChangePasswordBuilder newPassword(final String newPassword) {
         this.newPassword = newPassword;

@@ -14,28 +14,49 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderAddDeliveryAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddDeliveryAction orderAddDeliveryAction = OrderAddDeliveryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderAddDeliveryActionImpl.class)
 public interface OrderAddDeliveryAction
         extends OrderUpdateAction, com.commercetools.api.models.CustomizableDraft<OrderAddDeliveryAction> {
 
     String ADD_DELIVERY = "addDelivery";
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("parcels")
     public List<ParcelDraft> getParcels();
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

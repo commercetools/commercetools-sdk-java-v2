@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -51,35 +54,57 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
     public MyShoppingListDraftImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
         return this.textLineItems;
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-    */
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
+
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;

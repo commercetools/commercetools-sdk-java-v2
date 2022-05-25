@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartSetLineItemDistributionChannelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartSetLineItemDistributionChannelAction myCartSetLineItemDistributionChannelAction = MyCartSetLineItemDistributionChannelAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetLineItemDistributionChannelActionBuilder
         implements Builder<MyCartSetLineItemDistributionChannelAction> {
 
@@ -18,10 +30,18 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     *
+     */
+
     public MyCartSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -30,6 +50,10 @@ public class MyCartSetLineItemDistributionChannelActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public MyCartSetLineItemDistributionChannelActionBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TrackingDataBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TrackingData trackingData = TrackingData.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataBuilder implements Builder<TrackingData> {
 
     @Nullable
@@ -26,25 +37,45 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     @Nullable
     private Boolean isReturn;
 
+    /**
+     *
+     */
+
     public TrackingDataBuilder trackingId(@Nullable final String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TrackingDataBuilder carrier(@Nullable final String carrier) {
         this.carrier = carrier;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TrackingDataBuilder provider(@Nullable final String provider) {
         this.provider = provider;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
         this.providerTransaction = providerTransaction;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
         this.isReturn = isReturn;

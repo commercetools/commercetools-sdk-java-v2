@@ -14,18 +14,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ZoneRateDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneRateDraft zoneRateDraft = ZoneRateDraft.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneRateDraftImpl.class)
 public interface ZoneRateDraft {
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("zone")
     public ZoneResourceIdentifier getZone();
 
     /**
-    *  <p>The array must not contain two shipping rates with the same currency.</p>
-    */
+     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("shippingRates")

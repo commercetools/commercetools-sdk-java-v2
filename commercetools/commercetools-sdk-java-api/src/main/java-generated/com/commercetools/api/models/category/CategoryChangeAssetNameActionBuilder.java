@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryChangeAssetNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryChangeAssetNameAction categoryChangeAssetNameAction = CategoryChangeAssetNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryChangeAssetNameAction> {
 
     @Nullable
@@ -20,21 +32,37 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     *
+     */
+
     public CategoryChangeAssetNameActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryChangeAssetNameActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategoryChangeAssetNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

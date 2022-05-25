@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryDeletedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryDeletedMessagePayload inventoryEntryDeletedMessagePayload = InventoryEntryDeletedMessagePayload.builder()
+ *             .sku("{sku}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<InventoryEntryDeletedMessagePayload> {
 
     private String sku;
@@ -17,16 +29,28 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     *
+     */
+
     public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetSearchKeywordsAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywordsAction, ModelBase {
 
     private String action;
@@ -36,13 +39,25 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
         this.action = SET_SEARCH_KEYWORDS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

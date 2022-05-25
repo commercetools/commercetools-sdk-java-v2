@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAttributeInAllVariantsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAttributeInAllVariantsAction productSetAttributeInAllVariantsAction = ProductSetAttributeInAllVariantsAction.builder()
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<ProductSetAttributeInAllVariantsAction> {
 
     private String name;
@@ -19,15 +31,27 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductSetAttributeInAllVariantsActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *  <p>The same update behavior as for Set Attribute applies.</p>
+     */
+
     public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

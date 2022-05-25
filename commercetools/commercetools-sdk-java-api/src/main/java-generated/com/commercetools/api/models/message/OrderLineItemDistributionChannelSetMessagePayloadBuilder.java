@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemDistributionChannelSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemDistributionChannelSetMessagePayload orderLineItemDistributionChannelSetMessagePayload = OrderLineItemDistributionChannelSetMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
         implements Builder<OrderLineItemDistributionChannelSetMessagePayload> {
 
@@ -18,10 +30,18 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+     *
+     */
+
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -29,6 +49,10 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {

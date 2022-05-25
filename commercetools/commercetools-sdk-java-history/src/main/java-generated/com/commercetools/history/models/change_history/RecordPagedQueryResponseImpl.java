@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Response to a query request for <a href="#record">Record</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Response to a query request for Record.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, ModelBase {
 
     private Integer limit;
@@ -45,33 +45,40 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
+
     public Integer getCount() {
         return this.count;
     }
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation and not <a href="/general-concepts#strong-consistency">strongly consistent</a>.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     */
+
     public Integer getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Integer getOffset() {
         return this.offset;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
         return this.results;

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A set of ProductData for comparison. If no optional attributes are specified, all <code>current</code> ProductData are selected for comparison.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A set of ProductData for comparison. If no optional attributes are specified, all <code>current</code> ProductData are selected for comparison.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
 
     private String projectKey;
@@ -51,43 +51,49 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
     }
 
     /**
-    *  <p>The project containing the project set.</p>
-    */
+     *  <p>The project containing the project set.</p>
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
 
     /**
-    *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
-    */
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     */
+
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
     /**
-    *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
-    */
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     */
+
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
 
     /**
-    *  <p>Specifies use of staged or current product data.</p>
-    */
+     *  <p>Specifies use of staged or current product data.</p>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-    *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
-    */
+     *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+     */
+
     public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
 
     /**
-    *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
-    */
+     *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+     */
+
     public Long getProductSetLimit() {
         return this.productSetLimit;
     }

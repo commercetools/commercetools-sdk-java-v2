@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeLocalizedEnumTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeLocalizedEnumType attributeLocalizedEnumType = AttributeLocalizedEnumType.builder()
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocalizedEnumType> {
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
+
+    /**
+     *
+     */
 
     public AttributeLocalizedEnumTypeBuilder values(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
@@ -18,11 +34,19 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeLocalizedEnumTypeBuilder values(
             final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
             final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
@@ -33,6 +57,10 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeLocalizedEnumTypeBuilder plusValues(
             Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
@@ -42,6 +70,10 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
             builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeLocalizedEnumTypeBuilder withValues(
             Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {

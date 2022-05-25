@@ -13,15 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice {
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("totalGross")

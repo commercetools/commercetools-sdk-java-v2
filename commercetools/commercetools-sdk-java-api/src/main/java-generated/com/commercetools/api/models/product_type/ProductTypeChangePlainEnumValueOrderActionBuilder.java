@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangePlainEnumValueOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangePlainEnumValueOrderAction productTypeChangePlainEnumValueOrderAction = ProductTypeChangePlainEnumValueOrderAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .plusValues(valuesBuilder -> valuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangePlainEnumValueOrderActionBuilder
         implements Builder<ProductTypeChangePlainEnumValueOrderAction> {
 
@@ -15,10 +28,18 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
 
     private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
+    /**
+     *
+     */
+
     public ProductTypeChangePlainEnumValueOrderActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder values(
             final com.commercetools.api.models.product_type.AttributePlainEnumValue... values) {
@@ -26,11 +47,19 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeChangePlainEnumValueOrderActionBuilder values(
             final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder plusValues(
             final com.commercetools.api.models.product_type.AttributePlainEnumValue... values) {
@@ -41,6 +70,10 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeChangePlainEnumValueOrderActionBuilder plusValues(
             Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
         if (this.values == null) {
@@ -50,6 +83,10 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
             builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangePlainEnumValueOrderActionBuilder withValues(
             Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {

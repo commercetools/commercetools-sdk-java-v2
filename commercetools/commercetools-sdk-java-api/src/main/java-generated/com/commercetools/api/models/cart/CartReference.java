@@ -15,24 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Cart">Cart</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a Cart.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartReference cartReference = CartReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartReferenceImpl.class)
 public interface CartReference extends Reference, com.commercetools.api.models.Identifiable<Cart> {
 
     String CART = "cart";
 
     /**
-    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Carts.</p>
-    */
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Cart getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Cart">Cart</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced Cart.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

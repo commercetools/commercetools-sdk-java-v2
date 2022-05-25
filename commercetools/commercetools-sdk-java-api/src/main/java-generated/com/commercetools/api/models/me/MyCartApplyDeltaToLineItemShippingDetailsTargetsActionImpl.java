@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
         implements MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
         this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {
         return this.targetsDelta;

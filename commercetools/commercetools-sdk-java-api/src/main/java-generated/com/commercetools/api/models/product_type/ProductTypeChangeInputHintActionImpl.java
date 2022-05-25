@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeInputHintAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeInputHintAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
         this.action = CHANGE_INPUT_HINT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product_type.TextInputHint getNewValue() {
         return this.newValue;

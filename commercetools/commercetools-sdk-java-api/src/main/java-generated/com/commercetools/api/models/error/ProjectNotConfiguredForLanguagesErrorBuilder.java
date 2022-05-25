@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectNotConfiguredForLanguagesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectNotConfiguredForLanguagesError projectNotConfiguredForLanguagesError = ProjectNotConfiguredForLanguagesError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<ProjectNotConfiguredForLanguagesError> {
 
     private String message;
@@ -18,15 +30,27 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
     @Nullable
     private java.util.List<String> languages;
 
+    /**
+     *
+     */
+
     public ProjectNotConfiguredForLanguagesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProjectNotConfiguredForLanguagesErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -36,15 +60,27 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProjectNotConfiguredForLanguagesErrorBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProjectNotConfiguredForLanguagesErrorBuilder plusLanguages(@Nullable final String... languages) {
         if (this.languages == null) {

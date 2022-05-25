@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeSetCartPredicateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCartPredicateAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCa
         this.action = SET_CART_PREDICATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }

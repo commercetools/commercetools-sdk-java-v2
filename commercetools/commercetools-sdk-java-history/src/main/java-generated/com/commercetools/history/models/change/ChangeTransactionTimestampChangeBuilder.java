@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTransactionTimestampChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionTimestampChange changeTransactionTimestampChange = ChangeTransactionTimestampChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue("{nextValue}")
+ *             .previousValue("{previousValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTransactionTimestampChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     private String previousValue;
 
+    /**
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     */
+
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTransactionTimestampChangeBuilder transaction(
             Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValueBuilder> builder) {
@@ -31,16 +54,28 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTransactionTimestampChangeBuilder transaction(
             final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
         this.transaction = transaction;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTransactionTimestampChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTransactionTimestampChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;

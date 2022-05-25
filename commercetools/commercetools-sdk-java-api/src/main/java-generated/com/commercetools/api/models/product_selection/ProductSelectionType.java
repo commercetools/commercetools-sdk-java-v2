@@ -12,16 +12,29 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ProductSelectionType
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionType productSelectionType = ProductSelectionType.individualBuilder()
+ *             name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductSelectionTypeImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionTypeImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductSelectionType {
 
     /**
-    *  <p>The following type of Product Selections is supported:</p>
-    */
+     *  <p>The following type of Product Selections is supported:</p>
+     */
     @NotNull
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();

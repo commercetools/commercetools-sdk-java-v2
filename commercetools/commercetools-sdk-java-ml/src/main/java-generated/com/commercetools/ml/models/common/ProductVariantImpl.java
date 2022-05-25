@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The product variant that contains the image.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The product variant that contains the image.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -38,22 +38,25 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-    *  <p>The product that contains this variant.</p>
-    */
+     *  <p>The product that contains this variant.</p>
+     */
+
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
     /**
-    *  <p>The state of the product variant.</p>
-    */
+     *  <p>The state of the product variant.</p>
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-    *  <p>The id of the product variant.</p>
-    */
+     *  <p>The id of the product variant.</p>
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }

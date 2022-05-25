@@ -14,15 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelChangeDescriptionAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelChangeDescriptionAction channelChangeDescriptionAction = ChannelChangeDescriptionAction.builder()
+ *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
     String CHANGE_DESCRIPTION = "changeDescription";
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("description")

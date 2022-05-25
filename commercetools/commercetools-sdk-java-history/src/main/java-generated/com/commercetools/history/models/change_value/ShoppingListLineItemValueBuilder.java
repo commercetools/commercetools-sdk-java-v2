@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListLineItemValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItemValue shoppingListLineItemValue = ShoppingListLineItemValue.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLineItemValue> {
 
     private String id;
@@ -16,10 +30,18 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
 
     private Integer variantId;
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemValueBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemValueBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -27,10 +49,18 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemValueBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemValueBuilder variantId(final Integer variantId) {
         this.variantId = variantId;

@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImportOperationStatusBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportOperationStatus importOperationStatus = ImportOperationStatus.builder()
+ *             .state(ImportOperationState.PROCESSING)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationStatusBuilder implements Builder<ImportOperationStatus> {
 
     @Nullable
@@ -20,10 +32,18 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
+    /**
+     *  <p>The ID of the ImportOperation.</p>
+     */
+
     public ImportOperationStatusBuilder operationId(@Nullable final String operationId) {
         this.operationId = operationId;
         return this;
     }
+
+    /**
+     *  <p>The validation state of the ImportOperation.</p>
+     */
 
     public ImportOperationStatusBuilder state(
             final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
@@ -31,17 +51,29 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         return this;
     }
 
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
+
     public ImportOperationStatusBuilder errors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
 
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
+
     public ImportOperationStatusBuilder errors(
             @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
+
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
 
     public ImportOperationStatusBuilder plusErrors(
             @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
@@ -52,6 +84,10 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         return this;
     }
 
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
+
     public ImportOperationStatusBuilder plusErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
         if (this.errors == null) {
@@ -60,6 +96,10 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     */
 
     public ImportOperationStatusBuilder withErrors(
             Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {

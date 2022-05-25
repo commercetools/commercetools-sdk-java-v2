@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerEmailChangedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerEmailChangedMessagePayload customerEmailChangedMessagePayload = CustomerEmailChangedMessagePayload.builder()
+ *             .email("{email}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerEmailChangedMessagePayloadImpl.class)
 public interface CustomerEmailChangedMessagePayload extends MessagePayload {
 
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();

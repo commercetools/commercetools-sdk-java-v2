@@ -12,16 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateChangeTypeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StateChangeTypeAction stateChangeTypeAction = StateChangeTypeAction.builder()
+ *             .type(StateTypeEnum.ORDER_STATE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
 
     String CHANGE_TYPE = "changeType";
 
     /**
-    *  <p>Resource or object types the State shall be assigned to.
-    *  Must not be empty.</p>
-    */
+     *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     */
     @NotNull
     @JsonProperty("type")
     public StateTypeEnum getType();

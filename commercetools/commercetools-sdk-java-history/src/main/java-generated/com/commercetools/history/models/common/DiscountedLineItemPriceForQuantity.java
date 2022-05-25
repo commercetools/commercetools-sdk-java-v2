@@ -13,14 +13,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedLineItemPriceForQuantity
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
+ *             .quantity(1)
+ *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPriceForQuantityImpl.class)
 public interface DiscountedLineItemPriceForQuantity {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("discountedPrice")

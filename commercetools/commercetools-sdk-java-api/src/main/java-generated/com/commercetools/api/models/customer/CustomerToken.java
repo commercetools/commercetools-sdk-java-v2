@@ -13,32 +13,65 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerToken
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerToken customerToken = CustomerToken.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .customerId("{customerId}")
+ *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .value("{value}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerTokenImpl.class)
 public interface CustomerToken {
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomerToken.</p>
-    */
+     *  <p>Unique identifier of the CustomerToken.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *
+     */
+
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customerId")
     public String getCustomerId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public String getValue();

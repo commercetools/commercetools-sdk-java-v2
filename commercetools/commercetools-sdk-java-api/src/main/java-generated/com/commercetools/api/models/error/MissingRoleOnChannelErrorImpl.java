@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingRoleOnChannelError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError, ModelBase {
 
     private String code;
@@ -43,28 +46,42 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
         this.code = MISSING_ROLE_ON_CHANNEL;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     *
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *
+     */
 
     public Map<String, java.lang.Object> values() {
         return values;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
-    */
+     *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelRoleEnum getMissingRole() {
         return this.missingRole;
     }

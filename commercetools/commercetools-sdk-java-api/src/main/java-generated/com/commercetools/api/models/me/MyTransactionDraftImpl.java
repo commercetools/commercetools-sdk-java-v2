@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyTransactionDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
 
     private java.time.ZonedDateTime timestamp;
@@ -44,38 +47,41 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-    *  <p>The time at which the transaction took place.</p>
-    */
+     *  <p>The time at which the transaction took place.</p>
+     */
+
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
     /**
-    *  <p>The type of this transaction.
-    *  Only the <code>Authorization</code> or <code>Charge</code>
-    *  TransactionTypes are allowed here.</p>
-    */
+     *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
+     */
+
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the interfaceInteractions array,
-    *  the corresponding interaction should be findable with this ID.
-    *  The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
-    */
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
+     */
+
     public String getInteractionId() {
         return this.interactionId;
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

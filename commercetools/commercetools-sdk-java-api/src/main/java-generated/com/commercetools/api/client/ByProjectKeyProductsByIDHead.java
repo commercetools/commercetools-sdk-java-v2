@@ -14,9 +14,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Checks if product with given ID exists.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Checks if product with given ID exists.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .products()
+ *            .withId("{ID}")
+ *            .head()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsByIDHead
         extends ApiMethod<ByProjectKeyProductsByIDHead, com.fasterxml.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDHead>,

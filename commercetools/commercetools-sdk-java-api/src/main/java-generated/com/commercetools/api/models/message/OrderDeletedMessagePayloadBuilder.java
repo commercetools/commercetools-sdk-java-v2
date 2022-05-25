@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderDeletedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderDeletedMessagePayload orderDeletedMessagePayload = OrderDeletedMessagePayload.builder()
+ *             .order(orderBuilder -> orderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMessagePayload> {
 
     private com.commercetools.api.models.order.Order order;
+
+    /**
+     *
+     */
 
     public OrderDeletedMessagePayloadBuilder order(
             Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderDeletedMessagePayloadBuilder order(final com.commercetools.api.models.order.Order order) {
         this.order = order;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SimilarProductSearchRequestMeta
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductSearchRequestMetaImpl implements SimilarProductSearchRequestMeta, ModelBase {
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
@@ -29,8 +32,9 @@ public class SimilarProductSearchRequestMetaImpl implements SimilarProductSearch
     }
 
     /**
-    *  <p>The SimilarityMeasures used in this search.</p>
-    */
+     *  <p>The SimilarityMeasures used in this search.</p>
+     */
+
     public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
         return this.similarityMeasures;
     }

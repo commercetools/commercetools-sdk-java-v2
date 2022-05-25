@@ -13,12 +13,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeSetType
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeSetType attributeSetType = AttributeSetType.builder()
+ *             .elementType(elementTypeBuilder -> elementTypeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
 
     String SET = "set";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("elementType")

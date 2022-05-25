@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EditPreviewFailedError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, ModelBase {
 
     private String code;
@@ -39,17 +42,33 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
         this.code = EDIT_PREVIEW_FAILED;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {
         return this.result;

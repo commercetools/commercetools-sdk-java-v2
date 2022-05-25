@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetVatIdChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVatIdChangeImpl implements SetVatIdChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetVatIdChangeImpl implements SetVatIdChange, ModelBase {
         this.type = SET_VAT_ID_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Shape of the action for <code>setVatId</code></p>
-    */
+     *  <p>Shape of the action for <code>setVatId</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public String getNextValue() {
         return this.nextValue;

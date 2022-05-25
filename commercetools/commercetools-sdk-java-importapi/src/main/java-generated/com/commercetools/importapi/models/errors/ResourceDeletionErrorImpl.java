@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ResourceDeletionError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBase {
 
     private String code;
@@ -35,13 +38,25 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
         this.code = RESOURCE_DELETION;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     *
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *
+     */
 
     public java.lang.Object getResource() {
         return this.resource;

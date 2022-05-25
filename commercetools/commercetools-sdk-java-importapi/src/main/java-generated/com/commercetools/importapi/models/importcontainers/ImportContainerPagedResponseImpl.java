@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for <a href="#importcontainer">ImportContainers</a>.
-*  Used as a response to a query request for <a href="#importcontainer">ImportContainers</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse, ModelBase {
 
     private Integer limit;
@@ -47,36 +46,41 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>The actual number of results returned.</p>
-    */
+     *  <p>The actual number of results returned.</p>
+     */
+
     public Long getCount() {
         return this.count;
     }
 
     /**
-    *  <p>The total number of results matching the query.</p>
-    */
+     *  <p>The total number of results matching the query.</p>
+     */
+
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>The array of Import Containers matching the query.</p>
-    */
+     *  <p>The array of Import Containers matching the query.</p>
+     */
+
     public java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> getResults() {
         return this.results;
     }

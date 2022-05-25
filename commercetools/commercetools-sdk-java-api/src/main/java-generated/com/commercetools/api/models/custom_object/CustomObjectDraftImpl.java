@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomObjectDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
 
     private String container;
@@ -38,31 +41,33 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
     }
 
     /**
-    *  <p>Namespace to group CustomObjects.</p>
-    */
+     *  <p>Namespace to group CustomObjects.</p>
+     */
+
     public String getContainer() {
         return this.container;
     }
 
     /**
-    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
-    */
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>JSON standard types Number, String, Boolean, Array, Object, and <a href="/../api/types">common API data types</a>.
-    *  For values of type <a href="ctp:api:type:Reference">Reference</a> the integrity of the data is not guaranteed.
-    *  If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
-    */
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Current version of the CustomObject.</p>
-    */
+     *  <p>Current version of the CustomObject.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }

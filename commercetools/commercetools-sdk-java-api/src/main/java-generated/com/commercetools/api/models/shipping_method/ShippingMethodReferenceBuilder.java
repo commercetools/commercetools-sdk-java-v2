@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodReferenceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodReference shippingMethodReference = ShippingMethodReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodReference> {
 
     private String id;
@@ -17,16 +29,28 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
+    /**
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     */
+
     public ShippingMethodReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     */
 
     public ShippingMethodReferenceBuilder obj(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     */
 
     public ShippingMethodReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethod obj) {

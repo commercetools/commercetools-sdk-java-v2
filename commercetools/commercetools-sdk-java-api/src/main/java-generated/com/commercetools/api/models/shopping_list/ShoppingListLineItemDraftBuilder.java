@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListLineItemDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItemDraft shoppingListLineItemDraft = ShoppingListLineItemDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
 
     @Nullable
@@ -30,10 +41,18 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     @Nullable
     private Long variantId;
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public ShoppingListLineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -41,26 +60,46 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
         return this;
     }
 
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public ShoppingListLineItemDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;

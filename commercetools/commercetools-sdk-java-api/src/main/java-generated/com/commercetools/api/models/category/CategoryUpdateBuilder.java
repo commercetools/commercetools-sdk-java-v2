@@ -7,28 +7,57 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryUpdate categoryUpdate = CategoryUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
+    /**
+     *
+     */
+
     public CategoryUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryUpdateBuilder actions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategoryUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryUpdateBuilder plusActions(
             final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
@@ -39,6 +68,10 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategoryUpdateBuilder plusActions(
             Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {
         if (this.actions == null) {
@@ -47,6 +80,10 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.category.CategoryUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryUpdateBuilder withActions(
             Function<com.commercetools.api.models.category.CategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.category.CategoryUpdateAction>> builder) {

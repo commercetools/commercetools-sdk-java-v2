@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemDistributionChannelSetMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessagePayloadImpl
         implements OrderLineItemDistributionChannelSetMessagePayload, ModelBase {
 
@@ -36,17 +39,26 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
         return this.distributionChannel;
     }

@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .id("{id}")
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetBuilder implements Builder<Asset> {
 
     private String id;
@@ -30,20 +44,36 @@ public class AssetBuilder implements Builder<Asset> {
     @Nullable
     private String key;
 
+    /**
+     *  <p>Unique identifier of the Asset.</p>
+     */
+
     public AssetBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder sources(final com.commercetools.api.models.common.AssetSource... sources) {
         this.sources = new ArrayList<>(Arrays.asList(sources));
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder plusSources(final com.commercetools.api.models.common.AssetSource... sources) {
         if (this.sources == null) {
@@ -52,6 +82,10 @@ public class AssetBuilder implements Builder<Asset> {
         this.sources.addAll(Arrays.asList(sources));
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder plusSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
@@ -62,6 +96,10 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder withSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
         this.sources = new ArrayList<>();
@@ -69,16 +107,28 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>Name of the Asset.</p>
+     */
+
     public AssetBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Name of the Asset.</p>
+     */
+
     public AssetBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Description of the Asset.</p>
+     */
 
     public AssetBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -86,20 +136,36 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>Description of the Asset.</p>
+     */
+
     public AssetBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
+
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -109,16 +175,28 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
+
     public AssetBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
+
     public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Asset.</p>
+     */
 
     public AssetBuilder key(@Nullable final String key) {
         this.key = key;

@@ -13,35 +13,71 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxRate
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxRate taxRate = TaxRate.builder()
+ *             .name("{name}")
+ *             .amount(0.3)
+ *             .includedInPrice(true)
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxRateImpl.class)
 public interface TaxRate {
+
+    /**
+     *
+     */
 
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("amount")
     public Double getAmount();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     *
+     */
+
     @JsonProperty("state")
     public String getState();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();

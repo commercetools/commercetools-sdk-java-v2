@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCartPredicateChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartPredicateChangeImpl implements SetCartPredicateChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
         this.type = SET_CART_PREDICATE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Shape of the action for <code>setCartPredicate</code></p>
-    */
+     *  <p>Shape of the action for <code>setCartPredicate</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public String getNextValue() {
         return this.nextValue;

@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GoogleCloudPubSubDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GoogleCloudPubSubDestination googleCloudPubSubDestination = GoogleCloudPubSubDestination.builder()
+ *             .projectId("{projectId}")
+ *             .topic("{topic}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GoogleCloudPubSubDestinationBuilder implements Builder<GoogleCloudPubSubDestination> {
 
     private String projectId;
 
     private String topic;
 
+    /**
+     *
+     */
+
     public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
         this.projectId = projectId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GoogleCloudPubSubDestinationBuilder topic(final String topic) {
         this.topic = topic;

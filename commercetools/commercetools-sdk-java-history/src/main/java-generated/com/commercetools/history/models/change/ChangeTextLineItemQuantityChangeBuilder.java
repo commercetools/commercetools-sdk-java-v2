@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTextLineItemQuantityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTextLineItemQuantityChange changeTextLineItemQuantityChange = ChangeTextLineItemQuantityChange.builder()
+ *             .change("{change}")
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTextLineItemQuantityChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     private Integer nextValue;
 
+    /**
+     *
+     */
+
     public ChangeTextLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTextLineItemQuantityChangeBuilder textLineItem(
             Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
@@ -30,16 +53,28 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTextLineItemQuantityChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTextLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTextLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

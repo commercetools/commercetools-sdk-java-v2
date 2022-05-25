@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeNestedType
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
 
     private String name;
@@ -32,13 +35,18 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
         this.name = NESTED;
     }
 
+    /**
+     *
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
-    */
+     *  <p>Reference to a ProductType.</p>
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference() {
         return this.typeReference;
     }

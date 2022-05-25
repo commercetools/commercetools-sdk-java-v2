@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingAttributes
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesImpl implements MissingAttributes, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -51,38 +54,57 @@ public class MissingAttributesImpl implements MissingAttributes, ModelBase {
     public MissingAttributesImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.ml.models.common.ProductTypeReference getProductType() {
         return this.productType;
     }
 
     /**
-    *  <p>ID of a ProductVariant.</p>
-    */
+     *  <p>ID of a ProductVariant.</p>
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
+
     public java.util.List<String> getMissingAttributeValues() {
         return this.missingAttributeValues;
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
+
     public java.util.List<String> getMissingAttributeNames() {
         return this.missingAttributeNames;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {
         return this.attributeCount;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {
         return this.attributeCoverage;

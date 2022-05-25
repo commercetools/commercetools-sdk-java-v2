@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectSetShippingRateInputTypeAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShippingRateInputTypeAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
         this.action = SET_SHIPPING_RATE_INPUT_TYPE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
+
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
         return this.shippingRateInputType;
     }

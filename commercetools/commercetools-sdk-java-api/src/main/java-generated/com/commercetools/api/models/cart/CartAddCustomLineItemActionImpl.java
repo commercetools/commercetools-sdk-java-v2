@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartAddCustomLineItemAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAction, ModelBase {
 
     private String action;
@@ -54,46 +57,66 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *
+     */
 
     public String getSlug() {
         return this.slug;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

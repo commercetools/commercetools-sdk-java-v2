@@ -15,16 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     FieldDefinitionOrderValue fieldDefinitionOrderValue = FieldDefinitionOrderValue.builder()
+ *             .name("{name}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FieldDefinitionOrderValueImpl.class)
 public interface FieldDefinitionOrderValue {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("label")

@@ -15,13 +15,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A list of the ID's and validation statuses of newly created <a href="#importoperation">ImportOperations</a>.
-*  Used as a response at each resource-specific import endpoint, for example, at <a href="/category#import-categories">Import Categories</a> and <a href="/product-type#import-producttypes">Import ProductTypes</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportResponse importResponse = ImportResponse.builder()
+ *             .plusOperationStatus(operationStatusBuilder -> operationStatusBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportResponseImpl.class)
 public interface ImportResponse {
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("operationStatus")

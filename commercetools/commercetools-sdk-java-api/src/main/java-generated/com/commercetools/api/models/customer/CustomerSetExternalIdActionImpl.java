@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetExternalIdAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
         this.action = SET_EXTERNAL_ID;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>If not defined, the external ID is unset.</p>
-    */
+     *  <p>If not defined, the external ID is unset.</p>
+     */
+
     public String getExternalId() {
         return this.externalId;
     }

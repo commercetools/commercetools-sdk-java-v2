@@ -12,14 +12,30 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * DeliveryFormat
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryFormat deliveryFormat = DeliveryFormat.cloudEventsBuilder()
+ *             cloudEventsVersion("{cloudEventsVersion}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.CloudEventsFormatImpl.class, name = CloudEventsFormat.CLOUD_EVENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.PlatformFormatImpl.class, name = PlatformFormat.PLATFORM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DeliveryFormatImpl.class, visible = true)
 @JsonDeserialize(as = DeliveryFormatImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DeliveryFormat {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

@@ -18,7 +18,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerGroup
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroup customerGroup = CustomerGroup.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupImpl.class)
 public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup>,
         com.commercetools.api.models.Referencable<CustomerGroup>,
@@ -26,64 +43,64 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         com.commercetools.api.models.Customizable<CustomerGroup> {
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
-    */
+     *  <p>Unique identifier of the CustomerGroup.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Current version of the CustomerGroup.</p>
-    */
+     *  <p>Current version of the CustomerGroup.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the CustomerGroup.</p>
-    */
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Unique name of the CustomerGroup.</p>
-    */
+     *  <p>Unique name of the CustomerGroup.</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Custom Fields for the CustomerGroup.</p>
-    */
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

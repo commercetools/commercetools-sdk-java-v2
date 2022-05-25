@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetRatingChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetRatingChange setRatingChange = SetRatingChange.builder()
+ *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     private Integer nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setRating</code></p>
+     */
+
     public SetRatingChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetRatingChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetRatingChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;

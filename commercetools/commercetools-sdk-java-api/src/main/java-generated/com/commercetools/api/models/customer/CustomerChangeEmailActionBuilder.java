@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerChangeEmailActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerChangeEmailAction customerChangeEmailAction = CustomerChangeEmailAction.builder()
+ *             .email("{email}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerChangeEmailActionBuilder implements Builder<CustomerChangeEmailAction> {
 
     private String email;
+
+    /**
+     *
+     */
 
     public CustomerChangeEmailActionBuilder email(final String email) {
         this.email = email;

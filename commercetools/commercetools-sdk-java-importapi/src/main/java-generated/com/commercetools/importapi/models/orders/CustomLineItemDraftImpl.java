@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItemDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.importapi.models.common.LocalizedString name;
@@ -71,59 +74,101 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getMoney() {
         return this.money;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
 
+    /**
+     *
+     */
+
     public String getSlug() {
         return this.slug;
     }
 
+    /**
+     *
+     */
+
     public Double getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState() {
         return this.state;
     }
 
     /**
-    *  <p>References a tax category by key.</p>
-    */
+     *  <p>References a tax category by key.</p>
+     */
+
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.importapi.models.orders.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;

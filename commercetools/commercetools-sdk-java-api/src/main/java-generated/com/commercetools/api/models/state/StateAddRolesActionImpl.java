@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateAddRolesAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
         this.action = ADD_ROLES;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

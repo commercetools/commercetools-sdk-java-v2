@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Suggestion
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SuggestionImpl implements Suggestion, ModelBase {
 
     private String text;
@@ -28,8 +31,9 @@ public class SuggestionImpl implements Suggestion, ModelBase {
     }
 
     /**
-    *  <p>The suggested text.</p>
-    */
+     *  <p>The suggested text.</p>
+     */
+
     public String getText() {
         return this.text;
     }

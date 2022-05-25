@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeSetTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeSetType attributeSetType = AttributeSetType.builder()
+ *             .elementType(elementTypeBuilder -> elementTypeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
 
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
+
+    /**
+     *
+     */
 
     public AttributeSetTypeBuilder elementType(
             final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
         this.elementType = elementType;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeSetTypeBuilder elementType(
             Function<com.commercetools.importapi.models.producttypes.AttributeTypeBuilder, Builder<? extends com.commercetools.importapi.models.producttypes.AttributeType>> builder) {

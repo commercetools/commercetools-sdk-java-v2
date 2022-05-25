@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssignedProductSelectionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssignedProductSelection assignedProductSelection = AssignedProductSelection.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductSelectionBuilder implements Builder<AssignedProductSelection> {
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
+
+    /**
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     */
 
     public AssignedProductSelectionBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
@@ -19,6 +35,10 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     */
 
     public AssignedProductSelectionBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {

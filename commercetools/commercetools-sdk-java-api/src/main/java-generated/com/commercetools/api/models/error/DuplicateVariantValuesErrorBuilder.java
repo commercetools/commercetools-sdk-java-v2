@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateVariantValuesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateVariantValuesError duplicateVariantValuesError = DuplicateVariantValuesError.builder()
+ *             .message("{message}")
+ *             .variantValues(variantValuesBuilder -> variantValuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVariantValuesError> {
 
     private String message;
@@ -16,15 +29,27 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     private com.commercetools.api.models.error.VariantValues variantValues;
 
+    /**
+     *
+     */
+
     public DuplicateVariantValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateVariantValuesErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateVariantValuesErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -34,11 +59,19 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateVariantValuesErrorBuilder variantValues(
             Function<com.commercetools.api.models.error.VariantValuesBuilder, com.commercetools.api.models.error.VariantValuesBuilder> builder) {
         this.variantValues = builder.apply(com.commercetools.api.models.error.VariantValuesBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
             final com.commercetools.api.models.error.VariantValues variantValues) {

@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderPatchImportBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderPatchImport orderPatchImport = OrderPatchImport.builder()
+ *             .orderNumber("{orderNumber}")
+ *             .fields(fieldsBuilder -> fieldsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     private String orderNumber;
 
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
+    /**
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     */
+
     public OrderPatchImportBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
+
+    /**
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     */
 
     public OrderPatchImportBuilder fields(
             Function<com.commercetools.importapi.models.order_patches.OrderFieldBuilder, com.commercetools.importapi.models.order_patches.OrderFieldBuilder> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.order_patches.OrderFieldBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     */
 
     public OrderPatchImportBuilder fields(final com.commercetools.importapi.models.order_patches.OrderField fields) {
         this.fields = fields;

@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DateSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateSetAttribute dateSetAttribute = DateSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     @Nullable
@@ -16,20 +28,36 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
 
     private java.util.List<java.time.LocalDate> value;
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
+
     public DateSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DateSetAttributeBuilder value(final java.time.LocalDate... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     *
+     */
+
     public DateSetAttributeBuilder value(final java.util.List<java.time.LocalDate> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DateSetAttributeBuilder plusValue(final java.time.LocalDate... value) {
         if (this.value == null) {

@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetAssetSourcesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetAssetSourcesAction categorySetAssetSourcesAction = CategorySetAssetSourcesAction.builder()
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySetAssetSourcesAction> {
 
     @Nullable
@@ -20,15 +32,27 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
+    /**
+     *
+     */
+
     public CategorySetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategorySetAssetSourcesActionBuilder sources(
             final com.commercetools.api.models.common.AssetSource... sources) {
@@ -36,11 +60,19 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategorySetAssetSourcesActionBuilder sources(
             final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
             final com.commercetools.api.models.common.AssetSource... sources) {
@@ -51,6 +83,10 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategorySetAssetSourcesActionBuilder plusSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
         if (this.sources == null) {
@@ -59,6 +95,10 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategorySetAssetSourcesActionBuilder withSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {

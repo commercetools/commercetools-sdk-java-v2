@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddBillingAddressIdChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddBillingAddressIdChangeImpl implements AddBillingAddressIdChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class AddBillingAddressIdChangeImpl implements AddBillingAddressIdChange,
         this.type = ADD_BILLING_ADDRESS_ID_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
-    */
+     *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;

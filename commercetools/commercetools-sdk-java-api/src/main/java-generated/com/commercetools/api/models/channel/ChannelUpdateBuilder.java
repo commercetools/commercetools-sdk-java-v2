@@ -7,28 +7,57 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelUpdate channelUpdate = ChannelUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
+    /**
+     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     */
+
     public ChannelUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     */
 
     public ChannelUpdateBuilder actions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     */
+
     public ChannelUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     */
 
     public ChannelUpdateBuilder plusActions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
         if (this.actions == null) {
@@ -38,6 +67,10 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     */
+
     public ChannelUpdateBuilder plusActions(
             Function<com.commercetools.api.models.channel.ChannelUpdateActionBuilder, Builder<? extends com.commercetools.api.models.channel.ChannelUpdateAction>> builder) {
         if (this.actions == null) {
@@ -46,6 +79,10 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.channel.ChannelUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     */
 
     public ChannelUpdateBuilder withActions(
             Function<com.commercetools.api.models.channel.ChannelUpdateActionBuilder, Builder<? extends com.commercetools.api.models.channel.ChannelUpdateAction>> builder) {

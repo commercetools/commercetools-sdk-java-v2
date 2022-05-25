@@ -9,17 +9,36 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListSetSlugActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListSetSlugAction shoppingListSetSlugAction = ShoppingListSetSlugAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSetSlugAction> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
+
+    /**
+     *
+     */
 
     public ShoppingListSetSlugActionBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListSetSlugActionBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {

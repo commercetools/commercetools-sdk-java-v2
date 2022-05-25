@@ -15,44 +15,78 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewStateTransitionMessage
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewStateTransitionMessage reviewStateTransitionMessage = ReviewStateTransitionMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .oldState(oldStateBuilder -> oldStateBuilder)
+ *             .newState(newStateBuilder -> newStateBuilder)
+ *             .oldIncludedInStatistics(true)
+ *             .newIncludedInStatistics(true)
+ *             .target(targetBuilder -> targetBuilder)
+ *             .force(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewStateTransitionMessageImpl.class)
 public interface ReviewStateTransitionMessage extends Message {
 
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("oldState")
     public StateReference getOldState();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("newState")
     public StateReference getNewState();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("oldIncludedInStatistics")
     public Boolean getOldIncludedInStatistics();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("newIncludedInStatistics")
     public Boolean getNewIncludedInStatistics();
 
     /**
-    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="ctp:api:type:ChannelReference">ChannelReference</a>.  A referenced resource can be embedded through <a href="/general-concepts#reference-expansion">Reference Expansion</a>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
-    */
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("target")
     public Reference getTarget();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();

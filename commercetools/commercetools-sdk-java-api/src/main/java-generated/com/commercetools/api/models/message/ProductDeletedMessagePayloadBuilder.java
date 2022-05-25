@@ -7,22 +7,47 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDeletedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDeletedMessagePayload productDeletedMessagePayload = ProductDeletedMessagePayload.builder()
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .currentProjection(currentProjectionBuilder -> currentProjectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDeletedMessagePayload> {
 
     private java.util.List<String> removedImageUrls;
 
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
+    /**
+     *
+     */
+
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDeletedMessagePayloadBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
         if (this.removedImageUrls == null) {
@@ -32,12 +57,20 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDeletedMessagePayloadBuilder currentProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDeletedMessagePayloadBuilder currentProjection(
             final com.commercetools.api.models.product.ProductProjection currentProjection) {

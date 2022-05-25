@@ -13,47 +13,78 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItem customLineItem = CustomLineItem.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemImpl.class)
 public interface CustomLineItem {
 
     /**
-    *  <p>The unique ID of this CustomLineItem.</p>
-    */
+     *  <p>The unique ID of this CustomLineItem.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("money")
     public Money getMoney();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
 
     /**
-    *  <p>A unique String in the cart to identify this CustomLineItem.</p>
-    */
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     */
     @NotNull
     @JsonProperty("slug")
     public String getSlug();
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();

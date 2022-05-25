@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ScopedPrice
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScopedPriceImpl implements ScopedPrice, ModelBase {
 
     private String id;
@@ -63,60 +66,82 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     public ScopedPriceImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public com.commercetools.api.models.common.TypedMoney getCurrentValue() {
         return this.currentValue;
     }
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
+
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

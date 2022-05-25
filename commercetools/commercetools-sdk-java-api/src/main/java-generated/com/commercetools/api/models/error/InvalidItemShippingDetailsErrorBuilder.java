@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InvalidItemShippingDetailsErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InvalidItemShippingDetailsError invalidItemShippingDetailsError = InvalidItemShippingDetailsError.builder()
+ *             .message("{message}")
+ *             .subject("{subject}")
+ *             .itemId("{itemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidItemShippingDetailsError> {
 
     private String message;
@@ -17,15 +31,27 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
 
     private String itemId;
 
+    /**
+     *
+     */
+
     public InvalidItemShippingDetailsErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public InvalidItemShippingDetailsErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public InvalidItemShippingDetailsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -35,10 +61,18 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
         this.subject = subject;
         return this;
     }
+
+    /**
+     *
+     */
 
     public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {
         this.itemId = itemId;

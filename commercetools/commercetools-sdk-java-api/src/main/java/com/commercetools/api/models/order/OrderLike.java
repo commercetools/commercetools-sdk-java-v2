@@ -20,7 +20,7 @@ import com.commercetools.api.models.type.CustomFields;
 
 /**
  * Interface to collect the common stuff between carts and orders.
- * @param <T>
+ * @param <T> the type of this {@link OrderLike}, order or cart
  */
 public interface OrderLike<T extends OrderLike<T>> {
     @NotNull

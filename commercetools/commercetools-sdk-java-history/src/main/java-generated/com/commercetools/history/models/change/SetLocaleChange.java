@@ -12,33 +12,51 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLocaleChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLocaleChange setLocaleChange = SetLocaleChange.builder()
+ *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLocaleChangeImpl.class)
 public interface SetLocaleChange extends Change {
 
     String SET_LOCALE_CHANGE = "SetLocaleChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setLocale</code> on reviews</p>
-    */
+     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
-    */
+     *  <p>A locale of IETF language tag.</p>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
-    */
+     *  <p>A locale of IETF language tag.</p>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewRatingStatistics
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, ModelBase {
 
     private Integer averageRating;
@@ -43,36 +46,41 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
     }
 
     /**
-    *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
-    */
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     */
+
     public Integer getAverageRating() {
         return this.averageRating;
     }
 
     /**
-    *  <p>Highest rating of one target</p>
-    */
+     *  <p>Highest rating of one target</p>
+     */
+
     public Integer getHighestRating() {
         return this.highestRating;
     }
 
     /**
-    *  <p>Lowest rating of one target</p>
-    */
+     *  <p>Lowest rating of one target</p>
+     */
+
     public Integer getLowestRating() {
         return this.lowestRating;
     }
 
     /**
-    *  <p>Number of ratings taken into account</p>
-    */
+     *  <p>Number of ratings taken into account</p>
+     */
+
     public Integer getCount() {
         return this.count;
     }
 
     /**
-    *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
-    */
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     */
+
     public java.lang.Object getRatingsDistribution() {
         return this.ratingsDistribution;
     }

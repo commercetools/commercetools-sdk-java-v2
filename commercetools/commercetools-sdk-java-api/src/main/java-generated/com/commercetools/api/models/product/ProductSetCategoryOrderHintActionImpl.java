@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetCategoryOrderHintAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategoryOrderHintAction, ModelBase {
 
     private String action;
@@ -38,17 +41,33 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
         this.action = SET_CATEGORY_ORDER_HINT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getCategoryId() {
         return this.categoryId;
     }
 
+    /**
+     *
+     */
+
     public String getOrderHint() {
         return this.orderHint;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

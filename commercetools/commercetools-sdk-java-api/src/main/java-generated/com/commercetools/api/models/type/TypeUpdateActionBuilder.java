@@ -5,7 +5,10 @@ import java.util.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeUpdateActionBuilder
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeUpdateActionBuilder {
 
     public com.commercetools.api.models.type.TypeAddEnumValueActionBuilder addEnumValueBuilder() {
@@ -26,10 +29,6 @@ public class TypeUpdateActionBuilder {
 
     public com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder changeEnumValueOrderBuilder() {
         return com.commercetools.api.models.type.TypeChangeEnumValueOrderActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.type.TypeChangeFieldDefinitionLabelActionBuilder changeFieldDefinitionLabelBuilder() {
-        return com.commercetools.api.models.type.TypeChangeFieldDefinitionLabelActionBuilder.of();
     }
 
     public com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionBuilder changeFieldDefinitionOrderBuilder() {

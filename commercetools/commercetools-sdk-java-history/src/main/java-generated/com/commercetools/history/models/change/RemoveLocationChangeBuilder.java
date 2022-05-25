@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * RemoveLocationChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveLocationChange removeLocationChange = RemoveLocationChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
 
     private com.commercetools.history.models.common.Location nextValue;
 
+    /**
+     *  <p>Update action for <code>removeLocation</code> on zones</p>
+     */
+
     public RemoveLocationChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
 
     public RemoveLocationChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
@@ -27,17 +49,29 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
+
     public RemoveLocationChangeBuilder previousValue(
             final com.commercetools.history.models.common.Location previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
+
     public RemoveLocationChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
 
     public RemoveLocationChangeBuilder nextValue(final com.commercetools.history.models.common.Location nextValue) {
         this.nextValue = nextValue;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GoogleCloudPubSubDestination
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestination, ModelBase {
 
     private String type;
@@ -35,13 +38,25 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
         this.type = GOOGLE_CLOUD_PUB_SUB;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public String getProjectId() {
         return this.projectId;
     }
+
+    /**
+     *
+     */
 
     public String getTopic() {
         return this.topic;

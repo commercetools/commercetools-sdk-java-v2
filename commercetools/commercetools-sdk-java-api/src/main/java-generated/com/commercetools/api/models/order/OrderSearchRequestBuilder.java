@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSearchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderSearchRequest orderSearchRequest = OrderSearchRequest.builder()
+ *             .query(queryBuilder -> queryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     private com.commercetools.api.models.order.OrderSearchQuery query;
@@ -23,26 +35,46 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     @Nullable
     private Integer offset;
 
+    /**
+     *  <p>The Order search query.</p>
+     */
+
     public OrderSearchRequestBuilder query(
             Function<com.commercetools.api.models.order.OrderSearchQueryBuilder, com.commercetools.api.models.order.OrderSearchQueryBuilder> builder) {
         this.query = builder.apply(com.commercetools.api.models.order.OrderSearchQueryBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>The Order search query.</p>
+     */
+
     public OrderSearchRequestBuilder query(final com.commercetools.api.models.order.OrderSearchQuery query) {
         this.query = query;
         return this;
     }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     */
 
     public OrderSearchRequestBuilder sort(@Nullable final String sort) {
         this.sort = sort;
         return this;
     }
 
+    /**
+     *  <p>The maximum number of search results to be returned.</p>
+     */
+
     public OrderSearchRequestBuilder limit(@Nullable final Integer limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     */
 
     public OrderSearchRequestBuilder offset(@Nullable final Integer offset) {
         this.offset = offset;

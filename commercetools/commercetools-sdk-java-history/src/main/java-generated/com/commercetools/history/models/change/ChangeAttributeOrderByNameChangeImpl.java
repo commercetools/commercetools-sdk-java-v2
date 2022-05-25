@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeAttributeOrderByNameChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrderByNameChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
         this.type = CHANGE_ATTRIBUTE_ORDER_BY_NAME_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
-    */
+     *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;

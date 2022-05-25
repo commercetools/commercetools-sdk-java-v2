@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Hit
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HitImpl implements Hit, ModelBase {
 
     private String id;
@@ -35,22 +38,25 @@ public class HitImpl implements Hit, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Order.</p>
-    */
+     *  <p>Unique identifier of the Order.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the Order.</p>
-    */
+     *  <p>Current version of the Order.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
-    */
+     *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+     */
+
     public Double getRelevance() {
         return this.relevance;
     }

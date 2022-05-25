@@ -15,24 +15,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a ProductType.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeReference productTypeReference = ProductTypeReference.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeReferenceImpl.class)
 public interface ProductTypeReference extends Reference, com.commercetools.api.models.Identifiable<ProductType> {
 
     String PRODUCT_TYPE = "product-type";
 
     /**
-    *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for ProductTypes.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public ProductType getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ProductType">ProductType</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced ProductType.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

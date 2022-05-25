@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.ApiMethod;
  * <h3>Request DSL</h3>
  *
  * <p>Building request can be done with the help of an ApiRoot, e.g. {@link com.commercetools.api.client.ProjectApiRoot}.
- * The DSL mirrors the directory structure and HTTP methods of the API and allows navigating and discovering the commercetools
+ * The DSL mirrors the directory structure and HTTP methods of the API and allows navigating and discovering the commercetools Composable Commerce
  * API while typing. The HTTP method builders includes methods for every query parameter. Additionally there are
  * the {@link ApiMethod#execute()} and {@link ApiMethod#executeBlocking()} methods which are sending the request using the
  * configured {@link io.vrap.rmf.base.client.ApiHttpClient} and mapping the result to the correct response class. In case

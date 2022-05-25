@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .state(DiscountCodeState.NOT_ACTIVE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     private com.commercetools.history.models.common.Reference discountCode;
 
     private com.commercetools.history.models.common.DiscountCodeState state;
+
+    /**
+     *
+     */
 
     public DiscountCodeInfoBuilder discountCode(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -20,10 +37,18 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountCodeInfoBuilder discountCode(final com.commercetools.history.models.common.Reference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountCodeInfoBuilder state(final com.commercetools.history.models.common.DiscountCodeState state) {
         this.state = state;

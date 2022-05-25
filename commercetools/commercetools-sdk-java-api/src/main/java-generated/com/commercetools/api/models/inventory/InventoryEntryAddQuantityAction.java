@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryAddQuantityAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryAddQuantityAction inventoryEntryAddQuantityAction = InventoryEntryAddQuantityAction.builder()
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryAddQuantityActionImpl.class)
 public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAction {
 
     String ADD_QUANTITY = "addQuantity";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

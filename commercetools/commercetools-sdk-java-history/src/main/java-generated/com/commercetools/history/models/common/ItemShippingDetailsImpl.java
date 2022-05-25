@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ItemShippingDetails
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.ItemShippingTarget> targets;
@@ -32,13 +35,18 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
     public ItemShippingDetailsImpl() {
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.ItemShippingTarget> getTargets() {
         return this.targets;
     }
 
     /**
-    *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
-    */
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     */
+
     public Boolean getValid() {
         return this.valid;
     }

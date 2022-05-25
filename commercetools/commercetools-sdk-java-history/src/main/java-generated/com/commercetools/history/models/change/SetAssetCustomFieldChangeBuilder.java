@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAssetCustomFieldChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetCustomFieldChange setAssetCustomFieldChange = SetAssetCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customTypeId("{customTypeId}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomFieldChange> {
 
     private String change;
@@ -22,20 +37,36 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     private java.lang.Object previousValue;
 
+    /**
+     *  <p>Update action for <code>setAssetCustomField</code></p>
+     */
+
     public SetAssetCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetCustomFieldChangeBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetCustomFieldChangeBuilder asset(
             Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
@@ -43,16 +74,28 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetCustomFieldChangeBuilder asset(
             final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAssetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAssetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;

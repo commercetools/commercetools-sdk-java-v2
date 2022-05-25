@@ -14,16 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeNameAction typeChangeNameAction = TypeChangeNameAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeNameActionImpl.class)
 public interface TypeChangeNameAction extends TypeUpdateAction {
 
     String CHANGE_NAME = "changeName";
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")

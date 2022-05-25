@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryChangeParentActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryChangeParentAction categoryChangeParentAction = CategoryChangeParentAction.builder()
+ *             .parent(parentBuilder -> parentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeParentActionBuilder implements Builder<CategoryChangeParentAction> {
 
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
+
+    /**
+     *
+     */
 
     public CategoryChangeParentActionBuilder parent(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
@@ -18,6 +34,10 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryChangeParentActionBuilder parent(
             final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {

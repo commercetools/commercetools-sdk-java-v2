@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Store
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreImpl implements Store, ModelBase {
 
     private String id;
@@ -74,78 +77,105 @@ public class StoreImpl implements Store, ModelBase {
     public StoreImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-specific unique identifier for the store.
-    *  The <code>key</code> is mandatory and immutable.
-    *  It is used to reference the store.</p>
-    */
+     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The name of the store</p>
-    */
+     *  <p>The name of the store</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
     /**
-    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
-    */
+     *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
 
     /**
-    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
-    */
+     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
 
     /**
-    *  <p>Set of References to Product Selections along with settings.
-    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
-    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
-    */
+     *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

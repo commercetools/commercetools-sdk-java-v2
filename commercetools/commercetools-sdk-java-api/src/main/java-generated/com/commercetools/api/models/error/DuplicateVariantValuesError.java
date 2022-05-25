@@ -13,12 +13,29 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateVariantValuesError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateVariantValuesError duplicateVariantValuesError = DuplicateVariantValuesError.builder()
+ *             .message("{message}")
+ *             .variantValues(variantValuesBuilder -> variantValuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
 
     String DUPLICATE_VARIANT_VALUES = "DuplicateVariantValues";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("variantValues")

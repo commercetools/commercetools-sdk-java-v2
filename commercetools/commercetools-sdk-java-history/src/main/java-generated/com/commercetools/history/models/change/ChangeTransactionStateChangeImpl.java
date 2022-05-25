@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTransactionStateChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
         this.type = CHANGE_TRANSACTION_STATE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>changeTransactionState</code> on payments</p>
-    */
+     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
         return this.transaction;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.TransactionState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.TransactionState getPreviousValue() {
         return this.previousValue;

@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddEnumValueChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddEnumValueChange addEnumValueChange = AddEnumValueChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     private String change;
@@ -16,21 +30,37 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    /**
+     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     */
+
     public AddEnumValueChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>The name of the field/attribute definition updated.</p>
+     */
 
     public AddEnumValueChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddEnumValueChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddEnumValueChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.EnumValue nextValue) {

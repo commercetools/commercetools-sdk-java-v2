@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -74,79 +77,105 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     public CartDiscountDraftImpl() {
     }
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>User-defined unique identifier for the CartDiscount.</p>
-    */
+     *  <p>User-defined unique identifier for the CartDiscount.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute discount values, or a fixed item price value can be specified. If no target is specified, a gift line item can be added to the cart.</p>
+     */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A valid Cart predicate.</p>
-    */
+     *  <p>Valid Cart Predicate.</p>
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
     /**
-    *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
-    */
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
 
     /**
-    *  <p>The string must contain a number between 0 and 1.
-    *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
-    *  The sort order must be unambiguous among all cart discounts.</p>
-    */
+     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-    *  <p>Only active discount can be applied to the cart.
-    *  Defaults to <code>true</code>.</p>
-    */
+     *  <p>Only active Discounts can be applied to the Cart.</p>
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     */
 
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>States whether the discount can only be used in a connection with a DiscountCode.
-    *  Defaults to <code>false</code>.</p>
-    */
+     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     */
+
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
 
     /**
-    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
-    *  Defaults to Stacking.</p>
-    */
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
+     */
+
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;
     }
+
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;

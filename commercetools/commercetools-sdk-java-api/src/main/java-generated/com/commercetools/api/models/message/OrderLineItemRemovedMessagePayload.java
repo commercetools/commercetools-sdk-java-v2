@@ -18,45 +18,83 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemRemovedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemRemovedMessagePayload orderLineItemRemovedMessagePayload = OrderLineItemRemovedMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .removedQuantity(0.3)
+ *             .newQuantity(0.3)
+ *             .plusNewState(newStateBuilder -> newStateBuilder)
+ *             .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemRemovedMessagePayloadImpl.class)
 public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload {
 
     String ORDER_LINE_ITEM_REMOVED = "OrderLineItemRemoved";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("removedQuantity")
     public Long getRemovedQuantity();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("newQuantity")
     public Long getNewQuantity();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("newState")
     public List<ItemState> getNewState();
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("newTotalPrice")
     public TypedMoney getNewTotalPrice();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("newTaxedPrice")
     public TaxedItemPrice getNewTaxedPrice();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("newPrice")
     public Price getNewPrice();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("newShippingDetail")
     public ItemShippingDetails getNewShippingDetail();

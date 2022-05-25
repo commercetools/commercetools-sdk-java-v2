@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetAssetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetAssetKeyAction categorySetAssetKeyAction = CategorySetAssetKeyAction.builder()
+ *             .assetId("{assetId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAssetKeyAction> {
 
     private String assetId;
@@ -16,10 +28,18 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
     @Nullable
     private String assetKey;
 
+    /**
+     *
+     */
+
     public CategorySetAssetKeyActionBuilder assetId(final String assetId) {
         this.assetId = assetId;
         return this;
     }
+
+    /**
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     */
 
     public CategorySetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;

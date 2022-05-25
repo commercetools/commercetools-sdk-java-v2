@@ -20,70 +20,83 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemPrice lineItemPrice = LineItemPrice.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemPriceImpl.class)
 public interface LineItemPrice {
 
     /**
-    *  <p>Maps to <code>Price.value</code>.</p>
-    */
+     *  <p>Maps to <code>Price.value</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")
     public TypedMoney getValue();
 
     /**
-    *  <p>Maps to <code>Price.county</code>.</p>
-    */
+     *  <p>Maps to <code>Price.county</code>.</p>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p>Maps to <code>Price.validFrom</code>.</p>
-    */
+     *  <p>Maps to <code>Price.validFrom</code>.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Maps to <code>Price.validUntil</code>.</p>
-    */
+     *  <p>Maps to <code>Price.validUntil</code>.</p>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-    *  <p>References a customer group by key.</p>
-    */
+     *  <p>References a customer group by key.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-    *  <p>References a channel by key.</p>
-    */
+     *  <p>References a channel by key.</p>
+     */
     @Valid
     @JsonProperty("channel")
     public ChannelKeyReference getChannel();
 
     /**
-    *  <p>Sets a discounted price from an external service.</p>
-    */
+     *  <p>Sets a discounted price from an external service.</p>
+     */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-    *  <p>The tiered prices for this price.</p>
-    */
+     *  <p>The tiered prices for this price.</p>
+     */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
 
     /**
-    *  <p>Maps to <code>Price.custom</code>.</p>
-    */
+     *  <p>Maps to <code>Price.custom</code>.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();

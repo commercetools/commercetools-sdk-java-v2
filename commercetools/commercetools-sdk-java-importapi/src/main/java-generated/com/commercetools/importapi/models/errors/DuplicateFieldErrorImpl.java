@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The given value already exists for a field that is checked for unique values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The given value already exists for a field that is checked for unique values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
 
     private String code;
@@ -41,24 +41,34 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
         this.code = DUPLICATE_FIELD;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-    *  <p>The name of the field.</p>
-    */
+     *  <p>The name of the field.</p>
+     */
+
     public String getField() {
         return this.field;
     }
 
     /**
-    *  <p>The offending duplicate value.</p>
-    */
+     *  <p>The offending duplicate value.</p>
+     */
+
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }

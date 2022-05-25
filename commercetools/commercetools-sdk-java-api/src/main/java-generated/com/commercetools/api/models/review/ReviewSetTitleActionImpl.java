@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewSetTitleAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetTitleActionImpl implements ReviewSetTitleAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class ReviewSetTitleActionImpl implements ReviewSetTitleAction, ModelBase
         this.action = SET_TITLE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
+
     public String getTitle() {
         return this.title;
     }

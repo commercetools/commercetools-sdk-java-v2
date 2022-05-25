@@ -9,12 +9,27 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetShippingMethodTaxAmountActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetShippingMethodTaxAmountAction stagedOrderSetShippingMethodTaxAmountAction = StagedOrderSetShippingMethodTaxAmountAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodTaxAmountActionBuilder
         implements Builder<StagedOrderSetShippingMethodTaxAmountAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+
+    /**
+     *
+     */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
             Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder> builder) {
@@ -22,6 +37,10 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetShippingMethodTaxAmountActionBuilder externalTaxAmount(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {

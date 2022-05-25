@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SimilarProductsPagedQueryResultBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SimilarProductsPagedQueryResult similarProductsPagedQueryResult = SimilarProductsPagedQueryResult.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .meta(metaBuilder -> metaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarProductsPagedQueryResult> {
 
     private Long count;
@@ -20,20 +36,36 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
 
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta;
 
+    /**
+     *
+     */
+
     public SimilarProductsPagedQueryResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SimilarProductsPagedQueryResultBuilder total(final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public SimilarProductsPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SimilarProductsPagedQueryResultBuilder results(
             final com.commercetools.ml.models.similar_products.SimilarProductPair... results) {
@@ -41,11 +73,19 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     *
+     */
+
     public SimilarProductsPagedQueryResultBuilder results(
             final java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SimilarProductsPagedQueryResultBuilder plusResults(
             final com.commercetools.ml.models.similar_products.SimilarProductPair... results) {
@@ -56,6 +96,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     *
+     */
+
     public SimilarProductsPagedQueryResultBuilder plusResults(
             Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPairBuilder> builder) {
         if (this.results == null) {
@@ -66,6 +110,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     *
+     */
+
     public SimilarProductsPagedQueryResultBuilder withResults(
             Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPairBuilder> builder) {
         this.results = new ArrayList<>();
@@ -74,6 +122,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     *
+     */
+
     public SimilarProductsPagedQueryResultBuilder meta(
             Function<com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder> builder) {
         this.meta = builder
@@ -81,6 +133,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SimilarProductsPagedQueryResultBuilder meta(
             final com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta) {

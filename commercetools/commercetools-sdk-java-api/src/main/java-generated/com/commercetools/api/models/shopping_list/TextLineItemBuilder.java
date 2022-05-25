@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TextLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItem textLineItem = TextLineItem.builder()
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private java.time.ZonedDateTime addedAt;
@@ -26,10 +41,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private Integer quantity;
 
+    /**
+     *  <p>When the text line item was added to the shopping list.</p>
+     */
+
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -37,10 +60,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -48,16 +79,28 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TextLineItemBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the TextLineItem.</p>
+     */
+
     public TextLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -65,10 +108,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TextLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TextLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

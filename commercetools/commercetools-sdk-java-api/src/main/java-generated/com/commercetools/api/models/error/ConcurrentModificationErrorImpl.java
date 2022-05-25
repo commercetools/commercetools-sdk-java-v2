@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ConcurrentModificationError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ConcurrentModificationErrorImpl implements ConcurrentModificationError, ModelBase {
 
     private String code;
@@ -39,17 +42,33 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
         this.code = CONCURRENT_MODIFICATION;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     *
+     */
 
     public Long getCurrentVersion() {
         return this.currentVersion;

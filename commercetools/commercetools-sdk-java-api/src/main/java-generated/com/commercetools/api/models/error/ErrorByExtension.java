@@ -12,20 +12,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ErrorByExtension
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorByExtension errorByExtension = ErrorByExtension.builder()
+ *             .id("{id}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ErrorByExtensionImpl.class)
 public interface ErrorByExtension {
 
     /**
-    *  <p>Platform-generated unique identifier of the Extension.</p>
-    */
+     *  <p>Unique identifier of the Extension.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier of the Extension.</p>
-    */
+     *  <p>User-defined unique identifier of the Extension.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

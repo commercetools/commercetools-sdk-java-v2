@@ -6,10 +6,26 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomFieldReferenceTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomFieldReferenceType customFieldReferenceType = CustomFieldReferenceType.builder()
+ *             .referenceTypeId(CustomFieldReferenceValue.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldReferenceTypeBuilder implements Builder<CustomFieldReferenceType> {
 
     private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
+
+    /**
+     *  <p>Resource type the Custom Field can reference.</p>
+     */
 
     public CustomFieldReferenceTypeBuilder referenceTypeId(
             final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {

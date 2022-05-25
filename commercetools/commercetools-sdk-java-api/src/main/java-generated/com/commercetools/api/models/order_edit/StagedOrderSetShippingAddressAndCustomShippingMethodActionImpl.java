@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetShippingAddressAndCustomShippingMethodAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
         implements StagedOrderSetShippingAddressAndCustomShippingMethodAction, ModelBase {
 
@@ -49,28 +52,49 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
         this.action = SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
 
+    /**
+     *
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;

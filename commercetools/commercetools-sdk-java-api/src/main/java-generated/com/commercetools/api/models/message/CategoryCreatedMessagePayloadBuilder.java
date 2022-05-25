@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryCreatedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryCreatedMessagePayload categoryCreatedMessagePayload = CategoryCreatedMessagePayload.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCreatedMessagePayload> {
 
     private com.commercetools.api.models.category.Category category;
+
+    /**
+     *
+     */
 
     public CategoryCreatedMessagePayloadBuilder category(
             Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CategoryCreatedMessagePayloadBuilder category(
             final com.commercetools.api.models.category.Category category) {

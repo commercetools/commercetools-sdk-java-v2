@@ -17,11 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Gets the current or staged representation of a product in a catalog by ID.
-*  When used with an API client that has the view_published_products:{projectKey} scope,
-*  this endpoint only returns published (current) product projections.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Gets the current or staged representation of a product in a catalog by ID. When used with an API client that has the view_published_products:{projectKey} scope, this endpoint only returns published (current) product projections.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .productProjections()
+ *            .withId("{ID}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsByIDGet
         extends ApiMethod<ByProjectKeyProductProjectionsByIDGet, com.commercetools.api.models.product.ProductProjection>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,

@@ -11,24 +11,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The given value already exists for a field that is checked for unique values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The given value already exists for a field that is checked for unique values.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateFieldError duplicateFieldError = DuplicateFieldError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
 
     String DUPLICATE_FIELD = "DuplicateField";
 
     /**
-    *  <p>The name of the field.</p>
-    */
+     *  <p>The name of the field.</p>
+     */
 
     @JsonProperty("field")
     public String getField();
 
     /**
-    *  <p>The offending duplicate value.</p>
-    */
+     *  <p>The offending duplicate value.</p>
+     */
 
     @JsonProperty("duplicateValue")
     public Object getDuplicateValue();

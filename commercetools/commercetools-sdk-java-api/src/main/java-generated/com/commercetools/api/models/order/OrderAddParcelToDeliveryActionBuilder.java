@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderAddParcelToDeliveryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderAddParcelToDeliveryAction orderAddParcelToDeliveryAction = OrderAddParcelToDeliveryAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddParcelToDeliveryAction> {
 
     private String deliveryId;
@@ -23,10 +35,18 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     *
+     */
+
     public OrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderAddParcelToDeliveryActionBuilder measurements(
             Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
@@ -34,11 +54,19 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderAddParcelToDeliveryActionBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderAddParcelToDeliveryActionBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
@@ -46,11 +74,19 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderAddParcelToDeliveryActionBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderAddParcelToDeliveryActionBuilder items(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -58,11 +94,19 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderAddParcelToDeliveryActionBuilder items(
             @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderAddParcelToDeliveryActionBuilder plusItems(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -73,6 +117,10 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderAddParcelToDeliveryActionBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -81,6 +129,10 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderAddParcelToDeliveryActionBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

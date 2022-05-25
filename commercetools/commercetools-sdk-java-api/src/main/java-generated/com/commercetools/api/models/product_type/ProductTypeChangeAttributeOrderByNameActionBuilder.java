@@ -6,22 +6,46 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeOrderByNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeOrderByNameAction productTypeChangeAttributeOrderByNameAction = ProductTypeChangeAttributeOrderByNameAction.builder()
+ *             .plusAttributeNames(attributeNamesBuilder -> attributeNamesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeOrderByNameActionBuilder
         implements Builder<ProductTypeChangeAttributeOrderByNameAction> {
 
     private java.util.List<String> attributeNames;
+
+    /**
+     *
+     */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(final String... attributeNames) {
         this.attributeNames = new ArrayList<>(Arrays.asList(attributeNames));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(
             final java.util.List<String> attributeNames) {
         this.attributeNames = attributeNames;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {
         if (this.attributeNames == null) {

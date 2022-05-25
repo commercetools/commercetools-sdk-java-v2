@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountTarget
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountTargetImpl implements CartDiscountTarget, ModelBase {
 
     private String type;
@@ -26,6 +29,10 @@ public class CartDiscountTargetImpl implements CartDiscountTarget, ModelBase {
 
     public CartDiscountTargetImpl() {
     }
+
+    /**
+     *
+     */
 
     public String getType() {
         return this.type;

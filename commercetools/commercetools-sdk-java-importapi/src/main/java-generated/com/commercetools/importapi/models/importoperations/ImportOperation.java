@@ -18,85 +18,102 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Import Operation describes the import status of a specific resource.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Import Operation describes the import status of a specific resource.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportOperation importOperation = ImportOperation.builder()
+ *             .version(1)
+ *             .importContainerKey("{importContainerKey}")
+ *             .resourceKey("{resourceKey}")
+ *             .id("{id}")
+ *             .state(ProcessingState.PROCESSING)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportOperationImpl.class)
 public interface ImportOperation {
 
     /**
-    *  <p>The version of the ImportOperation.</p>
-    */
+     *  <p>The version of the ImportOperation.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>The key of the <a href="/import-container#importcontainer">importContainer</a>.</p>
-    */
+     *  <p>The key of the importContainer.</p>
+     */
     @NotNull
     @JsonProperty("importContainerKey")
     public String getImportContainerKey();
 
     /**
-    *  <p>The key of the resource.</p>
-    */
+     *  <p>The key of the resource.</p>
+     */
     @NotNull
     @JsonProperty("resourceKey")
     public String getResourceKey();
 
     /**
-    *  <p>The ID of the ImportOperation.</p>
-    */
+     *  <p>The ID of the ImportOperation.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
-    */
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     */
     @NotNull
     @JsonProperty("state")
     public ProcessingState getState();
 
     /**
-    *  <p>The version of the impmorted resource when the import was successful.</p>
-    */
+     *  <p>The version of the impmorted resource when the import was successful.</p>
+     */
 
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See <a href="/error">Errors</a>.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
     @Valid
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
     @Valid
     @JsonProperty("unresolvedReferences")
     public List<UnresolvedReferences> getUnresolvedReferences();
 
     /**
-    *  <p>The time when the ImportOperation was created.</p>
-    */
+     *  <p>The time when the ImportOperation was created.</p>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>The last time When the ImportOperation was modified.</p>
-    */
+     *  <p>The last time When the ImportOperation was modified.</p>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>The expiration time of the ImportOperation.</p>
-    */
+     *  <p>The expiration time of the ImportOperation.</p>
+     */
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();

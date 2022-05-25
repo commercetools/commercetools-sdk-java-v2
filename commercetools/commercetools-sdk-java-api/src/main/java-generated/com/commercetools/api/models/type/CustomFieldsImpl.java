@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsImpl implements CustomFields, ModelBase {
 
     private com.commercetools.api.models.type.TypeReference type;
@@ -35,15 +35,17 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     }
 
     /**
-    *  <p>Reference to the <a href="ctp:api:type:Type">Type</a> that holds the <a href="ctp:api:type:FieldDefinition">FieldDefinitions</a> for the Custom Fields.</p>
-    */
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     */
+
     public com.commercetools.api.models.type.TypeReference getType() {
         return this.type;
     }
 
     /**
-    *  <p>Object containing the Custom Fields for the <a href="/../api/projects/types#list-of-customizable-data-types">customized resource or data type</a>.</p>
-    */
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     */
+
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

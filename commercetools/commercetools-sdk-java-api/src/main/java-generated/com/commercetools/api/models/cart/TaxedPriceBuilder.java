@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     private com.commercetools.api.models.common.TypedMoney totalNet;
@@ -21,10 +35,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     @Nullable
     private com.commercetools.api.models.common.TypedMoney totalTax;
 
+    /**
+     *
+     */
+
     public TaxedPriceBuilder totalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedPriceBuilder totalNet(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -32,10 +54,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxedPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedPriceBuilder totalGross(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -43,16 +73,28 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
+
     public TaxedPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
         this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
         return this;
     }
+
+    /**
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
 
     public TaxedPriceBuilder taxPortions(
             final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
         this.taxPortions = taxPortions;
         return this;
     }
+
+    /**
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
 
     public TaxedPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
         if (this.taxPortions == null) {
@@ -61,6 +103,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         this.taxPortions.addAll(Arrays.asList(taxPortions));
         return this;
     }
+
+    /**
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
 
     public TaxedPriceBuilder plusTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
@@ -71,6 +117,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
+
     public TaxedPriceBuilder withTaxPortions(
             Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
         this.taxPortions = new ArrayList<>();
@@ -78,10 +128,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     */
+
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
         this.totalTax = totalTax;
         return this;
     }
+
+    /**
+     *  <p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     */
 
     public TaxedPriceBuilder totalTax(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {

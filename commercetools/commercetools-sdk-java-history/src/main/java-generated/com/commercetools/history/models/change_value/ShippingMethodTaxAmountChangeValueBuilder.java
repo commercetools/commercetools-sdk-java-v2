@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodTaxAmountChangeValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodTaxAmountChangeValue shippingMethodTaxAmountChangeValue = ShippingMethodTaxAmountChangeValue.builder()
+ *             .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
+ *             .taxRate(taxRateBuilder -> taxRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<ShippingMethodTaxAmountChangeValue> {
 
     private com.commercetools.history.models.common.TaxedPrice taxedPrice;
 
     private com.commercetools.history.models.common.TaxRate taxRate;
+
+    /**
+     *
+     */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
             Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
@@ -20,17 +37,29 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodTaxAmountChangeValueBuilder taxedPrice(
             final com.commercetools.history.models.common.TaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
             final com.commercetools.history.models.common.TaxRate taxRate) {

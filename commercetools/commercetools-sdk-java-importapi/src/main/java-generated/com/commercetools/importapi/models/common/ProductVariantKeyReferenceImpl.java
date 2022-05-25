@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a product variant by key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>References a product variant by key.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReference, ModelBase {
 
     private String key;
@@ -34,13 +34,18 @@ public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReferenc
         this.typeId = ReferenceType.findEnum("product-variant");
     }
 
+    /**
+     *
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The type of the referenced resource.</p>
-    */
+     *  <p>The type of the referenced resource.</p>
+     */
+
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

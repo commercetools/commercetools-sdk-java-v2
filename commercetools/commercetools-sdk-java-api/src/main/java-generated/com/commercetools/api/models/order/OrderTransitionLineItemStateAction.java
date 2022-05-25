@@ -15,35 +15,61 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderTransitionLineItemStateAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderTransitionLineItemStateAction orderTransitionLineItemStateAction = OrderTransitionLineItemStateAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderTransitionLineItemStateActionImpl.class)
 public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
 
     String TRANSITION_LINE_ITEM_STATE = "transitionLineItemState";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateResourceIdentifier getFromState();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
+
+    /**
+     *
+     */
 
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();

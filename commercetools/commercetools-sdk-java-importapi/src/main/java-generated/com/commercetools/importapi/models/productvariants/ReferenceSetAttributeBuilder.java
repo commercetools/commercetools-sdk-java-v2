@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReferenceSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceSetAttribute referenceSetAttribute = ReferenceSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribute> {
 
     @Nullable
@@ -17,21 +29,37 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
 
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
+
     public ReferenceSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferenceSetAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferenceSetAttributeBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferenceSetAttributeBuilder plusValue(
             final com.commercetools.importapi.models.common.KeyReference... value) {
@@ -42,6 +70,10 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferenceSetAttributeBuilder plusValue(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
         if (this.value == null) {
@@ -50,6 +82,10 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
         this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferenceSetAttributeBuilder withValue(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {

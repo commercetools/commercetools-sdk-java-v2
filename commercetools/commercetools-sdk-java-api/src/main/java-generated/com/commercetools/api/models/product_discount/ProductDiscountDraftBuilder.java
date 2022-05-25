@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDiscountDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountDraft productDiscountDraft = ProductDiscountDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .value(valueBuilder -> valueBuilder)
+ *             .predicate("{predicate}")
+ *             .sortOrder("{sortOrder}")
+ *             .isActive(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -34,21 +50,37 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     *  <p>Name of the ProductDiscount.</p>
+     */
+
     public ProductDiscountDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Name of the ProductDiscount.</p>
+     */
+
     public ProductDiscountDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     */
+
     public ProductDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     */
 
     public ProductDiscountDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -56,17 +88,29 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
         return this;
     }
 
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     */
+
     public ProductDiscountDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+     *  <p>Type of Discount and its corresponding value.</p>
+     */
+
     public ProductDiscountDraftBuilder value(
             final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *  <p>Type of Discount and its corresponding value.</p>
+     */
 
     public ProductDiscountDraftBuilder value(
             Function<com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValueDraft>> builder) {
@@ -75,25 +119,45 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
         return this;
     }
 
+    /**
+     *  <p>Valid ProductDiscount predicate.</p>
+     */
+
     public ProductDiscountDraftBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     */
 
     public ProductDiscountDraftBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
 
+    /**
+     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     */
+
     public ProductDiscountDraftBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     */
+
     public ProductDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     */
 
     public ProductDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;

@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartRemovePaymentActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartRemovePaymentAction cartRemovePaymentAction = CartRemovePaymentAction.builder()
+ *             .payment(paymentBuilder -> paymentBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemovePaymentActionBuilder implements Builder<CartRemovePaymentAction> {
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
+
+    /**
+     *
+     */
 
     public CartRemovePaymentActionBuilder payment(
             Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
@@ -18,6 +34,10 @@ public class CartRemovePaymentActionBuilder implements Builder<CartRemovePayment
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartRemovePaymentActionBuilder payment(
             final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {

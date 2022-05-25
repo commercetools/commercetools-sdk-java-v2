@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryCreatedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCreatedMessagePayload, ModelBase {
 
     private String type;
@@ -32,9 +35,17 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
         this.type = INVENTORY_ENTRY_CREATED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {
         return this.inventoryEntry;

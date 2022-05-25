@@ -13,15 +13,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectChangeShoppingListsConfigurationAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectChangeShoppingListsConfigurationAction projectChangeShoppingListsConfigurationAction = ProjectChangeShoppingListsConfigurationAction.builder()
+ *             .shoppingListsConfiguration(shoppingListsConfigurationBuilder -> shoppingListsConfigurationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeShoppingListsConfigurationActionImpl.class)
 public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUpdateAction {
 
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
     /**
-    *  <p>Configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature.</p>
-    */
+     *  <p>Configuration for the Shopping Lists feature.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("shoppingListsConfiguration")

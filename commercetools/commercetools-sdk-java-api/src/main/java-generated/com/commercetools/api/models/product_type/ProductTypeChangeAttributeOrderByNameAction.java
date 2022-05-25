@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeOrderByNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeOrderByNameAction productTypeChangeAttributeOrderByNameAction = ProductTypeChangeAttributeOrderByNameAction.builder()
+ *             .plusAttributeNames(attributeNamesBuilder -> attributeNamesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
 
     String CHANGE_ATTRIBUTE_ORDER_BY_NAME = "changeAttributeOrderByName";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("attributeNames")
     public List<String> getAttributeNames();

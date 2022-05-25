@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeLocalizedEnumValueOrderAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
         implements ProductTypeChangeLocalizedEnumValueOrderAction, ModelBase {
 
@@ -36,13 +39,25 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {
         return this.values;

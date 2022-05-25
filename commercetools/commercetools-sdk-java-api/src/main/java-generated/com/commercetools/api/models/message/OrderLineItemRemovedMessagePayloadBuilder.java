@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemRemovedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemRemovedMessagePayload orderLineItemRemovedMessagePayload = OrderLineItemRemovedMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .removedQuantity(0.3)
+ *             .newQuantity(0.3)
+ *             .plusNewState(newStateBuilder -> newStateBuilder)
+ *             .newTotalPrice(newTotalPriceBuilder -> newTotalPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderLineItemRemovedMessagePayload> {
 
     private String lineItemId;
@@ -31,20 +47,36 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail;
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder removedQuantity(final Long removedQuantity) {
         this.removedQuantity = removedQuantity;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newQuantity(final Long newQuantity) {
         this.newQuantity = newQuantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder newState(
             final com.commercetools.api.models.order.ItemState... newState) {
@@ -52,11 +84,19 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newState(
             final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
         this.newState = newState;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
             final com.commercetools.api.models.order.ItemState... newState) {
@@ -67,6 +107,10 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         if (this.newState == null) {
@@ -76,6 +120,10 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder withNewState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         this.newState = new ArrayList<>();
@@ -83,11 +131,19 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
             final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
         return this;
     }
+
+    /**
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -95,11 +151,19 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.newTaxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder newTaxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedItemPrice newTaxedPrice) {
@@ -107,11 +171,19 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
             @Nullable final com.commercetools.api.models.common.Price newPrice) {
@@ -119,12 +191,20 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetailsBuilder> builder) {
         this.newShippingDetail = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemRemovedMessagePayloadBuilder newShippingDetail(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail) {

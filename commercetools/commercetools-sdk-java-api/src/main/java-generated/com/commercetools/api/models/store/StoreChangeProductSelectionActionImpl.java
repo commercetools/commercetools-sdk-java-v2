@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreChangeProductSelectionAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreChangeProductSelectionActionImpl implements StoreChangeProductSelectionAction, ModelBase {
 
     private String action;
@@ -36,20 +39,26 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
         this.action = CHANGE_PRODUCT_SELECTION_ACTIVE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
-    */
+     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     */
+
     public com.commercetools.api.models.common.ResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
 
     /**
-    *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     */
+
     public Boolean getActive() {
         return this.active;
     }

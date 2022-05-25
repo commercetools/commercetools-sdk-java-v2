@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddDiscountCodeChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddDiscountCodeChange addDiscountCodeChange = AddDiscountCodeChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChange> {
 
     private String change;
 
     private com.commercetools.history.models.common.DiscountCodeInfo nextValue;
 
+    /**
+     *  <p>Update action for <code>addDiscountCode</code></p>
+     */
+
     public AddDiscountCodeChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddDiscountCodeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfoBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddDiscountCodeChangeBuilder nextValue(
             final com.commercetools.history.models.common.DiscountCodeInfo nextValue) {

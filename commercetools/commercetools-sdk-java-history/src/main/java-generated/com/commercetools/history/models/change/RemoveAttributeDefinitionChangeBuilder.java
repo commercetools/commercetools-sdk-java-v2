@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * RemoveAttributeDefinitionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveAttributeDefinitionChange removeAttributeDefinitionChange = RemoveAttributeDefinitionChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAttributeDefinitionChange> {
 
     private String change;
 
     private com.commercetools.history.models.common.AttributeDefinition previousValue;
 
+    /**
+     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+     */
+
     public RemoveAttributeDefinitionChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinitionBuilder> builder) {
@@ -25,6 +46,10 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveAttributeDefinitionChangeBuilder previousValue(
             final com.commercetools.history.models.common.AttributeDefinition previousValue) {

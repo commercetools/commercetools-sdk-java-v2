@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *  <p>Discount is applied to CustomLineItems matching the <code>predicate</code>.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountCustomLineItemsTarget cartDiscountCustomLineItemsTarget = CartDiscountCustomLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountCustomLineItemsTargetImpl.class)
 public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
 
     String CUSTOM_LINE_ITEMS = "customLineItems";
 
+    /**
+     *  <p>Valid CustomLineItem target predicate.</p>
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();

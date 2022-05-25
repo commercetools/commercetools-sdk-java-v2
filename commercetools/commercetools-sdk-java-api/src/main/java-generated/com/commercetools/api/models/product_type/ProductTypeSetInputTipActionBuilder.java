@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeSetInputTipActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeSetInputTipAction productTypeSetInputTipAction = ProductTypeSetInputTipAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeSetInputTipAction> {
 
     private String attributeName;
@@ -17,16 +29,28 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     @Nullable
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
+    /**
+     *
+     */
+
     public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
             @Nullable final com.commercetools.api.models.common.LocalizedString inputTip) {

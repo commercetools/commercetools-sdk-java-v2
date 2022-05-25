@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderDiscountCodeStateSetMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscountCodeStateSetMessagePayload, ModelBase {
 
     private String type;
@@ -40,20 +43,33 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
-    */
+     *  <p>Reference to a DiscountCode.</p>
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
         return this.state;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.DiscountCodeState getOldState() {
         return this.oldState;

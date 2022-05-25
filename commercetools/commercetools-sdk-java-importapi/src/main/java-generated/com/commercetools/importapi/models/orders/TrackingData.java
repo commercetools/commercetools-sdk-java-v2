@@ -10,21 +10,53 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TrackingData
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TrackingData trackingData = TrackingData.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TrackingDataImpl.class)
 public interface TrackingData {
+
+    /**
+     *
+     */
 
     @JsonProperty("trackingId")
     public String getTrackingId();
 
+    /**
+     *
+     */
+
     @JsonProperty("carrier")
     public String getCarrier();
+
+    /**
+     *
+     */
 
     @JsonProperty("provider")
     public String getProvider();
 
+    /**
+     *
+     */
+
     @JsonProperty("providerTransaction")
     public String getProviderTransaction();
+
+    /**
+     *
+     */
 
     @JsonProperty("isReturn")
     public Boolean getIsReturn();

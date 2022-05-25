@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetVariantAvailabilityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetVariantAvailabilityChange setVariantAvailabilityChange = SetVariantAvailabilityChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAvailabilityChange> {
 
     private String change;
@@ -20,20 +36,36 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
+    /**
+     *  <p>Update action for <code>setVariantAvailability</code></p>
+     */
+
     public SetVariantAvailabilityChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetVariantAvailabilityChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetVariantAvailabilityChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
@@ -43,11 +75,19 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetVariantAvailabilityChangeBuilder previousValue(
             final com.commercetools.history.models.common.ProductVariantAvailability previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetVariantAvailabilityChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
@@ -55,6 +95,10 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetVariantAvailabilityChangeBuilder nextValue(
             final com.commercetools.history.models.common.ProductVariantAvailability nextValue) {

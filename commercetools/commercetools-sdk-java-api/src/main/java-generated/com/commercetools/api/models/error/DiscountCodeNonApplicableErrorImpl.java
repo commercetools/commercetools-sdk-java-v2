@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeNonApplicableError
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplicableError, ModelBase {
 
     private String code;
@@ -58,37 +61,73 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
         this.code = DISCOUNT_CODE_NON_APPLICABLE;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *
+     */
+
     public Map<String, java.lang.Object> values() {
         return values;
     }
+
+    /**
+     *
+     */
 
     public String getDiscountCode() {
         return this.discountCode;
     }
 
+    /**
+     *
+     */
+
     public String getReason() {
         return this.reason;
     }
+
+    /**
+     *
+     */
 
     public String getDicountCodeId() {
         return this.dicountCodeId;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getValidityCheckTime() {
         return this.validityCheckTime;

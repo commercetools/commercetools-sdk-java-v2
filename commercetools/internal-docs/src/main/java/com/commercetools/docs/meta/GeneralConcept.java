@@ -8,7 +8,7 @@ import io.vrap.rmf.base.client.ApiMethod;
 /**
  * <h2 id=general-concept>General concept of the SDK</h2>
  *
- * The SDK provides classes and interfaces to interact with the commercetools APIs in an object oriented way.
+ * The SDK provides classes and interfaces to interact with the commercetools Composable Commerce APIs in an object-oriented way.
  *
  * <h3>ApiHttpClient</h3>
  *

@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EnumKeyDoesNotExistErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()
+ *             .message("{message}")
+ *             .conflictingEnumKey("{conflictingEnumKey}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotExistError> {
 
     private String message;
@@ -17,15 +31,27 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
 
     private String conflictingAttributeName;
 
+    /**
+     *
+     */
+
     public EnumKeyDoesNotExistErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumKeyDoesNotExistErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumKeyDoesNotExistErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -35,10 +61,18 @@ public class EnumKeyDoesNotExistErrorBuilder implements Builder<EnumKeyDoesNotEx
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumKeyDoesNotExistErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
         this.conflictingEnumKey = conflictingEnumKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumKeyDoesNotExistErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;

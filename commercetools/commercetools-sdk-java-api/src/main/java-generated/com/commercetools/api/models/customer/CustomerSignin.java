@@ -14,34 +14,69 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSignin
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSignin customerSignin = CustomerSignin.builder()
+ *             .email("{email}")
+ *             .password("{password}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSigninImpl.class)
 public interface CustomerSignin {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("password")
     public String getPassword();
 
+    /**
+     *
+     */
     @Deprecated
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Cart">Cart</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a Cart.</p>
+     */
     @Valid
     @JsonProperty("anonymousCart")
     public CartResourceIdentifier getAnonymousCart();
 
+    /**
+     *
+     */
+
     @JsonProperty("anonymousCartSignInMode")
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
 
+    /**
+     *
+     */
+
     @JsonProperty("anonymousId")
     public String getAnonymousId();
+
+    /**
+     *
+     */
 
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();

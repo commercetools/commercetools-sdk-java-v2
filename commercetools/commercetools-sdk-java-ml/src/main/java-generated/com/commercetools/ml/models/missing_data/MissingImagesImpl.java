@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingImages
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesImpl implements MissingImages, ModelBase {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -34,20 +37,26 @@ public class MissingImagesImpl implements MissingImages, ModelBase {
     public MissingImagesImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
     /**
-    *  <p>ID of the variant</p>
-    */
+     *  <p>ID of the variant</p>
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
 
     /**
-    *  <p>Number of images the variant contains.</p>
-    */
+     *  <p>Number of images the variant contains.</p>
+     */
+
     public Long getImageCount() {
         return this.imageCount;
     }

@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCartScoreShippingRateInputValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCartScoreShippingRateInputValue setCartScoreShippingRateInputValue = SetCartScoreShippingRateInputValue.builder()
+ *             .type("{type}")
+ *             .score(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCartScoreShippingRateInputValue> {
 
     private String type;
 
     private Integer score;
 
+    /**
+     *
+     */
+
     public SetCartScoreShippingRateInputValueBuilder type(final String type) {
         this.type = type;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCartScoreShippingRateInputValueBuilder score(final Integer score) {
         this.score = score;

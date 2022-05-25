@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EnumKeyAlreadyExistsErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumKeyAlreadyExistsError enumKeyAlreadyExistsError = EnumKeyAlreadyExistsError.builder()
+ *             .message("{message}")
+ *             .conflictingEnumKey("{conflictingEnumKey}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyExistsError> {
 
     private String message;
@@ -17,15 +31,27 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
 
     private String conflictingAttributeName;
 
+    /**
+     *
+     */
+
     public EnumKeyAlreadyExistsErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumKeyAlreadyExistsErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumKeyAlreadyExistsErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -35,10 +61,18 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumKeyAlreadyExistsErrorBuilder conflictingEnumKey(final String conflictingEnumKey) {
         this.conflictingEnumKey = conflictingEnumKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumKeyAlreadyExistsErrorBuilder conflictingAttributeName(final String conflictingAttributeName) {
         this.conflictingAttributeName = conflictingAttributeName;

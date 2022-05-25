@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetCustomShippingMethodActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetCustomShippingMethodAction stagedOrderSetCustomShippingMethodAction = StagedOrderSetCustomShippingMethodAction.builder()
+ *             .shippingMethodName("{shippingMethodName}")
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomShippingMethodActionBuilder
         implements Builder<StagedOrderSetCustomShippingMethodAction> {
 
@@ -23,10 +36,18 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     *
+     */
+
     public StagedOrderSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
@@ -35,11 +56,19 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderSetCustomShippingMethodActionBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.shippingRate = shippingRate;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -49,11 +78,19 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
+
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -61,6 +98,10 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetCustomShippingMethodActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

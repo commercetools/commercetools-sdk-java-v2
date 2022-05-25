@@ -13,16 +13,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetSearchKeywordsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetSearchKeywordsAction productSetSearchKeywordsAction = ProductSetSearchKeywordsAction.builder()
+ *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetSearchKeywordsActionImpl.class)
 public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
     String SET_SEARCH_KEYWORDS = "setSearchKeywords";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
+
+    /**
+     *
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

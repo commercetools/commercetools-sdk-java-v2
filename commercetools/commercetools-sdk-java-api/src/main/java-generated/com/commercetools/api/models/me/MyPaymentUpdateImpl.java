@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyPaymentUpdate
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentUpdateImpl implements MyPaymentUpdate, ModelBase {
 
     private Long version;
@@ -31,9 +34,17 @@ public class MyPaymentUpdateImpl implements MyPaymentUpdate, ModelBase {
     public MyPaymentUpdateImpl() {
     }
 
+    /**
+     *
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> getActions() {
         return this.actions;

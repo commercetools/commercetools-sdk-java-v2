@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeValueActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeValueAction cartDiscountChangeValueAction = CartDiscountChangeValueAction.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeValueActionBuilder implements Builder<CartDiscountChangeValueAction> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
+
+    /**
+     *  <p>New value to set.</p>
+     */
 
     public CartDiscountChangeValueActionBuilder value(
             final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     */
 
     public CartDiscountChangeValueActionBuilder value(
             Function<com.commercetools.api.models.cart_discount.CartDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValueDraft>> builder) {

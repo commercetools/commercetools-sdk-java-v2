@@ -14,40 +14,74 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemCustomFieldChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemCustomFieldChange setCustomLineItemCustomFieldChange = SetCustomLineItemCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomLineItemCustomFieldChangeImpl.class)
 public interface SetCustomLineItemCustomFieldChange extends Change {
 
     String SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD_CHANGE = "SetCustomLineItemCustomFieldChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("customLineItem")
     public LocalizedString getCustomLineItem();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Object getPreviousValue();

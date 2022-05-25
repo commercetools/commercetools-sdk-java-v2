@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetSkuChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSkuChange setSkuChange = SetSkuChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     private String change;
@@ -17,20 +32,36 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     private String nextValue;
 
+    /**
+     *  <p>Update action for <code>setSku</code></p>
+     */
+
     public SetSkuChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetSkuChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetSkuChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetSkuChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

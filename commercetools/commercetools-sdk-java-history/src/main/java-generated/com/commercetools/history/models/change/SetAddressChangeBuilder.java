@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAddressChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAddressChange setAddressChange = SetAddressChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     *  <p>Update action for <code>setAddress</code> action.</p>
+     */
+
     public SetAddressChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAddressChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
@@ -27,16 +49,28 @@ public class SetAddressChangeBuilder implements Builder<SetAddressChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAddressChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetAddressChangeBuilder previousValue(final com.commercetools.history.models.common.Address previousValue) {
         this.previousValue = previousValue;

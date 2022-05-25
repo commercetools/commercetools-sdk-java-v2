@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Shape of the value for cart discounts gift line item value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for cart discounts gift line item value.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLineItemChangeValue, ModelBase {
 
     private String type;
@@ -47,21 +47,41 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Reference getProduct() {
         return this.product;
     }
 
+    /**
+     *
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {
         return this.distributionChannel;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MultiBuyLineItemsTarget
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, ModelBase {
 
     private String type;
@@ -47,37 +50,49 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
         this.type = MULTI_BUY_LINE_ITEMS;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>
-    */
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     */
+
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     */
+
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     */
+
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
+
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
         return this.selectionMode;

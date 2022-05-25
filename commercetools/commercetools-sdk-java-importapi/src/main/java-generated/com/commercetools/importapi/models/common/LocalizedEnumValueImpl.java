@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LocalizedEnumValue
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
 
     private String key;
@@ -31,18 +34,23 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     public LocalizedEnumValueImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
     }

@@ -6,20 +6,44 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomTokenizerBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomTokenizer customTokenizer = CustomTokenizer.builder()
+ *             .plusInputs(inputsBuilder -> inputsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
 
     private java.util.List<String> inputs;
+
+    /**
+     *
+     */
 
     public CustomTokenizerBuilder inputs(final String... inputs) {
         this.inputs = new ArrayList<>(Arrays.asList(inputs));
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomTokenizerBuilder inputs(final java.util.List<String> inputs) {
         this.inputs = inputs;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomTokenizerBuilder plusInputs(final String... inputs) {
         if (this.inputs == null) {

@@ -13,19 +13,39 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentStatusDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentStatusDraft paymentStatusDraft = PaymentStatusDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentStatusDraftImpl.class)
 public interface PaymentStatusDraft {
 
+    /**
+     *
+     */
+
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
+
+    /**
+     *
+     */
 
     @JsonProperty("interfaceText")
     public String getInterfaceText();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();

@@ -14,29 +14,57 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductAddAssetAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductAddAssetAction productAddAssetAction = ProductAddAssetAction.builder()
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddAssetActionImpl.class)
 public interface ProductAddAssetAction extends ProductUpdateAction {
 
     String ADD_ASSET = "addAsset";
 
+    /**
+     *
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     *
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     *
+     */
+
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("asset")
     public AssetDraft getAsset();
 
     /**
-    *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
-    */
+     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     */
 
     @JsonProperty("position")
     public Integer getPosition();

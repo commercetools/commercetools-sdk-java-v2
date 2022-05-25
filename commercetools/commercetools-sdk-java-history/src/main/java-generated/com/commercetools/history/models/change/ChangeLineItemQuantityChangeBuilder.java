@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeLineItemQuantityChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeLineItemQuantityChange changeLineItemQuantityChange = ChangeLineItemQuantityChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .lineItemId("{lineItemId}")
+ *             .nextValue(1)
+ *             .previousValue(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineItemQuantityChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     private Integer previousValue;
 
+    /**
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     */
+
     public ChangeLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeLineItemQuantityChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -31,21 +55,37 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeLineItemQuantityChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeLineItemQuantityChangeBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
+    /**
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
+
     public ChangeLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
 
     public ChangeLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetCustomTypeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetCustomTypeAction stagedOrderSetCustomTypeAction = StagedOrderSetCustomTypeAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrderSetCustomTypeAction> {
 
     @Nullable
@@ -18,11 +29,19 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     */
+
     public StagedOrderSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     */
 
     public StagedOrderSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +49,19 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
         return this;
     }
 
+    /**
+     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     */
+
     public StagedOrderSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     */
 
     public StagedOrderSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

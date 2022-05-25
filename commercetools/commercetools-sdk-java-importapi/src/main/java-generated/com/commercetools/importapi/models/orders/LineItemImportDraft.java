@@ -18,84 +18,95 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-*  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted.
-*  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
+ *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemImportDraft lineItemImportDraft = LineItemImportDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
 public interface LineItemImportDraft {
 
     /**
-    *  <p>Maps to <code>LineItem.productId</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     */
     @Valid
     @JsonProperty("product")
     public ProductKeyReference getProduct();
 
     /**
-    *  <p>Maps to <code>LineItem.name</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.name</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
-    */
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("variant")
     public LineItemProductVariantImportDraft getVariant();
 
     /**
-    *  <p>Maps to <code>LineItem.price</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.price</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("price")
     public LineItemPrice getPrice();
 
     /**
-    *  <p>Maps to <code>LineItem.quantity</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
+     */
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     /**
-    *  <p>Maps to <code>LineItem.supplyChannel</code>.
-    *  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
-    */
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelKeyReference getSupplyChannel();
 
     /**
-    *  <p>Maps to <code>LineItem.distributionChannel</code>.
-    *  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
-    */
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelKeyReference getDistributionChannel();
 
     /**
-    *  <p>Maps to <code>LineItem.taxRate</code>.</p>
-    */
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
 
     /**
-    *  <p>Maps to LineItem.shippingDetails.</p>
-    */
+     *  <p>Maps to LineItem.shippingDetails.</p>
+     */
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();

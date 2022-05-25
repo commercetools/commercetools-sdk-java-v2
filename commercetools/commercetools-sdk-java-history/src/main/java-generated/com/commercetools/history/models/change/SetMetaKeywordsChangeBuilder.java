@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetMetaKeywordsChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetMetaKeywordsChange setMetaKeywordsChange = SetMetaKeywordsChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setMetaKeywords</code></p>
+     */
+
     public SetMetaKeywordsChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetMetaKeywordsChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -27,17 +49,29 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetMetaKeywordsChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetMetaKeywordsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetMetaKeywordsChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {

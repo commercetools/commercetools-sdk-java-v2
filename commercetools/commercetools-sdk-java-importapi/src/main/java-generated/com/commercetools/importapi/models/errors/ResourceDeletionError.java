@@ -10,11 +10,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ResourceDeletionError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ResourceDeletionError resourceDeletionError = ResourceDeletionError.builder()
+ *             .message("{message}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletionErrorImpl.class)
 public interface ResourceDeletionError extends ErrorObject {
 
     String RESOURCE_DELETION = "ResourceDeletion";
+
+    /**
+     *
+     */
 
     @JsonProperty("resource")
     public Object getResource();

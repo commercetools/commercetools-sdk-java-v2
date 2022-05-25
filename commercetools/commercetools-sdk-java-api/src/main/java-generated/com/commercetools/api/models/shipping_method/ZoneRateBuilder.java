@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ZoneRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneRate zoneRate = ZoneRate.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     private com.commercetools.api.models.zone.ZoneReference zone;
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
+
+    /**
+     *
+     */
 
     public ZoneRateBuilder zone(
             Function<com.commercetools.api.models.zone.ZoneReferenceBuilder, com.commercetools.api.models.zone.ZoneReferenceBuilder> builder) {
@@ -20,10 +37,18 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ZoneRateBuilder zone(final com.commercetools.api.models.zone.ZoneReference zone) {
         this.zone = zone;
         return this;
     }
+
+    /**
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     */
 
     public ZoneRateBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
@@ -31,11 +56,19 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     */
+
     public ZoneRateBuilder shippingRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
         this.shippingRates = shippingRates;
         return this;
     }
+
+    /**
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     */
 
     public ZoneRateBuilder plusShippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
@@ -46,6 +79,10 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     */
+
     public ZoneRateBuilder plusShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
         if (this.shippingRates == null) {
@@ -55,6 +92,10 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
                 .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     */
 
     public ZoneRateBuilder withShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {

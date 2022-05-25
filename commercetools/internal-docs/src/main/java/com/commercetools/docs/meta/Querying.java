@@ -6,7 +6,7 @@ package com.commercetools.docs.meta;
  *
  * <h3>Predicates</h3>
  *
- * <p>The platform allows the use of <a href="https://docs.commercetools.com/api/predicates/query">predicates</a> when
+ * <p>The system allows the use of <a href="https://docs.commercetools.com/api/predicates/query">predicates</a> when
  * querying the API. Predicates are added as query parameter string to the request itself. The following example shows
  * the usage of <a href="https://docs.commercetools.com/api/predicates/query#input-variable-examples">input variables</a></p>
  *

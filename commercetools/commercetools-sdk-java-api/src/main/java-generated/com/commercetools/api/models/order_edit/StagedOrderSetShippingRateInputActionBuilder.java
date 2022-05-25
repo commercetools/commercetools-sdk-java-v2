@@ -9,17 +9,36 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetShippingRateInputActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderSetShippingRateInputAction stagedOrderSetShippingRateInputAction = StagedOrderSetShippingRateInputAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingRateInputActionBuilder implements Builder<StagedOrderSetShippingRateInputAction> {
 
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
+
+    /**
+     *
+     */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderSetShippingRateInputActionBuilder shippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {

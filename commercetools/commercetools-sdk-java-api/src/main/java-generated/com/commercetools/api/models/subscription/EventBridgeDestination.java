@@ -13,24 +13,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="https://aws.amazon.com/eventbridge/">AWS EventBridge</a> can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
+ *             .region("{region}")
+ *             .accountId("{accountId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EventBridgeDestinationImpl.class)
 public interface EventBridgeDestination extends Destination {
 
     String EVENT_BRIDGE = "EventBridge";
 
     /**
-    *  <p>AWS region to which commercetools sends the events.</p>
-    */
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
+     */
     @NotNull
     @JsonProperty("region")
     public String getRegion();
 
     /**
-    *  <p>ID of the AWS account that receives events from the commercetools platform.</p>
-    */
+     *  <p>ID of the AWS account that receives events.</p>
+     */
     @NotNull
     @JsonProperty("accountId")
     public String getAccountId();

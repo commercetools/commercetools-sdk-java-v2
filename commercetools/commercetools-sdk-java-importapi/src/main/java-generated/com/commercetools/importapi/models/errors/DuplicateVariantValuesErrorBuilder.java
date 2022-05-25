@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateVariantValuesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateVariantValuesError duplicateVariantValuesError = DuplicateVariantValuesError.builder()
+ *             .message("{message}")
+ *             .variantValues(variantValuesBuilder -> variantValuesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVariantValuesError> {
 
     private String message;
 
     private com.commercetools.importapi.models.errors.VariantValues variantValues;
 
+    /**
+     *
+     */
+
     public DuplicateVariantValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     *  <p>The offending variant values.</p>
+     */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
             Function<com.commercetools.importapi.models.errors.VariantValuesBuilder, com.commercetools.importapi.models.errors.VariantValuesBuilder> builder) {
         this.variantValues = builder.apply(com.commercetools.importapi.models.errors.VariantValuesBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The offending variant values.</p>
+     */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
             final com.commercetools.importapi.models.errors.VariantValues variantValues) {

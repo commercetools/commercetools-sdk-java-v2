@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Price price = Price.builder()
+ *             .id("{id}")
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceBuilder implements Builder<Price> {
 
     private String id;
 
     private com.commercetools.history.models.common.Money value;
 
+    /**
+     *
+     */
+
     public PriceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public PriceBuilder value(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public PriceBuilder value(final com.commercetools.history.models.common.Money value) {
         this.value = value;

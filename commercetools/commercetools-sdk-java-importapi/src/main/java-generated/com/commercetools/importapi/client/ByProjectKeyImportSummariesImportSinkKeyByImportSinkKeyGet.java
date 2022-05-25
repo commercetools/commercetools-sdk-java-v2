@@ -14,10 +14,22 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves an import summary for the given import sink.</p>
-*  <p>The import summary is calculated on demand.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Retrieves an import summary for the given import sink.</p>
+ *  <p>The import summary is calculated on demand.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary>> result = apiRoot
+ *            .withProjectKeyValue("{projectKey}")
+ *            .importSummaries()
+ *            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends
         ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary>
         implements

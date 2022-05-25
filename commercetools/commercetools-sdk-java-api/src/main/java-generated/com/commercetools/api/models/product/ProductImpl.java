@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Product
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImpl implements Product, ModelBase {
 
     private String id;
@@ -75,78 +78,105 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Product.</p>
-    */
+     *  <p>Unique identifier of the Product.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the product.</p>
-    */
+     *  <p>The current version of the product.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Product.
-    *  <em>Product keys are different from ProductVariant keys.</em></p>
-    */
+     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
     /**
-    *  <p>The product data in the master catalog.</p>
-    */
+     *  <p>The product data in the master catalog.</p>
+     */
+
     public com.commercetools.api.models.product.ProductCatalogData getMasterData() {
         return this.masterData;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
+
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
-    */
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     */
+
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;
     }

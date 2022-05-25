@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A required field is missing a value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A required field is missing a value.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
 
     private String code;
@@ -37,17 +37,26 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
         this.code = REQUIRED_FIELD;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-    *  <p>The name of the field.</p>
-    */
+     *  <p>The name of the field.</p>
+     */
+
     public String getField() {
         return this.field;
     }

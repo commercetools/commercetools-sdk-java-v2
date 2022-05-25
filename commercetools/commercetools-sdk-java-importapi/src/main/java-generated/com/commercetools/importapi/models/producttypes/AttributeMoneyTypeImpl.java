@@ -13,7 +13,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeMoneyType
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
 
     private String name;
@@ -22,6 +25,10 @@ public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
     AttributeMoneyTypeImpl() {
         this.name = MONEY;
     }
+
+    /**
+     *
+     */
 
     public String getName() {
         return this.name;

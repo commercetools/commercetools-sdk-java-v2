@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderRemoveDiscountCodeAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemoveDiscountCodeAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
         this.action = REMOVE_DISCOUNT_CODE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
-    */
+     *  <p>Reference to a DiscountCode.</p>
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }

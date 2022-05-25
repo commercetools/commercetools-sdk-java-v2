@@ -13,14 +13,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>References a key value document by key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>References a key value document by key.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomObjectKeyReference customObjectKeyReference = CustomObjectKeyReference.builder()
+ *             .key("{key}")
+ *             .container("{container}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectKeyReferenceImpl.class)
 public interface CustomObjectKeyReference extends KeyReference {
 
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("container")
     public String getContainer();

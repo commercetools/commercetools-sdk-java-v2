@@ -10,18 +10,18 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This mode specifies which type of prices should be used when looking up the price of a product.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This mode specifies which type of prices should be used when looking up the price of a product.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum {
 
     /**
-    	<p>The platform uses the prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">Product</a>.</p>
+    	<p>The API uses the prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">Product</a>.</p>
 
     */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
     /**
-    	<p>The platform uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
+    	<p>The API uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
 
     */
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;

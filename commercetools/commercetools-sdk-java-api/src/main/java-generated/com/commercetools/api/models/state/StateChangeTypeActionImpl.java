@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StateChangeTypeAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBase {
 
     private String action;
@@ -31,14 +34,18 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
         this.action = CHANGE_TYPE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Resource or object types the State shall be assigned to.
-    *  Must not be empty.</p>
-    */
+     *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     */
+
     public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;
     }

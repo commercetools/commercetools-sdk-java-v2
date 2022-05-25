@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditAddStagedActionAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAddStagedActionActionImpl implements OrderEditAddStagedActionAction, ModelBase {
 
     private String action;
@@ -32,9 +35,17 @@ public class OrderEditAddStagedActionActionImpl implements OrderEditAddStagedAct
         this.action = ADD_STAGED_ACTION;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.StagedOrderUpdateAction getStagedAction() {
         return this.stagedAction;

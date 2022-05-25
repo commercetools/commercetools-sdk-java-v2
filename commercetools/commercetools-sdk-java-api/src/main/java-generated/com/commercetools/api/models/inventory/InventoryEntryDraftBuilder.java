@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraft.builder()
+ *             .sku("{sku}")
+ *             .quantityOnStock(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> {
 
     private String sku;
@@ -31,15 +44,27 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     *
+     */
+
     public InventoryEntryDraftBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     */
+
     public InventoryEntryDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public InventoryEntryDraftBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -48,32 +73,56 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public InventoryEntryDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
 
+    /**
+     *
+     */
+
     public InventoryEntryDraftBuilder quantityOnStock(final Long quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
         return this;
     }
+
+    /**
+     *
+     */
 
     public InventoryEntryDraftBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
 
+    /**
+     *
+     */
+
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
         return this;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
 
     public InventoryEntryDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The custom fields.</p>
+     */
 
     public InventoryEntryDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

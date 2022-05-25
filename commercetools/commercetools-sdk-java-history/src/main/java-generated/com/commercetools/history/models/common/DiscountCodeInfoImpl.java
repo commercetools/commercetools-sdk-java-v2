@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeInfo
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
 
     private com.commercetools.history.models.common.Reference discountCode;
@@ -32,9 +35,17 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     public DiscountCodeInfoImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.Reference getDiscountCode() {
         return this.discountCode;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.DiscountCodeState getState() {
         return this.state;

@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Parcel parcel = Parcel.builder()
+ *             .id("{id}")
+ *             .createdAt("{createdAt}")
+ *             .measurements(measurementsBuilder -> measurementsBuilder)
+ *             .trackingData(trackingDataBuilder -> trackingDataBuilder)
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelBuilder implements Builder<Parcel> {
 
     private String id;
@@ -20,15 +36,27 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> items;
 
+    /**
+     *
+     */
+
     public ParcelBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelBuilder createdAt(final String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelBuilder measurements(
             Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
@@ -37,10 +65,18 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelBuilder measurements(final com.commercetools.history.models.common.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelBuilder trackingData(
             Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
@@ -48,20 +84,36 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelBuilder trackingData(final com.commercetools.history.models.common.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelBuilder items(final com.commercetools.history.models.common.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
         if (this.items == null) {
@@ -71,6 +123,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ParcelBuilder plusItems(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -79,6 +135,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ParcelBuilder withItems(
             Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {

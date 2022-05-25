@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangePriceActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductChangePriceAction productChangePriceAction = ProductChangePriceAction.builder()
+ *             .priceId("{priceId}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangePriceActionBuilder implements Builder<ProductChangePriceAction> {
 
     private String priceId;
@@ -19,10 +32,18 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     @Nullable
     private Boolean staged;
 
+    /**
+     *  <p>ID of the EmbeddedPrice</p>
+     */
+
     public ProductChangePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangePriceActionBuilder price(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
@@ -30,10 +51,18 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductChangePriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

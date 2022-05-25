@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeRequiresDiscountCodeAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeRequiresDiscountCodeAction cartDiscountChangeRequiresDiscountCodeAction = CartDiscountChangeRequiresDiscountCodeAction.builder()
+ *             .requiresDiscountCode(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeRequiresDiscountCodeActionImpl.class)
 public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscountUpdateAction {
 
     String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
 
+    /**
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     */
     @NotNull
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();

@@ -12,16 +12,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeNameAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeNameAction productTypeChangeAttributeNameAction = ProductTypeChangeAttributeNameAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newAttributeName("{newAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeNameActionImpl.class)
 public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateAction {
 
     String CHANGE_ATTRIBUTE_NAME = "changeAttributeName";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("newAttributeName")
     public String getNewAttributeName();

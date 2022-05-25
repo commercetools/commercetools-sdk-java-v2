@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateAttributeValuesErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
+ *             .message("{message}")
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAttributeValuesError> {
 
     private String message;
 
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
+    /**
+     *
+     */
+
     public DuplicateAttributeValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateAttributeValuesErrorBuilder attributes(
             final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -25,11 +46,19 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateAttributeValuesErrorBuilder attributes(
             final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
             final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -40,6 +69,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateAttributeValuesErrorBuilder plusAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         if (this.attributes == null) {
@@ -49,6 +82,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
                 .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateAttributeValuesErrorBuilder withAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {

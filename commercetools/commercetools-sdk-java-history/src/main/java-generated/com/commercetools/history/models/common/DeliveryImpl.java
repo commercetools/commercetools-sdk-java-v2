@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Delivery
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryImpl implements Delivery, ModelBase {
 
     private String id;
@@ -46,29 +49,50 @@ public class DeliveryImpl implements Delivery, ModelBase {
     public DeliveryImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public String getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
         return this.parcels;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
+
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }

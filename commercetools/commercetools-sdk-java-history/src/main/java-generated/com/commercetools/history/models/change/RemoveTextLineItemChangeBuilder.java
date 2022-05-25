@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * RemoveTextLineItemChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveTextLineItemChange removeTextLineItemChange = RemoveTextLineItemChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineItemChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
 
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
+    /**
+     *
+     */
+
     public RemoveTextLineItemChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveTextLineItemChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
@@ -27,17 +49,29 @@ public class RemoveTextLineItemChangeBuilder implements Builder<RemoveTextLineIt
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveTextLineItemChangeBuilder previousValue(
             final com.commercetools.history.models.common.TextLineItem previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveTextLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveTextLineItemChangeBuilder nextValue(
             final com.commercetools.history.models.common.TextLineItem nextValue) {

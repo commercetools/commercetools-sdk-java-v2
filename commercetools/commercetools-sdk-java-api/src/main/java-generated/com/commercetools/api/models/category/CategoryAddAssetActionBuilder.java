@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategoryAddAssetActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategoryAddAssetAction categoryAddAssetAction = CategoryAddAssetAction.builder()
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAction> {
 
     private com.commercetools.api.models.common.AssetDraft asset;
@@ -17,16 +29,28 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
     @Nullable
     private Integer position;
 
+    /**
+     *
+     */
+
     public CategoryAddAssetActionBuilder asset(
             Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraftBuilder> builder) {
         this.asset = builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public CategoryAddAssetActionBuilder asset(final com.commercetools.api.models.common.AssetDraft asset) {
         this.asset = asset;
         return this;
     }
+
+    /**
+     *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+     */
 
     public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {
         this.position = position;

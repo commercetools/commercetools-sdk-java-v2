@@ -13,51 +13,103 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItem
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItem lineItem = LineItem.builder()
+ *             .addedAt("{addedAt}")
+ *             .custom(customBuilder -> customBuilder)
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .productId("{productId}")
+ *             .productSlug(productSlugBuilder -> productSlugBuilder)
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .quantity(1)
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .variantId(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemImpl.class)
 public interface LineItem {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("addedAt")
     public String getAddedAt();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("productType")
     public Reference getProductType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("quantity")
     public Integer getQuantity();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("variant")
     public Variant getVariant();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();

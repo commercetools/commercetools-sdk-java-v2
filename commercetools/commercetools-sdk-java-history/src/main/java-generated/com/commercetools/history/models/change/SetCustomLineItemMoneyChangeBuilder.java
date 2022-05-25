@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemMoneyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetCustomLineItemMoneyChange setCustomLineItemMoneyChange = SetCustomLineItemMoneyChange.builder()
+ *             .change("{change}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+ *             .customLineItemId("{customLineItemId}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLineItemMoneyChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     */
+
     public SetCustomLineItemMoneyChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -32,16 +56,28 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemMoneyChangeBuilder customLineItem(
             final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.customLineItem = customLineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemMoneyChangeBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemMoneyChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -49,17 +85,29 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemMoneyChangeBuilder nextValue(
             final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetCustomLineItemMoneyChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetCustomLineItemMoneyChangeBuilder previousValue(
             final com.commercetools.history.models.common.Money previousValue) {

@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedLineItemPortionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPortion discountedLineItemPortion = DiscountedLineItemPortion.builder()
+ *             .discount(discountBuilder -> discountBuilder)
+ *             .discountedAmount(discountedAmountBuilder -> discountedAmountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineItemPortion> {
 
     private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
 
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPortionBuilder discount(
             Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
@@ -21,17 +38,29 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPortionBuilder discount(
             final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
         this.discount = discount;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPortionBuilder discountedAmount(
             final com.commercetools.api.models.common.TypedMoney discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPortionBuilder discountedAmount(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {

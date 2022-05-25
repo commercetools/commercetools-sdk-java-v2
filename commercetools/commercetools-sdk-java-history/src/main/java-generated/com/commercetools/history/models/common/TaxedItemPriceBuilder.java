@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedItemPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
 
     private com.commercetools.history.models.common.Money totalNet;
 
     private com.commercetools.history.models.common.Money totalGross;
+
+    /**
+     *
+     */
 
     public TaxedItemPriceBuilder totalNet(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -20,16 +37,28 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxedItemPriceBuilder totalNet(final com.commercetools.history.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedItemPriceBuilder totalGross(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxedItemPriceBuilder totalGross(final com.commercetools.history.models.common.Money totalGross) {
         this.totalGross = totalGross;

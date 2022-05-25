@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetOrderTaxedPriceChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, ModelBase {
 
     private String type;
@@ -43,24 +46,41 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
         this.type = SET_ORDER_TAXED_PRICE_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setOrderTaxedPrice</code></p>
-    */
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
         return this.previousValue;

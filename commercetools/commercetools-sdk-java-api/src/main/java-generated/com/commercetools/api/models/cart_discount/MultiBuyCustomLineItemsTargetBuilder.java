@@ -8,7 +8,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MultiBuyCustomLineItemsTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MultiBuyCustomLineItemsTarget multiBuyCustomLineItemsTarget = MultiBuyCustomLineItemsTarget.builder()
+ *             .predicate("{predicate}")
+ *             .triggerQuantity(1)
+ *             .discountedQuantity(1)
+ *             .selectionMode(SelectionMode.CHEAPEST)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCustomLineItemsTarget> {
 
     private String predicate;
@@ -22,25 +37,45 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
+    /**
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     */
+
     public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
+     */
 
     public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
 
+    /**
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     */
+
     public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
 
+    /**
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     */
+
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
+
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     */
 
     public MultiBuyCustomLineItemsTargetBuilder selectionMode(
             final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {

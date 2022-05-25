@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddInterfaceInteractionChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddInterfaceInteractionChange addInterfaceInteractionChange = AddInterfaceInteractionChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfaceInteractionChange> {
 
     private String change;
 
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
+    /**
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     */
+
     public AddInterfaceInteractionChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>Only available if <code>expand</code> is set to true</p>
+     */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
@@ -26,6 +47,10 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Only available if <code>expand</code> is set to true</p>
+     */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {

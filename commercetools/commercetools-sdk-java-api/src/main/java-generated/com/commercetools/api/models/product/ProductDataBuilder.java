@@ -9,7 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDataBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductData productData = ProductData.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
+ *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDataBuilder implements Builder<ProductData> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -39,27 +56,47 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder categories(final com.commercetools.api.models.category.CategoryReference... categories) {
         this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder categories(
             final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder plusCategories(
             final com.commercetools.api.models.category.CategoryReference... categories) {
@@ -70,6 +107,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder plusCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         if (this.categories == null) {
@@ -79,12 +120,20 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder withCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.categories = new ArrayList<>();
         this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder categoryOrderHints(
             Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
@@ -93,11 +142,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder categoryOrderHints(
             @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
         this.categoryOrderHints = categoryOrderHints;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -105,11 +162,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -117,10 +182,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -128,10 +201,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -139,11 +220,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder metaDescription(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ProductDataBuilder metaKeywords(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -151,11 +240,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ProductDataBuilder metaKeywords(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder masterVariant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
@@ -163,21 +260,37 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder masterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {
         this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder variants(
             final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
         this.variants = variants;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder plusVariants(final com.commercetools.api.models.product.ProductVariant... variants) {
         if (this.variants == null) {
@@ -186,6 +299,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         this.variants.addAll(Arrays.asList(variants));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder plusVariants(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
@@ -196,6 +313,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder withVariants(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.variants = new ArrayList<>();
@@ -203,11 +324,19 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductDataBuilder searchKeywords(
             Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;

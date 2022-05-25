@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductCatalogDataBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductCatalogData productCatalogData = ProductCatalogData.builder()
+ *             .published(true)
+ *             .current(currentBuilder -> currentBuilder)
+ *             .staged(stagedBuilder -> stagedBuilder)
+ *             .hasStagedChanges(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     private Boolean published;
@@ -18,10 +33,18 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     private Boolean hasStagedChanges;
 
+    /**
+     *
+     */
+
     public ProductCatalogDataBuilder published(final Boolean published) {
         this.published = published;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductCatalogDataBuilder current(
             Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
@@ -29,10 +52,18 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductCatalogDataBuilder current(final com.commercetools.api.models.product.ProductData current) {
         this.current = current;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductCatalogDataBuilder staged(
             Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
@@ -40,10 +71,18 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductCatalogDataBuilder staged(final com.commercetools.api.models.product.ProductData staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductCatalogDataBuilder hasStagedChanges(final Boolean hasStagedChanges) {
         this.hasStagedChanges = hasStagedChanges;

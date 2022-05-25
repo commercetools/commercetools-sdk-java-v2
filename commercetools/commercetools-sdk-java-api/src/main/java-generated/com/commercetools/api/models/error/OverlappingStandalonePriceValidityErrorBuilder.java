@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OverlappingStandalonePriceValidityErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
+ *             .message("{message}")
+ *             .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+ *             .sku("{sku}")
+ *             .currency("{currency}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverlappingStandalonePriceValidityErrorBuilder
         implements Builder<OverlappingStandalonePriceValidityError> {
 
@@ -44,15 +59,27 @@ public class OverlappingStandalonePriceValidityErrorBuilder
     @Nullable
     private java.time.ZonedDateTime conflictingValidUntil;
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -62,6 +89,10 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *  <p>Reference to a StandalonePrice.</p>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder> builder) {
         this.conflictingStandalonePrice = builder
@@ -70,26 +101,46 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *  <p>Reference to a StandalonePrice.</p>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
             final com.commercetools.api.models.standalone_price.StandalonePriceReference conflictingStandalonePrice) {
         this.conflictingStandalonePrice = conflictingStandalonePrice;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder currency(final String currency) {
         this.currency = currency;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
@@ -99,11 +150,19 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -112,16 +171,28 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {
@@ -129,11 +200,19 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidFrom(
             @Nullable final java.time.ZonedDateTime conflictingValidFrom) {
         this.conflictingValidFrom = conflictingValidFrom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingValidUntil(
             @Nullable final java.time.ZonedDateTime conflictingValidUntil) {

@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetProductVariantKeyChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetProductVariantKeyChange setProductVariantKeyChange = SetProductVariantKeyChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVariantKeyChange> {
 
     private String change;
@@ -17,20 +32,36 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     private String nextValue;
 
+    /**
+     *  <p>Update action for <code>setProductVariantKey</code></p>
+     */
+
     public SetProductVariantKeyChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetProductVariantKeyChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetProductVariantKeyChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

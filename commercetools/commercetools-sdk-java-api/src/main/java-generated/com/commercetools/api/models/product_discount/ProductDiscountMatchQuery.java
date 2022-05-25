@@ -14,35 +14,50 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductDiscountMatchQuery
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductDiscountMatchQuery productDiscountMatchQuery = ProductDiscountMatchQuery.builder()
+ *             .productId("{productId}")
+ *             .variantId(0.3)
+ *             .staged(true)
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountMatchQueryImpl.class)
 public interface ProductDiscountMatchQuery {
 
     /**
-    *  <p>ID of the specified Product.</p>
-    */
+     *  <p>ID of the specified Product.</p>
+     */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-    *  <p>ID of the specified Product Variant.</p>
-    */
+     *  <p>ID of the specified Product Variant.</p>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
     /**
-    *  <p>Controls which <a href="/../api/projects/productProjections#current--staged">projected representation</a> is applied for the query.
-    *  Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
-    */
+     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-    *  <p>Specified Price of the specified Product Variant.</p>
-    */
+     *  <p>Specified Price of the specified Product Variant.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("price")

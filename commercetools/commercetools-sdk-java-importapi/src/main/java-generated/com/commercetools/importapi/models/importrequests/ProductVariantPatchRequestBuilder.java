@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantPatchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
+ *             .plusPatches(patchesBuilder -> patchesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchRequestBuilder implements Builder<ProductVariantPatchRequest> {
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
+
+    /**
+     *  <p>The product variant patches of this request.</p>
+     */
 
     public ProductVariantPatchRequestBuilder patches(
             final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
@@ -18,11 +34,19 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+     *  <p>The product variant patches of this request.</p>
+     */
+
     public ProductVariantPatchRequestBuilder patches(
             final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
         this.patches = patches;
         return this;
     }
+
+    /**
+     *  <p>The product variant patches of this request.</p>
+     */
 
     public ProductVariantPatchRequestBuilder plusPatches(
             final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
@@ -33,6 +57,10 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+     *  <p>The product variant patches of this request.</p>
+     */
+
     public ProductVariantPatchRequestBuilder plusPatches(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
         if (this.patches == null) {
@@ -42,6 +70,10 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
             builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The product variant patches of this request.</p>
+     */
 
     public ProductVariantPatchRequestBuilder withPatches(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {

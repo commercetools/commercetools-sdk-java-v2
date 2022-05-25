@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductRemovePriceAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, ModelBase {
 
     private String action;
@@ -35,16 +38,25 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
         this.action = REMOVE_PRICE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
-    */
+     *  <p>ID of the EmbeddedPrice</p>
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;

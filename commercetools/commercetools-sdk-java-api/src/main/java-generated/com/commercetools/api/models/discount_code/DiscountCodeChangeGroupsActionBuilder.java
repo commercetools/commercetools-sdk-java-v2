@@ -6,20 +6,44 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountCodeChangeGroupsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountCodeChangeGroupsAction discountCodeChangeGroupsAction = DiscountCodeChangeGroupsAction.builder()
+ *             .plusGroups(groupsBuilder -> groupsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCodeChangeGroupsAction> {
 
     private java.util.List<String> groups;
+
+    /**
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     */
 
     public DiscountCodeChangeGroupsActionBuilder groups(final String... groups) {
         this.groups = new ArrayList<>(Arrays.asList(groups));
         return this;
     }
 
+    /**
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     */
+
     public DiscountCodeChangeGroupsActionBuilder groups(final java.util.List<String> groups) {
         this.groups = groups;
         return this;
     }
+
+    /**
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     */
 
     public DiscountCodeChangeGroupsActionBuilder plusGroups(final String... groups) {
         if (this.groups == null) {

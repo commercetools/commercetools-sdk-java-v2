@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetTaxCategoryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetTaxCategoryChange setTaxCategoryChange = SetTaxCategoryChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setTaxCategory</code></p>
+     */
+
     public SetTaxCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTaxCategoryChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -27,17 +49,29 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTaxCategoryChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetTaxCategoryChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetTaxCategoryChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;

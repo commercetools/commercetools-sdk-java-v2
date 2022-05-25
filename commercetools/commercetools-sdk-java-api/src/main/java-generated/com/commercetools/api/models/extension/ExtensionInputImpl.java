@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ExtensionInput
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionInputImpl implements ExtensionInput, ModelBase {
 
     private com.commercetools.api.models.extension.ExtensionAction action;
@@ -32,15 +35,17 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
     }
 
     /**
-    *  <p><code>Create</code> or <code>Update</code> request.</p>
-    */
+     *  <p><code>Create</code> or <code>Update</code> request.</p>
+     */
+
     public com.commercetools.api.models.extension.ExtensionAction getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Expanded reference to the resource that triggered the Extension.</p>
-    */
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }

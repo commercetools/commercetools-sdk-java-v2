@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
 
     private String key;
@@ -34,15 +34,17 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
     }
 
     /**
-    *  <p>User-defined identifier that is unique within the given container.</p>
-    */
+     *  <p>User-defined identifier that is unique within the given container.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Namespace to group Custom Objects.</p>
-    */
+     *  <p>Namespace to group Custom Objects.</p>
+     */
+
     public String getContainer() {
         return this.container;
     }

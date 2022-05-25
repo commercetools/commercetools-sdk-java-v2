@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetDeliveryAddressAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDeliveryAddressAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
         this.action = SET_DELIVERY_ADDRESS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;

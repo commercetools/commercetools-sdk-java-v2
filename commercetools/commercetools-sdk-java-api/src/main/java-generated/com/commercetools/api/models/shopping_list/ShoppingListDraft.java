@@ -17,68 +17,97 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListDraft shoppingListDraft = ShoppingListDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListDraftImpl.class)
 public interface ShoppingListDraft {
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
 
     /**
-    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
-    */
+     *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+     */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>User-defined unique identifier for the ShoppingList.</p>
-    */
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("lineItems")
     public List<ShoppingListLineItemDraft> getLineItems();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
-    */
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+     */
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("textLineItems")
     public List<TextLineItemDraft> getTextLineItems();
 
     /**
-    *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();

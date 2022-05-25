@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewRatingSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewRatingSetMessagePayload reviewRatingSetMessagePayload = ReviewRatingSetMessagePayload.builder()
+ *             .includedInStatistics(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatingSetMessagePayload> {
 
     @Nullable
@@ -23,26 +35,46 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     @Nullable
     private com.commercetools.api.models.common.Reference target;
 
+    /**
+     *
+     */
+
     public ReviewRatingSetMessagePayloadBuilder oldRating(@Nullable final Double oldRating) {
         this.oldRating = oldRating;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
         this.newRating = newRating;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReviewRatingSetMessagePayloadBuilder includedInStatistics(final Boolean includedInStatistics) {
         this.includedInStatistics = includedInStatistics;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public ReviewRatingSetMessagePayloadBuilder target(
             @Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public ReviewRatingSetMessagePayloadBuilder target(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {

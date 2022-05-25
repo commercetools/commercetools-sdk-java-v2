@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * FilteredFacetResult
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
 
     private com.commercetools.api.models.product.FacetTypes type;
@@ -35,13 +38,25 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
         this.type = FacetTypes.findEnum("filter");
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *
+     */
 
     public Long getProductCount() {
         return this.productCount;

@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A given field is not supported.
-*  This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="/product#productimport">Product Import</a>, is sent to the Product Import endpoint.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
     private String code;
@@ -50,34 +49,49 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
         this.code = INVALID_FIELD;
     }
 
+    /**
+     *
+     */
+
     public String getCode() {
         return this.code;
     }
+
+    /**
+     *
+     */
 
     public String getMessage() {
         return this.message;
     }
 
     /**
-    *  <p>The name of the field.</p>
-    */
+     *  <p>The name of the field.</p>
+     */
+
     public String getField() {
         return this.field;
     }
 
     /**
-    *  <p>The invalid value.</p>
-    */
+     *  <p>The invalid value.</p>
+     */
+
     public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
 
     /**
-    *  <p>The set of allowed values for the field, if any.</p>
-    */
+     *  <p>The set of allowed values for the field, if any.</p>
+     */
+
     public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;
     }
+
+    /**
+     *
+     */
 
     public Long getResourceIndex() {
         return this.resourceIndex;

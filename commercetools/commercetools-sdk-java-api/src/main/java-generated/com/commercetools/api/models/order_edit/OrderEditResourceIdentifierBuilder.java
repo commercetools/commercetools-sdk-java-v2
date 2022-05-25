@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditResourceIdentifier orderEditResourceIdentifier = OrderEditResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditResourceIdentifier> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
     @Nullable
     private String key;
 
+    /**
+     *  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public OrderEditResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public OrderEditResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

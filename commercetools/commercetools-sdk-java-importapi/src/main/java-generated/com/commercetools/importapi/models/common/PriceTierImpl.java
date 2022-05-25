@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceTierImpl implements PriceTier, ModelBase {
 
     private Long minimumQuantity;
@@ -35,15 +35,17 @@ public class PriceTierImpl implements PriceTier, ModelBase {
     }
 
     /**
-    *  <p>The minimum quantity this price tier is valid for.</p>
-    */
+     *  <p>The minimum quantity this price tier is valid for.</p>
+     */
+
     public Long getMinimumQuantity() {
         return this.minimumQuantity;
     }
 
     /**
-    *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
-    */
+     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }

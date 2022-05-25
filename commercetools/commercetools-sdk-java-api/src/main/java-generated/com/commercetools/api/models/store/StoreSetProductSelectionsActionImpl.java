@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreSetProductSelectionsAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelectionsAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
         this.action = SET_PRODUCT_SELECTIONS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>The total of Product Selections to be set for this Store.</p>
-    */
+     *  <p>The total of Product Selections to be set for this Store.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;
     }

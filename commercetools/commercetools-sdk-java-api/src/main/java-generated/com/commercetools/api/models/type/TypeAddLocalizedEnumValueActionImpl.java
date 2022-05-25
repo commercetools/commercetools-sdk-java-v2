@@ -15,10 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Adds a value to a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a>.
-*  This update action can be used to update a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldLocalizedEnumType">CustomFieldLocalizedEnumType</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Adds a value to a LocalizedEnumType. This update action can be used to update a LocalizedEnumType FieldDefinition and a SetType FieldDefinition of CustomFieldLocalizedEnumType.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnumValueAction, ModelBase {
 
     private String action;
@@ -39,20 +38,26 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
-    */
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;
     }

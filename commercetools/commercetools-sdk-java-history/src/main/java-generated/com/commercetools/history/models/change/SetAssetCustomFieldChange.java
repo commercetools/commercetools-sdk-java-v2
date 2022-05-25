@@ -14,40 +14,74 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetAssetCustomFieldChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetAssetCustomFieldChange setAssetCustomFieldChange = SetAssetCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .name("{name}")
+ *             .customTypeId("{customTypeId}")
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAssetCustomFieldChangeImpl.class)
 public interface SetAssetCustomFieldChange extends Change {
 
     String SET_ASSET_CUSTOM_FIELD_CHANGE = "SetAssetCustomFieldChange";
 
     /**
-    *  <p>Update action for <code>setAssetCustomField</code></p>
-    */
+     *  <p>Update action for <code>setAssetCustomField</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("asset")
     public AssetChangeValue getAsset();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Object getPreviousValue();

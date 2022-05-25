@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Defines an allowed value of a <a href="ctp:api:type:CustomFieldEnumType">CustomFieldEnumType</a> field.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldEnumValueImpl implements CustomFieldEnumValue, ModelBase {
 
     private String key;
@@ -34,15 +34,17 @@ public class CustomFieldEnumValueImpl implements CustomFieldEnumValue, ModelBase
     }
 
     /**
-    *  <p>Key of the value used as a programmatic identifier.</p>
-    */
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Descriptive label of the value.</p>
-    */
+     *  <p>Descriptive label of the value.</p>
+     */
+
     public String getLabel() {
         return this.label;
     }

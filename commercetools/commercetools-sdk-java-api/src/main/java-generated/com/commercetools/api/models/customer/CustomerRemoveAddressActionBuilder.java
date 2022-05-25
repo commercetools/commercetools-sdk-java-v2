@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerRemoveAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerRemoveAddressAction customerRemoveAddressAction = CustomerRemoveAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemoveAddressAction> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemov
     @Nullable
     private String addressKey;
 
+    /**
+     *
+     */
+
     public CustomerRemoveAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerRemoveAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;

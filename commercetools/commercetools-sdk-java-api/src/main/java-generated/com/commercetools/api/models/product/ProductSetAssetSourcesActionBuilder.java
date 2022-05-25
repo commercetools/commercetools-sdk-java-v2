@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAssetSourcesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetSourcesAction productSetAssetSourcesAction = ProductSetAssetSourcesAction.builder()
+ *             .plusSources(sourcesBuilder -> sourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAssetSourcesAction> {
 
     @Nullable
@@ -29,30 +41,54 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
+    /**
+     *
+     */
+
     public ProductSetAssetSourcesActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetSourcesActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetSourcesActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetSourcesActionBuilder sources(
             final com.commercetools.api.models.common.AssetSource... sources) {
@@ -60,11 +96,19 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetSourcesActionBuilder sources(
             final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
             final com.commercetools.api.models.common.AssetSource... sources) {
@@ -75,6 +119,10 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetAssetSourcesActionBuilder plusSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
         if (this.sources == null) {
@@ -83,6 +131,10 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
         this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetAssetSourcesActionBuilder withSources(
             Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {

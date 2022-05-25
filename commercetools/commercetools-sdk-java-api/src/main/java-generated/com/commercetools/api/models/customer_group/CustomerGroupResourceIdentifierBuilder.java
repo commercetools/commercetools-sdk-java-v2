@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerGroupResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroupResourceIdentifier customerGroupResourceIdentifier = CustomerGroupResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerGroupResourceIdentifier> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     @Nullable
     private String key;
 
+    /**
+     *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public CustomerGroupResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public CustomerGroupResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

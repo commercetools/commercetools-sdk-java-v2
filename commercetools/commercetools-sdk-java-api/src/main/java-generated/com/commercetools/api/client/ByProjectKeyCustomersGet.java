@@ -16,7 +16,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ *
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerPagedQueryResponse>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .customers()
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersGet extends
         ApiMethod<ByProjectKeyCustomersGet, com.commercetools.api.models.customer.CustomerPagedQueryResponse> implements
         com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomersGet, com.commercetools.api.models.customer.CustomerPagedQueryResponse>,

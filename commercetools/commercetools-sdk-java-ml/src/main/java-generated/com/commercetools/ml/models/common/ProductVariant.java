@@ -14,30 +14,42 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The product variant that contains the image.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The product variant that contains the image.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariant productVariant = ProductVariant.builder()
+ *             .product(productBuilder -> productBuilder)
+ *             .staged(true)
+ *             .variantId(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant {
 
     /**
-    *  <p>The product that contains this variant.</p>
-    */
+     *  <p>The product that contains this variant.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
 
     /**
-    *  <p>The state of the product variant.</p>
-    */
+     *  <p>The state of the product variant.</p>
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-    *  <p>The id of the product variant.</p>
-    */
+     *  <p>The id of the product variant.</p>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();

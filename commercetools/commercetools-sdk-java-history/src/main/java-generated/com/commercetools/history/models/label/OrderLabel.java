@@ -12,20 +12,43 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLabel
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLabel orderLabel = OrderLabel.builder()
+ *             .customerEmail("{customerEmail}")
+ *             .orderNumber("{orderNumber}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLabelImpl.class)
 public interface OrderLabel extends Label {
 
     String ORDER_LABEL = "OrderLabel";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("orderNumber")
     public String getOrderNumber();

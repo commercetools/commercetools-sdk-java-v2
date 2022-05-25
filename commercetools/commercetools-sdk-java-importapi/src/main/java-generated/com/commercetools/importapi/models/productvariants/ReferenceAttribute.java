@@ -15,17 +15,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents an attribute whose value is a key reference.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This type represents an attribute whose value is a key reference.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferenceAttribute referenceAttribute = ReferenceAttribute.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
 
     String REFERENCE = "reference";
 
     /**
-    *  <p>References a resource by key.</p>
-    */
+     *  <p>References a resource by key.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

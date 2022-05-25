@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductLabelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductLabel productLabel = ProductLabel.builder()
+ *             .slug(slugBuilder -> slugBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductLabelBuilder implements Builder<ProductLabel> {
 
     private com.commercetools.history.models.common.LocalizedString slug;
 
     private com.commercetools.history.models.common.LocalizedString name;
+
+    /**
+     *
+     */
 
     public ProductLabelBuilder slug(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -20,16 +37,28 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductLabelBuilder slug(final com.commercetools.history.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductLabelBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductLabelBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;

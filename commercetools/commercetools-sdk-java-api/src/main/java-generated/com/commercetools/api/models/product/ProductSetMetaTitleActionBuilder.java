@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetMetaTitleActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetMetaTitleAction productSetMetaTitleAction = ProductSetMetaTitleAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaTitleAction> {
 
     @Nullable
@@ -18,17 +29,29 @@ public class ProductSetMetaTitleActionBuilder implements Builder<ProductSetMetaT
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductSetMetaTitleActionBuilder metaTitle(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetMetaTitleActionBuilder metaTitle(
             @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetMetaTitleActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

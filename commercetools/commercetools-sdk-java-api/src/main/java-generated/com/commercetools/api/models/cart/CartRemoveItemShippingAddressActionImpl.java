@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartRemoveItemShippingAddressAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveItemShippingAddressActionImpl implements CartRemoveItemShippingAddressAction, ModelBase {
 
     private String action;
@@ -31,9 +34,17 @@ public class CartRemoveItemShippingAddressActionImpl implements CartRemoveItemSh
         this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getAddressKey() {
         return this.addressKey;

@@ -14,36 +14,45 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CreatedBy createdBy = CreatedBy.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CreatedByImpl.class)
 public interface CreatedBy extends ClientLogging {
 
     /**
-    *  <p><code>id</code> of the <a href="ctp:api:type:ApiClient">APIClient</a> which created the resource.</p>
-    */
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-    *  <p><a href="/../api/client-logging#external-user-ids">External user ID</a> provided by <code>X-External-User-ID</code> HTTP Header.</p>
-    */
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-    *  <p>Indicates the <a href="ctp:api:type:Customer">Customer</a> who created the resource using a token from the <a href="/authorization#password-flow">password flow</a>.</p>
-    */
+     *  <p>Indicates the Customer who created the resource using a token from the password flow.</p>
+     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-    *  <p>Indicates the <a href="/../api/authorization#tokens-for-anonymous-sessions">anonymous session</a> during which the resource was created.</p>
-    */
+     *  <p>Indicates the anonymous session during which the resource was created.</p>
+     */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();

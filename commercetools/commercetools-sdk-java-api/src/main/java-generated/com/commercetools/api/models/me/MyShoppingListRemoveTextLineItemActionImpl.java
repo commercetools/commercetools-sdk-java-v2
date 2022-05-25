@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListRemoveTextLineItemAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListRemoveTextLineItemActionImpl implements MyShoppingListRemoveTextLineItemAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class MyShoppingListRemoveTextLineItemActionImpl implements MyShoppingLis
         this.action = REMOVE_TEXT_LINE_ITEM;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *
+     */
 
     public Long getQuantity() {
         return this.quantity;

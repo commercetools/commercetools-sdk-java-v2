@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectChangeCurrenciesAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrenciesAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrencie
         this.action = CHANGE_CURRENCIES;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
+
     public java.util.List<String> getCurrencies() {
         return this.currencies;
     }

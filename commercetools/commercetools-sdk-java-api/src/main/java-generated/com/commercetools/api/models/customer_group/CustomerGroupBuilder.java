@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerGroupBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerGroup customerGroup = CustomerGroup.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .name("{name}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupBuilder implements Builder<CustomerGroup> {
 
     private String id;
@@ -34,25 +50,45 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     *  <p>Unique identifier of the CustomerGroup.</p>
+     */
+
     public CustomerGroupBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>Current version of the CustomerGroup.</p>
+     */
 
     public CustomerGroupBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     */
+
     public CustomerGroupBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     */
+
     public CustomerGroupBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerGroupBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -60,11 +96,19 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
+
     public CustomerGroupBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomerGroupBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -72,26 +116,46 @@ public class CustomerGroupBuilder implements Builder<CustomerGroup> {
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public CustomerGroupBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     */
 
     public CustomerGroupBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+     *  <p>Unique name of the CustomerGroup.</p>
+     */
+
     public CustomerGroupBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
 
     public CustomerGroupBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
 
     public CustomerGroupBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

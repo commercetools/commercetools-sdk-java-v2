@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerLabelBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerLabel customerLabel = CustomerLabel.builder()
+ *             .firstName("{firstName}")
+ *             .lastName("{lastName}")
+ *             .customerNumber("{customerNumber}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     private String firstName;
@@ -15,15 +29,27 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
 
     private String customerNumber;
 
+    /**
+     *
+     */
+
     public CustomerLabelBuilder firstName(final String firstName) {
         this.firstName = firstName;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerLabelBuilder lastName(final String lastName) {
         this.lastName = lastName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerLabelBuilder customerNumber(final String customerNumber) {
         this.customerNumber = customerNumber;

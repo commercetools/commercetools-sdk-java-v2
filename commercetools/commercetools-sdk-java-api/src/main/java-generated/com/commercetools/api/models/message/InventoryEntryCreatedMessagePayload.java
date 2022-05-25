@@ -14,12 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntryCreatedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntryCreatedMessagePayload inventoryEntryCreatedMessagePayload = InventoryEntryCreatedMessagePayload.builder()
+ *             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
 public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
     String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("inventoryEntry")

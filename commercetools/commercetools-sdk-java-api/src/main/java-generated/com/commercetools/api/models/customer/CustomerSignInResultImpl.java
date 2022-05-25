@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSignInResult
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase {
 
     private com.commercetools.api.models.customer.Customer customer;
@@ -31,14 +34,18 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     public CustomerSignInResultImpl() {
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.customer.Customer getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>A cart that is associated to the customer.
-    *  Empty if the customer does not have a cart yet.</p>
-    */
+     *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+     */
+
     public com.commercetools.api.models.cart.Cart getCart() {
         return this.cart;
     }

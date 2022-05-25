@@ -15,23 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Custom custom = Custom.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomImpl.class)
 public interface Custom {
 
     /**
-    *  <p>The type that provides the field definitions for this object.</p>
-    */
+     *  <p>The type that provides the field definitions for this object.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("type")
     public TypeKeyReference getType();
 
     /**
-    *  <p>The custom fields of this object.</p>
-    */
+     *  <p>The custom fields of this object.</p>
+     */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();

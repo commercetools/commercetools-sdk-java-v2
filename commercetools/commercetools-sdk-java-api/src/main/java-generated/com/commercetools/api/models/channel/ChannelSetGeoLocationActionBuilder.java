@@ -9,17 +9,36 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelSetGeoLocationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetGeoLocationAction channelSetGeoLocationAction = ChannelSetGeoLocationAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeoLocationAction> {
 
     @Nullable
     private com.commercetools.api.models.common.GeoJson geoLocation;
+
+    /**
+     *  <p>Value to set.</p>
+     */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
             @Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
         return this;
     }
+
+    /**
+     *  <p>Value to set.</p>
+     */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
             Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {

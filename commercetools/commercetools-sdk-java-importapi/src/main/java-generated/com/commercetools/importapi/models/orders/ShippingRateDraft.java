@@ -14,19 +14,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingRateDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingRateDraft shippingRateDraft = ShippingRateDraft.builder()
+ *             .price(priceBuilder -> priceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingRateDraftImpl.class)
 public interface ShippingRateDraft {
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("freeAbove")
     public Money getFreeAbove();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("tiers")
     public List<ShippingRatePriceTier> getTiers();

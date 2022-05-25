@@ -9,7 +9,25 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StoreProductSelectionsChangedMessageBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StoreProductSelectionsChangedMessage storeProductSelectionsChangedMessage = StoreProductSelectionsChangedMessage.builder()
+ *             .id("{id}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .sequenceNumber(0.3)
+ *             .resource(resourceBuilder -> resourceBuilder)
+ *             .resourceVersion(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreProductSelectionsChangedMessageBuilder implements Builder<StoreProductSelectionsChangedMessage> {
 
     private String id;
@@ -44,25 +62,45 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
     @Nullable
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
+    /**
+     *  <p>Unique identifier of the Message.</p>
+     */
+
     public StoreProductSelectionsChangedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StoreProductSelectionsChangedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -70,11 +108,19 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public StoreProductSelectionsChangedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StoreProductSelectionsChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -82,16 +128,28 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public StoreProductSelectionsChangedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public StoreProductSelectionsChangedMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
@@ -99,16 +157,28 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public StoreProductSelectionsChangedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
@@ -118,11 +188,19 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder addedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... addedProductSelections) {
@@ -130,11 +208,19 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder addedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> addedProductSelections) {
         this.addedProductSelections = addedProductSelections;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder plusAddedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... addedProductSelections) {
@@ -145,6 +231,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder plusAddedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.addedProductSelections == null) {
@@ -155,6 +245,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder withAddedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         this.addedProductSelections = new ArrayList<>();
@@ -163,17 +257,29 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder removedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... removedProductSelections) {
         this.removedProductSelections = new ArrayList<>(Arrays.asList(removedProductSelections));
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder removedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> removedProductSelections) {
         this.removedProductSelections = removedProductSelections;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder plusRemovedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... removedProductSelections) {
@@ -184,6 +290,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder plusRemovedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.removedProductSelections == null) {
@@ -194,6 +304,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder withRemovedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         this.removedProductSelections = new ArrayList<>();
@@ -202,17 +316,29 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder updatedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... updatedProductSelections) {
         this.updatedProductSelections = new ArrayList<>(Arrays.asList(updatedProductSelections));
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder updatedProductSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections) {
         this.updatedProductSelections = updatedProductSelections;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder plusUpdatedProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... updatedProductSelections) {
@@ -223,6 +349,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *
+     */
+
     public StoreProductSelectionsChangedMessageBuilder plusUpdatedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.updatedProductSelections == null) {
@@ -232,6 +362,10 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
                 .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public StoreProductSelectionsChangedMessageBuilder withUpdatedProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {

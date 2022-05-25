@@ -7,7 +7,25 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxRate taxRate = TaxRate.builder()
+ *             .id("{id}")
+ *             .name("{name}")
+ *             .amount(1)
+ *             .includedInPrice(true)
+ *             .country("{country}")
+ *             .state("{state}")
+ *             .plusSubRates(subRatesBuilder -> subRatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateBuilder implements Builder<TaxRate> {
 
     private String id;
@@ -24,45 +42,81 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
+    /**
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     */
+
     public TaxRateBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     */
+
     public TaxRateBuilder amount(final Integer amount) {
         this.amount = amount;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public TaxRateBuilder country(final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *  <p>The state in the country</p>
+     */
 
     public TaxRateBuilder state(final String state) {
         this.state = state;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder subRates(final com.commercetools.history.models.common.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder subRates(final java.util.List<com.commercetools.history.models.common.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder plusSubRates(final com.commercetools.history.models.common.SubRate... subRates) {
         if (this.subRates == null) {
@@ -72,6 +126,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder plusSubRates(
             Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRateBuilder> builder) {
         if (this.subRates == null) {
@@ -80,6 +138,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         this.subRates.add(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder withSubRates(
             Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRateBuilder> builder) {

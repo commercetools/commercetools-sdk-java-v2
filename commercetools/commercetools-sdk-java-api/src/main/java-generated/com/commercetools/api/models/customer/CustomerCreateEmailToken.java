@@ -12,20 +12,41 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerCreateEmailToken
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerCreateEmailToken customerCreateEmailToken = CustomerCreateEmailToken.builder()
+ *             .id("{id}")
+ *             .ttlMinutes(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerCreateEmailTokenImpl.class)
 public interface CustomerCreateEmailToken {
 
     /**
-    *  <p>Platform-generated unique identifier of the email token.</p>
-    */
+     *  <p>Unique identifier of the email token.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *
+     */
+
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("ttlMinutes")
     public Long getTtlMinutes();

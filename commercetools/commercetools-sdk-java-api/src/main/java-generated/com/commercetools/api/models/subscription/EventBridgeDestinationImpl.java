@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="https://aws.amazon.com/eventbridge/">AWS EventBridge</a> can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EventBridgeDestinationImpl implements EventBridgeDestination, ModelBase {
 
     private String type;
@@ -38,20 +38,26 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         this.type = EVENT_BRIDGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>AWS region to which commercetools sends the events.</p>
-    */
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
+     */
+
     public String getRegion() {
         return this.region;
     }
 
     /**
-    *  <p>ID of the AWS account that receives events from the commercetools platform.</p>
-    */
+     *  <p>ID of the AWS account that receives events.</p>
+     */
+
     public String getAccountId() {
         return this.accountId;
     }

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCustomerSetCompanyNameAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetCompanyNameActionImpl implements MyCustomerSetCompanyNameAction, ModelBase {
 
     private String action;
@@ -31,9 +34,17 @@ public class MyCustomerSetCompanyNameActionImpl implements MyCustomerSetCompanyN
         this.action = SET_COMPANY_NAME;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getCompanyName() {
         return this.companyName;

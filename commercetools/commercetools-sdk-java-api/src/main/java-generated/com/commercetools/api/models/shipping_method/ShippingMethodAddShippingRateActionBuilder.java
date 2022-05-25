@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodAddShippingRateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodAddShippingRateAction shippingMethodAddShippingRateAction = ShippingMethodAddShippingRateAction.builder()
+ *             .zone(zoneBuilder -> zoneBuilder)
+ *             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodAddShippingRateActionBuilder implements Builder<ShippingMethodAddShippingRateAction> {
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
+
+    /**
+     *
+     */
 
     public ShippingMethodAddShippingRateActionBuilder zone(
             Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder> builder) {
@@ -20,11 +37,19 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShippingMethodAddShippingRateActionBuilder zone(
             final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
@@ -32,6 +57,10 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShippingMethodAddShippingRateActionBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {

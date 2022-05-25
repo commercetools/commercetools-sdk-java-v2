@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetValidFromAndUntilChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetValidFromAndUntilChange setValidFromAndUntilChange = SetValidFromAndUntilChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAndUntilChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     private com.commercetools.history.models.change_value.ValidFromAndUntilValue nextValue;
 
+    /**
+     *
+     */
+
     public SetValidFromAndUntilChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
 
     public SetValidFromAndUntilChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
@@ -29,11 +51,19 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
         return this;
     }
 
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
+
     public SetValidFromAndUntilChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ValidFromAndUntilValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
 
     public SetValidFromAndUntilChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
@@ -41,6 +71,10 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     */
 
     public SetValidFromAndUntilChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.ValidFromAndUntilValue nextValue) {

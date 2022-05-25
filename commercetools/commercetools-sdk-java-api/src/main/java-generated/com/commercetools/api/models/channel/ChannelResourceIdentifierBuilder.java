@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelResourceIdentifierBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelResourceIdentifier channelResourceIdentifier = ChannelResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelResourceIdentifierBuilder implements Builder<ChannelResourceIdentifier> {
 
     @Nullable
@@ -17,10 +28,18 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
     @Nullable
     private String key;
 
+    /**
+     *  <p>Unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
     public ChannelResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public ChannelResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

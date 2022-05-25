@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntrySetRestockableInDaysAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetRestockableInDaysActionImpl
         implements InventoryEntrySetRestockableInDaysAction, ModelBase {
 
@@ -32,9 +35,17 @@ public class InventoryEntrySetRestockableInDaysActionImpl
         this.action = SET_RESTOCKABLE_IN_DAYS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Long getRestockableInDays() {
         return this.restockableInDays;

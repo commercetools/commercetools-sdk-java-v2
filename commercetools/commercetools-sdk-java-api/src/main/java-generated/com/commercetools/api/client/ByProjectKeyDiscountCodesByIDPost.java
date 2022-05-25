@@ -17,9 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .discountCodes()
+ *            .withId("{ID}")
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyDiscountCodesByIDPost extends
         BodyApiMethod<ByProjectKeyDiscountCodesByIDPost, com.commercetools.api.models.discount_code.DiscountCode, com.commercetools.api.models.discount_code.DiscountCodeUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyDiscountCodesByIDPost>,

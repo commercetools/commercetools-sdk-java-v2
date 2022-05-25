@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeImportRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeImportRequest productTypeImportRequest = ProductTypeImportRequest.builder()
+ *             .plusResources(resourcesBuilder -> resourcesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources;
+
+    /**
+     *  <p>The product type import resources of this request.</p>
+     */
 
     public ProductTypeImportRequestBuilder resources(
             final com.commercetools.importapi.models.producttypes.ProductTypeImport... resources) {
@@ -18,11 +34,19 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this;
     }
 
+    /**
+     *  <p>The product type import resources of this request.</p>
+     */
+
     public ProductTypeImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+     *  <p>The product type import resources of this request.</p>
+     */
 
     public ProductTypeImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.producttypes.ProductTypeImport... resources) {
@@ -33,6 +57,10 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this;
     }
 
+    /**
+     *  <p>The product type import resources of this request.</p>
+     */
+
     public ProductTypeImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +70,10 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
             builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The product type import resources of this request.</p>
+     */
 
     public ProductTypeImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {

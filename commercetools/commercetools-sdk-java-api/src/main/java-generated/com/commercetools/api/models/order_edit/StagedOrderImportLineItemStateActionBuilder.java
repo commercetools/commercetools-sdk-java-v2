@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderImportLineItemStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderImportLineItemStateAction stagedOrderImportLineItemStateAction = StagedOrderImportLineItemStateAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .plusState(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImportLineItemStateActionBuilder implements Builder<StagedOrderImportLineItemStateAction> {
 
     private String lineItemId;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    /**
+     *
+     */
+
     public StagedOrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderImportLineItemStateActionBuilder state(
             final com.commercetools.api.models.order.ItemState... state) {
@@ -25,11 +46,19 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderImportLineItemStateActionBuilder state(
             final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.state = state;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderImportLineItemStateActionBuilder plusState(
             final com.commercetools.api.models.order.ItemState... state) {
@@ -40,6 +69,10 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderImportLineItemStateActionBuilder plusState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
         if (this.state == null) {
@@ -48,6 +81,10 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
         this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderImportLineItemStateActionBuilder withState(
             Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {

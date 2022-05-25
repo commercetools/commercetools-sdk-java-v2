@@ -12,9 +12,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>ResourceIdentifier to a ShippingMethod.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShippingMethodResourceIdentifier shippingMethodResourceIdentifier = ShippingMethodResourceIdentifier.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodResourceIdentifierImpl.class)
 public interface ShippingMethodResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ShippingMethod> {
@@ -22,15 +31,15 @@ public interface ShippingMethodResourceIdentifier
     String SHIPPING_METHOD = "shipping-method";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced ShippingMethod. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * IndividualProductSelectionTypeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     IndividualProductSelectionType individualProductSelectionType = IndividualProductSelectionType.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class IndividualProductSelectionTypeBuilder implements Builder<IndividualProductSelectionType> {
 
     private com.commercetools.api.models.common.LocalizedString name;
+
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     */
 
     public IndividualProductSelectionTypeBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     */
 
     public IndividualProductSelectionTypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

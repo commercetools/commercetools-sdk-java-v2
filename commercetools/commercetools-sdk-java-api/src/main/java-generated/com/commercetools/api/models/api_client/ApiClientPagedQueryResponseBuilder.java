@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ApiClientPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ApiClientPagedQueryResponse apiClientPagedQueryResponse = ApiClientPagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .offset(0.3)
+ *             .count(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPagedQueryResponse> {
 
     private Long limit;
@@ -23,25 +38,45 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
 
     private java.util.List<com.commercetools.api.models.api_client.ApiClient> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public ApiClientPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ApiClientPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     */
+
     public ApiClientPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
     public ApiClientPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+     *  <p>APIClients matching the query.</p>
+     */
 
     public ApiClientPagedQueryResponseBuilder results(
             final com.commercetools.api.models.api_client.ApiClient... results) {
@@ -49,11 +84,19 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
         return this;
     }
 
+    /**
+     *  <p>APIClients matching the query.</p>
+     */
+
     public ApiClientPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.api_client.ApiClient> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *  <p>APIClients matching the query.</p>
+     */
 
     public ApiClientPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.api_client.ApiClient... results) {
@@ -64,6 +107,10 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
         return this;
     }
 
+    /**
+     *  <p>APIClients matching the query.</p>
+     */
+
     public ApiClientPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
         if (this.results == null) {
@@ -72,6 +119,10 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
         this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>APIClients matching the query.</p>
+     */
 
     public ApiClientPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddChannelRolesChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddChannelRolesChangeImpl implements AddChannelRolesChange, ModelBase {
 
     private String type;
@@ -39,17 +42,33 @@ public class AddChannelRolesChangeImpl implements AddChannelRolesChange, ModelBa
         this.type = ADD_CHANNEL_ROLES_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {
         return this.nextValue;

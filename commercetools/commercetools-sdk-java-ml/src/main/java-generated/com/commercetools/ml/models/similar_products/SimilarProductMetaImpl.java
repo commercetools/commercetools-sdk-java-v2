@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SimilarProductMeta
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
 
     private com.commercetools.ml.models.common.LocalizedString name;
@@ -40,29 +43,33 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
     }
 
     /**
-    *  <p>Localized product name used for similarity estimation.</p>
-    */
+     *  <p>Localized product name used for similarity estimation.</p>
+     */
+
     public com.commercetools.ml.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Localized product description used for similarity estimation.</p>
-    */
+     *  <p>Localized product description used for similarity estimation.</p>
+     */
+
     public com.commercetools.ml.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
-    */
+     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     */
+
     public com.commercetools.ml.models.common.Money getPrice() {
         return this.price;
     }
 
     /**
-    *  <p>Total number of variants associated with the product.</p>
-    */
+     *  <p>Total number of variants associated with the product.</p>
+     */
+
     public Long getVariantCount() {
         return this.variantCount;
     }

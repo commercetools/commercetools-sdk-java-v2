@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProjectCategoryRecommendationPagedQueryResponse
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectCategoryRecommendationPagedQueryResponseImpl
         implements ProjectCategoryRecommendationPagedQueryResponse, ModelBase {
 
@@ -43,24 +46,41 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     public ProjectCategoryRecommendationPagedQueryResponseImpl() {
     }
 
+    /**
+     *
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> getResults() {
         return this.results;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta() {
         return this.meta;

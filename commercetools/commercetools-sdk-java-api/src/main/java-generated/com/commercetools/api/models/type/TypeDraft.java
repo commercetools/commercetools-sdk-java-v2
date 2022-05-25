@@ -14,42 +14,57 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeDraft typeDraft = TypeDraft.builder()
+ *             .key("{key}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeDraftImpl.class)
 public interface TypeDraft {
 
     /**
-    *  <p>User-defined unique identifier for the Type.</p>
-    */
+     *  <p>User-defined unique identifier for the Type.</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Name of the Type.</p>
-    */
+     *  <p>Name of the Type.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>Description of the Type.</p>
-    */
+     *  <p>Description of the Type.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Resources and/or data types for which the Type is defined.</p>
-    */
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     */
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
 
     /**
-    *  <p>Defines Custom Fields.</p>
-    */
+     *  <p>Defines Custom Fields.</p>
+     */
     @Valid
     @JsonProperty("fieldDefinitions")
     public List<FieldDefinition> getFieldDefinitions();

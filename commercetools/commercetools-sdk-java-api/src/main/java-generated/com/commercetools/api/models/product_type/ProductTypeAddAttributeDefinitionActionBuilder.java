@@ -7,11 +7,27 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeAddAttributeDefinitionActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeAddAttributeDefinitionAction productTypeAddAttributeDefinitionAction = ProductTypeAddAttributeDefinitionAction.builder()
+ *             .attribute(attributeBuilder -> attributeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeAddAttributeDefinitionActionBuilder
         implements Builder<ProductTypeAddAttributeDefinitionAction> {
 
     private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
+
+    /**
+     *
+     */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
@@ -19,6 +35,10 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(
             final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute) {

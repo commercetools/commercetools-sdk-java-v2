@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentInteractionAddedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInteractionAddedMessagePayload, ModelBase {
 
     private String type;
@@ -32,13 +35,18 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
         this.type = PAYMENT_INTERACTION_ADDED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getInteraction() {
         return this.interaction;
     }

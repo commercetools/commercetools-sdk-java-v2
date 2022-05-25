@@ -9,7 +9,21 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxedPriceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxedPrice taxedPrice = TaxedPrice.builder()
+ *             .totalNet(totalNetBuilder -> totalNetBuilder)
+ *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     private com.commercetools.importapi.models.common.Money totalNet;
@@ -21,16 +35,28 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     @Nullable
     private com.commercetools.importapi.models.common.Money totalTax;
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     */
+
     public TaxedPriceBuilder totalNet(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.totalNet = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     */
+
     public TaxedPriceBuilder totalNet(final com.commercetools.importapi.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     */
 
     public TaxedPriceBuilder totalGross(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
@@ -38,21 +64,37 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     */
+
     public TaxedPriceBuilder totalGross(final com.commercetools.importapi.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     */
 
     public TaxedPriceBuilder taxPortions(final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
         this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     */
+
     public TaxedPriceBuilder taxPortions(
             final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
         this.taxPortions = taxPortions;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     */
 
     public TaxedPriceBuilder plusTaxPortions(
             final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
@@ -63,6 +105,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     */
+
     public TaxedPriceBuilder plusTaxPortions(
             Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortionBuilder> builder) {
         if (this.taxPortions == null) {
@@ -72,6 +118,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     */
+
     public TaxedPriceBuilder withTaxPortions(
             Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortionBuilder> builder) {
         this.taxPortions = new ArrayList<>();
@@ -79,11 +129,19 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     */
+
     public TaxedPriceBuilder totalTax(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.totalTax = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+     */
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.importapi.models.common.Money totalTax) {
         this.totalTax = totalTax;

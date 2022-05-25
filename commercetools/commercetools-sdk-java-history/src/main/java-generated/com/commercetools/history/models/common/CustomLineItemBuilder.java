@@ -7,7 +7,25 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomLineItem customLineItem = CustomLineItem.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .taxedPrice(taxedPriceBuilder -> taxedPriceBuilder)
+ *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
+ *             .slug("{slug}")
+ *             .quantity(1)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
@@ -24,10 +42,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private Integer quantity;
 
+    /**
+     *  <p>The unique ID of this CustomLineItem.</p>
+     */
+
     public CustomLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -35,10 +61,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemBuilder money(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -46,10 +80,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemBuilder money(final com.commercetools.history.models.common.Money money) {
         this.money = money;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemBuilder taxedPrice(
             Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPriceBuilder> builder) {
@@ -57,10 +99,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemBuilder taxedPrice(final com.commercetools.history.models.common.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomLineItemBuilder totalPrice(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
@@ -68,15 +118,27 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomLineItemBuilder totalPrice(final com.commercetools.history.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
 
+    /**
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     */
+
     public CustomLineItemBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
 
     public CustomLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

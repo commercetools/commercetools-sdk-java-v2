@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Asset asset = Asset.builder()
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .description(descriptionBuilder -> descriptionBuilder)
+ *             .custom(customBuilder -> customBuilder)
+ *             .key("{key}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetBuilder implements Builder<Asset> {
 
     private String id;
@@ -20,10 +36,18 @@ public class AssetBuilder implements Builder<Asset> {
 
     private String key;
 
+    /**
+     *
+     */
+
     public AssetBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -31,10 +55,18 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder name(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder description(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -42,10 +74,18 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder description(final com.commercetools.history.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
@@ -53,10 +93,18 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetBuilder custom(final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetBuilder key(final String key) {
         this.key = key;

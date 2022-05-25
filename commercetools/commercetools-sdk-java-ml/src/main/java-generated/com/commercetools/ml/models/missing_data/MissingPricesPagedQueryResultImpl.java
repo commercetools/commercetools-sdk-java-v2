@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingPricesPagedQueryResult
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQueryResult, ModelBase {
 
     private Long count;
@@ -42,24 +45,41 @@ public class MissingPricesPagedQueryResultImpl implements MissingPricesPagedQuer
     public MissingPricesPagedQueryResultImpl() {
     }
 
+    /**
+     *
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> getResults() {
         return this.results;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.ml.models.missing_data.MissingPricesMeta getMeta() {
         return this.meta;

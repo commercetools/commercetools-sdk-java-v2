@@ -14,25 +14,53 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartClassificationTier
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartClassificationTier cartClassificationTier = CartClassificationTier.builder()
+ *             .value("{value}")
+ *             .price(priceBuilder -> priceBuilder)
+ *             .plusTiers(tiersBuilder -> tiersBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
     String CART_CLASSIFICATION = "CartClassification";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public String getValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("tiers")
     public List<ShippingRatePriceTier> getTiers();
+
+    /**
+     *
+     */
 
     @JsonProperty("isMatching")
     public Boolean getIsMatching();

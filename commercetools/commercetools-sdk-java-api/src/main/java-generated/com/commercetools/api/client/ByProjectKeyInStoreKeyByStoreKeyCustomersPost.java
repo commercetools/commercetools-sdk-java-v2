@@ -17,16 +17,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates a customer in a specific Store.
-*  When using this endpoint, if omitted,
-*  the customer's stores field is set to the store specified in the path parameter.
-*  If an anonymous cart is passed in as when using this method,
-*  then the cart is assigned to the created customer and the version number of the Cart increases.
-*  If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer and
-*  the store specified. If you pass in a cart with a store field specified,
-*  the store field must reference the same store specified in the {storeKey} path parameter.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Creates a customer in a specific Store. When using this endpoint, if omitted, the customer's stores field is set to the store specified in the path parameter. If an anonymous cart is passed in as when using this method, then the cart is assigned to the created customer and the version number of the Cart increases. If the ID of an anonymous session is given, all carts and orders will be assigned to the created customer and the store specified. If you pass in a cart with a store field specified, the store field must reference the same store specified in the {storeKey} path parameter.</p>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .customers()
+ *            .post(null)
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends
         BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPost>,

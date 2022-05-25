@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountValueAbsoluteDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbsoluteDraft, ModelBase {
 
     private String type;
@@ -32,9 +35,17 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
         this.type = ABSOLUTE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;

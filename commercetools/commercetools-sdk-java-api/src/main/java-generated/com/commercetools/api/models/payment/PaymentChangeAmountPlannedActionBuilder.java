@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentChangeAmountPlannedActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     PaymentChangeAmountPlannedAction paymentChangeAmountPlannedAction = PaymentChangeAmountPlannedAction.builder()
+ *             .amount(amountBuilder -> amountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentChangeAmountPlannedAction> {
 
     private com.commercetools.api.models.common.Money amount;
+
+    /**
+     *
+     */
 
     public PaymentChangeAmountPlannedActionBuilder amount(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public PaymentChangeAmountPlannedActionBuilder amount(final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;

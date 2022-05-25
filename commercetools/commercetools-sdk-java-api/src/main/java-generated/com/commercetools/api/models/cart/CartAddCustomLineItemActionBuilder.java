@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartAddCustomLineItemActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
+ *             .money(moneyBuilder -> moneyBuilder)
+ *             .name(nameBuilder -> nameBuilder)
+ *             .quantity(0.3)
+ *             .slug("{slug}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustomLineItemAction> {
 
     private com.commercetools.api.models.common.Money money;
@@ -29,16 +44,30 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public CartAddCustomLineItemActionBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public CartAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public CartAddCustomLineItemActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -46,20 +75,36 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddCustomLineItemActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CartAddCustomLineItemActionBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
 
     public CartAddCustomLineItemActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
@@ -69,11 +114,19 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     */
+
     public CartAddCustomLineItemActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public CartAddCustomLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -81,11 +134,19 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
+
     public CartAddCustomLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -93,6 +154,10 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public CartAddCustomLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {

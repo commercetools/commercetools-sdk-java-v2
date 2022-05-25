@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedLineItemPriceForQuantityBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedLineItemPriceForQuantity discountedLineItemPriceForQuantity = DiscountedLineItemPriceForQuantity.builder()
+ *             .quantity(1)
+ *             .discountedPrice(discountedPriceBuilder -> discountedPriceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
     private Integer quantity;
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
+    /**
+     *
+     */
+
     public DiscountedLineItemPriceForQuantityBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
             Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPriceBuilder> builder) {
@@ -26,6 +47,10 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
             final com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice) {

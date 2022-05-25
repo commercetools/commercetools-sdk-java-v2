@@ -17,7 +17,7 @@ package com.commercetools.docs.meta;
 
     <h3>OAuthMiddleware</h3>
 
-    <p>An {@link io.vrap.rmf.base.client.http.OAuthMiddleware} is used to authenticate a request against the commercetools
+    <p>An {@link io.vrap.rmf.base.client.http.OAuthMiddleware} is used to authenticate a request against the commercetools Composable Commerce
     APIs. The default implementation adds an auth header to the request instance. In case of an expired token it will try to
     reauthenticate automatically. To retrieve an {@link io.vrap.rmf.base.client.AuthenticationToken} the
     {@link io.vrap.rmf.base.client.http.OAuthHandler} is called.</p>

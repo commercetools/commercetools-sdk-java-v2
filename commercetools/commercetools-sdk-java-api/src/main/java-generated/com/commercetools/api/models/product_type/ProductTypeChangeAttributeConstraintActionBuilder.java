@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangeAttributeConstraintActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangeAttributeConstraintAction productTypeChangeAttributeConstraintAction = ProductTypeChangeAttributeConstraintAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newValue(AttributeConstraintEnumDraft.NONE)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeConstraintActionBuilder
         implements Builder<ProductTypeChangeAttributeConstraintAction> {
 
@@ -14,10 +27,18 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
 
     private com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue;
 
+    /**
+     *
+     */
+
     public ProductTypeChangeAttributeConstraintActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangeAttributeConstraintActionBuilder newValue(
             final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {

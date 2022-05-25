@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ValidFromAndUntilValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ValidFromAndUntilValue validFromAndUntilValue = ValidFromAndUntilValue.builder()
+ *             .validFrom("{validFrom}")
+ *             .validUntil("{validUntil}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilValue> {
 
     private String validFrom;
 
     private String validUntil;
 
+    /**
+     *
+     */
+
     public ValidFromAndUntilValueBuilder validFrom(final String validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ValidFromAndUntilValueBuilder validUntil(final String validUntil) {
         this.validUntil = validUntil;

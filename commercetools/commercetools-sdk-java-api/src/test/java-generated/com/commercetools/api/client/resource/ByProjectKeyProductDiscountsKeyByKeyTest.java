@@ -23,7 +23,7 @@ import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
 public class ByProjectKeyProductDiscountsKeyByKeyTest {

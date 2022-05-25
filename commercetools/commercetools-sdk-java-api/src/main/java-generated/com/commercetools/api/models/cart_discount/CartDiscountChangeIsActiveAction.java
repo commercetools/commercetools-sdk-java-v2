@@ -12,12 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeIsActiveAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDiscountChangeIsActiveAction cartDiscountChangeIsActiveAction = CartDiscountChangeIsActiveAction.builder()
+ *             .isActive(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeIsActiveActionImpl.class)
 public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateAction {
 
     String CHANGE_IS_ACTIVE = "changeIsActive";
 
+    /**
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
+     */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();

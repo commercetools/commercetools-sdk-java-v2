@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCustomerSigninBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerSignin myCustomerSignin = MyCustomerSignin.builder()
+ *             .email("{email}")
+ *             .password("{password}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
 
     private String email;
@@ -21,21 +34,37 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     @Nullable
     private Boolean updateProductData;
 
+    /**
+     *
+     */
+
     public MyCustomerSigninBuilder email(final String email) {
         this.email = email;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyCustomerSigninBuilder password(final String password) {
         this.password = password;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyCustomerSigninBuilder activeCartSignInMode(
             @Nullable final com.commercetools.api.models.customer.AnonymousCartSignInMode activeCartSignInMode) {
         this.activeCartSignInMode = activeCartSignInMode;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyCustomerSigninBuilder updateProductData(@Nullable final Boolean updateProductData) {
         this.updateProductData = updateProductData;

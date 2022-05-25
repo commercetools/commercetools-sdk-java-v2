@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetCategoryOrderHintActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetCategoryOrderHintAction productSetCategoryOrderHintAction = ProductSetCategoryOrderHintAction.builder()
+ *             .categoryId("{categoryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetCategoryOrderHintActionBuilder implements Builder<ProductSetCategoryOrderHintAction> {
 
     private String categoryId;
@@ -19,15 +31,27 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     @Nullable
     private Boolean staged;
 
+    /**
+     *
+     */
+
     public ProductSetCategoryOrderHintActionBuilder categoryId(final String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductSetCategoryOrderHintActionBuilder orderHint(@Nullable final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductSetCategoryOrderHintActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;

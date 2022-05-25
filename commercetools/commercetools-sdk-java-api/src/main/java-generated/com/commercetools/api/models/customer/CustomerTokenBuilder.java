@@ -8,7 +8,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerTokenBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerToken customerToken = CustomerToken.builder()
+ *             .id("{id}")
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .customerId("{customerId}")
+ *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .value("{value}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     private String id;
@@ -24,30 +40,54 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     private String value;
 
+    /**
+     *  <p>Unique identifier of the CustomerToken.</p>
+     */
+
     public CustomerTokenBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerTokenBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerTokenBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerTokenBuilder customerId(final String customerId) {
         this.customerId = customerId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerTokenBuilder value(final String value) {
         this.value = value;

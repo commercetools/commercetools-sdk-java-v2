@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantDeletedMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload, ModelBase {
 
     private String type;
@@ -36,13 +39,25 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;

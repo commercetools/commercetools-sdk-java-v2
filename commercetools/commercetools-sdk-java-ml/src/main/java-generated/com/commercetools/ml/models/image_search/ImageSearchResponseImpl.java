@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Response format from image search endpoint.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Response format from image search endpoint.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
 
     private Integer count;
@@ -42,29 +42,33 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-    *  <p>The maximum number of results to return from a query.</p>
-    */
+     *  <p>The maximum number of results to return from a query.</p>
+     */
+
     public Integer getCount() {
         return this.count;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
+
     public Double getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>The total number of product images that were have been analyzed.</p>
-    */
+     *  <p>The total number of product images that were have been analyzed.</p>
+     */
+
     public Integer getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
-    */
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     */
+
     public java.util.List<com.commercetools.ml.models.image_search.ResultItem> getResults() {
         return this.results;
     }

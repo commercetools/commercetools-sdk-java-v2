@@ -17,77 +17,90 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * QueryPrice
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     QueryPrice queryPrice = QueryPrice.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QueryPriceImpl.class)
 public interface QueryPrice extends com.commercetools.api.models.Customizable<QueryPrice> {
 
     /**
-    *  <p>Platform-generated unique identifier of the given Price.</p>
-    */
+     *  <p>Unique identifier of the given Price.</p>
+     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Money value of the given Price.</p>
-    */
+     *  <p>Money value of the given Price.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")
     public Money getValue();
 
     /**
-    *  <p>Country for which the given Price is valid.</p>
-    */
+     *  <p>Country for which the given Price is valid.</p>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which the given Price is valid.</p>
-    */
+     *  <p>CustomerGroup for which the given Price is valid.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which the given Price is valid.</p>
-    */
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
     /**
-    *  <p>Date from which the given Price is valid.</p>
-    */
+     *  <p>Date from which the given Price is valid.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Date until which the given Price is valid.</p>
-    */
+     *  <p>Date until which the given Price is valid.</p>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-    *  <p><a href="ctp:api:type:DiscountedPrice">DiscountedPrice</a> you specify for the given Price.</p>
-    */
+     *  <p>DiscountedPrice you specify for the given Price.</p>
+     */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
     /**
-    *  <p>Custom Fields for the Price.</p>
-    */
+     *  <p>Custom Fields for the Price.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-    *  <p>Price tier applied when the minimum quantity for the <a href="ctp:api:type:LineItem">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
-    */
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();

@@ -12,6 +12,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ProjectUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeCartsConfigurationBuilder()
+ *             cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionImpl.class, name = ProjectChangeCartsConfigurationAction.CHANGE_CARTS_CONFIGURATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = ProjectChangeCountriesAction.CHANGE_COUNTRIES),
@@ -19,7 +32,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl.class, name = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl.class, name = ProjectChangeLanguagesAction.CHANGE_LANGUAGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionImpl.class, name = ProjectChangeMessagesEnabledAction.CHANGE_MESSAGES_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeNameActionImpl.class, name = ProjectChangeNameAction.CHANGE_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionImpl.class, name = ProjectChangeOrderSearchStatusAction.CHANGE_ORDER_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionImpl.class, name = ProjectChangeProductSearchIndexingEnabledAction.CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED),
@@ -28,9 +40,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl.class, name = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProjectUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProjectUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProjectUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ProjectUpdateAction> {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();
@@ -57,10 +72,6 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
 
     public static com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder changeMessagesConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder.of();
-    }
-
-    public static com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder changeMessagesEnabledBuilder() {
-        return com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder.of();
     }
 
     public static com.commercetools.api.models.project.ProjectChangeNameActionBuilder changeNameBuilder() {

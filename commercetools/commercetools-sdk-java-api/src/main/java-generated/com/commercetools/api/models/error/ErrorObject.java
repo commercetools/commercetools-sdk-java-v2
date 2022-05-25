@@ -12,6 +12,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ErrorObject
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ErrorObject errorObject = ErrorObject.accessDeniedBuilder()
+ *             message("{message}")
+ *
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),
@@ -82,17 +96,26 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = ErrorObjectImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ErrorObject {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("code")
     public String getCode();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *
+     */
     @NotNull
     @JsonAnyGetter
     public Map<String, Object> values();

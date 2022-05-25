@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Delivery
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryImpl implements Delivery, ModelBase {
 
     private String id;
@@ -48,35 +51,49 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Delivery.</p>
-    */
+     *  <p>Unique identifier of the Delivery.</p>
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels.
-    *  Can also be specified individually for each Parcel.</p>
-    */
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.order.Parcel> getParcels() {
         return this.parcels;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

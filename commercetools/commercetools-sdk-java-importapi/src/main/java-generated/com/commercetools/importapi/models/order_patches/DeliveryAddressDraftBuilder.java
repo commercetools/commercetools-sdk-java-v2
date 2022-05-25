@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DeliveryAddressDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryAddressDraft deliveryAddressDraft = DeliveryAddressDraft.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft> {
 
     private String deliveryId;
@@ -17,16 +29,28 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     @Nullable
     private com.commercetools.importapi.models.common.Address address;
 
+    /**
+     *
+     */
+
     public DeliveryAddressDraftBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryAddressDraftBuilder address(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryAddressDraftBuilder address(
             @Nullable final com.commercetools.importapi.models.common.Address address) {

@@ -14,32 +14,60 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTransactionTimestampChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTransactionTimestampChange changeTransactionTimestampChange = ChangeTransactionTimestampChange.builder()
+ *             .change("{change}")
+ *             .transaction(transactionBuilder -> transactionBuilder)
+ *             .nextValue("{nextValue}")
+ *             .previousValue("{previousValue}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTransactionTimestampChangeImpl.class)
 public interface ChangeTransactionTimestampChange extends Change {
 
     String CHANGE_TRANSACTION_TIMESTAMP_CHANGE = "ChangeTransactionTimestampChange";
 
     /**
-    *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
-    */
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("transaction")
     public TransactionChangeValue getTransaction();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();

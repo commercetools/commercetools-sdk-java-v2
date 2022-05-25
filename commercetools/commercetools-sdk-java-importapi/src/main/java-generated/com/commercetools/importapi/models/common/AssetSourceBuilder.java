@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AssetSourceBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AssetSource assetSource = AssetSource.builder()
+ *             .uri("{uri}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
@@ -23,15 +35,27 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     @Nullable
     private String contentType;
 
+    /**
+     *
+     */
+
     public AssetSourceBuilder uri(final String uri) {
         this.uri = uri;
         return this;
     }
 
+    /**
+     *
+     */
+
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *  <p>The width and height of the Asset Source.</p>
+     */
 
     public AssetSourceBuilder dimensions(
             Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
@@ -39,11 +63,19 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this;
     }
 
+    /**
+     *  <p>The width and height of the Asset Source.</p>
+     */
+
     public AssetSourceBuilder dimensions(
             @Nullable final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;

@@ -13,12 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetMetaKeywordsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetMetaKeywordsAction categorySetMetaKeywordsAction = CategorySetMetaKeywordsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetMetaKeywordsActionImpl.class)
 public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
 
     String SET_META_KEYWORDS = "setMetaKeywords";
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();

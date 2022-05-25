@@ -6,7 +6,22 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * HighPrecisionMoneyBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     HighPrecisionMoney highPrecisionMoney = HighPrecisionMoney.builder()
+ *             .centAmount(0.3)
+ *             .currencyCode("{currencyCode}")
+ *             .fractionDigits(0.3)
+ *             .preciseAmount(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     private Long centAmount;
@@ -17,20 +32,40 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
 
     private Long preciseAmount;
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     */
+
     public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
+
+    /**
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
 
     public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
 
+    /**
+     *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
+     */
+
     public HighPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
+
+    /**
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     */
 
     public HighPrecisionMoneyBuilder preciseAmount(final Long preciseAmount) {
         this.preciseAmount = preciseAmount;

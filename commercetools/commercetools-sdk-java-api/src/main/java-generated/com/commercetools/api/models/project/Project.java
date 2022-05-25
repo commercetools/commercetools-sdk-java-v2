@@ -15,106 +15,127 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Project
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Project project = Project.builder()
+ *             .version(0.3)
+ *             .key("{key}")
+ *             .name("{name}")
+ *             .plusCountries(countriesBuilder -> countriesBuilder)
+ *             .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+ *             .plusLanguages(languagesBuilder -> languagesBuilder)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .messages(messagesBuilder -> messagesBuilder)
+ *             .carts(cartsBuilder -> cartsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectImpl.class)
 public interface Project {
 
     /**
-    *  <p>Current version of the Project.</p>
-    */
+     *  <p>Current version of the Project.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>User-defined unique identifier of the Project.</p>
-    */
+     *  <p>User-defined unique identifier of the Project.</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Name of the Project.</p>
-    */
+     *  <p>Name of the Project.</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Country code of the geographic location.</p>
-    */
+     *  <p>Country code of the geographic location.</p>
+     */
     @NotNull
     @JsonProperty("countries")
     public List<String> getCountries();
 
     /**
-    *  <p>Currency code of the country. A Project must have at least one currency.</p>
-    */
+     *  <p>Currency code of the country. A Project must have at least one currency.</p>
+     */
     @NotNull
     @JsonProperty("currencies")
     public List<String> getCurrencies();
 
     /**
-    *  <p>Language of the country. A Project must have at least one language.</p>
-    */
+     *  <p>Language of the country. A Project must have at least one language.</p>
+     */
     @NotNull
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-    *  <p>Date and time (UTC) the Project was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the Project was initially created.</p>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
-    */
+     *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
+     */
 
     @JsonProperty("trialUntil")
     public String getTrialUntil();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
-    */
+     *  <p>Holds the configuration for the Messages Query feature.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("messages")
     public MessagesConfiguration getMessages();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/carts">Carts</a> feature.</p>
-    */
+     *  <p>Holds the configuration for the Carts feature.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("carts")
     public CartsConfiguration getCarts();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature. This field may not be present on Projects created before January 2020.</p>
-    */
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     */
     @Valid
     @JsonProperty("shoppingLists")
     public ShoppingListsConfiguration getShoppingLists();
 
     /**
-    *  <p>Holds the configuration for the <a href="ctp:api:type:ShippingRatePriceTier">tiered shipping rates</a> feature.</p>
-    */
+     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     */
     @Valid
     @JsonProperty("shippingRateInputType")
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-    *  <p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint.</p>
-    */
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     */
     @Valid
     @JsonProperty("externalOAuth")
     public ExternalOAuth getExternalOAuth();
 
     /**
-    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
-    */
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     */
     @Valid
     @JsonProperty("searchIndexing")
     public SearchIndexingConfiguration getSearchIndexing();

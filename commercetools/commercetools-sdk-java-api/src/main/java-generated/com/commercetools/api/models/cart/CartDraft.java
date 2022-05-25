@@ -18,176 +18,194 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartDraft cartDraft = CartDraft.builder()
+ *             .currency("{currency}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDraftImpl.class)
 public interface CartDraft extends com.commercetools.api.models.CustomizableDraft<CartDraft> {
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>A three-digit currency code as per ISO 4217.</p>
+     */
     @NotNull
     @JsonProperty("currency")
     public String getCurrency();
 
     /**
-    *  <p>User-defined unique identifier for the Cart.</p>
-    */
+     *  <p>User-defined unique identifier for the Cart.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Id of an existing Customer.</p>
-    */
+     *  <p>Id of an existing Customer.</p>
+     */
 
     @JsonProperty("customerId")
     public String getCustomerId();
+
+    /**
+     *
+     */
 
     @JsonProperty("customerEmail")
     public String getCustomerEmail();
 
     /**
-    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group.
-    *  Can be set explicitly when no <code>customerId</code> is present.</p>
-    */
+     *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
+     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-    *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Assigns the new cart to an anonymous session (the customer has not signed up/in yet).</p>
+     */
 
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
     /**
-    *  <p>Assigns the new cart to the store.
-    *  The store assignment can not be modified.</p>
-    */
+     *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
+     */
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p>Default inventory mode is <code>None</code>.</p>
-    */
+     *  <p>Default inventory mode is <code>None</code>.</p>
+     */
 
     @JsonProperty("inventoryMode")
     public InventoryMode getInventoryMode();
 
     /**
-    *  <p>The default tax mode is <code>Platform</code>.</p>
-    */
+     *  <p>The default tax mode is <code>Platform</code>.</p>
+     */
 
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
 
     /**
-    *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
-    */
+     *  <p>The default tax rounding mode is <code>HalfEven</code>.</p>
+     */
 
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
     /**
-    *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
-    */
+     *  <p>The default tax calculation mode is <code>LineItemLevel</code>.</p>
+     */
 
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("lineItems")
     public List<LineItemDraft> getLineItems();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("customLineItems")
     public List<CustomLineItemDraft> getCustomLineItems();
 
     /**
-    *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
-    */
+     *  <p>The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.</p>
+     */
     @Valid
     @JsonProperty("shippingAddress")
     public BaseAddress getShippingAddress();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("billingAddress")
     public BaseAddress getBillingAddress();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-    *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
-    */
+     *  <p>An external tax rate can be set for the <code>shippingMethod</code> if the cart has the <code>External</code> TaxMode.</p>
+     */
     @Valid
     @JsonProperty("externalTaxRateForShippingMethod")
     public ExternalTaxRateDraft getExternalTaxRateForShippingMethod();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p>Must be one of the languages supported for this project</p>
-    */
+     *  <p>Must be one of the languages supported for this project</p>
+     */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
-    */
+     *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+     */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
     /**
-    *  <p>The default origin is <code>Customer</code>.</p>
-    */
+     *  <p>The default origin is <code>Customer</code>.</p>
+     */
 
     @JsonProperty("origin")
     public CartOrigin getOrigin();
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.
-    *  Based on the definition of ShippingRateInputType.
-    *  If CartClassification is defined, it must be ClassificationShippingRateInput.
-    *  If CartScore is defined, it must be ScoreShippingRateInput.
-    *  Otherwise it can not bet set.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+     */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.
-    *  Line items will use these keys to reference the addresses under their <code>shippingDetails</code>.
-    *  The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
-    *  Only the cart's <code>shippingAddress</code> is used for this.</p>
-    */
+     *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     */
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
-    *  <p>The code of existing DiscountCodes.</p>
-    */
+     *  <p>The code of existing DiscountCodes.</p>
+     */
 
     @JsonProperty("discountCodes")
     public List<String> getDiscountCodes();

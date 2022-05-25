@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLineItemProductSlugChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLineItemProductSlugChange setLineItemProductSlugChange = SetLineItemProductSlugChange.builder()
+ *             .change("{change}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemProductSlugChange> {
 
     private String change;
@@ -20,10 +36,18 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     */
+
     public SetLineItemProductSlugChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemProductSlugChangeBuilder lineItem(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -31,16 +55,28 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemProductSlugChangeBuilder lineItem(
             final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemProductSlugChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemProductSlugChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
@@ -48,17 +84,29 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemProductSlugChangeBuilder nextValue(
             final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLineItemProductSlugChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLineItemProductSlugChangeBuilder previousValue(
             final com.commercetools.history.models.common.LocalizedString previousValue) {

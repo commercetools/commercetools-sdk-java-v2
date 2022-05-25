@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedPriceDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DiscountedPriceDraft discountedPriceDraft = DiscountedPriceDraft.builder()
+ *             .value(valueBuilder -> valueBuilder)
+ *             .discount(discountBuilder -> discountBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft> {
 
     private com.commercetools.api.models.common.Money value;
 
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
+
+    /**
+     *  <p>Sets the money value for the discounted price.</p>
+     */
 
     public DiscountedPriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -20,10 +37,18 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets the money value for the discounted price.</p>
+     */
+
     public DiscountedPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     */
 
     public DiscountedPriceDraftBuilder discount(
             Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
@@ -32,6 +57,10 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     */
 
     public DiscountedPriceDraftBuilder discount(
             final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {

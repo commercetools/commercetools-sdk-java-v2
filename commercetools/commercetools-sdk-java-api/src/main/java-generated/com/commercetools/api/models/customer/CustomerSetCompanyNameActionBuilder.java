@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetCompanyNameActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetCompanyNameAction customerSetCompanyNameAction = CustomerSetCompanyNameAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCompanyNameActionBuilder implements Builder<CustomerSetCompanyNameAction> {
 
     @Nullable
     private String companyName;
+
+    /**
+     *  <p>If not defined, the company name is unset.</p>
+     */
 
     public CustomerSetCompanyNameActionBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
 
     private String sku;
@@ -46,29 +49,49 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     public ProductVariantDraftImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
 
     /**
-    *  <p>User-defined unique identifier for the ProductVariant.
-    *  <em>ProductVariant keys are different from Product keys.</em></p>
-    */
+     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
         return this.assets;

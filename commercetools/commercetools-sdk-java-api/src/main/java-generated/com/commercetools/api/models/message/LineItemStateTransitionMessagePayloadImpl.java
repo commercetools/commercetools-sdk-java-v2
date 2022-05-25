@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemStateTransitionMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateTransitionMessagePayload, ModelBase {
 
     private String type;
@@ -47,32 +50,50 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
         this.type = LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getTransitionDate() {
         return this.transitionDate;
     }
+
+    /**
+     *
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>Reference to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;
     }

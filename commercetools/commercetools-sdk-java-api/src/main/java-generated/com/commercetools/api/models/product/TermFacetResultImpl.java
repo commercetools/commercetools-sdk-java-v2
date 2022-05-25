@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TermFacetResult
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TermFacetResultImpl implements TermFacetResult, ModelBase {
 
     private com.commercetools.api.models.product.FacetTypes type;
@@ -47,25 +50,49 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
         this.type = FacetTypes.findEnum("terms");
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
         return this.dataType;
     }
 
+    /**
+     *
+     */
+
     public Long getMissing() {
         return this.missing;
     }
+
+    /**
+     *
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *
+     */
+
     public Long getOther() {
         return this.other;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {
         return this.terms;

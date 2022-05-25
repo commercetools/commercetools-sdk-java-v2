@@ -4,6 +4,10 @@ package com.commercetools.api.models.common;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ *
+ * @param <T> the underlying reference type
+ */
 public class GenericReferenceImpl<T> implements GenericReference<T> {
     private final T obj;
     private final ReferenceTypeId typeId;

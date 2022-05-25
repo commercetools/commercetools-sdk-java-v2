@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ZoneRemoveLocationAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, M
         this.action = REMOVE_LOCATION;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>Location to be removed from the Zone.</p>
-    */
+     *  <p>Location to be removed from the Zone.</p>
+     */
+
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }

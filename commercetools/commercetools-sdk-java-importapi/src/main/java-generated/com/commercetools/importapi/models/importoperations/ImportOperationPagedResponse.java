@@ -14,43 +14,57 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for Import Operations.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult for Import Operations.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportOperationPagedResponse importOperationPagedResponse = ImportOperationPagedResponse.builder()
+ *             .limit(1)
+ *             .offset(1)
+ *             .count(1)
+ *             .total(1)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportOperationPagedResponseImpl.class)
 public interface ImportOperationPagedResponse {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>The actual number of results returned.</p>
-    */
+     *  <p>The actual number of results returned.</p>
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-    *  <p>The total number of import operations matching the query.</p>
-    */
+     *  <p>The total number of import operations matching the query.</p>
+     */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("results")

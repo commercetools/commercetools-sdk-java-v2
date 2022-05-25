@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderEditSetStagedActionsActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderEditSetStagedActionsAction orderEditSetStagedActionsAction = OrderEditSetStagedActionsAction.builder()
+ *             .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEditSetStagedActionsAction> {
 
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
+
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     */
 
     public OrderEditSetStagedActionsActionBuilder stagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
@@ -18,11 +34,19 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return this;
     }
 
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     */
+
     public OrderEditSetStagedActionsActionBuilder stagedActions(
             final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
         return this;
     }
+
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
@@ -33,6 +57,10 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return this;
     }
 
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     */
+
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
         if (this.stagedActions == null) {
@@ -42,6 +70,10 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
                 .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     */
 
     public OrderEditSetStagedActionsActionBuilder withStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {

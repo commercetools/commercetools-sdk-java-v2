@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetReservationsChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReservationsChangeImpl implements SetReservationsChange, ModelBase {
 
     private String type;
@@ -39,20 +42,33 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
         this.type = SET_RESERVATIONS_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setReservations</code> on inventories</p>
-    */
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.common.Reservation> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reservation> getPreviousValue() {
         return this.previousValue;

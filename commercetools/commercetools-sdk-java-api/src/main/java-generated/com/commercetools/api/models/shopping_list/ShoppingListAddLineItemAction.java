@@ -14,31 +14,63 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListAddLineItemAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListAddLineItemAction shoppingListAddLineItemAction = ShoppingListAddLineItemAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddLineItemActionImpl.class)
 public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
         com.commercetools.api.models.CustomizableDraft<ShoppingListAddLineItemAction> {
 
     String ADD_LINE_ITEM = "addLineItem";
 
+    /**
+     *
+     */
+
     @JsonProperty("sku")
     public String getSku();
+
+    /**
+     *
+     */
 
     @JsonProperty("productId")
     public String getProductId();
 
+    /**
+     *
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
 
+    /**
+     *
+     */
+
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     *
+     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

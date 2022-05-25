@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation sent to the server when updating an <a href="#importsink">ImportSink</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation sent to the server when updating an ImportSink.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSinkUpdateDraftImpl implements ImportSinkUpdateDraft, ModelBase {
 
     private Long version;
@@ -35,16 +35,17 @@ public class ImportSinkUpdateDraftImpl implements ImportSinkUpdateDraft, ModelBa
     }
 
     /**
-    *  <p>Current version of the ImportSink.</p>
-    */
+     *  <p>Current version of the ImportSink.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
-    */
+     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     */
+
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }

@@ -7,16 +7,36 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ExtensionChangeDestinationActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ExtensionChangeDestinationAction extensionChangeDestinationAction = ExtensionChangeDestinationAction.builder()
+ *             .destination(destinationBuilder -> destinationBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionChangeDestinationActionBuilder implements Builder<ExtensionChangeDestinationAction> {
 
     private com.commercetools.api.models.extension.ExtensionDestination destination;
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ExtensionChangeDestinationActionBuilder destination(
             final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
         return this;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ExtensionChangeDestinationActionBuilder destination(
             Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {

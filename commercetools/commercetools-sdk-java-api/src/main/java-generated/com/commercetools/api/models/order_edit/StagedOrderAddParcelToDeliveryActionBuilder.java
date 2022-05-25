@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderAddParcelToDeliveryActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderAddParcelToDeliveryAction stagedOrderAddParcelToDeliveryAction = StagedOrderAddParcelToDeliveryAction.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<StagedOrderAddParcelToDeliveryAction> {
 
     private String deliveryId;
@@ -23,10 +35,18 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     *
+     */
+
     public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
             Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
@@ -34,11 +54,19 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderAddParcelToDeliveryActionBuilder measurements(
             @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
@@ -46,11 +74,19 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
             @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderAddParcelToDeliveryActionBuilder items(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -58,11 +94,19 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderAddParcelToDeliveryActionBuilder items(
             @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
             @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -73,6 +117,10 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderAddParcelToDeliveryActionBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         if (this.items == null) {
@@ -81,6 +129,10 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderAddParcelToDeliveryActionBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {

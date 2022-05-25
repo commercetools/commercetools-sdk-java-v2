@@ -12,15 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelAddRolesAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelAddRolesAction channelAddRolesAction = ChannelAddRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelAddRolesActionImpl.class)
 public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     String ADD_ROLES = "addRoles";
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();

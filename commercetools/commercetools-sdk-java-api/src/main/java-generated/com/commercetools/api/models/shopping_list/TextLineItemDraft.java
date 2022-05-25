@@ -16,36 +16,55 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TextLineItemDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TextLineItemDraft textLineItemDraft = TextLineItemDraft.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TextLineItemDraftImpl.class)
 public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft> {
 
     /**
-    *  <p>Defaults to the current date and time.</p>
-    */
+     *  <p>Defaults to the current date and time.</p>
+     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>Defaults to <code>1</code>.</p>
-    */
+     *  <p>Defaults to <code>1</code>.</p>
+     */
 
     @JsonProperty("quantity")
     public Integer getQuantity();

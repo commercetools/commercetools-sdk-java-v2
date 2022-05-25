@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTextLineItemsOrderChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOrderChange, ModelBase {
 
     private String type;
@@ -39,17 +42,33 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
         this.type = CHANGE_TEXT_LINE_ITEMS_ORDER_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getNextValue() {
         return this.nextValue;

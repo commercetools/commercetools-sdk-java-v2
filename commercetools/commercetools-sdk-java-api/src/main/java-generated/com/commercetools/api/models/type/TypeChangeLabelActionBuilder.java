@@ -7,23 +7,48 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
+ *             .fieldName("{fieldName}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelAction> {
 
     private String fieldName;
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+     *  <p>Name of the Field Definition to update.</p>
+     */
+
     public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public TypeChangeLabelActionBuilder label(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;

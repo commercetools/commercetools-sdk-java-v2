@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingImagesSearchRequestBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingImagesSearchRequest missingImagesSearchRequest = MissingImagesSearchRequest.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingImagesSearchRequestBuilder implements Builder<MissingImagesSearchRequest> {
 
     @Nullable
@@ -38,50 +49,90 @@ public class MissingImagesSearchRequestBuilder implements Builder<MissingImagesS
     @Nullable
     private java.util.List<String> productTypeIds;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public MissingImagesSearchRequestBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
 
     public MissingImagesSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+     *  <p>If true, searches data from staged products in addition to published products.</p>
+     */
+
     public MissingImagesSearchRequestBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+     *  <p>Maximum number of products to scan.</p>
+     */
 
     public MissingImagesSearchRequestBuilder productSetLimit(@Nullable final Long productSetLimit) {
         this.productSetLimit = productSetLimit;
         return this;
     }
 
+    /**
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     */
+
     public MissingImagesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
         this.includeVariants = includeVariants;
         return this;
     }
+
+    /**
+     *  <p>If true, uses the median number of images per product variant as a threshold value.</p>
+     */
 
     public MissingImagesSearchRequestBuilder autoThreshold(@Nullable final Boolean autoThreshold) {
         this.autoThreshold = autoThreshold;
         return this;
     }
 
+    /**
+     *  <p>The minimum number of images a product variant must have. Anything below this value is considered a product variant with missing images.</p>
+     */
+
     public MissingImagesSearchRequestBuilder threshold(@Nullable final Long threshold) {
         this.threshold = threshold;
         return this;
     }
+
+    /**
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     */
 
     public MissingImagesSearchRequestBuilder productIds(@Nullable final String... productIds) {
         this.productIds = new ArrayList<>(Arrays.asList(productIds));
         return this;
     }
 
+    /**
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     */
+
     public MissingImagesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
         return this;
     }
+
+    /**
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
+     */
 
     public MissingImagesSearchRequestBuilder plusProductIds(@Nullable final String... productIds) {
         if (this.productIds == null) {
@@ -91,15 +142,27 @@ public class MissingImagesSearchRequestBuilder implements Builder<MissingImagesS
         return this;
     }
 
+    /**
+     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
+     */
+
     public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
 
+    /**
+     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
+     */
+
     public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
+
+    /**
+     *  <p>Filters results by the provided product type IDs. It cannot be applied in combination with any other filter.</p>
+     */
 
     public MissingImagesSearchRequestBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
         if (this.productTypeIds == null) {

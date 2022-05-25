@@ -14,17 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantDeletedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantDeletedMessagePayload productVariantDeletedMessagePayload = ProductVariantDeletedMessagePayload.builder()
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantDeletedMessagePayloadImpl.class)
 public interface ProductVariantDeletedMessagePayload extends MessagePayload {
 
     String PRODUCT_VARIANT_DELETED = "ProductVariantDeleted";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();

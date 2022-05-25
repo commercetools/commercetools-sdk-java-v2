@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeInitialChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeInitialChange changeInitialChange = ChangeInitialChange.builder()
+ *             .change("{change}")
+ *             .previousValue(true)
+ *             .nextValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> {
 
     private String change;
@@ -15,15 +29,27 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     private Boolean nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>changeInitial</code></p>
+     */
+
     public ChangeInitialChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeInitialChangeBuilder previousValue(final Boolean previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeInitialChangeBuilder nextValue(final Boolean nextValue) {
         this.nextValue = nextValue;

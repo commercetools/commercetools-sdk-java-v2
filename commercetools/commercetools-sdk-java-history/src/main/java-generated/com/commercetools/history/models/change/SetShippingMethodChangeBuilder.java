@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetShippingMethodChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetShippingMethodChange setShippingMethodChange = SetShippingMethodChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethodChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
 
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue;
 
+    /**
+     *  <p>Update action for <code>setShippingMethod</code></p>
+     */
+
     public SetShippingMethodChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShippingMethodChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
@@ -29,11 +51,19 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetShippingMethodChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShippingMethodChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodChangeValueBuilder> builder) {
@@ -42,6 +72,10 @@ public class SetShippingMethodChangeBuilder implements Builder<SetShippingMethod
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetShippingMethodChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue) {

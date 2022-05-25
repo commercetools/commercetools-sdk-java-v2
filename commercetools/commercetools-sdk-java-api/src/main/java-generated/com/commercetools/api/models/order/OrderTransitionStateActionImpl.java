@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderTransitionStateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionStateActionImpl implements OrderTransitionStateAction, ModelBase {
 
     private String action;
@@ -36,16 +39,25 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
         this.action = TRANSITION_STATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *
+     */
 
     public Boolean getForce() {
         return this.force;

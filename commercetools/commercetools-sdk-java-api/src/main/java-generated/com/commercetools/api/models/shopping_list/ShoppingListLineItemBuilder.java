@@ -9,7 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListLineItemBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()
+ *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .id("{id}")
+ *             .name(nameBuilder -> nameBuilder)
+ *             .productId("{productId}")
+ *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem> {
 
     private java.time.ZonedDateTime addedAt;
@@ -39,10 +56,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     @Nullable
     private Long variantId;
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public ShoppingListLineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -50,20 +75,36 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
+
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemBuilder deactivatedAt(@Nullable final java.time.ZonedDateTime deactivatedAt) {
         this.deactivatedAt = deactivatedAt;
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ShoppingListLineItem.</p>
+     */
+
     public ShoppingListLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListLineItemBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -71,15 +112,27 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
+
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListLineItemBuilder productSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -87,11 +140,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
+
     public ShoppingListLineItemBuilder productSlug(
             @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.productSlug = productSlug;
         return this;
     }
+
+    /**
+     *  <p>Reference to a ProductType.</p>
+     */
 
     public ShoppingListLineItemBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
@@ -100,16 +161,28 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *  <p>Reference to a ProductType.</p>
+     */
+
     public ShoppingListLineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemBuilder variant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
@@ -117,11 +190,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListLineItemBuilder variant(
             @Nullable final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListLineItemBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;

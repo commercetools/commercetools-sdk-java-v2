@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * RemoveFromCategoryChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RemoveFromCategoryChange removeFromCategoryChange = RemoveFromCategoryChange.builder()
+ *             .change("{change}")
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCategoryChange> {
 
     private String change;
@@ -18,10 +33,18 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     *  <p>Update action for <code>addToCategory</code></p>
+     */
+
     public RemoveFromCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveFromCategoryChangeBuilder category(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -29,10 +52,18 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
         this.category = category;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveFromCategoryChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -40,11 +71,19 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder previousValue(
             final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
             final com.commercetools.history.models.common.Reference... previousValue) {
@@ -55,6 +94,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder plusPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.previousValue == null) {
@@ -64,6 +107,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder withPreviousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.previousValue = new ArrayList<>();
@@ -71,17 +118,29 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder nextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveFromCategoryChangeBuilder plusNextValue(
             final com.commercetools.history.models.common.Reference... nextValue) {
@@ -92,6 +151,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         return this;
     }
 
+    /**
+     *
+     */
+
     public RemoveFromCategoryChangeBuilder plusNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         if (this.nextValue == null) {
@@ -100,6 +163,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public RemoveFromCategoryChangeBuilder withNextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {

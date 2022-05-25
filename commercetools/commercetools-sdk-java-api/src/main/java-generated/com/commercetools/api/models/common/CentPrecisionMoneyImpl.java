@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Object that stores cent amounts in a specific currency.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Object that stores cent amounts in a specific currency.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
 
     private Long centAmount;
@@ -43,33 +43,37 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-    *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>
-    */
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
     /**
-    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
-    */
+     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     */
+
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;
     }
 
     /**
-    *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
-    */
+     *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }

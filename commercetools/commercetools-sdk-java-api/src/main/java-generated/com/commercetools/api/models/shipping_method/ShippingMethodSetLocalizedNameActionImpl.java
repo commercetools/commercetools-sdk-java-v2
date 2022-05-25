@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShippingMethodSetLocalizedNameAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodSetLocalizedNameAction, ModelBase {
 
     private String action;
@@ -32,9 +35,17 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
         this.action = SET_LOCALIZED_NAME;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
         return this.localizedName;

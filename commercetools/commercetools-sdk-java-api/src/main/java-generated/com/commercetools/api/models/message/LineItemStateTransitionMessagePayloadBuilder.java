@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * LineItemStateTransitionMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     LineItemStateTransitionMessagePayload lineItemStateTransitionMessagePayload = LineItemStateTransitionMessagePayload.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .transitionDate(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessagePayloadBuilder implements Builder<LineItemStateTransitionMessagePayload> {
 
     private String lineItemId;
@@ -20,20 +36,36 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     *
+     */
+
     public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public LineItemStateTransitionMessagePayloadBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
         return this;
     }
 
+    /**
+     *
+     */
+
     public LineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *  <p>Reference to a State.</p>
+     */
 
     public LineItemStateTransitionMessagePayloadBuilder fromState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
@@ -41,17 +73,29 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
         return this;
     }
 
+    /**
+     *  <p>Reference to a State.</p>
+     */
+
     public LineItemStateTransitionMessagePayloadBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
         return this;
     }
 
+    /**
+     *  <p>Reference to a State.</p>
+     */
+
     public LineItemStateTransitionMessagePayloadBuilder toState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a State.</p>
+     */
 
     public LineItemStateTransitionMessagePayloadBuilder toState(
             final com.commercetools.api.models.state.StateReference toState) {

@@ -13,14 +13,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents an attribute whose value is set of boolean values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This type represents an attribute whose value is set of boolean values.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     BooleanSetAttribute booleanSetAttribute = BooleanSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BooleanSetAttributeImpl.class)
 public interface BooleanSetAttribute extends Attribute {
 
     String BOOLEAN_SET = "boolean-set";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public List<Boolean> getValue();

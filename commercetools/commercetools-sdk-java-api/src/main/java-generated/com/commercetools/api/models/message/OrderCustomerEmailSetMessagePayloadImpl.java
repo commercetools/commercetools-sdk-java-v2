@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderCustomerEmailSetMessagePayload
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload, ModelBase {
 
     private String type;
@@ -35,13 +38,25 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
+    /**
+     *
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *
+     */
 
     public String getOldEmail() {
         return this.oldEmail;

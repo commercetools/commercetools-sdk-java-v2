@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EnumSetAttributeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumSetAttribute enumSetAttribute = EnumSetAttribute.builder()
+ *             .plusValue(valueBuilder -> valueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     @Nullable
@@ -16,20 +28,36 @@ public class EnumSetAttributeBuilder implements Builder<EnumSetAttribute> {
 
     private java.util.List<String> value;
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
+
     public EnumSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumSetAttributeBuilder value(final String... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
 
+    /**
+     *
+     */
+
     public EnumSetAttributeBuilder value(final java.util.List<String> value) {
         this.value = value;
         return this;
     }
+
+    /**
+     *
+     */
 
     public EnumSetAttributeBuilder plusValue(final String... value) {
         if (this.value == null) {

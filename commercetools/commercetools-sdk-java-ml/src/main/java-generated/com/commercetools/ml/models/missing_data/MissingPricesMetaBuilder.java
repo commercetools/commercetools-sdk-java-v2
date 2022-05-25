@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingPricesMetaBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingPricesMeta missingPricesMeta = MissingPricesMeta.builder()
+ *             .productLevel(productLevelBuilder -> productLevelBuilder)
+ *             .variantLevel(variantLevelBuilder -> variantLevelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
 
     private com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel;
 
     private com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel;
+
+    /**
+     *
+     */
 
     public MissingPricesMetaBuilder productLevel(
             Function<com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesProductLevelBuilder> builder) {
@@ -22,11 +39,19 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingPricesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingPricesProductLevel productLevel) {
         this.productLevel = productLevel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingPricesMetaBuilder variantLevel(
             Function<com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder, com.commercetools.ml.models.missing_data.MissingPricesVariantLevelBuilder> builder) {
@@ -35,6 +60,10 @@ public class MissingPricesMetaBuilder implements Builder<MissingPricesMeta> {
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingPricesMetaBuilder variantLevel(
             final com.commercetools.ml.models.missing_data.MissingPricesVariantLevel variantLevel) {

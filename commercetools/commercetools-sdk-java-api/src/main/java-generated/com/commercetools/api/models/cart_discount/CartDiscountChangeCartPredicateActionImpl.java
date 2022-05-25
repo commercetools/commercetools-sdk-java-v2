@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeCartPredicateAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountChangeCartPredicateAction, ModelBase {
 
     private String action;
@@ -31,13 +34,18 @@ public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountCh
         this.action = CHANGE_CART_PREDICATE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>A valid Cart predicate.</p>
-    */
+     *  <p>New value to set.</p>
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }

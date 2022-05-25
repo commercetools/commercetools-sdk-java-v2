@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderTransitionStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderTransitionStateAction stagedOrderTransitionStateAction = StagedOrderTransitionStateAction.builder()
+ *             .state(stateBuilder -> stateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOrderTransitionStateAction> {
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
@@ -17,17 +29,29 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
     @Nullable
     private Boolean force;
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public StagedOrderTransitionStateActionBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public StagedOrderTransitionStateActionBuilder state(
             final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderTransitionStateActionBuilder force(@Nullable final Boolean force) {
         this.force = force;

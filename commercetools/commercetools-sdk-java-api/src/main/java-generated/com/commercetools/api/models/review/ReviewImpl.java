@@ -17,7 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Review
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewImpl implements Review, ModelBase {
 
     private String id;
@@ -95,102 +98,144 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Review.</p>
-    */
+     *  <p>Unique identifier of the Review.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the review.</p>
-    */
+     *  <p>The current version of the review.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
+
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Review.</p>
-    */
+     *  <p>User-defined unique identifier of the Review.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *
+     */
 
     public String getUniquenessValue() {
         return this.uniquenessValue;
     }
 
+    /**
+     *
+     */
+
     public String getLocale() {
         return this.locale;
     }
+
+    /**
+     *
+     */
 
     public String getAuthorName() {
         return this.authorName;
     }
 
+    /**
+     *
+     */
+
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     *
+     */
 
     public String getText() {
         return this.text;
     }
 
     /**
-    *  <p>Identifies the target of the review.
-    *  Can be a Product or a Channel</p>
-    */
+     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     */
+
     public java.lang.Object getTarget() {
         return this.target;
     }
 
     /**
-    *  <p>Indicates if this review is taken into account in the ratings statistics of the target.
-    *  A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.
-    *  If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
-    */
+     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     */
+
     public Boolean getIncludedInStatistics() {
         return this.includedInStatistics;
     }
 
     /**
-    *  <p>Number between -100 and 100 included.</p>
-    */
+     *  <p>Number between -100 and 100 included.</p>
+     */
+
     public Integer getRating() {
         return this.rating;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
     /**
-    *  <p>The customer who created the review.</p>
-    */
+     *  <p>The customer who created the review.</p>
+     */
+
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

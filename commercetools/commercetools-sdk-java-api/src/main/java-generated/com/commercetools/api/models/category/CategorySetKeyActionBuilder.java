@@ -8,11 +8,26 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CategorySetKeyActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CategorySetKeyAction categorySetKeyAction = CategorySetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetKeyActionBuilder implements Builder<CategorySetKeyAction> {
 
     @Nullable
     private String key;
+
+    /**
+     *  <p>User-defined unique identifier for the category. Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters. If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     public CategorySetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;

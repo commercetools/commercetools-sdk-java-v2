@@ -13,30 +13,59 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingAttributesPagedQueryResult
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingAttributesPagedQueryResult missingAttributesPagedQueryResult = MissingAttributesPagedQueryResult.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .meta(metaBuilder -> metaBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingAttributesPagedQueryResultImpl.class)
 public interface MissingAttributesPagedQueryResult {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<MissingAttributes> getResults();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("meta")

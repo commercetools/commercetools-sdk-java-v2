@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCustomerChangePasswordBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCustomerChangePassword myCustomerChangePassword = MyCustomerChangePassword.builder()
+ *             .version(0.3)
+ *             .currentPassword("{currentPassword}")
+ *             .newPassword("{newPassword}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChangePassword> {
 
     private Long version;
@@ -15,15 +29,27 @@ public class MyCustomerChangePasswordBuilder implements Builder<MyCustomerChange
 
     private String newPassword;
 
+    /**
+     *
+     */
+
     public MyCustomerChangePasswordBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyCustomerChangePasswordBuilder currentPassword(final String currentPassword) {
         this.currentPassword = currentPassword;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyCustomerChangePasswordBuilder newPassword(final String newPassword) {
         this.newPassword = newPassword;

@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MissingAttributesMetaBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MissingAttributesMeta missingAttributesMeta = MissingAttributesMeta.builder()
+ *             .productLevel(productLevelBuilder -> productLevelBuilder)
+ *             .variantLevel(variantLevelBuilder -> variantLevelBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMeta> {
 
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel;
@@ -19,6 +32,10 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
     @Nullable
     private java.util.List<String> productTypeIds;
 
+    /**
+     *
+     */
+
     public MissingAttributesMetaBuilder productLevel(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
         this.productLevel = builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder.of())
@@ -26,11 +43,19 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesMetaBuilder productLevel(
             final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
         this.productLevel = productLevel;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MissingAttributesMetaBuilder variantLevel(
             Function<com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder, com.commercetools.ml.models.missing_data.MissingAttributesDetailsBuilder> builder) {
@@ -39,21 +64,37 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
         return this;
     }
 
+    /**
+     *
+     */
+
     public MissingAttributesMetaBuilder variantLevel(
             final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
         this.variantLevel = variantLevel;
         return this;
     }
 
+    /**
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
+     */
+
     public MissingAttributesMetaBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
 
+    /**
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
+     */
+
     public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
+
+    /**
+     *  <p>The IDs of the product types containing the requested <code>attributeName</code>.</p>
+     */
 
     public MissingAttributesMetaBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
         if (this.productTypeIds == null) {

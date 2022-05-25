@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetDefaultShippingAddressActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetDefaultShippingAddressAction customerSetDefaultShippingAddressAction = CustomerSetDefaultShippingAddressAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetDefaultShippingAddressActionBuilder
         implements Builder<CustomerSetDefaultShippingAddressAction> {
 
@@ -18,10 +29,18 @@ public class CustomerSetDefaultShippingAddressActionBuilder
     @Nullable
     private String addressKey;
 
+    /**
+     *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
+     */
+
     public CustomerSetDefaultShippingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public CustomerSetDefaultShippingAddressActionBuilder addressKey(@Nullable final String addressKey) {
         this.addressKey = addressKey;

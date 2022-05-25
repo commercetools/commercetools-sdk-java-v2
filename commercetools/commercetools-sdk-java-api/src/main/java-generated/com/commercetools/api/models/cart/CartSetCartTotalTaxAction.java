@@ -14,20 +14,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartSetCartTotalTaxAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CartSetCartTotalTaxAction cartSetCartTotalTaxAction = CartSetCartTotalTaxAction.builder()
+ *             .externalTotalGross(externalTotalGrossBuilder -> externalTotalGrossBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
     String SET_CART_TOTAL_TAX = "setCartTotalTax";
 
     /**
-    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
-    */
+     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("externalTotalGross")
     public Money getExternalTotalGross();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("externalTaxPortions")
     public List<TaxPortionDraft> getExternalTaxPortions();

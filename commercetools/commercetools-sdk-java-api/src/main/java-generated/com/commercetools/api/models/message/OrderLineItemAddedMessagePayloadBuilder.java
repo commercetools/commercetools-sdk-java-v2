@@ -7,12 +7,29 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderLineItemAddedMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     OrderLineItemAddedMessagePayload orderLineItemAddedMessagePayload = OrderLineItemAddedMessagePayload.builder()
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .addedQuantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLineItemAddedMessagePayload> {
 
     private com.commercetools.api.models.cart.LineItem lineItem;
 
     private Long addedQuantity;
+
+    /**
+     *
+     */
 
     public OrderLineItemAddedMessagePayloadBuilder lineItem(
             Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItemBuilder> builder) {
@@ -20,10 +37,18 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
         return this;
     }
 
+    /**
+     *
+     */
+
     public OrderLineItemAddedMessagePayloadBuilder lineItem(final com.commercetools.api.models.cart.LineItem lineItem) {
         this.lineItem = lineItem;
         return this;
     }
+
+    /**
+     *
+     */
 
     public OrderLineItemAddedMessagePayloadBuilder addedQuantity(final Long addedQuantity) {
         this.addedQuantity = addedQuantity;

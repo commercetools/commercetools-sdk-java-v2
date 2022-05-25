@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderTransitionLineItemStateActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     StagedOrderTransitionLineItemStateAction stagedOrderTransitionLineItemStateAction = StagedOrderTransitionLineItemStateAction.builder()
+ *             .lineItemId("{lineItemId}")
+ *             .quantity(0.3)
+ *             .fromState(fromStateBuilder -> fromStateBuilder)
+ *             .toState(toStateBuilder -> toStateBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionLineItemStateActionBuilder
         implements Builder<StagedOrderTransitionLineItemStateAction> {
 
@@ -24,15 +39,27 @@ public class StagedOrderTransitionLineItemStateActionBuilder
     @Nullable
     private java.time.ZonedDateTime actualTransitionDate;
 
+    /**
+     *
+     */
+
     public StagedOrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public StagedOrderTransitionLineItemStateActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
 
     public StagedOrderTransitionLineItemStateActionBuilder fromState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
@@ -40,11 +67,19 @@ public class StagedOrderTransitionLineItemStateActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public StagedOrderTransitionLineItemStateActionBuilder fromState(
             final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
         this.fromState = fromState;
         return this;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
 
     public StagedOrderTransitionLineItemStateActionBuilder toState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
@@ -52,11 +87,19 @@ public class StagedOrderTransitionLineItemStateActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public StagedOrderTransitionLineItemStateActionBuilder toState(
             final com.commercetools.api.models.state.StateResourceIdentifier toState) {
         this.toState = toState;
         return this;
     }
+
+    /**
+     *
+     */
 
     public StagedOrderTransitionLineItemStateActionBuilder actualTransitionDate(
             @Nullable final java.time.ZonedDateTime actualTransitionDate) {

@@ -12,34 +12,59 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeIsSearchableChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
+ *             .change("{change}")
+ *             .attributeName("{attributeName}")
+ *             .nextValue(true)
+ *             .previousValue(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeIsSearchableChangeImpl.class)
 public interface ChangeIsSearchableChange extends Change {
 
     String CHANGE_IS_SEARCHABLE_CHANGE = "ChangeIsSearchableChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
-    */
+     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the updated attribute.</p>
-    */
+     *  <p>The name of the updated attribute.</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Boolean getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Boolean getPreviousValue();

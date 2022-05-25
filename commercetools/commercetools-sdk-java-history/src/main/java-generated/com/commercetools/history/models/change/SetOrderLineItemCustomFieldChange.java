@@ -14,44 +14,82 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetOrderLineItemCustomFieldChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetOrderLineItemCustomFieldChange setOrderLineItemCustomFieldChange = SetOrderLineItemCustomFieldChange.builder()
+ *             .change("{change}")
+ *             .customTypeId("{customTypeId}")
+ *             .name("{name}")
+ *             .variant("{variant}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetOrderLineItemCustomFieldChangeImpl.class)
 public interface SetOrderLineItemCustomFieldChange extends Change {
 
     String SET_ORDER_LINE_ITEM_CUSTOM_FIELD_CHANGE = "SetOrderLineItemCustomFieldChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>setLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("customTypeId")
     public String getCustomTypeId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("lineItem")
     public LocalizedString getLineItem();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Object getNextValue();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Object getPreviousValue();

@@ -13,9 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents the value of an attribute of a product variant.
-*  The name and type property must match the name and type property of an attribute definition of the product type.</p>
-*/
+ *  <p>This type represents the value of an attribute of a product variant. The name and type property must match the name and type property of an attribute definition of the product type.</p>
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     Attribute attribute = Attribute.booleanBuilder()
+ *             value(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.productvariants.BooleanAttributeImpl.class, name = BooleanAttribute.BOOLEAN),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.productvariants.BooleanSetAttributeImpl.class, name = BooleanSetAttribute.BOOLEAN_SET),
@@ -41,18 +50,19 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.productvariants.TimeSetAttributeImpl.class, name = TimeSetAttribute.TIME_SET) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = AttributeImpl.class, visible = true)
 @JsonDeserialize(as = AttributeImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Attribute {
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions.
-    *  The name is required if this type is used in a product variant and must not be set when
-    *  used in a product variant patch.</p>
-    */
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
 
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();

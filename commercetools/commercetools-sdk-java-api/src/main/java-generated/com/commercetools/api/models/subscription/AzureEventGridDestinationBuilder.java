@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AzureEventGridDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AzureEventGridDestination azureEventGridDestination = AzureEventGridDestination.builder()
+ *             .uri("{uri}")
+ *             .accessKey("{accessKey}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AzureEventGridDestinationBuilder implements Builder<AzureEventGridDestination> {
 
     private String uri;
 
     private String accessKey;
 
+    /**
+     *
+     */
+
     public AzureEventGridDestinationBuilder uri(final String uri) {
         this.uri = uri;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AzureEventGridDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;

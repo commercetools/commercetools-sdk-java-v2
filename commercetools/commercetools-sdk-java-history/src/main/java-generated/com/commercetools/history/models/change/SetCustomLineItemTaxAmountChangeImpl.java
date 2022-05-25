@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetCustomLineItemTaxAmountChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemTaxAmountChangeImpl implements SetCustomLineItemTaxAmountChange, ModelBase {
 
     private String type;
@@ -51,39 +54,58 @@ public class SetCustomLineItemTaxAmountChangeImpl implements SetCustomLineItemTa
         this.type = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>
-    */
+     *  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     *
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
+
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
     }

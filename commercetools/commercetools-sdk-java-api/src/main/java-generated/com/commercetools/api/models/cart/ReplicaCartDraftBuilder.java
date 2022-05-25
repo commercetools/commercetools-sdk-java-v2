@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReplicaCartDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReplicaCartDraft replicaCartDraft = ReplicaCartDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
 
     private java.lang.Object reference;
@@ -16,10 +27,18 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
     @Nullable
     private String key;
 
+    /**
+     *
+     */
+
     public ReplicaCartDraftBuilder reference(final java.lang.Object reference) {
         this.reference = reference;
         return this;
     }
+
+    /**
+     *  <p>User-specific unique identifier of the cart.</p>
+     */
 
     public ReplicaCartDraftBuilder key(@Nullable final String key) {
         this.key = key;

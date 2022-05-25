@@ -14,49 +14,76 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeLocalizedEnumValueLabelChange
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
+ *             .change("{change}")
+ *             .fieldName("{fieldName}")
+ *             .attributeName("{attributeName}")
+ *             .valueKey("{valueKey}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLocalizedEnumValueLabelChangeImpl.class)
 public interface ChangeLocalizedEnumValueLabelChange extends Change {
 
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE = "ChangeLocalizedEnumValueLabelChange";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("type")
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
-    */
+     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-    *  <p>Key of the values that was updated</p>
-    */
+     *  <p>Key of the values that was updated</p>
+     */
     @NotNull
     @JsonProperty("valueKey")
     public String getValueKey();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

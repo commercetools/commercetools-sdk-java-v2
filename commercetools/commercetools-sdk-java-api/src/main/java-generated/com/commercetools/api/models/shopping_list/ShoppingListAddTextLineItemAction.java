@@ -16,7 +16,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListAddTextLineItemAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListAddTextLineItemAction shoppingListAddTextLineItemAction = ShoppingListAddTextLineItemAction.builder()
+ *             .name(nameBuilder -> nameBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddTextLineItemActionImpl.class)
 public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAction,
         com.commercetools.api.models.CustomizableDraft<ShoppingListAddTextLineItemAction> {
@@ -24,29 +37,37 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     String ADD_TEXT_LINE_ITEM = "addTextLineItem";
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+     *
+     */
+
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     *
+     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

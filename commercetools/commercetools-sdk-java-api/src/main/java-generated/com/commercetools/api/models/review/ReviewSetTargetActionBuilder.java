@@ -6,10 +6,25 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReviewSetTargetActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReviewSetTargetAction reviewSetTargetAction = ReviewSetTargetAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetAction> {
 
     private java.lang.Object target;
+
+    /**
+     *  <p>Identifies the target of the review. Can be a Product or a Channel. If <code>target</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     public ReviewSetTargetActionBuilder target(final java.lang.Object target) {
         this.target = target;

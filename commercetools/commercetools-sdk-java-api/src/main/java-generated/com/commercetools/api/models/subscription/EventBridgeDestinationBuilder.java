@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EventBridgeDestinationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
+ *             .region("{region}")
+ *             .accountId("{accountId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestination> {
 
     private String region;
 
     private String accountId;
 
+    /**
+     *  <p>AWS region of the Subscriptions that receives the events.</p>
+     */
+
     public EventBridgeDestinationBuilder region(final String region) {
         this.region = region;
         return this;
     }
+
+    /**
+     *  <p>ID of the AWS account that receives events.</p>
+     */
 
     public EventBridgeDestinationBuilder accountId(final String accountId) {
         this.accountId = accountId;

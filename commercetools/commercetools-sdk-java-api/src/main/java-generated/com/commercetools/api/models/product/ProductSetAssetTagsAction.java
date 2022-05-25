@@ -10,26 +10,62 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSetAssetTagsAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSetAssetTagsAction productSetAssetTagsAction = ProductSetAssetTagsAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetTagsActionImpl.class)
 public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
     String SET_ASSET_TAGS = "setAssetTags";
 
+    /**
+     *
+     */
+
     @JsonProperty("variantId")
     public Long getVariantId();
+
+    /**
+     *
+     */
 
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+     *
+     */
+
     @JsonProperty("staged")
     public Boolean getStaged();
+
+    /**
+     *
+     */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
+    /**
+     *
+     */
+
     @JsonProperty("assetKey")
     public String getAssetKey();
+
+    /**
+     *
+     */
 
     @JsonProperty("tags")
     public List<String> getTags();

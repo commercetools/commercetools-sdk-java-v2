@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountChangeValueAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction, ModelBase {
 
     private String action;
@@ -32,9 +35,17 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;

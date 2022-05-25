@@ -12,20 +12,45 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeDefinitionTypeConflictError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinitionTypeConflictError attributeDefinitionTypeConflictError = AttributeDefinitionTypeConflictError.builder()
+ *             .message("{message}")
+ *             .conflictingProductTypeId("{conflictingProductTypeId}")
+ *             .conflictingProductTypeName("{conflictingProductTypeName}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionTypeConflictErrorImpl.class)
 public interface AttributeDefinitionTypeConflictError extends ErrorObject {
 
     String ATTRIBUTE_DEFINITION_TYPE_CONFLICT = "AttributeDefinitionTypeConflict";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("conflictingProductTypeName")
     public String getConflictingProductTypeName();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();

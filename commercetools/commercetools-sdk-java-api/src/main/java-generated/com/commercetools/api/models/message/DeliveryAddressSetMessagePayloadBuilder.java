@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DeliveryAddressSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DeliveryAddressSetMessagePayload deliveryAddressSetMessagePayload = DeliveryAddressSetMessagePayload.builder()
+ *             .deliveryId("{deliveryId}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressSetMessagePayloadBuilder implements Builder<DeliveryAddressSetMessagePayload> {
 
     private String deliveryId;
@@ -20,10 +32,18 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
 
+    /**
+     *
+     */
+
     public DeliveryAddressSetMessagePayloadBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryAddressSetMessagePayloadBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
@@ -31,17 +51,29 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryAddressSetMessagePayloadBuilder address(
             @Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
             @Nullable final com.commercetools.api.models.common.Address oldAddress) {

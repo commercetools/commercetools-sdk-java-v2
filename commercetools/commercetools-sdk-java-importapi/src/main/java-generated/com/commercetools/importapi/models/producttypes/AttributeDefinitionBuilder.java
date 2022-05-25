@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AttributeDefinitionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AttributeDefinition attributeDefinition = AttributeDefinition.builder()
+ *             .type(typeBuilder -> typeBuilder)
+ *             .name("{name}")
+ *             .label(labelBuilder -> labelBuilder)
+ *             .isRequired(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> {
 
     private com.commercetools.importapi.models.producttypes.AttributeType type;
@@ -32,10 +47,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     @Nullable
     private Boolean isSearchable;
 
+    /**
+     *
+     */
+
     public AttributeDefinitionBuilder type(final com.commercetools.importapi.models.producttypes.AttributeType type) {
         this.type = type;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeDefinitionBuilder type(
             Function<com.commercetools.importapi.models.producttypes.AttributeTypeBuilder, Builder<? extends com.commercetools.importapi.models.producttypes.AttributeType>> builder) {
@@ -43,10 +66,23 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeDefinitionBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public AttributeDefinitionBuilder label(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -54,15 +90,32 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public AttributeDefinitionBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeDefinitionBuilder attributeConstraint(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeConstraintEnum attributeConstraint) {
@@ -70,11 +123,29 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
+
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
 
     public AttributeDefinitionBuilder inputTip(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString inputTip) {
@@ -82,11 +153,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     *
+     */
+
     public AttributeDefinitionBuilder inputHint(
             @Nullable final com.commercetools.importapi.models.producttypes.TextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AttributeDefinitionBuilder isSearchable(@Nullable final Boolean isSearchable) {
         this.isSearchable = isSearchable;

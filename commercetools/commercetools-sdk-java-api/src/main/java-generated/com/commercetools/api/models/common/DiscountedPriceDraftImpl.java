@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DiscountedPriceDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money value;
@@ -32,15 +35,17 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-    *  <p>Sets the money value for the discounted price.</p>
-    */
+     *  <p>Sets the money value for the discounted price.</p>
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Relates the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> to the discounted price.</p>
-    */
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     */
+
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
         return this.discount;
     }

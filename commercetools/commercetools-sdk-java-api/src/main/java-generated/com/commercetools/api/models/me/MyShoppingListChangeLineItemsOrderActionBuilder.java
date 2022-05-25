@@ -6,21 +6,45 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyShoppingListChangeLineItemsOrderActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyShoppingListChangeLineItemsOrderAction myShoppingListChangeLineItemsOrderAction = MyShoppingListChangeLineItemsOrderAction.builder()
+ *             .plusLineItemOrder(lineItemOrderBuilder -> lineItemOrderBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListChangeLineItemsOrderActionBuilder
         implements Builder<MyShoppingListChangeLineItemsOrderAction> {
 
     private java.util.List<String> lineItemOrder;
+
+    /**
+     *
+     */
 
     public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final String... lineItemOrder) {
         this.lineItemOrder = new ArrayList<>(Arrays.asList(lineItemOrder));
         return this;
     }
 
+    /**
+     *
+     */
+
     public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder(final java.util.List<String> lineItemOrder) {
         this.lineItemOrder = lineItemOrder;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MyShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {
         if (this.lineItemOrder == null) {

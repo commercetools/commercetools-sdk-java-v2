@@ -8,7 +8,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReferencedResourceNotFoundErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
+ *             .message("{message}")
+ *             .typeId(ReferenceTypeId.CART)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferencedResourceNotFoundErrorBuilder implements Builder<ReferencedResourceNotFoundError> {
 
     private String message;
@@ -23,15 +36,27 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     @Nullable
     private String key;
 
+    /**
+     *
+     */
+
     public ReferencedResourceNotFoundErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferencedResourceNotFoundErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferencedResourceNotFoundErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -41,16 +66,28 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return this;
     }
 
+    /**
+     *  <p>supported resource type identifiers:</p>
+     */
+
     public ReferencedResourceNotFoundErrorBuilder typeId(
             final com.commercetools.api.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReferencedResourceNotFoundErrorBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReferencedResourceNotFoundErrorBuilder key(@Nullable final String key) {
         this.key = key;

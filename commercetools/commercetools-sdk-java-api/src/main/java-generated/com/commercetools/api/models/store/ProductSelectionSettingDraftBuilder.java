@@ -9,13 +9,29 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductSelectionSettingDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSelectionSettingDraft productSelectionSettingDraft = ProductSelectionSettingDraft.builder()
+ *             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelectionSettingDraft> {
 
     private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
 
     @Nullable
     private Boolean active;
+
+    /**
+     *  <p>Resource Identifier of a Product Selection</p>
+     */
 
     public ProductSelectionSettingDraftBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
@@ -25,11 +41,19 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
         return this;
     }
 
+    /**
+     *  <p>Resource Identifier of a Product Selection</p>
+     */
+
     public ProductSelectionSettingDraftBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     */
 
     public ProductSelectionSettingDraftBuilder active(@Nullable final Boolean active) {
         this.active = active;

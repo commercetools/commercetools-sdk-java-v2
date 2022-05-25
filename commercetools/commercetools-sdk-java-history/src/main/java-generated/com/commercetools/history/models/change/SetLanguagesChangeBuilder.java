@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetLanguagesChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetLanguagesChange setLanguagesChange = SetLanguagesChange.builder()
+ *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     private String change;
@@ -15,20 +29,36 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     private java.util.List<String> nextValue;
 
+    /**
+     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     */
+
     public SetLanguagesChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLanguagesChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLanguagesChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLanguagesChangeBuilder plusPreviousValue(final String... previousValue) {
         if (this.previousValue == null) {
@@ -38,15 +68,27 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLanguagesChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetLanguagesChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetLanguagesChangeBuilder plusNextValue(final String... nextValue) {
         if (this.nextValue == null) {

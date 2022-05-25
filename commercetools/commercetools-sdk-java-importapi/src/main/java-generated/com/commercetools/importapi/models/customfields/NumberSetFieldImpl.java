@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A field with a number value.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A field with a number value.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class NumberSetFieldImpl implements NumberSetField, ModelBase {
 
     private String type;
@@ -35,11 +35,16 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
     }
 
     /**
-    *  <p>The type of this field.</p>
-    */
+     *  <p>The type of this field.</p>
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<Double> getValue() {
         return this.value;

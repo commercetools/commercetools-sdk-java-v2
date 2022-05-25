@@ -6,17 +6,38 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ItemShippingTargetBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+ *             .addressKey("{addressKey}")
+ *             .quantity(0.3)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private String addressKey;
 
     private Double quantity;
 
+    /**
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     */
+
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+
+    /**
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     */
 
     public ItemShippingTargetBuilder quantity(final Double quantity) {
         this.quantity = quantity;

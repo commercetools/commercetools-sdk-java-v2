@@ -10,15 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SubscriptionSetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SubscriptionSetKeyAction subscriptionSetKeyAction = SubscriptionSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionSetKeyActionImpl.class)
 public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
 
     String SET_KEY = "setKey";
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

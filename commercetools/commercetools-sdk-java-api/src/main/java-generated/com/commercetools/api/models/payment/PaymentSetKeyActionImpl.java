@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentSetKeyAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetKeyActionImpl implements PaymentSetKeyAction, ModelBase {
 
     private String action;
@@ -31,15 +34,18 @@ public class PaymentSetKeyActionImpl implements PaymentSetKeyAction, ModelBase {
         this.action = SET_KEY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p>User-specific unique identifier for the payment (max.
-    *  256 characters).
-    *  If not provided an existing key will be removed.</p>
-    */
+     *  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>
+     */
+
     public String getKey() {
         return this.key;
     }

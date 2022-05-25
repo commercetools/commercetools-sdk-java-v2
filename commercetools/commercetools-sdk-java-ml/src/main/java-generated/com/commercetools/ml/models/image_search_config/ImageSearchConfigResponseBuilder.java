@@ -6,18 +6,39 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImageSearchConfigResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImageSearchConfigResponse imageSearchConfigResponse = ImageSearchConfigResponse.builder()
+ *             .status(ImageSearchConfigStatus.ON)
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConfigResponse> {
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+     *  <p>The image search activation status.</p>
+     */
+
     public ImageSearchConfigResponseBuilder status(
             final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ImageSearchConfigResponseBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;

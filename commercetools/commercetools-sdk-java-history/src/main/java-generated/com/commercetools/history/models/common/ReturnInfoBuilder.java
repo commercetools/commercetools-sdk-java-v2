@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ReturnInfoBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ReturnInfo returnInfo = ReturnInfo.builder()
+ *             .plusItems(itemsBuilder -> itemsBuilder)
+ *             .returnTrackingId("{returnTrackingId}")
+ *             .returnDate("{returnDate}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     private java.util.List<com.commercetools.history.models.common.ReturnItem> items;
@@ -16,15 +30,27 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     private String returnDate;
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder items(final com.commercetools.history.models.common.ReturnItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder items(final java.util.List<com.commercetools.history.models.common.ReturnItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReturnInfoBuilder plusItems(final com.commercetools.history.models.common.ReturnItem... items) {
         if (this.items == null) {
@@ -33,6 +59,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         this.items.addAll(Arrays.asList(items));
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReturnInfoBuilder plusItems(
             Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
@@ -43,6 +73,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ReturnInfoBuilder withItems(
             Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -50,10 +84,18 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     */
+
     public ReturnInfoBuilder returnTrackingId(final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ReturnInfoBuilder returnDate(final String returnDate) {
         this.returnDate = returnDate;

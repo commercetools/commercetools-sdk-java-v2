@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderChangeLineItemQuantityAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderChangeLineItemQuantityAction, ModelBase {
 
     private String action;
@@ -43,25 +46,42 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
-    */
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     */
+
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;

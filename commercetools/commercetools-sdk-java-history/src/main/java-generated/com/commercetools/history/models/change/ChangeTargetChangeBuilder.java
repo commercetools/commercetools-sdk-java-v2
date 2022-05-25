@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeTargetChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChangeTargetChange changeTargetChange = ChangeTargetChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     private String change;
@@ -16,16 +30,28 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
+    /**
+     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     */
+
     public ChangeTargetChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTargetChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTargetChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
@@ -35,11 +61,19 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ChangeTargetChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue) {
         this.previousValue = previousValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ChangeTargetChangeBuilder previousValue(
             Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {

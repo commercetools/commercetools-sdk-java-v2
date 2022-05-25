@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TaxRateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TaxRate taxRate = TaxRate.builder()
+ *             .name("{name}")
+ *             .amount(0.3)
+ *             .includedInPrice(true)
+ *             .country("{country}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateBuilder implements Builder<TaxRate> {
 
     @Nullable
@@ -29,46 +44,82 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates;
 
+    /**
+     *
+     */
+
     public TaxRateBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder amount(final Double amount) {
         this.amount = amount;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
         return this;
     }
 
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
+
     public TaxRateBuilder country(final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder state(@Nullable final String state) {
         this.state = state;
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder subRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder subRates(
             @Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
         this.subRates = subRates;
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
         if (this.subRates == null) {
@@ -78,6 +129,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public TaxRateBuilder plusSubRates(
             Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
         if (this.subRates == null) {
@@ -86,6 +141,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public TaxRateBuilder withSubRates(
             Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {

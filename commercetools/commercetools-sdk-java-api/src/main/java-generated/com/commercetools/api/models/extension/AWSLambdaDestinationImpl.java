@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase {
 
     private String type;
@@ -41,27 +41,34 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
         this.type = AWS_LAMBDA;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
-    */
+     *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
+     */
+
     public String getArn() {
         return this.arn;
     }
 
     /**
-    *  <p>Partially hidden on retrieval for security reasons.</p>
-    */
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     */
+
     public String getAccessKey() {
         return this.accessKey;
     }
 
     /**
-    *  <p>Partially hidden on retrieval for security reasons.</p>
-    */
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     */
+
     public String getAccessSecret() {
         return this.accessSecret;
     }

@@ -14,17 +14,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductVariantAddedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductVariantAddedMessagePayload productVariantAddedMessagePayload = ProductVariantAddedMessagePayload.builder()
+ *             .variant(variantBuilder -> variantBuilder)
+ *             .staged(true)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantAddedMessagePayloadImpl.class)
 public interface ProductVariantAddedMessagePayload extends MessagePayload {
 
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();

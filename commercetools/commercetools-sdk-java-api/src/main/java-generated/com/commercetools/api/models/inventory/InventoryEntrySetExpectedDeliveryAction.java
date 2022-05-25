@@ -11,11 +11,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryEntrySetExpectedDeliveryAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     InventoryEntrySetExpectedDeliveryAction inventoryEntrySetExpectedDeliveryAction = InventoryEntrySetExpectedDeliveryAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
 
     String SET_EXPECTED_DELIVERY = "setExpectedDelivery";
+
+    /**
+     *
+     */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartRemovePaymentAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentAction, ModelBase {
 
     private String action;
@@ -32,13 +35,18 @@ public class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentAction,
         this.action = REMOVE_PAYMENT;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a Payment.</p>
+     */
+
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }

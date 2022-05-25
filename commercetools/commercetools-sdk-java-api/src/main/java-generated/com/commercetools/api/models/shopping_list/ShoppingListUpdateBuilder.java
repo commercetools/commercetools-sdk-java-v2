@@ -7,17 +7,38 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ShoppingListUpdateBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ShoppingListUpdate shoppingListUpdate = ShoppingListUpdate.builder()
+ *             .version(0.3)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
 
     private Long version;
 
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions;
 
+    /**
+     *
+     */
+
     public ShoppingListUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListUpdateBuilder actions(
             final com.commercetools.api.models.shopping_list.ShoppingListUpdateAction... actions) {
@@ -25,11 +46,19 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListUpdateBuilder plusActions(
             final com.commercetools.api.models.shopping_list.ShoppingListUpdateAction... actions) {
@@ -40,6 +69,10 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ShoppingListUpdateBuilder plusActions(
             Function<com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shopping_list.ShoppingListUpdateAction>> builder) {
         if (this.actions == null) {
@@ -49,6 +82,10 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
             builder.apply(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ShoppingListUpdateBuilder withActions(
             Function<com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shopping_list.ShoppingListUpdateAction>> builder) {

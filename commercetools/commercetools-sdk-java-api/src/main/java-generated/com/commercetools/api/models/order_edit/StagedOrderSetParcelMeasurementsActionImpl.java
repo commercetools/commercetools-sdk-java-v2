@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * StagedOrderSetParcelMeasurementsAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSetParcelMeasurementsAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
         this.action = SET_PARCEL_MEASUREMENTS;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;

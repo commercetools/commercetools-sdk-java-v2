@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * InventoryQuantityValue
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryQuantityValueImpl implements InventoryQuantityValue, ModelBase {
 
     private Integer quantityOnStock;
@@ -31,9 +34,17 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
     public InventoryQuantityValueImpl() {
     }
 
+    /**
+     *
+     */
+
     public Integer getQuantityOnStock() {
         return this.quantityOnStock;
     }
+
+    /**
+     *
+     */
 
     public Integer getAvailableQuantity() {
         return this.availableQuantity;

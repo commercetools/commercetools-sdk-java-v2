@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MessagePagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MessagePagedQueryResponse messagePagedQueryResponse = MessagePagedQueryResponse.builder()
+ *             .limit(0.3)
+ *             .count(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQueryResponse> {
 
     private Long limit;
@@ -23,36 +38,64 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     private java.util.List<com.commercetools.api.models.message.Message> results;
 
+    /**
+     *  <p>Number of results requested.</p>
+     */
+
     public MessagePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessagePagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MessagePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
 
     public MessagePagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+     *
+     */
+
     public MessagePagedQueryResponseBuilder results(final com.commercetools.api.models.message.Message... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessagePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.message.Message> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessagePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.message.Message... results) {
         if (this.results == null) {
@@ -62,6 +105,10 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
         return this;
     }
 
+    /**
+     *
+     */
+
     public MessagePagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.message.MessageBuilder, Builder<? extends com.commercetools.api.models.message.Message>> builder) {
         if (this.results == null) {
@@ -70,6 +117,10 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
         this.results.add(builder.apply(com.commercetools.api.models.message.MessageBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public MessagePagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.message.MessageBuilder, Builder<? extends com.commercetools.api.models.message.Message>> builder) {

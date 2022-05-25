@@ -15,21 +15,45 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductPublishedMessagePayload
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductPublishedMessagePayload productPublishedMessagePayload = ProductPublishedMessagePayload.builder()
+ *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .productProjection(productProjectionBuilder -> productProjectionBuilder)
+ *             .scope(ProductPublishScope.ALL)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPublishedMessagePayloadImpl.class)
 public interface ProductPublishedMessagePayload extends MessagePayload {
 
     String PRODUCT_PUBLISHED = "ProductPublished";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("scope")
     public ProductPublishScope getScope();

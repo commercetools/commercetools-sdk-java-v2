@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OperationStates
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OperationStatesImpl implements OperationStates, ModelBase {
 
     private Long processing;
@@ -47,43 +50,49 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-    *  <p>The number of resources in the <code>processing</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>processing</code> state.</p>
+     */
+
     public Long getProcessing() {
         return this.processing;
     }
 
     /**
-    *  <p>The number of resources in the <code>validationFailed</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     */
+
     public Long getValidationFailed() {
         return this.validationFailed;
     }
 
     /**
-    *  <p>The number of resources in the <code>unresolved</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     */
+
     public Long getUnresolved() {
         return this.unresolved;
     }
 
     /**
-    *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     */
+
     public Long getWaitForMasterVariant() {
         return this.waitForMasterVariant;
     }
 
     /**
-    *  <p>The number of resources in the <code>imported</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>imported</code> state.</p>
+     */
+
     public Long getImported() {
         return this.imported;
     }
 
     /**
-    *  <p>The number of resources in the <code>rejected</code> state.</p>
-    */
+     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     */
+
     public Long getRejected() {
         return this.rejected;
     }

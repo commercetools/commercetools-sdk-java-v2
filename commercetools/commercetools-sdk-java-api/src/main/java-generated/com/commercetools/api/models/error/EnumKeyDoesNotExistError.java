@@ -12,16 +12,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * EnumKeyDoesNotExistError
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     EnumKeyDoesNotExistError enumKeyDoesNotExistError = EnumKeyDoesNotExistError.builder()
+ *             .message("{message}")
+ *             .conflictingEnumKey("{conflictingEnumKey}")
+ *             .conflictingAttributeName("{conflictingAttributeName}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)
 public interface EnumKeyDoesNotExistError extends ErrorObject {
 
     String ENUM_KEY_DOES_NOT_EXIST = "EnumKeyDoesNotExist";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();

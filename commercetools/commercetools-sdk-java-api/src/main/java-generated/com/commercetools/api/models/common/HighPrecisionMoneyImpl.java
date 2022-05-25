@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
 
     private Long centAmount;
@@ -47,40 +47,45 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-    *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-    *  <ul>
-    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-    *  </ul>
-    */
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
-    */
+     *  <p>Currency code compliant to ISO 4217.</p>
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
     /**
-    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
-    */
+     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     */
+
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;
     }
 
     /**
-    *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
-    */
+     *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
+     */
+
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
 
     /**
-    *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
-    */
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     */
+
     public Long getPreciseAmount() {
         return this.preciseAmount;
     }

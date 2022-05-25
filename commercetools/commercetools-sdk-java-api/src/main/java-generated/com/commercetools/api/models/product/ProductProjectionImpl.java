@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductProjection
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     private String id;
@@ -111,104 +114,177 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the Product.</p>
-    */
+     *  <p>The unique ID of the Product.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the Product.</p>
-    */
+     *  <p>The current version of the Product.</p>
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>User-specific unique identifier of the Product.</p>
-    */
+     *  <p>User-specific unique identifier of the Product.</p>
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
     /**
-    *  <p>References to categories the product is in.</p>
-    */
+     *  <p>References to categories the product is in.</p>
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
         return this.categories;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
         return this.categoryOrderHints;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }
 
+    /**
+     *
+     */
+
     public Boolean getHasStagedChanges() {
         return this.hasStagedChanges;
     }
+
+    /**
+     *
+     */
 
     public Boolean getPublished() {
         return this.published;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
         return this.masterVariant;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
         return this.variants;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
+
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
         return this.reviewRatingStatistics;
     }

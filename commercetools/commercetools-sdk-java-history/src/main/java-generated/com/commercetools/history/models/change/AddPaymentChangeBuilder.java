@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * AddPaymentChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     AddPaymentChange addPaymentChange = AddPaymentChange.builder()
+ *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     private com.commercetools.history.models.common.PaymentInfo previousValue;
 
+    /**
+     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     */
+
     public AddPaymentChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddPaymentChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
@@ -27,16 +49,28 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public AddPaymentChangeBuilder nextValue(final com.commercetools.history.models.common.PaymentInfo nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddPaymentChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public AddPaymentChangeBuilder previousValue(
             final com.commercetools.history.models.common.PaymentInfo previousValue) {

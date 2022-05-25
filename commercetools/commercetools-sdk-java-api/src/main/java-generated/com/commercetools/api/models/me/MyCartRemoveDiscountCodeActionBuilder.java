@@ -7,10 +7,26 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * MyCartRemoveDiscountCodeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     MyCartRemoveDiscountCodeAction myCartRemoveDiscountCodeAction = MyCartRemoveDiscountCodeAction.builder()
+ *             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemoveDiscountCodeAction> {
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
+
+    /**
+     *  <p>Reference to a DiscountCode.</p>
+     */
 
     public MyCartRemoveDiscountCodeActionBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
@@ -18,6 +34,10 @@ public class MyCartRemoveDiscountCodeActionBuilder implements Builder<MyCartRemo
                 .build();
         return this;
     }
+
+    /**
+     *  <p>Reference to a DiscountCode.</p>
+     */
 
     public MyCartRemoveDiscountCodeActionBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductChangeAssetNameAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameAction, ModelBase {
 
     private String action;
@@ -49,29 +52,57 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
         this.action = CHANGE_ASSET_NAME;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *
+     */
 
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     *
+     */
+
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *
+     */
+
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

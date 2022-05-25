@@ -13,28 +13,46 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ParcelDraft
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ParcelDraft parcelDraft = ParcelDraft.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelDraftImpl.class)
 public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft> {
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
+    /**
+     *
+     */
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
     /**
-    *  <p>The delivery items contained in this parcel.</p>
-    */
+     *  <p>The delivery items contained in this parcel.</p>
+     */
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     /**
-    *  <p>Custom Fields of this parcel.</p>
-    */
+     *  <p>Custom Fields of this parcel.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

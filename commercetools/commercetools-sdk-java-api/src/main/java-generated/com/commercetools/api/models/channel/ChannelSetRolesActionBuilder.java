@@ -6,21 +6,45 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChannelSetRolesActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ChannelSetRolesAction channelSetRolesAction = ChannelSetRolesAction.builder()
+ *             .plusRoles(rolesBuilder -> rolesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesAction> {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
+
+    /**
+     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     */
 
     public ChannelSetRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     */
+
     public ChannelSetRolesActionBuilder roles(
             final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     */
 
     public ChannelSetRolesActionBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
         if (this.roles == null) {

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderRemoveParcelFromDeliveryAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParcelFromDeliveryAction, ModelBase {
 
     private String action;
@@ -31,9 +34,17 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
         this.action = REMOVE_PARCEL_FROM_DELIVERY;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
+
+    /**
+     *
+     */
 
     public String getParcelId() {
         return this.parcelId;

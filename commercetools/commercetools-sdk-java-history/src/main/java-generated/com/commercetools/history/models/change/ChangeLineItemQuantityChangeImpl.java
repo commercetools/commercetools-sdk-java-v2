@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ChangeLineItemQuantityChange
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityChange, ModelBase {
 
     private String type;
@@ -46,35 +49,50 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
         this.type = CHANGE_LINE_ITEM_QUANTITY_CHANGE;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p>Update action for <code>changeLineItemQuantity</code></p>
-    */
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
+
+    /**
+     *
+     */
 
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
+
     public Integer getNextValue() {
         return this.nextValue;
     }
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }

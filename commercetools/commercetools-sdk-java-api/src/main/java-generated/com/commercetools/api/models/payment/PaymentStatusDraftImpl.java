@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * PaymentStatusDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
 
     private String interfaceCode;
@@ -35,17 +38,26 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
     public PaymentStatusDraftImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getInterfaceCode() {
         return this.interfaceCode;
     }
+
+    /**
+     *
+     */
 
     public String getInterfaceText() {
         return this.interfaceText;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }

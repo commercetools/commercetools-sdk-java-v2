@@ -12,13 +12,29 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ * ImageSearchConfigUpdateAction
+ *
+ * <hr>
+ * Example to create a subtype instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImageSearchConfigUpdateAction imageSearchConfigUpdateAction = ImageSearchConfigUpdateAction.changeStatusBuilder()
+ *             status(ImageSearchConfigStatus.ON)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionImpl.class, name = ChangeStatusUpdateAction.CHANGE_STATUS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ImageSearchConfigUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ImageSearchConfigUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ImageSearchConfigUpdateAction {
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("action")
     public String getAction();

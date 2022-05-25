@@ -10,15 +10,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ZoneSetKeyAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ZoneSetKeyAction zoneSetKeyAction = ZoneSetKeyAction.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneSetKeyActionImpl.class)
 public interface ZoneSetKeyAction extends ZoneUpdateAction {
 
     String SET_KEY = "setKey";
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
-    */
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

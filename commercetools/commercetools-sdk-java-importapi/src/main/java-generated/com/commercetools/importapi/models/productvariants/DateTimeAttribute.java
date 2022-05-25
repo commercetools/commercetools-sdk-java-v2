@@ -14,14 +14,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This type represents an attribute whose value is a date with time.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>This type represents an attribute whose value is a date with time.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DateTimeAttribute dateTimeAttribute = DateTimeAttribute.builder()
+ *             .value(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateTimeAttributeImpl.class)
 public interface DateTimeAttribute extends Attribute {
 
     String DATETIME = "datetime";
 
+    /**
+     *
+     */
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();

@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeDraftBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeDraft productTypeDraft = ProductTypeDraft.builder()
+ *             .name("{name}")
+ *             .description("{description}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
 
     @Nullable
@@ -22,20 +35,36 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
+    /**
+     *  <p>User-defined unique identifier for the ProductType.</p>
+     */
+
     public ProductTypeDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeDraftBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeDraftBuilder description(final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeDraftBuilder attributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
@@ -43,11 +72,19 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeDraftBuilder attributes(
             @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeDraftBuilder plusAttributes(
             @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
@@ -58,6 +95,10 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this;
     }
 
+    /**
+     *
+     */
+
     public ProductTypeDraftBuilder plusAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
         if (this.attributes == null) {
@@ -67,6 +108,10 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
             builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeDraftBuilder withAttributes(
             Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {

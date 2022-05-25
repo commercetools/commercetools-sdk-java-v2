@@ -6,27 +6,56 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GeoLocationBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeoLocation geoLocation = GeoLocation.builder()
+ *             .type("{type}")
+ *             .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeoLocationBuilder implements Builder<GeoLocation> {
 
     private String type;
 
     private java.util.List<Integer> coordinates;
 
+    /**
+     *
+     */
+
     public GeoLocationBuilder type(final String type) {
         this.type = type;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeoLocationBuilder coordinates(final Integer... coordinates) {
         this.coordinates = new ArrayList<>(Arrays.asList(coordinates));
         return this;
     }
 
+    /**
+     *
+     */
+
     public GeoLocationBuilder coordinates(final java.util.List<Integer> coordinates) {
         this.coordinates = coordinates;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeoLocationBuilder plusCoordinates(final Integer... coordinates) {
         if (this.coordinates == null) {

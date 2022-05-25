@@ -14,16 +14,36 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductRemoveFromCategoryAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductRemoveFromCategoryAction productRemoveFromCategoryAction = ProductRemoveFromCategoryAction.builder()
+ *             .category(categoryBuilder -> categoryBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveFromCategoryActionImpl.class)
 public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
     String REMOVE_FROM_CATEGORY = "removeFromCategory";
 
+    /**
+     *
+     */
     @NotNull
     @Valid
     @JsonProperty("category")
     public CategoryResourceIdentifier getCategory();
+
+    /**
+     *
+     */
 
     @JsonProperty("staged")
     public Boolean getStaged();

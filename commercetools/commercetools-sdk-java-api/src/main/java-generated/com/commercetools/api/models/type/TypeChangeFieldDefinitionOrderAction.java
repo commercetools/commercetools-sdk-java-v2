@@ -12,15 +12,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * TypeChangeFieldDefinitionOrderAction
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     TypeChangeFieldDefinitionOrderAction typeChangeFieldDefinitionOrderAction = TypeChangeFieldDefinitionOrderAction.builder()
+ *             .plusFieldNames(fieldNamesBuilder -> fieldNamesBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeFieldDefinitionOrderActionImpl.class)
 public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
 
     String CHANGE_FIELD_DEFINITION_ORDER = "changeFieldDefinitionOrder";
 
     /**
-    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
-    */
+     *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+     */
     @NotNull
     @JsonProperty("fieldNames")
     public List<String> getFieldNames();

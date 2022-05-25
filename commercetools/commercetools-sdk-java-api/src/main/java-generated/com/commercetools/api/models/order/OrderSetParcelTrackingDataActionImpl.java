@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * OrderSetParcelTrackingDataAction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrackingDataAction, ModelBase {
 
     private String action;
@@ -35,13 +38,25 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
         this.action = SET_PARCEL_TRACKING_DATA;
     }
 
+    /**
+     *
+     */
+
     public String getAction() {
         return this.action;
     }
 
+    /**
+     *
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;

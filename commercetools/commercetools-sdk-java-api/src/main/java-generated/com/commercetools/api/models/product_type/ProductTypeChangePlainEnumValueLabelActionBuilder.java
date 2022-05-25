@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ProductTypeChangePlainEnumValueLabelActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductTypeChangePlainEnumValueLabelAction productTypeChangePlainEnumValueLabelAction = ProductTypeChangePlainEnumValueLabelAction.builder()
+ *             .attributeName("{attributeName}")
+ *             .newValue(newValueBuilder -> newValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangePlainEnumValueLabelActionBuilder
         implements Builder<ProductTypeChangePlainEnumValueLabelAction> {
 
@@ -15,10 +28,18 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
+    /**
+     *
+     */
+
     public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
             Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
@@ -26,6 +47,10 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
                 .build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
             final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {

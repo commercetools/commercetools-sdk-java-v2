@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetSupplyChannelChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetSupplyChannelChange setSupplyChannelChange = SetSupplyChannelChange.builder()
+ *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelChange> {
 
     private String change;
@@ -16,10 +30,18 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     *  <p>Shape of the action for <code>setSupplyChannel</code></p>
+     */
+
     public SetSupplyChannelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetSupplyChannelChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -27,17 +49,29 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetSupplyChannelChangeBuilder previousValue(
             final com.commercetools.history.models.common.Reference previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetSupplyChannelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetSupplyChannelChangeBuilder nextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;

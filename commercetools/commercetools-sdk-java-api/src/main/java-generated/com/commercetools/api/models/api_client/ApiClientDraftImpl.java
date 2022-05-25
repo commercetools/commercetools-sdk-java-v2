@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ApiClientDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
 
     private String name;
@@ -43,36 +46,41 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-    *  <p>Name of the APIClient.</p>
-    */
+     *  <p>Name of the APIClient.</p>
+     */
+
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
-    */
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     */
+
     public String getScope() {
         return this.scope;
     }
 
     /**
-    *  <p>If set, the Client will be deleted after the specified amount of days.</p>
-    */
+     *  <p>If set, the Client will be deleted after the specified amount of days.</p>
+     */
+
     public Long getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
     }
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
-    */
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     */
+
     public Integer getAccessTokenValiditySeconds() {
         return this.accessTokenValiditySeconds;
     }
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
-    */
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+     */
+
     public Integer getRefreshTokenValiditySeconds() {
         return this.refreshTokenValiditySeconds;
     }

@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImageDimensions
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
 
     private Integer w;
@@ -30,9 +33,17 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
     public ImageDimensionsImpl() {
     }
 
+    /**
+     *
+     */
+
     public Integer getW() {
         return this.w;
     }
+
+    /**
+     *
+     */
 
     public Integer getH() {
         return this.h;

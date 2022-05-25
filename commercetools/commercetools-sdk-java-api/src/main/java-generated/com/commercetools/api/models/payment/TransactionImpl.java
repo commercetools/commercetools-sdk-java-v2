@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * Transaction
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionImpl implements Transaction, ModelBase {
 
     private String id;
@@ -52,48 +55,57 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Transaction.</p>
-    */
+     *  <p>Unique identifier of the Transaction.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The time at which the transaction took place.</p>
-    */
+     *  <p>The time at which the transaction took place.</p>
+     */
+
     public java.time.ZonedDateTime getTimestamp() {
         return this.timestamp;
     }
 
     /**
-    *  <p>The type of this transaction.</p>
-    */
+     *  <p>The type of this transaction.</p>
+     */
+
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
     }
+
+    /**
+     *
+     */
 
     public com.commercetools.api.models.common.TypedMoney getAmount() {
         return this.amount;
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
-    */
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     */
+
     public String getInteractionId() {
         return this.interactionId;
     }
 
     /**
-    *  <p>The state of this transaction.</p>
-    */
+     *  <p>The state of this transaction.</p>
+     */
+
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CartDiscount">CartDiscount</a>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Reference to a CartDiscount.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -40,22 +40,25 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
     }
 
     /**
-    *  <p>Type of referenced resource.</p>
-    */
+     *  <p>Type of referenced resource.</p>
+     */
+
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:CartDiscount">CartDiscount</a>.</p>
-    */
+     *  <p>Unique identifier of the referenced CartDiscount.</p>
+     */
+
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for CartDiscounts.</p>
-    */
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscount getObj() {
         return this.obj;
     }

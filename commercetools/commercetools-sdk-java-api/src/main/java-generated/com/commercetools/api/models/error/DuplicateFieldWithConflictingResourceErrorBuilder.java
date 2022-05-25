@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * DuplicateFieldWithConflictingResourceErrorBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
+ *             .message("{message}")
+ *             .field("{field}")
+ *             .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldWithConflictingResourceErrorBuilder
         implements Builder<DuplicateFieldWithConflictingResourceError> {
 
@@ -21,15 +35,27 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
 
     private com.commercetools.api.models.common.Reference conflictingResource;
 
+    /**
+     *
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder values(final Map<String, java.lang.Object> values) {
         this.values = values;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
@@ -39,21 +65,37 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+     *
+     */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder duplicateValue(final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
         return this;
     }
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
+
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
             final com.commercetools.api.models.common.Reference conflictingResource) {
         this.conflictingResource = conflictingResource;
         return this;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     */
 
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {

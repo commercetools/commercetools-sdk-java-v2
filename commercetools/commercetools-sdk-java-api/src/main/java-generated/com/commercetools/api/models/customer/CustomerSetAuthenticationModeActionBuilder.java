@@ -8,7 +8,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CustomerSetAuthenticationModeActionBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerSetAuthenticationModeAction customerSetAuthenticationModeAction = CustomerSetAuthenticationModeAction.builder()
+ *             .authMode(AuthenticationMode.PASSWORD)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAuthenticationModeActionBuilder implements Builder<CustomerSetAuthenticationModeAction> {
 
     private com.commercetools.api.models.customer.AuthenticationMode authMode;
@@ -16,11 +28,19 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
     @Nullable
     private String password;
 
+    /**
+     *
+     */
+
     public CustomerSetAuthenticationModeActionBuilder authMode(
             final com.commercetools.api.models.customer.AuthenticationMode authMode) {
         this.authMode = authMode;
         return this;
     }
+
+    /**
+     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     */
 
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {
         this.password = password;

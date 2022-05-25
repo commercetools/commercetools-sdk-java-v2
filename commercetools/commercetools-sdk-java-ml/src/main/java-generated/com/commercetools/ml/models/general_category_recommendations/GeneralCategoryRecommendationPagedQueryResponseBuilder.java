@@ -7,7 +7,22 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * GeneralCategoryRecommendationPagedQueryResponseBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     GeneralCategoryRecommendationPagedQueryResponse generalCategoryRecommendationPagedQueryResponse = GeneralCategoryRecommendationPagedQueryResponse.builder()
+ *             .count(0.3)
+ *             .total(0.3)
+ *             .offset(0.3)
+ *             .plusResults(resultsBuilder -> resultsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         implements Builder<GeneralCategoryRecommendationPagedQueryResponse> {
 
@@ -19,20 +34,36 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
 
     private java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
+    /**
+     *
+     */
+
     public GeneralCategoryRecommendationPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder total(final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     */
+
     public GeneralCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
             final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
@@ -40,11 +71,19 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     *
+     */
+
     public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
         this.results = results;
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
             final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
@@ -54,6 +93,10 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         this.results.addAll(Arrays.asList(results));
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
@@ -66,6 +109,10 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
                 .build());
         return this;
     }
+
+    /**
+     *
+     */
 
     public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
             Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {

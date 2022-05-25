@@ -7,7 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * SetDiscountedPriceChangeBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     SetDiscountedPriceChange setDiscountedPriceChange = SetDiscountedPriceChange.builder()
+ *             .change("{change}")
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
+ *             .priceId("{priceId}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPriceChange> {
 
     private String change;
@@ -22,25 +39,45 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     */
+
     public SetDiscountedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDiscountedPriceChangeBuilder catalogData(final String catalogData) {
         this.catalogData = catalogData;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDiscountedPriceChangeBuilder variant(final String variant) {
         this.variant = variant;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDiscountedPriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDiscountedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
@@ -48,17 +85,29 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDiscountedPriceChangeBuilder previousValue(
             final com.commercetools.history.models.common.Price previousValue) {
         this.previousValue = previousValue;
         return this;
     }
 
+    /**
+     *
+     */
+
     public SetDiscountedPriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
         return this;
     }
+
+    /**
+     *
+     */
 
     public SetDiscountedPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Price nextValue) {
         this.nextValue = nextValue;

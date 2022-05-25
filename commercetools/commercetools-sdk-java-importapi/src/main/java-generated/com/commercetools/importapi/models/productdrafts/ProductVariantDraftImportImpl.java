@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation of a Product Variant Draft for the import purpose.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation of a Product Variant Draft for the import purpose.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftImportImpl implements ProductVariantDraftImport, ModelBase {
 
     private String sku;
@@ -49,25 +49,49 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     public ProductVariantDraftImportImpl() {
     }
 
+    /**
+     *
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *
+     */
 
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
         return this.prices;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     *
+     */
+
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     *
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
         return this.assets;

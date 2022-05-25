@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * ImageSearchConfigResponse
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse, ModelBase {
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
@@ -33,11 +36,16 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
     }
 
     /**
-    *  <p>The image search activation status.</p>
-    */
+     *  <p>The image search activation status.</p>
+     */
+
     public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
         return this.status;
     }
+
+    /**
+     *
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;

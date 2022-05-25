@@ -14,7 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ * CartDiscountValueGiftLineItemDraft
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValueGiftLineItemDraft, ModelBase {
 
     private String type;
@@ -44,31 +47,42 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     *
+     */
+
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
-    */
+     *  <p>ResourceIdentifier of a Product.</p>
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>ProductVariant of the Product.</p>
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
     /**
-    *  <p>The channel must have the role <code>InventorySupply</code></p>
-    */
+     *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>The channel must have the role <code>ProductDistribution</code></p>
-    */
+     *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }

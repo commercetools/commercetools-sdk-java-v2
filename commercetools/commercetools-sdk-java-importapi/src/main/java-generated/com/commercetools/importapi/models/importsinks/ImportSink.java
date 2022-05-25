@@ -15,45 +15,56 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Serves as the entry point of resources.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Serves as the entry point of resources.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ImportSink importSink = ImportSink.builder()
+ *             .key("{key}")
+ *             .version(0.3)
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportSinkImpl.class)
 public interface ImportSink {
 
     /**
-    *  <p>User-defined unique identifier for the ImportSink.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
-    */
+     *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.
-    *  If not present, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
-    */
+     *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     */
 
     @JsonProperty("resourceType")
     public ImportResourceType getResourceType();
 
     /**
-    *  <p>The version of the ImportSink.</p>
-    */
+     *  <p>The version of the ImportSink.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>The time when the ImportSink was created.</p>
-    */
+     *  <p>The time when the ImportSink was created.</p>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>The last time when the ImportSink was modified.</p>
-    */
+     *  <p>The last time when the ImportSink was modified.</p>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();

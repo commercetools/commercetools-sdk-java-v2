@@ -37,4 +37,13 @@ public class CompatBuilder {
     public static GetByKeyBuilder getByKey(ProjectApiRoot apiRoot) {
         return GetByKeyBuilder.of(apiRoot);
     }
+
+    public DeleteBuilder delete() {
+        return delete(apiRoot);
+    }
+
+    public static DeleteBuilder delete(ProjectApiRoot apiRoot) {
+        return DeleteBuilder.of(apiRoot);
+    }
+
 }

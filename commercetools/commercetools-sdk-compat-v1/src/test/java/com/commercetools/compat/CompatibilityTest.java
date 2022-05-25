@@ -5,9 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-import com.commercetools.api.client.ByProjectKeyCustomersByIDGet;
-import com.commercetools.api.client.ByProjectKeyCustomersGet;
-import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.*;
 import com.commercetools.api.models.project.Project;
 
 import io.sphere.sdk.client.SphereClientConfig;
@@ -81,6 +79,33 @@ public class CompatibilityTest {
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
         String query2 = request2.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
+    }
+
+    @Test
+    public void getByKeyPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersKeyByKeyGet request2 = CompatBuilder.getByKey(root)
+                .customer("abc",
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query2 = request2.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
+        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
+    }
+
+    @Test
+    public void deleteByKeyPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersKeyByKeyDelete request2 = CompatBuilder.delete(root)
+                .customer("abc", 1L,
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query2 = request2.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
         Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
     }
 }

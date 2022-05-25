@@ -7,11 +7,9 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import com.commercetools.api.client.*;
-import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier;
 import com.commercetools.api.models.category.CategoryResourceIdentifier;
-import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.order.OrderResourceIdentifier;
@@ -34,7 +32,6 @@ import io.sphere.sdk.customergroups.queries.CustomerGroupByKeyGet;
 import io.sphere.sdk.customers.queries.CustomerByKeyGet;
 import io.sphere.sdk.expansion.ExpansionPath;
 import io.sphere.sdk.extensions.queries.ExtensionByKeyGet;
-import io.sphere.sdk.models.ResourceIdentifiable;
 import io.sphere.sdk.orders.queries.OrderByOrderNumberGet;
 import io.sphere.sdk.payments.queries.PaymentByKeyGet;
 import io.sphere.sdk.productdiscounts.queries.ProductDiscountByKeyGet;
@@ -99,7 +96,8 @@ public class GetByKeyBuilder {
             () -> CustomerByKeyGet.of(identifiable.getKey()), getDsl);
     }
 
-    public ByProjectKeyCustomersKeyByKeyGet customer(final ResourceIdentifiable<Customer> identifiable,
+    public ByProjectKeyCustomersKeyByKeyGet customer(
+            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.customers.Customer> identifiable,
             final Function<CustomerByKeyGet, CustomerByKeyGet> getDsl) {
         requireNonNull(identifiable.toResourceIdentifier().getKey());
         return get(apiRoot.customers().withKey(identifiable.toResourceIdentifier().getKey()).get(),
@@ -118,7 +116,8 @@ public class GetByKeyBuilder {
             getDsl);
     }
 
-    public ByProjectKeyCartsKeyByKeyGet cart(final ResourceIdentifiable<Cart> identifiable,
+    public ByProjectKeyCartsKeyByKeyGet cart(
+            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.carts.Cart> identifiable,
             final Function<CartByKeyGet, CartByKeyGet> getDsl) {
         requireNonNull(identifiable.toResourceIdentifier().getKey());
         return get(apiRoot.carts().withKey(identifiable.toResourceIdentifier().getKey()).get(),

@@ -63,49 +63,49 @@ public class CompatibilityTest {
     public void queryPredicate() {
         ProjectApiRoot root = ProjectApiRoot.of("test");
 
-        ByProjectKeyCustomersGet request2 = CompatBuilder.query(root)
+        ByProjectKeyCustomersGet request = CompatBuilder.query(root)
                 .customer(customerQuery -> customerQuery.withLimit(1));
 
-        String query2 = request2.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(query2).isEqualTo("limit=1");
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(query).isEqualTo("limit=1");
     }
 
     @Test
     public void getByIdPredicate() {
         ProjectApiRoot root = ProjectApiRoot.of("test");
 
-        ByProjectKeyCustomersByIDGet request2 = CompatBuilder.getById(root)
+        ByProjectKeyCustomersByIDGet request = CompatBuilder.getById(root)
                 .customer("abc",
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
-        String query2 = request2.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
-        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 
     @Test
     public void getByKeyPredicate() {
         ProjectApiRoot root = ProjectApiRoot.of("test");
 
-        ByProjectKeyCustomersKeyByKeyGet request2 = CompatBuilder.getByKey(root)
+        ByProjectKeyCustomersKeyByKeyGet request = CompatBuilder.getByKey(root)
                 .customer("abc",
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
-        String query2 = request2.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
-        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 
     @Test
     public void deleteByKeyPredicate() {
         ProjectApiRoot root = ProjectApiRoot.of("test");
 
-        ByProjectKeyCustomersKeyByKeyDelete request2 = CompatBuilder.delete(root)
+        ByProjectKeyCustomersByIDDelete request = CompatBuilder.delete(root)
                 .customer("abc", 1L,
                     customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
 
-        String query2 = request2.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(request2.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
-        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 }

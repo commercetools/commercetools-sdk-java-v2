@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
 <div class="block"><p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p></div>
+  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -130,52 +130,50 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDistributionChannel()">getDistributionChannel</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.distributionChannel</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.name</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPrice()">getPrice</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.price</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProduct()">getProduct</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.productId</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.quantity</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getShippingDetails()">getShippingDetails</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to LineItem.shippingDetails.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><></div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSupplyChannel()">getSupplyChannel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.supplyChannel</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTaxRate()">getTaxRate</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>LineItem.taxRate</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVariant()">getVariant</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>ProductVariantImportDraft</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -254,7 +252,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getProduct()">
 <h3>getProduct</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.75">getProduct</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.productId</code>.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.productId</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getProduct()">getProduct</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -265,7 +263,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.83">getName</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.name</code>.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.name</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -276,7 +274,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.91">getVariant</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>ProductVariantImportDraft</code>.</p>></div>
+<div class="block"><p>Maps to <code>ProductVariantImportDraft</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getVariant()">getVariant</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -287,7 +285,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.99">getPrice</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.price</code>.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.price</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getPrice()">getPrice</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -298,7 +296,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.107">getQuantity</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.quantity</code>.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.quantity</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getQuantity()">getQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -309,7 +307,6 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.115">getState</a></span>()</div>
-<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -320,7 +317,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.123">getSupplyChannel</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getSupplyChannel()">getSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -331,7 +328,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.131">getDistributionChannel</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getDistributionChannel()">getDistributionChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -342,7 +339,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getTaxRate()">
 <h3>getTaxRate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.139">getTaxRate</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>LineItem.taxRate</code>.</p>></div>
+<div class="block"><p>Maps to <code>LineItem.taxRate</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getTaxRate()">getTaxRate</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -353,7 +350,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.147">getShippingDetails</a></span>()</div>
-<div class="block"><*  <p>Maps to LineItem.shippingDetails.</p>></div>
+<div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getShippingDetails()">getShippingDetails</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>

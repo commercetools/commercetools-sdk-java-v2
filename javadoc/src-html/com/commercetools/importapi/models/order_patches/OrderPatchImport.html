@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *</span>
 <span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
@@ -45,14 +45,14 @@
 <span class="source-line-no">032</span><span id="line.32">public interface OrderPatchImport {</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;Order.orderNumber&lt;/code&gt;, String that uniquely identifies an order, unique across a project.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;Maps to &lt;code&gt;Order.orderNumber&lt;/code&gt;, String that uniquely identifies an order, unique across a project.&lt;/p&gt;</span>
 <span class="source-line-no">036</span><span id="line.36">     */</span>
 <span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
 <span class="source-line-no">038</span><span id="line.38">    @JsonProperty("orderNumber")</span>
 <span class="source-line-no">039</span><span id="line.39">    public String getOrderNumber();</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     &lt;*  &lt;p&gt;Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to &lt;code&gt;validationFailed&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Each field referenced must be defined in an already existing order in the project or the import operation state is set to &lt;code&gt;validationFailed&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">043</span><span id="line.43">     */</span>
 <span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
 <span class="source-line-no">045</span><span id="line.45">    @Valid</span>

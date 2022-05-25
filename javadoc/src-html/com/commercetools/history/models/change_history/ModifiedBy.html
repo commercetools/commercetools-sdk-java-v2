@@ -47,42 +47,42 @@
 <span class="source-line-no">034</span><span id="line.34">public interface ModifiedBy {</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     &lt;*  &lt;p&gt;ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38">     */</span>
 <span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
 <span class="source-line-no">040</span><span id="line.40">    @JsonProperty("id")</span>
 <span class="source-line-no">041</span><span id="line.41">    public String getId();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;Indicates whether the change was made by a user or the API client with or without an External user ID.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Indicates whether the change was made by a user or the API client with or without an External user ID.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("type")</span>
 <span class="source-line-no">048</span><span id="line.48">    public String getType();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     &lt;*  &lt;p&gt;Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53">    @Valid</span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("customer")</span>
 <span class="source-line-no">055</span><span id="line.55">    public Reference getCustomer();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     &lt;*  &lt;p&gt;Present only if the change was made using a token from an Anonymous Session.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Present only if the change was made using a token from an Anonymous Session.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    @JsonProperty("anonymousId")</span>
 <span class="source-line-no">062</span><span id="line.62">    public String getAnonymousId();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     &lt;*  &lt;p&gt;ID of the API Client that made the change. Present only if the change was made using an API Client.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;ID of the API Client that made the change. Present only if the change was made using an API Client.&lt;/p&gt;</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    @JsonProperty("clientId")</span>
 <span class="source-line-no">069</span><span id="line.69">    public String getClientId();</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     &lt;*  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the change was made via Merchant Center or ImpEx.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the change was made via Merchant Center or ImpEx.&lt;/p&gt;</span>
 <span class="source-line-no">073</span><span id="line.73">     */</span>
 <span class="source-line-no">074</span><span id="line.74">    @NotNull</span>
 <span class="source-line-no">075</span><span id="line.75">    @JsonProperty("isPlatformClient")</span>

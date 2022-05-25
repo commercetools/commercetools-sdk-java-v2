@@ -47,23 +47,23 @@
 <span class="source-line-no">034</span><span id="line.34">    String HIGH_PRECISION = "highPrecision";</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     &lt;*  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38">     */</span>
 <span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
 <span class="source-line-no">040</span><span id="line.40">    @JsonProperty("fractionDigits")</span>
 <span class="source-line-no">041</span><span id="line.41">    public Integer getFractionDigits();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("preciseAmount")</span>
 <span class="source-line-no">048</span><span id="line.48">    public Long getPreciseAmount();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     &lt;*  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">    *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the API calculates the value automatically using the default rounding mode half even.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    @JsonProperty("centAmount")</span>

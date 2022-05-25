@@ -129,23 +129,21 @@ implements <a href="TypedMoneyDraft.html" title="interface in com.commercetools.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCurrencyCode()">getCurrencyCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Currency code compliant to ISO 4217.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFractionDigits()">getFractionDigits</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Must be equal to the default number of fraction digits for the specified currency.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><></div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -205,11 +203,11 @@ implements <a href="TypedMoneyDraft.html" title="interface in com.commercetools.
 <section class="detail" id="getCentAmount()">
 <h3>getCentAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraftImpl.html#line.53">getCentAmount</a></span>()</div>
-<div class="block"><*  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency, such as:</p>
   <ul>
    <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
    <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-  </ul>></div>
+  </ul></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#getCentAmount()">getCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -220,7 +218,7 @@ implements <a href="TypedMoneyDraft.html" title="interface in com.commercetools.
 <section class="detail" id="getCurrencyCode()">
 <h3>getCurrencyCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraftImpl.html#line.61">getCurrencyCode</a></span>()</div>
-<div class="block"><*  <p>Currency code compliant to ISO 4217.</p>></div>
+<div class="block"><p>Currency code compliant to ISO 4217.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#getCurrencyCode()">getCurrencyCode</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -231,7 +229,6 @@ implements <a href="TypedMoneyDraft.html" title="interface in com.commercetools.
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraftImpl.html#line.69">getType</a></span>()</div>
-<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypedMoneyDraft.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></dd>
@@ -242,7 +239,7 @@ implements <a href="TypedMoneyDraft.html" title="interface in com.commercetools.
 <section class="detail" id="getFractionDigits()">
 <h3>getFractionDigits</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraftImpl.html#line.77">getFractionDigits</a></span>()</div>
-<div class="block"><*  <p>Must be equal to the default number of fraction digits for the specified currency.</p>></div>
+<div class="block"><p>Must be equal to the default number of fraction digits for the specified currency.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypedMoneyDraft.html#getFractionDigits()">getFractionDigits</a></code>&nbsp;in interface&nbsp;<code><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></dd>

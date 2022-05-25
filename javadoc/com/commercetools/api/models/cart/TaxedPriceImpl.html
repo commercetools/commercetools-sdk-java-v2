@@ -129,22 +129,18 @@ implements <a href="TaxedPrice.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTaxPortions()">getTaxPortions</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTotalGross()">getTotalGross</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><></div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTotalNet()">getTotalNet</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><></div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTotalTax()">getTotalTax</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -205,7 +201,6 @@ implements <a href="TaxedPrice.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getTotalNet()">
 <h3>getTotalNet</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceImpl.html#line.49">getTotalNet</a></span>()</div>
-<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedPrice.html#getTotalNet()">getTotalNet</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></dd>
@@ -216,7 +211,6 @@ implements <a href="TaxedPrice.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getTotalGross()">
 <h3>getTotalGross</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceImpl.html#line.57">getTotalGross</a></span>()</div>
-<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedPrice.html#getTotalGross()">getTotalGross</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></dd>
@@ -227,7 +221,7 @@ implements <a href="TaxedPrice.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getTaxPortions()">
 <h3>getTaxPortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceImpl.html#line.65">getTaxPortions</a></span>()</div>
-<div class="block"><*  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>></div>
+<div class="block"><p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedPrice.html#getTaxPortions()">getTaxPortions</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></dd>
@@ -238,7 +232,7 @@ implements <a href="TaxedPrice.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getTotalTax()">
 <h3>getTotalTax</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/TaxedPriceImpl.html#line.73">getTotalTax</a></span>()</div>
-<div class="block"><*  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>></div>
+<div class="block"><p>Calculated automatically as the subtraction of <code>totalGross</code> - <code>totalNet</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedPrice.html#getTotalTax()">getTotalTax</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></dd>

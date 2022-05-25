@@ -91,21 +91,21 @@
 <span class="source-line-no">078</span><span id="line.78">public interface ResourceIdentifier {</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     &lt;*  &lt;p&gt;Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.&lt;/p&gt;</span>
 <span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    @JsonProperty("typeId")</span>
 <span class="source-line-no">085</span><span id="line.85">    public ReferenceTypeId getTypeId();</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the referenced resource. Required if &lt;code&gt;key&lt;/code&gt; is absent.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Unique identifier of the referenced resource. Required if &lt;code&gt;key&lt;/code&gt; is absent.&lt;/p&gt;</span>
 <span class="source-line-no">089</span><span id="line.89">     */</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
 <span class="source-line-no">091</span><span id="line.91">    @JsonProperty("id")</span>
 <span class="source-line-no">092</span><span id="line.92">    public String getId();</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">     &lt;*  &lt;p&gt;User-defined unique identifier of the referenced resource. Required if &lt;code&gt;id&lt;/code&gt; is absent.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;User-defined unique identifier of the referenced resource. Required if &lt;code&gt;id&lt;/code&gt; is absent.&lt;/p&gt;</span>
 <span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    @JsonProperty("key")</span>

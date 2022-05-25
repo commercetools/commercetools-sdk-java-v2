@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImportImpl.html#line.20">OrderPatchImportImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.</p></div>
+<div class="block"><p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,12 +129,12 @@ implements <a href="OrderPatchImport.html" title="interface in com.commercetools
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOrderNumber()">getOrderNumber</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -186,7 +186,7 @@ implements <a href="OrderPatchImport.html" title="interface in com.commercetools
 <section class="detail" id="getOrderNumber()">
 <h3>getOrderNumber</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImportImpl.html#line.41">getOrderNumber</a></span>()</div>
-<div class="block"><*  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>></div>
+<div class="block"><p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPatchImport.html#getOrderNumber()">getOrderNumber</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></code></dd>
@@ -197,7 +197,7 @@ implements <a href="OrderPatchImport.html" title="interface in com.commercetools
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderPatchImportImpl.html#line.49">getFields</a></span>()</div>
-<div class="block"><*  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>></div>
+<div class="block"><p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPatchImport.html#getFields()">getFields</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPatchImport.html" title="interface in com.commercetools.importapi.models.order_patches">OrderPatchImport</a></code></dd>

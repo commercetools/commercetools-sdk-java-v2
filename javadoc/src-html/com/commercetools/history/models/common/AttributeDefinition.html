@@ -51,7 +51,7 @@
 <span class="source-line-no">038</span><span id="line.38">public interface AttributeDefinition {</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
 <span class="source-line-no">040</span><span id="line.40">    /**</span>
-<span class="source-line-no">041</span><span id="line.41">     &lt;&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     *</span>
 <span class="source-line-no">042</span><span id="line.42">     */</span>
 <span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
 <span class="source-line-no">044</span><span id="line.44">    @Valid</span>
@@ -59,14 +59,14 @@
 <span class="source-line-no">046</span><span id="line.46">    public AttributeType getType();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
 <span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">     &lt;*  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an &lt;code&gt;enum&lt;/code&gt; or &lt;code&gt;lenum&lt;/code&gt; type and sets thereof.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an &lt;code&gt;enum&lt;/code&gt; or &lt;code&gt;lenum&lt;/code&gt; type and sets thereof.&lt;/p&gt;</span>
 <span class="source-line-no">050</span><span id="line.50">     */</span>
 <span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
 <span class="source-line-no">052</span><span id="line.52">    @JsonProperty("name")</span>
 <span class="source-line-no">053</span><span id="line.53">    public String getName();</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
 <span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">     &lt;&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     *</span>
 <span class="source-line-no">057</span><span id="line.57">     */</span>
 <span class="source-line-no">058</span><span id="line.58">    @NotNull</span>
 <span class="source-line-no">059</span><span id="line.59">    @Valid</span>
@@ -74,21 +74,21 @@
 <span class="source-line-no">061</span><span id="line.61">    public LocalizedString getLabel();</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     &lt;*  &lt;p&gt;Whether the attribute is required to have a value.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Whether the attribute is required to have a value.&lt;/p&gt;</span>
 <span class="source-line-no">065</span><span id="line.65">     */</span>
 <span class="source-line-no">066</span><span id="line.66">    @NotNull</span>
 <span class="source-line-no">067</span><span id="line.67">    @JsonProperty("isRequired")</span>
 <span class="source-line-no">068</span><span id="line.68">    public Boolean getIsRequired();</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">     &lt;&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     *</span>
 <span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73">    @NotNull</span>
 <span class="source-line-no">074</span><span id="line.74">    @JsonProperty("attributeConstraint")</span>
 <span class="source-line-no">075</span><span id="line.75">    public AttributeConstraintEnum getAttributeConstraint();</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     &lt;&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     *</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    @NotNull</span>
 <span class="source-line-no">081</span><span id="line.81">    @Valid</span>
@@ -96,14 +96,14 @@
 <span class="source-line-no">083</span><span id="line.83">    public LocalizedString getInputTip();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     &lt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     *</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88">    @NotNull</span>
 <span class="source-line-no">089</span><span id="line.89">    @JsonProperty("inputHint")</span>
 <span class="source-line-no">090</span><span id="line.90">    public TextInputHint getInputHint();</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     &lt;*  &lt;p&gt;Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp;amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is &lt;strong&gt;restricted to 10922 characters&lt;/strong&gt;. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp;amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is &lt;strong&gt;restricted to 10922 characters&lt;/strong&gt;. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.&lt;/p&gt;</span>
 <span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95">    @NotNull</span>
 <span class="source-line-no">096</span><span id="line.96">    @JsonProperty("isSearchable")</span>

@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Representation for an update of a ProductVariant. Use this type to import updates for existing ProductVariants in a commercetools Project.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Representation for an update of a ProductVariant. Use this type to import updates for existing ProductVariants in a Project.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {</span>
@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     &lt;*  &lt;p&gt;The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
 <span class="source-line-no">044</span><span id="line.44">     */</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {</span>
@@ -61,7 +61,7 @@
 <span class="source-line-no">048</span><span id="line.48">    }</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     &lt;*  &lt;p&gt;Maps to &lt;code&gt;ProductVariant.attributes&lt;/code&gt;. The referenced attribute must be defined in an already existing ProductType in the commercetools Project, or the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be &lt;code&gt;unresolved&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Maps to &lt;code&gt;ProductVariant.attributes&lt;/code&gt;. The referenced attribute must be defined in an already existing ProductType in the Project, or the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be &lt;code&gt;unresolved&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    public com.commercetools.importapi.models.productvariants.Attributes getAttributes() {</span>
@@ -69,7 +69,7 @@
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     &lt;*  &lt;p&gt;If &lt;code&gt;false&lt;/code&gt;, the attribute changes are applied to both current and staged projected representations of the Product.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;If &lt;code&gt;false&lt;/code&gt;, the attribute changes are applied to both current and staged projected representations of the Product.&lt;/p&gt;</span>
 <span class="source-line-no">060</span><span id="line.60">     */</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    public Boolean getStaged() {</span>

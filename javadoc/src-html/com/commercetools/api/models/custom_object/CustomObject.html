@@ -54,63 +54,63 @@
 <span class="source-line-no">041</span><span id="line.41">        com.commercetools.api.models.Referencable&lt;CustomObject&gt; {</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the CustomObject.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Unique identifier of the CustomObject.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("id")</span>
 <span class="source-line-no">048</span><span id="line.48">    public String getId();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     &lt;*  &lt;p&gt;Current version of the CustomObject.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Current version of the CustomObject.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("version")</span>
 <span class="source-line-no">055</span><span id="line.55">    public Long getVersion();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     &lt;*  &lt;p&gt;Date and time (UTC) the CustomObject was initially created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Date and time (UTC) the CustomObject was initially created.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
 <span class="source-line-no">061</span><span id="line.61">    @JsonProperty("createdAt")</span>
 <span class="source-line-no">062</span><span id="line.62">    public ZonedDateTime getCreatedAt();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     &lt;*  &lt;p&gt;Date and time (UTC) the CustomObject was last updated.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Date and time (UTC) the CustomObject was last updated.&lt;/p&gt;</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
 <span class="source-line-no">068</span><span id="line.68">    @JsonProperty("lastModifiedAt")</span>
 <span class="source-line-no">069</span><span id="line.69">    public ZonedDateTime getLastModifiedAt();</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">073</span><span id="line.73">     */</span>
 <span class="source-line-no">074</span><span id="line.74">    @Valid</span>
 <span class="source-line-no">075</span><span id="line.75">    @JsonProperty("lastModifiedBy")</span>
 <span class="source-line-no">076</span><span id="line.76">    public LastModifiedBy getLastModifiedBy();</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     &lt;*  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81">    @Valid</span>
 <span class="source-line-no">082</span><span id="line.82">    @JsonProperty("createdBy")</span>
 <span class="source-line-no">083</span><span id="line.83">    public CreatedBy getCreatedBy();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     &lt;*  &lt;p&gt;Namespace to group CustomObjects.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Namespace to group CustomObjects.&lt;/p&gt;</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88">    @NotNull</span>
 <span class="source-line-no">089</span><span id="line.89">    @JsonProperty("container")</span>
 <span class="source-line-no">090</span><span id="line.90">    public String getContainer();</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     &lt;*  &lt;p&gt;User-defined unique identifier of the CustomObject within the defined &lt;code&gt;container&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;User-defined unique identifier of the CustomObject within the defined &lt;code&gt;container&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95">    @NotNull</span>
 <span class="source-line-no">096</span><span id="line.96">    @JsonProperty("key")</span>
 <span class="source-line-no">097</span><span id="line.97">    public String getKey();</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     &lt;*  &lt;p&gt;JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the &lt;code&gt;value&lt;/code&gt; points to a non-existing object in such case.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the &lt;code&gt;value&lt;/code&gt; points to a non-existing object in such case.&lt;/p&gt;</span>
 <span class="source-line-no">101</span><span id="line.101">     */</span>
 <span class="source-line-no">102</span><span id="line.102">    @NotNull</span>
 <span class="source-line-no">103</span><span id="line.103">    @JsonProperty("value")</span>

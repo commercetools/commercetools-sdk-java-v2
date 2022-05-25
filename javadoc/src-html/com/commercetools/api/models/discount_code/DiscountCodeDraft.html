@@ -49,28 +49,28 @@
 <span class="source-line-no">036</span><span id="line.36">public interface DiscountCodeDraft extends com.commercetools.api.models.CustomizableDraft&lt;DiscountCodeDraft&gt; {</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
 <span class="source-line-no">038</span><span id="line.38">    /**</span>
-<span class="source-line-no">039</span><span id="line.39">     &lt;*  &lt;p&gt;Name of the DiscountCode.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;Name of the DiscountCode.&lt;/p&gt;</span>
 <span class="source-line-no">040</span><span id="line.40">     */</span>
 <span class="source-line-no">041</span><span id="line.41">    @Valid</span>
 <span class="source-line-no">042</span><span id="line.42">    @JsonProperty("name")</span>
 <span class="source-line-no">043</span><span id="line.43">    public LocalizedString getName();</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     &lt;*  &lt;p&gt;Description of the DiscountCode.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Description of the DiscountCode.&lt;/p&gt;</span>
 <span class="source-line-no">047</span><span id="line.47">     */</span>
 <span class="source-line-no">048</span><span id="line.48">    @Valid</span>
 <span class="source-line-no">049</span><span id="line.49">    @JsonProperty("description")</span>
 <span class="source-line-no">050</span><span id="line.50">    public LocalizedString getDescription();</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
 <span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     &lt;*  &lt;p&gt;User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55">    @NotNull</span>
 <span class="source-line-no">056</span><span id="line.56">    @JsonProperty("code")</span>
 <span class="source-line-no">057</span><span id="line.57">    public String getCode();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     &lt;*  &lt;p&gt;Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.&lt;/p&gt;</span>
 <span class="source-line-no">061</span><span id="line.61">     */</span>
 <span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
 <span class="source-line-no">063</span><span id="line.63">    @Valid</span>
@@ -78,56 +78,56 @@
 <span class="source-line-no">065</span><span id="line.65">    public List&lt;CartDiscountResourceIdentifier&gt; getCartDiscounts();</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     &lt;*  &lt;p&gt;DiscountCode can only be applied to Carts that match this predicate.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;DiscountCode can only be applied to Carts that match this predicate.&lt;/p&gt;</span>
 <span class="source-line-no">069</span><span id="line.69">     */</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    @JsonProperty("cartPredicate")</span>
 <span class="source-line-no">072</span><span id="line.72">    public String getCartPredicate();</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
 <span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     &lt;*  &lt;p&gt;Only active DiscountCodes can be applied to the Cart.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Only active DiscountCodes can be applied to the Cart.&lt;/p&gt;</span>
 <span class="source-line-no">076</span><span id="line.76">     */</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    @JsonProperty("isActive")</span>
 <span class="source-line-no">079</span><span id="line.79">    public Boolean getIsActive();</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     &lt;*  &lt;p&gt;Number of times the DiscountCode can be applied.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Number of times the DiscountCode can be applied.&lt;/p&gt;</span>
 <span class="source-line-no">083</span><span id="line.83">     */</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    @JsonProperty("maxApplications")</span>
 <span class="source-line-no">086</span><span id="line.86">    public Long getMaxApplications();</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
 <span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     &lt;*  &lt;p&gt;Number of times the DiscountCode can be applied per Customer.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Number of times the DiscountCode can be applied per Customer.&lt;/p&gt;</span>
 <span class="source-line-no">090</span><span id="line.90">     */</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    @JsonProperty("maxApplicationsPerCustomer")</span>
 <span class="source-line-no">093</span><span id="line.93">    public Long getMaxApplicationsPerCustomer();</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
 <span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     &lt;*  &lt;p&gt;Custom Fields for the DiscountCode.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;Custom Fields for the DiscountCode.&lt;/p&gt;</span>
 <span class="source-line-no">097</span><span id="line.97">     */</span>
 <span class="source-line-no">098</span><span id="line.98">    @Valid</span>
 <span class="source-line-no">099</span><span id="line.99">    @JsonProperty("custom")</span>
 <span class="source-line-no">100</span><span id="line.100">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
 <span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     &lt;*  &lt;p&gt;Groups to which the DiscountCode will belong to.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Groups to which the DiscountCode will belong to.&lt;/p&gt;</span>
 <span class="source-line-no">104</span><span id="line.104">     */</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    @JsonProperty("groups")</span>
 <span class="source-line-no">107</span><span id="line.107">    public List&lt;String&gt; getGroups();</span>
 <span class="source-line-no">108</span><span id="line.108"></span>
 <span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     &lt;*  &lt;p&gt;Date and time (UTC) from which the DiscountCode is effective. Must be earlier than &lt;code&gt;validUntil&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Date and time (UTC) from which the DiscountCode is effective. Must be earlier than &lt;code&gt;validUntil&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">111</span><span id="line.111">     */</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    @JsonProperty("validFrom")</span>
 <span class="source-line-no">114</span><span id="line.114">    public ZonedDateTime getValidFrom();</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
 <span class="source-line-no">116</span><span id="line.116">    /**</span>
-<span class="source-line-no">117</span><span id="line.117">     &lt;*  &lt;p&gt;Date and time (UTC) until which the DiscountCode is effective. Must be later than &lt;code&gt;validFrom&lt;/code&gt;.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     *  &lt;p&gt;Date and time (UTC) until which the DiscountCode is effective. Must be later than &lt;code&gt;validFrom&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">118</span><span id="line.118">     */</span>
 <span class="source-line-no">119</span><span id="line.119"></span>
 <span class="source-line-no">120</span><span id="line.120">    @JsonProperty("validUntil")</span>

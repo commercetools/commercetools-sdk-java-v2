@@ -58,7 +58,7 @@
 <span class="source-line-no">045</span><span id="line.45">    private com.commercetools.api.models.type.CustomFields custom;</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">     &lt;*  &lt;p&gt;Platform-generated unique identifier of the Transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Unique identifier of the Transaction.&lt;/p&gt;</span>
 <span class="source-line-no">049</span><span id="line.49">     */</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
 <span class="source-line-no">051</span><span id="line.51">    public TransactionBuilder id(final String id) {</span>
@@ -67,7 +67,7 @@
 <span class="source-line-no">054</span><span id="line.54">    }</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">     &lt;*  &lt;p&gt;The time at which the transaction took place.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;The time at which the transaction took place.&lt;/p&gt;</span>
 <span class="source-line-no">058</span><span id="line.58">     */</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">    public TransactionBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {</span>
@@ -76,7 +76,7 @@
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     &lt;*  &lt;p&gt;The type of this transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;The type of this transaction.&lt;/p&gt;</span>
 <span class="source-line-no">067</span><span id="line.67">     */</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    public TransactionBuilder type(final com.commercetools.api.models.payment.TransactionType type) {</span>
@@ -85,7 +85,7 @@
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
 <span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     &lt;&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     *</span>
 <span class="source-line-no">076</span><span id="line.76">     */</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    public TransactionBuilder amount(final com.commercetools.api.models.common.TypedMoney amount) {</span>
@@ -94,7 +94,7 @@
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">     &lt;&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     *</span>
 <span class="source-line-no">085</span><span id="line.85">     */</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    public TransactionBuilder amount(</span>
@@ -104,7 +104,7 @@
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     &lt;*  &lt;p&gt;The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the &lt;code&gt;interfaceInteractions&lt;/code&gt; array, the corresponding interaction should be findable with this ID.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the &lt;code&gt;interfaceInteractions&lt;/code&gt; array, the corresponding interaction should be findable with this ID.&lt;/p&gt;</span>
 <span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    public TransactionBuilder interactionId(@Nullable final String interactionId) {</span>
@@ -113,7 +113,7 @@
 <span class="source-line-no">100</span><span id="line.100">    }</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
 <span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     &lt;*  &lt;p&gt;The state of this transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;The state of this transaction.&lt;/p&gt;</span>
 <span class="source-line-no">104</span><span id="line.104">     */</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    public TransactionBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {</span>
@@ -122,7 +122,7 @@
 <span class="source-line-no">109</span><span id="line.109">    }</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
 <span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     &lt;*  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;</span>
 <span class="source-line-no">113</span><span id="line.113">     */</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    public TransactionBuilder custom(</span>
@@ -132,7 +132,7 @@
 <span class="source-line-no">119</span><span id="line.119">    }</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
 <span class="source-line-no">121</span><span id="line.121">    /**</span>
-<span class="source-line-no">122</span><span id="line.122">     &lt;*  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">122</span><span id="line.122">     *  &lt;p&gt;Custom Fields for the Transaction.&lt;/p&gt;</span>
 <span class="source-line-no">123</span><span id="line.123">     */</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    public TransactionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>

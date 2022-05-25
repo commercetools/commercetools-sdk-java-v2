@@ -136,17 +136,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#centAmount(java.lang.Long)">centAmount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Amount in the smallest indivisible unit of a currency.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#currencyCode(java.lang.String)">currencyCode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Currency code compliant to ISO 4217.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fractionDigits(java.lang.Integer)">fractionDigits</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Number of fraction digits for a specified high precision money.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
@@ -169,7 +169,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#preciseAmount(java.lang.Long)">preciseAmount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</div>
 </div>
 </div>
 </div>
@@ -207,30 +207,30 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>centAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraftBuilder.html#line.43">centAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
-<div class="block"><*  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
   <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
-  <p>If <code>centAmount</code> is not provided, the commercetools Platform calculates the value automatically using the default rounding mode half even.</p>></div>
+  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="currencyCode(java.lang.String)">
 <h3>currencyCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraftBuilder.html#line.52">currencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
-<div class="block"><*  <p>Currency code compliant to ISO 4217.</p>></div>
+<div class="block"><p>Currency code compliant to ISO 4217.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fractionDigits(java.lang.Integer)">
 <h3>fractionDigits</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraftBuilder.html#line.61">fractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
-<div class="block"><*  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>></div>
+<div class="block"><p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="preciseAmount(java.lang.Long)">
 <h3>preciseAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraftBuilder.html#line.70">preciseAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</span></div>
-<div class="block"><*  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>></div>
+<div class="block"><p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p></div>
 </section>
 </li>
 <li>

@@ -54,63 +54,63 @@
 <span class="source-line-no">041</span><span id="line.41">public interface Project {</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     &lt;*  &lt;p&gt;Current version of the Project.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Current version of the Project.&lt;/p&gt;</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
 <span class="source-line-no">047</span><span id="line.47">    @JsonProperty("version")</span>
 <span class="source-line-no">048</span><span id="line.48">    public Long getVersion();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     &lt;*  &lt;p&gt;User-defined unique identifier of the Project.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;User-defined unique identifier of the Project.&lt;/p&gt;</span>
 <span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
 <span class="source-line-no">054</span><span id="line.54">    @JsonProperty("key")</span>
 <span class="source-line-no">055</span><span id="line.55">    public String getKey();</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     &lt;*  &lt;p&gt;Name of the Project.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Name of the Project.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
 <span class="source-line-no">061</span><span id="line.61">    @JsonProperty("name")</span>
 <span class="source-line-no">062</span><span id="line.62">    public String getName();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     &lt;*  &lt;p&gt;Country code of the geographic location.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Country code of the geographic location.&lt;/p&gt;</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
 <span class="source-line-no">068</span><span id="line.68">    @JsonProperty("countries")</span>
 <span class="source-line-no">069</span><span id="line.69">    public List&lt;String&gt; getCountries();</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     &lt;*  &lt;p&gt;Currency code of the country. A Project must have at least one currency.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;Currency code of the country. A Project must have at least one currency.&lt;/p&gt;</span>
 <span class="source-line-no">073</span><span id="line.73">     */</span>
 <span class="source-line-no">074</span><span id="line.74">    @NotNull</span>
 <span class="source-line-no">075</span><span id="line.75">    @JsonProperty("currencies")</span>
 <span class="source-line-no">076</span><span id="line.76">    public List&lt;String&gt; getCurrencies();</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     &lt;*  &lt;p&gt;Language of the country. A Project must have at least one language.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Language of the country. A Project must have at least one language.&lt;/p&gt;</span>
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81">    @NotNull</span>
 <span class="source-line-no">082</span><span id="line.82">    @JsonProperty("languages")</span>
 <span class="source-line-no">083</span><span id="line.83">    public List&lt;String&gt; getLanguages();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     &lt;*  &lt;p&gt;Date and time (UTC) the Project was initially created.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Date and time (UTC) the Project was initially created.&lt;/p&gt;</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88">    @NotNull</span>
 <span class="source-line-no">089</span><span id="line.89">    @JsonProperty("createdAt")</span>
 <span class="source-line-no">090</span><span id="line.90">    public ZonedDateTime getCreatedAt();</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     &lt;*  &lt;p&gt;Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.&lt;/p&gt;</span>
 <span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    @JsonProperty("trialUntil")</span>
 <span class="source-line-no">097</span><span id="line.97">    public String getTrialUntil();</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     &lt;*  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;</span>
 <span class="source-line-no">101</span><span id="line.101">     */</span>
 <span class="source-line-no">102</span><span id="line.102">    @NotNull</span>
 <span class="source-line-no">103</span><span id="line.103">    @Valid</span>
@@ -118,7 +118,7 @@
 <span class="source-line-no">105</span><span id="line.105">    public MessagesConfiguration getMessages();</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     &lt;*  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
 <span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110">    @NotNull</span>
 <span class="source-line-no">111</span><span id="line.111">    @Valid</span>
@@ -126,28 +126,28 @@
 <span class="source-line-no">113</span><span id="line.113">    public CartsConfiguration getCarts();</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     &lt;*  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
 <span class="source-line-no">117</span><span id="line.117">     */</span>
 <span class="source-line-no">118</span><span id="line.118">    @Valid</span>
 <span class="source-line-no">119</span><span id="line.119">    @JsonProperty("shoppingLists")</span>
 <span class="source-line-no">120</span><span id="line.120">    public ShoppingListsConfiguration getShoppingLists();</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
 <span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     &lt;*  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
 <span class="source-line-no">124</span><span id="line.124">     */</span>
 <span class="source-line-no">125</span><span id="line.125">    @Valid</span>
 <span class="source-line-no">126</span><span id="line.126">    @JsonProperty("shippingRateInputType")</span>
 <span class="source-line-no">127</span><span id="line.127">    public ShippingRateInputType getShippingRateInputType();</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     &lt;*  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
 <span class="source-line-no">131</span><span id="line.131">     */</span>
 <span class="source-line-no">132</span><span id="line.132">    @Valid</span>
 <span class="source-line-no">133</span><span id="line.133">    @JsonProperty("externalOAuth")</span>
 <span class="source-line-no">134</span><span id="line.134">    public ExternalOAuth getExternalOAuth();</span>
 <span class="source-line-no">135</span><span id="line.135"></span>
 <span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     &lt;*  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
 <span class="source-line-no">138</span><span id="line.138">     */</span>
 <span class="source-line-no">139</span><span id="line.139">    @Valid</span>
 <span class="source-line-no">140</span><span id="line.140">    @JsonProperty("searchIndexing")</span>

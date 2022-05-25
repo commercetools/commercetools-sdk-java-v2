@@ -56,11 +56,11 @@
 <span class="source-line-no">043</span><span id="line.43">    }</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
 <span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     &lt;*  &lt;p&gt;Amount in the smallest indivisible unit of a currency, such as:&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">    *  &lt;ul&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">    *   &lt;li&gt;Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as &lt;code&gt;500&lt;/code&gt;).&lt;/li&gt;</span>
-<span class="source-line-no">049</span><span id="line.49">    *   &lt;li&gt;The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;</span>
-<span class="source-line-no">050</span><span id="line.50">    *  &lt;/ul&gt;&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency, such as:&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;ul&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *   &lt;li&gt;Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as &lt;code&gt;500&lt;/code&gt;).&lt;/li&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *   &lt;li&gt;The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    public Long getCentAmount() {</span>
@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55">    }</span>
 <span class="source-line-no">056</span><span id="line.56"></span>
 <span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     &lt;*  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    public String getCurrencyCode() {</span>
@@ -76,7 +76,7 @@
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     &lt;*  &lt;p&gt;The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.&lt;/p&gt;</span>
 <span class="source-line-no">067</span><span id="line.67">     */</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    public com.commercetools.api.models.common.MoneyType getType() {</span>
@@ -84,11 +84,11 @@
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     &lt;*  &lt;p&gt;Number of digits after the decimal separator:&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">    *  &lt;ul&gt;</span>
-<span class="source-line-no">076</span><span id="line.76">    *   &lt;li&gt;Equal to the default number of fraction digits for a currency in CentPrecisionMoney.&lt;/li&gt;</span>
-<span class="source-line-no">077</span><span id="line.77">    *   &lt;li&gt;Greater than the default number of fraction digits for a currency in HighPrecisionMoney.&lt;/li&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;/ul&gt;&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Number of digits after the decimal separator:&lt;/p&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;ul&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     *   &lt;li&gt;Equal to the default number of fraction digits for a currency in CentPrecisionMoney.&lt;/li&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     *   &lt;li&gt;Greater than the default number of fraction digits for a currency in HighPrecisionMoney.&lt;/li&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    public Integer getFractionDigits() {</span>

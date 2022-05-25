@@ -129,18 +129,16 @@ implements <a href="MissingPricesTaskStatus.html" title="interface in com.commer
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getExpires()">getExpires</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The expiry date of the result.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MissingPricesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesPagedQueryResult</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResult()">getResult</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The response to an asynchronous request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><></div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -194,7 +192,6 @@ implements <a href="MissingPricesTaskStatus.html" title="interface in com.commer
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesTaskStatusImpl.html#line.45">getState</a></span>()</div>
-<div class="block"><></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MissingPricesTaskStatus.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="MissingPricesTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesTaskStatus</a></code></dd>
@@ -205,7 +202,7 @@ implements <a href="MissingPricesTaskStatus.html" title="interface in com.commer
 <section class="detail" id="getExpires()">
 <h3>getExpires</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesTaskStatusImpl.html#line.53">getExpires</a></span>()</div>
-<div class="block"><*  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>></div>
+<div class="block"><p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MissingPricesTaskStatus.html#getExpires()">getExpires</a></code>&nbsp;in interface&nbsp;<code><a href="MissingPricesTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesTaskStatus</a></code></dd>
@@ -216,7 +213,7 @@ implements <a href="MissingPricesTaskStatus.html" title="interface in com.commer
 <section class="detail" id="getResult()">
 <h3>getResult</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesPagedQueryResult.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesPagedQueryResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesTaskStatusImpl.html#line.61">getResult</a></span>()</div>
-<div class="block"><*  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>></div>
+<div class="block"><p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MissingPricesTaskStatus.html#getResult()">getResult</a></code>&nbsp;in interface&nbsp;<code><a href="MissingPricesTaskStatus.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesTaskStatus</a></code></dd>

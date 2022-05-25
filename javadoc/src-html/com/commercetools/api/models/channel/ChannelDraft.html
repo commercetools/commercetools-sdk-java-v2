@@ -48,49 +48,49 @@
 <span class="source-line-no">035</span><span id="line.35">public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft&lt;ChannelDraft&gt; {</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     &lt;*  &lt;p&gt;User-defined unique identifier for the Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     *  &lt;p&gt;User-defined unique identifier for the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">039</span><span id="line.39">     */</span>
 <span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
 <span class="source-line-no">041</span><span id="line.41">    @JsonProperty("key")</span>
 <span class="source-line-no">042</span><span id="line.42">    public String getKey();</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
 <span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     &lt;*  &lt;p&gt;Roles of the Channel. Each channel must have at least one role. If not specified, then &lt;code&gt;InventorySupply&lt;/code&gt; is assigned by default.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;Roles of the Channel. Each channel must have at least one role. If not specified, then &lt;code&gt;InventorySupply&lt;/code&gt; is assigned by default.&lt;/p&gt;</span>
 <span class="source-line-no">046</span><span id="line.46">     */</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
 <span class="source-line-no">048</span><span id="line.48">    @JsonProperty("roles")</span>
 <span class="source-line-no">049</span><span id="line.49">    public List&lt;ChannelRoleEnum&gt; getRoles();</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
 <span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     &lt;*  &lt;p&gt;Name of the Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Name of the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">053</span><span id="line.53">     */</span>
 <span class="source-line-no">054</span><span id="line.54">    @Valid</span>
 <span class="source-line-no">055</span><span id="line.55">    @JsonProperty("name")</span>
 <span class="source-line-no">056</span><span id="line.56">    public LocalizedString getName();</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     &lt;*  &lt;p&gt;Description of the Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Description of the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">060</span><span id="line.60">     */</span>
 <span class="source-line-no">061</span><span id="line.61">    @Valid</span>
 <span class="source-line-no">062</span><span id="line.62">    @JsonProperty("description")</span>
 <span class="source-line-no">063</span><span id="line.63">    public LocalizedString getDescription();</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     &lt;*  &lt;p&gt;Address where the Channel is located.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Address where the Channel is located.&lt;/p&gt;</span>
 <span class="source-line-no">067</span><span id="line.67">     */</span>
 <span class="source-line-no">068</span><span id="line.68">    @Valid</span>
 <span class="source-line-no">069</span><span id="line.69">    @JsonProperty("address")</span>
 <span class="source-line-no">070</span><span id="line.70">    public BaseAddress getAddress();</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     &lt;*  &lt;p&gt;Custom fields defined for the Channel.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Custom fields defined for the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">074</span><span id="line.74">     */</span>
 <span class="source-line-no">075</span><span id="line.75">    @Valid</span>
 <span class="source-line-no">076</span><span id="line.76">    @JsonProperty("custom")</span>
 <span class="source-line-no">077</span><span id="line.77">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
 <span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     &lt;*  &lt;p&gt;GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.&lt;/p&gt;</span>
 <span class="source-line-no">081</span><span id="line.81">     */</span>
 <span class="source-line-no">082</span><span id="line.82">    @Valid</span>
 <span class="source-line-no">083</span><span id="line.83">    @JsonProperty("geoLocation")</span>

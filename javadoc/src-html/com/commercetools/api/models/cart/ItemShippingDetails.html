@@ -45,7 +45,7 @@
 <span class="source-line-no">032</span><span id="line.32">public interface ItemShippingDetails {</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">     &lt;*  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.&lt;/p&gt;</span>
 <span class="source-line-no">036</span><span id="line.36">     */</span>
 <span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
 <span class="source-line-no">038</span><span id="line.38">    @Valid</span>
@@ -53,7 +53,7 @@
 <span class="source-line-no">040</span><span id="line.40">    public List&lt;ItemShippingTarget&gt; getTargets();</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     &lt;*  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;</span>
 <span class="source-line-no">044</span><span id="line.44">     */</span>
 <span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
 <span class="source-line-no">046</span><span id="line.46">    @JsonProperty("valid")</span>

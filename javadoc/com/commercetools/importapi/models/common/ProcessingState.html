@@ -127,12 +127,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#UNRESOLVED">UNRESOLVED</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Import Request contains key references to resources that are currently not present in the platform.</div>
+<div class="block">Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#VALIDATION_FAILED">VALIDATION_FAILED</a></span></code></div>
 <div class="col-last even-row-color">
-<div class="block">Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the platform constraints.</div>
+<div class="block">Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</div>
 </div>
 <div class="col-first odd-row-color"><code>static <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#WAIT_FOR_MASTER_VARIANT">WAIT_FOR_MASTER_VARIANT</a></span></code></div>
@@ -196,14 +196,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="VALIDATION_FAILED">
 <h3>VALIDATION_FAILED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ProcessingState.html#line.27">VALIDATION_FAILED</a></span></div>
-<div class="block"><p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the platform constraints.</p></div>
+<div class="block"><p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="UNRESOLVED">
 <h3>UNRESOLVED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ProcessingState.html#line.32">UNRESOLVED</a></span></div>
-<div class="block"><p>Import Request contains key references to resources that are currently not present in the platform.</p></div>
+<div class="block"><p>Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</p></div>
 </section>
 </li>
 <li>
@@ -224,7 +224,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="REJECTED">
 <h3>REJECTED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ProcessingState.html#line.47">REJECTED</a></span></div>
-<div class="block"><p>Resource could not be imported. References were resolved, but the system could not import the data into the platform due to an internal server error and the limit of retry has been reached.</p></div>
+<div class="block"><p>Resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the limit of retry has been reached.</p></div>
 </section>
 </li>
 </ul>

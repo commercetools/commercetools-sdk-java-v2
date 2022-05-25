@@ -129,27 +129,27 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The time when the ImportContainer was created.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">User-defined unique identifier for the ImportContainer.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedAt()">getLastModifiedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The last time when the ImportContainer was modified.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResourceType()">getResourceType</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The resource type the ImportContainer is able to handle.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">The version of the ImportContainer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -210,7 +210,7 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerImpl.html#line.53">getKey</a></span>()</div>
-<div class="block"><*  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>></div>
+<div class="block"><p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportContainer.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a></code></dd>
@@ -221,7 +221,7 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <section class="detail" id="getResourceType()">
 <h3>getResourceType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerImpl.html#line.61">getResourceType</a></span>()</div>
-<div class="block"><*  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>></div>
+<div class="block"><p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportContainer.html#getResourceType()">getResourceType</a></code>&nbsp;in interface&nbsp;<code><a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a></code></dd>
@@ -232,7 +232,7 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerImpl.html#line.69">getVersion</a></span>()</div>
-<div class="block"><*  <p>The version of the ImportContainer.</p>></div>
+<div class="block"><p>The version of the ImportContainer.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportContainer.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a></code></dd>
@@ -243,7 +243,7 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerImpl.html#line.77">getCreatedAt</a></span>()</div>
-<div class="block"><*  <p>The time when the ImportContainer was created.</p>></div>
+<div class="block"><p>The time when the ImportContainer was created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportContainer.html#getCreatedAt()">getCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a></code></dd>
@@ -254,7 +254,7 @@ implements <a href="ImportContainer.html" title="interface in com.commercetools.
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerImpl.html#line.85">getLastModifiedAt</a></span>()</div>
-<div class="block"><*  <p>The last time when the ImportContainer was modified.</p>></div>
+<div class="block"><p>The last time when the ImportContainer was modified.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportContainer.html#getLastModifiedAt()">getLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a></code></dd>

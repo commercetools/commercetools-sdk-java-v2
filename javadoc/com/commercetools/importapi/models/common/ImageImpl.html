@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageImpl.html#line.20">ImageImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>An Image uploaded to the commercetools platform is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p></div>
+<div class="block"><p>An Image uploaded to commercetools Composable Commerce is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,17 +129,17 @@ implements <a href="Image.html" title="interface in com.commercetools.importapi.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDimensions()">getDimensions</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Dimensions of the original image.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLabel()">getLabel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">Custom label that can be used, for example, as an image description.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getUrl()">getUrl</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><*</div>
+<div class="block">URL of the image in its original size.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -194,7 +194,7 @@ implements <a href="Image.html" title="interface in com.commercetools.importapi.
 <section class="detail" id="getUrl()">
 <h3>getUrl</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageImpl.html#line.45">getUrl</a></span>()</div>
-<div class="block"><*  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>></div>
+<div class="block"><p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Image.html#getUrl()">getUrl</a></code>&nbsp;in interface&nbsp;<code><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></code></dd>
@@ -205,7 +205,7 @@ implements <a href="Image.html" title="interface in com.commercetools.importapi.
 <section class="detail" id="getDimensions()">
 <h3>getDimensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageImpl.html#line.53">getDimensions</a></span>()</div>
-<div class="block"><*  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>></div>
+<div class="block"><p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Image.html#getDimensions()">getDimensions</a></code>&nbsp;in interface&nbsp;<code><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></code></dd>
@@ -216,7 +216,7 @@ implements <a href="Image.html" title="interface in com.commercetools.importapi.
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageImpl.html#line.61">getLabel</a></span>()</div>
-<div class="block"><*  <p>Custom label that can be used, for example, as an image description.</p>></div>
+<div class="block"><p>Custom label that can be used, for example, as an image description.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Image.html#getLabel()">getLabel</a></code>&nbsp;in interface&nbsp;<code><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></code></dd>

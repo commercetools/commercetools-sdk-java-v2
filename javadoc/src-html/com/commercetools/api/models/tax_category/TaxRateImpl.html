@@ -65,7 +65,7 @@
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     &lt;*  &lt;p&gt;Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.&lt;/p&gt;</span>
 <span class="source-line-no">056</span><span id="line.56">     */</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    public String getId() {</span>
@@ -73,7 +73,7 @@
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">     &lt;*  &lt;p&gt;Name of the TaxRate.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Name of the TaxRate.&lt;/p&gt;</span>
 <span class="source-line-no">064</span><span id="line.64">     */</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    public String getName() {</span>
@@ -81,7 +81,7 @@
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">     &lt;*  &lt;p&gt;Tax rate. If subrates are used, the amount must be the sum of all subrates.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;Tax rate. If subrates are used, the amount must be the sum of all subrates.&lt;/p&gt;</span>
 <span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
 <span class="source-line-no">074</span><span id="line.74">    public Double getAmount() {</span>
@@ -89,7 +89,7 @@
 <span class="source-line-no">076</span><span id="line.76">    }</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     &lt;*  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, tax is included in Prices and the &lt;code&gt;taxedPrice&lt;/code&gt; is present on LineItems. In this case, the platform calculates the &lt;code&gt;totalNet&lt;/code&gt; price based on the TaxRate.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, tax is included in Prices and the &lt;code&gt;taxedPrice&lt;/code&gt; is present on LineItems. In this case, the &lt;code&gt;totalNet&lt;/code&gt; price on TaxedPrice includes the TaxRate.&lt;/p&gt;</span>
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
 <span class="source-line-no">082</span><span id="line.82">    public Boolean getIncludedInPrice() {</span>
@@ -97,7 +97,7 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     &lt;*  &lt;p&gt;Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.&lt;/p&gt;</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    public String getCountry() {</span>
@@ -105,7 +105,7 @@
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">     &lt;*  &lt;p&gt;State within the country, such as Texas in the United States.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;State within the country, such as Texas in the United States.&lt;/p&gt;</span>
 <span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    public String getState() {</span>
@@ -113,7 +113,7 @@
 <span class="source-line-no">100</span><span id="line.100">    }</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
 <span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     &lt;*  &lt;p&gt;Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).&lt;/p&gt;&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).&lt;/p&gt;</span>
 <span class="source-line-no">104</span><span id="line.104">     */</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    public java.util.List&lt;com.commercetools.api.models.tax_category.SubRate&gt; getSubRates() {</span>

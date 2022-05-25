@@ -52,14 +52,14 @@
 <span class="source-line-no">039</span><span id="line.39">public interface ShippingInfoImportDraft {</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     &lt;&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     *</span>
 <span class="source-line-no">043</span><span id="line.43">     */</span>
 <span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
 <span class="source-line-no">045</span><span id="line.45">    @JsonProperty("shippingMethodName")</span>
 <span class="source-line-no">046</span><span id="line.46">    public String getShippingMethodName();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
 <span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">     &lt;&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *</span>
 <span class="source-line-no">050</span><span id="line.50">     */</span>
 <span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
 <span class="source-line-no">052</span><span id="line.52">    @Valid</span>
@@ -67,7 +67,7 @@
 <span class="source-line-no">054</span><span id="line.54">    public Money getPrice();</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">     &lt;*  &lt;p&gt;The shipping rate used to determine the price.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;The shipping rate used to determine the price.&lt;/p&gt;</span>
 <span class="source-line-no">058</span><span id="line.58">     */</span>
 <span class="source-line-no">059</span><span id="line.59">    @NotNull</span>
 <span class="source-line-no">060</span><span id="line.60">    @Valid</span>
@@ -75,42 +75,42 @@
 <span class="source-line-no">062</span><span id="line.62">    public ShippingRateDraft getShippingRate();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     &lt;&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     *</span>
 <span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    @Valid</span>
 <span class="source-line-no">068</span><span id="line.68">    @JsonProperty("taxRate")</span>
 <span class="source-line-no">069</span><span id="line.69">    public TaxRate getTaxRate();</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     &lt;&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     *</span>
 <span class="source-line-no">073</span><span id="line.73">     */</span>
 <span class="source-line-no">074</span><span id="line.74">    @Valid</span>
 <span class="source-line-no">075</span><span id="line.75">    @JsonProperty("taxCategory")</span>
 <span class="source-line-no">076</span><span id="line.76">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
 <span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     &lt;*  &lt;p&gt;Not set if custom shipping method is used.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Not set if custom shipping method is used.&lt;/p&gt;</span>
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81">    @Valid</span>
 <span class="source-line-no">082</span><span id="line.82">    @JsonProperty("shippingMethod")</span>
 <span class="source-line-no">083</span><span id="line.83">    public ShippingMethodResourceIdentifier getShippingMethod();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     &lt;*  &lt;p&gt;Deliveries are compilations of information on how the articles are being delivered to the customers.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Deliveries are compilations of information on how the articles are being delivered to the customers.&lt;/p&gt;</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88">    @Valid</span>
 <span class="source-line-no">089</span><span id="line.89">    @JsonProperty("deliveries")</span>
 <span class="source-line-no">090</span><span id="line.90">    public List&lt;Delivery&gt; getDeliveries();</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     &lt;&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *</span>
 <span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95">    @Valid</span>
 <span class="source-line-no">096</span><span id="line.96">    @JsonProperty("discountedPrice")</span>
 <span class="source-line-no">097</span><span id="line.97">    public DiscountedLineItemPriceDraft getDiscountedPrice();</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     &lt;*  &lt;p&gt;Indicates whether the ShippingMethod referenced is allowed for the cart or not.&lt;/p&gt;&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Indicates whether the ShippingMethod referenced is allowed for the cart or not.&lt;/p&gt;</span>
 <span class="source-line-no">101</span><span id="line.101">     */</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    @JsonProperty("shippingMethodState")</span>

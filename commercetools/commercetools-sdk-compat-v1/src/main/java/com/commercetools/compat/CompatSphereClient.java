@@ -29,7 +29,8 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
 
     private final ExceptionMode exceptionMode;
 
-    private CompatSphereClient(final ApiHttpClient apiHttpClient, final ObjectMapper mapper, final SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
+    private CompatSphereClient(final ApiHttpClient apiHttpClient, final ObjectMapper mapper,
+            final SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
         this.clientConfig = clientConfig;
         this.mapper = mapper;
         this.client = new CompatApiHttpClient(apiHttpClient, mapper);
@@ -37,14 +38,16 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
     }
 
     public static CompatSphereClient of(SphereClientConfig clientConfig) {
-        return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig, ExceptionMode.SDK_V2);
+        return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig,
+            ExceptionMode.SDK_V2);
     }
 
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, SphereClientConfig clientConfig) {
         return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), clientConfig, ExceptionMode.SDK_V2);
     }
 
-    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper, SphereClientConfig clientConfig) {
+    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper,
+            SphereClientConfig clientConfig) {
         return new CompatSphereClient(apiHttpClient, mapper, clientConfig, ExceptionMode.SDK_V2);
     }
 
@@ -52,11 +55,13 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig, exceptionMode);
     }
 
-    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
+    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, SphereClientConfig clientConfig,
+            final ExceptionMode exceptionMode) {
         return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), clientConfig, exceptionMode);
     }
 
-    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper, SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
+    public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper,
+            SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
         return new CompatSphereClient(apiHttpClient, mapper, clientConfig, exceptionMode);
     }
 
@@ -79,8 +84,8 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
             sphereRequest, JsonNode.class);
         final HttpRequest httpRequest = sphereRequest.httpRequestIntent().toHttpRequest(clientConfig.getApiUrl());
         return compatRequest.send()
-                .thenApply(
-                    apiHttpResponse -> HttpResponse.of(apiHttpResponse.getStatusCode(), apiHttpResponse.getBody(), httpRequest))
+                .thenApply(apiHttpResponse -> HttpResponse.of(apiHttpResponse.getStatusCode(),
+                    apiHttpResponse.getBody(), httpRequest))
                 .thenApplyAsync(httpResponse -> {
                     if (exceptionMode == ExceptionMode.SDK_V2) {
                         return sphereRequest.deserialize(httpResponse);
@@ -88,7 +93,8 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
 
                     try {
                         return parse(sphereRequest, mapper, clientConfig, httpResponse, httpRequest);
-                    } catch (final SphereException e) {
+                    }
+                    catch (final SphereException e) {
                         fillExceptionWithData(sphereRequest, httpResponse, e, clientConfig, httpRequest);
                         throw e;
                     }
@@ -99,15 +105,19 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         SDK_V1, SDK_V2
     }
 
-    static <T> T parse(final SphereRequest<T> sphereRequest, final ObjectMapper objectMapper, final SphereApiConfig config, final HttpResponse httpResponse, final HttpRequest httpRequest) {
+    static <T> T parse(final SphereRequest<T> sphereRequest, final ObjectMapper objectMapper,
+            final SphereApiConfig config, final HttpResponse httpResponse, final HttpRequest httpRequest) {
         final T result;
         if (!sphereRequest.canDeserialize(httpResponse)) {
-            final SphereException sphereException = createExceptionFor(httpResponse, sphereRequest, objectMapper, config, httpRequest);
+            final SphereException sphereException = createExceptionFor(httpResponse, sphereRequest, objectMapper,
+                config, httpRequest);
             throw sphereException;
-        } else {
+        }
+        else {
             try {
                 result = sphereRequest.deserialize(httpResponse);
-            } catch (final JsonException e) {
+            }
+            catch (final JsonException e) {
                 final byte[] bytes = httpResponse.getResponseBody();
                 e.addNote("Cannot parse " + bytesToString(bytes));
                 throw e;
@@ -116,13 +126,17 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         return result;
     }
 
-    private static <T> SphereException createExceptionFor(final HttpResponse httpResponse, final SphereRequest<T> sphereRequest, final ObjectMapper objectMapper, final SphereApiConfig config, final HttpRequest httpRequest) {
-        final SphereException sphereException = CompatExceptionFactory.of().createException(httpResponse, sphereRequest, objectMapper);
+    private static <T> SphereException createExceptionFor(final HttpResponse httpResponse,
+            final SphereRequest<T> sphereRequest, final ObjectMapper objectMapper, final SphereApiConfig config,
+            final HttpRequest httpRequest) {
+        final SphereException sphereException = CompatExceptionFactory.of()
+                .createException(httpResponse, sphereRequest, objectMapper);
         fillExceptionWithData(sphereRequest, httpResponse, sphereException, config, httpRequest);
         return sphereException;
     }
 
-    private static <T> void fillExceptionWithData(final SphereRequest<T> sphereRequest, final HttpResponse httpResponse, final SphereException exception, final SphereApiConfig config, final HttpRequest httpRequest) {
+    private static <T> void fillExceptionWithData(final SphereRequest<T> sphereRequest, final HttpResponse httpResponse,
+            final SphereException exception, final SphereApiConfig config, final HttpRequest httpRequest) {
         exception.setSphereRequest(sphereRequest);
         exception.setUnderlyingHttpResponse(httpResponse);
         exception.setProjectKey(config.getProjectKey());

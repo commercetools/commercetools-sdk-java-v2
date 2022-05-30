@@ -29,7 +29,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
     private String assetKey;
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public CategorySetAssetKeyActionBuilder assetId(final String assetId) {
@@ -38,7 +38,7 @@ public class CategorySetAssetKeyActionBuilder implements Builder<CategorySetAsse
     }
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {

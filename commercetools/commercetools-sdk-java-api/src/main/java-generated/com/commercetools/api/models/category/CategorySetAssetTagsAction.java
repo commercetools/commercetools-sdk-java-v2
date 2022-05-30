@@ -29,21 +29,21 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
     String SET_ASSET_TAGS = "setAssetTags";
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     @JsonProperty("tags")

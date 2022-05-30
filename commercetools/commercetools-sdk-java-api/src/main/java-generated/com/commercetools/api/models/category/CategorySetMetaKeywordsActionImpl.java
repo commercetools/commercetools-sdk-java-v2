@@ -44,7 +44,7 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {

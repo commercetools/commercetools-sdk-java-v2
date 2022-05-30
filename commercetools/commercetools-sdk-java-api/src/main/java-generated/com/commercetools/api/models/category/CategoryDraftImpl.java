@@ -74,7 +74,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Category.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -82,7 +82,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -90,7 +90,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Category.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -98,7 +98,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+     *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {
@@ -106,7 +106,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
      */
 
     public String getOrderHint() {
@@ -114,7 +114,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      */
 
     public String getExternalId() {
@@ -122,7 +122,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -130,7 +130,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -138,7 +138,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -146,7 +146,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Category.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -154,7 +154,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Media related to the Category.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {

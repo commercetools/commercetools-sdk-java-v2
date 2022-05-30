@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CategoryChangeSlugAction
+ *  <p>Changing the slug produces the CategorySlugChangedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, ModelBase {
@@ -43,7 +43,7 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
     }
 
     /**
-     *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+     *  <p>New value to set. Must not be empty. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {

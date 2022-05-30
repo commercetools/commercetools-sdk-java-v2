@@ -195,7 +195,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public CategorySlugChangedMessageBuilder slug(
@@ -205,7 +205,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public CategorySlugChangedMessageBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -214,7 +214,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(
@@ -224,7 +224,7 @@ public class CategorySlugChangedMessageBuilder implements Builder<CategorySlugCh
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public CategorySlugChangedMessageBuilder oldSlug(

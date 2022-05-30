@@ -35,7 +35,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
@@ -44,7 +44,7 @@ public class CategorySetAssetCustomFieldActionBuilder implements Builder<Categor
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {

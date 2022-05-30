@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductData extends ProductDataLike {
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @NotNull
     @Valid
@@ -61,14 +61,14 @@ public interface ProductData extends ProductDataLike {
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @NotNull
     @Valid
@@ -76,21 +76,21 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @Valid
     @JsonProperty("metaKeywords")

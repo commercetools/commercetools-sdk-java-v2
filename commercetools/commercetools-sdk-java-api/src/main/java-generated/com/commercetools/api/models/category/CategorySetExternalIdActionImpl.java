@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CategorySetExternalIdAction
+ *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction, ModelBase {
@@ -43,7 +43,7 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
     }
 
     /**
-     *  <p>If not defined, the external ID is unset.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getExternalId() {

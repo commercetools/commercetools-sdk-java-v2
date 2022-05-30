@@ -51,7 +51,7 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -59,7 +59,7 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {
@@ -67,7 +67,7 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

@@ -51,7 +51,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -59,7 +59,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {
@@ -67,7 +67,7 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {

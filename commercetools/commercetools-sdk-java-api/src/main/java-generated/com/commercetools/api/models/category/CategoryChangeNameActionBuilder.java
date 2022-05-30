@@ -25,7 +25,7 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public CategoryChangeNameActionBuilder name(
@@ -35,7 +35,7 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public CategoryChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {

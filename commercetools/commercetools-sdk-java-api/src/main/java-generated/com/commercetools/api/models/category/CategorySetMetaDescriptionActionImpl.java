@@ -44,7 +44,7 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {

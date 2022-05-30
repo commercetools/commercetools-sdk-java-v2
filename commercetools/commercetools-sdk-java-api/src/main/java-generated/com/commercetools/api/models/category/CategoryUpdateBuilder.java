@@ -28,7 +28,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public CategoryUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public CategoryUpdateBuilder actions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public CategoryUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -69,7 +69,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public CategoryUpdateBuilder plusActions(
@@ -82,7 +82,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public CategoryUpdateBuilder withActions(

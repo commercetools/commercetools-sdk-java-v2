@@ -47,7 +47,7 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
     }
 
     /**
-     *
+     *  <p>Value to append.</p>
      */
 
     public com.commercetools.api.models.common.AssetDraft getAsset() {
@@ -55,7 +55,7 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
     }
 
     /**
-     *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+     *  <p>Position in the array at which the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
      */
 
     public Integer getPosition() {

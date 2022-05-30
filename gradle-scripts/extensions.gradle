@@ -13,10 +13,11 @@ ext {
             awaitility: "4.1.0",
             failsafe: "3.2.0",
             completableFutures: "0.3.5",
-            ctpJvmSdk: {
-                strictly '[1.62.0,)'
-                prefer '2.0.0'
-            }
+            ctpJvmSdk: "2.9.0-SNAPSHOT"
+//            ctpJvmSdk: {
+//                strictly '[1.62.0,)'
+//                prefer '2.9.0-SNAPSHOT'
+//            }
     ]
 
     commons = [

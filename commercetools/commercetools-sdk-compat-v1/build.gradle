@@ -9,13 +9,13 @@ dependencies {
     api commons.lang3
 
     api project(':commercetools:commercetools-sdk-java-api')
-    api "com.commercetools.sdk.jvm.core:commercetools-java-client-core:${versions.ctpJvmSdk}"
-    api "com.commercetools.sdk.jvm.core:commercetools-models:${versions.ctpJvmSdk}"
+    api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version versions.ctpJvmSdk
+    api "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
 
     testImplementation project(':commercetools:commercetools-http-client')
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models:${versions.ctpJvmSdk}"
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience:${versions.ctpJvmSdk}"
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client:${versions.ctpJvmSdk}"
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version versions.ctpJvmSdk
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

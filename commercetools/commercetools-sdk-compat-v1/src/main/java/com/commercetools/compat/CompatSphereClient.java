@@ -4,6 +4,7 @@ package com.commercetools.compat;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -37,29 +38,68 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         this.exceptionMode = exceptionMode;
     }
 
+    /**
+     * creates an instance of the CompatSphereClient. Please be aware for backwards compatibility the v2 Exceptions are thrown
+     * @param clientConfig client configuration
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(SphereClientConfig clientConfig) {
         return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig,
             ExceptionMode.SDK_V2);
     }
 
+    /**
+     * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
+     * @param apiHttpClient the underlying ApiHttpClient to be used
+     * @param clientConfig client configuration
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, SphereClientConfig clientConfig) {
-        return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), clientConfig, ExceptionMode.SDK_V2);
+        return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), clientConfig, ExceptionMode.SDK_V1);
     }
 
+    /**
+     * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
+     * @param apiHttpClient the underlying ApiHttpClient to be used
+     * @param clientConfig client configuration
+     * @param mapper Jackson ObjectMapper to be used for deserialization
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper,
             SphereClientConfig clientConfig) {
-        return new CompatSphereClient(apiHttpClient, mapper, clientConfig, ExceptionMode.SDK_V2);
+        return new CompatSphereClient(apiHttpClient, mapper, clientConfig, ExceptionMode.SDK_V1);
     }
 
+    /**
+     * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
+     * @param clientConfig client configuration
+     * @param exceptionMode SDKv1 or SDKv2 exceptions to be used
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
         return of(createDefaultClient(clientConfig), SphereJsonUtils.newObjectMapper(), clientConfig, exceptionMode);
     }
 
+    /**
+     * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
+     * @param apiHttpClient the underlying ApiHttpClient to be used
+     * @param clientConfig client configuration
+     * @param exceptionMode SDKv1 or SDKv2 exceptions to be used
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, SphereClientConfig clientConfig,
             final ExceptionMode exceptionMode) {
         return of(apiHttpClient, SphereJsonUtils.newObjectMapper(), clientConfig, exceptionMode);
     }
 
+    /**
+     * Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown
+     * @param apiHttpClient the underlying ApiHttpClient to be used
+     * @param clientConfig client configuration
+     * @param mapper Jackson ObjectMapper to be used for deserialization
+     * @param exceptionMode SDKv1 or SDKv2 exceptions to be used
+     * @return SphereClient using a SDK v2 ApiHttpClient as HTTP client
+     */
     public static CompatSphereClient of(final ApiHttpClient apiHttpClient, final ObjectMapper mapper,
             SphereClientConfig clientConfig, final ExceptionMode exceptionMode) {
         return new CompatSphereClient(apiHttpClient, mapper, clientConfig, exceptionMode);
@@ -83,47 +123,45 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         final CompatRequest<JsonNode> compatRequest = CompatRequest.of(client, clientConfig.getProjectKey(),
             sphereRequest, JsonNode.class);
         final HttpRequest httpRequest = sphereRequest.httpRequestIntent().toHttpRequest(clientConfig.getApiUrl());
+
+        if (exceptionMode == ExceptionMode.SDK_V2) {
+            return compatRequest.send()
+                    .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest))
+                    .thenApplyAsync(sphereRequest::deserialize);
+        }
         return compatRequest.send()
-                .thenApply(apiHttpResponse -> HttpResponse.of(apiHttpResponse.getStatusCode(),
-                    apiHttpResponse.getBody(), httpRequest))
+                .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest))
                 .thenApplyAsync(httpResponse -> {
-                    if (exceptionMode == ExceptionMode.SDK_V2) {
+                    try {
                         return sphereRequest.deserialize(httpResponse);
                     }
-
-                    try {
-                        return parse(sphereRequest, mapper, clientConfig, httpResponse, httpRequest);
-                    }
-                    catch (final SphereException e) {
-                        fillExceptionWithData(sphereRequest, httpResponse, e, clientConfig, httpRequest);
+                    catch (final JsonException e) {
+                        final byte[] bytes = httpResponse.getResponseBody();
+                        e.addNote("Cannot parse " + bytesToString(bytes));
                         throw e;
                     }
+                })
+                .exceptionally((throwable) -> {
+                    Throwable cause = throwable.getCause();
+                    if (cause instanceof ApiHttpException) {
+                        ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
+                        if (errorResponse != null) {
+                            HttpResponse httpResponse = HttpResponse.of(errorResponse.getStatusCode(),
+                                errorResponse.getBody(), httpRequest);
+                            Throwable e = createExceptionFor(httpResponse, sphereRequest, mapper, clientConfig,
+                                httpRequest);
+                            throw new CompletionException(e);
+                        }
+                    }
+                    if (throwable instanceof CompletionException) {
+                        throw new CompletionException(cause);
+                    }
+                    throw new CompletionException(throwable);
                 });
     }
 
     public enum ExceptionMode {
         SDK_V1, SDK_V2
-    }
-
-    static <T> T parse(final SphereRequest<T> sphereRequest, final ObjectMapper objectMapper,
-            final SphereApiConfig config, final HttpResponse httpResponse, final HttpRequest httpRequest) {
-        final T result;
-        if (!sphereRequest.canDeserialize(httpResponse)) {
-            final SphereException sphereException = createExceptionFor(httpResponse, sphereRequest, objectMapper,
-                config, httpRequest);
-            throw sphereException;
-        }
-        else {
-            try {
-                result = sphereRequest.deserialize(httpResponse);
-            }
-            catch (final JsonException e) {
-                final byte[] bytes = httpResponse.getResponseBody();
-                e.addNote("Cannot parse " + bytesToString(bytes));
-                throw e;
-            }
-        }
-        return result;
     }
 
     private static <T> SphereException createExceptionFor(final HttpResponse httpResponse,
@@ -157,7 +195,7 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         return clientConfig;
     }
 
-    static class CompatApiHttpClient extends AutoCloseableService implements ApiHttpClient {
+    public static class CompatApiHttpClient extends AutoCloseableService implements ApiHttpClient {
         private final ApiHttpClient apiHttpClient;
         private final ResponseSerializer serializer;
 

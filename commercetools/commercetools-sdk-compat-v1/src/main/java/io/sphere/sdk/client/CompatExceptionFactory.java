@@ -16,7 +16,7 @@ import io.sphere.sdk.models.errors.ErrorResponse;
 
 public class CompatExceptionFactory {
 
-    private final List<HttpResponseExceptionResponsibility> responsibilities = new ArrayList();
+    private final List<HttpResponseExceptionResponsibility> responsibilities = new ArrayList<>();
 
     CompatExceptionFactory() {
     }

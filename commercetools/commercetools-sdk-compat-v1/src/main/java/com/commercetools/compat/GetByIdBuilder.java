@@ -97,12 +97,6 @@ public class GetByIdBuilder {
         return get(request.apply(apiRoot), get);
     }
 
-    public ByProjectKeyCustomersByIDGet customer(final CustomerByIdGet getDsl) {
-        String id = getDsl.identifierToSearchFor();
-        requireNonNull(id);
-        return get(apiRoot.customers().withId(id).get(), getDsl);
-    }
-
     public ByProjectKeyCustomersByIDGet customer(final String id,
             final Function<CustomerByIdGet, CustomerByIdGet> getDsl) {
         requireNonNull(id);

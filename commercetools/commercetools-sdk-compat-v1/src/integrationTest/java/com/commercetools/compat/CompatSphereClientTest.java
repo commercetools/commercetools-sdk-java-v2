@@ -3,17 +3,24 @@ package com.commercetools.compat;
 
 import java.util.concurrent.ExecutionException;
 
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
+
 import io.sphere.sdk.carts.Cart;
 import io.sphere.sdk.carts.CartDraft;
 import io.sphere.sdk.carts.commands.CartCreateCommand;
+import io.sphere.sdk.carts.queries.CartByKeyGet;
 import io.sphere.sdk.categories.Category;
 import io.sphere.sdk.categories.queries.CategoryQuery;
+import io.sphere.sdk.client.NotFoundException;
 import io.sphere.sdk.client.SphereClient;
 import io.sphere.sdk.client.SphereClientConfig;
 import io.sphere.sdk.models.DefaultCurrencyUnits;
 import io.sphere.sdk.projects.Project;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.sphere.sdk.queries.PagedQueryResult;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -53,5 +60,73 @@ public class CompatSphereClientTest {
 
         Assertions.assertThat(result).isInstanceOf(Cart.class);
         Assertions.assertThat(result.getTotalPrice().getNumber().intValueExact()).isEqualTo(0);
+    }
+
+    @Test
+    public void compatApiHttpClient() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .buildClient();
+
+        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(CommercetoolsTestUtils.getProjectKey(),
+            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig);
+
+        Project v1Project = client.execute(ProjectGet.of()).toCompletableFuture().get();
+
+        Assertions.assertThat(v1Project).isInstanceOf(Project.class);
+        Assertions.assertThat(v1Project.getKey()).isEqualTo(projectKey);
+
+        final ProjectApiRoot apiRoot = ProjectApiRoot.fromClient(projectKey, apiHttpClient);
+        com.commercetools.api.models.project.Project v2Project = apiRoot.get().executeBlocking().getBody();
+
+        Assertions.assertThat(v2Project).isInstanceOf(com.commercetools.api.models.project.Project.class);
+        Assertions.assertThat(v2Project.getKey()).isEqualTo(projectKey);
+    }
+
+    @Test
+    public void compatApiHttpClientExceptions() {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .buildClient();
+
+        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(projectKey,
+            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig);
+
+        Assertions.assertThatThrownBy(() -> {
+            client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();
+        }).hasCauseInstanceOf(NotFoundException.class);
+    }
+
+    @Test
+    public void compatApiHttpClientExceptionsV2() {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .buildClient();
+
+        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(projectKey,
+            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig,
+            CompatSphereClient.ExceptionMode.SDK_V2);
+
+        Assertions.assertThatThrownBy(() -> {
+            client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();
+        }).hasCauseInstanceOf(io.vrap.rmf.base.client.error.NotFoundException.class);
     }
 }

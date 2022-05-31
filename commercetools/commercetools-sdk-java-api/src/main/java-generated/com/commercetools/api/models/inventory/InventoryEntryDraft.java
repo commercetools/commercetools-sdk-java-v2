@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft> {
 
     /**
-     *
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      */
     @NotNull
     @JsonProperty("sku")
@@ -49,35 +49,35 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *
+     *  <p>Overall amount of stock.</p>
      */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-     *
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     *
+     *  <p>Date and time of the next restock.</p>
      */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("custom")

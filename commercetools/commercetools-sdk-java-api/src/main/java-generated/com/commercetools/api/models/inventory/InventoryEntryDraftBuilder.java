@@ -45,7 +45,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder sku(final String sku) {
@@ -63,7 +63,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -74,7 +74,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder supplyChannel(
@@ -84,7 +84,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *
+     *  <p>Overall amount of stock.</p>
      */
 
     public InventoryEntryDraftBuilder quantityOnStock(final Long quantityOnStock) {
@@ -93,7 +93,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
      */
 
     public InventoryEntryDraftBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -102,7 +102,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *
+     *  <p>Date and time of the next restock.</p>
      */
 
     public InventoryEntryDraftBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -111,7 +111,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder custom(
@@ -121,7 +121,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
 
     public InventoryEntryDraftBuilder custom(

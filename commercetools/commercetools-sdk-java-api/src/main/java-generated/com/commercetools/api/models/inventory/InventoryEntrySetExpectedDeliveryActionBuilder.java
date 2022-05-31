@@ -27,7 +27,7 @@ public class InventoryEntrySetExpectedDeliveryActionBuilder
     private java.time.ZonedDateTime expectedDelivery;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public InventoryEntrySetExpectedDeliveryActionBuilder expectedDelivery(

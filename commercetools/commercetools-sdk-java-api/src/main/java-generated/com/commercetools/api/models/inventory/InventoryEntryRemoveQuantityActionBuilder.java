@@ -24,7 +24,7 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
     private Long quantity;
 
     /**
-     *
+     *  <p>Value to remove from <code>quantityOnStock</code>.</p>
      */
 
     public InventoryEntryRemoveQuantityActionBuilder quantity(final Long quantity) {

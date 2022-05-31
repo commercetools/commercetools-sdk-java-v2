@@ -27,7 +27,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
@@ -38,7 +38,7 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     }
 
     /**
-     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(

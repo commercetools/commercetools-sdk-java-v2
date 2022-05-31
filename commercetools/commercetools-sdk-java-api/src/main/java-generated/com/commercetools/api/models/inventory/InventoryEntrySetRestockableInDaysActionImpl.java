@@ -44,7 +44,7 @@ public class InventoryEntrySetRestockableInDaysActionImpl
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public Long getRestockableInDays() {

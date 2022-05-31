@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * InventoryEntryChangeQuantityAction
+ *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface InventoryEntryChangeQuantityAction extends InventoryEntryUpdate
     String CHANGE_QUANTITY = "changeQuantity";
 
     /**
-     *
+     *  <p>Value to set for <code>quantityOnStock</code>.</p>
      */
     @NotNull
     @JsonProperty("quantity")

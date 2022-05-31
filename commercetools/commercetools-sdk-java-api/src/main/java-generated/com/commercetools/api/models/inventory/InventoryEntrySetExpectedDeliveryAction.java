@@ -30,7 +30,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     String SET_EXPECTED_DELIVERY = "setExpectedDelivery";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("expectedDelivery")

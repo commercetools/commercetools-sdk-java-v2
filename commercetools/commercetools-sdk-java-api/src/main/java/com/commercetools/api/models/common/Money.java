@@ -196,22 +196,25 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
 
     @Override
     default MonetaryAmount[] divideAndRemainder(long divisor) {
+        MonetaryOperator op = createMoneyOperator();
         return Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
-                .map(amount -> createMoneyOperator().apply(amount))
+                .map(op::apply)
                 .toArray(MonetaryAmount[]::new);
     }
 
     @Override
     default MonetaryAmount[] divideAndRemainder(double divisor) {
+        MonetaryOperator op = createMoneyOperator();
         return Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
-                .map(amount -> createMoneyOperator().apply(amount))
+                .map(op::apply)
                 .toArray(MonetaryAmount[]::new);
     }
 
     @Override
     default MonetaryAmount[] divideAndRemainder(Number divisor) {
-        return (MonetaryAmount[]) Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
-                .map(amount -> createMoneyOperator().apply(amount))
+        MonetaryOperator op = createMoneyOperator();
+        return Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
+                .map(op::apply)
                 .toArray(MonetaryAmount[]::new);
     }
 

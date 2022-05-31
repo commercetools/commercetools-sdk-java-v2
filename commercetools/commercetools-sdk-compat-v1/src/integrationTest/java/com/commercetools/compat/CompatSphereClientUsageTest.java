@@ -4,13 +4,14 @@ package com.commercetools.compat;
 import java.util.concurrent.ExecutionException;
 
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
+
 import io.sphere.sdk.client.SphereClient;
 import io.sphere.sdk.client.SphereClientConfig;
 import io.sphere.sdk.projects.Project;
 import io.sphere.sdk.projects.queries.ProjectGet;
-
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

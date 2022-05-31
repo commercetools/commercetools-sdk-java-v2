@@ -3,7 +3,6 @@ package com.commercetools.api.models.common;
 
 import java.util.Arrays;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import javax.money.*;
 import javax.validation.constraints.NotNull;

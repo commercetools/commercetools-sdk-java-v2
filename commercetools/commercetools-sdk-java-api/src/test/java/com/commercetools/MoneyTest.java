@@ -151,4 +151,51 @@ public class MoneyTest {
         Assertions.assertThat(subTotal.isZero()).isTrue();
     }
 
+    @Test
+    public void testMoneyMonetaryAmount() {
+        Money money = Money.builder().centAmount(10L).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testCentPrecisionMoneyMonetaryAmount() {
+        Money money = TypedMoney.centPrecisionBuilder().centAmount(10L).fractionDigits(2).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testHighPrecisionMoneyMonetaryAmount() {
+        Money money = TypedMoney.highPrecisionBuilder()
+                .centAmount(1L)
+                .preciseAmount(10L)
+                .fractionDigits(3)
+                .currencyCode("EUR")
+                .build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(HighPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testCentPrecisionMoneyDraftMonetaryAmount() {
+        Money money = TypedMoneyDraft.centPrecisionBuilder().centAmount(10L).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyDraftImpl.class);
+    }
+
+    @Test
+    public void testHighPrecisionMoneyDraftMonetaryAmount() {
+        Money money = TypedMoneyDraft.highPrecisionBuilder()
+                .preciseAmount(10L)
+                .fractionDigits(3)
+                .currencyCode("EUR")
+                .build();
+        MonetaryAmount amount = money.multiply(1L);
+        Assertions.assertThat(amount).isExactlyInstanceOf(HighPrecisionMoneyDraftImpl.class);
+    }
 }

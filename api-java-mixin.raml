@@ -277,6 +277,10 @@ types:
       public default HighPrecisionMoneyDraft toDraft() {
           return HighPrecisionMoneyDraft.of(this);
       }
+      @Override
+      default MonetaryOperator createMoneyOperator() {
+          return amount -> MoneyUtil.of(amount, getFractionDigits());
+      }
   HighPrecisionMoneyDraft:
     (java-mixin): |
       public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
@@ -289,6 +293,22 @@ types:
           instance.setFractionDigits(template.getFractionDigits());
           instance.setPreciseAmount(template.getPreciseAmount());
           return instance;
+      }
+      @Override
+      default MonetaryOperator createMoneyOperator() {
+          return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
+      }
+  TypedMoney:
+    (java-mixin): |
+      @Override
+      default MonetaryOperator createMoneyOperator() {
+          return MoneyUtil::of;
+      }
+  TypedMoneyDraft:
+    (java-mixin): |
+      @Override
+      default MonetaryOperator createMoneyOperator() {
+          return MoneyUtil::draftOf;
       }
   Money:
     (java-mixin): |

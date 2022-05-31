@@ -1,7 +1,9 @@
 
 package com.commercetools.api.models.common;
 
+import java.util.Arrays;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.money.*;
 import javax.validation.constraints.NotNull;
@@ -94,6 +96,10 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
         };
     }
 
+    default MonetaryOperator createMoneyOperator() {
+        return MoneyUtil::of;
+    }
+
     @Override
     default MonetaryContext getContext() {
         return toMonetaryAmount().getContext();
@@ -136,112 +142,118 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
 
     @Override
     default MonetaryAmount add(MonetaryAmount augend) {
-        return toMonetaryAmount().add(augend);
+        return createMoneyOperator().apply(toMonetaryAmount().add(augend));
     }
 
     @Override
     default MonetaryAmount subtract(MonetaryAmount subtrahend) {
-        return toMonetaryAmount().subtract(subtrahend);
+        return createMoneyOperator().apply(toMonetaryAmount().subtract(subtrahend));
     }
 
     @Override
     default MonetaryAmount multiply(long multiplicand) {
-        return toMonetaryAmount().multiply(multiplicand);
+        return createMoneyOperator().apply(toMonetaryAmount().multiply(multiplicand));
     }
 
     @Override
     default MonetaryAmount multiply(double multiplicand) {
-        return toMonetaryAmount().multiply(multiplicand);
+        return createMoneyOperator().apply(toMonetaryAmount().multiply(multiplicand));
     }
 
     @Override
     default MonetaryAmount multiply(Number multiplicand) {
-        return toMonetaryAmount().multiply(multiplicand);
+        return createMoneyOperator().apply(toMonetaryAmount().multiply(multiplicand));
     }
 
     @Override
     default MonetaryAmount divide(long divisor) {
-        return toMonetaryAmount().divide(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divide(divisor));
     }
 
     @Override
     default MonetaryAmount divide(double divisor) {
-        return toMonetaryAmount().divide(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divide(divisor));
     }
 
     @Override
     default MonetaryAmount divide(Number divisor) {
-        return toMonetaryAmount().divide(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divide(divisor));
     }
 
     @Override
     default MonetaryAmount remainder(long divisor) {
-        return toMonetaryAmount().remainder(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().remainder(divisor));
     }
 
     @Override
     default MonetaryAmount remainder(double divisor) {
-        return toMonetaryAmount().remainder(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().remainder(divisor));
     }
 
     @Override
     default MonetaryAmount remainder(Number divisor) {
-        return toMonetaryAmount().remainder(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().remainder(divisor));
     }
 
     @Override
     default MonetaryAmount[] divideAndRemainder(long divisor) {
-        return toMonetaryAmount().divideAndRemainder(divisor);
+        return Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
+                .map(amount -> createMoneyOperator().apply(amount))
+                .toArray(MonetaryAmount[]::new);
     }
 
     @Override
     default MonetaryAmount[] divideAndRemainder(double divisor) {
-        return toMonetaryAmount().divideAndRemainder(divisor);
+        return Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
+                .map(amount -> createMoneyOperator().apply(amount))
+                .toArray(MonetaryAmount[]::new);
     }
 
     @Override
     default MonetaryAmount[] divideAndRemainder(Number divisor) {
-        return toMonetaryAmount().divideAndRemainder(divisor);
+        return (MonetaryAmount[]) Arrays.stream(toMonetaryAmount().divideAndRemainder(divisor))
+                .map(amount -> createMoneyOperator().apply(amount))
+                .toArray(MonetaryAmount[]::new);
     }
 
     @Override
     default MonetaryAmount divideToIntegralValue(long divisor) {
-        return toMonetaryAmount().divideToIntegralValue(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divideToIntegralValue(divisor));
     }
 
     @Override
     default MonetaryAmount divideToIntegralValue(double divisor) {
-        return toMonetaryAmount().divideToIntegralValue(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divideToIntegralValue(divisor));
     }
 
     @Override
     default MonetaryAmount divideToIntegralValue(Number divisor) {
-        return toMonetaryAmount().divideToIntegralValue(divisor);
+        return createMoneyOperator().apply(toMonetaryAmount().divideToIntegralValue(divisor));
     }
 
     @Override
     default MonetaryAmount scaleByPowerOfTen(int power) {
-        return toMonetaryAmount().scaleByPowerOfTen(power);
+        return createMoneyOperator().apply(toMonetaryAmount().scaleByPowerOfTen(power));
     }
 
     @Override
     default MonetaryAmount abs() {
-        return toMonetaryAmount().abs();
+        return createMoneyOperator().apply(toMonetaryAmount().abs());
     }
 
     @Override
     default MonetaryAmount negate() {
-        return toMonetaryAmount().negate();
+        return createMoneyOperator().apply(toMonetaryAmount().negate());
     }
 
     @Override
     default MonetaryAmount plus() {
-        return toMonetaryAmount().plus();
+        return createMoneyOperator().apply(toMonetaryAmount().plus());
     }
 
     @Override
     default MonetaryAmount stripTrailingZeros() {
-        return toMonetaryAmount().stripTrailingZeros();
+        return createMoneyOperator().apply(toMonetaryAmount().stripTrailingZeros());
     }
 
     @Override

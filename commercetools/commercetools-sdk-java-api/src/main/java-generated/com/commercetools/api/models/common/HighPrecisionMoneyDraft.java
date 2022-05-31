@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.money.MonetaryOperator;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -107,5 +108,10 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
                 return "TypeReference<HighPrecisionMoneyDraft>";
             }
         };
+    }
+
+    @Override
+    default MonetaryOperator createMoneyOperator() {
+        return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
     }
 }

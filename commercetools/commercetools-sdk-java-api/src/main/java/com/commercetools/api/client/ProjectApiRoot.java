@@ -19,6 +19,14 @@ public class ProjectApiRoot implements Closeable {
         this.apiHttpClient = apiHttpClient;
     }
 
+    public String getProjectKey() {
+        return projectKey;
+    }
+
+    public ApiHttpClient getApiHttpClient() {
+        return apiHttpClient;
+    }
+
     public static ProjectApiRoot of(final String projectKey) {
         return new ProjectApiRoot(projectKey, SerializerOnlyApiHttpClient.of());
     }

@@ -63,6 +63,11 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     }
 
     @Override
+    public URI getBaseUri() {
+        return baseUri;
+    }
+
+    @Override
     public ResponseSerializer getSerializerService() {
         return serializer;
     }

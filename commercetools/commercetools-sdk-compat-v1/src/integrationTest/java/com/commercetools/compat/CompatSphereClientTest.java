@@ -72,10 +72,7 @@ public class CompatSphereClientTest {
                         .build())
                 .buildClient();
 
-        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(CommercetoolsTestUtils.getProjectKey(),
-            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
-
-        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig);
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey);
 
         Project v1Project = client.execute(ProjectGet.of()).toCompletableFuture().get();
 
@@ -83,6 +80,29 @@ public class CompatSphereClientTest {
         Assertions.assertThat(v1Project.getKey()).isEqualTo(projectKey);
 
         final ProjectApiRoot apiRoot = ProjectApiRoot.fromClient(projectKey, apiHttpClient);
+        com.commercetools.api.models.project.Project v2Project = apiRoot.get().executeBlocking().getBody();
+
+        Assertions.assertThat(v2Project).isInstanceOf(com.commercetools.api.models.project.Project.class);
+        Assertions.assertThat(v2Project.getKey()).isEqualTo(projectKey);
+    }
+
+    @Test
+    public void compatApiRoot() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ProjectApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .build(projectKey);
+
+        SphereClient client = CompatSphereClient.of(apiRoot);
+
+        Project v1Project = client.execute(ProjectGet.of()).toCompletableFuture().get();
+
+        Assertions.assertThat(v1Project).isInstanceOf(Project.class);
+        Assertions.assertThat(v1Project.getKey()).isEqualTo(projectKey);
+
         com.commercetools.api.models.project.Project v2Project = apiRoot.get().executeBlocking().getBody();
 
         Assertions.assertThat(v2Project).isInstanceOf(com.commercetools.api.models.project.Project.class);
@@ -99,10 +119,7 @@ public class CompatSphereClientTest {
                         .build())
                 .buildClient();
 
-        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(projectKey,
-            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
-
-        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig);
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey);
 
         Assertions.assertThatThrownBy(() -> {
             client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();
@@ -119,11 +136,7 @@ public class CompatSphereClientTest {
                         .build())
                 .buildClient();
 
-        final SphereClientConfig sphereClientConfig = SphereClientConfig.of(projectKey,
-            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
-
-        SphereClient client = CompatSphereClient.of(apiHttpClient, sphereClientConfig,
-            CompatSphereClient.ExceptionMode.SDK_V2);
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey, CompatSphereClient.ExceptionMode.SDK_V2);
 
         Assertions.assertThatThrownBy(() -> {
             client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();

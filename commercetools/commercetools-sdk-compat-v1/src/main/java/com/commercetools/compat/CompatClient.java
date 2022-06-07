@@ -20,7 +20,8 @@ public class CompatClient implements ApiHttpClient {
         this.projectKey = projectKey;
     }
 
-    @Override public URI getBaseUri() {
+    @Override
+    public URI getBaseUri() {
         return client.getBaseUri();
     }
 

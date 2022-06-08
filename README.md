@@ -1,4 +1,4 @@
-# <img src="build/theme/resources/CT_cube_200px.png" width="40" align="center"></img> commercetools Composable Commerce JAVA SDK
+# commercetools Composable Commerce JAVA SDK
 
 
 [![][maven img]][maven]

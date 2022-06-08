@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a OrderEdit.</p>
+ *  <p>ResourceIdentifier to an OrderEdit.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentifier, ModelBase {

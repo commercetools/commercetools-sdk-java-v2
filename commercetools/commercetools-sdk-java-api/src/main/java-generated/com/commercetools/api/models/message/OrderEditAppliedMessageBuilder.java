@@ -195,7 +195,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Reference to a OrderEdit.</p>
+     *  <p>Reference to an OrderEdit.</p>
      */
 
     public OrderEditAppliedMessageBuilder edit(
@@ -205,7 +205,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Reference to a OrderEdit.</p>
+     *  <p>Reference to an OrderEdit.</p>
      */
 
     public OrderEditAppliedMessageBuilder edit(final com.commercetools.api.models.order_edit.OrderEditReference edit) {

@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.standalone_price;
+package com.commercetools.api.models.message;
 
 import java.time.*;
 import java.util.*;
@@ -15,35 +15,37 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Produces the StandalonePriceValueChangedMessage.</p>
+ *  <p>Generated after a successful Change Value update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StandalonePriceChangeValueActionImpl implements StandalonePriceChangeValueAction, ModelBase {
+public class StandalonePriceValueChangedMessagePayloadImpl
+        implements StandalonePriceValueChangedMessagePayload, ModelBase {
 
-    private String action;
+    private String type;
 
     private com.commercetools.api.models.common.Money value;
 
     @JsonCreator
-    StandalonePriceChangeValueActionImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value) {
+    StandalonePriceValueChangedMessagePayloadImpl(
+            @JsonProperty("value") final com.commercetools.api.models.common.Money value) {
         this.value = value;
-        this.action = CHANGE_VALUE;
+        this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
-    public StandalonePriceChangeValueActionImpl() {
-        this.action = CHANGE_VALUE;
+    public StandalonePriceValueChangedMessagePayloadImpl() {
+        this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
     /**
      *
      */
 
-    public String getAction() {
-        return this.action;
+    public String getType() {
+        return this.type;
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>The new value of the updated StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -62,14 +64,14 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StandalonePriceChangeValueActionImpl that = (StandalonePriceChangeValueActionImpl) o;
+        StandalonePriceValueChangedMessagePayloadImpl that = (StandalonePriceValueChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(value).toHashCode();
     }
 
 }

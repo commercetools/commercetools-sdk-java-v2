@@ -4,6 +4,7 @@ This guide helps developers to migrate from the JVM SDK v1 to the Java SDK v2.
 
 ## Table of content
 
+* [Compatibility Module](#compatibility-module)
 * [Client Configuration and Creation](#client-configuration-and-creation)
 * [Timeout Setting](#timout-setting)
 * [Headers](#headers)
@@ -14,6 +15,12 @@ This guide helps developers to migrate from the JVM SDK v1 to the Java SDK v2.
 * [Update Command](#update-command)
 * [Query - GetById](#query-getbyid)
 * [Query](#query)
+
+<a id="compatibility-module"></a>
+### SDK v1 compatibility module
+
+The SDK provides a compatibility module. This module e.g. allows the usage of the SDKv2 client
+with in conjunction with all the commands of the SDKv1. For more details please see [javadoc](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/Compatibility.html)
 
 <a id="client-configuration-and-creation"></a>
 ### Client Configuration and Creation

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.money.MonetaryOperator;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -67,5 +69,9 @@ public interface TypedMoneyDraft extends Money {
                 return "TypeReference<TypedMoneyDraft>";
             }
         };
+    }
+
+    default MonetaryOperator createMoneyOperator() {
+        return MoneyUtil::draftOf;
     }
 }

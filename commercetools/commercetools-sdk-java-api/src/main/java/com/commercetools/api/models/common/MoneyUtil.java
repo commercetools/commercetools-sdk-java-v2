@@ -126,16 +126,18 @@ public class MoneyUtil {
 
     protected static BigDecimal queryFrom(final MonetaryAmount amount) {
         Objects.requireNonNull(amount, "Amount required.");
-        BigDecimal number = amount.getNumber().numberValue(BigDecimal.class);
-        CurrencyUnit cur = amount.getCurrency();
-        number = number.setScale(Math.max(0, cur.getDefaultFractionDigits()), RoundingMode.HALF_EVEN);
-        return number.movePointRight(number.scale());
+        final CurrencyUnit cur = amount.getCurrency();
+        final BigDecimal number = amount.getNumber()
+                .numberValue(BigDecimal.class)
+                .setScale(Math.max(0, cur.getDefaultFractionDigits()), RoundingMode.HALF_EVEN);
+        return number.scaleByPowerOfTen(number.scale());
     }
 
     protected static BigDecimal queryFrom(final MonetaryAmount amount, final int fractionsDigit) {
         Objects.requireNonNull(amount, "Amount required.");
-        BigDecimal number = amount.getNumber().numberValue(BigDecimal.class);
-        number = number.setScale(fractionsDigit, RoundingMode.HALF_EVEN);
-        return number.movePointRight(number.scale());
+        final BigDecimal number = amount.getNumber()
+                .numberValue(BigDecimal.class)
+                .setScale(Math.max(0, fractionsDigit), RoundingMode.HALF_EVEN);
+        return number.scaleByPowerOfTen(number.scale());
     }
 }

@@ -1,8 +1,3 @@
-def ctpJvmSdkVersion = {
-    strictly '[1.62.0,)'
-    prefer '2.0.0'
-}
-
 dependencies {
 
     api project(':rmf:rmf-java-base')
@@ -14,12 +9,13 @@ dependencies {
     api commons.lang3
 
     api project(':commercetools:commercetools-sdk-java-api')
-    api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version ctpJvmSdkVersion
+    api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version versions.ctpJvmSdk
+    api "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
 
     testImplementation project(':commercetools:commercetools-http-client')
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version ctpJvmSdkVersion
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version ctpJvmSdkVersion
-    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version ctpJvmSdkVersion
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version versions.ctpJvmSdk
+    testImplementation "com.commercetools.sdk.jvm.core:commercetools-java-client" version versions.ctpJvmSdk
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

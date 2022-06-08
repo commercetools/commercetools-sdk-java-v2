@@ -151,4 +151,78 @@ public class MoneyTest {
         Assertions.assertThat(subTotal.isZero()).isTrue();
     }
 
+    @Test
+    public void testMoneyMonetaryAmount() {
+        Money money = Money.builder().centAmount(10L).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testCentPrecisionMoneyMonetaryAmount() {
+        Money money = TypedMoney.centPrecisionBuilder().centAmount(10L).fractionDigits(2).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testHighPrecisionMoneyMonetaryAmount() {
+        Money money = TypedMoney.highPrecisionBuilder()
+                .centAmount(1L)
+                .preciseAmount(10L)
+                .fractionDigits(3)
+                .currencyCode("EUR")
+                .build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(HighPrecisionMoneyImpl.class);
+    }
+
+    @Test
+    public void testCentPrecisionMoneyDraftMonetaryAmount() {
+        Money money = TypedMoneyDraft.centPrecisionBuilder().centAmount(10L).currencyCode("EUR").build();
+        MonetaryAmount amount = money.multiply(1L);
+
+        Assertions.assertThat(amount).isExactlyInstanceOf(CentPrecisionMoneyDraftImpl.class);
+    }
+
+    @Test
+    public void testHighPrecisionMoneyDraftMonetaryAmount() {
+        Money money = TypedMoneyDraft.highPrecisionBuilder()
+                .preciseAmount(10L)
+                .fractionDigits(3)
+                .currencyCode("EUR")
+                .build();
+        MonetaryAmount amount = money.multiply(1L);
+        Assertions.assertThat(amount).isExactlyInstanceOf(HighPrecisionMoneyDraftImpl.class);
+    }
+
+    @Test
+    public void testMoneyUtilQueryFrom() {
+        final MonetaryAmount eur = org.javamoney.moneta.Money.of(10.00501, "EUR");
+        Assertions.assertThat(MoneyUtil.amountToCents(eur)).isEqualTo(1001);
+
+        final MonetaryAmount jpy = org.javamoney.moneta.Money.of(10.00501, "JPY");
+        Assertions.assertThat(MoneyUtil.amountToCents(jpy)).isEqualTo(10);
+
+        final MonetaryAmount fastEur = org.javamoney.moneta.FastMoney.of(10.00501, "EUR");
+        Assertions.assertThat(MoneyUtil.amountToCents(fastEur)).isEqualTo(1001);
+
+        final MonetaryAmount fastJpy = org.javamoney.moneta.FastMoney.of(10.00501, "JPY");
+        Assertions.assertThat(MoneyUtil.amountToCents(fastJpy)).isEqualTo(10);
+
+        final MonetaryAmount highEur = org.javamoney.moneta.Money.of(10.00501, "EUR");
+        Assertions.assertThat(MoneyUtil.amountToPreciseAmount(highEur, 3)).isEqualTo(10005);
+
+        final MonetaryAmount highJpy = org.javamoney.moneta.Money.of(10.00501, "JPY");
+        Assertions.assertThat(MoneyUtil.amountToPreciseAmount(highJpy, 3)).isEqualTo(10005);
+
+        final MonetaryAmount highFastEur = org.javamoney.moneta.FastMoney.of(10.00501, "EUR");
+        Assertions.assertThat(MoneyUtil.amountToPreciseAmount(highFastEur, 3)).isEqualTo(10005);
+
+        final MonetaryAmount highFastJpy = org.javamoney.moneta.FastMoney.of(10.00501, "JPY");
+        Assertions.assertThat(MoneyUtil.amountToPreciseAmount(highFastJpy, 3)).isEqualTo(10005);
+    }
 }

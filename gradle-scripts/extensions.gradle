@@ -15,7 +15,7 @@ ext {
             completableFutures: "0.3.5",
             ctpJvmSdk: {
                 strictly '[1.62.0,)'
-                prefer '2.0.0'
+                prefer '2.8.0'
             }
     ]
 

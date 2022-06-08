@@ -1,6 +1,7 @@
 
 package io.vrap.rmf.base.client;
 
+import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -58,6 +59,11 @@ public class SerializerOnlyApiHttpClient implements ApiHttpClient {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
         throw new IllegalStateException(NO_EXECUTABLE_API_CLIENT);
+    }
+
+    @Override
+    public URI getBaseUri() {
+        return null;
     }
 
     @Override

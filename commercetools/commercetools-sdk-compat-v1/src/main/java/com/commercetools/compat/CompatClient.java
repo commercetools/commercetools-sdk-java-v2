@@ -1,6 +1,7 @@
 
 package com.commercetools.compat;
 
+import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
@@ -17,6 +18,11 @@ public class CompatClient implements ApiHttpClient {
     private CompatClient(final ApiHttpClient client, final String projectKey) {
         this.client = client;
         this.projectKey = projectKey;
+    }
+
+    @Override
+    public URI getBaseUri() {
+        return client.getBaseUri();
     }
 
     public static CompatClient of(final ApiHttpClient client, final String projectKey) {

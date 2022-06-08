@@ -5,9 +5,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import com.commercetools.api.client.*;
 import com.commercetools.api.models.project.Project;
 
 import io.sphere.sdk.client.SphereClientConfig;
+import io.sphere.sdk.customers.expansion.CustomerExpansionModel;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.HttpStatusCode;
@@ -55,5 +57,55 @@ public class CompatibilityTest {
 
         ApiHttpClient client = CompatClientFactory.of(clientConfig);
         Assertions.assertThat(client).isInstanceOf(ApiHttpClient.class);
+    }
+
+    @Test
+    public void queryPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersGet request = CompatBuilder.query(root)
+                .customer(customerQuery -> customerQuery.withLimit(1));
+
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(query).isEqualTo("limit=1");
+    }
+
+    @Test
+    public void getByIdPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersByIDGet request = CompatBuilder.getById(root)
+                .customer("abc",
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
+    }
+
+    @Test
+    public void getByKeyPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersKeyByKeyGet request = CompatBuilder.getByKey(root)
+                .customer("abc",
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/key=abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
+    }
+
+    @Test
+    public void deleteByKeyPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersByIDDelete request = CompatBuilder.delete(root)
+                .customer("abc", 1L,
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("/test/customers/abc");
+        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
     }
 }

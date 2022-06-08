@@ -520,7 +520,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return this;
     }
 
-    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
+    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,
+            final boolean replace) {
+        if (!replace && correlationIdMiddleware != null) {
+            return this;
+        }
         if (correlationIdProvider != null) {
             correlationIdMiddleware = () -> (request, next) -> {
                 if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {
@@ -531,6 +535,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             };
         }
         return this;
+    }
+
+    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
+        return addCorrelationIdProvider(correlationIdProvider, true);
     }
 
     /**

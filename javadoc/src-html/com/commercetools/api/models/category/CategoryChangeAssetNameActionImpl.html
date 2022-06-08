@@ -27,82 +27,101 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNameAction, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private String action;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private String assetId;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private String assetKey;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.common.LocalizedString name;</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonCreator</span>
-<span class="source-line-no">029</span><span id="line.29">    CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId,</span>
-<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("assetKey") final String assetKey,</span>
-<span class="source-line-no">031</span><span id="line.31">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">032</span><span id="line.32">        this.assetId = assetId;</span>
-<span class="source-line-no">033</span><span id="line.33">        this.assetKey = assetKey;</span>
-<span class="source-line-no">034</span><span id="line.34">        this.name = name;</span>
-<span class="source-line-no">035</span><span id="line.35">        this.action = CHANGE_ASSET_NAME;</span>
-<span class="source-line-no">036</span><span id="line.36">    }</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public CategoryChangeAssetNameActionImpl() {</span>
-<span class="source-line-no">039</span><span id="line.39">        this.action = CHANGE_ASSET_NAME;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public String getAction() {</span>
-<span class="source-line-no">043</span><span id="line.43">        return this.action;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public String getAssetId() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return this.assetId;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public String getAssetKey() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return this.assetKey;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.name;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setAssetId(final String assetId) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.assetId = assetId;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setAssetKey(final String assetKey) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.assetKey = assetKey;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.name = name;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @Override</span>
-<span class="source-line-no">071</span><span id="line.71">    public boolean equals(Object o) {</span>
-<span class="source-line-no">072</span><span id="line.72">        if (this == o)</span>
-<span class="source-line-no">073</span><span id="line.73">            return true;</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">076</span><span id="line.76">            return false;</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">        CategoryChangeAssetNameActionImpl that = (CategoryChangeAssetNameActionImpl) o;</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">081</span><span id="line.81">                .append(assetId, that.assetId)</span>
-<span class="source-line-no">082</span><span id="line.82">                .append(assetKey, that.assetKey)</span>
-<span class="source-line-no">083</span><span id="line.83">                .append(name, that.name)</span>
-<span class="source-line-no">084</span><span id="line.84">                .isEquals();</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    @Override</span>
-<span class="source-line-no">088</span><span id="line.88">    public int hashCode() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(name).toHashCode();</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">}</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> * CategoryChangeAssetNameAction</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNameAction, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private String action;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private String assetId;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private String assetKey;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.common.LocalizedString name;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    @JsonCreator</span>
+<span class="source-line-no">032</span><span id="line.32">    CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId,</span>
+<span class="source-line-no">033</span><span id="line.33">            @JsonProperty("assetKey") final String assetKey,</span>
+<span class="source-line-no">034</span><span id="line.34">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">035</span><span id="line.35">        this.assetId = assetId;</span>
+<span class="source-line-no">036</span><span id="line.36">        this.assetKey = assetKey;</span>
+<span class="source-line-no">037</span><span id="line.37">        this.name = name;</span>
+<span class="source-line-no">038</span><span id="line.38">        this.action = CHANGE_ASSET_NAME;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public CategoryChangeAssetNameActionImpl() {</span>
+<span class="source-line-no">042</span><span id="line.42">        this.action = CHANGE_ASSET_NAME;</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     *</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public String getAction() {</span>
+<span class="source-line-no">050</span><span id="line.50">        return this.action;</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    /**</span>
+<span class="source-line-no">054</span><span id="line.54">     *</span>
+<span class="source-line-no">055</span><span id="line.55">     */</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public String getAssetId() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return this.assetId;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     *</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public String getAssetKey() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return this.assetKey;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    /**</span>
+<span class="source-line-no">070</span><span id="line.70">     *</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.name;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setAssetId(final String assetId) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.assetId = assetId;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setAssetKey(final String assetKey) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.assetKey = assetKey;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">086</span><span id="line.86">        this.name = name;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    @Override</span>
+<span class="source-line-no">090</span><span id="line.90">    public boolean equals(Object o) {</span>
+<span class="source-line-no">091</span><span id="line.91">        if (this == o)</span>
+<span class="source-line-no">092</span><span id="line.92">            return true;</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">095</span><span id="line.95">            return false;</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">        CategoryChangeAssetNameActionImpl that = (CategoryChangeAssetNameActionImpl) o;</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">100</span><span id="line.100">                .append(assetId, that.assetId)</span>
+<span class="source-line-no">101</span><span id="line.101">                .append(assetKey, that.assetKey)</span>
+<span class="source-line-no">102</span><span id="line.102">                .append(name, that.name)</span>
+<span class="source-line-no">103</span><span id="line.103">                .isEquals();</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    @Override</span>
+<span class="source-line-no">107</span><span id="line.107">    public int hashCode() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(name).toHashCode();</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">}</span>
 
 
 

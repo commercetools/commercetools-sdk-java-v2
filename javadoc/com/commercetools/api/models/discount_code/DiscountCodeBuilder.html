@@ -83,9 +83,27 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.12">DiscountCodeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.32">DiscountCodeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</span></div>
+<div class="block">DiscountCodeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     DiscountCode discountCode = DiscountCode.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .code("{code}")
+             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+             .isActive(true)
+             .plusReferences(referencesBuilder -> referencesBuilder)
+             .plusGroups(groupsBuilder -> groupsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +133,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#applicationVersion(java.lang.Long)">applicationVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;applicationVersion)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Used and managed by the API and must not be used in customer logic.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -126,37 +146,59 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#cartDiscounts(com.commercetools.api.models.cart_discount.CartDiscountReference...)">cartDiscounts</a></span>&#8203;(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#cartDiscounts(java.util.List)">cartDiscounts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;cartDiscounts)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#cartPredicate(java.lang.String)">cartPredicate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cartPredicate)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">DiscountCode can only be applied to Carts that match this predicate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#code(java.lang.String)">code</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the DiscountCode was initially created.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)">createdBy</a></span>&#8203;(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdBy(java.util.function.Function)">createdBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(com.commercetools.api.models.type.CustomFields)">custom</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Custom Fields of the DiscountCode.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(java.util.function.Function)">custom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Custom Fields of the DiscountCode.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(com.commercetools.api.models.common.LocalizedString)">description</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Description of the DiscountCode.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(java.util.function.Function)">description</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Description of the DiscountCode.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getApplicationVersion()">getApplicationVersion</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -219,37 +261,59 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#groups(java.lang.String...)">groups</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Groups to which the DiscountCode belongs to.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#groups(java.util.List)">groups</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Groups to which the DiscountCode belongs to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Unique identifier of the DiscountCode.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#isActive(java.lang.Boolean)">isActive</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isActive)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Indicates if the DiscountCode is active and can be applied to the Cart.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the DiscountCode was last updated.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">lastModifiedBy</a></span>&#8203;(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedBy(java.util.function.Function)">lastModifiedBy</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#maxApplications(java.lang.Long)">maxApplications</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplications)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Number of times the DiscountCode can be applied.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#maxApplicationsPerCustomer(java.lang.Long)">maxApplicationsPerCustomer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported).</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(com.commercetools.api.models.common.LocalizedString)">name</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the DiscountCode.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.util.function.Function)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the DiscountCode.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -258,40 +322,64 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCartDiscounts(com.commercetools.api.models.cart_discount.CartDiscountReference...)">plusCartDiscounts</a></span>&#8203;(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCartDiscounts(java.util.function.Function)">plusCartDiscounts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusGroups(java.lang.String...)">plusGroups</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Groups to which the DiscountCode belongs to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusReferences(com.commercetools.api.models.common.Reference...)">plusReferences</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Array generated from the Cart predicate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusReferences(java.util.function.Function)">plusReferences</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Array generated from the Cart predicate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#references(com.commercetools.api.models.common.Reference...)">references</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Array generated from the Cart predicate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#references(java.util.List)">references</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&nbsp;references)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Array generated from the Cart predicate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#validFrom(java.time.ZonedDateTime)">validFrom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) from which the DiscountCode is effective.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#validUntil(java.time.ZonedDateTime)">validUntil</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) until which the DiscountCode is effective.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Current version of the DiscountCode.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withCartDiscounts(java.util.function.Function)">withCartDiscounts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withReferences(java.util.function.Function)">withReferences</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Array generated from the Cart predicate.</div>
+</div>
 </div>
 </div>
 </div>
@@ -312,7 +400,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.13">DiscountCodeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.33">DiscountCodeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -326,359 +414,394 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.66">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.90">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><p>Unique identifier of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.71">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.99">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><p>Current version of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.76">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.108">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><p>Date and time (UTC) the DiscountCode was initially created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.81">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.117">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><p>Date and time (UTC) the DiscountCode was last updated.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.86">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.126">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.92">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.136">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(java.util.function.Function)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.98">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.146">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.104">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.156">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.109">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.165">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Name of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(com.commercetools.api.models.common.LocalizedString)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.115">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.175">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="block"><p>Name of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.120">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.184">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Description of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(com.commercetools.api.models.common.LocalizedString)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.126">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.194">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="block"><p>Description of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="code(java.lang.String)">
 <h3>code</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.132">code</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.204">code</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
+<div class="block"><p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartDiscounts(com.commercetools.api.models.cart_discount.CartDiscountReference...)">
 <h3>cartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.137">cartDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.213">cartDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</span></div>
+<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartDiscounts(java.util.List)">
 <h3>cartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.143">cartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;cartDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.223">cartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;cartDiscounts)</span></div>
+<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusCartDiscounts(com.commercetools.api.models.cart_discount.CartDiscountReference...)">
 <h3>plusCartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.149">plusCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.233">plusCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;cartDiscounts)</span></div>
+<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusCartDiscounts(java.util.function.Function)">
 <h3>plusCartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.158">plusCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.246">plusCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartDiscounts(java.util.function.Function)">
 <h3>withCartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.168">withCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.260">withCartDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,&#8203;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartPredicate(java.lang.String)">
 <h3>cartPredicate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.176">cartPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.272">cartPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cartPredicate)</span></div>
+<div class="block"><p>DiscountCode can only be applied to Carts that match this predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="isActive(java.lang.Boolean)">
 <h3>isActive</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.181">isActive</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isActive)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.281">isActive</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isActive)</span></div>
+<div class="block"><p>Indicates if the DiscountCode is active and can be applied to the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="references(com.commercetools.api.models.common.Reference...)">
 <h3>references</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.186">references</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.290">references</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</span></div>
+<div class="block"><p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="references(java.util.List)">
 <h3>references</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.191">references</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&nbsp;references)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.299">references</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&nbsp;references)</span></div>
+<div class="block"><p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusReferences(com.commercetools.api.models.common.Reference...)">
 <h3>plusReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.197">plusReferences</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.309">plusReferences</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</span></div>
+<div class="block"><p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusReferences(java.util.function.Function)">
 <h3>plusReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.205">plusReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.321">plusReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReferences(java.util.function.Function)">
 <h3>withReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.214">withReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.334">withReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="maxApplications(java.lang.Long)">
 <h3>maxApplications</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.221">maxApplications</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.345">maxApplications</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplications)</span></div>
+<div class="block"><p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="maxApplicationsPerCustomer(java.lang.Long)">
 <h3>maxApplicationsPerCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.226">maxApplicationsPerCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.354">maxApplicationsPerCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</span></div>
+<div class="block"><p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.231">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.363">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Custom Fields of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(com.commercetools.api.models.type.CustomFields)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.237">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.373">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom Fields of the DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="groups(java.lang.String...)">
 <h3>groups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.242">groups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.382">groups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
+<div class="block"><p>Groups to which the DiscountCode belongs to.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="groups(java.util.List)">
 <h3>groups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.247">groups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.391">groups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</span></div>
+<div class="block"><p>Groups to which the DiscountCode belongs to.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusGroups(java.lang.String...)">
 <h3>plusGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.252">plusGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.400">plusGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
+<div class="block"><p>Groups to which the DiscountCode belongs to.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="validFrom(java.time.ZonedDateTime)">
 <h3>validFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.260">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.412">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="block"><p>Date and time (UTC) from which the DiscountCode is effective.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="validUntil(java.time.ZonedDateTime)">
 <h3>validUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.265">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.421">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
+<div class="block"><p>Date and time (UTC) until which the DiscountCode is effective.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="applicationVersion(java.lang.Long)">
 <h3>applicationVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.270">applicationVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.430">applicationVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;applicationVersion)</span></div>
+<div class="block"><p>Used and managed by the API and must not be used in customer logic. The value can change at any time due to internal and external factors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.275">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.435">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.279">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.439">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.283">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.443">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.287">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.447">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.291">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.451">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.296">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.456">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.301">getName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.461">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.306">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.466">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCode()">
 <h3>getCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.311">getCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.471">getCode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCartDiscounts()">
 <h3>getCartDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.315">getCartDiscounts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.475">getCartDiscounts</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCartPredicate()">
 <h3>getCartPredicate</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.319">getCartPredicate</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.479">getCartPredicate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsActive()">
 <h3>getIsActive</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.324">getIsActive</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.484">getIsActive</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReferences()">
 <h3>getReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.328">getReferences</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.488">getReferences</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMaxApplications()">
 <h3>getMaxApplications</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.332">getMaxApplications</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.492">getMaxApplications</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMaxApplicationsPerCustomer()">
 <h3>getMaxApplicationsPerCustomer</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.337">getMaxApplicationsPerCustomer</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.497">getMaxApplicationsPerCustomer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.342">getCustom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.502">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getGroups()">
 <h3>getGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.347">getGroups</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.507">getGroups</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.351">getValidFrom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.511">getValidFrom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.356">getValidUntil</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.516">getValidUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getApplicationVersion()">
 <h3>getApplicationVersion</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.361">getApplicationVersion</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.521">getApplicationVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.366">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.526">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
@@ -688,20 +811,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.384">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.544">buildUnchecked</a></span>()</div>
 <div class="block">builds DiscountCode without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.390">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.550">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.discount_code.DiscountCode)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.394">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#line.554">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

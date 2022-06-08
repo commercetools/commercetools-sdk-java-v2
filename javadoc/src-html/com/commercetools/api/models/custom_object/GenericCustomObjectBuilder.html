@@ -21,166 +21,170 @@
 <span class="source-line-no">008</span><span id="line.8"></span>
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">public class GenericCustomObjectBuilder&lt;TValue&gt; implements Builder&lt;GenericCustomObject&lt;TValue&gt;&gt; {</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private String id;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private Long version;</span>
+<span class="source-line-no">011</span><span id="line.11">/**</span>
+<span class="source-line-no">012</span><span id="line.12"> *</span>
+<span class="source-line-no">013</span><span id="line.13"> * @param &lt;TValue&gt; The type of the value of this custom object.</span>
+<span class="source-line-no">014</span><span id="line.14"> */</span>
+<span class="source-line-no">015</span><span id="line.15">public class GenericCustomObjectBuilder&lt;TValue&gt; implements Builder&lt;GenericCustomObject&lt;TValue&gt;&gt; {</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">017</span><span id="line.17">    private String id;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">019</span><span id="line.19">    private Long version;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    @Nullable</span>
-<span class="source-line-no">022</span><span id="line.22">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @Nullable</span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private String container;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private String key;</span>
+<span class="source-line-no">021</span><span id="line.21">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @Nullable</span>
+<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private TValue value;</span>
+<span class="source-line-no">031</span><span id="line.31">    private String container;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public GenericCustomObjectBuilder&lt;TValue&gt; id(final String id) {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.id = id;</span>
-<span class="source-line-no">035</span><span id="line.35">        return this;</span>
-<span class="source-line-no">036</span><span id="line.36">    }</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public GenericCustomObjectBuilder&lt;TValue&gt; version(final Long version) {</span>
-<span class="source-line-no">039</span><span id="line.39">        this.version = version;</span>
-<span class="source-line-no">040</span><span id="line.40">        return this;</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public GenericCustomObjectBuilder&lt;TValue&gt; createdAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">044</span><span id="line.44">        this.createdAt = createdAt;</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedBy(</span>
-<span class="source-line-no">054</span><span id="line.54">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedBy(</span>
-<span class="source-line-no">060</span><span id="line.60">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">061</span><span id="line.61">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">062</span><span id="line.62">        return this;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public GenericCustomObjectBuilder&lt;TValue&gt; createdBy(</span>
-<span class="source-line-no">066</span><span id="line.66">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public GenericCustomObjectBuilder&lt;TValue&gt; createdBy(</span>
-<span class="source-line-no">072</span><span id="line.72">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.createdBy = createdBy;</span>
-<span class="source-line-no">074</span><span id="line.74">        return this;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public GenericCustomObjectBuilder&lt;TValue&gt; container(final String container) {</span>
-<span class="source-line-no">078</span><span id="line.78">        this.container = container;</span>
-<span class="source-line-no">079</span><span id="line.79">        return this;</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public GenericCustomObjectBuilder&lt;TValue&gt; key(final String key) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.key = key;</span>
-<span class="source-line-no">084</span><span id="line.84">        return this;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public GenericCustomObjectBuilder&lt;TValue&gt; value(final TValue value) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.value = value;</span>
-<span class="source-line-no">089</span><span id="line.89">        return this;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public String getId() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.id;</span>
+<span class="source-line-no">033</span><span id="line.33">    private String key;</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    private TValue value;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public GenericCustomObjectBuilder&lt;TValue&gt; id(final String id) {</span>
+<span class="source-line-no">038</span><span id="line.38">        this.id = id;</span>
+<span class="source-line-no">039</span><span id="line.39">        return this;</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public GenericCustomObjectBuilder&lt;TValue&gt; version(final Long version) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.version = version;</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public GenericCustomObjectBuilder&lt;TValue&gt; createdAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.createdAt = createdAt;</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">053</span><span id="line.53">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">054</span><span id="line.54">        return this;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedBy(</span>
+<span class="source-line-no">058</span><span id="line.58">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public GenericCustomObjectBuilder&lt;TValue&gt; lastModifiedBy(</span>
+<span class="source-line-no">064</span><span id="line.64">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">065</span><span id="line.65">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">066</span><span id="line.66">        return this;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public GenericCustomObjectBuilder&lt;TValue&gt; createdBy(</span>
+<span class="source-line-no">070</span><span id="line.70">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
+<span class="source-line-no">071</span><span id="line.71">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
+<span class="source-line-no">072</span><span id="line.72">        return this;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public GenericCustomObjectBuilder&lt;TValue&gt; createdBy(</span>
+<span class="source-line-no">076</span><span id="line.76">            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.createdBy = createdBy;</span>
+<span class="source-line-no">078</span><span id="line.78">        return this;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public GenericCustomObjectBuilder&lt;TValue&gt; container(final String container) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.container = container;</span>
+<span class="source-line-no">083</span><span id="line.83">        return this;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public GenericCustomObjectBuilder&lt;TValue&gt; key(final String key) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.key = key;</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public GenericCustomObjectBuilder&lt;TValue&gt; value(final TValue value) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.value = value;</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public Long getVersion() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.version;</span>
+<span class="source-line-no">096</span><span id="line.96">    public String getId() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return this.id;</span>
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return this.createdAt;</span>
+<span class="source-line-no">100</span><span id="line.100">    public Long getVersion() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return this.version;</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return this.lastModifiedAt;</span>
+<span class="source-line-no">104</span><span id="line.104">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return this.createdAt;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    @Nullable</span>
-<span class="source-line-no">109</span><span id="line.109">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">110</span><span id="line.110">        return this.lastModifiedBy;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    @Nullable</span>
-<span class="source-line-no">114</span><span id="line.114">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return this.createdBy;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public String getContainer() {</span>
-<span class="source-line-no">119</span><span id="line.119">        return this.container;</span>
+<span class="source-line-no">108</span><span id="line.108">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return this.lastModifiedAt;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    @Nullable</span>
+<span class="source-line-no">113</span><span id="line.113">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.lastModifiedBy;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    @Nullable</span>
+<span class="source-line-no">118</span><span id="line.118">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return this.createdBy;</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public String getKey() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return this.key;</span>
+<span class="source-line-no">122</span><span id="line.122">    public String getContainer() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return this.container;</span>
 <span class="source-line-no">124</span><span id="line.124">    }</span>
 <span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public TValue getValue() {</span>
-<span class="source-line-no">127</span><span id="line.127">        return this.value;</span>
+<span class="source-line-no">126</span><span id="line.126">    public String getKey() {</span>
+<span class="source-line-no">127</span><span id="line.127">        return this.key;</span>
 <span class="source-line-no">128</span><span id="line.128">    }</span>
 <span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public GenericCustomObject&lt;TValue&gt; build() {</span>
-<span class="source-line-no">131</span><span id="line.131">        Objects.requireNonNull(id, CustomObject.class + ": id is missing");</span>
-<span class="source-line-no">132</span><span id="line.132">        Objects.requireNonNull(version, CustomObject.class + ": version is missing");</span>
-<span class="source-line-no">133</span><span id="line.133">        Objects.requireNonNull(createdAt, CustomObject.class + ": createdAt is missing");</span>
-<span class="source-line-no">134</span><span id="line.134">        Objects.requireNonNull(lastModifiedAt, CustomObject.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">135</span><span id="line.135">        Objects.requireNonNull(container, CustomObject.class + ": container is missing");</span>
-<span class="source-line-no">136</span><span id="line.136">        Objects.requireNonNull(key, CustomObject.class + ": key is missing");</span>
-<span class="source-line-no">137</span><span id="line.137">        Objects.requireNonNull(value, CustomObject.class + ": value is missing");</span>
-<span class="source-line-no">138</span><span id="line.138">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">139</span><span id="line.139">            container, key, value);</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    /**</span>
-<span class="source-line-no">143</span><span id="line.143">     * builds CustomObject without checking for non null required values</span>
-<span class="source-line-no">144</span><span id="line.144">     */</span>
-<span class="source-line-no">145</span><span id="line.145">    public GenericCustomObject&lt;TValue&gt; buildUnchecked() {</span>
-<span class="source-line-no">146</span><span id="line.146">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">147</span><span id="line.147">            container, key, value);</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(T value) {</span>
-<span class="source-line-no">151</span><span id="line.151">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
-<span class="source-line-no">152</span><span id="line.152">        builder.value = value;</span>
-<span class="source-line-no">153</span><span id="line.153">        return builder;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(final GenericCustomObject&lt;T&gt; template) {</span>
-<span class="source-line-no">157</span><span id="line.157">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
-<span class="source-line-no">158</span><span id="line.158">        builder.id = template.getId();</span>
-<span class="source-line-no">159</span><span id="line.159">        builder.version = template.getVersion();</span>
-<span class="source-line-no">160</span><span id="line.160">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">161</span><span id="line.161">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">162</span><span id="line.162">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">163</span><span id="line.163">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">164</span><span id="line.164">        builder.container = template.getContainer();</span>
-<span class="source-line-no">165</span><span id="line.165">        builder.key = template.getKey();</span>
-<span class="source-line-no">166</span><span id="line.166">        builder.value = template.getValue();</span>
-<span class="source-line-no">167</span><span id="line.167">        return builder;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">}</span>
+<span class="source-line-no">130</span><span id="line.130">    public TValue getValue() {</span>
+<span class="source-line-no">131</span><span id="line.131">        return this.value;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    public GenericCustomObject&lt;TValue&gt; build() {</span>
+<span class="source-line-no">135</span><span id="line.135">        Objects.requireNonNull(id, CustomObject.class + ": id is missing");</span>
+<span class="source-line-no">136</span><span id="line.136">        Objects.requireNonNull(version, CustomObject.class + ": version is missing");</span>
+<span class="source-line-no">137</span><span id="line.137">        Objects.requireNonNull(createdAt, CustomObject.class + ": createdAt is missing");</span>
+<span class="source-line-no">138</span><span id="line.138">        Objects.requireNonNull(lastModifiedAt, CustomObject.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">139</span><span id="line.139">        Objects.requireNonNull(container, CustomObject.class + ": container is missing");</span>
+<span class="source-line-no">140</span><span id="line.140">        Objects.requireNonNull(key, CustomObject.class + ": key is missing");</span>
+<span class="source-line-no">141</span><span id="line.141">        Objects.requireNonNull(value, CustomObject.class + ": value is missing");</span>
+<span class="source-line-no">142</span><span id="line.142">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">143</span><span id="line.143">            container, key, value);</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    /**</span>
+<span class="source-line-no">147</span><span id="line.147">     * builds CustomObject without checking for non null required values</span>
+<span class="source-line-no">148</span><span id="line.148">     */</span>
+<span class="source-line-no">149</span><span id="line.149">    public GenericCustomObject&lt;TValue&gt; buildUnchecked() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">151</span><span id="line.151">            container, key, value);</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(T value) {</span>
+<span class="source-line-no">155</span><span id="line.155">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
+<span class="source-line-no">156</span><span id="line.156">        builder.value = value;</span>
+<span class="source-line-no">157</span><span id="line.157">        return builder;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(final GenericCustomObject&lt;T&gt; template) {</span>
+<span class="source-line-no">161</span><span id="line.161">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
+<span class="source-line-no">162</span><span id="line.162">        builder.id = template.getId();</span>
+<span class="source-line-no">163</span><span id="line.163">        builder.version = template.getVersion();</span>
+<span class="source-line-no">164</span><span id="line.164">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">165</span><span id="line.165">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">166</span><span id="line.166">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">167</span><span id="line.167">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">168</span><span id="line.168">        builder.container = template.getContainer();</span>
+<span class="source-line-no">169</span><span id="line.169">        builder.key = template.getKey();</span>
+<span class="source-line-no">170</span><span id="line.170">        builder.value = template.getValue();</span>
+<span class="source-line-no">171</span><span id="line.171">        return builder;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">}</span>
 
 
 

@@ -20,83 +20,117 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">011</span><span id="line.11">public class SetMetaDescriptionChangeBuilder implements Builder&lt;SetMetaDescriptionChange&gt; {</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private String change;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private com.commercetools.history.models.common.LocalizedString previousValue;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    private com.commercetools.history.models.common.LocalizedString nextValue;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    public SetMetaDescriptionChangeBuilder change(final String change) {</span>
-<span class="source-line-no">020</span><span id="line.20">        this.change = change;</span>
-<span class="source-line-no">021</span><span id="line.21">        return this;</span>
-<span class="source-line-no">022</span><span id="line.22">    }</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    public SetMetaDescriptionChangeBuilder previousValue(</span>
-<span class="source-line-no">025</span><span id="line.25">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">026</span><span id="line.26">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">027</span><span id="line.27">        return this;</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public SetMetaDescriptionChangeBuilder previousValue(</span>
-<span class="source-line-no">031</span><span id="line.31">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
-<span class="source-line-no">032</span><span id="line.32">        this.previousValue = previousValue;</span>
-<span class="source-line-no">033</span><span id="line.33">        return this;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public SetMetaDescriptionChangeBuilder nextValue(</span>
-<span class="source-line-no">037</span><span id="line.37">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">038</span><span id="line.38">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> * SetMetaDescriptionChangeBuilder</span>
+<span class="source-line-no">012</span><span id="line.12"> * &lt;hr&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *     SetMetaDescriptionChange setMetaDescriptionChange = SetMetaDescriptionChange.builder()</span>
+<span class="source-line-no">017</span><span id="line.17"> *             .change("{change}")</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .build()</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;/div&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> */</span>
+<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">025</span><span id="line.25">public class SetMetaDescriptionChangeBuilder implements Builder&lt;SetMetaDescriptionChange&gt; {</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private String change;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.history.models.common.LocalizedString previousValue;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.history.models.common.LocalizedString nextValue;</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    /**</span>
+<span class="source-line-no">034</span><span id="line.34">     *  &lt;p&gt;Shape of the action for &lt;code&gt;setMetaDescription&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     */</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public SetMetaDescriptionChangeBuilder change(final String change) {</span>
+<span class="source-line-no">038</span><span id="line.38">        this.change = change;</span>
 <span class="source-line-no">039</span><span id="line.39">        return this;</span>
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public SetMetaDescriptionChangeBuilder nextValue(</span>
-<span class="source-line-no">043</span><span id="line.43">            final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
-<span class="source-line-no">044</span><span id="line.44">        this.nextValue = nextValue;</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public String getChange() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return this.change;</span>
+<span class="source-line-no">042</span><span id="line.42">    /**</span>
+<span class="source-line-no">043</span><span id="line.43">     *</span>
+<span class="source-line-no">044</span><span id="line.44">     */</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    public SetMetaDescriptionChangeBuilder previousValue(</span>
+<span class="source-line-no">047</span><span id="line.47">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
 <span class="source-line-no">050</span><span id="line.50">    }</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
-<span class="source-line-no">053</span><span id="line.53">        return this.previousValue;</span>
-<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">     *</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return this.nextValue;</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public SetMetaDescriptionChange build() {</span>
-<span class="source-line-no">061</span><span id="line.61">        Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");</span>
-<span class="source-line-no">062</span><span id="line.62">        Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">063</span><span id="line.63">        Objects.requireNonNull(nextValue, SetMetaDescriptionChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">064</span><span id="line.64">        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     * builds SetMetaDescriptionChange without checking for non null required values</span>
-<span class="source-line-no">069</span><span id="line.69">     */</span>
-<span class="source-line-no">070</span><span id="line.70">    public SetMetaDescriptionChange buildUnchecked() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static SetMetaDescriptionChangeBuilder of() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new SetMetaDescriptionChangeBuilder();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static SetMetaDescriptionChangeBuilder of(final SetMetaDescriptionChange template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        SetMetaDescriptionChangeBuilder builder = new SetMetaDescriptionChangeBuilder();</span>
-<span class="source-line-no">080</span><span id="line.80">        builder.change = template.getChange();</span>
-<span class="source-line-no">081</span><span id="line.81">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">082</span><span id="line.82">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">083</span><span id="line.83">        return builder;</span>
+<span class="source-line-no">056</span><span id="line.56">    public SetMetaDescriptionChangeBuilder previousValue(</span>
+<span class="source-line-no">057</span><span id="line.57">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.previousValue = previousValue;</span>
+<span class="source-line-no">059</span><span id="line.59">        return this;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     *</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public SetMetaDescriptionChangeBuilder nextValue(</span>
+<span class="source-line-no">067</span><span id="line.67">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">068</span><span id="line.68">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">069</span><span id="line.69">        return this;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">     *</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public SetMetaDescriptionChangeBuilder nextValue(</span>
+<span class="source-line-no">077</span><span id="line.77">            final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.nextValue = nextValue;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public String getChange() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.change;</span>
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">}</span>
+<span class="source-line-no">086</span><span id="line.86">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.previousValue;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return this.nextValue;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public SetMetaDescriptionChange build() {</span>
+<span class="source-line-no">095</span><span id="line.95">        Objects.requireNonNull(change, SetMetaDescriptionChange.class + ": change is missing");</span>
+<span class="source-line-no">096</span><span id="line.96">        Objects.requireNonNull(previousValue, SetMetaDescriptionChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">097</span><span id="line.97">        Objects.requireNonNull(nextValue, SetMetaDescriptionChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">098</span><span id="line.98">        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     * builds SetMetaDescriptionChange without checking for non null required values</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public SetMetaDescriptionChange buildUnchecked() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new SetMetaDescriptionChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static SetMetaDescriptionChangeBuilder of() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new SetMetaDescriptionChangeBuilder();</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public static SetMetaDescriptionChangeBuilder of(final SetMetaDescriptionChange template) {</span>
+<span class="source-line-no">113</span><span id="line.113">        SetMetaDescriptionChangeBuilder builder = new SetMetaDescriptionChangeBuilder();</span>
+<span class="source-line-no">114</span><span id="line.114">        builder.change = template.getChange();</span>
+<span class="source-line-no">115</span><span id="line.115">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">116</span><span id="line.116">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">117</span><span id="line.117">        return builder;</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">}</span>
 
 
 

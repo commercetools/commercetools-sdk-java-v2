@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartSetBillingAddressCustomTypeActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.17">CartSetBillingAddressCustomTypeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.29">CartSetBillingAddressCustomTypeAction</a></span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
+<div class="block">CartSetBillingAddressCustomTypeAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CartSetBillingAddressCustomTypeAction cartSetBillingAddressCustomTypeAction = CartSetBillingAddressCustomTypeAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,12 +134,12 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>billingAddress</code>.</div>
+<div class="block">Sets the Custom Fields fields for the <code>billingAddress</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>billingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.</div>
+<div class="block">Defines the Type that extends the <code>billingAddress</code> with Custom Fields.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -172,7 +182,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="SET_BILLING_ADDRESS_CUSTOM_TYPE">
 <h3>SET_BILLING_ADDRESS_CUSTOM_TYPE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.21">SET_BILLING_ADDRESS_CUSTOM_TYPE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.33">SET_BILLING_ADDRESS_CUSTOM_TYPE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction.SET_BILLING_ADDRESS_CUSTOM_TYPE">Constant Field Values</a></dd>
@@ -191,65 +201,64 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.27">getType</a></span>()</div>
-<div class="block"><p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>billingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-  If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.38">getType</a></span>()</div>
+<div class="block"><p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.34">getFields</a></span>()</div>
-<div class="block"><p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>billingAddress</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.45">getFields</a></span>()</div>
+<div class="block"><p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.38">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.49">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.40">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.51">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartSetBillingAddressCustomTypeAction(java.util.function.Function)">
 <h3>withCartSetBillingAddressCustomTypeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.62">withCartSetBillingAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.73">withCartSetBillingAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.66">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetBillingAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetBillingAddressCustomTypeAction.html#line.77">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

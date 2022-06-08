@@ -88,8 +88,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TaxCategoryAddTaxRateActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryAddTaxRateActionImpl</a></code>, <code><a href="TaxCategoryChangeNameActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryChangeNameActionImpl</a></code>, <code><a href="TaxCategoryRemoveTaxRateActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryRemoveTaxRateActionImpl</a></code>, <code><a href="TaxCategoryReplaceTaxRateActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReplaceTaxRateActionImpl</a></code>, <code><a href="TaxCategorySetDescriptionActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetDescriptionActionImpl</a></code>, <code><a href="TaxCategorySetKeyActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetKeyActionImpl</a></code>, <code><a href="TaxCategoryUpdateActionImpl.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.15">TaxCategoryUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.28">TaxCategoryUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>&gt;</span></div>
+<div class="block">TaxCategoryUpdateAction
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TaxCategoryUpdateAction taxCategoryUpdateAction = TaxCategoryUpdateAction.addTaxRateBuilder()
+             taxRate(taxRateBuilder -> taxRateBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -152,7 +163,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.28">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.44">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>&gt;</code></dd>
@@ -162,49 +173,49 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addTaxRateBuilder()">
 <h3>addTaxRateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryAddTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryAddTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.32">addTaxRateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryAddTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryAddTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.48">addTaxRateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeNameBuilder()">
 <h3>changeNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryChangeNameActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.36">changeNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryChangeNameActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.52">changeNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeTaxRateBuilder()">
 <h3>removeTaxRateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryRemoveTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryRemoveTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.40">removeTaxRateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryRemoveTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryRemoveTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.56">removeTaxRateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="replaceTaxRateBuilder()">
 <h3>replaceTaxRateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryReplaceTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReplaceTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.44">replaceTaxRateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategoryReplaceTaxRateActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReplaceTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.60">replaceTaxRateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescriptionBuilder()">
 <h3>setDescriptionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategorySetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.48">setDescriptionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategorySetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.64">setDescriptionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategorySetKeyActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.52">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TaxCategorySetKeyActionBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategorySetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.68">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTaxCategoryUpdateAction(java.util.function.Function)">
 <h3>withTaxCategoryUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.56">withTaxCategoryUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.72">withTaxCategoryUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.60">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TaxCategoryUpdateAction.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/tax_category/TaxCategoryUpdateAction.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

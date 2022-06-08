@@ -83,12 +83,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.22">LineItemImportDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.21">LineItemImportDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
 <div class="block"><p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted.
-  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p></div>
+  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -238,7 +237,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>LineItemImportDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.69">LineItemImportDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.68">LineItemImportDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -263,7 +262,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.82">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.83">getName</a></span>()</div>
 <div class="block"><p>Maps to <code>LineItem.name</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -274,7 +273,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.89">getVariant</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.91">getVariant</a></span>()</div>
 <div class="block"><p>Maps to <code>ProductVariantImportDraft</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -285,7 +284,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.96">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.99">getPrice</a></span>()</div>
 <div class="block"><p>Maps to <code>LineItem.price</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -296,7 +295,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.103">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.107">getQuantity</a></span>()</div>
 <div class="block"><p>Maps to <code>LineItem.quantity</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -307,7 +306,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.107">getState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.115">getState</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getState()">getState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -317,10 +316,8 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.116">getSupplyChannel</a></span>()</div>
-<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>.
-  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.123">getSupplyChannel</a></span>()</div>
+<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getSupplyChannel()">getSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -330,10 +327,8 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.125">getDistributionChannel</a></span>()</div>
-<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>.
-  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.131">getDistributionChannel</a></span>()</div>
+<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#getDistributionChannel()">getDistributionChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -343,7 +338,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getTaxRate()">
 <h3>getTaxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.132">getTaxRate</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.139">getTaxRate</a></span>()</div>
 <div class="block"><p>Maps to <code>LineItem.taxRate</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -354,7 +349,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.139">getShippingDetails</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.147">getShippingDetails</a></span>()</div>
 <div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -365,7 +360,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setProduct(com.commercetools.importapi.models.common.ProductKeyReference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.143">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.151">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setProduct(com.commercetools.importapi.models.common.ProductKeyReference)">setProduct</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -375,7 +370,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setName(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.147">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.155">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setName(com.commercetools.importapi.models.common.LocalizedString)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -385,7 +380,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setVariant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft)">
 <h3>setVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.151">setVariant</a></span>&#8203;<span class="parameters">(<a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.159">setVariant</a></span>&#8203;<span class="parameters">(<a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a>&nbsp;variant)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setVariant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft)">setVariant</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -395,7 +390,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setPrice(com.commercetools.importapi.models.orders.LineItemPrice)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.155">setPrice</a></span>&#8203;<span class="parameters">(<a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.163">setPrice</a></span>&#8203;<span class="parameters">(<a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a>&nbsp;price)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setPrice(com.commercetools.importapi.models.orders.LineItemPrice)">setPrice</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -405,7 +400,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setQuantity(java.lang.Double)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.159">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.167">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setQuantity(java.lang.Double)">setQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -415,7 +410,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setState(com.commercetools.importapi.models.orders.ItemState...)">
 <h3>setState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.163">setState</a></span>&#8203;<span class="parameters">(<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.171">setState</a></span>&#8203;<span class="parameters">(<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setState(com.commercetools.importapi.models.orders.ItemState...)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -425,7 +420,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setState(java.util.List)">
 <h3>setState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.167">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.175">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setState(java.util.List)">setState</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -435,7 +430,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.171">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.179">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">setSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -445,7 +440,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setDistributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setDistributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.175">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.183">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setDistributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">setDistributionChannel</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -455,7 +450,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setTaxRate(com.commercetools.importapi.models.prices.TaxRate)">
 <h3>setTaxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.180">setTaxRate</a></span>&#8203;<span class="parameters">(<a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.188">setTaxRate</a></span>&#8203;<span class="parameters">(<a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setTaxRate(com.commercetools.importapi.models.prices.TaxRate)">setTaxRate</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -465,7 +460,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setShippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)">
 <h3>setShippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.184">setShippingDetails</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.192">setShippingDetails</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LineItemImportDraft.html#setShippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)">setShippingDetails</a></code>&nbsp;in interface&nbsp;<code><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></dd>
@@ -475,7 +470,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.189">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.197">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -485,7 +480,7 @@ implements <a href="LineItemImportDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.212">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html#line.220">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

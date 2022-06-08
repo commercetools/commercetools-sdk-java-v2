@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderReturnShipmentStateChangedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.16">OrderReturnShipmentStateChangedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.30">OrderReturnShipmentStateChangedMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
+<div class="block">OrderReturnShipmentStateChangedMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderReturnShipmentStateChangedMessagePayload orderReturnShipmentStateChangedMessagePayload = OrderReturnShipmentStateChangedMessagePayload.builder()
+             .returnItemId("{returnItemId}")
+             .returnShipmentState(ReturnShipmentState.ADVISED)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +180,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="ORDER_RETURN_SHIPMENT_STATE_CHANGED">
 <h3>ORDER_RETURN_SHIPMENT_STATE_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.20">ORDER_RETURN_SHIPMENT_STATE_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.34">ORDER_RETURN_SHIPMENT_STATE_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload.ORDER_RETURN_SHIPMENT_STATE_CHANGED">Constant Field Values</a></dd>
@@ -187,62 +199,62 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="getReturnItemId()">
 <h3>getReturnItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.22">getReturnItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.39">getReturnItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnShipmentState()">
 <h3>getReturnShipmentState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../order/ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.26">getReturnShipmentState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../order/ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.46">getReturnShipmentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setReturnItemId(java.lang.String)">
 <h3>setReturnItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.30">setReturnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.50">setReturnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setReturnShipmentState(com.commercetools.api.models.order.ReturnShipmentState)">
 <h3>setReturnShipmentState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.32">setReturnShipmentState</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;returnShipmentState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.52">setReturnShipmentState</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;returnShipmentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.54">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.46">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.66">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.50">builder</a></span>&#8203;<span class="parameters">(<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderReturnShipmentStateChangedMessagePayload(java.util.function.Function)">
 <h3>withOrderReturnShipmentStateChangedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.55">withOrderReturnShipmentStateChangedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.75">withOrderReturnShipmentStateChangedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.60">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderReturnShipmentStateChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnShipmentStateChangedMessagePayload.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

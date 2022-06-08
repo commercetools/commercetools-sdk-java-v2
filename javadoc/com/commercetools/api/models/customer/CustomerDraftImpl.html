@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code>, <code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.17">CustomerDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.20">CustomerDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">CustomerDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -148,7 +149,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AuthenticationMode.html" title="interface in com.commercetools.api.models.customer">AuthenticationMode</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAuthenticationMode()">getAuthenticationMode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Defines whether a password is required for the Customer that is used for platform-internal authentication.</div>
+<div class="block">Defines whether a password field is a required field for the Customer.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getBillingAddresses()">getBillingAddresses</a></span>()</code></div>
@@ -201,7 +202,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">User-specific unique identifier for a customer.</div>
+<div class="block">User-defined unique identifier for the Customer.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastName()">getLastName</a></span>()</code></div>
@@ -365,7 +366,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.127">CustomerDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.130">CustomerDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -379,11 +380,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getCustomerNumber()">
 <h3>getCustomerNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.136">getCustomerNumber</a></span>()</div>
-<div class="block"><p>String that uniquely identifies a customer.
-  It can be used to create more human-readable (in contrast to ID) identifier for the customer.
-  It should be <strong>unique</strong> across a project.
-  Once it's set it cannot be changed.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.137">getCustomerNumber</a></span>()</div>
+<div class="block"><p>String that uniquely identifies a customer. It can be used to create more human-readable (in contrast to ID) identifier for the customer. It should be <strong>unique</strong> across a project. Once it's set it cannot be changed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getCustomerNumber()">getCustomerNumber</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -394,9 +392,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <section class="detail" id="getEmail()">
 <h3>getEmail</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.145">getEmail</a></span>()</div>
-<div class="block"><p>The customer's email address and the main identifier of uniqueness for a customer account.
-  Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive.
-  For more information, see Email uniquenes.</p></div>
+<div class="block"><p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project, and are case insensitive. For more information, see Email uniquenes.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getEmail()">getEmail</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -406,7 +402,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getPassword()">
 <h3>getPassword</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.152">getPassword</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.153">getPassword</a></span>()</div>
 <div class="block"><p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -417,7 +413,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getFirstName()">
 <h3>getFirstName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.156">getFirstName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.161">getFirstName</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getFirstName()">getFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -427,7 +423,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getLastName()">
 <h3>getLastName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.160">getLastName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.169">getLastName</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getLastName()">getLastName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -437,7 +433,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getMiddleName()">
 <h3>getMiddleName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.164">getMiddleName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.177">getMiddleName</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getMiddleName()">getMiddleName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -447,7 +443,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.168">getTitle</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.185">getTitle</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getTitle()">getTitle</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -458,7 +454,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <section class="detail" id="getAnonymousCartId()">
 <h3>getAnonymousCartId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.175">getAnonymousCartId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.192">getAnonymousCartId</a></span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><p>Identifies a single cart that will be assigned to the new customer account.</p></div>
 <dl class="notes">
@@ -470,7 +466,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getAnonymousCart()">
 <h3>getAnonymousCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.183">getAnonymousCart</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.201">getAnonymousCart</a></span>()</div>
 <div class="block"><p>Identifies a single cart that will be assigned to the new customer account.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -481,7 +477,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.190">getAnonymousId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.209">getAnonymousId</a></span>()</div>
 <div class="block"><p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -492,7 +488,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getDateOfBirth()">
 <h3>getDateOfBirth</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.194">getDateOfBirth</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.217">getDateOfBirth</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getDateOfBirth()">getDateOfBirth</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -502,7 +498,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getCompanyName()">
 <h3>getCompanyName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.198">getCompanyName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.225">getCompanyName</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getCompanyName()">getCompanyName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -512,7 +508,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getVatId()">
 <h3>getVatId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.202">getVatId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.233">getVatId</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getVatId()">getVatId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -522,7 +518,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getAddresses()">
 <h3>getAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.209">getAddresses</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.241">getAddresses</a></span>()</div>
 <div class="block"><p>Sets the ID of each address to be unique in the addresses list.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -533,9 +529,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getDefaultShippingAddress()">
 <h3>getDefaultShippingAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.217">getDefaultShippingAddress</a></span>()</div>
-<div class="block"><p>The index of the address in the addresses array.
-  The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.249">getDefaultShippingAddress</a></span>()</div>
+<div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getDefaultShippingAddress()">getDefaultShippingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -545,9 +540,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getShippingAddresses()">
 <h3>getShippingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.225">getShippingAddresses</a></span>()</div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array.
-  The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.257">getShippingAddresses</a></span>()</div>
+<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the Customer will be set to the IDs of that addresses.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getShippingAddresses()">getShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -557,9 +551,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getDefaultBillingAddress()">
 <h3>getDefaultBillingAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.233">getDefaultBillingAddress</a></span>()</div>
-<div class="block"><p>The index of the address in the addresses array.
-  The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.265">getDefaultBillingAddress</a></span>()</div>
+<div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getDefaultBillingAddress()">getDefaultBillingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -569,9 +562,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getBillingAddresses()">
 <h3>getBillingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.241">getBillingAddresses</a></span>()</div>
-<div class="block"><p>The indices of the billing addresses in the addresses array.
-  The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.273">getBillingAddresses</a></span>()</div>
+<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getBillingAddresses()">getBillingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -581,7 +573,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getIsEmailVerified()">
 <h3>getIsEmailVerified</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.245">getIsEmailVerified</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.281">getIsEmailVerified</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getIsEmailVerified()">getIsEmailVerified</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -591,7 +583,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.249">getExternalId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.289">getExternalId</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getExternalId()">getExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -601,7 +593,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.253">getCustomerGroup</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.297">getCustomerGroup</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getCustomerGroup()">getCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -611,7 +603,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.260">getCustom</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.305">getCustom</a></span>()</div>
 <div class="block"><p>The custom fields.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -624,7 +616,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getLocale()">
 <h3>getLocale</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.267">getLocale</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.313">getLocale</a></span>()</div>
 <div class="block"><p>Must be one of the languages supported for this project</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -635,7 +627,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getSalutation()">
 <h3>getSalutation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.271">getSalutation</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.321">getSalutation</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getSalutation()">getSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -645,10 +637,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.280">getKey</a></span>()</div>
-<div class="block"><p>User-specific unique identifier for a customer.
-  Must be unique across a project.
-  The field can be reset using the Set Key UpdateAction</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.329">getKey</a></span>()</div>
+<div class="block"><p>User-defined unique identifier for the Customer.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -658,10 +648,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getStores()">
 <h3>getStores</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.289">getStores</a></span>()</div>
-<div class="block"><p>References to the stores the customer account is associated with.
-  If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
-  If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.337">getStores</a></span>()</div>
+<div class="block"><p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getStores()">getStores</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -671,8 +659,8 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getAuthenticationMode()">
 <h3>getAuthenticationMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AuthenticationMode.html" title="interface in com.commercetools.api.models.customer">AuthenticationMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.296">getAuthenticationMode</a></span>()</div>
-<div class="block"><p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AuthenticationMode.html" title="interface in com.commercetools.api.models.customer">AuthenticationMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.345">getAuthenticationMode</a></span>()</div>
+<div class="block"><p>Defines whether a password field is a required field for the Customer.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#getAuthenticationMode()">getAuthenticationMode</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -682,7 +670,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setCustomerNumber(java.lang.String)">
 <h3>setCustomerNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.300">setCustomerNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.349">setCustomerNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setCustomerNumber(java.lang.String)">setCustomerNumber</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -692,7 +680,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setEmail(java.lang.String)">
 <h3>setEmail</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.304">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.353">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setEmail(java.lang.String)">setEmail</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -702,7 +690,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setPassword(java.lang.String)">
 <h3>setPassword</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.308">setPassword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.357">setPassword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setPassword(java.lang.String)">setPassword</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -712,7 +700,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setFirstName(java.lang.String)">
 <h3>setFirstName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.312">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.361">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setFirstName(java.lang.String)">setFirstName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -722,7 +710,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setLastName(java.lang.String)">
 <h3>setLastName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.316">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.365">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setLastName(java.lang.String)">setLastName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -732,7 +720,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setMiddleName(java.lang.String)">
 <h3>setMiddleName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.320">setMiddleName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;middleName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.369">setMiddleName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;middleName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setMiddleName(java.lang.String)">setMiddleName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -742,7 +730,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setTitle(java.lang.String)">
 <h3>setTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.324">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.373">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setTitle(java.lang.String)">setTitle</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -753,7 +741,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <section class="detail" id="setAnonymousCartId(java.lang.String)">
 <h3>setAnonymousCartId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.328">setAnonymousCartId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousCartId)</span></div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.377">setAnonymousCartId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousCartId)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -764,7 +752,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setAnonymousCart(com.commercetools.api.models.cart.CartResourceIdentifier)">
 <h3>setAnonymousCart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.333">setAnonymousCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;anonymousCart)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.382">setAnonymousCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;anonymousCart)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setAnonymousCart(com.commercetools.api.models.cart.CartResourceIdentifier)">setAnonymousCart</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -774,7 +762,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.337">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.386">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setAnonymousId(java.lang.String)">setAnonymousId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -784,7 +772,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setDateOfBirth(java.time.LocalDate)">
 <h3>setDateOfBirth</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.341">setDateOfBirth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;dateOfBirth)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.390">setDateOfBirth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;dateOfBirth)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setDateOfBirth(java.time.LocalDate)">setDateOfBirth</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -794,7 +782,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setCompanyName(java.lang.String)">
 <h3>setCompanyName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.345">setCompanyName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;companyName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.394">setCompanyName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;companyName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setCompanyName(java.lang.String)">setCompanyName</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -804,7 +792,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setVatId(java.lang.String)">
 <h3>setVatId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.349">setVatId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vatId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.398">setVatId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vatId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setVatId(java.lang.String)">setVatId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -814,7 +802,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setAddresses(com.commercetools.api.models.common.BaseAddress...)">
 <h3>setAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.353">setAddresses</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;addresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.402">setAddresses</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;addresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setAddresses(com.commercetools.api.models.common.BaseAddress...)">setAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -824,7 +812,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setAddresses(java.util.List)">
 <h3>setAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.357">setAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;addresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.406">setAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;addresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setAddresses(java.util.List)">setAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -834,7 +822,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setDefaultShippingAddress(java.lang.Integer)">
 <h3>setDefaultShippingAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.361">setDefaultShippingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.410">setDefaultShippingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setDefaultShippingAddress(java.lang.Integer)">setDefaultShippingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -844,7 +832,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setShippingAddresses(java.lang.Integer...)">
 <h3>setShippingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.365">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.414">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setShippingAddresses(java.lang.Integer...)">setShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -854,7 +842,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setShippingAddresses(java.util.List)">
 <h3>setShippingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.369">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.418">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setShippingAddresses(java.util.List)">setShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -864,7 +852,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setDefaultBillingAddress(java.lang.Integer)">
 <h3>setDefaultBillingAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.373">setDefaultBillingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.422">setDefaultBillingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setDefaultBillingAddress(java.lang.Integer)">setDefaultBillingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -874,7 +862,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setBillingAddresses(java.lang.Integer...)">
 <h3>setBillingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.377">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.426">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setBillingAddresses(java.lang.Integer...)">setBillingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -884,7 +872,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setBillingAddresses(java.util.List)">
 <h3>setBillingAddresses</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.381">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.430">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setBillingAddresses(java.util.List)">setBillingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -894,7 +882,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setIsEmailVerified(java.lang.Boolean)">
 <h3>setIsEmailVerified</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.385">setIsEmailVerified</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isEmailVerified)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.434">setIsEmailVerified</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isEmailVerified)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setIsEmailVerified(java.lang.Boolean)">setIsEmailVerified</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -904,7 +892,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setExternalId(java.lang.String)">
 <h3>setExternalId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.389">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.438">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setExternalId(java.lang.String)">setExternalId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -914,7 +902,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>setCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.393">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.442">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">setCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -924,7 +912,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.398">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.447">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -936,7 +924,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setLocale(java.lang.String)">
 <h3>setLocale</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.402">setLocale</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.451">setLocale</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setLocale(java.lang.String)">setLocale</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -946,7 +934,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setSalutation(java.lang.String)">
 <h3>setSalutation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.406">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.455">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setSalutation(java.lang.String)">setSalutation</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -956,7 +944,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.410">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.459">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -966,7 +954,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)">
 <h3>setStores</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.414">setStores</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.463">setStores</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>...&nbsp;stores)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setStores(com.commercetools.api.models.store.StoreResourceIdentifier...)">setStores</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -976,7 +964,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setStores(java.util.List)">
 <h3>setStores</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.418">setStores</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.467">setStores</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&gt;&nbsp;stores)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setStores(java.util.List)">setStores</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -986,7 +974,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setAuthenticationMode(com.commercetools.api.models.customer.AuthenticationMode)">
 <h3>setAuthenticationMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.422">setAuthenticationMode</a></span>&#8203;<span class="parameters">(<a href="AuthenticationMode.html" title="interface in com.commercetools.api.models.customer">AuthenticationMode</a>&nbsp;authenticationMode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.471">setAuthenticationMode</a></span>&#8203;<span class="parameters">(<a href="AuthenticationMode.html" title="interface in com.commercetools.api.models.customer">AuthenticationMode</a>&nbsp;authenticationMode)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CustomerDraft.html#setAuthenticationMode(com.commercetools.api.models.customer.AuthenticationMode)">setAuthenticationMode</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerDraft.html" title="interface in com.commercetools.api.models.customer">CustomerDraft</a></code></dd>
@@ -996,7 +984,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.427">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.476">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -1006,7 +994,7 @@ implements <a href="CustomerDraft.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.467">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerDraftImpl.html#line.516">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.10">OrderSetParcelItemsActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.23">OrderSetParcelItemsActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a>&gt;</span></div>
+<div class="block">OrderSetParcelItemsActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderSetParcelItemsAction orderSetParcelItemsAction = OrderSetParcelItemsAction.builder()
+             .parcelId("{parcelId}")
+             .plusItems(itemsBuilder -> itemsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +182,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderSetParcelItemsActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.11">OrderSetParcelItemsActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.24">OrderSetParcelItemsActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -185,55 +196,55 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="parcelId(java.lang.String)">
 <h3>parcelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.17">parcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.34">parcelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;parcelId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="items(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.22">items</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.43">items</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="items(java.util.List)">
 <h3>items</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.27">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.52">items</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(com.commercetools.api.models.order.DeliveryItem...)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.33">plusItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.62">plusItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusItems(java.util.function.Function)">
 <h3>plusItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.41">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.74">plusItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withItems(java.util.function.Function)">
 <h3>withItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.50">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.87">withItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>,&#8203;<a href="DeliveryItemBuilder.html" title="class in com.commercetools.api.models.order">DeliveryItemBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getParcelId()">
 <h3>getParcelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.57">getParcelId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.94">getParcelId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getItems()">
 <h3>getItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.61">getItems</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.98">getItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.65">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.102">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a>&gt;</code></dd>
@@ -243,20 +254,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.74">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.111">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderSetParcelItemsAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.78">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.115">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderSetParcelItemsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetParcelItemsActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetParcelItemsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetParcelItemsActionBuilder.html#line.119">of</a></span>&#8203;<span class="parameters">(<a href="OrderSetParcelItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetParcelItemsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

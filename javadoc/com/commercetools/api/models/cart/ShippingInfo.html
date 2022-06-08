@@ -80,7 +80,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShippingInfoImpl.html" title="class in com.commercetools.api.models.cart">ShippingInfoImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.22">ShippingInfo</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.38">ShippingInfo</a></span></div>
+<div class="block">ShippingInfo
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShippingInfo shippingInfo = ShippingInfo.builder()
+             .shippingMethodName("{shippingMethodName}")
+             .price(priceBuilder -> priceBuilder)
+             .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+             .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -208,7 +222,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getShippingMethodName()">
 <h3>getShippingMethodName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.26">getShippingMethodName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.45">getShippingMethodName</a></span>()</div>
 </section>
 </li>
 <li>
@@ -216,7 +230,7 @@ loadScripts(document, 'script');</script>
 <h3>getPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.33">getPrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.52">getPrice</a></span>()</div>
 <div class="block"><p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p></div>
 </section>
 </li>
@@ -225,7 +239,7 @@ loadScripts(document, 'script');</script>
 <h3>getShippingRate</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.41">getShippingRate</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.60">getShippingRate</a></span>()</div>
 <div class="block"><p>The shipping rate used to determine the price.</p></div>
 </section>
 </li>
@@ -233,7 +247,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTaxedPrice()">
 <h3>getTaxedPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.49">getTaxedPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.68">getTaxedPrice</a></span>()</div>
 <div class="block"><p>Set once the <code>taxRate</code> is set.</p></div>
 </section>
 </li>
@@ -241,23 +255,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTaxRate()">
 <h3>getTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.57">getTaxRate</a></span>()</div>
-<div class="block"><p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
-  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p></div>
+</span><span class="return-type">@Valid <a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.75">getTaxRate</a></span>()</div>
+<div class="block"><p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.61">getTaxCategory</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.82">getTaxCategory</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingMethod()">
 <h3>getShippingMethod</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.68">getShippingMethod</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.89">getShippingMethod</a></span>()</div>
 <div class="block"><p>Not set if custom shipping method is used.</p></div>
 </section>
 </li>
@@ -265,7 +278,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDeliveries()">
 <h3>getDeliveries</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.75">getDeliveries</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.96">getDeliveries</a></span>()</div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
 </li>
@@ -273,117 +286,117 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDiscountedPrice()">
 <h3>getDiscountedPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.79">getDiscountedPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.103">getDiscountedPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingMethodState()">
 <h3>getShippingMethodState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.86">getShippingMethodState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.110">getShippingMethodState</a></span>()</div>
 <div class="block"><p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingMethodName(java.lang.String)">
 <h3>setShippingMethodName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.90">setShippingMethodName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.114">setShippingMethodName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPrice(com.commercetools.api.models.common.TypedMoney)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.92">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.116">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingRate(com.commercetools.api.models.shipping_method.ShippingRate)">
 <h3>setShippingRate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.94">setShippingRate</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.118">setShippingRate</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">
 <h3>setTaxedPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.96">setTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.120">setTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxRate(com.commercetools.api.models.tax_category.TaxRate)">
 <h3>setTaxRate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.98">setTaxRate</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&nbsp;taxRate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.122">setTaxRate</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&nbsp;taxRate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.100">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.124">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodReference)">
 <h3>setShippingMethod</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.102">setShippingMethod</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;shippingMethod)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.126">setShippingMethod</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;shippingMethod)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeliveries(com.commercetools.api.models.order.Delivery...)">
 <h3>setDeliveries</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.104">setDeliveries</a></span>&#8203;<span class="parameters">(<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.128">setDeliveries</a></span>&#8203;<span class="parameters">(<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeliveries(java.util.List)">
 <h3>setDeliveries</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.107">setDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;&nbsp;deliveries)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.131">setDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;&nbsp;deliveries)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDiscountedPrice(com.commercetools.api.models.cart.DiscountedLineItemPrice)">
 <h3>setDiscountedPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.109">setDiscountedPrice</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.133">setDiscountedPrice</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingMethodState(com.commercetools.api.models.cart.ShippingMethodState)">
 <h3>setShippingMethodState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.111">setShippingMethodState</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.135">setShippingMethodState</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.113">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.137">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.ShippingInfo)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.117">of</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.141">of</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.132">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.156">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.ShippingInfo)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.136">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.160">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withShippingInfo(java.util.function.Function)">
 <h3>withShippingInfo</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.140">withShippingInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.164">withShippingInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.144">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfo.html#line.168">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

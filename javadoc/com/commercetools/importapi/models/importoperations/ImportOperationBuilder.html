@@ -83,9 +83,26 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.12">ImportOperationBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.31">ImportOperationBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;</span></div>
+<div class="block">ImportOperationBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ImportOperation importOperation = ImportOperation.builder()
+             .version(1)
+             .importContainerKey("{importContainerKey}")
+             .resourceKey("{resourceKey}")
+             .id("{id}")
+             .state(ProcessingState.PROCESSING)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,16 +140,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The time when the ImportOperation was created.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#errors(com.commercetools.importapi.models.errors.ErrorObject...)">errors</a></span>&#8203;(<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>...&nbsp;errors)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains an error if the import of the resource was not successful.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#errors(java.util.List)">errors</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&nbsp;errors)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains an error if the import of the resource was not successful.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#expiresAt(java.time.ZonedDateTime)">expiresAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The expiration time of the ImportOperation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -168,13 +193,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The ID of the ImportOperation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#importContainerKey(java.lang.String)">importContainerKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importContainerKey)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The key of the importContainer.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#lastModifiedAt(java.time.ZonedDateTime)">lastModifiedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The last time When the ImportOperation was modified.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -183,40 +214,64 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusErrors(com.commercetools.importapi.models.errors.ErrorObject...)">plusErrors</a></span>&#8203;(<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>...&nbsp;errors)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains an error if the import of the resource was not successful.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusErrors(java.util.function.Function)">plusErrors</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains an error if the import of the resource was not successful.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusUnresolvedReferences(com.commercetools.importapi.models.common.UnresolvedReferences...)">plusUnresolvedReferences</a></span>&#8203;(<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>...&nbsp;unresolvedReferences)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">In case of unresolved status this array will show the unresolved references</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusUnresolvedReferences(java.util.function.Function)">plusUnresolvedReferences</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">In case of unresolved status this array will show the unresolved references</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceKey(java.lang.String)">resourceKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resourceKey)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The key of the resource.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceVersion(java.lang.Long)">resourceVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The version of the impmorted resource when the import was successful.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#state(com.commercetools.importapi.models.common.ProcessingState)">state</a></span>&#8203;(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;state)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The import status of the resource.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#unresolvedReferences(com.commercetools.importapi.models.common.UnresolvedReferences...)">unresolvedReferences</a></span>&#8203;(<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>...&nbsp;unresolvedReferences)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">In case of unresolved status this array will show the unresolved references</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#unresolvedReferences(java.util.List)">unresolvedReferences</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>&gt;&nbsp;unresolvedReferences)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">In case of unresolved status this array will show the unresolved references</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The version of the ImportOperation.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrors(java.util.function.Function)">withErrors</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Contains an error if the import of the resource was not successful.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withUnresolvedReferences(java.util.function.Function)">withUnresolvedReferences</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">In case of unresolved status this array will show the unresolved references</div>
+</div>
 </div>
 </div>
 </div>
@@ -237,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImportOperationBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.13">ImportOperationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.32">ImportOperationBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -251,197 +306,216 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.40">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.63">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><p>The version of the ImportOperation.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="importContainerKey(java.lang.String)">
 <h3>importContainerKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.45">importContainerKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importContainerKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.72">importContainerKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importContainerKey)</span></div>
+<div class="block"><p>The key of the importContainer.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceKey(java.lang.String)">
 <h3>resourceKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.50">resourceKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resourceKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.81">resourceKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;resourceKey)</span></div>
+<div class="block"><p>The key of the resource.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.55">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.90">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><p>The ID of the ImportOperation.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="state(com.commercetools.importapi.models.common.ProcessingState)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.60">state</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.99">state</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;state)</span></div>
+<div class="block"><p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.65">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.108">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="block"><p>The version of the impmorted resource when the import was successful.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="errors(com.commercetools.importapi.models.errors.ErrorObject...)">
 <h3>errors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.70">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.117">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>...&nbsp;errors)</span></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See Errors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="errors(java.util.List)">
 <h3>errors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.76">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.127">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&nbsp;errors)</span></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See Errors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusErrors(com.commercetools.importapi.models.errors.ErrorObject...)">
 <h3>plusErrors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.82">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.137">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>...&nbsp;errors)</span></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See Errors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusErrors(java.util.function.Function)">
 <h3>plusErrors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.91">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.150">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See Errors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrors(java.util.function.Function)">
 <h3>withErrors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.100">withErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.163">withErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Contains an error if the import of the resource was not successful. See Errors.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="unresolvedReferences(com.commercetools.importapi.models.common.UnresolvedReferences...)">
 <h3>unresolvedReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.107">unresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.174">unresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>...&nbsp;unresolvedReferences)</span></div>
+<div class="block"><p>In case of unresolved status this array will show the unresolved references</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="unresolvedReferences(java.util.List)">
 <h3>unresolvedReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.113">unresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.184">unresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>&gt;&nbsp;unresolvedReferences)</span></div>
+<div class="block"><p>In case of unresolved status this array will show the unresolved references</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusUnresolvedReferences(com.commercetools.importapi.models.common.UnresolvedReferences...)">
 <h3>plusUnresolvedReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.119">plusUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.194">plusUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>...&nbsp;unresolvedReferences)</span></div>
+<div class="block"><p>In case of unresolved status this array will show the unresolved references</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusUnresolvedReferences(java.util.function.Function)">
 <h3>plusUnresolvedReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.128">plusUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.207">plusUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>In case of unresolved status this array will show the unresolved references</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withUnresolvedReferences(java.util.function.Function)">
 <h3>withUnresolvedReferences</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.138">withUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.221">withUnresolvedReferences</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>,&#8203;<a href="../common/UnresolvedReferencesBuilder.html" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>In case of unresolved status this array will show the unresolved references</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.146">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.233">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><p>The time when the ImportOperation was created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.151">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.242">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="block"><p>The last time When the ImportOperation was modified.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="expiresAt(java.time.ZonedDateTime)">
 <h3>expiresAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.156">expiresAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.251">expiresAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
+<div class="block"><p>The expiration time of the ImportOperation.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.161">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.256">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getImportContainerKey()">
 <h3>getImportContainerKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.165">getImportContainerKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.260">getImportContainerKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceKey()">
 <h3>getResourceKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.169">getResourceKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.264">getResourceKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.173">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.268">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.177">getState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.272">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.181">getResourceVersion</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.276">getResourceVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getErrors()">
 <h3>getErrors</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.186">getErrors</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../errors/ErrorObject.html" title="interface in com.commercetools.importapi.models.errors">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.281">getErrors</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getUnresolvedReferences()">
 <h3>getUnresolvedReferences</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.191">getUnresolvedReferences</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.286">getUnresolvedReferences</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.196">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.291">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.200">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.295">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExpiresAt()">
 <h3>getExpiresAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.204">getExpiresAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.299">getExpiresAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.208">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.303">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&gt;</code></dd>
@@ -451,20 +525,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.224">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.319">buildUnchecked</a></span>()</div>
 <div class="block">builds ImportOperation without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.229">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.324">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importoperations.ImportOperation)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.233">of</a></span>&#8203;<span class="parameters">(<a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#line.328">of</a></span>&#8203;<span class="parameters">(<a href="ImportOperation.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperation</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.12">StoreSetNameActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.23">StoreSetNameActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a>&gt;</span></div>
+<div class="block">StoreSetNameActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     StoreSetNameAction storeSetNameAction = StoreSetNameAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,10 +135,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(com.commercetools.api.models.common.LocalizedString)">name</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The updated name of the store</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.util.function.Function)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The updated name of the store</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -156,7 +169,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StoreSetNameActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.13">StoreSetNameActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.24">StoreSetNameActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,27 +183,29 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.18">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.33">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The updated name of the store</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(com.commercetools.api.models.common.LocalizedString)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.24">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.43">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="block"><p>The updated name of the store</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.29">getName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.48">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.34">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.53">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a>&gt;</code></dd>
@@ -200,20 +215,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.41">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.60">buildUnchecked</a></span>()</div>
 <div class="block">builds StoreSetNameAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.64">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.store.StoreSetNameAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetNameActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetNameActionBuilder.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetNameAction.html" title="interface in com.commercetools.api.models.store">StoreSetNameAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

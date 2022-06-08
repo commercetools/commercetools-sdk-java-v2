@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.10">DiscountedLineItemPriceBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.23">DiscountedLineItemPriceBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&gt;</span></div>
+<div class="block">DiscountedLineItemPriceBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     DiscountedLineItemPrice discountedLineItemPrice = DiscountedLineItemPrice.builder()
+             .value(valueBuilder -> valueBuilder)
+             .plusIncludedDiscounts(includedDiscountsBuilder -> includedDiscountsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -174,7 +185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountedLineItemPriceBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.11">DiscountedLineItemPriceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.24">DiscountedLineItemPriceBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -188,61 +199,61 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.17">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,&#8203;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.34">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>,&#8203;<a href="MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.history.models.common.Money)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.23">value</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.44">value</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="includedDiscounts(com.commercetools.history.models.common.DiscountedLineItemPortion...)">
 <h3>includedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.28">includedDiscounts</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.53">includedDiscounts</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="includedDiscounts(java.util.List)">
 <h3>includedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.34">includedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>&gt;&nbsp;includedDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.63">includedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>&gt;&nbsp;includedDiscounts)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusIncludedDiscounts(com.commercetools.history.models.common.DiscountedLineItemPortion...)">
 <h3>plusIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.40">plusIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.73">plusIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusIncludedDiscounts(java.util.function.Function)">
 <h3>plusIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.49">plusIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>,&#8203;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.86">plusIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>,&#8203;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withIncludedDiscounts(java.util.function.Function)">
 <h3>withIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.59">withIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>,&#8203;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.100">withIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>,&#8203;<a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPortionBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.67">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.108">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIncludedDiscounts()">
 <h3>getIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.71">getIncludedDiscounts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPortion</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.112">getIncludedDiscounts</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.75">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.116">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&gt;</code></dd>
@@ -252,20 +263,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.84">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.125">buildUnchecked</a></span>()</div>
 <div class="block">builds DiscountedLineItemPrice without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.88">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.129">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.DiscountedLineItemPrice)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#line.133">of</a></span>&#8203;<span class="parameters">(<a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.history.models.common">DiscountedLineItemPrice</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

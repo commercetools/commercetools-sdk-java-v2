@@ -80,7 +80,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProjectCategoryRecommendationImpl.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.17">ProjectCategoryRecommendation</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.32">ProjectCategoryRecommendation</a></span></div>
+<div class="block">ProjectCategoryRecommendation
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProjectCategoryRecommendation projectCategoryRecommendation = ProjectCategoryRecommendation.builder()
+             .category(categoryBuilder -> categoryBuilder)
+             .confidence(0.3)
+             .path("{path}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -156,7 +169,7 @@ loadScripts(document, 'script');</script>
 <h3>getCategory</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/CategoryReference.html" title="interface in com.commercetools.ml.models.common">CategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.24">getCategory</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/CategoryReference.html" title="interface in com.commercetools.ml.models.common">CategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.39">getCategory</a></span>()</div>
 <div class="block"><p>A category that is recommended for a product.</p></div>
 </section>
 </li>
@@ -164,7 +177,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getConfidence()">
 <h3>getConfidence</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.32">getConfidence</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.47">getConfidence</a></span>()</div>
 <div class="block"><p>Probability score for the category recommendation.</p></div>
 </section>
 </li>
@@ -172,62 +185,62 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPath()">
 <h3>getPath</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.39">getPath</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.54">getPath</a></span>()</div>
 <div class="block"><p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCategory(com.commercetools.ml.models.common.CategoryReference)">
 <h3>setCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.43">setCategory</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryReference.html" title="interface in com.commercetools.ml.models.common">CategoryReference</a>&nbsp;category)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.58">setCategory</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryReference.html" title="interface in com.commercetools.ml.models.common">CategoryReference</a>&nbsp;category)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConfidence(java.lang.Double)">
 <h3>setConfidence</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.45">setConfidence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;confidence)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.60">setConfidence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;confidence)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPath(java.lang.String)">
 <h3>setPath</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.47">setPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.62">setPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;path)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.49">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.64">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.61">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.76">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.65">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.80">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProjectCategoryRecommendation(java.util.function.Function)">
 <h3>withProjectCategoryRecommendation</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.69">withProjectCategoryRecommendation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.84">withProjectCategoryRecommendation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.73">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectCategoryRecommendation.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendation</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendation.html#line.88">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

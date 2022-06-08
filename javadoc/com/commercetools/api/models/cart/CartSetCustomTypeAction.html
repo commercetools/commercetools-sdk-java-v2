@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCustomTypeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.17">CartSetCustomTypeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.29">CartSetCustomTypeAction</a></span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
+<div class="block">CartSetCustomTypeAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CartSetCustomTypeAction cartSetCustomTypeAction = CartSetCustomTypeAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,12 +134,12 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Cart.</div>
+<div class="block">Sets the Custom Fields fields for the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines the <a href="ctp:api:type:Type">Type</a> that extends the Cart with <a href="/../api/projects/custom-fields">Custom Fields</a>.</div>
+<div class="block">Defines the Type that extends the Cart with Custom Fields.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -172,7 +182,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="SET_CUSTOM_TYPE">
 <h3>SET_CUSTOM_TYPE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.21">SET_CUSTOM_TYPE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.33">SET_CUSTOM_TYPE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartSetCustomTypeAction.SET_CUSTOM_TYPE">Constant Field Values</a></dd>
@@ -191,65 +201,64 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.27">getType</a></span>()</div>
-<div class="block"><p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Cart with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-  If absent, any existing Type and Custom Fields are removed from the Cart.</p></div>
+</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.38">getType</a></span>()</div>
+<div class="block"><p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.34">getFields</a></span>()</div>
-<div class="block"><p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Cart.</p></div>
+</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.45">getFields</a></span>()</div>
+<div class="block"><p>Sets the Custom Fields fields for the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.38">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.49">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.40">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.51">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartSetCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CartSetCustomTypeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartSetCustomTypeAction(java.util.function.Function)">
 <h3>withCartSetCustomTypeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.61">withCartSetCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.72">withCartSetCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetCustomTypeAction.html" title="interface in com.commercetools.api.models.cart">CartSetCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetCustomTypeAction.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

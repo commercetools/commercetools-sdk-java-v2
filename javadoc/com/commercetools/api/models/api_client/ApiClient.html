@@ -80,7 +80,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ApiClientImpl.html" title="class in com.commercetools.api.models.api_client">ApiClientImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.17">ApiClient</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.32">ApiClient</a></span></div>
+<div class="block">ApiClient
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ApiClient apiClient = ApiClient.builder()
+             .id("{id}")
+             .name("{name}")
+             .scope("{scope}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,12 +117,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAccessTokenValiditySeconds()">getAccessTokenValiditySeconds</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Expiration time in seconds for each access token obtained by the API Client.</div>
+<div class="block">Expiration time in seconds for each access token obtained by the APIClient.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Date and time (UTC) the API Client was initially created at.</div>
+<div class="block">Date and time (UTC) the APIClient was initially created at.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDeleteAt()">getDeleteAt</a></span>()</code></div>
@@ -119,32 +132,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Unique ID of the API Client.</div>
+<div class="block">The OAuth2 <code>client_id</code> that can be used to obtain an access token.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLastUsedAt()">getLastUsedAt</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Date of the last day this API Client was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</div>
+<div class="block">Date of the last day this APIClient was used to obtain an access token.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Name of the API Client.</div>
+<div class="block">Name of the APIClient.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getRefreshTokenValiditySeconds()">getRefreshTokenValiditySeconds</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Inactivity expiration time in seconds for each refresh token obtained by the API Client.</div>
+<div class="block">Inactivity expiration time in seconds for each refresh token obtained by the APIClient.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getScope()">getScope</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</div>
+<div class="block">Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSecret()">getSecret</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Only shown once in the response of creating the API Client.</div>
+<div class="block">Only shown once in the response of creating the APIClient.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -203,158 +216,156 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.25">getId</a></span>()</div>
-<div class="block"><p>Unique ID of the API Client.
-  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.39">getId</a></span>()</div>
+<div class="block"><p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.32">getName</a></span>()</div>
-<div class="block"><p>Name of the API Client.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.46">getName</a></span>()</div>
+<div class="block"><p>Name of the APIClient.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getScope()">
 <h3>getScope</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.39">getScope</a></span>()</div>
-<div class="block"><p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.53">getScope</a></span>()</div>
+<div class="block"><p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSecret()">
 <h3>getSecret</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.48">getSecret</a></span>()</div>
-<div class="block"><p>Only shown once in the response of creating the API Client.
-  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.61">getSecret</a></span>()</div>
+<div class="block"><p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastUsedAt()">
 <h3>getLastUsedAt</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.55">getLastUsedAt</a></span>()</div>
-<div class="block"><p>Date of the last day this API Client was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.68">getLastUsedAt</a></span>()</div>
+<div class="block"><p>Date of the last day this APIClient was used to obtain an access token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDeleteAt()">
 <h3>getDeleteAt</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.62">getDeleteAt</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.75">getDeleteAt</a></span>()</div>
 <div class="block"><p>If set, the Client will be deleted on (or shortly after) this point in time.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.69">getCreatedAt</a></span>()</div>
-<div class="block"><p>Date and time (UTC) the API Client was initially created at.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.82">getCreatedAt</a></span>()</div>
+<div class="block"><p>Date and time (UTC) the APIClient was initially created at.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessTokenValiditySeconds()">
 <h3>getAccessTokenValiditySeconds</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.76">getAccessTokenValiditySeconds</a></span>()</div>
-<div class="block"><p>Expiration time in seconds for each access token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.89">getAccessTokenValiditySeconds</a></span>()</div>
+<div class="block"><p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRefreshTokenValiditySeconds()">
 <h3>getRefreshTokenValiditySeconds</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.83">getRefreshTokenValiditySeconds</a></span>()</div>
-<div class="block"><p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.96">getRefreshTokenValiditySeconds</a></span>()</div>
+<div class="block"><p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.86">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.99">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.88">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.101">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setScope(java.lang.String)">
 <h3>setScope</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.90">setScope</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scope)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.103">setScope</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scope)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSecret(java.lang.String)">
 <h3>setSecret</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.92">setSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;secret)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.105">setSecret</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;secret)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLastUsedAt(java.time.LocalDate)">
 <h3>setLastUsedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.94">setLastUsedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;lastUsedAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.107">setLastUsedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;lastUsedAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeleteAt(java.time.ZonedDateTime)">
 <h3>setDeleteAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.96">setDeleteAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;deleteAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.109">setDeleteAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;deleteAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.98">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.111">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccessTokenValiditySeconds(java.lang.Integer)">
 <h3>setAccessTokenValiditySeconds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.100">setAccessTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;accessTokenValiditySeconds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.113">setAccessTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;accessTokenValiditySeconds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRefreshTokenValiditySeconds(java.lang.Integer)">
 <h3>setRefreshTokenValiditySeconds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.102">setRefreshTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;refreshTokenValiditySeconds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.115">setRefreshTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;refreshTokenValiditySeconds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.104">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.117">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.api_client.ApiClient)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.108">of</a></span>&#8203;<span class="parameters">(<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.121">of</a></span>&#8203;<span class="parameters">(<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.122">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.135">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.api_client.ApiClient)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.126">builder</a></span>&#8203;<span class="parameters">(<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.139">builder</a></span>&#8203;<span class="parameters">(<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withApiClient(java.util.function.Function)">
 <h3>withApiClient</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.130">withApiClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.143">withApiClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.134">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClient.html#line.147">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

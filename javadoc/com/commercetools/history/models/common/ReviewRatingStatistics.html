@@ -80,7 +80,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReviewRatingStatisticsImpl.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.16">ReviewRatingStatistics</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.33">ReviewRatingStatistics</a></span></div>
+<div class="block">ReviewRatingStatistics
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ReviewRatingStatistics reviewRatingStatistics = ReviewRatingStatistics.builder()
+             .averageRating(1)
+             .highestRating(1)
+             .lowestRating(1)
+             .count(1)
+             .ratingsDistribution(ratingsDistributionBuilder -> ratingsDistributionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +186,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAverageRating()">
 <h3>getAverageRating</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.23">getAverageRating</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.40">getAverageRating</a></span>()</div>
 <div class="block"><p>Average rating of one target This number is rounded with 5 decimals.</p></div>
 </section>
 </li>
@@ -179,7 +194,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getHighestRating()">
 <h3>getHighestRating</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.30">getHighestRating</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.47">getHighestRating</a></span>()</div>
 <div class="block"><p>Highest rating of one target</p></div>
 </section>
 </li>
@@ -187,7 +202,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getLowestRating()">
 <h3>getLowestRating</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.37">getLowestRating</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.54">getLowestRating</a></span>()</div>
 <div class="block"><p>Lowest rating of one target</p></div>
 </section>
 </li>
@@ -195,7 +210,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.44">getCount</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.61">getCount</a></span>()</div>
 <div class="block"><p>Number of ratings taken into account</p></div>
 </section>
 </li>
@@ -204,74 +219,74 @@ loadScripts(document, 'script');</script>
 <h3>getRatingsDistribution</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.51">getRatingsDistribution</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.68">getRatingsDistribution</a></span>()</div>
 <div class="block"><p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAverageRating(java.lang.Integer)">
 <h3>setAverageRating</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.56">setAverageRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;averageRating)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.73">setAverageRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;averageRating)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setHighestRating(java.lang.Integer)">
 <h3>setHighestRating</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.58">setHighestRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;highestRating)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.75">setHighestRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;highestRating)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLowestRating(java.lang.Integer)">
 <h3>setLowestRating</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.60">setLowestRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lowestRating)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.77">setLowestRating</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;lowestRating)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCount(java.lang.Integer)">
 <h3>setCount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.62">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.79">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;count)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRatingsDistribution(java.lang.Object)">
 <h3>setRatingsDistribution</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.64">setRatingsDistribution</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;ratingsDistribution)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.81">setRatingsDistribution</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;ratingsDistribution)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.66">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.83">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.ReviewRatingStatistics)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.87">of</a></span>&#8203;<span class="parameters">(<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.80">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.97">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.common.ReviewRatingStatistics)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.84">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.101">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReviewRatingStatistics(java.util.function.Function)">
 <h3>withReviewRatingStatistics</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.88">withReviewRatingStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.105">withReviewRatingStatistics</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.92">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ReviewRatingStatistics.html#line.109">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

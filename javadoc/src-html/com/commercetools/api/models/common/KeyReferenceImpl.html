@@ -27,54 +27,65 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class KeyReferenceImpl implements KeyReference, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.common.ReferenceTypeId typeId;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private String key;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @JsonCreator</span>
-<span class="source-line-no">025</span><span id="line.25">    KeyReferenceImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,</span>
-<span class="source-line-no">026</span><span id="line.26">            @JsonProperty("key") final String key) {</span>
-<span class="source-line-no">027</span><span id="line.27">        this.typeId = typeId;</span>
-<span class="source-line-no">028</span><span id="line.28">        this.key = key;</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public KeyReferenceImpl() {</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;A KeyReference represents a loose reference to another resource in the same Project identified by the resource's &lt;code&gt;key&lt;/code&gt; field. If available, the &lt;code&gt;key&lt;/code&gt; is immutable and mandatory. KeyReferences do not support Reference Expansion.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class KeyReferenceImpl implements KeyReference, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private com.commercetools.api.models.common.ReferenceTypeId typeId;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private String key;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    @JsonCreator</span>
+<span class="source-line-no">028</span><span id="line.28">    KeyReferenceImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,</span>
+<span class="source-line-no">029</span><span id="line.29">            @JsonProperty("key") final String key) {</span>
+<span class="source-line-no">030</span><span id="line.30">        this.typeId = typeId;</span>
+<span class="source-line-no">031</span><span id="line.31">        this.key = key;</span>
 <span class="source-line-no">032</span><span id="line.32">    }</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {</span>
-<span class="source-line-no">035</span><span id="line.35">        return this.typeId;</span>
-<span class="source-line-no">036</span><span id="line.36">    }</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public String getKey() {</span>
-<span class="source-line-no">039</span><span id="line.39">        return this.key;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public void setKey(final String key) {</span>
-<span class="source-line-no">043</span><span id="line.43">        this.key = key;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    @Override</span>
-<span class="source-line-no">047</span><span id="line.47">    public boolean equals(Object o) {</span>
-<span class="source-line-no">048</span><span id="line.48">        if (this == o)</span>
-<span class="source-line-no">049</span><span id="line.49">            return true;</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">052</span><span id="line.52">            return false;</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">        KeyReferenceImpl that = (KeyReferenceImpl) o;</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">        return new EqualsBuilder().append(typeId, that.typeId).append(key, that.key).isEquals();</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    @Override</span>
-<span class="source-line-no">060</span><span id="line.60">    public int hashCode() {</span>
-<span class="source-line-no">061</span><span id="line.61">        return new HashCodeBuilder(17, 37).append(typeId).append(key).toHashCode();</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">}</span>
+<span class="source-line-no">034</span><span id="line.34">    public KeyReferenceImpl() {</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     *  &lt;p&gt;Type of referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">     */</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {</span>
+<span class="source-line-no">042</span><span id="line.42">        return this.typeId;</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;User-defined unique and immutable key of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public String getKey() {</span>
+<span class="source-line-no">050</span><span id="line.50">        return this.key;</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public void setKey(final String key) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.key = key;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @Override</span>
+<span class="source-line-no">058</span><span id="line.58">    public boolean equals(Object o) {</span>
+<span class="source-line-no">059</span><span id="line.59">        if (this == o)</span>
+<span class="source-line-no">060</span><span id="line.60">            return true;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">063</span><span id="line.63">            return false;</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">        KeyReferenceImpl that = (KeyReferenceImpl) o;</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">        return new EqualsBuilder().append(typeId, that.typeId).append(key, that.key).isEquals();</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @Override</span>
+<span class="source-line-no">071</span><span id="line.71">    public int hashCode() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return new HashCodeBuilder(17, 37).append(typeId).append(key).toHashCode();</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">}</span>
 
 
 

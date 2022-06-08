@@ -83,9 +83,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.10">ImportContainerPagedResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.26">ImportContainerPagedResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&gt;</span></div>
+<div class="block">ImportContainerPagedResponseBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ImportContainerPagedResponse importContainerPagedResponse = ImportContainerPagedResponse.builder()
+             .limit(1)
+             .offset(1)
+             .count(1)
+             .total(1)
+             .plusResults(resultsBuilder -> resultsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +137,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#count(java.lang.Long)">count</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The actual number of results returned.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCount()">getCount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -141,7 +157,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#limit(java.lang.Integer)">limit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Number of results requested.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -150,25 +168,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#offset(java.lang.Long)">offset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Number of elements skipped.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusResults(com.commercetools.importapi.models.importcontainers.ImportContainer...)">plusResults</a></span>&#8203;(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The array of Import Containers matching the query.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusResults(java.util.function.Function)">plusResults</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The array of Import Containers matching the query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#results(com.commercetools.importapi.models.importcontainers.ImportContainer...)">results</a></span>&#8203;(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The array of Import Containers matching the query.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#results(java.util.List)">results</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;&nbsp;results)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The array of Import Containers matching the query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#total(java.lang.Long)">total</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The total number of results matching the query.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withResults(java.util.function.Function)">withResults</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The array of Import Containers matching the query.</div>
+</div>
 </div>
 </div>
 </div>
@@ -189,7 +221,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImportContainerPagedResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.11">ImportContainerPagedResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.27">ImportContainerPagedResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -203,91 +235,100 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="limit(java.lang.Integer)">
 <h3>limit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.23">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.43">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</span></div>
+<div class="block"><p>Number of results requested.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="offset(java.lang.Long)">
 <h3>offset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.28">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.52">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="block"><p>Number of elements skipped.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="count(java.lang.Long)">
 <h3>count</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.33">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.61">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="block"><p>The actual number of results returned.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.38">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.70">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="block"><p>The total number of results matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(com.commercetools.importapi.models.importcontainers.ImportContainer...)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.43">results</a></span>&#8203;<span class="parameters">(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.79">results</a></span>&#8203;<span class="parameters">(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</span></div>
+<div class="block"><p>The array of Import Containers matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(java.util.List)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.49">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.89">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;&nbsp;results)</span></div>
+<div class="block"><p>The array of Import Containers matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(com.commercetools.importapi.models.importcontainers.ImportContainer...)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.55">plusResults</a></span>&#8203;<span class="parameters">(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.99">plusResults</a></span>&#8203;<span class="parameters">(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</span></div>
+<div class="block"><p>The array of Import Containers matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(java.util.function.Function)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.64">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.112">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The array of Import Containers matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResults(java.util.function.Function)">
 <h3>withResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.74">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.126">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>,&#8203;<a href="ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The array of Import Containers matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.82">getLimit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.134">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.86">getOffset</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.138">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.90">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.142">getCount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.94">getTotal</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.146">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.98">getResults</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.150">getResults</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.102">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.154">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&gt;</code></dd>
@@ -297,20 +338,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.114">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.166">buildUnchecked</a></span>()</div>
 <div class="block">builds ImportContainerPagedResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.118">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.170">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importcontainers.ImportContainerPagedResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.122">of</a></span>&#8203;<span class="parameters">(<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerPagedResponseBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerPagedResponseBuilder.html#line.174">of</a></span>&#8203;<span class="parameters">(<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.12">StoreAddProductSelectionActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.24">StoreAddProductSelectionActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a>&gt;</span></div>
+<div class="block">StoreAddProductSelectionActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     StoreAddProductSelectionAction storeAddProductSelectionAction = StoreAddProductSelectionAction.builder()
+             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +125,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#active(java.lang.Boolean)">active</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;active)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -138,10 +150,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier)">productSelection</a></span>&#8203;(<a href="../product_selection/ProductSelectionResourceIdentifier.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifier</a>&nbsp;productSelection)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Resource Identifier of a Product Selection</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(java.util.function.Function)">productSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>,&#8203;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Resource Identifier of a Product Selection</div>
+</div>
 </div>
 </div>
 </div>
@@ -162,7 +178,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StoreAddProductSelectionActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.13">StoreAddProductSelectionActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.25">StoreAddProductSelectionActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,39 +192,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productSelection(java.util.function.Function)">
 <h3>productSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.20">productSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>,&#8203;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.36">productSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>,&#8203;<a href="../product_selection/ProductSelectionResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Resource Identifier of a Product Selection</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="productSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier)">
 <h3>productSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.28">productSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/ProductSelectionResourceIdentifier.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifier</a>&nbsp;productSelection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.48">productSelection</a></span>&#8203;<span class="parameters">(<a href="../product_selection/ProductSelectionResourceIdentifier.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifier</a>&nbsp;productSelection)</span></div>
+<div class="block"><p>Resource Identifier of a Product Selection</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="active(java.lang.Boolean)">
 <h3>active</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.34">active</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.58">active</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;active)</span></div>
+<div class="block"><p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductSelection()">
 <h3>getProductSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionResourceIdentifier.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.39">getProductSelection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product_selection/ProductSelectionResourceIdentifier.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.63">getProductSelection</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getActive()">
 <h3>getActive</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.43">getActive</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.67">getActive</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.48">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.72">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a>&gt;</code></dd>
@@ -218,20 +237,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.57">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.81">buildUnchecked</a></span>()</div>
 <div class="block">builds StoreAddProductSelectionAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.85">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.store.StoreAddProductSelectionAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreAddProductSelectionActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddProductSelectionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddProductSelectionActionBuilder.html#line.89">of</a></span>&#8203;<span class="parameters">(<a href="StoreAddProductSelectionAction.html" title="interface in com.commercetools.api.models.store">StoreAddProductSelectionAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -20,23 +20,26 @@
 <span class="source-line-no">007</span><span id="line.7"></span>
 <span class="source-line-no">008</span><span id="line.8">import javax.annotation.Nullable;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">public class MapAccessor&lt;T&gt; {</span>
-<span class="source-line-no">011</span><span id="line.11">    private final Map&lt;String, T&gt; map;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    public MapAccessor(Map&lt;String, T&gt; map) {</span>
-<span class="source-line-no">014</span><span id="line.14">        this.map = map;</span>
-<span class="source-line-no">015</span><span id="line.15">    }</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    @Nullable</span>
-<span class="source-line-no">018</span><span id="line.18">    public &lt;U&gt; U get(final String key, Function&lt;T, U&gt; mapFn) {</span>
-<span class="source-line-no">019</span><span id="line.19">        return Optional.ofNullable(map.get(key)).map(mapFn).orElse(null);</span>
-<span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    @Nullable</span>
-<span class="source-line-no">023</span><span id="line.23">    public T get(final String key) {</span>
-<span class="source-line-no">024</span><span id="line.24">        return map.get(key);</span>
-<span class="source-line-no">025</span><span id="line.25">    }</span>
-<span class="source-line-no">026</span><span id="line.26">}</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> * @param &lt;T&gt; the type of the map value</span>
+<span class="source-line-no">012</span><span id="line.12"> */</span>
+<span class="source-line-no">013</span><span id="line.13">public class MapAccessor&lt;T&gt; {</span>
+<span class="source-line-no">014</span><span id="line.14">    private final Map&lt;String, T&gt; map;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">    public MapAccessor(Map&lt;String, T&gt; map) {</span>
+<span class="source-line-no">017</span><span id="line.17">        this.map = map;</span>
+<span class="source-line-no">018</span><span id="line.18">    }</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
+<span class="source-line-no">021</span><span id="line.21">    public &lt;U&gt; U get(final String key, Function&lt;T, U&gt; mapFn) {</span>
+<span class="source-line-no">022</span><span id="line.22">        return Optional.ofNullable(map.get(key)).map(mapFn).orElse(null);</span>
+<span class="source-line-no">023</span><span id="line.23">    }</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @Nullable</span>
+<span class="source-line-no">026</span><span id="line.26">    public T get(final String key) {</span>
+<span class="source-line-no">027</span><span id="line.27">        return map.get(key);</span>
+<span class="source-line-no">028</span><span id="line.28">    }</span>
+<span class="source-line-no">029</span><span id="line.29">}</span>
 
 
 

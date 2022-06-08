@@ -31,6 +31,7 @@ com.commercetools.api.models.project
 com.commercetools.api.models.review
 com.commercetools.api.models.shipping_method
 com.commercetools.api.models.shopping_list
+com.commercetools.api.models.standalone_price
 com.commercetools.api.models.state
 com.commercetools.api.models.store
 com.commercetools.api.models.subscription
@@ -80,6 +81,7 @@ com.commercetools.ml.models.image_search_config
 com.commercetools.ml.models.missing_data
 com.commercetools.ml.models.similar_products
 com.commercetools.money
+io.sphere.sdk.client
 io.vrap.rmf.base.client
 io.vrap.rmf.base.client.error
 io.vrap.rmf.base.client.http

@@ -27,76 +27,91 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl</span>
-<span class="source-line-no">019</span><span id="line.19">        implements CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction, ModelBase {</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    private String action;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    private String customLineItemId;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonCreator</span>
-<span class="source-line-no">028</span><span id="line.28">    CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(</span>
-<span class="source-line-no">029</span><span id="line.29">            @JsonProperty("customLineItemId") final String customLineItemId,</span>
-<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("targetsDelta") final java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta) {</span>
-<span class="source-line-no">031</span><span id="line.31">        this.customLineItemId = customLineItemId;</span>
-<span class="source-line-no">032</span><span id="line.32">        this.targetsDelta = targetsDelta;</span>
-<span class="source-line-no">033</span><span id="line.33">        this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl() {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public String getAction() {</span>
-<span class="source-line-no">041</span><span id="line.41">        return this.action;</span>
-<span class="source-line-no">042</span><span id="line.42">    }</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public String getCustomLineItemId() {</span>
-<span class="source-line-no">045</span><span id="line.45">        return this.customLineItemId;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargetsDelta() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return this.targetsDelta;</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public void setCustomLineItemId(final String customLineItemId) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.customLineItemId = customLineItemId;</span>
-<span class="source-line-no">054</span><span id="line.54">    }</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public void setTargetsDelta(final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.targetsDelta = new ArrayList&lt;&gt;(Arrays.asList(targetsDelta));</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public void setTargetsDelta(</span>
-<span class="source-line-no">061</span><span id="line.61">            final java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.targetsDelta = targetsDelta;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @Override</span>
-<span class="source-line-no">066</span><span id="line.66">    public boolean equals(Object o) {</span>
-<span class="source-line-no">067</span><span id="line.67">        if (this == o)</span>
-<span class="source-line-no">068</span><span id="line.68">            return true;</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">071</span><span id="line.71">            return false;</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">        CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl that = (CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl) o;</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> * CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl</span>
+<span class="source-line-no">022</span><span id="line.22">        implements CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction, ModelBase {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private String action;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private String customLineItemId;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    @JsonCreator</span>
+<span class="source-line-no">031</span><span id="line.31">    CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(</span>
+<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("customLineItemId") final String customLineItemId,</span>
+<span class="source-line-no">033</span><span id="line.33">            @JsonProperty("targetsDelta") final java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta) {</span>
+<span class="source-line-no">034</span><span id="line.34">        this.customLineItemId = customLineItemId;</span>
+<span class="source-line-no">035</span><span id="line.35">        this.targetsDelta = targetsDelta;</span>
+<span class="source-line-no">036</span><span id="line.36">        this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl() {</span>
+<span class="source-line-no">040</span><span id="line.40">        this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public String getAction() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return this.action;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     *</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public String getCustomLineItemId() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return this.customLineItemId;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     *</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargetsDelta() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return this.targetsDelta;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public void setCustomLineItemId(final String customLineItemId) {</span>
+<span class="source-line-no">068</span><span id="line.68">        this.customLineItemId = customLineItemId;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setTargetsDelta(final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {</span>
+<span class="source-line-no">072</span><span id="line.72">        this.targetsDelta = new ArrayList&lt;&gt;(Arrays.asList(targetsDelta));</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">076</span><span id="line.76">                .append(customLineItemId, that.customLineItemId)</span>
-<span class="source-line-no">077</span><span id="line.77">                .append(targetsDelta, that.targetsDelta)</span>
-<span class="source-line-no">078</span><span id="line.78">                .isEquals();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    @Override</span>
-<span class="source-line-no">082</span><span id="line.82">    public int hashCode() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(targetsDelta).toHashCode();</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">}</span>
+<span class="source-line-no">075</span><span id="line.75">    public void setTargetsDelta(</span>
+<span class="source-line-no">076</span><span id="line.76">            final java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; targetsDelta) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.targetsDelta = targetsDelta;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    @Override</span>
+<span class="source-line-no">081</span><span id="line.81">    public boolean equals(Object o) {</span>
+<span class="source-line-no">082</span><span id="line.82">        if (this == o)</span>
+<span class="source-line-no">083</span><span id="line.83">            return true;</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">086</span><span id="line.86">            return false;</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">        CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl that = (CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl) o;</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">091</span><span id="line.91">                .append(customLineItemId, that.customLineItemId)</span>
+<span class="source-line-no">092</span><span id="line.92">                .append(targetsDelta, that.targetsDelta)</span>
+<span class="source-line-no">093</span><span id="line.93">                .isEquals();</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    @Override</span>
+<span class="source-line-no">097</span><span id="line.97">    public int hashCode() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(targetsDelta).toHashCode();</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">}</span>
 
 
 

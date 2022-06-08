@@ -357,73 +357,82 @@
 <span class="source-line-no">344</span><span id="line.344">    }</span>
 <span class="source-line-no">345</span><span id="line.345"></span>
 <span class="source-line-no">346</span><span id="line.346">    public ApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
-<span class="source-line-no">347</span><span id="line.347">        return with(clientBuilder -&gt; clientBuilder.addCorrelationIdProvider(correlationIdProvider));</span>
+<span class="source-line-no">347</span><span id="line.347">        return addCorrelationIdProvider(correlationIdProvider, true);</span>
 <span class="source-line-no">348</span><span id="line.348">    }</span>
 <span class="source-line-no">349</span><span id="line.349"></span>
-<span class="source-line-no">350</span><span id="line.350">    public ApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">351</span><span id="line.351">        return with(clientBuilder -&gt; clientBuilder.withMiddleware(middleware, middlewares));</span>
-<span class="source-line-no">352</span><span id="line.352">    }</span>
-<span class="source-line-no">353</span><span id="line.353"></span>
-<span class="source-line-no">354</span><span id="line.354">    public ApiRootBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">355</span><span id="line.355">        return with(clientBuilder -&gt; clientBuilder.addMiddleware(middleware, middlewares));</span>
-<span class="source-line-no">356</span><span id="line.356">    }</span>
-<span class="source-line-no">357</span><span id="line.357"></span>
-<span class="source-line-no">358</span><span id="line.358">    public ApiRootBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">359</span><span id="line.359">        return with(clientBuilder -&gt; clientBuilder.withMiddlewares(middlewares));</span>
-<span class="source-line-no">360</span><span id="line.360">    }</span>
-<span class="source-line-no">361</span><span id="line.361"></span>
-<span class="source-line-no">362</span><span id="line.362">    public ApiRootBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">363</span><span id="line.363">        return with(clientBuilder -&gt; clientBuilder.addMiddlewares(middlewares));</span>
-<span class="source-line-no">364</span><span id="line.364">    }</span>
-<span class="source-line-no">365</span><span id="line.365"></span>
-<span class="source-line-no">366</span><span id="line.366">    public ApiRootBuilder with(UnaryOperator&lt;ClientBuilder&gt; builderUnaryOperator) {</span>
-<span class="source-line-no">367</span><span id="line.367">        builderUnaryOperator.apply(builder);</span>
-<span class="source-line-no">368</span><span id="line.368"></span>
-<span class="source-line-no">369</span><span id="line.369">        return this;</span>
-<span class="source-line-no">370</span><span id="line.370">    }</span>
-<span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    public ApiRoot build() {</span>
-<span class="source-line-no">373</span><span id="line.373">        return ApiRoot.fromClient(clientSupplier().get());</span>
-<span class="source-line-no">374</span><span id="line.374">    }</span>
-<span class="source-line-no">375</span><span id="line.375"></span>
-<span class="source-line-no">376</span><span id="line.376">    public ApiHttpClient buildClient() {</span>
-<span class="source-line-no">377</span><span id="line.377">        return clientSupplier().get();</span>
-<span class="source-line-no">378</span><span id="line.378">    }</span>
-<span class="source-line-no">379</span><span id="line.379"></span>
-<span class="source-line-no">380</span><span id="line.380">    public Supplier&lt;ApiHttpClient&gt; clientSupplier() {</span>
-<span class="source-line-no">381</span><span id="line.381">        return builder::build;</span>
-<span class="source-line-no">382</span><span id="line.382">    }</span>
-<span class="source-line-no">383</span><span id="line.383"></span>
-<span class="source-line-no">384</span><span id="line.384">    /**</span>
-<span class="source-line-no">385</span><span id="line.385">     * @deprecated use {@link #build(String)}  instead</span>
-<span class="source-line-no">386</span><span id="line.386">     */</span>
-<span class="source-line-no">387</span><span id="line.387">    @Deprecated</span>
-<span class="source-line-no">388</span><span id="line.388">    public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {</span>
-<span class="source-line-no">389</span><span id="line.389">        return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);</span>
-<span class="source-line-no">390</span><span id="line.390">    }</span>
-<span class="source-line-no">391</span><span id="line.391"></span>
-<span class="source-line-no">392</span><span id="line.392">    public ProjectApiRoot buildProjectRoot() {</span>
-<span class="source-line-no">393</span><span id="line.393">        Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);</span>
-<span class="source-line-no">394</span><span id="line.394">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
-<span class="source-line-no">395</span><span id="line.395">    }</span>
-<span class="source-line-no">396</span><span id="line.396"></span>
-<span class="source-line-no">397</span><span id="line.397">    /**</span>
-<span class="source-line-no">398</span><span id="line.398">     * @deprecated use {@link #build(String)}  instead</span>
-<span class="source-line-no">399</span><span id="line.399">     */</span>
-<span class="source-line-no">400</span><span id="line.400">    @Deprecated</span>
-<span class="source-line-no">401</span><span id="line.401">    public ProjectApiRoot buildProjectRoot(final String projectKey) {</span>
-<span class="source-line-no">402</span><span id="line.402">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
-<span class="source-line-no">403</span><span id="line.403">    }</span>
-<span class="source-line-no">404</span><span id="line.404"></span>
-<span class="source-line-no">405</span><span id="line.405">    public ProjectApiRoot build(final String projectKey) {</span>
-<span class="source-line-no">406</span><span id="line.406">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
-<span class="source-line-no">407</span><span id="line.407">    }</span>
-<span class="source-line-no">408</span><span id="line.408"></span>
-<span class="source-line-no">409</span><span id="line.409">    public static ByProjectKeyRequestBuilder createForProject(final String projectKey,</span>
-<span class="source-line-no">410</span><span id="line.410">            final ApiHttpClient clientSupplier) {</span>
-<span class="source-line-no">411</span><span id="line.411">        return ApiRoot.fromClient(clientSupplier).withProjectKey(projectKey);</span>
-<span class="source-line-no">412</span><span id="line.412">    }</span>
-<span class="source-line-no">413</span><span id="line.413">}</span>
+<span class="source-line-no">350</span><span id="line.350">    private ApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,</span>
+<span class="source-line-no">351</span><span id="line.351">            final boolean replace) {</span>
+<span class="source-line-no">352</span><span id="line.352">        return with(clientBuilder -&gt; clientBuilder.addCorrelationIdProvider(correlationIdProvider, replace));</span>
+<span class="source-line-no">353</span><span id="line.353">    }</span>
+<span class="source-line-no">354</span><span id="line.354"></span>
+<span class="source-line-no">355</span><span id="line.355">    public ApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">356</span><span id="line.356">        return with(clientBuilder -&gt; clientBuilder.withMiddleware(middleware, middlewares));</span>
+<span class="source-line-no">357</span><span id="line.357">    }</span>
+<span class="source-line-no">358</span><span id="line.358"></span>
+<span class="source-line-no">359</span><span id="line.359">    public ApiRootBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">360</span><span id="line.360">        return with(clientBuilder -&gt; clientBuilder.addMiddleware(middleware, middlewares));</span>
+<span class="source-line-no">361</span><span id="line.361">    }</span>
+<span class="source-line-no">362</span><span id="line.362"></span>
+<span class="source-line-no">363</span><span id="line.363">    public ApiRootBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">364</span><span id="line.364">        return with(clientBuilder -&gt; clientBuilder.withMiddlewares(middlewares));</span>
+<span class="source-line-no">365</span><span id="line.365">    }</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    public ApiRootBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">368</span><span id="line.368">        return with(clientBuilder -&gt; clientBuilder.addMiddlewares(middlewares));</span>
+<span class="source-line-no">369</span><span id="line.369">    }</span>
+<span class="source-line-no">370</span><span id="line.370"></span>
+<span class="source-line-no">371</span><span id="line.371">    public ApiRootBuilder with(UnaryOperator&lt;ClientBuilder&gt; builderUnaryOperator) {</span>
+<span class="source-line-no">372</span><span id="line.372">        builderUnaryOperator.apply(builder);</span>
+<span class="source-line-no">373</span><span id="line.373"></span>
+<span class="source-line-no">374</span><span id="line.374">        return this;</span>
+<span class="source-line-no">375</span><span id="line.375">    }</span>
+<span class="source-line-no">376</span><span id="line.376"></span>
+<span class="source-line-no">377</span><span id="line.377">    public ApiRoot build() {</span>
+<span class="source-line-no">378</span><span id="line.378">        return ApiRoot.fromClient(clientSupplier().get());</span>
+<span class="source-line-no">379</span><span id="line.379">    }</span>
+<span class="source-line-no">380</span><span id="line.380"></span>
+<span class="source-line-no">381</span><span id="line.381">    public ApiHttpClient buildClient() {</span>
+<span class="source-line-no">382</span><span id="line.382">        return clientSupplier().get();</span>
+<span class="source-line-no">383</span><span id="line.383">    }</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    public Supplier&lt;ApiHttpClient&gt; clientSupplier() {</span>
+<span class="source-line-no">386</span><span id="line.386">        return builder::build;</span>
+<span class="source-line-no">387</span><span id="line.387">    }</span>
+<span class="source-line-no">388</span><span id="line.388"></span>
+<span class="source-line-no">389</span><span id="line.389">    /**</span>
+<span class="source-line-no">390</span><span id="line.390">     * @deprecated use {@link #build(String)}  instead</span>
+<span class="source-line-no">391</span><span id="line.391">     */</span>
+<span class="source-line-no">392</span><span id="line.392">    @Deprecated</span>
+<span class="source-line-no">393</span><span id="line.393">    public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {</span>
+<span class="source-line-no">394</span><span id="line.394">        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);</span>
+<span class="source-line-no">395</span><span id="line.395">        return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);</span>
+<span class="source-line-no">396</span><span id="line.396">    }</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">    public ProjectApiRoot buildProjectRoot() {</span>
+<span class="source-line-no">399</span><span id="line.399">        Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);</span>
+<span class="source-line-no">400</span><span id="line.400">        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);</span>
+<span class="source-line-no">401</span><span id="line.401">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
+<span class="source-line-no">402</span><span id="line.402">    }</span>
+<span class="source-line-no">403</span><span id="line.403"></span>
+<span class="source-line-no">404</span><span id="line.404">    /**</span>
+<span class="source-line-no">405</span><span id="line.405">     * @deprecated use {@link #build(String)}  instead</span>
+<span class="source-line-no">406</span><span id="line.406">     */</span>
+<span class="source-line-no">407</span><span id="line.407">    @Deprecated</span>
+<span class="source-line-no">408</span><span id="line.408">    public ProjectApiRoot buildProjectRoot(final String projectKey) {</span>
+<span class="source-line-no">409</span><span id="line.409">        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);</span>
+<span class="source-line-no">410</span><span id="line.410">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
+<span class="source-line-no">411</span><span id="line.411">    }</span>
+<span class="source-line-no">412</span><span id="line.412"></span>
+<span class="source-line-no">413</span><span id="line.413">    public ProjectApiRoot build(final String projectKey) {</span>
+<span class="source-line-no">414</span><span id="line.414">        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);</span>
+<span class="source-line-no">415</span><span id="line.415">        return ProjectApiRoot.fromClient(projectKey, builder.build());</span>
+<span class="source-line-no">416</span><span id="line.416">    }</span>
+<span class="source-line-no">417</span><span id="line.417"></span>
+<span class="source-line-no">418</span><span id="line.418">    public static ByProjectKeyRequestBuilder createForProject(final String projectKey,</span>
+<span class="source-line-no">419</span><span id="line.419">            final ApiHttpClient clientSupplier) {</span>
+<span class="source-line-no">420</span><span id="line.420">        return ApiRoot.fromClient(clientSupplier).withProjectKey(projectKey);</span>
+<span class="source-line-no">421</span><span id="line.421">    }</span>
+<span class="source-line-no">422</span><span id="line.422">}</span>
 
 
 

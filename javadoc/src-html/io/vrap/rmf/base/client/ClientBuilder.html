@@ -533,78 +533,86 @@
 <span class="source-line-no">520</span><span id="line.520">        return this;</span>
 <span class="source-line-no">521</span><span id="line.521">    }</span>
 <span class="source-line-no">522</span><span id="line.522"></span>
-<span class="source-line-no">523</span><span id="line.523">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
-<span class="source-line-no">524</span><span id="line.524">        if (correlationIdProvider != null) {</span>
-<span class="source-line-no">525</span><span id="line.525">            correlationIdMiddleware = () -&gt; (request, next) -&gt; {</span>
-<span class="source-line-no">526</span><span id="line.526">                if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {</span>
-<span class="source-line-no">527</span><span id="line.527">                    return next.apply(request);</span>
-<span class="source-line-no">528</span><span id="line.528">                }</span>
-<span class="source-line-no">529</span><span id="line.529">                return next.apply(</span>
-<span class="source-line-no">530</span><span id="line.530">                    request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));</span>
-<span class="source-line-no">531</span><span id="line.531">            };</span>
-<span class="source-line-no">532</span><span id="line.532">        }</span>
-<span class="source-line-no">533</span><span id="line.533">        return this;</span>
-<span class="source-line-no">534</span><span id="line.534">    }</span>
-<span class="source-line-no">535</span><span id="line.535"></span>
-<span class="source-line-no">536</span><span id="line.536">    /**</span>
-<span class="source-line-no">537</span><span id="line.537">     * sets the middlewares to be configured for the client.</span>
-<span class="source-line-no">538</span><span id="line.538">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">539</span><span id="line.539">     * @return ClientBuilder instance</span>
-<span class="source-line-no">540</span><span id="line.540">     */</span>
-<span class="source-line-no">541</span><span id="line.541">    public ClientBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">542</span><span id="line.542">        this.middlewares = new ArrayList&lt;&gt;(middlewares);</span>
-<span class="source-line-no">543</span><span id="line.543">        return this;</span>
-<span class="source-line-no">544</span><span id="line.544">    }</span>
-<span class="source-line-no">545</span><span id="line.545"></span>
-<span class="source-line-no">546</span><span id="line.546">    /**</span>
-<span class="source-line-no">547</span><span id="line.547">     * sets the middlewares to be configured for the client.</span>
-<span class="source-line-no">548</span><span id="line.548">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">549</span><span id="line.549">     * @return ClientBuilder instance</span>
-<span class="source-line-no">550</span><span id="line.550">     */</span>
-<span class="source-line-no">551</span><span id="line.551">    public ClientBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">552</span><span id="line.552">        this.middlewares = new ArrayList&lt;&gt;(Collections.singletonList(middleware));</span>
-<span class="source-line-no">553</span><span id="line.553">        if (middlewares.length &gt; 0) {</span>
-<span class="source-line-no">554</span><span id="line.554">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
-<span class="source-line-no">555</span><span id="line.555">        }</span>
-<span class="source-line-no">556</span><span id="line.556">        return this;</span>
-<span class="source-line-no">557</span><span id="line.557">    }</span>
-<span class="source-line-no">558</span><span id="line.558"></span>
-<span class="source-line-no">559</span><span id="line.559">    /**</span>
-<span class="source-line-no">560</span><span id="line.560">     * adds the middlewares to be configured for the client.</span>
-<span class="source-line-no">561</span><span id="line.561">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">562</span><span id="line.562">     * @return ClientBuilder instance</span>
-<span class="source-line-no">563</span><span id="line.563">     */</span>
-<span class="source-line-no">564</span><span id="line.564">    public ClientBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">565</span><span id="line.565">        this.middlewares.addAll(middlewares);</span>
-<span class="source-line-no">566</span><span id="line.566">        return this;</span>
-<span class="source-line-no">567</span><span id="line.567">    }</span>
-<span class="source-line-no">568</span><span id="line.568"></span>
-<span class="source-line-no">569</span><span id="line.569">    /**</span>
-<span class="source-line-no">570</span><span id="line.570">     * adds the middlewares to be configured for the client.</span>
-<span class="source-line-no">571</span><span id="line.571">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">572</span><span id="line.572">     * @return ClientBuilder instance</span>
-<span class="source-line-no">573</span><span id="line.573">     */</span>
-<span class="source-line-no">574</span><span id="line.574">    public ClientBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">575</span><span id="line.575">        this.middlewares.add(middleware);</span>
-<span class="source-line-no">576</span><span id="line.576">        if (middlewares.length &gt; 0) {</span>
-<span class="source-line-no">577</span><span id="line.577">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
-<span class="source-line-no">578</span><span id="line.578">        }</span>
-<span class="source-line-no">579</span><span id="line.579">        return this;</span>
-<span class="source-line-no">580</span><span id="line.580">    }</span>
-<span class="source-line-no">581</span><span id="line.581"></span>
-<span class="source-line-no">582</span><span id="line.582">    public ApiHttpClient build() {</span>
-<span class="source-line-no">583</span><span id="line.583">        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),</span>
-<span class="source-line-no">584</span><span id="line.584">            requireNonNull(serializer.get()));</span>
-<span class="source-line-no">585</span><span id="line.585">    }</span>
-<span class="source-line-no">586</span><span id="line.586"></span>
-<span class="source-line-no">587</span><span id="line.587">    public static String buildDefaultUserAgent() {</span>
-<span class="source-line-no">588</span><span id="line.588">        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;</span>
-<span class="source-line-no">589</span><span id="line.589">        String osName = SystemUtils.OS_NAME;</span>
-<span class="source-line-no">590</span><span id="line.590">        String osArch = SystemUtils.OS_ARCH;</span>
-<span class="source-line-no">591</span><span id="line.591">        String sdkVersion = BuildInfo.VERSION;</span>
-<span class="source-line-no">592</span><span id="line.592">        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";</span>
+<span class="source-line-no">523</span><span id="line.523">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,</span>
+<span class="source-line-no">524</span><span id="line.524">            final boolean replace) {</span>
+<span class="source-line-no">525</span><span id="line.525">        if (!replace &amp;&amp; correlationIdMiddleware != null) {</span>
+<span class="source-line-no">526</span><span id="line.526">            return this;</span>
+<span class="source-line-no">527</span><span id="line.527">        }</span>
+<span class="source-line-no">528</span><span id="line.528">        if (correlationIdProvider != null) {</span>
+<span class="source-line-no">529</span><span id="line.529">            correlationIdMiddleware = () -&gt; (request, next) -&gt; {</span>
+<span class="source-line-no">530</span><span id="line.530">                if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {</span>
+<span class="source-line-no">531</span><span id="line.531">                    return next.apply(request);</span>
+<span class="source-line-no">532</span><span id="line.532">                }</span>
+<span class="source-line-no">533</span><span id="line.533">                return next.apply(</span>
+<span class="source-line-no">534</span><span id="line.534">                    request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));</span>
+<span class="source-line-no">535</span><span id="line.535">            };</span>
+<span class="source-line-no">536</span><span id="line.536">        }</span>
+<span class="source-line-no">537</span><span id="line.537">        return this;</span>
+<span class="source-line-no">538</span><span id="line.538">    }</span>
+<span class="source-line-no">539</span><span id="line.539"></span>
+<span class="source-line-no">540</span><span id="line.540">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
+<span class="source-line-no">541</span><span id="line.541">        return addCorrelationIdProvider(correlationIdProvider, true);</span>
+<span class="source-line-no">542</span><span id="line.542">    }</span>
+<span class="source-line-no">543</span><span id="line.543"></span>
+<span class="source-line-no">544</span><span id="line.544">    /**</span>
+<span class="source-line-no">545</span><span id="line.545">     * sets the middlewares to be configured for the client.</span>
+<span class="source-line-no">546</span><span id="line.546">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">547</span><span id="line.547">     * @return ClientBuilder instance</span>
+<span class="source-line-no">548</span><span id="line.548">     */</span>
+<span class="source-line-no">549</span><span id="line.549">    public ClientBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">550</span><span id="line.550">        this.middlewares = new ArrayList&lt;&gt;(middlewares);</span>
+<span class="source-line-no">551</span><span id="line.551">        return this;</span>
+<span class="source-line-no">552</span><span id="line.552">    }</span>
+<span class="source-line-no">553</span><span id="line.553"></span>
+<span class="source-line-no">554</span><span id="line.554">    /**</span>
+<span class="source-line-no">555</span><span id="line.555">     * sets the middlewares to be configured for the client.</span>
+<span class="source-line-no">556</span><span id="line.556">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">557</span><span id="line.557">     * @return ClientBuilder instance</span>
+<span class="source-line-no">558</span><span id="line.558">     */</span>
+<span class="source-line-no">559</span><span id="line.559">    public ClientBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">560</span><span id="line.560">        this.middlewares = new ArrayList&lt;&gt;(Collections.singletonList(middleware));</span>
+<span class="source-line-no">561</span><span id="line.561">        if (middlewares.length &gt; 0) {</span>
+<span class="source-line-no">562</span><span id="line.562">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
+<span class="source-line-no">563</span><span id="line.563">        }</span>
+<span class="source-line-no">564</span><span id="line.564">        return this;</span>
+<span class="source-line-no">565</span><span id="line.565">    }</span>
+<span class="source-line-no">566</span><span id="line.566"></span>
+<span class="source-line-no">567</span><span id="line.567">    /**</span>
+<span class="source-line-no">568</span><span id="line.568">     * adds the middlewares to be configured for the client.</span>
+<span class="source-line-no">569</span><span id="line.569">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">570</span><span id="line.570">     * @return ClientBuilder instance</span>
+<span class="source-line-no">571</span><span id="line.571">     */</span>
+<span class="source-line-no">572</span><span id="line.572">    public ClientBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">573</span><span id="line.573">        this.middlewares.addAll(middlewares);</span>
+<span class="source-line-no">574</span><span id="line.574">        return this;</span>
+<span class="source-line-no">575</span><span id="line.575">    }</span>
+<span class="source-line-no">576</span><span id="line.576"></span>
+<span class="source-line-no">577</span><span id="line.577">    /**</span>
+<span class="source-line-no">578</span><span id="line.578">     * adds the middlewares to be configured for the client.</span>
+<span class="source-line-no">579</span><span id="line.579">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">580</span><span id="line.580">     * @return ClientBuilder instance</span>
+<span class="source-line-no">581</span><span id="line.581">     */</span>
+<span class="source-line-no">582</span><span id="line.582">    public ClientBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">583</span><span id="line.583">        this.middlewares.add(middleware);</span>
+<span class="source-line-no">584</span><span id="line.584">        if (middlewares.length &gt; 0) {</span>
+<span class="source-line-no">585</span><span id="line.585">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
+<span class="source-line-no">586</span><span id="line.586">        }</span>
+<span class="source-line-no">587</span><span id="line.587">        return this;</span>
+<span class="source-line-no">588</span><span id="line.588">    }</span>
+<span class="source-line-no">589</span><span id="line.589"></span>
+<span class="source-line-no">590</span><span id="line.590">    public ApiHttpClient build() {</span>
+<span class="source-line-no">591</span><span id="line.591">        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),</span>
+<span class="source-line-no">592</span><span id="line.592">            requireNonNull(serializer.get()));</span>
 <span class="source-line-no">593</span><span id="line.593">    }</span>
-<span class="source-line-no">594</span><span id="line.594">}</span>
+<span class="source-line-no">594</span><span id="line.594"></span>
+<span class="source-line-no">595</span><span id="line.595">    public static String buildDefaultUserAgent() {</span>
+<span class="source-line-no">596</span><span id="line.596">        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;</span>
+<span class="source-line-no">597</span><span id="line.597">        String osName = SystemUtils.OS_NAME;</span>
+<span class="source-line-no">598</span><span id="line.598">        String osArch = SystemUtils.OS_ARCH;</span>
+<span class="source-line-no">599</span><span id="line.599">        String sdkVersion = BuildInfo.VERSION;</span>
+<span class="source-line-no">600</span><span id="line.600">        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";</span>
+<span class="source-line-no">601</span><span id="line.601">    }</span>
+<span class="source-line-no">602</span><span id="line.602">}</span>
 
 
 

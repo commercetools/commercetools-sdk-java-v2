@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code>, <code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code>, <code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;javax.money.MonetaryAmount&gt;</code>, <code>javax.money.CurrencySupplier</code>, <code>javax.money.MonetaryAmount</code>, <code>javax.money.NumberSupplier</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.20">HighPrecisionMoneyImpl</a></span>
@@ -138,27 +138,27 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">amount in the smallest indivisible unit of a currency, such as</div>
+<div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCurrencyCode()">getCurrencyCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</div>
+<div class="block">Currency code compliant to ISO 4217.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFractionDigits()">getFractionDigits</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">number of digits after the decimal separator</div>
+<div class="block">Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPreciseAmount()">getPreciseAmount</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</div>
+<div class="block">Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</div>
+<div class="block">MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -183,16 +183,19 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.HighPrecisionMoney">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></h3>
-<code><a href="HighPrecisionMoney.html#toDraft()">toDraft</a>, <a href="HighPrecisionMoney.html#withHighPrecisionMoney(java.util.function.Function)">withHighPrecisionMoney</a></code></div>
+<code><a href="HighPrecisionMoney.html#createMoneyOperator()">createMoneyOperator</a>, <a href="HighPrecisionMoney.html#toDraft()">toDraft</a>, <a href="HighPrecisionMoney.html#withHighPrecisionMoney(java.util.function.Function)">withHighPrecisionMoney</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.ModelBase">Methods inherited from interface&nbsp;io.vrap.rmf.base.client.<a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></h3>
 <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html#reflectionString()">reflectionString</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html#reflectionString(org.apache.commons.lang3.builder.ToStringStyle)">reflectionString</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.javax.money.MonetaryAmount">Methods inherited from interface&nbsp;javax.money.MonetaryAmount</h3>
+<code>isNegative, isNegativeOrZero, isPositive, isPositiveOrZero, isZero</code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.MonetaryAmountConvertable">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></h3>
 <code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.Money">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></h3>
-<code><a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
+<code><a href="Money.html#abs()">abs</a>, <a href="Money.html#add(javax.money.MonetaryAmount)">add</a>, <a href="Money.html#compareTo(javax.money.MonetaryAmount)">compareTo</a>, <a href="Money.html#divide(double)">divide</a>, <a href="Money.html#divide(long)">divide</a>, <a href="Money.html#divide(java.lang.Number)">divide</a>, <a href="Money.html#divideAndRemainder(double)">divideAndRemainder</a>, <a href="Money.html#divideAndRemainder(long)">divideAndRemainder</a>, <a href="Money.html#divideAndRemainder(java.lang.Number)">divideAndRemainder</a>, <a href="Money.html#divideToIntegralValue(double)">divideToIntegralValue</a>, <a href="Money.html#divideToIntegralValue(long)">divideToIntegralValue</a>, <a href="Money.html#divideToIntegralValue(java.lang.Number)">divideToIntegralValue</a>, <a href="Money.html#getContext()">getContext</a>, <a href="Money.html#getCurrency()">getCurrency</a>, <a href="Money.html#getFactory()">getFactory</a>, <a href="Money.html#getNumber()">getNumber</a>, <a href="Money.html#isEqualTo(javax.money.MonetaryAmount)">isEqualTo</a>, <a href="Money.html#isGreaterThan(javax.money.MonetaryAmount)">isGreaterThan</a>, <a href="Money.html#isGreaterThanOrEqualTo(javax.money.MonetaryAmount)">isGreaterThanOrEqualTo</a>, <a href="Money.html#isLessThan(javax.money.MonetaryAmount)">isLessThan</a>, <a href="Money.html#isLessThanOrEqualTo(javax.money.MonetaryAmount)">isLessThanOrEqualTo</a>, <a href="Money.html#multiply(double)">multiply</a>, <a href="Money.html#multiply(long)">multiply</a>, <a href="Money.html#multiply(java.lang.Number)">multiply</a>, <a href="Money.html#negate()">negate</a>, <a href="Money.html#plus()">plus</a>, <a href="Money.html#query(javax.money.MonetaryQuery)">query</a>, <a href="Money.html#remainder(double)">remainder</a>, <a href="Money.html#remainder(long)">remainder</a>, <a href="Money.html#remainder(java.lang.Number)">remainder</a>, <a href="Money.html#scaleByPowerOfTen(int)">scaleByPowerOfTen</a>, <a href="Money.html#signum()">signum</a>, <a href="Money.html#stripTrailingZeros()">stripTrailingZeros</a>, <a href="Money.html#subtract(javax.money.MonetaryAmount)">subtract</a>, <a href="Money.html#with(javax.money.MonetaryOperator)">with</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.TypedMoney">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></h3>
 <code><a href="TypedMoney.html#withTypedMoney(java.util.function.Function)">withTypedMoney</a></code></div>
@@ -224,11 +227,11 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="getCentAmount()">
 <h3>getCentAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.56">getCentAmount</a></span>()</div>
-<div class="block"><p>amount in the smallest indivisible unit of a currency, such as</p>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.57">getCentAmount</a></span>()</div>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency, such as:</p>
   <ul>
-  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
   </ul></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -239,8 +242,8 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="getCurrencyCode()">
 <h3>getCurrencyCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.63">getCurrencyCode</a></span>()</div>
-<div class="block"><p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.65">getCurrencyCode</a></span>()</div>
+<div class="block"><p>Currency code compliant to ISO 4217.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#getCurrencyCode()">getCurrencyCode</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -250,8 +253,8 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.70">getType</a></span>()</div>
-<div class="block"><p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.73">getType</a></span>()</div>
+<div class="block"><p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypedMoney.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></dd>
@@ -262,12 +265,10 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <section class="detail" id="getFractionDigits()">
 <h3>getFractionDigits</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.81">getFractionDigits</a></span>()</div>
-<div class="block"><p>number of digits after the decimal separator</p>
-  <ul>
-  <li>equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
-  <li>greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
-  </ul></div>
+<div class="block"><p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="HighPrecisionMoney.html#getFractionDigits()">getFractionDigits</a></code>&nbsp;in interface&nbsp;<code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="TypedMoney.html#getFractionDigits()">getFractionDigits</a></code>&nbsp;in interface&nbsp;<code><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></dd>
 </dl>
@@ -276,8 +277,8 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="getPreciseAmount()">
 <h3>getPreciseAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.88">getPreciseAmount</a></span>()</div>
-<div class="block"><p>amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.89">getPreciseAmount</a></span>()</div>
+<div class="block"><p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="HighPrecisionMoney.html#getPreciseAmount()">getPreciseAmount</a></code>&nbsp;in interface&nbsp;<code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code></dd>
@@ -287,7 +288,7 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="setCentAmount(java.lang.Long)">
 <h3>setCentAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.92">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.93">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -297,7 +298,7 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="setCurrencyCode(java.lang.String)">
 <h3>setCurrencyCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.96">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.97">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -307,8 +308,10 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="setFractionDigits(java.lang.Integer)">
 <h3>setFractionDigits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.100">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.101">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="HighPrecisionMoney.html#setFractionDigits(java.lang.Integer)">setFractionDigits</a></code>&nbsp;in interface&nbsp;<code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="TypedMoney.html#setFractionDigits(java.lang.Integer)">setFractionDigits</a></code>&nbsp;in interface&nbsp;<code><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></dd>
 </dl>
@@ -317,7 +320,7 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="setPreciseAmount(java.lang.Long)">
 <h3>setPreciseAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.104">setPreciseAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.105">setPreciseAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="HighPrecisionMoney.html#setPreciseAmount(java.lang.Long)">setPreciseAmount</a></code>&nbsp;in interface&nbsp;<code><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code></dd>
@@ -327,7 +330,7 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.108">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.109">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -337,7 +340,7 @@ implements <a href="HighPrecisionMoney.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.126">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyImpl.html#line.127">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

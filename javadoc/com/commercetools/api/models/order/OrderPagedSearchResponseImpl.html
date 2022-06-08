@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.17">OrderPagedSearchResponseImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.20">OrderPagedSearchResponseImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">OrderPagedSearchResponse</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -133,12 +134,12 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of results the response should contain at maximum, used for pagination.</div>
+<div class="block">Number of results requested.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of results skipped, used for pagination.</div>
+<div class="block">Number of elements skipped.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTotal()">getTotal</a></span>()</code></div>
@@ -189,7 +190,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderPagedSearchResponseImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.38">OrderPagedSearchResponseImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.41">OrderPagedSearchResponseImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -203,7 +204,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.44">getTotal</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.48">getTotal</a></span>()</div>
 <div class="block"><p>Total number of results matching the query.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -214,8 +215,8 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.51">getOffset</a></span>()</div>
-<div class="block"><p>Number of results skipped, used for pagination.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.56">getOffset</a></span>()</div>
+<div class="block"><p>Number of elements skipped.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -225,8 +226,8 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.58">getLimit</a></span>()</div>
-<div class="block"><p>Number of results the response should contain at maximum, used for pagination.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.64">getLimit</a></span>()</div>
+<div class="block"><p>Number of results requested.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -236,7 +237,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getHits()">
 <h3>getHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.65">getHits</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.72">getHits</a></span>()</div>
 <div class="block"><p>Actual results.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -247,7 +248,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.69">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.76">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#setTotal(java.lang.Long)">setTotal</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -257,7 +258,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setOffset(java.lang.Long)">
 <h3>setOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.73">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.80">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#setOffset(java.lang.Long)">setOffset</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -267,7 +268,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setLimit(java.lang.Long)">
 <h3>setLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.77">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.84">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#setLimit(java.lang.Long)">setLimit</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -277,7 +278,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setHits(com.commercetools.api.models.order.Hit...)">
 <h3>setHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.81">setHits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.88">setHits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#setHits(com.commercetools.api.models.order.Hit...)">setHits</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -287,7 +288,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setHits(java.util.List)">
 <h3>setHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.85">setHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;&nbsp;hits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.92">setHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;&nbsp;hits)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderPagedSearchResponse.html#setHits(java.util.List)">setHits</a></code>&nbsp;in interface&nbsp;<code><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></code></dd>
@@ -297,7 +298,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.89">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.96">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -307,7 +308,7 @@ implements <a href="OrderPagedSearchResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.106">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseImpl.html#line.113">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

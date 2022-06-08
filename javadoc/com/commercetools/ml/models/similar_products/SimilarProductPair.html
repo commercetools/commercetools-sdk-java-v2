@@ -80,8 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SimilarProductPairImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductPairImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.19">SimilarProductPair</a></span></div>
-<div class="block"><p>A pair of SimilarProducts</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.30">SimilarProductPair</a></span></div>
+<div class="block"><p>A pair of SimilarProducts</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SimilarProductPair similarProductPair = SimilarProductPair.builder()
+             .confidence(0.3)
+             .plusProducts(productsBuilder -> productsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -149,7 +160,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getConfidence()">
 <h3>getConfidence</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.26">getConfidence</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.37">getConfidence</a></span>()</div>
 <div class="block"><p>The probability of product similarity.</p></div>
 </section>
 </li>
@@ -158,61 +169,61 @@ loadScripts(document, 'script');</script>
 <h3>getProducts</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.30">getProducts</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.44">getProducts</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConfidence(java.lang.Double)">
 <h3>setConfidence</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.35">setConfidence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;confidence)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.49">setConfidence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;confidence)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProducts(com.commercetools.ml.models.similar_products.SimilarProduct...)">
 <h3>setProducts</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.37">setProducts</a></span>&#8203;<span class="parameters">(<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>...&nbsp;products)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.51">setProducts</a></span>&#8203;<span class="parameters">(<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>...&nbsp;products)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProducts(java.util.List)">
 <h3>setProducts</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.40">setProducts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>&gt;&nbsp;products)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.54">setProducts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SimilarProduct.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProduct</a>&gt;&nbsp;products)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.similar_products.SimilarProductPair)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPairBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductPairBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPairBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductPairBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.similar_products.SimilarProductPair)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPairBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductPairBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductPairBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductPairBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSimilarProductPair(java.util.function.Function)">
 <h3>withSimilarProductPair</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.61">withSimilarProductPair</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.75">withSimilarProductPair</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SimilarProductPair.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductPair</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductPair.html#line.79">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

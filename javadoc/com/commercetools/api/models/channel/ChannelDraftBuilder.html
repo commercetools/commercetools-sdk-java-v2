@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.12">ChannelDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.24">ChannelDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</span></div>
+<div class="block">ChannelDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ChannelDraft channelDraft = ChannelDraft.builder()
+             .key("{key}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,10 +125,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#address(com.commercetools.api.models.common.BaseAddress)">address</a></span>&#8203;(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Address where the Channel is located.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#address(java.util.function.Function)">address</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,&#8203;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Address where the Channel is located.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -129,22 +143,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(com.commercetools.api.models.type.CustomFieldsDraft)">custom</a></span>&#8203;(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Custom fields defined for the Channel.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(java.util.function.Function)">custom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Custom fields defined for the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(com.commercetools.api.models.common.LocalizedString)">description</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Description of the Channel.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(java.util.function.Function)">description</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Description of the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#geoLocation(com.commercetools.api.models.common.GeoJson)">geoLocation</a></span>&#8203;(<a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&nbsp;geoLocation)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">GeoJSON geometry object encoding the geo location of the Channel.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#geoLocation(java.util.function.Function)">geoLocation</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/GeoJsonBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">GeoJSON geometry object encoding the geo location of the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAddress()">getAddress</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -168,13 +194,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#key(java.lang.String)">key</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">User-defined unique identifier for the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(com.commercetools.api.models.common.LocalizedString)">name</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the Channel.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.util.function.Function)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -183,13 +215,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusRoles(com.commercetools.api.models.channel.ChannelRoleEnum...)">plusRoles</a></span>&#8203;(<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Roles of the Channel.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#roles(com.commercetools.api.models.channel.ChannelRoleEnum...)">roles</a></span>&#8203;(<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Roles of the Channel.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#roles(java.util.List)">roles</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;&nbsp;roles)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Roles of the Channel.</div>
+</div>
 </div>
 </div>
 </div>
@@ -210,7 +248,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChannelDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.13">ChannelDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.25">ChannelDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -224,147 +262,161 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.35">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.51">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined unique identifier for the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="roles(com.commercetools.api.models.channel.ChannelRoleEnum...)">
 <h3>roles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.40">roles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.60">roles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</span></div>
+<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="roles(java.util.List)">
 <h3>roles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.45">roles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.69">roles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;&nbsp;roles)</span></div>
+<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusRoles(com.commercetools.api.models.channel.ChannelRoleEnum...)">
 <h3>plusRoles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.51">plusRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.79">plusRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</span></div>
+<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.60">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.92">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Name of the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(com.commercetools.api.models.common.LocalizedString)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.66">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.102">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="block"><p>Name of the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.71">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.111">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Description of the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(com.commercetools.api.models.common.LocalizedString)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.77">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.121">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="block"><p>Description of the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="address(java.util.function.Function)">
 <h3>address</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.83">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,&#8203;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.131">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,&#8203;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Address where the Channel is located.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="address(com.commercetools.api.models.common.BaseAddress)">
 <h3>address</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.89">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.141">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
+<div class="block"><p>Address where the Channel is located.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.94">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.150">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Custom fields defined for the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.100">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.160">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom fields defined for the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="geoLocation(com.commercetools.api.models.common.GeoJson)">
 <h3>geoLocation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.105">geoLocation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.169">geoLocation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&nbsp;geoLocation)</span></div>
+<div class="block"><p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="geoLocation(java.util.function.Function)">
 <h3>geoLocation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.110">geoLocation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/GeoJsonBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.178">geoLocation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/GeoJsonBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.116">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.184">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRoles()">
 <h3>getRoles</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.120">getRoles</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.188">getRoles</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.125">getName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.193">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.130">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.198">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddress()">
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.135">getAddress</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.203">getAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.140">getCustom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.208">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getGeoLocation()">
 <h3>getGeoLocation</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.145">getGeoLocation</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.213">getGeoLocation</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.150">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.218">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</code></dd>
@@ -374,20 +426,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.158">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.226">buildUnchecked</a></span>()</div>
 <div class="block">builds ChannelDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.162">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.230">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.channel.ChannelDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.166">of</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraftBuilder.html#line.234">of</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

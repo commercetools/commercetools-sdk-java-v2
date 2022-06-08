@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.10">MyCartUpdateBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.23">MyCartUpdateBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a>&gt;</span></div>
+<div class="block">MyCartUpdateBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     MyCartUpdate myCartUpdate = MyCartUpdate.builder()
+             .version(0.3)
+             .plusActions(actionsBuilder -> actionsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +182,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MyCartUpdateBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.11">MyCartUpdateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.24">MyCartUpdateBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -185,55 +196,55 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.17">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.34">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(com.commercetools.api.models.me.MyCartUpdateAction...)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.22">actions</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.43">actions</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>...&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(java.util.List)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.27">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.52">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusActions(com.commercetools.api.models.me.MyCartUpdateAction...)">
 <h3>plusActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.33">plusActions</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.62">plusActions</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>...&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusActions(java.util.function.Function)">
 <h3>plusActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.41">plusActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCartUpdateActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.74">plusActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCartUpdateActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withActions(java.util.function.Function)">
 <h3>withActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.50">withActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCartUpdateActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.87">withActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCartUpdateActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.57">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.94">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.61">getActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.98">getActions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.65">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.102">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a>&gt;</code></dd>
@@ -243,20 +254,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.74">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.111">buildUnchecked</a></span>()</div>
 <div class="block">builds MyCartUpdate without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.78">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.115">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.me.MyCartUpdate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyCartUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyCartUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCartUpdateBuilder.html#line.119">of</a></span>&#8203;<span class="parameters">(<a href="MyCartUpdate.html" title="interface in com.commercetools.api.models.me">MyCartUpdate</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

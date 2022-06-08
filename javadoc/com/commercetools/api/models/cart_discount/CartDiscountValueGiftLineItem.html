@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartDiscountValueGiftLineItemImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.18">CartDiscountValueGiftLineItem</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.32">CartDiscountValueGiftLineItem</a></span><span class="extends-implements">
 extends <a href="CartDiscountValue.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValue</a></span></div>
+<div class="block">CartDiscountValueGiftLineItem
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CartDiscountValueGiftLineItem cartDiscountValueGiftLineItem = CartDiscountValueGiftLineItem.builder()
+             .product(productBuilder -> productBuilder)
+             .variantId(0.3)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,19 +136,23 @@ extends <a href="CartDiscountValue.html" title="interface in com.commercetools.a
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDistributionChannel()">getDistributionChannel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The channel must have the role <code>ProductDistribution</code></div>
+<div class="block">Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProduct()">getProduct</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Reference to a Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSupplyChannel()">getSupplyChannel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The channel must have the role <code>InventorySupply</code></div>
+<div class="block">Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariantId()">getVariantId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">ProductVariant of the Product.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -181,7 +197,7 @@ extends <a href="CartDiscountValue.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="GIFT_LINE_ITEM">
 <h3>GIFT_LINE_ITEM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.22">GIFT_LINE_ITEM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.36">GIFT_LINE_ITEM</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem.GIFT_LINE_ITEM">Constant Field Values</a></dd>
@@ -201,90 +217,92 @@ extends <a href="CartDiscountValue.html" title="interface in com.commercetools.a
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.24">getProduct</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.41">getProduct</a></span>()</div>
+<div class="block"><p>Reference to a Product.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.29">getVariantId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.49">getVariantId</a></span>()</div>
+<div class="block"><p>ProductVariant of the Product.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.36">getSupplyChannel</a></span>()</div>
-<div class="block"><p>The channel must have the role <code>InventorySupply</code></p></div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.56">getSupplyChannel</a></span>()</div>
+<div class="block"><p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.43">getDistributionChannel</a></span>()</div>
-<div class="block"><p>The channel must have the role <code>ProductDistribution</code></p></div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.63">getDistributionChannel</a></span>()</div>
+<div class="block"><p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProduct(com.commercetools.api.models.product.ProductReference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.47">setProduct</a></span>&#8203;<span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.67">setProduct</a></span>&#8203;<span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariantId(java.lang.Long)">
 <h3>setVariantId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.49">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.69">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.51">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.71">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDistributionChannel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>setDistributionChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.53">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.73">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.55">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.75">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.79">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.68">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.88">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.72">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.92">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartDiscountValueGiftLineItem(java.util.function.Function)">
 <h3>withCartDiscountValueGiftLineItem</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.76">withCartDiscountValueGiftLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.96">withCartDiscountValueGiftLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.80">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#line.100">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

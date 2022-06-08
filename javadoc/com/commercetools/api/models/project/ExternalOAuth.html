@@ -80,9 +80,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ExternalOAuthImpl.html" title="class in com.commercetools.api.models.project">ExternalOAuthImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.19">ExternalOAuth</a></span></div>
-<div class="block"><p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint. For more information, see <a href="/../api/authorization#requesting-an-access-token-using-an-external-oauth-server">Requesting an access token using an external OAuth 2.0 server</a>.</p>
-  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.30">ExternalOAuth</a></span></div>
+<div class="block"><p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint. For more information, see Requesting an access token using an external OAuth 2.0 server.</p>
+  <p>You can only configure <strong>one</strong> external OAuth 2.0 endpoint per Project. To authenticate using multiple external services (such as social network logins), use a middle layer authentication service.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ExternalOAuth externalOAuth = ExternalOAuth.builder()
+             .url("{url}")
+             .authorizationHeader("{authorizationHeader}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -149,7 +160,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getUrl()">
 <h3>getUrl</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.26">getUrl</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.37">getUrl</a></span>()</div>
 <div class="block"><p>URL with authorization header.</p></div>
 </section>
 </li>
@@ -157,56 +168,56 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAuthorizationHeader()">
 <h3>getAuthorizationHeader</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.33">getAuthorizationHeader</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.44">getAuthorizationHeader</a></span>()</div>
 <div class="block"><p>Partially hidden on retrieval.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setUrl(java.lang.String)">
 <h3>setUrl</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.37">setUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.48">setUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAuthorizationHeader(java.lang.String)">
 <h3>setAuthorizationHeader</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.39">setAuthorizationHeader</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;authorizationHeader)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.50">setAuthorizationHeader</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;authorizationHeader)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.41">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.52">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.ExternalOAuth)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.52">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.63">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.project.ExternalOAuth)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExternalOAuth(java.util.function.Function)">
 <h3>withExternalOAuth</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.60">withExternalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.71">withExternalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ExternalOAuth.html#line.75">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

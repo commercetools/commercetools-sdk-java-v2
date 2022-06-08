@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductTypeChangeLocalizedEnumValueOrderActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.16">ProductTypeChangeLocalizedEnumValueOrderAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.30">ProductTypeChangeLocalizedEnumValueOrderAction</a></span><span class="extends-implements">
 extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></span></div>
+<div class="block">ProductTypeChangeLocalizedEnumValueOrderAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductTypeChangeLocalizedEnumValueOrderAction productTypeChangeLocalizedEnumValueOrderAction = ProductTypeChangeLocalizedEnumValueOrderAction.builder()
+             .attributeName("{attributeName}")
+             .plusValues(valuesBuilder -> valuesBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +183,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="CHANGE_LOCALIZED_ENUM_VALUE_ORDER">
 <h3>CHANGE_LOCALIZED_ENUM_VALUE_ORDER</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.20">CHANGE_LOCALIZED_ENUM_VALUE_ORDER</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.34">CHANGE_LOCALIZED_ENUM_VALUE_ORDER</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER">Constant Field Values</a></dd>
@@ -190,7 +202,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAttributeName()">
 <h3>getAttributeName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.22">getAttributeName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.39">getAttributeName</a></span>()</div>
 </section>
 </li>
 <li>
@@ -198,61 +210,61 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <h3>getValues</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.26">getValues</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.46">getValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributeName(java.lang.String)">
 <h3>setAttributeName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.31">setAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.51">setAttributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue...)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.33">setValues</a></span>&#8203;<span class="parameters">(<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>...&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.53">setValues</a></span>&#8203;<span class="parameters">(<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>...&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(java.util.List)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.36">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.56">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.38">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.58">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.42">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.50">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.70">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductTypeChangeLocalizedEnumValueOrderAction(java.util.function.Function)">
 <h3>withProductTypeChangeLocalizedEnumValueOrderAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.59">withProductTypeChangeLocalizedEnumValueOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.79">withProductTypeChangeLocalizedEnumValueOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeChangeLocalizedEnumValueOrderAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeLocalizedEnumValueOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeLocalizedEnumValueOrderAction.html#line.84">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,9 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">AttributeImpl</a></code>, <code><a href="BooleanAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">BooleanAttributeImpl</a></code>, <code><a href="BooleanSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeImpl</a></code>, <code><a href="DateAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">DateAttributeImpl</a></code>, <code><a href="DateSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">DateSetAttributeImpl</a></code>, <code><a href="DateTimeAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeAttributeImpl</a></code>, <code><a href="DateTimeSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeSetAttributeImpl</a></code>, <code><a href="EnumAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">EnumAttributeImpl</a></code>, <code><a href="EnumSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">EnumSetAttributeImpl</a></code>, <code><a href="LocalizableEnumAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumAttributeImpl</a></code>, <code><a href="LocalizableEnumSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumSetAttributeImpl</a></code>, <code><a href="LocalizableTextAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextAttributeImpl</a></code>, <code><a href="LocalizableTextSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextSetAttributeImpl</a></code>, <code><a href="MoneyAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">MoneyAttributeImpl</a></code>, <code><a href="MoneySetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">MoneySetAttributeImpl</a></code>, <code><a href="NumberAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">NumberAttributeImpl</a></code>, <code><a href="NumberSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">NumberSetAttributeImpl</a></code>, <code><a href="ReferenceAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceAttributeImpl</a></code>, <code><a href="ReferenceSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceSetAttributeImpl</a></code>, <code><a href="TextAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">TextAttributeImpl</a></code>, <code><a href="TextSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">TextSetAttributeImpl</a></code>, <code><a href="TimeAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">TimeAttributeImpl</a></code>, <code><a href="TimeSetAttributeImpl.html" title="class in com.commercetools.importapi.models.productvariants">TimeSetAttributeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.19">Attribute</a></span></div>
-<div class="block"><p>This type represents the value of an attribute of a product variant.
-  The name and type property must match the name and type property of an attribute definition of the product type.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.28">Attribute</a></span></div>
+<div class="block"><p>This type represents the value of an attribute of a product variant. The name and type property must match the name and type property of an attribute definition of the product type.</p>
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     Attribute attribute = Attribute.booleanBuilder()
+             value(true)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -201,167 +210,165 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.53">getName</a></span>()</div>
-<div class="block"><p>The name of this attribute must match a name of the product types attribute definitions.
-  The name is required if this type is used in a product variant and must not be set when
-  used in a product variant patch.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.60">getName</a></span>()</div>
+<div class="block"><p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.56">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.66">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.60">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.70">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="booleanBuilder()">
 <h3>booleanBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.62">booleanBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.72">booleanBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="booleanSetBuilder()">
 <h3>booleanSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.66">booleanSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.76">booleanSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateBuilder()">
 <h3>dateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.70">dateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.80">dateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateSetBuilder()">
 <h3>dateSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.74">dateSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.84">dateSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="datetimeBuilder()">
 <h3>datetimeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.78">datetimeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.88">datetimeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="datetimeSetBuilder()">
 <h3>datetimeSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.82">datetimeSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">DateTimeSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.92">datetimeSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="enumBuilder()">
 <h3>enumBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">EnumAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.86">enumBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">EnumAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.96">enumBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="enumSetBuilder()">
 <h3>enumSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">EnumSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.90">enumSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">EnumSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.100">enumSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="lenumBuilder()">
 <h3>lenumBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableEnumAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.94">lenumBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableEnumAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.104">lenumBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="lenumSetBuilder()">
 <h3>lenumSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableEnumSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.98">lenumSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableEnumSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableEnumSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.108">lenumSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ltextBuilder()">
 <h3>ltextBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableTextAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.102">ltextBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableTextAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.112">ltextBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ltextSetBuilder()">
 <h3>ltextSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableTextSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.106">ltextSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizableTextSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">LocalizableTextSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.116">ltextSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="moneyBuilder()">
 <h3>moneyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">MoneyAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.110">moneyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">MoneyAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.120">moneyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="moneySetBuilder()">
 <h3>moneySetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneySetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">MoneySetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.114">moneySetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneySetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">MoneySetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.124">moneySetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="numberBuilder()">
 <h3>numberBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">NumberAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.118">numberBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">NumberAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.128">numberBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="numberSetBuilder()">
 <h3>numberSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">NumberSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.122">numberSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">NumberSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.132">numberSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="referenceBuilder()">
 <h3>referenceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.126">referenceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.136">referenceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="referenceSetBuilder()">
 <h3>referenceSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.130">referenceSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ReferenceSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.140">referenceSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="textBuilder()">
 <h3>textBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TextAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.134">textBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TextAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.144">textBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="textSetBuilder()">
 <h3>textSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TextSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.138">textSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TextSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.148">textSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="timeBuilder()">
 <h3>timeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TimeAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.142">timeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TimeAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.152">timeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="timeSetBuilder()">
 <h3>timeSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TimeSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.146">timeSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">TimeSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.156">timeSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAttribute(java.util.function.Function)">
 <h3>withAttribute</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.150">withAttribute</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.160">withAttribute</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.154">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/Attribute.html#line.164">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

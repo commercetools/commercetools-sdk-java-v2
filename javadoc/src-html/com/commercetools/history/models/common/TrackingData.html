@@ -25,84 +25,107 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">016</span><span id="line.16">@JsonDeserialize(as = TrackingDataImpl.class)</span>
-<span class="source-line-no">017</span><span id="line.17">public interface TrackingData {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    /**</span>
-<span class="source-line-no">020</span><span id="line.20">    *  &lt;p&gt;The ID to track one parcel.&lt;/p&gt;</span>
-<span class="source-line-no">021</span><span id="line.21">    */</span>
-<span class="source-line-no">022</span><span id="line.22">    @NotNull</span>
-<span class="source-line-no">023</span><span id="line.23">    @JsonProperty("trackingId")</span>
-<span class="source-line-no">024</span><span id="line.24">    public String getTrackingId();</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    /**</span>
-<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;The carrier that delivers the parcel.&lt;/p&gt;</span>
-<span class="source-line-no">028</span><span id="line.28">    */</span>
-<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
-<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("carrier")</span>
-<span class="source-line-no">031</span><span id="line.31">    public String getCarrier();</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("provider")</span>
-<span class="source-line-no">035</span><span id="line.35">    public String getProvider();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("providerTransaction")</span>
-<span class="source-line-no">039</span><span id="line.39">    public String getProviderTransaction();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">    */</span>
-<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("isReturn")</span>
-<span class="source-line-no">046</span><span id="line.46">    public Boolean getIsReturn();</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public void setTrackingId(final String trackingId);</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> * TrackingData</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     TrackingData trackingData = TrackingData.builder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .trackingId("{trackingId}")</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .carrier("{carrier}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .provider("{provider}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .providerTransaction("{providerTransaction}")</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .isReturn(true)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = TrackingDataImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">public interface TrackingData {</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;The ID to track one parcel.&lt;/p&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("trackingId")</span>
+<span class="source-line-no">041</span><span id="line.41">    public String getTrackingId();</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;The carrier that delivers the parcel.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("carrier")</span>
+<span class="source-line-no">048</span><span id="line.48">    public String getCarrier();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public void setCarrier(final String carrier);</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public void setProvider(final String provider);</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public void setProviderTransaction(final String providerTransaction);</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public void setIsReturn(final Boolean isReturn);</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static TrackingData of() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return new TrackingDataImpl();</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static TrackingData of(final TrackingData template) {</span>
-<span class="source-line-no">063</span><span id="line.63">        TrackingDataImpl instance = new TrackingDataImpl();</span>
-<span class="source-line-no">064</span><span id="line.64">        instance.setTrackingId(template.getTrackingId());</span>
-<span class="source-line-no">065</span><span id="line.65">        instance.setCarrier(template.getCarrier());</span>
-<span class="source-line-no">066</span><span id="line.66">        instance.setProvider(template.getProvider());</span>
-<span class="source-line-no">067</span><span id="line.67">        instance.setProviderTransaction(template.getProviderTransaction());</span>
-<span class="source-line-no">068</span><span id="line.68">        instance.setIsReturn(template.getIsReturn());</span>
-<span class="source-line-no">069</span><span id="line.69">        return instance;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public static TrackingDataBuilder builder() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return TrackingDataBuilder.of();</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static TrackingDataBuilder builder(final TrackingData template) {</span>
-<span class="source-line-no">077</span><span id="line.77">        return TrackingDataBuilder.of(template);</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    default &lt;T&gt; T withTrackingData(Function&lt;TrackingData, T&gt; helper) {</span>
-<span class="source-line-no">081</span><span id="line.81">        return helper.apply(this);</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TrackingData&gt; typeReference() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TrackingData&gt;() {</span>
-<span class="source-line-no">086</span><span id="line.86">            @Override</span>
-<span class="source-line-no">087</span><span id="line.87">            public String toString() {</span>
-<span class="source-line-no">088</span><span id="line.88">                return "TypeReference&lt;TrackingData&gt;";</span>
-<span class="source-line-no">089</span><span id="line.89">            }</span>
-<span class="source-line-no">090</span><span id="line.90">        };</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92">}</span>
+<span class="source-line-no">050</span><span id="line.50">    /**</span>
+<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("provider")</span>
+<span class="source-line-no">055</span><span id="line.55">    public String getProvider();</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">     *</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
+<span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("providerTransaction")</span>
+<span class="source-line-no">062</span><span id="line.62">    public String getProviderTransaction();</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    /**</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
+<span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
+<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("isReturn")</span>
+<span class="source-line-no">069</span><span id="line.69">    public Boolean getIsReturn();</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setTrackingId(final String trackingId);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setCarrier(final String carrier);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setProvider(final String provider);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setProviderTransaction(final String providerTransaction);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setIsReturn(final Boolean isReturn);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static TrackingData of() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new TrackingDataImpl();</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static TrackingData of(final TrackingData template) {</span>
+<span class="source-line-no">086</span><span id="line.86">        TrackingDataImpl instance = new TrackingDataImpl();</span>
+<span class="source-line-no">087</span><span id="line.87">        instance.setTrackingId(template.getTrackingId());</span>
+<span class="source-line-no">088</span><span id="line.88">        instance.setCarrier(template.getCarrier());</span>
+<span class="source-line-no">089</span><span id="line.89">        instance.setProvider(template.getProvider());</span>
+<span class="source-line-no">090</span><span id="line.90">        instance.setProviderTransaction(template.getProviderTransaction());</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setIsReturn(template.getIsReturn());</span>
+<span class="source-line-no">092</span><span id="line.92">        return instance;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static TrackingDataBuilder builder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return TrackingDataBuilder.of();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static TrackingDataBuilder builder(final TrackingData template) {</span>
+<span class="source-line-no">100</span><span id="line.100">        return TrackingDataBuilder.of(template);</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    default &lt;T&gt; T withTrackingData(Function&lt;TrackingData, T&gt; helper) {</span>
+<span class="source-line-no">104</span><span id="line.104">        return helper.apply(this);</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TrackingData&gt; typeReference() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TrackingData&gt;() {</span>
+<span class="source-line-no">109</span><span id="line.109">            @Override</span>
+<span class="source-line-no">110</span><span id="line.110">            public String toString() {</span>
+<span class="source-line-no">111</span><span id="line.111">                return "TypeReference&lt;TrackingData&gt;";</span>
+<span class="source-line-no">112</span><span id="line.112">            }</span>
+<span class="source-line-no">113</span><span id="line.113">        };</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115">}</span>
 
 
 

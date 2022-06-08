@@ -77,15 +77,32 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="OrderShippingInfoSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.16">OrderShippingInfoSetMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.35">OrderShippingInfoSetMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
+<div class="block">OrderShippingInfoSetMessage
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderShippingInfoSetMessage orderShippingInfoSetMessage = OrderShippingInfoSetMessage.builder()
+             .id("{id}")
+             .version(0.3)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .sequenceNumber(0.3)
+             .resource(resourceBuilder -> resourceBuilder)
+             .resourceVersion(0.3)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -174,7 +191,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <li>
 <section class="detail" id="ORDER_SHIPPING_INFO_SET">
 <h3>ORDER_SHIPPING_INFO_SET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.20">ORDER_SHIPPING_INFO_SET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.39">ORDER_SHIPPING_INFO_SET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderShippingInfoSetMessage.ORDER_SHIPPING_INFO_SET">Constant Field Values</a></dd>
@@ -193,62 +210,62 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <section class="detail" id="getShippingInfo()">
 <h3>getShippingInfo</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.22">getShippingInfo</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.44">getShippingInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldShippingInfo()">
 <h3>getOldShippingInfo</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.26">getOldShippingInfo</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.51">getOldShippingInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingInfo(com.commercetools.api.models.cart.ShippingInfo)">
 <h3>setShippingInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.30">setShippingInfo</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;shippingInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.55">setShippingInfo</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;shippingInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldShippingInfo(com.commercetools.api.models.cart.ShippingInfo)">
 <h3>setOldShippingInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.32">setOldShippingInfo</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;oldShippingInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.57">setOldShippingInfo</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;oldShippingInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.59">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderShippingInfoSetMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.55">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.80">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderShippingInfoSetMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.84">builder</a></span>&#8203;<span class="parameters">(<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderShippingInfoSetMessage(java.util.function.Function)">
 <h3>withOrderShippingInfoSetMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.63">withOrderShippingInfoSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.88">withOrderShippingInfoSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.67">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#line.92">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

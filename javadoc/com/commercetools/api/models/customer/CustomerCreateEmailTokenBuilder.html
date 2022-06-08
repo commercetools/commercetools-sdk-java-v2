@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.11">CustomerCreateEmailTokenBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.24">CustomerCreateEmailTokenBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&gt;</span></div>
+<div class="block">CustomerCreateEmailTokenBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CustomerCreateEmailToken customerCreateEmailToken = CustomerCreateEmailToken.builder()
+             .id("{id}")
+             .ttlMinutes(0.3)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,7 +143,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#id(java.lang.String)">id</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Unique identifier of the email token.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -165,7 +178,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerCreateEmailTokenBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.12">CustomerCreateEmailTokenBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.25">CustomerCreateEmailTokenBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -179,45 +192,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.21">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.38">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="block"><p>Unique identifier of the email token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.26">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.47">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="ttlMinutes(java.lang.Long)">
 <h3>ttlMinutes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.31">ttlMinutes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;ttlMinutes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.56">ttlMinutes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;ttlMinutes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.36">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.61">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.40">getVersion</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.65">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTtlMinutes()">
 <h3>getTtlMinutes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.45">getTtlMinutes</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.70">getTtlMinutes</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.49">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.74">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&gt;</code></dd>
@@ -227,20 +241,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.58">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.83">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerCreateEmailToken without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.62">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.87">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.customer.CustomerCreateEmailToken)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerCreateEmailTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerCreateEmailTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerCreateEmailTokenBuilder.html#line.91">of</a></span>&#8203;<span class="parameters">(<a href="CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

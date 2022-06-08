@@ -84,8 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SetLocaleChangeImpl.html" title="class in com.commercetools.history.models.change">SetLocaleChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.15">SetLocaleChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.30">SetLocaleChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
+<div class="block">SetLocaleChange
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SetLocaleChange setLocaleChange = SetLocaleChange.builder()
+             .change("{change}")
+             .previousValue("{previousValue}")
+             .nextValue("{nextValue}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,12 +142,12 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getNextValue()">getNextValue</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</div>
+<div class="block">A locale of IETF language tag.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPreviousValue()">getPreviousValue</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</div>
+<div class="block">A locale of IETF language tag.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
@@ -180,7 +193,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="SET_LOCALE_CHANGE">
 <h3>SET_LOCALE_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.19">SET_LOCALE_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.34">SET_LOCALE_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.SetLocaleChange.SET_LOCALE_CHANGE">Constant Field Values</a></dd>
@@ -199,7 +212,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.21">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.39">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -210,7 +223,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.28">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.46">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>setLocale</code> on reviews</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -222,22 +235,22 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.35">getPreviousValue</a></span>()</div>
-<div class="block"><p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.53">getPreviousValue</a></span>()</div>
+<div class="block"><p>A locale of IETF language tag.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.42">getNextValue</a></span>()</div>
-<div class="block"><p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.60">getNextValue</a></span>()</div>
+<div class="block"><p>A locale of IETF language tag.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.46">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.64">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -247,49 +260,49 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setPreviousValue(java.lang.String)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.48">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.66">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(java.lang.String)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.50">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.68">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.52">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.70">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetLocaleChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLocaleChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.64">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLocaleChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.82">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.SetLocaleChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLocaleChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLocaleChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLocaleChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.86">builder</a></span>&#8203;<span class="parameters">(<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetLocaleChange(java.util.function.Function)">
 <h3>withSetLocaleChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.72">withSetLocaleChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.90">withSetLocaleChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.76">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLocaleChange.html" title="interface in com.commercetools.history.models.change">SetLocaleChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLocaleChange.html#line.94">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

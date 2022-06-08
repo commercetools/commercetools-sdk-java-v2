@@ -84,8 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PriceChangedErrorImpl.html" title="class in com.commercetools.api.models.error">PriceChangedErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.15">PriceChangedError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.30">PriceChangedError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">PriceChangedError
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     PriceChangedError priceChangedError = PriceChangedError.builder()
+             .message("{message}")
+             .plusLineItems(lineItemsBuilder -> lineItemsBuilder)
+             .shipping(true)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +181,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="PRICE_CHANGED">
 <h3>PRICE_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.19">PRICE_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.34">PRICE_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.PriceChangedError.PRICE_CHANGED">Constant Field Values</a></dd>
@@ -187,68 +200,68 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getLineItems()">
 <h3>getLineItems</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.21">getLineItems</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.39">getLineItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShipping()">
 <h3>getShipping</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.25">getShipping</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.46">getShipping</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItems(java.lang.String...)">
 <h3>setLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.29">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.50">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItems(java.util.List)">
 <h3>setLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.32">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;lineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.53">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;lineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShipping(java.lang.Boolean)">
 <h3>setShipping</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.34">setShipping</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;shipping)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.55">setShipping</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;shipping)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.36">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.57">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.PriceChangedError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.61">of</a></span>&#8203;<span class="parameters">(<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedErrorBuilder.html" title="class in com.commercetools.api.models.error">PriceChangedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.49">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedErrorBuilder.html" title="class in com.commercetools.api.models.error">PriceChangedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.70">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.PriceChangedError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedErrorBuilder.html" title="class in com.commercetools.api.models.error">PriceChangedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.53">builder</a></span>&#8203;<span class="parameters">(<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PriceChangedErrorBuilder.html" title="class in com.commercetools.api.models.error">PriceChangedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceChangedError(java.util.function.Function)">
 <h3>withPriceChangedError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.57">withPriceChangedError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.78">withPriceChangedError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.61">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PriceChangedError.html" title="interface in com.commercetools.api.models.error">PriceChangedError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/PriceChangedError.html#line.82">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

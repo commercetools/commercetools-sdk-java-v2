@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DiscountCodeSetValidFromAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetValidFromAction</a></code>, <code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code>, <code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.17">DiscountCodeSetValidFromActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.20">DiscountCodeSetValidFromActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetValidFromAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">DiscountCodeSetValidFromAction</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,7 +141,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidFrom()">getValidFrom</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">If absent, the field with the value is removed in case a value was set before.</div>
+<div class="block">Value to set that must be earlier than <code>validUntil</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -180,7 +181,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeSetValidFromActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.30">DiscountCodeSetValidFromActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.33">DiscountCodeSetValidFromActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -194,7 +195,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.34">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.41">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code></dd>
@@ -206,8 +207,8 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.41">getValidFrom</a></span>()</div>
-<div class="block"><p>If absent, the field with the value is removed in case a value was set before.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.49">getValidFrom</a></span>()</div>
+<div class="block"><p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeSetValidFromAction.html#getValidFrom()">getValidFrom</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeSetValidFromAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetValidFromAction</a></code></dd>
@@ -217,7 +218,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.45">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.53">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeSetValidFromAction.html#setValidFrom(java.time.ZonedDateTime)">setValidFrom</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeSetValidFromAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetValidFromAction</a></code></dd>
@@ -227,7 +228,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.49">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.57">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -237,7 +238,7 @@ implements <a href="DiscountCodeSetValidFromAction.html" title="interface in com
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.62">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetValidFromActionImpl.html#line.70">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

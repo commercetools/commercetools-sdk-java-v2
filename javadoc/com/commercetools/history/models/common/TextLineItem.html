@@ -80,7 +80,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TextLineItemImpl.html" title="class in com.commercetools.history.models.common">TextLineItemImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.16">TextLineItem</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.34">TextLineItem</a></span></div>
+<div class="block">TextLineItem
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TextLineItem textLineItem = TextLineItem.builder()
+             .addedAt("{addedAt}")
+             .custom(customBuilder -> customBuilder)
+             .description(descriptionBuilder -> descriptionBuilder)
+             .id("{id}")
+             .name(nameBuilder -> nameBuilder)
+             .quantity(1)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -167,7 +183,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getAddedAt()">
 <h3>getAddedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.20">getAddedAt</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.41">getAddedAt</a></span>()</div>
 </section>
 </li>
 <li>
@@ -175,7 +191,7 @@ loadScripts(document, 'script');</script>
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.24">getCustom</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.48">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
@@ -183,14 +199,14 @@ loadScripts(document, 'script');</script>
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.29">getDescription</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.56">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.34">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.64">getId</a></span>()</div>
 </section>
 </li>
 <li>
@@ -198,86 +214,86 @@ loadScripts(document, 'script');</script>
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.38">getName</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.71">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.43">getQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.79">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddedAt(java.lang.String)">
 <h3>setAddedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.47">setAddedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addedAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.83">setAddedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addedAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.history.models.common.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.49">setCustom</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.85">setCustom</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.history.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.51">setDescription</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.87">setDescription</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.53">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.89">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.history.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.55">setName</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.91">setName</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Integer)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.57">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.93">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.59">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.95">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.TextLineItem)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.99">of</a></span>&#8203;<span class="parameters">(<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.74">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.110">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.common.TextLineItem)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.78">builder</a></span>&#8203;<span class="parameters">(<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TextLineItemBuilder.html" title="class in com.commercetools.history.models.common">TextLineItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.114">builder</a></span>&#8203;<span class="parameters">(<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTextLineItem(java.util.function.Function)">
 <h3>withTextLineItem</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.82">withTextLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.118">withTextLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.86">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TextLineItem.html" title="interface in com.commercetools.history.models.common">TextLineItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/TextLineItem.html#line.122">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

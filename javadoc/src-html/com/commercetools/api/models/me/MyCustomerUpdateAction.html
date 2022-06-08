@@ -25,135 +25,151 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddAddressActionImpl.class, name = MyCustomerAddAddressAction.ADD_ADDRESS),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionImpl.class, name = MyCustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),</span>
-<span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionImpl.class, name = MyCustomerAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeAddressActionImpl.class, name = MyCustomerChangeAddressAction.CHANGE_ADDRESS),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeEmailActionImpl.class, name = MyCustomerChangeEmailAction.CHANGE_EMAIL),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveAddressActionImpl.class, name = MyCustomerRemoveAddressAction.REMOVE_ADDRESS),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionImpl.class, name = MyCustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionImpl.class, name = MyCustomerRemoveShippingAddressIdAction.REMOVE_SHIPPING_ADDRESS_ID),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCompanyNameActionImpl.class, name = MyCustomerSetCompanyNameAction.SET_COMPANY_NAME),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomFieldActionImpl.class, name = MyCustomerSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomTypeActionImpl.class, name = MyCustomerSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionImpl.class, name = MyCustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionImpl.class, name = MyCustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionImpl.class, name = MyCustomerSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetFirstNameActionImpl.class, name = MyCustomerSetFirstNameAction.SET_FIRST_NAME),</span>
-<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLastNameActionImpl.class, name = MyCustomerSetLastNameAction.SET_LAST_NAME),</span>
-<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLocaleActionImpl.class, name = MyCustomerSetLocaleAction.SET_LOCALE),</span>
-<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetMiddleNameActionImpl.class, name = MyCustomerSetMiddleNameAction.SET_MIDDLE_NAME),</span>
-<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetSalutationActionImpl.class, name = MyCustomerSetSalutationAction.SET_SALUTATION),</span>
-<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetTitleActionImpl.class, name = MyCustomerSetTitleAction.SET_TITLE),</span>
-<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetVatIdActionImpl.class, name = MyCustomerSetVatIdAction.SET_VAT_ID) })</span>
-<span class="source-line-no">037</span><span id="line.37">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyCustomerUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">038</span><span id="line.38">@JsonDeserialize(as = MyCustomerUpdateActionImpl.class)</span>
-<span class="source-line-no">039</span><span id="line.39">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">040</span><span id="line.40">public interface MyCustomerUpdateAction</span>
-<span class="source-line-no">041</span><span id="line.41">        extends com.commercetools.api.models.ResourceUpdateAction&lt;MyCustomerUpdateAction&gt; {</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("action")</span>
-<span class="source-line-no">045</span><span id="line.45">    public String getAction();</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder addAddressBuilder() {</span>
-<span class="source-line-no">048</span><span id="line.48">        return com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder.of();</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder addBillingAddressIdBuilder() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder.of();</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public static com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {</span>
-<span class="source-line-no">056</span><span id="line.56">        return com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder.of();</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder changeAddressBuilder() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder.of();</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> * MyCustomerUpdateAction</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     MyCustomerUpdateAction myCustomerUpdateAction = MyCustomerUpdateAction.addAddressBuilder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             address(addressBuilder -&gt; addressBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> */</span>
+<span class="source-line-no">028</span><span id="line.28">@JsonSubTypes({</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddAddressActionImpl.class, name = MyCustomerAddAddressAction.ADD_ADDRESS),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionImpl.class, name = MyCustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionImpl.class, name = MyCustomerAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeAddressActionImpl.class, name = MyCustomerChangeAddressAction.CHANGE_ADDRESS),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeEmailActionImpl.class, name = MyCustomerChangeEmailAction.CHANGE_EMAIL),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveAddressActionImpl.class, name = MyCustomerRemoveAddressAction.REMOVE_ADDRESS),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionImpl.class, name = MyCustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionImpl.class, name = MyCustomerRemoveShippingAddressIdAction.REMOVE_SHIPPING_ADDRESS_ID),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCompanyNameActionImpl.class, name = MyCustomerSetCompanyNameAction.SET_COMPANY_NAME),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomFieldActionImpl.class, name = MyCustomerSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomTypeActionImpl.class, name = MyCustomerSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionImpl.class, name = MyCustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionImpl.class, name = MyCustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionImpl.class, name = MyCustomerSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetFirstNameActionImpl.class, name = MyCustomerSetFirstNameAction.SET_FIRST_NAME),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLastNameActionImpl.class, name = MyCustomerSetLastNameAction.SET_LAST_NAME),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLocaleActionImpl.class, name = MyCustomerSetLocaleAction.SET_LOCALE),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetMiddleNameActionImpl.class, name = MyCustomerSetMiddleNameAction.SET_MIDDLE_NAME),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetSalutationActionImpl.class, name = MyCustomerSetSalutationAction.SET_SALUTATION),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetTitleActionImpl.class, name = MyCustomerSetTitleAction.SET_TITLE),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetVatIdActionImpl.class, name = MyCustomerSetVatIdAction.SET_VAT_ID) })</span>
+<span class="source-line-no">050</span><span id="line.50">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyCustomerUpdateActionImpl.class, visible = true)</span>
+<span class="source-line-no">051</span><span id="line.51">@JsonDeserialize(as = MyCustomerUpdateActionImpl.class)</span>
+<span class="source-line-no">052</span><span id="line.52">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">053</span><span id="line.53">public interface MyCustomerUpdateAction</span>
+<span class="source-line-no">054</span><span id="line.54">        extends com.commercetools.api.models.ResourceUpdateAction&lt;MyCustomerUpdateAction&gt; {</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     *</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59">    @NotNull</span>
+<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("action")</span>
+<span class="source-line-no">061</span><span id="line.61">    public String getAction();</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder changeEmailBuilder() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder.of();</span>
+<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder addAddressBuilder() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder.of();</span>
 <span class="source-line-no">065</span><span id="line.65">    }</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder removeAddressBuilder() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder.of();</span>
+<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder addBillingAddressIdBuilder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder.of();</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder.of();</span>
+<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder.of();</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder.of();</span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder changeAddressBuilder() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder.of();</span>
 <span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder setCompanyNameBuilder() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder.of();</span>
+<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder changeEmailBuilder() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder.of();</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder removeAddressBuilder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder.of();</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder.of();</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder setDateOfBirthBuilder() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder.of();</span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder.of();</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder.of();</span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder setCompanyNameBuilder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder.of();</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder.of();</span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder.of();</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public static com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder setFirstNameBuilder() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder.of();</span>
+<span class="source-line-no">103</span><span id="line.103">    public static com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder.of();</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public static com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder setLastNameBuilder() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder.of();</span>
+<span class="source-line-no">107</span><span id="line.107">    public static com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder setDateOfBirthBuilder() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder.of();</span>
 <span class="source-line-no">109</span><span id="line.109">    }</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public static com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder setLocaleBuilder() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder.of();</span>
+<span class="source-line-no">111</span><span id="line.111">    public static com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder.of();</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public static com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder setMiddleNameBuilder() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder.of();</span>
+<span class="source-line-no">115</span><span id="line.115">    public static com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder.of();</span>
 <span class="source-line-no">117</span><span id="line.117">    }</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public static com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder setSalutationBuilder() {</span>
-<span class="source-line-no">120</span><span id="line.120">        return com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder.of();</span>
+<span class="source-line-no">119</span><span id="line.119">    public static com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder setFirstNameBuilder() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder.of();</span>
 <span class="source-line-no">121</span><span id="line.121">    }</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public static com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder setTitleBuilder() {</span>
-<span class="source-line-no">124</span><span id="line.124">        return com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder.of();</span>
+<span class="source-line-no">123</span><span id="line.123">    public static com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder setLastNameBuilder() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder.of();</span>
 <span class="source-line-no">125</span><span id="line.125">    }</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public static com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder setVatIdBuilder() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder.of();</span>
+<span class="source-line-no">127</span><span id="line.127">    public static com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder setLocaleBuilder() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder.of();</span>
 <span class="source-line-no">129</span><span id="line.129">    }</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    default &lt;T&gt; T withMyCustomerUpdateAction(Function&lt;MyCustomerUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">132</span><span id="line.132">        return helper.apply(this);</span>
+<span class="source-line-no">131</span><span id="line.131">    public static com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder setMiddleNameBuilder() {</span>
+<span class="source-line-no">132</span><span id="line.132">        return com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder.of();</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">136</span><span id="line.136">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt;() {</span>
-<span class="source-line-no">137</span><span id="line.137">            @Override</span>
-<span class="source-line-no">138</span><span id="line.138">            public String toString() {</span>
-<span class="source-line-no">139</span><span id="line.139">                return "TypeReference&lt;MyCustomerUpdateAction&gt;";</span>
-<span class="source-line-no">140</span><span id="line.140">            }</span>
-<span class="source-line-no">141</span><span id="line.141">        };</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143">}</span>
+<span class="source-line-no">135</span><span id="line.135">    public static com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder setSalutationBuilder() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder.of();</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public static com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder setTitleBuilder() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder.of();</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public static com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder setVatIdBuilder() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder.of();</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    default &lt;T&gt; T withMyCustomerUpdateAction(Function&lt;MyCustomerUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">148</span><span id="line.148">        return helper.apply(this);</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt;() {</span>
+<span class="source-line-no">153</span><span id="line.153">            @Override</span>
+<span class="source-line-no">154</span><span id="line.154">            public String toString() {</span>
+<span class="source-line-no">155</span><span id="line.155">                return "TypeReference&lt;MyCustomerUpdateAction&gt;";</span>
+<span class="source-line-no">156</span><span id="line.156">            }</span>
+<span class="source-line-no">157</span><span id="line.157">        };</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159">}</span>
 
 
 

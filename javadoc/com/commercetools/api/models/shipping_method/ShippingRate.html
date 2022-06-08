@@ -80,7 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShippingRateImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.17">ShippingRate</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.31">ShippingRate</a></span></div>
+<div class="block">ShippingRate
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShippingRate shippingRate = ShippingRate.builder()
+             .price(priceBuilder -> priceBuilder)
+             .plusTiers(tiersBuilder -> tiersBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -165,23 +177,21 @@ loadScripts(document, 'script');</script>
 <h3>getPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.21">getPrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.38">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFreeAbove()">
 <h3>getFreeAbove</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.31">getFreeAbove</a></span>()</div>
-<div class="block"><p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value.
-  Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios.
-  Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p></div>
+</span><span class="return-type">@Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.46">getFreeAbove</a></span>()</div>
+<div class="block"><p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.39">getIsMatching</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.54">getIsMatching</a></span>()</div>
 <div class="block"><p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p></div>
 </section>
 </li>
@@ -190,74 +200,74 @@ loadScripts(document, 'script');</script>
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.45">getTiers</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.60">getTiers</a></span>()</div>
 <div class="block"><p>A list of shipping rate price tiers.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPrice(com.commercetools.api.models.common.TypedMoney)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.50">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.65">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFreeAbove(com.commercetools.api.models.common.TypedMoney)">
 <h3>setFreeAbove</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.52">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;freeAbove)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.67">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;freeAbove)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.54">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.69">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(com.commercetools.api.models.shipping_method.ShippingRatePriceTier...)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.56">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.71">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.59">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.74">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.76">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shipping_method.ShippingRate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.80">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.74">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.89">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.shipping_method.ShippingRate)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.78">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.93">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withShippingRate(java.util.function.Function)">
 <h3>withShippingRate</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.82">withShippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.97">withShippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.86">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRate.html#line.101">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

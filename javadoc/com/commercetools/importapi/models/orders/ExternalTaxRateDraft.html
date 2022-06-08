@@ -80,7 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ExternalTaxRateDraftImpl.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.17">ExternalTaxRateDraft</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.31">ExternalTaxRateDraft</a></span></div>
+<div class="block">ExternalTaxRateDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ExternalTaxRateDraft externalTaxRateDraft = ExternalTaxRateDraft.builder()
+             .name("{name}")
+             .country("{country}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,117 +182,117 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.21">getName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.38">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAmount()">
 <h3>getAmount</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.25">getAmount</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.46">getAmount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.28">getCountry</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.52">getCountry</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.32">getState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.60">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSubRates()">
 <h3>getSubRates</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.35">getSubRates</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.66">getSubRates</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIncludedInPrice()">
 <h3>getIncludedInPrice</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.39">getIncludedInPrice</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.74">getIncludedInPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.42">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.77">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmount(java.lang.Double)">
 <h3>setAmount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.44">setAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.79">setAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.46">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.81">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(java.lang.String)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.48">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.83">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSubRates(com.commercetools.importapi.models.prices.SubRate...)">
 <h3>setSubRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.50">setSubRates</a></span>&#8203;<span class="parameters">(<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>...&nbsp;subRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.85">setSubRates</a></span>&#8203;<span class="parameters">(<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>...&nbsp;subRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSubRates(java.util.List)">
 <h3>setSubRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.53">setSubRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>&gt;&nbsp;subRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.88">setSubRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../prices/SubRate.html" title="interface in com.commercetools.importapi.models.prices">SubRate</a>&gt;&nbsp;subRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIncludedInPrice(java.lang.Boolean)">
 <h3>setIncludedInPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.55">setIncludedInPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.90">setIncludedInPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includedInPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.57">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.92">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.orders.ExternalTaxRateDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.61">of</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.72">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.107">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.orders.ExternalTaxRateDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.76">builder</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.111">builder</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExternalTaxRateDraft(java.util.function.Function)">
 <h3>withExternalTaxRateDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.80">withExternalTaxRateDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.115">withExternalTaxRateDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.84">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ExternalTaxRateDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ExternalTaxRateDraft.html#line.119">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

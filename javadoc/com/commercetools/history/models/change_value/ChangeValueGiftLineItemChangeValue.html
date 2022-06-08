@@ -84,9 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ChangeValueGiftLineItemChangeValueImpl.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.20">ChangeValueGiftLineItemChangeValue</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.32">ChangeValueGiftLineItemChangeValue</a></span><span class="extends-implements">
 extends <a href="ChangeValueChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueChangeValue</a></span></div>
-<div class="block"><p>Shape of the value for cart discounts gift line item value.</p></div>
+<div class="block"><p>Shape of the value for cart discounts gift line item value.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = ChangeValueGiftLineItemChangeValue.builder()
+             .product(productBuilder -> productBuilder)
+             .variantId(1)
+             .distributionChannel(distributionChannelBuilder -> distributionChannelBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +193,7 @@ extends <a href="ChangeValueChangeValue.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="GIFT_LINE_ITEM">
 <h3>GIFT_LINE_ITEM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.24">GIFT_LINE_ITEM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.36">GIFT_LINE_ITEM</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM">Constant Field Values</a></dd>
@@ -200,7 +212,7 @@ extends <a href="ChangeValueChangeValue.html" title="interface in com.commerceto
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.26">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.41">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ChangeValueChangeValue.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="ChangeValueChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueChangeValue</a></code></dd>
@@ -212,21 +224,21 @@ extends <a href="ChangeValueChangeValue.html" title="interface in com.commerceto
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.30">getProduct</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.48">getProduct</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.35">getVariantId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.56">getVariantId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.39">getSupplyChannel</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.63">getSupplyChannel</a></span>()</div>
 </section>
 </li>
 <li>
@@ -234,67 +246,67 @@ extends <a href="ChangeValueChangeValue.html" title="interface in com.commerceto
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.43">getDistributionChannel</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.70">getDistributionChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProduct(com.commercetools.history.models.common.Reference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.48">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.75">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariantId(java.lang.Integer)">
 <h3>setVariantId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.50">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.77">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.history.models.common.Reference)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.52">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.79">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;supplyChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDistributionChannel(com.commercetools.history.models.common.Reference)">
 <h3>setDistributionChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.54">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;distributionChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.81">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;distributionChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.83">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.87">of</a></span>&#8203;<span class="parameters">(<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.69">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.96">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.73">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeValueGiftLineItemChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.100">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withChangeValueGiftLineItemChangeValue(java.util.function.Function)">
 <h3>withChangeValueGiftLineItemChangeValue</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.77">withChangeValueGiftLineItemChangeValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.104">withChangeValueGiftLineItemChangeValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.81">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeValueGiftLineItemChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeValueGiftLineItemChangeValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeValueGiftLineItemChangeValue.html#line.108">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

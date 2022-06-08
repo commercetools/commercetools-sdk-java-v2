@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AddressImpl.html" title="class in com.commercetools.api.models.common">AddressImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.16">Address</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.29">Address</a></span><span class="extends-implements">
 extends <a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>, <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span></div>
+<div class="block">Address
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     Address address = Address.builder()
+             .country("{country}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,15 +119,25 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Custom Fields defined for the Address.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Unique identifier of the Address.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.common.Address)">of</a></span>&#8203;(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.common.Address)">of</a></span>&#8203;(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setId(java.lang.String)">setId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
@@ -129,7 +150,7 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 </div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.BaseAddress">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></h3>
-<code><a href="BaseAddress.html#getAdditionalAddressInfo()">getAdditionalAddressInfo</a>, <a href="BaseAddress.html#getAdditionalStreetInfo()">getAdditionalStreetInfo</a>, <a href="BaseAddress.html#getApartment()">getApartment</a>, <a href="BaseAddress.html#getBuilding()">getBuilding</a>, <a href="BaseAddress.html#getCity()">getCity</a>, <a href="BaseAddress.html#getCompany()">getCompany</a>, <a href="BaseAddress.html#getCountry()">getCountry</a>, <a href="BaseAddress.html#getDepartment()">getDepartment</a>, <a href="BaseAddress.html#getEmail()">getEmail</a>, <a href="BaseAddress.html#getExternalId()">getExternalId</a>, <a href="BaseAddress.html#getFax()">getFax</a>, <a href="BaseAddress.html#getFirstName()">getFirstName</a>, <a href="BaseAddress.html#getId()">getId</a>, <a href="BaseAddress.html#getKey()">getKey</a>, <a href="BaseAddress.html#getLastName()">getLastName</a>, <a href="BaseAddress.html#getMobile()">getMobile</a>, <a href="BaseAddress.html#getPhone()">getPhone</a>, <a href="BaseAddress.html#getPOBox()">getPOBox</a>, <a href="BaseAddress.html#getPostalCode()">getPostalCode</a>, <a href="BaseAddress.html#getRegion()">getRegion</a>, <a href="BaseAddress.html#getSalutation()">getSalutation</a>, <a href="BaseAddress.html#getState()">getState</a>, <a href="BaseAddress.html#getStreetName()">getStreetName</a>, <a href="BaseAddress.html#getStreetNumber()">getStreetNumber</a>, <a href="BaseAddress.html#getTitle()">getTitle</a>, <a href="BaseAddress.html#setAdditionalAddressInfo(java.lang.String)">setAdditionalAddressInfo</a>, <a href="BaseAddress.html#setAdditionalStreetInfo(java.lang.String)">setAdditionalStreetInfo</a>, <a href="BaseAddress.html#setApartment(java.lang.String)">setApartment</a>, <a href="BaseAddress.html#setBuilding(java.lang.String)">setBuilding</a>, <a href="BaseAddress.html#setCity(java.lang.String)">setCity</a>, <a href="BaseAddress.html#setCompany(java.lang.String)">setCompany</a>, <a href="BaseAddress.html#setCountry(java.lang.String)">setCountry</a>, <a href="BaseAddress.html#setDepartment(java.lang.String)">setDepartment</a>, <a href="BaseAddress.html#setEmail(java.lang.String)">setEmail</a>, <a href="BaseAddress.html#setExternalId(java.lang.String)">setExternalId</a>, <a href="BaseAddress.html#setFax(java.lang.String)">setFax</a>, <a href="BaseAddress.html#setFirstName(java.lang.String)">setFirstName</a>, <a href="BaseAddress.html#setId(java.lang.String)">setId</a>, <a href="BaseAddress.html#setKey(java.lang.String)">setKey</a>, <a href="BaseAddress.html#setLastName(java.lang.String)">setLastName</a>, <a href="BaseAddress.html#setMobile(java.lang.String)">setMobile</a>, <a href="BaseAddress.html#setPhone(java.lang.String)">setPhone</a>, <a href="BaseAddress.html#setPOBox(java.lang.String)">setPOBox</a>, <a href="BaseAddress.html#setPostalCode(java.lang.String)">setPostalCode</a>, <a href="BaseAddress.html#setRegion(java.lang.String)">setRegion</a>, <a href="BaseAddress.html#setSalutation(java.lang.String)">setSalutation</a>, <a href="BaseAddress.html#setState(java.lang.String)">setState</a>, <a href="BaseAddress.html#setStreetName(java.lang.String)">setStreetName</a>, <a href="BaseAddress.html#setStreetNumber(java.lang.String)">setStreetNumber</a>, <a href="BaseAddress.html#setTitle(java.lang.String)">setTitle</a>, <a href="BaseAddress.html#withBaseAddress(java.util.function.Function)">withBaseAddress</a></code></div>
+<code><a href="BaseAddress.html#getAdditionalAddressInfo()">getAdditionalAddressInfo</a>, <a href="BaseAddress.html#getAdditionalStreetInfo()">getAdditionalStreetInfo</a>, <a href="BaseAddress.html#getApartment()">getApartment</a>, <a href="BaseAddress.html#getBuilding()">getBuilding</a>, <a href="BaseAddress.html#getCity()">getCity</a>, <a href="BaseAddress.html#getCompany()">getCompany</a>, <a href="BaseAddress.html#getCountry()">getCountry</a>, <a href="BaseAddress.html#getDepartment()">getDepartment</a>, <a href="BaseAddress.html#getEmail()">getEmail</a>, <a href="BaseAddress.html#getExternalId()">getExternalId</a>, <a href="BaseAddress.html#getFax()">getFax</a>, <a href="BaseAddress.html#getFirstName()">getFirstName</a>, <a href="BaseAddress.html#getKey()">getKey</a>, <a href="BaseAddress.html#getLastName()">getLastName</a>, <a href="BaseAddress.html#getMobile()">getMobile</a>, <a href="BaseAddress.html#getPhone()">getPhone</a>, <a href="BaseAddress.html#getPOBox()">getPOBox</a>, <a href="BaseAddress.html#getPostalCode()">getPostalCode</a>, <a href="BaseAddress.html#getRegion()">getRegion</a>, <a href="BaseAddress.html#getSalutation()">getSalutation</a>, <a href="BaseAddress.html#getState()">getState</a>, <a href="BaseAddress.html#getStreetName()">getStreetName</a>, <a href="BaseAddress.html#getStreetNumber()">getStreetNumber</a>, <a href="BaseAddress.html#getTitle()">getTitle</a>, <a href="BaseAddress.html#setAdditionalAddressInfo(java.lang.String)">setAdditionalAddressInfo</a>, <a href="BaseAddress.html#setAdditionalStreetInfo(java.lang.String)">setAdditionalStreetInfo</a>, <a href="BaseAddress.html#setApartment(java.lang.String)">setApartment</a>, <a href="BaseAddress.html#setBuilding(java.lang.String)">setBuilding</a>, <a href="BaseAddress.html#setCity(java.lang.String)">setCity</a>, <a href="BaseAddress.html#setCompany(java.lang.String)">setCompany</a>, <a href="BaseAddress.html#setCountry(java.lang.String)">setCountry</a>, <a href="BaseAddress.html#setDepartment(java.lang.String)">setDepartment</a>, <a href="BaseAddress.html#setEmail(java.lang.String)">setEmail</a>, <a href="BaseAddress.html#setExternalId(java.lang.String)">setExternalId</a>, <a href="BaseAddress.html#setFax(java.lang.String)">setFax</a>, <a href="BaseAddress.html#setFirstName(java.lang.String)">setFirstName</a>, <a href="BaseAddress.html#setKey(java.lang.String)">setKey</a>, <a href="BaseAddress.html#setLastName(java.lang.String)">setLastName</a>, <a href="BaseAddress.html#setMobile(java.lang.String)">setMobile</a>, <a href="BaseAddress.html#setPhone(java.lang.String)">setPhone</a>, <a href="BaseAddress.html#setPOBox(java.lang.String)">setPOBox</a>, <a href="BaseAddress.html#setPostalCode(java.lang.String)">setPostalCode</a>, <a href="BaseAddress.html#setRegion(java.lang.String)">setRegion</a>, <a href="BaseAddress.html#setSalutation(java.lang.String)">setSalutation</a>, <a href="BaseAddress.html#setState(java.lang.String)">setState</a>, <a href="BaseAddress.html#setStreetName(java.lang.String)">setStreetName</a>, <a href="BaseAddress.html#setStreetNumber(java.lang.String)">setStreetNumber</a>, <a href="BaseAddress.html#setTitle(java.lang.String)">setTitle</a>, <a href="BaseAddress.html#withBaseAddress(java.util.function.Function)">withBaseAddress</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.Customizable">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a></h3>
 <code><a href="../Customizable.html#unwrapCustomizable()">unwrapCustomizable</a></code></div>
@@ -145,10 +166,23 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.37">getId</a></span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="BaseAddress.html#getId()">BaseAddress</a></code></span></div>
+<div class="block"><p>Unique identifier of the Address.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BaseAddress.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.20">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.43">getCustom</a></span>()</div>
+<div class="block"><p>Custom Fields defined for the Address.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></dd>
@@ -156,9 +190,19 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 </section>
 </li>
 <li>
+<section class="detail" id="setId(java.lang.String)">
+<h3>setId</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.47">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="BaseAddress.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.24">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.49">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></dd>
@@ -168,37 +212,37 @@ extends <a href="BaseAddress.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.26">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.51">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.Address)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.30">of</a></span>&#8203;<span class="parameters">(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.55">of</a></span>&#8203;<span class="parameters">(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.61">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.86">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.Address)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.65">builder</a></span>&#8203;<span class="parameters">(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.90">builder</a></span>&#8203;<span class="parameters">(<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAddress(java.util.function.Function)">
 <h3>withAddress</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.69">withAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.94">withAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.73">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Address.html#line.98">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.9">ShoppingListChangeLineItemsOrderActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.21">ShoppingListChangeLineItemsOrderActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a>&gt;</span></div>
+<div class="block">ShoppingListChangeLineItemsOrderActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShoppingListChangeLineItemsOrderAction shoppingListChangeLineItemsOrderAction = ShoppingListChangeLineItemsOrderAction.builder()
+             .plusLineItemOrder(lineItemOrderBuilder -> lineItemOrderBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -159,7 +169,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ShoppingListChangeLineItemsOrderActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.10">ShoppingListChangeLineItemsOrderActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.22">ShoppingListChangeLineItemsOrderActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -173,31 +183,31 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lineItemOrder(java.lang.String...)">
 <h3>lineItemOrder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.14">lineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItemOrder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.30">lineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItemOrder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lineItemOrder(java.util.List)">
 <h3>lineItemOrder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.19">lineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;lineItemOrder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.39">lineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;lineItemOrder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusLineItemOrder(java.lang.String...)">
 <h3>plusLineItemOrder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.24">plusLineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItemOrder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.48">plusLineItemOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;lineItemOrder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItemOrder()">
 <h3>getLineItemOrder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.32">getLineItemOrder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.56">getLineItemOrder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.36">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.60">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a>&gt;</code></dd>
@@ -207,20 +217,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.45">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.69">buildUnchecked</a></span>()</div>
 <div class="block">builds ShoppingListChangeLineItemsOrderAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.49">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.73">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemsOrderAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListChangeLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListChangeLineItemsOrderActionBuilder.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListChangeLineItemsOrderAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListChangeLineItemsOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

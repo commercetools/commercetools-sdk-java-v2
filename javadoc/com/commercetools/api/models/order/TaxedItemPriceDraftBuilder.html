@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.10">TaxedItemPriceDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.23">TaxedItemPriceDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>&gt;</span></div>
+<div class="block">TaxedItemPriceDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TaxedItemPriceDraft taxedItemPriceDraft = TaxedItemPriceDraft.builder()
+             .totalNet(totalNetBuilder -> totalNetBuilder)
+             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,16 +146,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#totalGross(com.commercetools.api.models.common.Money)">totalGross</a></span>&#8203;(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#totalGross(java.util.function.Function)">totalGross</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#totalNet(com.commercetools.api.models.common.Money)">totalNet</a></span>&#8203;(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#totalNet(java.util.function.Function)">totalNet</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+</div>
 </div>
 </div>
 </div>
@@ -165,7 +184,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TaxedItemPriceDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.11">TaxedItemPriceDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.24">TaxedItemPriceDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -179,43 +198,51 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="totalNet(java.util.function.Function)">
 <h3>totalNet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.17">totalNet</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.35">totalNet</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="totalNet(com.commercetools.api.models.common.Money)">
 <h3>totalNet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.23">totalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.46">totalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="totalGross(java.util.function.Function)">
 <h3>totalGross</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.28">totalGross</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.56">totalGross</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="totalGross(com.commercetools.api.models.common.Money)">
 <h3>totalGross</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.34">totalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.67">totalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotalNet()">
 <h3>getTotalNet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.39">getTotalNet</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.72">getTotalNet</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotalGross()">
 <h3>getTotalGross</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.43">getTotalGross</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.76">getTotalGross</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.47">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.80">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>&gt;</code></dd>
@@ -225,20 +252,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.56">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.89">buildUnchecked</a></span>()</div>
 <div class="block">builds TaxedItemPriceDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.60">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.93">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.TaxedItemPriceDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.64">of</a></span>&#8203;<span class="parameters">(<a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">TaxedItemPriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftBuilder.html#line.97">of</a></span>&#8203;<span class="parameters">(<a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

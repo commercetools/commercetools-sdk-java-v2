@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.11">ReturnItemDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.24">ReturnItemDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&gt;</span></div>
+<div class="block">ReturnItemDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
+             .quantity(0.3)
+             .shipmentState(ReturnShipmentState.ADVISED)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -156,7 +167,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shipmentState(com.commercetools.importapi.models.order_patches.ReturnShipmentState)">shipmentState</a></span>&#8203;(<a href="ReturnShipmentState.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnShipmentState</a>&nbsp;shipmentState)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ReturnItem.shipmentState</code></div>
+</div>
 </div>
 </div>
 </div>
@@ -177,7 +190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ReturnItemDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.12">ReturnItemDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.25">ReturnItemDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -191,73 +204,74 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="quantity(java.lang.Double)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.27">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.44">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lineItemId(java.lang.String)">
 <h3>lineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.32">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.53">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customLineItemId(java.lang.String)">
 <h3>customLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.37">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.62">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="comment(java.lang.String)">
 <h3>comment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.42">comment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.71">comment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shipmentState(com.commercetools.importapi.models.order_patches.ReturnShipmentState)">
 <h3>shipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.47">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.80">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
+<div class="block"><p>Maps to <code>ReturnItem.shipmentState</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.53">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.86">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.57">getLineItemId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.90">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.62">getCustomLineItemId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.95">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getComment()">
 <h3>getComment</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.67">getComment</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.100">getComment</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShipmentState()">
 <h3>getShipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.72">getShipmentState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.105">getShipmentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.76">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.109">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&gt;</code></dd>
@@ -267,20 +281,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.85">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.118">buildUnchecked</a></span>()</div>
 <div class="block">builds ReturnItemDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.89">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.122">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.order_patches.ReturnItemDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.93">of</a></span>&#8203;<span class="parameters">(<a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ReturnItemDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/ReturnItemDraftBuilder.html#line.126">of</a></span>&#8203;<span class="parameters">(<a href="ReturnItemDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnItemDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

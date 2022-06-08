@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderImportCustomLineItemStateActionImpl.html" title="class in com.commercetools.api.models.order">OrderImportCustomLineItemStateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.16">OrderImportCustomLineItemStateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.30">OrderImportCustomLineItemStateAction</a></span><span class="extends-implements">
 extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></span></div>
+<div class="block">OrderImportCustomLineItemStateAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
+             .customLineItemId("{customLineItemId}")
+             .plusState(stateBuilder -> stateBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +183,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="IMPORT_CUSTOM_LINE_ITEM_STATE">
 <h3>IMPORT_CUSTOM_LINE_ITEM_STATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.20">IMPORT_CUSTOM_LINE_ITEM_STATE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.34">IMPORT_CUSTOM_LINE_ITEM_STATE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order.OrderImportCustomLineItemStateAction.IMPORT_CUSTOM_LINE_ITEM_STATE">Constant Field Values</a></dd>
@@ -190,7 +202,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.22">getCustomLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.39">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
@@ -198,61 +210,61 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.26">getState</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.46">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.31">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.51">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.order.ItemState...)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.33">setState</a></span>&#8203;<span class="parameters">(<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.53">setState</a></span>&#8203;<span class="parameters">(<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(java.util.List)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.36">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.56">setState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.38">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.58">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderImportCustomLineItemStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.42">of</a></span>&#8203;<span class="parameters">(<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderImportCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.49">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderImportCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.69">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order.OrderImportCustomLineItemStateAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderImportCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.53">builder</a></span>&#8203;<span class="parameters">(<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportCustomLineItemStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderImportCustomLineItemStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.73">builder</a></span>&#8203;<span class="parameters">(<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderImportCustomLineItemStateAction(java.util.function.Function)">
 <h3>withOrderImportCustomLineItemStateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.58">withOrderImportCustomLineItemStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.78">withOrderImportCustomLineItemStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.62">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderImportCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order">OrderImportCustomLineItemStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderImportCustomLineItemStateAction.html#line.82">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

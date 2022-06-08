@@ -22,348 +22,489 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class StoreBuilder implements Builder&lt;Store&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private String id;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    private Long version;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    private java.time.ZonedDateTime createdAt;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    private java.time.ZonedDateTime lastModifiedAt;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
-<span class="source-line-no">024</span><span id="line.24">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private String key;</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @Nullable</span>
-<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.common.LocalizedString name;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> * StoreBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     Store store = Store.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .id("{id}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .version(0.3)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">022</span><span id="line.22"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">023</span><span id="line.23"> *             .key("{key}")</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .plusDistributionChannels(distributionChannelsBuilder -&gt; distributionChannelsBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">030</span><span id="line.30">public class StoreBuilder implements Builder&lt;Store&gt; {</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    private String id;</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
-<span class="source-line-no">035</span><span id="line.35">    private java.util.List&lt;String&gt; languages;</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    private java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; distributionChannels;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
-<span class="source-line-no">040</span><span id="line.40">    private java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; supplyChannels;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
-<span class="source-line-no">043</span><span id="line.43">    private java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; productSelections;</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
-<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">034</span><span id="line.34">    private Long version;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    @Nullable</span>
+<span class="source-line-no">041</span><span id="line.41">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    @Nullable</span>
+<span class="source-line-no">044</span><span id="line.44">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    private String key;</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public StoreBuilder id(final String id) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.id = id;</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public StoreBuilder version(final Long version) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.version = version;</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public StoreBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.createdAt = createdAt;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public StoreBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">065</span><span id="line.65">        return this;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public StoreBuilder lastModifiedBy(</span>
-<span class="source-line-no">069</span><span id="line.69">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
+<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.common.LocalizedString name;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @Nullable</span>
+<span class="source-line-no">052</span><span id="line.52">    private java.util.List&lt;String&gt; languages;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    private java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; distributionChannels;</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @Nullable</span>
+<span class="source-line-no">057</span><span id="line.57">    private java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; supplyChannels;</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    @Nullable</span>
+<span class="source-line-no">060</span><span id="line.60">    private java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; productSelections;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    @Nullable</span>
+<span class="source-line-no">063</span><span id="line.63">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *</span>
+<span class="source-line-no">067</span><span id="line.67">     */</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public StoreBuilder id(final String id) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.id = id;</span>
 <span class="source-line-no">071</span><span id="line.71">        return this;</span>
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public StoreBuilder lastModifiedBy(</span>
-<span class="source-line-no">075</span><span id="line.75">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">076</span><span id="line.76">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">077</span><span id="line.77">        return this;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public StoreBuilder createdBy(</span>
-<span class="source-line-no">081</span><span id="line.81">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public StoreBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">087</span><span id="line.87">        this.createdBy = createdBy;</span>
-<span class="source-line-no">088</span><span id="line.88">        return this;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public StoreBuilder key(final String key) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.key = key;</span>
-<span class="source-line-no">093</span><span id="line.93">        return this;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public StoreBuilder version(final Long version) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.version = version;</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     *</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public StoreBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.createdAt = createdAt;</span>
+<span class="source-line-no">089</span><span id="line.89">        return this;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">     *</span>
+<span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public StoreBuilder name(</span>
-<span class="source-line-no">097</span><span id="line.97">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">098</span><span id="line.98">        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">099</span><span id="line.99">        return this;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public StoreBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">103</span><span id="line.103">        this.name = name;</span>
-<span class="source-line-no">104</span><span id="line.104">        return this;</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public StoreBuilder languages(@Nullable final String... languages) {</span>
-<span class="source-line-no">108</span><span id="line.108">        this.languages = new ArrayList&lt;&gt;(Arrays.asList(languages));</span>
-<span class="source-line-no">109</span><span id="line.109">        return this;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public StoreBuilder languages(@Nullable final java.util.List&lt;String&gt; languages) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.languages = languages;</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public StoreBuilder plusLanguages(@Nullable final String... languages) {</span>
-<span class="source-line-no">118</span><span id="line.118">        if (this.languages == null) {</span>
-<span class="source-line-no">119</span><span id="line.119">            this.languages = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">120</span><span id="line.120">        }</span>
-<span class="source-line-no">121</span><span id="line.121">        this.languages.addAll(Arrays.asList(languages));</span>
-<span class="source-line-no">122</span><span id="line.122">        return this;</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">096</span><span id="line.96">    public StoreBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">098</span><span id="line.98">        return this;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public StoreBuilder lastModifiedBy(</span>
+<span class="source-line-no">106</span><span id="line.106">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
+<span class="source-line-no">107</span><span id="line.107">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">108</span><span id="line.108">        return this;</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    /**</span>
+<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public StoreBuilder lastModifiedBy(</span>
+<span class="source-line-no">116</span><span id="line.116">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">117</span><span id="line.117">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">118</span><span id="line.118">        return this;</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">     */</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public StoreBuilder distributionChannels(</span>
-<span class="source-line-no">126</span><span id="line.126">            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {</span>
-<span class="source-line-no">127</span><span id="line.127">        this.distributionChannels = new ArrayList&lt;&gt;(Arrays.asList(distributionChannels));</span>
+<span class="source-line-no">125</span><span id="line.125">    public StoreBuilder createdBy(</span>
+<span class="source-line-no">126</span><span id="line.126">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
 <span class="source-line-no">128</span><span id="line.128">        return this;</span>
 <span class="source-line-no">129</span><span id="line.129">    }</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public StoreBuilder distributionChannels(</span>
-<span class="source-line-no">132</span><span id="line.132">            final java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; distributionChannels) {</span>
-<span class="source-line-no">133</span><span id="line.133">        this.distributionChannels = distributionChannels;</span>
-<span class="source-line-no">134</span><span id="line.134">        return this;</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    public StoreBuilder plusDistributionChannels(</span>
-<span class="source-line-no">138</span><span id="line.138">            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {</span>
-<span class="source-line-no">139</span><span id="line.139">        if (this.distributionChannels == null) {</span>
-<span class="source-line-no">140</span><span id="line.140">            this.distributionChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">141</span><span id="line.141">        }</span>
-<span class="source-line-no">142</span><span id="line.142">        this.distributionChannels.addAll(Arrays.asList(distributionChannels));</span>
-<span class="source-line-no">143</span><span id="line.143">        return this;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public StoreBuilder plusDistributionChannels(</span>
-<span class="source-line-no">147</span><span id="line.147">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">148</span><span id="line.148">        if (this.distributionChannels == null) {</span>
-<span class="source-line-no">149</span><span id="line.149">            this.distributionChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">150</span><span id="line.150">        }</span>
-<span class="source-line-no">151</span><span id="line.151">        this.distributionChannels</span>
-<span class="source-line-no">152</span><span id="line.152">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
-<span class="source-line-no">153</span><span id="line.153">        return this;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public StoreBuilder withDistributionChannels(</span>
-<span class="source-line-no">157</span><span id="line.157">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">158</span><span id="line.158">        this.distributionChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">159</span><span id="line.159">        this.distributionChannels</span>
-<span class="source-line-no">160</span><span id="line.160">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
-<span class="source-line-no">161</span><span id="line.161">        return this;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public StoreBuilder supplyChannels(</span>
-<span class="source-line-no">165</span><span id="line.165">            @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {</span>
-<span class="source-line-no">166</span><span id="line.166">        this.supplyChannels = new ArrayList&lt;&gt;(Arrays.asList(supplyChannels));</span>
-<span class="source-line-no">167</span><span id="line.167">        return this;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    public StoreBuilder supplyChannels(</span>
-<span class="source-line-no">171</span><span id="line.171">            @Nullable final java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; supplyChannels) {</span>
-<span class="source-line-no">172</span><span id="line.172">        this.supplyChannels = supplyChannels;</span>
-<span class="source-line-no">173</span><span id="line.173">        return this;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public StoreBuilder plusSupplyChannels(</span>
-<span class="source-line-no">177</span><span id="line.177">            @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {</span>
-<span class="source-line-no">178</span><span id="line.178">        if (this.supplyChannels == null) {</span>
-<span class="source-line-no">179</span><span id="line.179">            this.supplyChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">180</span><span id="line.180">        }</span>
-<span class="source-line-no">181</span><span id="line.181">        this.supplyChannels.addAll(Arrays.asList(supplyChannels));</span>
-<span class="source-line-no">182</span><span id="line.182">        return this;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public StoreBuilder plusSupplyChannels(</span>
-<span class="source-line-no">186</span><span id="line.186">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">187</span><span id="line.187">        if (this.supplyChannels == null) {</span>
-<span class="source-line-no">188</span><span id="line.188">            this.supplyChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">189</span><span id="line.189">        }</span>
-<span class="source-line-no">190</span><span id="line.190">        this.supplyChannels</span>
-<span class="source-line-no">191</span><span id="line.191">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
-<span class="source-line-no">192</span><span id="line.192">        return this;</span>
-<span class="source-line-no">193</span><span id="line.193">    }</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public StoreBuilder withSupplyChannels(</span>
-<span class="source-line-no">196</span><span id="line.196">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.supplyChannels = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">198</span><span id="line.198">        this.supplyChannels</span>
-<span class="source-line-no">199</span><span id="line.199">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
-<span class="source-line-no">200</span><span id="line.200">        return this;</span>
-<span class="source-line-no">201</span><span id="line.201">    }</span>
-<span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public StoreBuilder productSelections(</span>
-<span class="source-line-no">204</span><span id="line.204">            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {</span>
-<span class="source-line-no">205</span><span id="line.205">        this.productSelections = new ArrayList&lt;&gt;(Arrays.asList(productSelections));</span>
-<span class="source-line-no">206</span><span id="line.206">        return this;</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public StoreBuilder productSelections(</span>
-<span class="source-line-no">210</span><span id="line.210">            @Nullable final java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; productSelections) {</span>
-<span class="source-line-no">211</span><span id="line.211">        this.productSelections = productSelections;</span>
-<span class="source-line-no">212</span><span id="line.212">        return this;</span>
-<span class="source-line-no">213</span><span id="line.213">    }</span>
-<span class="source-line-no">214</span><span id="line.214"></span>
-<span class="source-line-no">215</span><span id="line.215">    public StoreBuilder plusProductSelections(</span>
-<span class="source-line-no">216</span><span id="line.216">            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {</span>
-<span class="source-line-no">217</span><span id="line.217">        if (this.productSelections == null) {</span>
-<span class="source-line-no">218</span><span id="line.218">            this.productSelections = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">219</span><span id="line.219">        }</span>
-<span class="source-line-no">220</span><span id="line.220">        this.productSelections.addAll(Arrays.asList(productSelections));</span>
-<span class="source-line-no">221</span><span id="line.221">        return this;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public StoreBuilder plusProductSelections(</span>
-<span class="source-line-no">225</span><span id="line.225">            Function&lt;com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder&gt; builder) {</span>
-<span class="source-line-no">226</span><span id="line.226">        if (this.productSelections == null) {</span>
-<span class="source-line-no">227</span><span id="line.227">            this.productSelections = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">228</span><span id="line.228">        }</span>
-<span class="source-line-no">229</span><span id="line.229">        this.productSelections</span>
-<span class="source-line-no">230</span><span id="line.230">                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());</span>
-<span class="source-line-no">231</span><span id="line.231">        return this;</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public StoreBuilder withProductSelections(</span>
-<span class="source-line-no">235</span><span id="line.235">            Function&lt;com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder&gt; builder) {</span>
-<span class="source-line-no">236</span><span id="line.236">        this.productSelections = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">237</span><span id="line.237">        this.productSelections</span>
-<span class="source-line-no">238</span><span id="line.238">                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());</span>
-<span class="source-line-no">239</span><span id="line.239">        return this;</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    public StoreBuilder custom(</span>
-<span class="source-line-no">243</span><span id="line.243">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">244</span><span id="line.244">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
-<span class="source-line-no">245</span><span id="line.245">        return this;</span>
-<span class="source-line-no">246</span><span id="line.246">    }</span>
-<span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">    public StoreBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
-<span class="source-line-no">249</span><span id="line.249">        this.custom = custom;</span>
-<span class="source-line-no">250</span><span id="line.250">        return this;</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    public String getId() {</span>
-<span class="source-line-no">254</span><span id="line.254">        return this.id;</span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     */</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public StoreBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">136</span><span id="line.136">        this.createdBy = createdBy;</span>
+<span class="source-line-no">137</span><span id="line.137">        return this;</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     *  &lt;p&gt;User-specific unique identifier for the store. The &lt;code&gt;key&lt;/code&gt; is mandatory and immutable. It is used to reference the store.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public StoreBuilder key(final String key) {</span>
+<span class="source-line-no">145</span><span id="line.145">        this.key = key;</span>
+<span class="source-line-no">146</span><span id="line.146">        return this;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public StoreBuilder name(</span>
+<span class="source-line-no">154</span><span id="line.154">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">155</span><span id="line.155">        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">156</span><span id="line.156">        return this;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    /**</span>
+<span class="source-line-no">160</span><span id="line.160">     *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
+<span class="source-line-no">161</span><span id="line.161">     */</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public StoreBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">164</span><span id="line.164">        this.name = name;</span>
+<span class="source-line-no">165</span><span id="line.165">        return this;</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    /**</span>
+<span class="source-line-no">169</span><span id="line.169">     *</span>
+<span class="source-line-no">170</span><span id="line.170">     */</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public StoreBuilder languages(@Nullable final String... languages) {</span>
+<span class="source-line-no">173</span><span id="line.173">        this.languages = new ArrayList&lt;&gt;(Arrays.asList(languages));</span>
+<span class="source-line-no">174</span><span id="line.174">        return this;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    /**</span>
+<span class="source-line-no">178</span><span id="line.178">     *</span>
+<span class="source-line-no">179</span><span id="line.179">     */</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public StoreBuilder languages(@Nullable final java.util.List&lt;String&gt; languages) {</span>
+<span class="source-line-no">182</span><span id="line.182">        this.languages = languages;</span>
+<span class="source-line-no">183</span><span id="line.183">        return this;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    /**</span>
+<span class="source-line-no">187</span><span id="line.187">     *</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public StoreBuilder plusLanguages(@Nullable final String... languages) {</span>
+<span class="source-line-no">191</span><span id="line.191">        if (this.languages == null) {</span>
+<span class="source-line-no">192</span><span id="line.192">            this.languages = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">193</span><span id="line.193">        }</span>
+<span class="source-line-no">194</span><span id="line.194">        this.languages.addAll(Arrays.asList(languages));</span>
+<span class="source-line-no">195</span><span id="line.195">        return this;</span>
+<span class="source-line-no">196</span><span id="line.196">    }</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    /**</span>
+<span class="source-line-no">199</span><span id="line.199">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">200</span><span id="line.200">     */</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    public StoreBuilder distributionChannels(</span>
+<span class="source-line-no">203</span><span id="line.203">            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {</span>
+<span class="source-line-no">204</span><span id="line.204">        this.distributionChannels = new ArrayList&lt;&gt;(Arrays.asList(distributionChannels));</span>
+<span class="source-line-no">205</span><span id="line.205">        return this;</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    /**</span>
+<span class="source-line-no">209</span><span id="line.209">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">210</span><span id="line.210">     */</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public StoreBuilder distributionChannels(</span>
+<span class="source-line-no">213</span><span id="line.213">            final java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; distributionChannels) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.distributionChannels = distributionChannels;</span>
+<span class="source-line-no">215</span><span id="line.215">        return this;</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    /**</span>
+<span class="source-line-no">219</span><span id="line.219">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">220</span><span id="line.220">     */</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    public StoreBuilder plusDistributionChannels(</span>
+<span class="source-line-no">223</span><span id="line.223">            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {</span>
+<span class="source-line-no">224</span><span id="line.224">        if (this.distributionChannels == null) {</span>
+<span class="source-line-no">225</span><span id="line.225">            this.distributionChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">226</span><span id="line.226">        }</span>
+<span class="source-line-no">227</span><span id="line.227">        this.distributionChannels.addAll(Arrays.asList(distributionChannels));</span>
+<span class="source-line-no">228</span><span id="line.228">        return this;</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    /**</span>
+<span class="source-line-no">232</span><span id="line.232">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">233</span><span id="line.233">     */</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    public StoreBuilder plusDistributionChannels(</span>
+<span class="source-line-no">236</span><span id="line.236">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">237</span><span id="line.237">        if (this.distributionChannels == null) {</span>
+<span class="source-line-no">238</span><span id="line.238">            this.distributionChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">239</span><span id="line.239">        }</span>
+<span class="source-line-no">240</span><span id="line.240">        this.distributionChannels</span>
+<span class="source-line-no">241</span><span id="line.241">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
+<span class="source-line-no">242</span><span id="line.242">        return this;</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    /**</span>
+<span class="source-line-no">246</span><span id="line.246">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">247</span><span id="line.247">     */</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public StoreBuilder withDistributionChannels(</span>
+<span class="source-line-no">250</span><span id="line.250">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">251</span><span id="line.251">        this.distributionChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">252</span><span id="line.252">        this.distributionChannels</span>
+<span class="source-line-no">253</span><span id="line.253">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
+<span class="source-line-no">254</span><span id="line.254">        return this;</span>
 <span class="source-line-no">255</span><span id="line.255">    }</span>
 <span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    public Long getVersion() {</span>
-<span class="source-line-no">258</span><span id="line.258">        return this.version;</span>
-<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">257</span><span id="line.257">    /**</span>
+<span class="source-line-no">258</span><span id="line.258">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">259</span><span id="line.259">     */</span>
 <span class="source-line-no">260</span><span id="line.260"></span>
-<span class="source-line-no">261</span><span id="line.261">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">262</span><span id="line.262">        return this.createdAt;</span>
-<span class="source-line-no">263</span><span id="line.263">    }</span>
-<span class="source-line-no">264</span><span id="line.264"></span>
-<span class="source-line-no">265</span><span id="line.265">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">266</span><span id="line.266">        return this.lastModifiedAt;</span>
-<span class="source-line-no">267</span><span id="line.267">    }</span>
-<span class="source-line-no">268</span><span id="line.268"></span>
-<span class="source-line-no">269</span><span id="line.269">    @Nullable</span>
-<span class="source-line-no">270</span><span id="line.270">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">271</span><span id="line.271">        return this.lastModifiedBy;</span>
-<span class="source-line-no">272</span><span id="line.272">    }</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    @Nullable</span>
-<span class="source-line-no">275</span><span id="line.275">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">276</span><span id="line.276">        return this.createdBy;</span>
-<span class="source-line-no">277</span><span id="line.277">    }</span>
-<span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">    public String getKey() {</span>
-<span class="source-line-no">280</span><span id="line.280">        return this.key;</span>
-<span class="source-line-no">281</span><span id="line.281">    }</span>
-<span class="source-line-no">282</span><span id="line.282"></span>
-<span class="source-line-no">283</span><span id="line.283">    @Nullable</span>
-<span class="source-line-no">284</span><span id="line.284">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">285</span><span id="line.285">        return this.name;</span>
-<span class="source-line-no">286</span><span id="line.286">    }</span>
-<span class="source-line-no">287</span><span id="line.287"></span>
-<span class="source-line-no">288</span><span id="line.288">    @Nullable</span>
-<span class="source-line-no">289</span><span id="line.289">    public java.util.List&lt;String&gt; getLanguages() {</span>
-<span class="source-line-no">290</span><span id="line.290">        return this.languages;</span>
-<span class="source-line-no">291</span><span id="line.291">    }</span>
-<span class="source-line-no">292</span><span id="line.292"></span>
-<span class="source-line-no">293</span><span id="line.293">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getDistributionChannels() {</span>
-<span class="source-line-no">294</span><span id="line.294">        return this.distributionChannels;</span>
-<span class="source-line-no">295</span><span id="line.295">    }</span>
-<span class="source-line-no">296</span><span id="line.296"></span>
-<span class="source-line-no">297</span><span id="line.297">    @Nullable</span>
-<span class="source-line-no">298</span><span id="line.298">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getSupplyChannels() {</span>
-<span class="source-line-no">299</span><span id="line.299">        return this.supplyChannels;</span>
-<span class="source-line-no">300</span><span id="line.300">    }</span>
-<span class="source-line-no">301</span><span id="line.301"></span>
-<span class="source-line-no">302</span><span id="line.302">    @Nullable</span>
-<span class="source-line-no">303</span><span id="line.303">    public java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; getProductSelections() {</span>
-<span class="source-line-no">304</span><span id="line.304">        return this.productSelections;</span>
-<span class="source-line-no">305</span><span id="line.305">    }</span>
-<span class="source-line-no">306</span><span id="line.306"></span>
-<span class="source-line-no">307</span><span id="line.307">    @Nullable</span>
-<span class="source-line-no">308</span><span id="line.308">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
-<span class="source-line-no">309</span><span id="line.309">        return this.custom;</span>
-<span class="source-line-no">310</span><span id="line.310">    }</span>
-<span class="source-line-no">311</span><span id="line.311"></span>
-<span class="source-line-no">312</span><span id="line.312">    public Store build() {</span>
-<span class="source-line-no">313</span><span id="line.313">        Objects.requireNonNull(id, Store.class + ": id is missing");</span>
-<span class="source-line-no">314</span><span id="line.314">        Objects.requireNonNull(version, Store.class + ": version is missing");</span>
-<span class="source-line-no">315</span><span id="line.315">        Objects.requireNonNull(createdAt, Store.class + ": createdAt is missing");</span>
-<span class="source-line-no">316</span><span id="line.316">        Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">317</span><span id="line.317">        Objects.requireNonNull(key, Store.class + ": key is missing");</span>
-<span class="source-line-no">318</span><span id="line.318">        Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");</span>
-<span class="source-line-no">319</span><span id="line.319">        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,</span>
-<span class="source-line-no">320</span><span id="line.320">            distributionChannels, supplyChannels, productSelections, custom);</span>
-<span class="source-line-no">321</span><span id="line.321">    }</span>
-<span class="source-line-no">322</span><span id="line.322"></span>
-<span class="source-line-no">323</span><span id="line.323">    /**</span>
-<span class="source-line-no">324</span><span id="line.324">     * builds Store without checking for non null required values</span>
-<span class="source-line-no">325</span><span id="line.325">     */</span>
-<span class="source-line-no">326</span><span id="line.326">    public Store buildUnchecked() {</span>
-<span class="source-line-no">327</span><span id="line.327">        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,</span>
-<span class="source-line-no">328</span><span id="line.328">            distributionChannels, supplyChannels, productSelections, custom);</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330"></span>
-<span class="source-line-no">331</span><span id="line.331">    public static StoreBuilder of() {</span>
-<span class="source-line-no">332</span><span id="line.332">        return new StoreBuilder();</span>
-<span class="source-line-no">333</span><span id="line.333">    }</span>
-<span class="source-line-no">334</span><span id="line.334"></span>
-<span class="source-line-no">335</span><span id="line.335">    public static StoreBuilder of(final Store template) {</span>
-<span class="source-line-no">336</span><span id="line.336">        StoreBuilder builder = new StoreBuilder();</span>
-<span class="source-line-no">337</span><span id="line.337">        builder.id = template.getId();</span>
-<span class="source-line-no">338</span><span id="line.338">        builder.version = template.getVersion();</span>
-<span class="source-line-no">339</span><span id="line.339">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">340</span><span id="line.340">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">341</span><span id="line.341">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">342</span><span id="line.342">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">343</span><span id="line.343">        builder.key = template.getKey();</span>
-<span class="source-line-no">344</span><span id="line.344">        builder.name = template.getName();</span>
-<span class="source-line-no">345</span><span id="line.345">        builder.languages = template.getLanguages();</span>
-<span class="source-line-no">346</span><span id="line.346">        builder.distributionChannels = template.getDistributionChannels();</span>
-<span class="source-line-no">347</span><span id="line.347">        builder.supplyChannels = template.getSupplyChannels();</span>
-<span class="source-line-no">348</span><span id="line.348">        builder.productSelections = template.getProductSelections();</span>
-<span class="source-line-no">349</span><span id="line.349">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">350</span><span id="line.350">        return builder;</span>
-<span class="source-line-no">351</span><span id="line.351">    }</span>
+<span class="source-line-no">261</span><span id="line.261">    public StoreBuilder supplyChannels(</span>
+<span class="source-line-no">262</span><span id="line.262">            @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {</span>
+<span class="source-line-no">263</span><span id="line.263">        this.supplyChannels = new ArrayList&lt;&gt;(Arrays.asList(supplyChannels));</span>
+<span class="source-line-no">264</span><span id="line.264">        return this;</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
+<span class="source-line-no">266</span><span id="line.266"></span>
+<span class="source-line-no">267</span><span id="line.267">    /**</span>
+<span class="source-line-no">268</span><span id="line.268">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">269</span><span id="line.269">     */</span>
+<span class="source-line-no">270</span><span id="line.270"></span>
+<span class="source-line-no">271</span><span id="line.271">    public StoreBuilder supplyChannels(</span>
+<span class="source-line-no">272</span><span id="line.272">            @Nullable final java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; supplyChannels) {</span>
+<span class="source-line-no">273</span><span id="line.273">        this.supplyChannels = supplyChannels;</span>
+<span class="source-line-no">274</span><span id="line.274">        return this;</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    /**</span>
+<span class="source-line-no">278</span><span id="line.278">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">279</span><span id="line.279">     */</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    public StoreBuilder plusSupplyChannels(</span>
+<span class="source-line-no">282</span><span id="line.282">            @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {</span>
+<span class="source-line-no">283</span><span id="line.283">        if (this.supplyChannels == null) {</span>
+<span class="source-line-no">284</span><span id="line.284">            this.supplyChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">285</span><span id="line.285">        }</span>
+<span class="source-line-no">286</span><span id="line.286">        this.supplyChannels.addAll(Arrays.asList(supplyChannels));</span>
+<span class="source-line-no">287</span><span id="line.287">        return this;</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289"></span>
+<span class="source-line-no">290</span><span id="line.290">    /**</span>
+<span class="source-line-no">291</span><span id="line.291">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">292</span><span id="line.292">     */</span>
+<span class="source-line-no">293</span><span id="line.293"></span>
+<span class="source-line-no">294</span><span id="line.294">    public StoreBuilder plusSupplyChannels(</span>
+<span class="source-line-no">295</span><span id="line.295">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">296</span><span id="line.296">        if (this.supplyChannels == null) {</span>
+<span class="source-line-no">297</span><span id="line.297">            this.supplyChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">298</span><span id="line.298">        }</span>
+<span class="source-line-no">299</span><span id="line.299">        this.supplyChannels</span>
+<span class="source-line-no">300</span><span id="line.300">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
+<span class="source-line-no">301</span><span id="line.301">        return this;</span>
+<span class="source-line-no">302</span><span id="line.302">    }</span>
+<span class="source-line-no">303</span><span id="line.303"></span>
+<span class="source-line-no">304</span><span id="line.304">    /**</span>
+<span class="source-line-no">305</span><span id="line.305">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">306</span><span id="line.306">     */</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">    public StoreBuilder withSupplyChannels(</span>
+<span class="source-line-no">309</span><span id="line.309">            Function&lt;com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">310</span><span id="line.310">        this.supplyChannels = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">311</span><span id="line.311">        this.supplyChannels</span>
+<span class="source-line-no">312</span><span id="line.312">                .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());</span>
+<span class="source-line-no">313</span><span id="line.313">        return this;</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    /**</span>
+<span class="source-line-no">317</span><span id="line.317">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">318</span><span id="line.318">     */</span>
+<span class="source-line-no">319</span><span id="line.319"></span>
+<span class="source-line-no">320</span><span id="line.320">    public StoreBuilder productSelections(</span>
+<span class="source-line-no">321</span><span id="line.321">            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {</span>
+<span class="source-line-no">322</span><span id="line.322">        this.productSelections = new ArrayList&lt;&gt;(Arrays.asList(productSelections));</span>
+<span class="source-line-no">323</span><span id="line.323">        return this;</span>
+<span class="source-line-no">324</span><span id="line.324">    }</span>
+<span class="source-line-no">325</span><span id="line.325"></span>
+<span class="source-line-no">326</span><span id="line.326">    /**</span>
+<span class="source-line-no">327</span><span id="line.327">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">328</span><span id="line.328">     */</span>
+<span class="source-line-no">329</span><span id="line.329"></span>
+<span class="source-line-no">330</span><span id="line.330">    public StoreBuilder productSelections(</span>
+<span class="source-line-no">331</span><span id="line.331">            @Nullable final java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; productSelections) {</span>
+<span class="source-line-no">332</span><span id="line.332">        this.productSelections = productSelections;</span>
+<span class="source-line-no">333</span><span id="line.333">        return this;</span>
+<span class="source-line-no">334</span><span id="line.334">    }</span>
+<span class="source-line-no">335</span><span id="line.335"></span>
+<span class="source-line-no">336</span><span id="line.336">    /**</span>
+<span class="source-line-no">337</span><span id="line.337">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">338</span><span id="line.338">     */</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    public StoreBuilder plusProductSelections(</span>
+<span class="source-line-no">341</span><span id="line.341">            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {</span>
+<span class="source-line-no">342</span><span id="line.342">        if (this.productSelections == null) {</span>
+<span class="source-line-no">343</span><span id="line.343">            this.productSelections = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">344</span><span id="line.344">        }</span>
+<span class="source-line-no">345</span><span id="line.345">        this.productSelections.addAll(Arrays.asList(productSelections));</span>
+<span class="source-line-no">346</span><span id="line.346">        return this;</span>
+<span class="source-line-no">347</span><span id="line.347">    }</span>
+<span class="source-line-no">348</span><span id="line.348"></span>
+<span class="source-line-no">349</span><span id="line.349">    /**</span>
+<span class="source-line-no">350</span><span id="line.350">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">351</span><span id="line.351">     */</span>
 <span class="source-line-no">352</span><span id="line.352"></span>
-<span class="source-line-no">353</span><span id="line.353">}</span>
+<span class="source-line-no">353</span><span id="line.353">    public StoreBuilder plusProductSelections(</span>
+<span class="source-line-no">354</span><span id="line.354">            Function&lt;com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder&gt; builder) {</span>
+<span class="source-line-no">355</span><span id="line.355">        if (this.productSelections == null) {</span>
+<span class="source-line-no">356</span><span id="line.356">            this.productSelections = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">357</span><span id="line.357">        }</span>
+<span class="source-line-no">358</span><span id="line.358">        this.productSelections</span>
+<span class="source-line-no">359</span><span id="line.359">                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());</span>
+<span class="source-line-no">360</span><span id="line.360">        return this;</span>
+<span class="source-line-no">361</span><span id="line.361">    }</span>
+<span class="source-line-no">362</span><span id="line.362"></span>
+<span class="source-line-no">363</span><span id="line.363">    /**</span>
+<span class="source-line-no">364</span><span id="line.364">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">365</span><span id="line.365">     */</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    public StoreBuilder withProductSelections(</span>
+<span class="source-line-no">368</span><span id="line.368">            Function&lt;com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder&gt; builder) {</span>
+<span class="source-line-no">369</span><span id="line.369">        this.productSelections = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">370</span><span id="line.370">        this.productSelections</span>
+<span class="source-line-no">371</span><span id="line.371">                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());</span>
+<span class="source-line-no">372</span><span id="line.372">        return this;</span>
+<span class="source-line-no">373</span><span id="line.373">    }</span>
+<span class="source-line-no">374</span><span id="line.374"></span>
+<span class="source-line-no">375</span><span id="line.375">    /**</span>
+<span class="source-line-no">376</span><span id="line.376">     *</span>
+<span class="source-line-no">377</span><span id="line.377">     */</span>
+<span class="source-line-no">378</span><span id="line.378"></span>
+<span class="source-line-no">379</span><span id="line.379">    public StoreBuilder custom(</span>
+<span class="source-line-no">380</span><span id="line.380">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">381</span><span id="line.381">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">382</span><span id="line.382">        return this;</span>
+<span class="source-line-no">383</span><span id="line.383">    }</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    /**</span>
+<span class="source-line-no">386</span><span id="line.386">     *</span>
+<span class="source-line-no">387</span><span id="line.387">     */</span>
+<span class="source-line-no">388</span><span id="line.388"></span>
+<span class="source-line-no">389</span><span id="line.389">    public StoreBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">390</span><span id="line.390">        this.custom = custom;</span>
+<span class="source-line-no">391</span><span id="line.391">        return this;</span>
+<span class="source-line-no">392</span><span id="line.392">    }</span>
+<span class="source-line-no">393</span><span id="line.393"></span>
+<span class="source-line-no">394</span><span id="line.394">    public String getId() {</span>
+<span class="source-line-no">395</span><span id="line.395">        return this.id;</span>
+<span class="source-line-no">396</span><span id="line.396">    }</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">    public Long getVersion() {</span>
+<span class="source-line-no">399</span><span id="line.399">        return this.version;</span>
+<span class="source-line-no">400</span><span id="line.400">    }</span>
+<span class="source-line-no">401</span><span id="line.401"></span>
+<span class="source-line-no">402</span><span id="line.402">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">403</span><span id="line.403">        return this.createdAt;</span>
+<span class="source-line-no">404</span><span id="line.404">    }</span>
+<span class="source-line-no">405</span><span id="line.405"></span>
+<span class="source-line-no">406</span><span id="line.406">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">407</span><span id="line.407">        return this.lastModifiedAt;</span>
+<span class="source-line-no">408</span><span id="line.408">    }</span>
+<span class="source-line-no">409</span><span id="line.409"></span>
+<span class="source-line-no">410</span><span id="line.410">    @Nullable</span>
+<span class="source-line-no">411</span><span id="line.411">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">412</span><span id="line.412">        return this.lastModifiedBy;</span>
+<span class="source-line-no">413</span><span id="line.413">    }</span>
+<span class="source-line-no">414</span><span id="line.414"></span>
+<span class="source-line-no">415</span><span id="line.415">    @Nullable</span>
+<span class="source-line-no">416</span><span id="line.416">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">417</span><span id="line.417">        return this.createdBy;</span>
+<span class="source-line-no">418</span><span id="line.418">    }</span>
+<span class="source-line-no">419</span><span id="line.419"></span>
+<span class="source-line-no">420</span><span id="line.420">    public String getKey() {</span>
+<span class="source-line-no">421</span><span id="line.421">        return this.key;</span>
+<span class="source-line-no">422</span><span id="line.422">    }</span>
+<span class="source-line-no">423</span><span id="line.423"></span>
+<span class="source-line-no">424</span><span id="line.424">    @Nullable</span>
+<span class="source-line-no">425</span><span id="line.425">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">426</span><span id="line.426">        return this.name;</span>
+<span class="source-line-no">427</span><span id="line.427">    }</span>
+<span class="source-line-no">428</span><span id="line.428"></span>
+<span class="source-line-no">429</span><span id="line.429">    @Nullable</span>
+<span class="source-line-no">430</span><span id="line.430">    public java.util.List&lt;String&gt; getLanguages() {</span>
+<span class="source-line-no">431</span><span id="line.431">        return this.languages;</span>
+<span class="source-line-no">432</span><span id="line.432">    }</span>
+<span class="source-line-no">433</span><span id="line.433"></span>
+<span class="source-line-no">434</span><span id="line.434">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getDistributionChannels() {</span>
+<span class="source-line-no">435</span><span id="line.435">        return this.distributionChannels;</span>
+<span class="source-line-no">436</span><span id="line.436">    }</span>
+<span class="source-line-no">437</span><span id="line.437"></span>
+<span class="source-line-no">438</span><span id="line.438">    @Nullable</span>
+<span class="source-line-no">439</span><span id="line.439">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getSupplyChannels() {</span>
+<span class="source-line-no">440</span><span id="line.440">        return this.supplyChannels;</span>
+<span class="source-line-no">441</span><span id="line.441">    }</span>
+<span class="source-line-no">442</span><span id="line.442"></span>
+<span class="source-line-no">443</span><span id="line.443">    @Nullable</span>
+<span class="source-line-no">444</span><span id="line.444">    public java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; getProductSelections() {</span>
+<span class="source-line-no">445</span><span id="line.445">        return this.productSelections;</span>
+<span class="source-line-no">446</span><span id="line.446">    }</span>
+<span class="source-line-no">447</span><span id="line.447"></span>
+<span class="source-line-no">448</span><span id="line.448">    @Nullable</span>
+<span class="source-line-no">449</span><span id="line.449">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">450</span><span id="line.450">        return this.custom;</span>
+<span class="source-line-no">451</span><span id="line.451">    }</span>
+<span class="source-line-no">452</span><span id="line.452"></span>
+<span class="source-line-no">453</span><span id="line.453">    public Store build() {</span>
+<span class="source-line-no">454</span><span id="line.454">        Objects.requireNonNull(id, Store.class + ": id is missing");</span>
+<span class="source-line-no">455</span><span id="line.455">        Objects.requireNonNull(version, Store.class + ": version is missing");</span>
+<span class="source-line-no">456</span><span id="line.456">        Objects.requireNonNull(createdAt, Store.class + ": createdAt is missing");</span>
+<span class="source-line-no">457</span><span id="line.457">        Objects.requireNonNull(lastModifiedAt, Store.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">458</span><span id="line.458">        Objects.requireNonNull(key, Store.class + ": key is missing");</span>
+<span class="source-line-no">459</span><span id="line.459">        Objects.requireNonNull(distributionChannels, Store.class + ": distributionChannels is missing");</span>
+<span class="source-line-no">460</span><span id="line.460">        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,</span>
+<span class="source-line-no">461</span><span id="line.461">            distributionChannels, supplyChannels, productSelections, custom);</span>
+<span class="source-line-no">462</span><span id="line.462">    }</span>
+<span class="source-line-no">463</span><span id="line.463"></span>
+<span class="source-line-no">464</span><span id="line.464">    /**</span>
+<span class="source-line-no">465</span><span id="line.465">     * builds Store without checking for non null required values</span>
+<span class="source-line-no">466</span><span id="line.466">     */</span>
+<span class="source-line-no">467</span><span id="line.467">    public Store buildUnchecked() {</span>
+<span class="source-line-no">468</span><span id="line.468">        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,</span>
+<span class="source-line-no">469</span><span id="line.469">            distributionChannels, supplyChannels, productSelections, custom);</span>
+<span class="source-line-no">470</span><span id="line.470">    }</span>
+<span class="source-line-no">471</span><span id="line.471"></span>
+<span class="source-line-no">472</span><span id="line.472">    public static StoreBuilder of() {</span>
+<span class="source-line-no">473</span><span id="line.473">        return new StoreBuilder();</span>
+<span class="source-line-no">474</span><span id="line.474">    }</span>
+<span class="source-line-no">475</span><span id="line.475"></span>
+<span class="source-line-no">476</span><span id="line.476">    public static StoreBuilder of(final Store template) {</span>
+<span class="source-line-no">477</span><span id="line.477">        StoreBuilder builder = new StoreBuilder();</span>
+<span class="source-line-no">478</span><span id="line.478">        builder.id = template.getId();</span>
+<span class="source-line-no">479</span><span id="line.479">        builder.version = template.getVersion();</span>
+<span class="source-line-no">480</span><span id="line.480">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">481</span><span id="line.481">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">482</span><span id="line.482">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">483</span><span id="line.483">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">484</span><span id="line.484">        builder.key = template.getKey();</span>
+<span class="source-line-no">485</span><span id="line.485">        builder.name = template.getName();</span>
+<span class="source-line-no">486</span><span id="line.486">        builder.languages = template.getLanguages();</span>
+<span class="source-line-no">487</span><span id="line.487">        builder.distributionChannels = template.getDistributionChannels();</span>
+<span class="source-line-no">488</span><span id="line.488">        builder.supplyChannels = template.getSupplyChannels();</span>
+<span class="source-line-no">489</span><span id="line.489">        builder.productSelections = template.getProductSelections();</span>
+<span class="source-line-no">490</span><span id="line.490">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">491</span><span id="line.491">        return builder;</span>
+<span class="source-line-no">492</span><span id="line.492">    }</span>
+<span class="source-line-no">493</span><span id="line.493"></span>
+<span class="source-line-no">494</span><span id="line.494">}</span>
 
 
 

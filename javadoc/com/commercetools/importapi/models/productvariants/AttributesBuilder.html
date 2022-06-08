@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.9">AttributesBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.20">AttributesBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&gt;</span></div>
+<div class="block">AttributesBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     Attributes attributes = Attributes.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -116,7 +125,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addValue(java.lang.String,com.commercetools.importapi.models.productvariants.Attribute)">addValue</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The name of the attribute is given by the key and shouldn't be set on the attribute itself.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -136,7 +147,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#values(java.util.Map)">values</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The name of the attribute is given by the key and shouldn't be set on the attribute itself.</div>
+</div>
 </div>
 </div>
 </div>
@@ -157,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AttributesBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.10">AttributesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.21">AttributesBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -171,26 +184,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="values(java.util.Map)">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.14">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.29">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;values)</span></div>
+<div class="block"><p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addValue(java.lang.String,com.commercetools.importapi.models.productvariants.Attribute)">
 <h3>addValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.20">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.39">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&nbsp;value)</span></div>
+<div class="block"><p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValues()">
 <h3>getValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.29">getValues</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.48">getValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.33">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.52">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&gt;</code></dd>
@@ -200,20 +215,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.41">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.60">buildUnchecked</a></span>()</div>
 <div class="block">builds Attributes without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.64">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.productvariants.Attributes)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributesBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/AttributesBuilder.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

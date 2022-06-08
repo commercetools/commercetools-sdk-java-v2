@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.10">DiscountCodeInfoBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.23">DiscountCodeInfoBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;</span></div>
+<div class="block">DiscountCodeInfoBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     DiscountCodeInfo discountCodeInfo = DiscountCodeInfo.builder()
+             .discountCode(discountCodeBuilder -> discountCodeBuilder)
+             .state(DiscountCodeState.NOT_ACTIVE)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeInfoBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.11">DiscountCodeInfoBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.24">DiscountCodeInfoBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,37 +187,37 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="discountCode(java.util.function.Function)">
 <h3>discountCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.17">discountCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a>,&#8203;<a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.34">discountCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a>,&#8203;<a href="../discount_code/DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discountCode(com.commercetools.api.models.discount_code.DiscountCodeReference)">
 <h3>discountCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.24">discountCode</a></span>&#8203;<span class="parameters">(<a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;discountCode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.45">discountCode</a></span>&#8203;<span class="parameters">(<a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;discountCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="state(com.commercetools.api.models.cart.DiscountCodeState)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.30">state</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.55">state</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDiscountCode()">
 <h3>getDiscountCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.35">getDiscountCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.60">getDiscountCode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.39">getState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.64">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.43">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.68">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;</code></dd>
@@ -216,20 +227,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.52">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.77">buildUnchecked</a></span>()</div>
 <div class="block">builds DiscountCodeInfo without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.81">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.DiscountCodeInfo)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/DiscountCodeInfoBuilder.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

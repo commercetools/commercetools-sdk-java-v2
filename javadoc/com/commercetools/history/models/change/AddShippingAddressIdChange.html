@@ -84,8 +84,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AddShippingAddressIdChangeImpl.html" title="class in com.commercetools.history.models.change">AddShippingAddressIdChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.17">AddShippingAddressIdChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.33">AddShippingAddressIdChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
+<div class="block">AddShippingAddressIdChange
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     AddShippingAddressIdChange addShippingAddressIdChange = AddShippingAddressIdChange.builder()
+             .change("{change}")
+             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+             .address(addressBuilder -> addressBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -188,7 +202,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="ADD_SHIPPING_ADDRESS_ID_CHANGE">
 <h3>ADD_SHIPPING_ADDRESS_ID_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.21">ADD_SHIPPING_ADDRESS_ID_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.37">ADD_SHIPPING_ADDRESS_ID_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.AddShippingAddressIdChange.ADD_SHIPPING_ADDRESS_ID_CHANGE">Constant Field Values</a></dd>
@@ -207,7 +221,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.26">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.42">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>addShippingAddressId</code> action on customers.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -219,7 +233,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.30">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.49">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -230,14 +244,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.34">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.56">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.38">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.63">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
@@ -245,13 +259,13 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Address.html" title="interface in com.commercetools.history.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.42">getAddress</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Address.html" title="interface in com.commercetools.history.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.70">getAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.47">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.75">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -261,67 +275,67 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setNextValue(java.lang.String...)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.49">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.77">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(java.util.List)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.52">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.80">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(java.lang.String...)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.54">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.82">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(java.util.List)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.57">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.85">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddress(com.commercetools.history.models.common.Address)">
 <h3>setAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.59">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.history.models.common">Address</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.87">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.history.models.common">Address</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.89">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddShippingAddressIdChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.93">of</a></span>&#8203;<span class="parameters">(<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChangeBuilder.html" title="class in com.commercetools.history.models.change">AddShippingAddressIdChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.74">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChangeBuilder.html" title="class in com.commercetools.history.models.change">AddShippingAddressIdChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.102">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.AddShippingAddressIdChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChangeBuilder.html" title="class in com.commercetools.history.models.change">AddShippingAddressIdChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.78">builder</a></span>&#8203;<span class="parameters">(<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddShippingAddressIdChangeBuilder.html" title="class in com.commercetools.history.models.change">AddShippingAddressIdChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.106">builder</a></span>&#8203;<span class="parameters">(<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAddShippingAddressIdChange(java.util.function.Function)">
 <h3>withAddShippingAddressIdChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.82">withAddShippingAddressIdChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.110">withAddShippingAddressIdChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.86">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddShippingAddressIdChange.html" title="interface in com.commercetools.history.models.change">AddShippingAddressIdChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddShippingAddressIdChange.html#line.114">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

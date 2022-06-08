@@ -23,141 +23,140 @@
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
 <span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13">*  &lt;p&gt;This data type represents the supported resource types.</span>
-<span class="source-line-no">014</span><span id="line.14">*  The value must be one of the following:&lt;/p&gt;</span>
-<span class="source-line-no">015</span><span id="line.15">*/</span>
-<span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">public interface ChangeHistoryResourceType {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    ChangeHistoryResourceType CATEGORY = ChangeHistoryResourceTypeEnum.CATEGORY;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    ChangeHistoryResourceType CHANNEL = ChangeHistoryResourceTypeEnum.CHANNEL;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    ChangeHistoryResourceType CUSTOMER = ChangeHistoryResourceTypeEnum.CUSTOMER;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    ChangeHistoryResourceType CUSTOMER_GROUP = ChangeHistoryResourceTypeEnum.CUSTOMER_GROUP;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    ChangeHistoryResourceType DISCOUNT_CODE = ChangeHistoryResourceTypeEnum.DISCOUNT_CODE;</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    ChangeHistoryResourceType INVENTORY_ENTRY = ChangeHistoryResourceTypeEnum.INVENTORY_ENTRY;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    ChangeHistoryResourceType KEY_VALUE_DOCUMENT = ChangeHistoryResourceTypeEnum.KEY_VALUE_DOCUMENT;</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    ChangeHistoryResourceType ORDER = ChangeHistoryResourceTypeEnum.ORDER;</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    ChangeHistoryResourceType PAYMENT = ChangeHistoryResourceTypeEnum.PAYMENT;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    ChangeHistoryResourceType PRODUCT = ChangeHistoryResourceTypeEnum.PRODUCT;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    ChangeHistoryResourceType PRODUCT_DISCOUNT = ChangeHistoryResourceTypeEnum.PRODUCT_DISCOUNT;</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    ChangeHistoryResourceType PRODUCT_TYPE = ChangeHistoryResourceTypeEnum.PRODUCT_TYPE;</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    ChangeHistoryResourceType STORE = ChangeHistoryResourceTypeEnum.STORE;</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    ChangeHistoryResourceType TAX_CATEGORY = ChangeHistoryResourceTypeEnum.TAX_CATEGORY;</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    ChangeHistoryResourceType TYPE = ChangeHistoryResourceTypeEnum.TYPE;</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    ChangeHistoryResourceType ZONE = ChangeHistoryResourceTypeEnum.ZONE;</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    enum ChangeHistoryResourceTypeEnum implements ChangeHistoryResourceType {</span>
-<span class="source-line-no">060</span><span id="line.60">        CART_DISCOUNT("cart-discount"),</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">        CATEGORY("category"),</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">        CHANNEL("channel"),</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">        CUSTOMER("customer"),</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">        CUSTOMER_GROUP("customer-group"),</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">        DISCOUNT_CODE("discount-code"),</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">        INVENTORY_ENTRY("inventory-entry"),</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">        KEY_VALUE_DOCUMENT("key-value-document"),</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">        ORDER("order"),</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">        PAYMENT("payment"),</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">        PRODUCT("product"),</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">        PRODUCT_DISCOUNT("product-discount"),</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">        PRODUCT_TYPE("product-type"),</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">        REVIEW("review"),</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">        SHOPPING_LIST("shopping-list"),</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        STATE("state"),</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">        STORE("store"),</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">        TAX_CATEGORY("tax-category"),</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">        TYPE("type"),</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">        ZONE("zone");</span>
-<span class="source-line-no">099</span><span id="line.99">        private final String jsonName;</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">        private ChangeHistoryResourceTypeEnum(final String jsonName) {</span>
-<span class="source-line-no">102</span><span id="line.102">            this.jsonName = jsonName;</span>
-<span class="source-line-no">103</span><span id="line.103">        }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">        public String getJsonName() {</span>
-<span class="source-line-no">106</span><span id="line.106">            return jsonName;</span>
-<span class="source-line-no">107</span><span id="line.107">        }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">        public String toString() {</span>
-<span class="source-line-no">110</span><span id="line.110">            return jsonName;</span>
-<span class="source-line-no">111</span><span id="line.111">        }</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    @JsonValue</span>
-<span class="source-line-no">115</span><span id="line.115">    String getJsonName();</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    String name();</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    String toString();</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    @JsonCreator</span>
-<span class="source-line-no">122</span><span id="line.122">    public static ChangeHistoryResourceType findEnum(String value) {</span>
-<span class="source-line-no">123</span><span id="line.123">        return findEnumViaJsonName(value).orElse(new ChangeHistoryResourceType() {</span>
-<span class="source-line-no">124</span><span id="line.124">            @Override</span>
-<span class="source-line-no">125</span><span id="line.125">            public String getJsonName() {</span>
-<span class="source-line-no">126</span><span id="line.126">                return value;</span>
-<span class="source-line-no">127</span><span id="line.127">            }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">            @Override</span>
-<span class="source-line-no">130</span><span id="line.130">            public String name() {</span>
-<span class="source-line-no">131</span><span id="line.131">                return value.toUpperCase();</span>
-<span class="source-line-no">132</span><span id="line.132">            }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">            public String toString() {</span>
-<span class="source-line-no">135</span><span id="line.135">                return value;</span>
-<span class="source-line-no">136</span><span id="line.136">            }</span>
-<span class="source-line-no">137</span><span id="line.137">        });</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public static Optional&lt;ChangeHistoryResourceType&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">141</span><span id="line.141">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public static ChangeHistoryResourceType[] values() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return ChangeHistoryResourceTypeEnum.values();</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147">}</span>
+<span class="source-line-no">013</span><span id="line.13"> *  &lt;p&gt;This data type represents the supported resource types. The value must be one of the following:&lt;/p&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> */</span>
+<span class="source-line-no">015</span><span id="line.15">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">016</span><span id="line.16">public interface ChangeHistoryResourceType {</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    ChangeHistoryResourceType CATEGORY = ChangeHistoryResourceTypeEnum.CATEGORY;</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    ChangeHistoryResourceType CHANNEL = ChangeHistoryResourceTypeEnum.CHANNEL;</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    ChangeHistoryResourceType CUSTOMER = ChangeHistoryResourceTypeEnum.CUSTOMER;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    ChangeHistoryResourceType CUSTOMER_GROUP = ChangeHistoryResourceTypeEnum.CUSTOMER_GROUP;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    ChangeHistoryResourceType DISCOUNT_CODE = ChangeHistoryResourceTypeEnum.DISCOUNT_CODE;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    ChangeHistoryResourceType INVENTORY_ENTRY = ChangeHistoryResourceTypeEnum.INVENTORY_ENTRY;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    ChangeHistoryResourceType KEY_VALUE_DOCUMENT = ChangeHistoryResourceTypeEnum.KEY_VALUE_DOCUMENT;</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    ChangeHistoryResourceType ORDER = ChangeHistoryResourceTypeEnum.ORDER;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    ChangeHistoryResourceType PAYMENT = ChangeHistoryResourceTypeEnum.PAYMENT;</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    ChangeHistoryResourceType PRODUCT = ChangeHistoryResourceTypeEnum.PRODUCT;</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    ChangeHistoryResourceType PRODUCT_DISCOUNT = ChangeHistoryResourceTypeEnum.PRODUCT_DISCOUNT;</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    ChangeHistoryResourceType PRODUCT_TYPE = ChangeHistoryResourceTypeEnum.PRODUCT_TYPE;</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    ChangeHistoryResourceType STORE = ChangeHistoryResourceTypeEnum.STORE;</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    ChangeHistoryResourceType TAX_CATEGORY = ChangeHistoryResourceTypeEnum.TAX_CATEGORY;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    ChangeHistoryResourceType TYPE = ChangeHistoryResourceTypeEnum.TYPE;</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    ChangeHistoryResourceType ZONE = ChangeHistoryResourceTypeEnum.ZONE;</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    enum ChangeHistoryResourceTypeEnum implements ChangeHistoryResourceType {</span>
+<span class="source-line-no">059</span><span id="line.59">        CART_DISCOUNT("cart-discount"),</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">        CATEGORY("category"),</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">        CHANNEL("channel"),</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">        CUSTOMER("customer"),</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">        CUSTOMER_GROUP("customer-group"),</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">        DISCOUNT_CODE("discount-code"),</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">        INVENTORY_ENTRY("inventory-entry"),</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">        KEY_VALUE_DOCUMENT("key-value-document"),</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">        ORDER("order"),</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">        PAYMENT("payment"),</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">        PRODUCT("product"),</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">        PRODUCT_DISCOUNT("product-discount"),</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">        PRODUCT_TYPE("product-type"),</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">        REVIEW("review"),</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">        SHOPPING_LIST("shopping-list"),</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">        STATE("state"),</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">        STORE("store"),</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">        TAX_CATEGORY("tax-category"),</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">        TYPE("type"),</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">        ZONE("zone");</span>
+<span class="source-line-no">098</span><span id="line.98">        private final String jsonName;</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">        private ChangeHistoryResourceTypeEnum(final String jsonName) {</span>
+<span class="source-line-no">101</span><span id="line.101">            this.jsonName = jsonName;</span>
+<span class="source-line-no">102</span><span id="line.102">        }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">        public String getJsonName() {</span>
+<span class="source-line-no">105</span><span id="line.105">            return jsonName;</span>
+<span class="source-line-no">106</span><span id="line.106">        }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">        public String toString() {</span>
+<span class="source-line-no">109</span><span id="line.109">            return jsonName;</span>
+<span class="source-line-no">110</span><span id="line.110">        }</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    @JsonValue</span>
+<span class="source-line-no">114</span><span id="line.114">    String getJsonName();</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    String name();</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    String toString();</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    @JsonCreator</span>
+<span class="source-line-no">121</span><span id="line.121">    public static ChangeHistoryResourceType findEnum(String value) {</span>
+<span class="source-line-no">122</span><span id="line.122">        return findEnumViaJsonName(value).orElse(new ChangeHistoryResourceType() {</span>
+<span class="source-line-no">123</span><span id="line.123">            @Override</span>
+<span class="source-line-no">124</span><span id="line.124">            public String getJsonName() {</span>
+<span class="source-line-no">125</span><span id="line.125">                return value;</span>
+<span class="source-line-no">126</span><span id="line.126">            }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">            @Override</span>
+<span class="source-line-no">129</span><span id="line.129">            public String name() {</span>
+<span class="source-line-no">130</span><span id="line.130">                return value.toUpperCase();</span>
+<span class="source-line-no">131</span><span id="line.131">            }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">            public String toString() {</span>
+<span class="source-line-no">134</span><span id="line.134">                return value;</span>
+<span class="source-line-no">135</span><span id="line.135">            }</span>
+<span class="source-line-no">136</span><span id="line.136">        });</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public static Optional&lt;ChangeHistoryResourceType&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">140</span><span id="line.140">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public static ChangeHistoryResourceType[] values() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return ChangeHistoryResourceTypeEnum.values();</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146">}</span>
 
 
 

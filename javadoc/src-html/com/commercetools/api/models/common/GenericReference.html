@@ -18,16 +18,19 @@
 <span class="source-line-no">005</span><span id="line.5">import com.fasterxml.jackson.annotation.JsonTypeInfo;</span>
 <span class="source-line-no">006</span><span id="line.6">import com.fasterxml.jackson.databind.annotation.JsonDeserialize;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">@JsonDeserialize(as = GenericReferenceImpl.class)</span>
-<span class="source-line-no">009</span><span id="line.9">@JsonSubTypes({})</span>
-<span class="source-line-no">010</span><span id="line.10">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = GenericReferenceImpl.class, visible = true)</span>
-<span class="source-line-no">011</span><span id="line.11">public interface GenericReference&lt;T&gt; extends Reference {</span>
-<span class="source-line-no">012</span><span id="line.12">    public T getObj();</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    public default GenericReference&lt;T&gt; of(final ReferenceTypeId typeId, final String id, final T obj) {</span>
-<span class="source-line-no">015</span><span id="line.15">        return new GenericReferenceImpl&lt;&gt;(typeId, id, obj);</span>
-<span class="source-line-no">016</span><span id="line.16">    }</span>
-<span class="source-line-no">017</span><span id="line.17">}</span>
+<span class="source-line-no">008</span><span id="line.8">/**</span>
+<span class="source-line-no">009</span><span id="line.9"> * @param &lt;T&gt; the underlying reference type</span>
+<span class="source-line-no">010</span><span id="line.10"> */</span>
+<span class="source-line-no">011</span><span id="line.11">@JsonDeserialize(as = GenericReferenceImpl.class)</span>
+<span class="source-line-no">012</span><span id="line.12">@JsonSubTypes({})</span>
+<span class="source-line-no">013</span><span id="line.13">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = GenericReferenceImpl.class, visible = true)</span>
+<span class="source-line-no">014</span><span id="line.14">public interface GenericReference&lt;T&gt; extends Reference {</span>
+<span class="source-line-no">015</span><span id="line.15">    public T getObj();</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    public default GenericReference&lt;T&gt; of(final ReferenceTypeId typeId, final String id, final T obj) {</span>
+<span class="source-line-no">018</span><span id="line.18">        return new GenericReferenceImpl&lt;&gt;(typeId, id, obj);</span>
+<span class="source-line-no">019</span><span id="line.19">    }</span>
+<span class="source-line-no">020</span><span id="line.20">}</span>
 
 
 

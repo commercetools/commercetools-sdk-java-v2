@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductTypeAddAttributeDefinitionActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.16">ProductTypeAddAttributeDefinitionAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.29">ProductTypeAddAttributeDefinitionAction</a></span><span class="extends-implements">
 extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></span></div>
+<div class="block">ProductTypeAddAttributeDefinitionAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductTypeAddAttributeDefinitionAction productTypeAddAttributeDefinitionAction = ProductTypeAddAttributeDefinitionAction.builder()
+             .attribute(attributeBuilder -> attributeBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +173,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="ADD_ATTRIBUTE_DEFINITION">
 <h3>ADD_ATTRIBUTE_DEFINITION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.20">ADD_ATTRIBUTE_DEFINITION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.33">ADD_ATTRIBUTE_DEFINITION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction.ADD_ATTRIBUTE_DEFINITION">Constant Field Values</a></dd>
@@ -182,49 +193,49 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <h3>getAttribute</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.22">getAttribute</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.38">getAttribute</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttribute(com.commercetools.api.models.product_type.AttributeDefinitionDraft)">
 <h3>setAttribute</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.27">setAttribute</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;attribute)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.43">setAttribute</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;attribute)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.45">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.39">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.43">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeAddAttributeDefinitionActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductTypeAddAttributeDefinitionAction(java.util.function.Function)">
 <h3>withProductTypeAddAttributeDefinitionAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.48">withProductTypeAddAttributeDefinitionAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.64">withProductTypeAddAttributeDefinitionAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.53">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeAddAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeAddAttributeDefinitionAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeAddAttributeDefinitionAction.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

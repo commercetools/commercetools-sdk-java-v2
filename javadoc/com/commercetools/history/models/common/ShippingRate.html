@@ -80,7 +80,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShippingRateImpl.html" title="class in com.commercetools.history.models.common">ShippingRateImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.16">ShippingRate</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.32">ShippingRate</a></span></div>
+<div class="block">ShippingRate
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShippingRate shippingRate = ShippingRate.builder()
+             .price(priceBuilder -> priceBuilder)
+             .freeAbove(freeAboveBuilder -> freeAboveBuilder)
+             .isMatching(true)
+             .plusTiers(tiersBuilder -> tiersBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -161,7 +175,7 @@ loadScripts(document, 'script');</script>
 <h3>getPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.20">getPrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.39">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
@@ -169,14 +183,14 @@ loadScripts(document, 'script');</script>
 <h3>getFreeAbove</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.25">getFreeAbove</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.47">getFreeAbove</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.33">getIsMatching</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.55">getIsMatching</a></span>()</div>
 <div class="block"><p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p></div>
 </section>
 </li>
@@ -185,73 +199,73 @@ loadScripts(document, 'script');</script>
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.37">getTiers</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.62">getTiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPrice(com.commercetools.history.models.common.Money)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.42">setPrice</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.67">setPrice</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;price)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFreeAbove(com.commercetools.history.models.common.Money)">
 <h3>setFreeAbove</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.44">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.69">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.history.models.common">Money</a>&nbsp;freeAbove)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.46">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.71">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(com.commercetools.history.models.common.ShippingRatePriceTier...)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.48">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.73">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.51">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.76">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.history.models.common">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.78">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.ShippingRate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.66">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.91">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.common.ShippingRate)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingRateBuilder.html" title="class in com.commercetools.history.models.common">ShippingRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.95">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withShippingRate(java.util.function.Function)">
 <h3>withShippingRate</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.74">withShippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.99">withShippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.78">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingRate.html" title="interface in com.commercetools.history.models.common">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ShippingRate.html#line.103">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

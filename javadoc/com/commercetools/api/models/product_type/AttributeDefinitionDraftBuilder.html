@@ -83,9 +83,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.12">AttributeDefinitionDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.27">AttributeDefinitionDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&gt;</span></div>
+<div class="block">AttributeDefinitionDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     AttributeDefinitionDraft attributeDefinitionDraft = AttributeDefinitionDraft.builder()
+             .type(typeBuilder -> typeBuilder)
+             .name("{name}")
+             .label(labelBuilder -> labelBuilder)
+             .isRequired(true)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +128,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#attributeConstraint(com.commercetools.api.models.product_type.AttributeConstraintEnum)">attributeConstraint</a></span>&#8203;(<a href="AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Describes how an attribute or a set of attributes should be validated across all variants of a product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -150,28 +165,44 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inputHint(com.commercetools.api.models.product_type.TextInputHint)">inputHint</a></span>&#8203;(<a href="TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a>&nbsp;inputHint)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Provides a visual representation type for this attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inputTip(com.commercetools.api.models.common.LocalizedString)">inputTip</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;inputTip)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Additional information about the attribute that aids content managers when setting product details.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#inputTip(java.util.function.Function)">inputTip</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Additional information about the attribute that aids content managers when setting product details.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#isRequired(java.lang.Boolean)">isRequired</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Whether the attribute is required to have a value.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#isSearchable(java.lang.Boolean)">isSearchable</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Whether the attribute's values should generally be enabled in product search.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#label(com.commercetools.api.models.common.LocalizedString)">label</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">A human-readable label for the attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#label(java.util.function.Function)">label</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">A human-readable label for the attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.lang.String)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The unique name of the attribute used in the API.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -180,10 +211,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#type(com.commercetools.api.models.product_type.AttributeType)">type</a></span>&#8203;(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Describes the type of the attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#type(java.util.function.Function)">type</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeTypeBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Describes the type of the attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -204,7 +239,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AttributeDefinitionDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.13">AttributeDefinitionDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.28">AttributeDefinitionDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -218,129 +253,140 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="type(com.commercetools.api.models.product_type.AttributeType)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.35">type</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.54">type</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</span></div>
+<div class="block"><p>Describes the type of the attribute.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="type(java.util.function.Function)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.40">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeTypeBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.63">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeTypeBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Describes the type of the attribute.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.46">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.73">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block"><p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(java.util.function.Function)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.51">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.82">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>A human-readable label for the attribute.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(com.commercetools.api.models.common.LocalizedString)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.57">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.92">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="block"><p>A human-readable label for the attribute.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="isRequired(java.lang.Boolean)">
 <h3>isRequired</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.62">isRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.101">isRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</span></div>
+<div class="block"><p>Whether the attribute is required to have a value.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributeConstraint(com.commercetools.api.models.product_type.AttributeConstraintEnum)">
 <h3>attributeConstraint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.67">attributeConstraint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.110">attributeConstraint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</span></div>
+<div class="block"><p>Describes how an attribute or a set of attributes should be validated across all variants of a product.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="inputTip(java.util.function.Function)">
 <h3>inputTip</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.73">inputTip</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.120">inputTip</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Additional information about the attribute that aids content managers when setting product details.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="inputTip(com.commercetools.api.models.common.LocalizedString)">
 <h3>inputTip</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.79">inputTip</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.130">inputTip</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;inputTip)</span></div>
+<div class="block"><p>Additional information about the attribute that aids content managers when setting product details.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="inputHint(com.commercetools.api.models.product_type.TextInputHint)">
 <h3>inputHint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.85">inputHint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.140">inputHint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="block"><p>Provides a visual representation type for this attribute. only relevant for text-based attribute types like TextType and LocalizableTextType.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="isSearchable(java.lang.Boolean)">
 <h3>isSearchable</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.91">isSearchable</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.150">isSearchable</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
+<div class="block"><p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.96">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.155">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.100">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.159">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.104">getLabel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.163">getLabel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsRequired()">
 <h3>getIsRequired</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.108">getIsRequired</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.167">getIsRequired</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeConstraint()">
 <h3>getAttributeConstraint</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.112">getAttributeConstraint</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.171">getAttributeConstraint</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputTip()">
 <h3>getInputTip</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.117">getInputTip</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.176">getInputTip</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.122">getInputHint</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.181">getInputHint</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsSearchable()">
 <h3>getIsSearchable</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.127">getIsSearchable</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.186">getIsSearchable</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.132">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.191">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&gt;</code></dd>
@@ -350,20 +396,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.144">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.203">buildUnchecked</a></span>()</div>
 <div class="block">builds AttributeDefinitionDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.149">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.208">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_type.AttributeDefinitionDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.153">of</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#line.212">of</a></span>&#8203;<span class="parameters">(<a href="AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

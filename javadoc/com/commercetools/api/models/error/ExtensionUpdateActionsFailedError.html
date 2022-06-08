@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ExtensionUpdateActionsFailedErrorImpl.html" title="class in com.commercetools.api.models.error">ExtensionUpdateActionsFailedErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.17">ExtensionUpdateActionsFailedError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.31">ExtensionUpdateActionsFailedError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">ExtensionUpdateActionsFailedError
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ExtensionUpdateActionsFailedError extensionUpdateActionsFailedError = ExtensionUpdateActionsFailedError.builder()
+             .message("{message}")
+             .errorByExtension(errorByExtensionBuilder -> errorByExtensionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,7 +141,9 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLocalizedMessage()">getLocalizedMessage</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -171,7 +185,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="EXTENSION_UPDATE_ACTIONS_FAILED">
 <h3>EXTENSION_UPDATE_ACTIONS_FAILED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.21">EXTENSION_UPDATE_ACTIONS_FAILED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.35">EXTENSION_UPDATE_ACTIONS_FAILED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED">Constant Field Values</a></dd>
@@ -190,14 +204,15 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getLocalizedMessage()">
 <h3>getLocalizedMessage</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.23">getLocalizedMessage</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.40">getLocalizedMessage</a></span>()</div>
+<div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExtensionExtraInfo()">
 <h3>getExtensionExtraInfo</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.27">getExtensionExtraInfo</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.47">getExtensionExtraInfo</a></span>()</div>
 </section>
 </li>
 <li>
@@ -205,61 +220,61 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <h3>getErrorByExtension</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.31">getErrorByExtension</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.54">getErrorByExtension</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLocalizedMessage(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLocalizedMessage</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.36">setLocalizedMessage</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedMessage)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.59">setLocalizedMessage</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedMessage)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExtensionExtraInfo(java.lang.Object)">
 <h3>setExtensionExtraInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.38">setExtensionExtraInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;extensionExtraInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.61">setExtensionExtraInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;extensionExtraInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setErrorByExtension(com.commercetools.api.models.error.ErrorByExtension)">
 <h3>setErrorByExtension</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.40">setErrorByExtension</a></span>&#8203;<span class="parameters">(<a href="ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a>&nbsp;errorByExtension)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.63">setErrorByExtension</a></span>&#8203;<span class="parameters">(<a href="ErrorByExtension.html" title="interface in com.commercetools.api.models.error">ErrorByExtension</a>&nbsp;errorByExtension)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.65">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.ExtensionUpdateActionsFailedError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionUpdateActionsFailedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.56">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionUpdateActionsFailedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.79">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.ExtensionUpdateActionsFailedError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionUpdateActionsFailedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ExtensionUpdateActionsFailedErrorBuilder.html" title="class in com.commercetools.api.models.error">ExtensionUpdateActionsFailedErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.83">builder</a></span>&#8203;<span class="parameters">(<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExtensionUpdateActionsFailedError(java.util.function.Function)">
 <h3>withExtensionUpdateActionsFailedError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.64">withExtensionUpdateActionsFailedError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.87">withExtensionUpdateActionsFailedError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.68">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionUpdateActionsFailedError.html" title="interface in com.commercetools.api.models.error">ExtensionUpdateActionsFailedError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ExtensionUpdateActionsFailedError.html#line.91">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

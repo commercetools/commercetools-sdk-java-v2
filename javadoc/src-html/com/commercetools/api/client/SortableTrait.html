@@ -18,29 +18,32 @@
 <span class="source-line-no">005</span><span id="line.5"></span>
 <span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">009</span><span id="line.9">public interface SortableTrait&lt;T extends SortableTrait&lt;T&gt;&gt; {</span>
-<span class="source-line-no">010</span><span id="line.10">    List&lt;String&gt; getSort();</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">    /**</span>
-<span class="source-line-no">013</span><span id="line.13">     * set sort with the specificied value</span>
-<span class="source-line-no">014</span><span id="line.14">     */</span>
-<span class="source-line-no">015</span><span id="line.15">    &lt;TValue&gt; SortableTrait&lt;T&gt; withSort(final TValue sort);</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    /**</span>
-<span class="source-line-no">018</span><span id="line.18">     * add additional sort query parameter</span>
-<span class="source-line-no">019</span><span id="line.19">     */</span>
-<span class="source-line-no">020</span><span id="line.20">    &lt;TValue&gt; SortableTrait&lt;T&gt; addSort(final TValue sort);</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    default SortableTrait&lt;T&gt; asSortableTrait() {</span>
-<span class="source-line-no">023</span><span id="line.23">        return this;</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @SuppressWarnings("unchecked")</span>
-<span class="source-line-no">027</span><span id="line.27">    default T asSortableTraitToBaseType() {</span>
-<span class="source-line-no">028</span><span id="line.28">        return (T) this;</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
-<span class="source-line-no">030</span><span id="line.30">}</span>
+<span class="source-line-no">008</span><span id="line.8">/**</span>
+<span class="source-line-no">009</span><span id="line.9"> * SortableTrait</span>
+<span class="source-line-no">010</span><span id="line.10"> */</span>
+<span class="source-line-no">011</span><span id="line.11">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">012</span><span id="line.12">public interface SortableTrait&lt;T extends SortableTrait&lt;T&gt;&gt; {</span>
+<span class="source-line-no">013</span><span id="line.13">    List&lt;String&gt; getSort();</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    /**</span>
+<span class="source-line-no">016</span><span id="line.16">     * set sort with the specificied value</span>
+<span class="source-line-no">017</span><span id="line.17">     */</span>
+<span class="source-line-no">018</span><span id="line.18">    &lt;TValue&gt; SortableTrait&lt;T&gt; withSort(final TValue sort);</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    /**</span>
+<span class="source-line-no">021</span><span id="line.21">     * add additional sort query parameter</span>
+<span class="source-line-no">022</span><span id="line.22">     */</span>
+<span class="source-line-no">023</span><span id="line.23">    &lt;TValue&gt; SortableTrait&lt;T&gt; addSort(final TValue sort);</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    default SortableTrait&lt;T&gt; asSortableTrait() {</span>
+<span class="source-line-no">026</span><span id="line.26">        return this;</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    @SuppressWarnings("unchecked")</span>
+<span class="source-line-no">030</span><span id="line.30">    default T asSortableTraitToBaseType() {</span>
+<span class="source-line-no">031</span><span id="line.31">        return (T) this;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33">}</span>
 
 
 

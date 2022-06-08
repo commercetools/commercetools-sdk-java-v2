@@ -84,9 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProjectChangeLanguagesActionImpl.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.18">ProjectChangeLanguagesAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.28">ProjectChangeLanguagesAction</a></span><span class="extends-implements">
 extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a></span></div>
-<div class="block"><p>If a language is used by a <a href="ctp:api:type:Store">Store</a>, it cannot be deleted. Attempts to delete such language will lead to <a href="/../api/errors#projects-400-language-used-in-stores">LanguageUsedInStores</a> errors.</p></div>
+<div class="block"><p>If a language is used by a Store, it cannot be deleted. Attempts to delete such language will lead to LanguageUsedInStores errors.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProjectChangeLanguagesAction projectChangeLanguagesAction = ProjectChangeLanguagesAction.builder()
+             .plusLanguages(languagesBuilder -> languagesBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +178,7 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CHANGE_LANGUAGES">
 <h3>CHANGE_LANGUAGES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.22">CHANGE_LANGUAGES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.32">CHANGE_LANGUAGES</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.project.ProjectChangeLanguagesAction.CHANGE_LANGUAGES">Constant Field Values</a></dd>
@@ -187,56 +197,56 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getLanguages()">
 <h3>getLanguages</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.27">getLanguages</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.37">getLanguages</a></span>()</div>
 <div class="block"><p>New value to set. Must not be empty.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.lang.String...)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.31">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.41">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.util.List)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.34">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.44">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.36">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.ProjectChangeLanguagesAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.46">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.project.ProjectChangeLanguagesAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.50">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProjectChangeLanguagesAction(java.util.function.Function)">
 <h3>withProjectChangeLanguagesAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.54">withProjectChangeLanguagesAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.64">withProjectChangeLanguagesAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.58">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeLanguagesAction.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

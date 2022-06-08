@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.12">MyLineItemDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.24">MyLineItemDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;</span></div>
+<div class="block">MyLineItemDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     MyLineItemDraft myLineItemDraft = MyLineItemDraft.builder()
+             .quantity(0.3)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +125,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addedAt(java.time.ZonedDateTime)">addedAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;addedAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">When the line item was added to the cart.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -126,16 +138,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(com.commercetools.api.models.type.CustomFieldsDraft)">custom</a></span>&#8203;(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The custom fields.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#custom(java.util.function.Function)">custom</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The custom fields.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#distributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">distributionChannel</a></span>&#8203;(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The channel is used to select a ProductPrice.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#distributionChannel(java.util.function.Function)">distributionChannel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The channel is used to select a ProductPrice.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getAddedAt()">getAddedAt</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -177,19 +197,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft)">shippingDetails</a></span>&#8203;(<a href="../cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Container for line item specific address(es).</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingDetails(java.util.function.Function)">shippingDetails</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Container for line item specific address(es).</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#sku(java.lang.String)">sku</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#supplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">supplyChannel</a></span>&#8203;(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">By providing supply channel information, you can unique identify inventory entries that should be reserved.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#supplyChannel(java.util.function.Function)">supplyChannel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">By providing supply channel information, you can unique identify inventory entries that should be reserved.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#variantId(java.lang.Long)">variantId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -213,7 +241,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MyLineItemDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.13">MyLineItemDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.25">MyLineItemDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -227,86 +255,95 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productId(java.lang.String)">
 <h3>productId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.41">productId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.57">productId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variantId(java.lang.Long)">
 <h3>variantId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.46">variantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.66">variantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quantity(java.lang.Long)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.51">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.75">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addedAt(java.time.ZonedDateTime)">
 <h3>addedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.56">addedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.84">addedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;addedAt)</span></div>
+<div class="block"><p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyChannel(java.util.function.Function)">
 <h3>supplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.61">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.93">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>supplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.68">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.104">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
+<div class="block"><p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="distributionChannel(java.util.function.Function)">
 <h3>distributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.74">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.114">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="distributionChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>distributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.82">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.126">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</span></div>
+<div class="block"><p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.88">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.136">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,&#8203;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>The custom fields.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.94">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.146">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="block"><p>The custom fields.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingDetails(java.util.function.Function)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.99">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.155">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="../cart/ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Container for line item specific address(es).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.106">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.166">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
+<div class="block"><p>Container for line item specific address(es).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="sku(java.lang.String)">
 <h3>sku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.112">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.176">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
@@ -314,68 +351,68 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getProductId()">
 <h3>getProductId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.117">getProductId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.181">getProductId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.122">getVariantId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.186">getVariantId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.127">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.191">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddedAt()">
 <h3>getAddedAt</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.131">getAddedAt</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.195">getAddedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.136">getSupplyChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.200">getSupplyChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.141">getDistributionChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.205">getDistributionChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.146">getCustom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.210">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.151">getShippingDetails</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.215">getShippingDetails</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.156">getSku</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.220">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.161">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.225">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;</code></dd>
@@ -385,20 +422,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.170">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.234">buildUnchecked</a></span>()</div>
 <div class="block">builds MyLineItemDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.175">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.239">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.me.MyLineItemDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.179">of</a></span>&#8203;<span class="parameters">(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyLineItemDraftBuilder.html#line.243">of</a></span>&#8203;<span class="parameters">(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

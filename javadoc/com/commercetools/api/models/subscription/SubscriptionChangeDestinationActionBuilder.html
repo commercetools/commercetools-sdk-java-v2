@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.10">SubscriptionChangeDestinationActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.22">SubscriptionChangeDestinationActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a>&gt;</span></div>
+<div class="block">SubscriptionChangeDestinationActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SubscriptionChangeDestinationAction subscriptionChangeDestinationAction = SubscriptionChangeDestinationAction.builder()
+             .destination(destinationBuilder -> destinationBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -156,7 +166,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>SubscriptionChangeDestinationActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.11">SubscriptionChangeDestinationActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.23">SubscriptionChangeDestinationActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +180,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="destination(com.commercetools.api.models.subscription.Destination)">
 <h3>destination</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.15">destination</a></span>&#8203;<span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.31">destination</a></span>&#8203;<span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="destination(java.util.function.Function)">
 <h3>destination</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.21">destination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.41">destination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDestination()">
 <h3>getDestination</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.27">getDestination</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.47">getDestination</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a>&gt;</code></dd>
@@ -198,20 +208,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds SubscriptionChangeDestinationAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionChangeDestinationActionBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="SubscriptionChangeDestinationAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionChangeDestinationAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

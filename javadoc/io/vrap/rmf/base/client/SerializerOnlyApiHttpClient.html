@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code>, <code><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.13">SerializerOnlyApiHttpClient</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.14">SerializerOnlyApiHttpClient</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span></div>
 <div class="block">Implementation of a non executable <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ApiHttpClient</code></a></div>
@@ -140,18 +140,21 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#execute(io.vrap.rmf.base.client.ClientRequestCommand)">execute</a></span>&#8203;(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSerializerService()">getSerializerService</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getBaseUri()">getBaseUri</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSerializerService()">getSerializerService</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.fasterxml.jackson.databind.ObjectMapper)">of</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;objectMapper)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ResponseSerializer)">of</a></span>&#8203;(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.fasterxml.jackson.databind.ObjectMapper)">of</a></span>&#8203;(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;objectMapper)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ResponseSerializer)">of</a></span>&#8203;(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -172,7 +175,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="NO_EXECUTABLE_API_CLIENT">
 <h3>NO_EXECUTABLE_API_CLIENT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.14">NO_EXECUTABLE_API_CLIENT</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.15">NO_EXECUTABLE_API_CLIENT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#io.vrap.rmf.base.client.SerializerOnlyApiHttpClient.NO_EXECUTABLE_API_CLIENT">Constant Field Values</a></dd>
@@ -190,25 +193,25 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.21">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.22">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.fasterxml.jackson.databind.ObjectMapper)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.25">of</a></span>&#8203;<span class="parameters">(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;objectMapper)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.26">of</a></span>&#8203;<span class="parameters">(<a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;objectMapper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.ResponseSerializer)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.29">of</a></span>&#8203;<span class="parameters">(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SerializerOnlyApiHttpClient.html" title="class in io.vrap.rmf.base.client">SerializerOnlyApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.30">of</a></span>&#8203;<span class="parameters">(<a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest,java.lang.Class)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.33">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.34">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -219,7 +222,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.core.type.TypeReference)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.38">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.39">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -230,7 +233,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.databind.JavaType)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.43">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.44">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -241,7 +244,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ClientRequestCommand)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.48">execute</a></span>&#8203;<span class="parameters">(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.49">execute</a></span>&#8203;<span class="parameters">(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ApiHttpClient.html#execute(io.vrap.rmf.base.client.ClientRequestCommand)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></dd>
@@ -251,7 +254,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="getSerializerService()">
 <h3>getSerializerService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.53">getSerializerService</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.54">getSerializerService</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ApiHttpClient.html#getSerializerService()">getSerializerService</a></code>&nbsp;in interface&nbsp;<code><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></dd>
@@ -261,7 +264,7 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.58">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.59">execute</a></span>&#8203;<span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="VrapHttpClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code></dd>
@@ -269,9 +272,19 @@ implements <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.cli
 </section>
 </li>
 <li>
+<section class="detail" id="getBaseUri()">
+<h3>getBaseUri</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.64">getBaseUri</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ApiHttpClient.html#getBaseUri()">getBaseUri</a></code>&nbsp;in interface&nbsp;<code><a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="close()">
 <h3>close</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.63">close</a></span>()
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/SerializerOnlyApiHttpClient.html#line.69">close</a></span>()
            throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a></span></div>
 <dl class="notes">
 <dt>Specified by:</dt>

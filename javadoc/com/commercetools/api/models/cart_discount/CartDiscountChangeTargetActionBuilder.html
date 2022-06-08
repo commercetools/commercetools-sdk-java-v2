@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.10">CartDiscountChangeTargetActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.22">CartDiscountChangeTargetActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a>&gt;</span></div>
+<div class="block">CartDiscountChangeTargetActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CartDiscountChangeTargetAction cartDiscountChangeTargetAction = CartDiscountChangeTargetAction.builder()
+             .target(targetBuilder -> targetBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,10 +142,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#target(com.commercetools.api.models.cart_discount.CartDiscountTarget)">target</a></span>&#8203;(<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&nbsp;target)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">New value to set.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#target(java.util.function.Function)">target</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountTargetBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">New value to set.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartDiscountChangeTargetActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.11">CartDiscountChangeTargetActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.23">CartDiscountChangeTargetActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +184,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="target(com.commercetools.api.models.cart_discount.CartDiscountTarget)">
 <h3>target</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.15">target</a></span>&#8203;<span class="parameters">(<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&nbsp;target)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.31">target</a></span>&#8203;<span class="parameters">(<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&nbsp;target)</span></div>
+<div class="block"><p>New value to set.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="target(java.util.function.Function)">
 <h3>target</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.21">target</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountTargetBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.41">target</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountTargetBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>New value to set.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTarget()">
 <h3>getTarget</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.27">getTarget</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.47">getTarget</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a>&gt;</code></dd>
@@ -198,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds CartDiscountChangeTargetAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountChangeTargetAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountChangeTargetActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountChangeTargetActionBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountChangeTargetAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountChangeTargetAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -25,95 +25,111 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionImpl.class, name = DiscountCodeChangeCartDiscountsAction.CHANGE_CART_DISCOUNTS),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionImpl.class, name = DiscountCodeChangeGroupsAction.CHANGE_GROUPS),</span>
-<span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionImpl.class, name = DiscountCodeChangeIsActiveAction.CHANGE_IS_ACTIVE),</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionImpl.class, name = DiscountCodeSetCartPredicateAction.SET_CART_PREDICATE),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionImpl.class, name = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionImpl.class, name = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionImpl.class, name = DiscountCodeSetDescriptionAction.SET_DESCRIPTION),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionImpl.class, name = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class, name = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl.class, name = DiscountCodeSetNameAction.SET_NAME),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionImpl.class, name = DiscountCodeSetValidFromAction.SET_VALID_FROM),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionImpl.class, name = DiscountCodeSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionImpl.class, name = DiscountCodeSetValidUntilAction.SET_VALID_UNTIL) })</span>
-<span class="source-line-no">029</span><span id="line.29">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = DiscountCodeUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = DiscountCodeUpdateActionImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">public interface DiscountCodeUpdateAction</span>
-<span class="source-line-no">033</span><span id="line.33">        extends com.commercetools.api.models.ResourceUpdateAction&lt;DiscountCodeUpdateAction&gt; {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("action")</span>
-<span class="source-line-no">037</span><span id="line.37">    public String getAction();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder changeCartDiscountsBuilder() {</span>
-<span class="source-line-no">040</span><span id="line.40">        return com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder.of();</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder changeGroupsBuilder() {</span>
-<span class="source-line-no">044</span><span id="line.44">        return com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder.of();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder changeIsActiveBuilder() {</span>
-<span class="source-line-no">048</span><span id="line.48">        return com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder.of();</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder setCartPredicateBuilder() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder.of();</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> * DiscountCodeUpdateAction</span>
+<span class="source-line-no">017</span><span id="line.17"> *</span>
+<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> * Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *     DiscountCodeUpdateAction discountCodeUpdateAction = DiscountCodeUpdateAction.changeCartDiscountsBuilder()</span>
+<span class="source-line-no">023</span><span id="line.23"> *             plusCartDiscounts(cartDiscountsBuilder -&gt; cartDiscountsBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> */</span>
+<span class="source-line-no">028</span><span id="line.28">@JsonSubTypes({</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionImpl.class, name = DiscountCodeChangeCartDiscountsAction.CHANGE_CART_DISCOUNTS),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionImpl.class, name = DiscountCodeChangeGroupsAction.CHANGE_GROUPS),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionImpl.class, name = DiscountCodeChangeIsActiveAction.CHANGE_IS_ACTIVE),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionImpl.class, name = DiscountCodeSetCartPredicateAction.SET_CART_PREDICATE),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionImpl.class, name = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionImpl.class, name = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionImpl.class, name = DiscountCodeSetDescriptionAction.SET_DESCRIPTION),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionImpl.class, name = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class, name = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl.class, name = DiscountCodeSetNameAction.SET_NAME),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionImpl.class, name = DiscountCodeSetValidFromAction.SET_VALID_FROM),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionImpl.class, name = DiscountCodeSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionImpl.class, name = DiscountCodeSetValidUntilAction.SET_VALID_UNTIL) })</span>
+<span class="source-line-no">042</span><span id="line.42">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = DiscountCodeUpdateActionImpl.class, visible = true)</span>
+<span class="source-line-no">043</span><span id="line.43">@JsonDeserialize(as = DiscountCodeUpdateActionImpl.class)</span>
+<span class="source-line-no">044</span><span id="line.44">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">045</span><span id="line.45">public interface DiscountCodeUpdateAction</span>
+<span class="source-line-no">046</span><span id="line.46">        extends com.commercetools.api.models.ResourceUpdateAction&lt;DiscountCodeUpdateAction&gt; {</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">     *</span>
+<span class="source-line-no">050</span><span id="line.50">     */</span>
+<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("action")</span>
+<span class="source-line-no">053</span><span id="line.53">    public String getAction();</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
-<span class="source-line-no">056</span><span id="line.56">        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">055</span><span id="line.55">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder changeCartDiscountsBuilder() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder.of();</span>
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">059</span><span id="line.59">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder changeGroupsBuilder() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder.of();</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder setDescriptionBuilder() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder.of();</span>
+<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder changeIsActiveBuilder() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder.of();</span>
 <span class="source-line-no">065</span><span id="line.65">    }</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder setMaxApplicationsBuilder() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder.of();</span>
+<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder setCartPredicateBuilder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder.of();</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder setMaxApplicationsPerCustomerBuilder() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder.of();</span>
+<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder.of();</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder setNameBuilder() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder.of();</span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder.of();</span>
 <span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder setValidFromBuilder() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder.of();</span>
+<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder setDescriptionBuilder() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder.of();</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder.of();</span>
+<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder setMaxApplicationsBuilder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder.of();</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder setValidUntilBuilder() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder.of();</span>
+<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder setMaxApplicationsPerCustomerBuilder() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder.of();</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    default &lt;T&gt; T withDiscountCodeUpdateAction(Function&lt;DiscountCodeUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">092</span><span id="line.92">        return helper.apply(this);</span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder setNameBuilder() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder.of();</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeUpdateAction&gt;() {</span>
-<span class="source-line-no">097</span><span id="line.97">            @Override</span>
-<span class="source-line-no">098</span><span id="line.98">            public String toString() {</span>
-<span class="source-line-no">099</span><span id="line.99">                return "TypeReference&lt;DiscountCodeUpdateAction&gt;";</span>
-<span class="source-line-no">100</span><span id="line.100">            }</span>
-<span class="source-line-no">101</span><span id="line.101">        };</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103">}</span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder setValidFromBuilder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder.of();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder.of();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder setValidUntilBuilder() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder.of();</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    default &lt;T&gt; T withDiscountCodeUpdateAction(Function&lt;DiscountCodeUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">108</span><span id="line.108">        return helper.apply(this);</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountCodeUpdateAction&gt;() {</span>
+<span class="source-line-no">113</span><span id="line.113">            @Override</span>
+<span class="source-line-no">114</span><span id="line.114">            public String toString() {</span>
+<span class="source-line-no">115</span><span id="line.115">                return "TypeReference&lt;DiscountCodeUpdateAction&gt;";</span>
+<span class="source-line-no">116</span><span id="line.116">            }</span>
+<span class="source-line-no">117</span><span id="line.117">        };</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119">}</span>
 
 
 

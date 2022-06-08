@@ -75,11 +75,52 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Compatibility.html#line.22">Compatibility</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Compatibility.html#line.23">Compatibility</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><h2>Compatibility layer for JVM SDK</h2>
 
  <p>The module <code>commercetools-sdk-compat-v1</code> allows the usage of the SDK in conjunction with the JVM SDK (v1)</p>
+
+ <h3>Creating a SphereClient with the v2 SDK</h3>
+
+ <p>The <a href="../../compat/CompatSphereClient.html" title="class in com.commercetools.compat"><code>CompatSphereClient</code></a> acts as a replacement <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link"><code>SphereClient</code></a> for applications using the JVM SDK (v1).</p>
+
+ <div id="com-commercetools-compat-CompatSphereClientUsageTest%s" class=code-example><button type='button' style='display: none;' class='reveal-imports'>show/hide imports</button><pre class='hide code-example-imports'><code class='java'>import java.util.concurrent.ExecutionException;
+
+import com.commercetools.api.client.ProjectApiRoot;
+
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
+
+import io.sphere.sdk.client.SphereClient;
+
+import io.sphere.sdk.projects.Project;
+
+import io.sphere.sdk.projects.queries.ProjectGet;
+
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
+import org.assertj.core.api.Assertions;
+
+import org.junit.jupiter.api.Test;
+</code></pre><pre><code class='java'>public class CompatSphereClientUsageTest {
+    @Test
+    public void sphereCompatClient() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ProjectApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .build(projectKey);
+
+        SphereClient client = CompatSphereClient.of(apiRoot);
+
+        Project project = client.execute(ProjectGet.of()).toCompletableFuture().get();
+
+        Assertions.assertThat(project).isInstanceOf(Project.class);
+    }
+}
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-compat-v1/src/integrationTest/java/com/commercetools/compat/CompatSphereClientUsageTest.java" target="_blank">test code</a>.</pre></div>
 
  <h3>Using Requests from the JVM SDK (v1)</h3>
 
@@ -118,38 +159,7 @@ import org.junit.jupiter.api.Test;
         Assertions.assertThat(project.getKey()).isEqualTo(projectKey);
     }
 }
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-compat-v1/src/integrationTest/java/com/commercetools/compat/CompatClientUsageTest.java" target="_blank">test code</a>.</pre></div>
-
- <h3>Creating a SphereClient with the v2 SDK</h3>
-
- <p>The <a href="../../compat/CompatSphereClient.html" title="class in com.commercetools.compat"><code>CompatSphereClient</code></a> acts as a replacement <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link"><code>SphereClient</code></a> for applications using the JVM SDK (v1).</p>
-
- <div id="com-commercetools-compat-CompatSphereClientUsageTest%s" class=code-example><button type='button' style='display: none;' class='reveal-imports'>show/hide imports</button><pre class='hide code-example-imports'><code class='java'>import java.util.concurrent.ExecutionException;
-
-import io.sphere.sdk.client.SphereClient;
-
-import io.sphere.sdk.client.SphereClientConfig;
-
-import io.sphere.sdk.projects.Project;
-
-import io.sphere.sdk.projects.queries.ProjectGet;
-
-import org.assertj.core.api.Assertions;
-
-import org.junit.jupiter.api.Test;
-</code></pre><pre><code class='java'>public class CompatSphereClientUsageTest {
-    @Test
-    public void sphereCompatClient() throws ExecutionException, InterruptedException {
-        SphereClientConfig clientConfig = SphereClientConfig.of(CommercetoolsTestUtils.getProjectKey(),
-            CommercetoolsTestUtils.getClientId(), CommercetoolsTestUtils.getClientSecret());
-        SphereClient client = CompatSphereClient.of(clientConfig);
-
-        Project project = client.execute(ProjectGet.of()).toCompletableFuture().get();
-
-        Assertions.assertThat(project).isInstanceOf(Project.class);
-    }
-}
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-compat-v1/src/integrationTest/java/com/commercetools/compat/CompatSphereClientUsageTest.java" target="_blank">test code</a>.</pre></div></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-compat-v1/src/integrationTest/java/com/commercetools/compat/CompatClientUsageTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -187,7 +197,7 @@ import org.junit.jupiter.api.Test;
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Compatibility</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Compatibility.html#line.22">Compatibility</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/docs/meta/Compatibility.html#line.23">Compatibility</a></span>()</div>
 </section>
 </li>
 </ul>

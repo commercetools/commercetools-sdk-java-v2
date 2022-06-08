@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderChangeTaxModeActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.17">StagedOrderChangeTaxModeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.30">StagedOrderChangeTaxModeAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
+<div class="block">StagedOrderChangeTaxModeAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     StagedOrderChangeTaxModeAction stagedOrderChangeTaxModeAction = StagedOrderChangeTaxModeAction.builder()
+             .taxMode(TaxMode.PLATFORM)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +173,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="CHANGE_TAX_MODE">
 <h3>CHANGE_TAX_MODE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.21">CHANGE_TAX_MODE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.34">CHANGE_TAX_MODE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction.CHANGE_TAX_MODE">Constant Field Values</a></dd>
@@ -181,49 +192,49 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getTaxMode()">
 <h3>getTaxMode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.23">getTaxMode</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.39">getTaxMode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxMode(com.commercetools.api.models.cart.TaxMode)">
 <h3>setTaxMode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.27">setTaxMode</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.43">setTaxMode</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.45">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.39">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.43">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeTaxModeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderChangeTaxModeAction(java.util.function.Function)">
 <h3>withStagedOrderChangeTaxModeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.47">withStagedOrderChangeTaxModeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.63">withStagedOrderChangeTaxModeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.51">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderChangeTaxModeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeTaxModeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeTaxModeAction.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

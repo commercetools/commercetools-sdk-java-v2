@@ -27,96 +27,108 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;Retrieves an import summary for the given import sink.&lt;/p&gt;</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;The import summary is calculated on demand.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*/</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends</span>
-<span class="source-line-no">022</span><span id="line.22">        ApiMethod&lt;ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary&gt;</span>
-<span class="source-line-no">023</span><span id="line.23">        implements</span>
-<span class="source-line-no">024</span><span id="line.24">        com.commercetools.importapi.client.Secured_by_view_import_sinksTrait&lt;ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private String projectKey;</span>
-<span class="source-line-no">027</span><span id="line.27">    private String importSinkKey;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(final ApiHttpClient apiHttpClient,</span>
-<span class="source-line-no">030</span><span id="line.30">            String projectKey, String importSinkKey) {</span>
-<span class="source-line-no">031</span><span id="line.31">        super(apiHttpClient);</span>
-<span class="source-line-no">032</span><span id="line.32">        this.projectKey = projectKey;</span>
-<span class="source-line-no">033</span><span id="line.33">        this.importSinkKey = importSinkKey;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(</span>
-<span class="source-line-no">037</span><span id="line.37">            ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet t) {</span>
-<span class="source-line-no">038</span><span id="line.38">        super(t);</span>
-<span class="source-line-no">039</span><span id="line.39">        this.projectKey = t.projectKey;</span>
-<span class="source-line-no">040</span><span id="line.40">        this.importSinkKey = t.importSinkKey;</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    @Override</span>
-<span class="source-line-no">044</span><span id="line.44">    protected ApiHttpRequest buildHttpRequest() {</span>
-<span class="source-line-no">045</span><span id="line.45">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
-<span class="source-line-no">046</span><span id="line.46">        String httpRequestPath = String.format("/%s/import-summaries/importSinkKey=%s", this.projectKey,</span>
-<span class="source-line-no">047</span><span id="line.47">            this.importSinkKey);</span>
-<span class="source-line-no">048</span><span id="line.48">        if (!params.isEmpty()) {</span>
-<span class="source-line-no">049</span><span id="line.49">            httpRequestPath += "?" + String.join("&amp;", params);</span>
-<span class="source-line-no">050</span><span id="line.50">        }</span>
-<span class="source-line-no">051</span><span id="line.51">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    @Override</span>
-<span class="source-line-no">055</span><span id="line.55">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importsummaries.ImportSummary&gt; executeBlocking(</span>
-<span class="source-line-no">056</span><span id="line.56">            final ApiHttpClient client, final Duration timeout) {</span>
-<span class="source-line-no">057</span><span id="line.57">        return executeBlocking(client, timeout, com.commercetools.importapi.models.importsummaries.ImportSummary.class);</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @Override</span>
-<span class="source-line-no">061</span><span id="line.61">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importsummaries.ImportSummary&gt;&gt; execute(</span>
-<span class="source-line-no">062</span><span id="line.62">            final ApiHttpClient client) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return execute(client, com.commercetools.importapi.models.importsummaries.ImportSummary.class);</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Retrieves an import summary for the given import sink.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The import summary is calculated on demand.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;{@code</span>
+<span class="source-line-no">023</span><span id="line.23"> *   CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importsummaries.ImportSummary&gt;&gt; result = apiRoot</span>
+<span class="source-line-no">024</span><span id="line.24"> *            .withProjectKeyValue("{projectKey}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *            .importSummaries()</span>
+<span class="source-line-no">026</span><span id="line.26"> *            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")</span>
+<span class="source-line-no">027</span><span id="line.27"> *            .get()</span>
+<span class="source-line-no">028</span><span id="line.28"> *            .execute()</span>
+<span class="source-line-no">029</span><span id="line.29"> * }&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends</span>
+<span class="source-line-no">034</span><span id="line.34">        ApiMethod&lt;ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">        implements</span>
+<span class="source-line-no">036</span><span id="line.36">        com.commercetools.importapi.client.Secured_by_view_import_sinksTrait&lt;ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet&gt; {</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    private String projectKey;</span>
+<span class="source-line-no">039</span><span id="line.39">    private String importSinkKey;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(final ApiHttpClient apiHttpClient,</span>
+<span class="source-line-no">042</span><span id="line.42">            String projectKey, String importSinkKey) {</span>
+<span class="source-line-no">043</span><span id="line.43">        super(apiHttpClient);</span>
+<span class="source-line-no">044</span><span id="line.44">        this.projectKey = projectKey;</span>
+<span class="source-line-no">045</span><span id="line.45">        this.importSinkKey = importSinkKey;</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(</span>
+<span class="source-line-no">049</span><span id="line.49">            ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet t) {</span>
+<span class="source-line-no">050</span><span id="line.50">        super(t);</span>
+<span class="source-line-no">051</span><span id="line.51">        this.projectKey = t.projectKey;</span>
+<span class="source-line-no">052</span><span id="line.52">        this.importSinkKey = t.importSinkKey;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @Override</span>
+<span class="source-line-no">056</span><span id="line.56">    protected ApiHttpRequest buildHttpRequest() {</span>
+<span class="source-line-no">057</span><span id="line.57">        List&lt;String&gt; params = new ArrayList&lt;&gt;(getQueryParamUriStrings());</span>
+<span class="source-line-no">058</span><span id="line.58">        String httpRequestPath = String.format("/%s/import-summaries/importSinkKey=%s", this.projectKey,</span>
+<span class="source-line-no">059</span><span id="line.59">            this.importSinkKey);</span>
+<span class="source-line-no">060</span><span id="line.60">        if (!params.isEmpty()) {</span>
+<span class="source-line-no">061</span><span id="line.61">            httpRequestPath += "?" + String.join("&amp;", params);</span>
+<span class="source-line-no">062</span><span id="line.62">        }</span>
+<span class="source-line-no">063</span><span id="line.63">        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public String getProjectKey() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return this.projectKey;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public String getImportSinkKey() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return this.importSinkKey;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setProjectKey(final String projectKey) {</span>
-<span class="source-line-no">075</span><span id="line.75">        this.projectKey = projectKey;</span>
+<span class="source-line-no">066</span><span id="line.66">    @Override</span>
+<span class="source-line-no">067</span><span id="line.67">    public ApiHttpResponse&lt;com.commercetools.importapi.models.importsummaries.ImportSummary&gt; executeBlocking(</span>
+<span class="source-line-no">068</span><span id="line.68">            final ApiHttpClient client, final Duration timeout) {</span>
+<span class="source-line-no">069</span><span id="line.69">        return executeBlocking(client, timeout, com.commercetools.importapi.models.importsummaries.ImportSummary.class);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @Override</span>
+<span class="source-line-no">073</span><span id="line.73">    public CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.importapi.models.importsummaries.ImportSummary&gt;&gt; execute(</span>
+<span class="source-line-no">074</span><span id="line.74">            final ApiHttpClient client) {</span>
+<span class="source-line-no">075</span><span id="line.75">        return execute(client, com.commercetools.importapi.models.importsummaries.ImportSummary.class);</span>
 <span class="source-line-no">076</span><span id="line.76">    }</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setImportSinkKey(final String importSinkKey) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.importSinkKey = importSinkKey;</span>
+<span class="source-line-no">078</span><span id="line.78">    public String getProjectKey() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.projectKey;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @Override</span>
-<span class="source-line-no">083</span><span id="line.83">    public boolean equals(Object o) {</span>
-<span class="source-line-no">084</span><span id="line.84">        if (this == o)</span>
-<span class="source-line-no">085</span><span id="line.85">            return true;</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">088</span><span id="line.88">            return false;</span>
+<span class="source-line-no">082</span><span id="line.82">    public String getImportSinkKey() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.importSinkKey;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setProjectKey(final String projectKey) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.projectKey = projectKey;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet that = (ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet) o;</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">093</span><span id="line.93">                .append(importSinkKey, that.importSinkKey)</span>
-<span class="source-line-no">094</span><span id="line.94">                .isEquals();</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    @Override</span>
-<span class="source-line-no">098</span><span id="line.98">    public int hashCode() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">090</span><span id="line.90">    public void setImportSinkKey(final String importSinkKey) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.importSinkKey = importSinkKey;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @Override</span>
+<span class="source-line-no">095</span><span id="line.95">    public boolean equals(Object o) {</span>
+<span class="source-line-no">096</span><span id="line.96">        if (this == o)</span>
+<span class="source-line-no">097</span><span id="line.97">            return true;</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">100</span><span id="line.100">            return false;</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    @Override</span>
-<span class="source-line-no">103</span><span id="line.103">    protected ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet copy() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return new ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(this);</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106">}</span>
+<span class="source-line-no">102</span><span id="line.102">        ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet that = (ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet) o;</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">105</span><span id="line.105">                .append(importSinkKey, that.importSinkKey)</span>
+<span class="source-line-no">106</span><span id="line.106">                .isEquals();</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    @Override</span>
+<span class="source-line-no">110</span><span id="line.110">    public int hashCode() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return new HashCodeBuilder(17, 37).append(projectKey).append(importSinkKey).toHashCode();</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    @Override</span>
+<span class="source-line-no">115</span><span id="line.115">    protected ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet copy() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(this);</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118">}</span>
 
 
 

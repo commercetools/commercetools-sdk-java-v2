@@ -83,9 +83,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.10">SetTextLineItemCustomFieldChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.25">SetTextLineItemCustomFieldChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a>&gt;</span></div>
+<div class="block">SetTextLineItemCustomFieldChangeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SetTextLineItemCustomFieldChange setTextLineItemCustomFieldChange = SetTextLineItemCustomFieldChange.builder()
+             .change("{change}")
+             .name("{name}")
+             .customTypeId("{customTypeId}")
+             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +136,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#change(java.lang.String)">change</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Update action for <code>setTextLineItemCustomField</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#customTypeId(java.lang.String)">customTypeId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customTypeId)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -186,7 +201,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>SetTextLineItemCustomFieldChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.11">SetTextLineItemCustomFieldChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.26">SetTextLineItemCustomFieldChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -200,85 +215,86 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.25">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.44">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="block"><p>Update action for <code>setTextLineItemCustomField</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.30">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.53">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customTypeId(java.lang.String)">
 <h3>customTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.35">customTypeId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customTypeId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.62">customTypeId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customTypeId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="textLineItem(java.util.function.Function)">
 <h3>textLineItem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.40">textLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/TextLineItemValueBuilder.html" title="class in com.commercetools.history.models.change_value">TextLineItemValueBuilder</a>,&#8203;<a href="../change_value/TextLineItemValueBuilder.html" title="class in com.commercetools.history.models.change_value">TextLineItemValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.71">textLineItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/TextLineItemValueBuilder.html" title="class in com.commercetools.history.models.change_value">TextLineItemValueBuilder</a>,&#8203;<a href="../change_value/TextLineItemValueBuilder.html" title="class in com.commercetools.history.models.change_value">TextLineItemValueBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="textLineItem(com.commercetools.history.models.change_value.TextLineItemValue)">
 <h3>textLineItem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.47">textLineItem</a></span>&#8203;<span class="parameters">(<a href="../change_value/TextLineItemValue.html" title="interface in com.commercetools.history.models.change_value">TextLineItemValue</a>&nbsp;textLineItem)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.82">textLineItem</a></span>&#8203;<span class="parameters">(<a href="../change_value/TextLineItemValue.html" title="interface in com.commercetools.history.models.change_value">TextLineItemValue</a>&nbsp;textLineItem)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.lang.Object)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.53">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.92">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.lang.Object)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.58">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.101">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.63">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.106">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.67">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.110">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomTypeId()">
 <h3>getCustomTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.71">getCustomTypeId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.114">getCustomTypeId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTextLineItem()">
 <h3>getTextLineItem</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/TextLineItemValue.html" title="interface in com.commercetools.history.models.change_value">TextLineItemValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.75">getTextLineItem</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/TextLineItemValue.html" title="interface in com.commercetools.history.models.change_value">TextLineItemValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.118">getTextLineItem</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.79">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.122">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.83">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.126">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.87">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.130">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a>&gt;</code></dd>
@@ -288,20 +304,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.101">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.144">buildUnchecked</a></span>()</div>
 <div class="block">builds SetTextLineItemCustomFieldChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.106">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.149">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetTextLineItemCustomFieldChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.110">of</a></span>&#8203;<span class="parameters">(<a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetTextLineItemCustomFieldChangeBuilder.html" title="class in com.commercetools.history.models.change">SetTextLineItemCustomFieldChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetTextLineItemCustomFieldChangeBuilder.html#line.153">of</a></span>&#8203;<span class="parameters">(<a href="SetTextLineItemCustomFieldChange.html" title="interface in com.commercetools.history.models.change">SetTextLineItemCustomFieldChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

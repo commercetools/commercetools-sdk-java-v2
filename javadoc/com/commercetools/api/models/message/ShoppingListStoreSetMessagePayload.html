@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShoppingListStoreSetMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.17">ShoppingListStoreSetMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.30">ShoppingListStoreSetMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
+<div class="block">ShoppingListStoreSetMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShoppingListStoreSetMessagePayload shoppingListStoreSetMessagePayload = ShoppingListStoreSetMessagePayload.builder()
+             .store(storeBuilder -> storeBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -159,7 +170,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="SHOPPING_LIST_STORE_SET">
 <h3>SHOPPING_LIST_STORE_SET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.21">SHOPPING_LIST_STORE_SET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.34">SHOPPING_LIST_STORE_SET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload.SHOPPING_LIST_STORE_SET">Constant Field Values</a></dd>
@@ -179,49 +190,49 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getStore</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.23">getStore</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.39">getStore</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStore(com.commercetools.api.models.store.StoreKeyReference)">
 <h3>setStore</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.28">setStore</a></span>&#8203;<span class="parameters">(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.44">setStore</a></span>&#8203;<span class="parameters">(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withShoppingListStoreSetMessagePayload(java.util.function.Function)">
 <h3>withShoppingListStoreSetMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.48">withShoppingListStoreSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.64">withShoppingListStoreSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.52">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShoppingListStoreSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ShoppingListStoreSetMessagePayload.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

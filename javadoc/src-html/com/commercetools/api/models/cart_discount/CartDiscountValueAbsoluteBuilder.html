@@ -20,73 +20,107 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">011</span><span id="line.11">public class CartDiscountValueAbsoluteBuilder implements Builder&lt;CartDiscountValueAbsolute&gt; {</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private java.util.List&lt;com.commercetools.api.models.common.TypedMoney&gt; money;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    public CartDiscountValueAbsoluteBuilder money(final com.commercetools.api.models.common.TypedMoney... money) {</span>
-<span class="source-line-no">016</span><span id="line.16">        this.money = new ArrayList&lt;&gt;(Arrays.asList(money));</span>
-<span class="source-line-no">017</span><span id="line.17">        return this;</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    public CartDiscountValueAbsoluteBuilder money(</span>
-<span class="source-line-no">021</span><span id="line.21">            final java.util.List&lt;com.commercetools.api.models.common.TypedMoney&gt; money) {</span>
-<span class="source-line-no">022</span><span id="line.22">        this.money = money;</span>
-<span class="source-line-no">023</span><span id="line.23">        return this;</span>
-<span class="source-line-no">024</span><span id="line.24">    }</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    public CartDiscountValueAbsoluteBuilder plusMoney(final com.commercetools.api.models.common.TypedMoney... money) {</span>
-<span class="source-line-no">027</span><span id="line.27">        if (this.money == null) {</span>
-<span class="source-line-no">028</span><span id="line.28">            this.money = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">029</span><span id="line.29">        }</span>
-<span class="source-line-no">030</span><span id="line.30">        this.money.addAll(Arrays.asList(money));</span>
-<span class="source-line-no">031</span><span id="line.31">        return this;</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public CartDiscountValueAbsoluteBuilder plusMoney(</span>
-<span class="source-line-no">035</span><span id="line.35">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">036</span><span id="line.36">        if (this.money == null) {</span>
-<span class="source-line-no">037</span><span id="line.37">            this.money = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">038</span><span id="line.38">        }</span>
-<span class="source-line-no">039</span><span id="line.39">        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());</span>
-<span class="source-line-no">040</span><span id="line.40">        return this;</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public CartDiscountValueAbsoluteBuilder withMoney(</span>
-<span class="source-line-no">044</span><span id="line.44">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">045</span><span id="line.45">        this.money = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">046</span><span id="line.46">        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());</span>
-<span class="source-line-no">047</span><span id="line.47">        return this;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public java.util.List&lt;com.commercetools.api.models.common.TypedMoney&gt; getMoney() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return this.money;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public CartDiscountValueAbsolute build() {</span>
-<span class="source-line-no">055</span><span id="line.55">        Objects.requireNonNull(money, CartDiscountValueAbsolute.class + ": money is missing");</span>
-<span class="source-line-no">056</span><span id="line.56">        return new CartDiscountValueAbsoluteImpl(money);</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     * builds CartDiscountValueAbsolute without checking for non null required values</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62">    public CartDiscountValueAbsolute buildUnchecked() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return new CartDiscountValueAbsoluteImpl(money);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static CartDiscountValueAbsoluteBuilder of() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return new CartDiscountValueAbsoluteBuilder();</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {</span>
-<span class="source-line-no">071</span><span id="line.71">        CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();</span>
-<span class="source-line-no">072</span><span id="line.72">        builder.money = template.getMoney();</span>
-<span class="source-line-no">073</span><span id="line.73">        return builder;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">}</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> * CartDiscountValueAbsoluteBuilder</span>
+<span class="source-line-no">012</span><span id="line.12"> * &lt;hr&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *     CartDiscountValueAbsolute cartDiscountValueAbsolute = CartDiscountValueAbsolute.builder()</span>
+<span class="source-line-no">017</span><span id="line.17"> *             .plusMoney(moneyBuilder -&gt; moneyBuilder)</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .build()</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;/div&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> */</span>
+<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">023</span><span id="line.23">public class CartDiscountValueAbsoluteBuilder implements Builder&lt;CartDiscountValueAbsolute&gt; {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private java.util.List&lt;com.commercetools.api.models.common.CentPrecisionMoney&gt; money;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    /**</span>
+<span class="source-line-no">028</span><span id="line.28">     *  &lt;p&gt;Cent precision money values in different currencies.&lt;/p&gt;</span>
+<span class="source-line-no">029</span><span id="line.29">     */</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    public CartDiscountValueAbsoluteBuilder money(</span>
+<span class="source-line-no">032</span><span id="line.32">            final com.commercetools.api.models.common.CentPrecisionMoney... money) {</span>
+<span class="source-line-no">033</span><span id="line.33">        this.money = new ArrayList&lt;&gt;(Arrays.asList(money));</span>
+<span class="source-line-no">034</span><span id="line.34">        return this;</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     *  &lt;p&gt;Cent precision money values in different currencies.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">     */</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public CartDiscountValueAbsoluteBuilder money(</span>
+<span class="source-line-no">042</span><span id="line.42">            final java.util.List&lt;com.commercetools.api.models.common.CentPrecisionMoney&gt; money) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.money = money;</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    /**</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Cent precision money values in different currencies.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public CartDiscountValueAbsoluteBuilder plusMoney(</span>
+<span class="source-line-no">052</span><span id="line.52">            final com.commercetools.api.models.common.CentPrecisionMoney... money) {</span>
+<span class="source-line-no">053</span><span id="line.53">        if (this.money == null) {</span>
+<span class="source-line-no">054</span><span id="line.54">            this.money = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">055</span><span id="line.55">        }</span>
+<span class="source-line-no">056</span><span id="line.56">        this.money.addAll(Arrays.asList(money));</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    /**</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Cent precision money values in different currencies.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public CartDiscountValueAbsoluteBuilder plusMoney(</span>
+<span class="source-line-no">065</span><span id="line.65">            Function&lt;com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder&gt; builder) {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (this.money == null) {</span>
+<span class="source-line-no">067</span><span id="line.67">            this.money = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">068</span><span id="line.68">        }</span>
+<span class="source-line-no">069</span><span id="line.69">        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Cent precision money values in different currencies.&lt;/p&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public CartDiscountValueAbsoluteBuilder withMoney(</span>
+<span class="source-line-no">078</span><span id="line.78">            Function&lt;com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder&gt; builder) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.money = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">080</span><span id="line.80">        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());</span>
+<span class="source-line-no">081</span><span id="line.81">        return this;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public java.util.List&lt;com.commercetools.api.models.common.CentPrecisionMoney&gt; getMoney() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return this.money;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public CartDiscountValueAbsolute build() {</span>
+<span class="source-line-no">089</span><span id="line.89">        Objects.requireNonNull(money, CartDiscountValueAbsolute.class + ": money is missing");</span>
+<span class="source-line-no">090</span><span id="line.90">        return new CartDiscountValueAbsoluteImpl(money);</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     * builds CartDiscountValueAbsolute without checking for non null required values</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96">    public CartDiscountValueAbsolute buildUnchecked() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return new CartDiscountValueAbsoluteImpl(money);</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public static CartDiscountValueAbsoluteBuilder of() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return new CartDiscountValueAbsoluteBuilder();</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {</span>
+<span class="source-line-no">105</span><span id="line.105">        CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();</span>
+<span class="source-line-no">106</span><span id="line.106">        builder.money = template.getMoney();</span>
+<span class="source-line-no">107</span><span id="line.107">        return builder;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">}</span>
 
 
 

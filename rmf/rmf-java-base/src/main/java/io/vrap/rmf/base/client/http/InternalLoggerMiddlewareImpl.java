@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ConcurrentModificationException;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -89,8 +90,14 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 if (throwable.getCause() instanceof ApiHttpException) {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
                             .getResponse();
-                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                    final Level level = exceptionLogEvents.entrySet()
+                            .stream()
+                            .filter(classLevelEntry -> classLevelEntry.getKey()
+                                    .isAssignableFrom(throwable.getCause().getClass()))
+                            .findFirst()
+                            .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);
+                    ;
                     responseLogger.log(level, () -> String
                             .format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
                                 errorResponse.getStatusCode(), executionTime,
@@ -112,7 +119,12 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                                     .orElse("<no body>"));
                 }
                 else {
-                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                    final Level level = exceptionLogEvents.entrySet()
+                            .stream()
+                            .filter(classLevelEntry -> classLevelEntry.getKey()
+                                    .isAssignableFrom(throwable.getCause().getClass()))
+                            .findFirst()
+                            .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);
                     responseLogger.log(level, throwable::getCause, throwable);
                 }

@@ -40,7 +40,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 200 [0-9]+ - -");
+                .matches("GET https://api.commercetools.com/ 200 \\d+ - -");
 
         testLogAppender.stop();
     }
@@ -65,7 +65,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 200 [0-9]+ projects;dur=10 -");
+                .matches("GET https://api.commercetools.com/ 200 \\d+ projects;dur=10 -");
 
         testLogAppender.stop();
     }
@@ -92,7 +92,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 200 [0-9]+ - test-id/12345");
+                .matches("GET https://api.commercetools.com/ 200 \\d+ - test-id/12345");
 
         testLogAppender.stop();
     }
@@ -121,7 +121,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 400 [0-9]+ - test-id/12345");
+                .matches("GET https://api.commercetools.com/ 400 \\d+ - test-id/12345");
 
         testLogAppender.stop();
     }
@@ -150,7 +150,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 400 [0-9]+ projects;dur=7 -");
+                .matches("GET https://api.commercetools.com/ 400 \\d+ projects;dur=7 -");
 
         testLogAppender.stop();
     }
@@ -179,7 +179,7 @@ public class InternalLoggerMiddlewareTest {
         Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
         Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 400 [0-9]+ - -");
+                .matches("GET https://api.commercetools.com/ 400 \\d+ - -");
 
         testLogAppender.stop();
     }

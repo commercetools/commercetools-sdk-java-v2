@@ -17,7 +17,7 @@
 <span class="source-line-no">004</span><span id="line.4">/**</span>
 <span class="source-line-no">005</span><span id="line.5"> * &lt;h2 id=logging&gt;Logging&lt;/h2&gt;</span>
 <span class="source-line-no">006</span><span id="line.6"> *</span>
-<span class="source-line-no">007</span><span id="line.7"> * &lt;p&gt;Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.&lt;/p&gt;</span>
+<span class="source-line-no">007</span><span id="line.7"> * &lt;p&gt;Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.&lt;/p&gt;</span>
 <span class="source-line-no">008</span><span id="line.8"> *</span>
 <span class="source-line-no">009</span><span id="line.9"> * &lt;h2 id=log-information&gt;Log Information&lt;/h2&gt;</span>
 <span class="source-line-no">010</span><span id="line.10"> *</span>
@@ -49,9 +49,9 @@
 <span class="source-line-no">036</span><span id="line.36"> *</span>
 <span class="source-line-no">037</span><span id="line.37"> * &lt;p&gt;The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38"> *</span>
-<span class="source-line-no">039</span><span id="line.39"> * &lt;p&gt;The child loggers of commercetools Composable Commerce correspond with the names of the API endpoints, so for example {@code commercetools.categories} for Categories and {@code commercetools.product-types} for Product Types.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39"> * &lt;p&gt;The child loggers of commercetools are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.&lt;/p&gt;</span>
 <span class="source-line-no">040</span><span id="line.40"> *</span>
-<span class="source-line-no">041</span><span id="line.41"> * &lt;p&gt;The grandchild loggers refer to actions. For example, {@code commercetools.categories.request} refers to performing requests via HTTPs to commercetools Composable Commerce for Categories and {@code commercetools.categories.response} refers to the response for Categories. &lt;/p&gt;</span>
+<span class="source-line-no">041</span><span id="line.41"> * &lt;p&gt;The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools for categories, {@code commercetools.categories.response} refers to the responses of the platform.&lt;/p&gt;</span>
 <span class="source-line-no">042</span><span id="line.42"> *</span>
 <span class="source-line-no">043</span><span id="line.43"> * &lt;p&gt;The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):&lt;/p&gt;</span>
 <span class="source-line-no">044</span><span id="line.44"> *</span>
@@ -59,7 +59,7 @@
 <span class="source-line-no">046</span><span id="line.46"> * [OkHttp https://api.europe-west1.gcp.commercetools.com/...] DEBUG commercetools.categories.response - io.vrap.rmf.base.client.ApiHttpResponse@33e37acd[statusCode=200,headers=...,textInterpretedBody={"limit":20,"offset":0,"count":4,"total":4,"results":[{"id":"ca7f64dc-ab41-4e7f-b65b-bfc25bf01111","version":1,"createdAt":"2021-01-06T09:21:55.445Z","lastModifiedAt":"2021-01-06T09:21:55.445Z","key":"random-key-15aab6ee-9a48-4fdc-a8c3-8ff9ff390d60","name":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"slug":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"description":{"key-6bc3cc62-1995-43f4":"value-random-string-c3ff7f1a-6371-4c0c-a3b9-5060eca08b8a"},"ancestors":[],"orderHint":"random-string-a99e6941-3225-4766-923a-4a654652532f","externalId":"random-id-100b3851-29b4-47c1-aef3-860b4cd28f54"}]}]</span>
 <span class="source-line-no">047</span><span id="line.47"> * }&lt;/pre&gt;</span>
 <span class="source-line-no">048</span><span id="line.48"> *</span>
-<span class="source-line-no">049</span><span id="line.49"> * &lt;p&gt;{@code commercetools.categories.response} logs on trace level additional the formatted http response from the API (abbreviated example):&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49"> * &lt;p&gt;{@code commercetools.categories.response} logs on trace level additional the formatted http response from the platform (abbreviated example):&lt;/p&gt;</span>
 <span class="source-line-no">050</span><span id="line.50"> *</span>
 <span class="source-line-no">051</span><span id="line.51"> * &lt;pre&gt;{@code</span>
 <span class="source-line-no">052</span><span id="line.52"> * [OkHttp https://api.europe-west1.gcp.commercetools.com/...] TRACE commercetools.categories.response - 200</span>

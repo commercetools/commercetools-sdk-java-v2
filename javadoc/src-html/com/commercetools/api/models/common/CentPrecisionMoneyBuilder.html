@@ -19,99 +19,69 @@
 <span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">/**</span>
-<span class="source-line-no">010</span><span id="line.10"> * CentPrecisionMoneyBuilder</span>
-<span class="source-line-no">011</span><span id="line.11"> * &lt;hr&gt;</span>
-<span class="source-line-no">012</span><span id="line.12"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">013</span><span id="line.13"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> *     CentPrecisionMoney centPrecisionMoney = CentPrecisionMoney.builder()</span>
-<span class="source-line-no">016</span><span id="line.16"> *             .centAmount(0.3)</span>
-<span class="source-line-no">017</span><span id="line.17"> *             .currencyCode("{currencyCode}")</span>
-<span class="source-line-no">018</span><span id="line.18"> *             .fractionDigits(0.3)</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> */</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public class CentPrecisionMoneyBuilder implements Builder&lt;CentPrecisionMoney&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private Long centAmount;</span>
+<span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">010</span><span id="line.10">public class CentPrecisionMoneyBuilder implements Builder&lt;CentPrecisionMoney&gt; {</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    private Long centAmount;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">    private String currencyCode;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">    private Integer fractionDigits;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {</span>
+<span class="source-line-no">019</span><span id="line.19">        this.centAmount = centAmount;</span>
+<span class="source-line-no">020</span><span id="line.20">        return this;</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {</span>
+<span class="source-line-no">024</span><span id="line.24">        this.currencyCode = currencyCode;</span>
+<span class="source-line-no">025</span><span id="line.25">        return this;</span>
+<span class="source-line-no">026</span><span id="line.26">    }</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private String currencyCode;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private Integer fractionDigits;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency, such as:&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">     *  &lt;ul&gt;</span>
-<span class="source-line-no">035</span><span id="line.35">     *   &lt;li&gt;Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as &lt;code&gt;500&lt;/code&gt;).&lt;/li&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">     *   &lt;li&gt;The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;</span>
-<span class="source-line-no">037</span><span id="line.37">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public CentPrecisionMoneyBuilder centAmount(final Long centAmount) {</span>
-<span class="source-line-no">041</span><span id="line.41">        this.centAmount = centAmount;</span>
-<span class="source-line-no">042</span><span id="line.42">        return this;</span>
+<span class="source-line-no">028</span><span id="line.28">    public CentPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {</span>
+<span class="source-line-no">029</span><span id="line.29">        this.fractionDigits = fractionDigits;</span>
+<span class="source-line-no">030</span><span id="line.30">        return this;</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public Long getCentAmount() {</span>
+<span class="source-line-no">034</span><span id="line.34">        return this.centAmount;</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public String getCurrencyCode() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return this.currencyCode;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public Integer getFractionDigits() {</span>
+<span class="source-line-no">042</span><span id="line.42">        return this.fractionDigits;</span>
 <span class="source-line-no">043</span><span id="line.43">    }</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public CentPrecisionMoneyBuilder currencyCode(final String currencyCode) {</span>
-<span class="source-line-no">050</span><span id="line.50">        this.currencyCode = currencyCode;</span>
-<span class="source-line-no">051</span><span id="line.51">        return this;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;The number of default fraction digits for the given currency, like &lt;code&gt;2&lt;/code&gt; for EUR or &lt;code&gt;0&lt;/code&gt; for JPY.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public CentPrecisionMoneyBuilder fractionDigits(final Integer fractionDigits) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.fractionDigits = fractionDigits;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    public CentPrecisionMoney build() {</span>
+<span class="source-line-no">046</span><span id="line.46">        Objects.requireNonNull(centAmount, CentPrecisionMoney.class + ": centAmount is missing");</span>
+<span class="source-line-no">047</span><span id="line.47">        Objects.requireNonNull(currencyCode, CentPrecisionMoney.class + ": currencyCode is missing");</span>
+<span class="source-line-no">048</span><span id="line.48">        Objects.requireNonNull(fractionDigits, CentPrecisionMoney.class + ": fractionDigits is missing");</span>
+<span class="source-line-no">049</span><span id="line.49">        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">     * builds CentPrecisionMoney without checking for non null required values</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55">    public CentPrecisionMoney buildUnchecked() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static CentPrecisionMoneyBuilder of() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return new CentPrecisionMoneyBuilder();</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public Long getCentAmount() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return this.centAmount;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public String getCurrencyCode() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return this.currencyCode;</span>
+<span class="source-line-no">063</span><span id="line.63">    public static CentPrecisionMoneyBuilder of(final CentPrecisionMoney template) {</span>
+<span class="source-line-no">064</span><span id="line.64">        CentPrecisionMoneyBuilder builder = new CentPrecisionMoneyBuilder();</span>
+<span class="source-line-no">065</span><span id="line.65">        builder.centAmount = template.getCentAmount();</span>
+<span class="source-line-no">066</span><span id="line.66">        builder.currencyCode = template.getCurrencyCode();</span>
+<span class="source-line-no">067</span><span id="line.67">        builder.fractionDigits = template.getFractionDigits();</span>
+<span class="source-line-no">068</span><span id="line.68">        return builder;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public Integer getFractionDigits() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.fractionDigits;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public CentPrecisionMoney build() {</span>
-<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(centAmount, CentPrecisionMoney.class + ": centAmount is missing");</span>
-<span class="source-line-no">077</span><span id="line.77">        Objects.requireNonNull(currencyCode, CentPrecisionMoney.class + ": currencyCode is missing");</span>
-<span class="source-line-no">078</span><span id="line.78">        Objects.requireNonNull(fractionDigits, CentPrecisionMoney.class + ": fractionDigits is missing");</span>
-<span class="source-line-no">079</span><span id="line.79">        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    /**</span>
-<span class="source-line-no">083</span><span id="line.83">     * builds CentPrecisionMoney without checking for non null required values</span>
-<span class="source-line-no">084</span><span id="line.84">     */</span>
-<span class="source-line-no">085</span><span id="line.85">    public CentPrecisionMoney buildUnchecked() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return new CentPrecisionMoneyImpl(centAmount, currencyCode, fractionDigits);</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static CentPrecisionMoneyBuilder of() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return new CentPrecisionMoneyBuilder();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public static CentPrecisionMoneyBuilder of(final CentPrecisionMoney template) {</span>
-<span class="source-line-no">094</span><span id="line.94">        CentPrecisionMoneyBuilder builder = new CentPrecisionMoneyBuilder();</span>
-<span class="source-line-no">095</span><span id="line.95">        builder.centAmount = template.getCentAmount();</span>
-<span class="source-line-no">096</span><span id="line.96">        builder.currencyCode = template.getCurrencyCode();</span>
-<span class="source-line-no">097</span><span id="line.97">        builder.fractionDigits = template.getFractionDigits();</span>
-<span class="source-line-no">098</span><span id="line.98">        return builder;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">}</span>
+<span class="source-line-no">071</span><span id="line.71">}</span>
 
 
 

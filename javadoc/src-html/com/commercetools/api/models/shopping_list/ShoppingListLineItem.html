@@ -31,170 +31,120 @@
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">/**</span>
-<span class="source-line-no">022</span><span id="line.22"> * ShoppingListLineItem</span>
-<span class="source-line-no">023</span><span id="line.23"> *</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;hr&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> *     ShoppingListLineItem shoppingListLineItem = ShoppingListLineItem.builder()</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">030</span><span id="line.30"> *             .id("{id}")</span>
-<span class="source-line-no">031</span><span id="line.31"> *             .name(nameBuilder -&gt; nameBuilder)</span>
-<span class="source-line-no">032</span><span id="line.32"> *             .productId("{productId}")</span>
-<span class="source-line-no">033</span><span id="line.33"> *             .productType(productTypeBuilder -&gt; productTypeBuilder)</span>
-<span class="source-line-no">034</span><span id="line.34"> *             .quantity(0.3)</span>
-<span class="source-line-no">035</span><span id="line.35"> *             .build()</span>
-<span class="source-line-no">036</span><span id="line.36"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">037</span><span id="line.37"> * &lt;/div&gt;</span>
-<span class="source-line-no">038</span><span id="line.38"> */</span>
-<span class="source-line-no">039</span><span id="line.39">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">040</span><span id="line.40">@JsonDeserialize(as = ShoppingListLineItemImpl.class)</span>
-<span class="source-line-no">041</span><span id="line.41">public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable&lt;ShoppingListLineItem&gt; {</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">@JsonDeserialize(as = ShoppingListLineItemImpl.class)</span>
+<span class="source-line-no">023</span><span id="line.23">public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable&lt;ShoppingListLineItem&gt; {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("addedAt")</span>
+<span class="source-line-no">027</span><span id="line.27">    public ZonedDateTime getAddedAt();</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    /**</span>
+<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">    */</span>
+<span class="source-line-no">032</span><span id="line.32">    @Valid</span>
+<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("custom")</span>
+<span class="source-line-no">034</span><span id="line.34">    public CustomFields getCustom();</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("deactivatedAt")</span>
+<span class="source-line-no">037</span><span id="line.37">    public ZonedDateTime getDeactivatedAt();</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("id")</span>
+<span class="source-line-no">041</span><span id="line.41">    public String getId();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *</span>
-<span class="source-line-no">045</span><span id="line.45">     */</span>
-<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("addedAt")</span>
-<span class="source-line-no">048</span><span id="line.48">    public ZonedDateTime getAddedAt();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("custom")</span>
-<span class="source-line-no">055</span><span id="line.55">    public CustomFields getCustom();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
+<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
+<span class="source-line-no">044</span><span id="line.44">    @Valid</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("name")</span>
+<span class="source-line-no">046</span><span id="line.46">    public LocalizedString getName();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("productId")</span>
+<span class="source-line-no">050</span><span id="line.50">    public String getProductId();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("productSlug")</span>
+<span class="source-line-no">054</span><span id="line.54">    public LocalizedString getProductSlug();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @NotNull</span>
+<span class="source-line-no">057</span><span id="line.57">    @Valid</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("productType")</span>
+<span class="source-line-no">059</span><span id="line.59">    public ProductTypeReference getProductType();</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("deactivatedAt")</span>
-<span class="source-line-no">062</span><span id="line.62">    public ZonedDateTime getDeactivatedAt();</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Unique identifier of the ShoppingListLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
-<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("id")</span>
-<span class="source-line-no">069</span><span id="line.69">    public String getId();</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">     */</span>
-<span class="source-line-no">074</span><span id="line.74">    @NotNull</span>
-<span class="source-line-no">075</span><span id="line.75">    @Valid</span>
-<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("name")</span>
-<span class="source-line-no">077</span><span id="line.77">    public LocalizedString getName();</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82">    @NotNull</span>
-<span class="source-line-no">083</span><span id="line.83">    @JsonProperty("productId")</span>
-<span class="source-line-no">084</span><span id="line.84">    public String getProductId();</span>
+<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("quantity")</span>
+<span class="source-line-no">063</span><span id="line.63">    public Integer getQuantity();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
+<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("variant")</span>
+<span class="source-line-no">067</span><span id="line.67">    public ProductVariant getVariant();</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("variantId")</span>
+<span class="source-line-no">070</span><span id="line.70">    public Long getVariantId();</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setAddedAt(final ZonedDateTime addedAt);</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setDeactivatedAt(final ZonedDateTime deactivatedAt);</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public void setId(final String id);</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public void setProductId(final String productId);</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public void setProductSlug(final LocalizedString productSlug);</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    @Valid</span>
-<span class="source-line-no">090</span><span id="line.90">    @JsonProperty("productSlug")</span>
-<span class="source-line-no">091</span><span id="line.91">    public LocalizedString getProductSlug();</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Reference to a ProductType.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    @NotNull</span>
-<span class="source-line-no">097</span><span id="line.97">    @Valid</span>
-<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("productType")</span>
-<span class="source-line-no">099</span><span id="line.99">    public ProductTypeReference getProductType();</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">     *</span>
-<span class="source-line-no">103</span><span id="line.103">     */</span>
-<span class="source-line-no">104</span><span id="line.104">    @NotNull</span>
-<span class="source-line-no">105</span><span id="line.105">    @JsonProperty("quantity")</span>
-<span class="source-line-no">106</span><span id="line.106">    public Integer getQuantity();</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     *</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    @Valid</span>
-<span class="source-line-no">112</span><span id="line.112">    @JsonProperty("variant")</span>
-<span class="source-line-no">113</span><span id="line.113">    public ProductVariant getVariant();</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     *</span>
-<span class="source-line-no">117</span><span id="line.117">     */</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    @JsonProperty("variantId")</span>
-<span class="source-line-no">120</span><span id="line.120">    public Long getVariantId();</span>
+<span class="source-line-no">086</span><span id="line.86">    public void setProductType(final ProductTypeReference productType);</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public void setQuantity(final Integer quantity);</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setVariant(final ProductVariant variant);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public void setVariantId(final Long variantId);</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public static ShoppingListLineItem of() {</span>
+<span class="source-line-no">095</span><span id="line.95">        return new ShoppingListLineItemImpl();</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static ShoppingListLineItem of(final ShoppingListLineItem template) {</span>
+<span class="source-line-no">099</span><span id="line.99">        ShoppingListLineItemImpl instance = new ShoppingListLineItemImpl();</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setAddedAt(template.getAddedAt());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setDeactivatedAt(template.getDeactivatedAt());</span>
+<span class="source-line-no">103</span><span id="line.103">        instance.setId(template.getId());</span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setName(template.getName());</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setProductId(template.getProductId());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setProductSlug(template.getProductSlug());</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setProductType(template.getProductType());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setVariant(template.getVariant());</span>
+<span class="source-line-no">110</span><span id="line.110">        instance.setVariantId(template.getVariantId());</span>
+<span class="source-line-no">111</span><span id="line.111">        return instance;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public static ShoppingListLineItemBuilder builder() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return ShoppingListLineItemBuilder.of();</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public static ShoppingListLineItemBuilder builder(final ShoppingListLineItem template) {</span>
+<span class="source-line-no">119</span><span id="line.119">        return ShoppingListLineItemBuilder.of(template);</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public void setAddedAt(final ZonedDateTime addedAt);</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">122</span><span id="line.122">    default &lt;T&gt; T withShoppingListLineItem(Function&lt;ShoppingListLineItem, T&gt; helper) {</span>
+<span class="source-line-no">123</span><span id="line.123">        return helper.apply(this);</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
 <span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public void setDeactivatedAt(final ZonedDateTime deactivatedAt);</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public void setId(final String id);</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public void setProductId(final String productId);</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public void setProductSlug(final LocalizedString productSlug);</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public void setProductType(final ProductTypeReference productType);</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public void setQuantity(final Integer quantity);</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public void setVariant(final ProductVariant variant);</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public void setVariantId(final Long variantId);</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public static ShoppingListLineItem of() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return new ShoppingListLineItemImpl();</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public static ShoppingListLineItem of(final ShoppingListLineItem template) {</span>
-<span class="source-line-no">149</span><span id="line.149">        ShoppingListLineItemImpl instance = new ShoppingListLineItemImpl();</span>
-<span class="source-line-no">150</span><span id="line.150">        instance.setAddedAt(template.getAddedAt());</span>
-<span class="source-line-no">151</span><span id="line.151">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">152</span><span id="line.152">        instance.setDeactivatedAt(template.getDeactivatedAt());</span>
-<span class="source-line-no">153</span><span id="line.153">        instance.setId(template.getId());</span>
-<span class="source-line-no">154</span><span id="line.154">        instance.setName(template.getName());</span>
-<span class="source-line-no">155</span><span id="line.155">        instance.setProductId(template.getProductId());</span>
-<span class="source-line-no">156</span><span id="line.156">        instance.setProductSlug(template.getProductSlug());</span>
-<span class="source-line-no">157</span><span id="line.157">        instance.setProductType(template.getProductType());</span>
-<span class="source-line-no">158</span><span id="line.158">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">159</span><span id="line.159">        instance.setVariant(template.getVariant());</span>
-<span class="source-line-no">160</span><span id="line.160">        instance.setVariantId(template.getVariantId());</span>
-<span class="source-line-no">161</span><span id="line.161">        return instance;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public static ShoppingListLineItemBuilder builder() {</span>
-<span class="source-line-no">165</span><span id="line.165">        return ShoppingListLineItemBuilder.of();</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public static ShoppingListLineItemBuilder builder(final ShoppingListLineItem template) {</span>
-<span class="source-line-no">169</span><span id="line.169">        return ShoppingListLineItemBuilder.of(template);</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    default &lt;T&gt; T withShoppingListLineItem(Function&lt;ShoppingListLineItem, T&gt; helper) {</span>
-<span class="source-line-no">173</span><span id="line.173">        return helper.apply(this);</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ShoppingListLineItem&gt; typeReference() {</span>
-<span class="source-line-no">177</span><span id="line.177">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ShoppingListLineItem&gt;() {</span>
-<span class="source-line-no">178</span><span id="line.178">            @Override</span>
-<span class="source-line-no">179</span><span id="line.179">            public String toString() {</span>
-<span class="source-line-no">180</span><span id="line.180">                return "TypeReference&lt;ShoppingListLineItem&gt;";</span>
-<span class="source-line-no">181</span><span id="line.181">            }</span>
-<span class="source-line-no">182</span><span id="line.182">        };</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184">}</span>
+<span class="source-line-no">126</span><span id="line.126">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ShoppingListLineItem&gt; typeReference() {</span>
+<span class="source-line-no">127</span><span id="line.127">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ShoppingListLineItem&gt;() {</span>
+<span class="source-line-no">128</span><span id="line.128">            @Override</span>
+<span class="source-line-no">129</span><span id="line.129">            public String toString() {</span>
+<span class="source-line-no">130</span><span id="line.130">                return "TypeReference&lt;ShoppingListLineItem&gt;";</span>
+<span class="source-line-no">131</span><span id="line.131">            }</span>
+<span class="source-line-no">132</span><span id="line.132">        };</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

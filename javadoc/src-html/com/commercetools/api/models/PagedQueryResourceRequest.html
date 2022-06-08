@@ -23,8 +23,8 @@
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">/**</span>
 <span class="source-line-no">012</span><span id="line.12"> * Interface with common methods for query endpoints</span>
-<span class="source-line-no">013</span><span id="line.13"> * @param &lt;T&gt; the type of the underlying request</span>
-<span class="source-line-no">014</span><span id="line.14"> * @param &lt;TResult&gt; the type of the underlying result model, like category or product.</span>
+<span class="source-line-no">013</span><span id="line.13"> * @param &lt;T&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> * @param &lt;TResult&gt;</span>
 <span class="source-line-no">015</span><span id="line.15"> */</span>
 <span class="source-line-no">016</span><span id="line.16">public interface PagedQueryResourceRequest&lt;T extends PagedQueryResourceRequest&lt;T, TResult&gt;, TResult&gt;</span>
 <span class="source-line-no">017</span><span id="line.17">        extends RequestCommand&lt;TResult&gt;, ClientRequestCommand&lt;TResult&gt; {</span>

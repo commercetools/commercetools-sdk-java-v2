@@ -27,114 +27,106 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ShippingRate</span>
-<span class="source-line-no">019</span><span id="line.19"> */</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">public class ShippingRateImpl implements ShippingRate, ModelBase {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    private com.commercetools.api.models.common.TypedMoney price;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.common.TypedMoney freeAbove;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private Boolean isMatching;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers;</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonCreator</span>
-<span class="source-line-no">032</span><span id="line.32">    ShippingRateImpl(@JsonProperty("price") final com.commercetools.api.models.common.TypedMoney price,</span>
-<span class="source-line-no">033</span><span id="line.33">            @JsonProperty("freeAbove") final com.commercetools.api.models.common.TypedMoney freeAbove,</span>
-<span class="source-line-no">034</span><span id="line.34">            @JsonProperty("isMatching") final Boolean isMatching,</span>
-<span class="source-line-no">035</span><span id="line.35">            @JsonProperty("tiers") final java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers) {</span>
-<span class="source-line-no">036</span><span id="line.36">        this.price = price;</span>
-<span class="source-line-no">037</span><span id="line.37">        this.freeAbove = freeAbove;</span>
-<span class="source-line-no">038</span><span id="line.38">        this.isMatching = isMatching;</span>
-<span class="source-line-no">039</span><span id="line.39">        this.tiers = tiers;</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18">public class ShippingRateImpl implements ShippingRate, ModelBase {</span>
+<span class="source-line-no">019</span><span id="line.19"></span>
+<span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.common.TypedMoney price;</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    private com.commercetools.api.models.common.TypedMoney freeAbove;</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private Boolean isMatching;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonCreator</span>
+<span class="source-line-no">029</span><span id="line.29">    ShippingRateImpl(@JsonProperty("price") final com.commercetools.api.models.common.TypedMoney price,</span>
+<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("freeAbove") final com.commercetools.api.models.common.TypedMoney freeAbove,</span>
+<span class="source-line-no">031</span><span id="line.31">            @JsonProperty("isMatching") final Boolean isMatching,</span>
+<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("tiers") final java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers) {</span>
+<span class="source-line-no">033</span><span id="line.33">        this.price = price;</span>
+<span class="source-line-no">034</span><span id="line.34">        this.freeAbove = freeAbove;</span>
+<span class="source-line-no">035</span><span id="line.35">        this.isMatching = isMatching;</span>
+<span class="source-line-no">036</span><span id="line.36">        this.tiers = tiers;</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public ShippingRateImpl() {</span>
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public ShippingRateImpl() {</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public com.commercetools.api.models.common.TypedMoney getPrice() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return this.price;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;The shipping is free if the order total (the sum of line item prices) exceeds the &lt;code&gt;freeAbove&lt;/code&gt; value. Note: &lt;code&gt;freeAbove&lt;/code&gt; applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">     */</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public com.commercetools.api.models.common.TypedMoney getFreeAbove() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return this.freeAbove;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.&lt;/p&gt;</span>
-<span class="source-line-no">063</span><span id="line.63">     */</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public Boolean getIsMatching() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.isMatching;</span>
+<span class="source-line-no">042</span><span id="line.42">    public com.commercetools.api.models.common.TypedMoney getPrice() {</span>
+<span class="source-line-no">043</span><span id="line.43">        return this.price;</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">    *  &lt;p&gt;The shipping is free if the order total (the sum of line item prices) exceeds the &lt;code&gt;freeAbove&lt;/code&gt; value.</span>
+<span class="source-line-no">048</span><span id="line.48">    *  Note: &lt;code&gt;freeAbove&lt;/code&gt; applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios.</span>
+<span class="source-line-no">049</span><span id="line.49">    *  Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">    */</span>
+<span class="source-line-no">051</span><span id="line.51">    public com.commercetools.api.models.common.TypedMoney getFreeAbove() {</span>
+<span class="source-line-no">052</span><span id="line.52">        return this.freeAbove;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">    */</span>
+<span class="source-line-no">058</span><span id="line.58">    public Boolean getIsMatching() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return this.isMatching;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;A list of shipping rate price tiers.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">    */</span>
+<span class="source-line-no">065</span><span id="line.65">    public java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; getTiers() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return this.tiers;</span>
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;A list of shipping rate price tiers.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">069</span><span id="line.69">    public void setPrice(final com.commercetools.api.models.common.TypedMoney price) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.price = price;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; getTiers() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return this.tiers;</span>
+<span class="source-line-no">073</span><span id="line.73">    public void setFreeAbove(final com.commercetools.api.models.common.TypedMoney freeAbove) {</span>
+<span class="source-line-no">074</span><span id="line.74">        this.freeAbove = freeAbove;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setPrice(final com.commercetools.api.models.common.TypedMoney price) {</span>
-<span class="source-line-no">078</span><span id="line.78">        this.price = price;</span>
+<span class="source-line-no">077</span><span id="line.77">    public void setIsMatching(final Boolean isMatching) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.isMatching = isMatching;</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setFreeAbove(final com.commercetools.api.models.common.TypedMoney freeAbove) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.freeAbove = freeAbove;</span>
+<span class="source-line-no">081</span><span id="line.81">    public void setTiers(final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
 <span class="source-line-no">083</span><span id="line.83">    }</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setIsMatching(final Boolean isMatching) {</span>
-<span class="source-line-no">086</span><span id="line.86">        this.isMatching = isMatching;</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setTiers(final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {</span>
-<span class="source-line-no">090</span><span id="line.90">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setTiers(</span>
-<span class="source-line-no">094</span><span id="line.94">            final java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.tiers = tiers;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">085</span><span id="line.85">    public void setTiers(</span>
+<span class="source-line-no">086</span><span id="line.86">            final java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; tiers) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.tiers = tiers;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    @Override</span>
+<span class="source-line-no">091</span><span id="line.91">    public boolean equals(Object o) {</span>
+<span class="source-line-no">092</span><span id="line.92">        if (this == o)</span>
+<span class="source-line-no">093</span><span id="line.93">            return true;</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">096</span><span id="line.96">            return false;</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    @Override</span>
-<span class="source-line-no">099</span><span id="line.99">    public boolean equals(Object o) {</span>
-<span class="source-line-no">100</span><span id="line.100">        if (this == o)</span>
-<span class="source-line-no">101</span><span id="line.101">            return true;</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">104</span><span id="line.104">            return false;</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">        ShippingRateImpl that = (ShippingRateImpl) o;</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">        return new EqualsBuilder().append(price, that.price)</span>
-<span class="source-line-no">109</span><span id="line.109">                .append(freeAbove, that.freeAbove)</span>
-<span class="source-line-no">110</span><span id="line.110">                .append(isMatching, that.isMatching)</span>
-<span class="source-line-no">111</span><span id="line.111">                .append(tiers, that.tiers)</span>
-<span class="source-line-no">112</span><span id="line.112">                .isEquals();</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    @Override</span>
-<span class="source-line-no">116</span><span id="line.116">    public int hashCode() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new HashCodeBuilder(17, 37).append(price)</span>
-<span class="source-line-no">118</span><span id="line.118">                .append(freeAbove)</span>
-<span class="source-line-no">119</span><span id="line.119">                .append(isMatching)</span>
-<span class="source-line-no">120</span><span id="line.120">                .append(tiers)</span>
-<span class="source-line-no">121</span><span id="line.121">                .toHashCode();</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">}</span>
+<span class="source-line-no">098</span><span id="line.98">        ShippingRateImpl that = (ShippingRateImpl) o;</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">        return new EqualsBuilder().append(price, that.price)</span>
+<span class="source-line-no">101</span><span id="line.101">                .append(freeAbove, that.freeAbove)</span>
+<span class="source-line-no">102</span><span id="line.102">                .append(isMatching, that.isMatching)</span>
+<span class="source-line-no">103</span><span id="line.103">                .append(tiers, that.tiers)</span>
+<span class="source-line-no">104</span><span id="line.104">                .isEquals();</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    @Override</span>
+<span class="source-line-no">108</span><span id="line.108">    public int hashCode() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new HashCodeBuilder(17, 37).append(price)</span>
+<span class="source-line-no">110</span><span id="line.110">                .append(freeAbove)</span>
+<span class="source-line-no">111</span><span id="line.111">                .append(isMatching)</span>
+<span class="source-line-no">112</span><span id="line.112">                .append(tiers)</span>
+<span class="source-line-no">113</span><span id="line.113">                .toHashCode();</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">}</span>
 
 
 

@@ -16,44 +16,41 @@
 <span class="source-line-no">003</span><span id="line.3"></span>
 <span class="source-line-no">004</span><span id="line.4">import java.util.Locale;</span>
 <span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">/**</span>
-<span class="source-line-no">007</span><span id="line.7"> * Entry of for a LocalizedString</span>
-<span class="source-line-no">008</span><span id="line.8"> */</span>
-<span class="source-line-no">009</span><span id="line.9">public final class LocalizedStringEntry {</span>
-<span class="source-line-no">010</span><span id="line.10">    private final Locale locale;</span>
-<span class="source-line-no">011</span><span id="line.11">    private final String value;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private LocalizedStringEntry(final Locale locale, final String value) {</span>
-<span class="source-line-no">014</span><span id="line.14">        this.locale = locale;</span>
-<span class="source-line-no">015</span><span id="line.15">        this.value = value;</span>
-<span class="source-line-no">016</span><span id="line.16">    }</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    public static LocalizedStringEntry of(final Locale locale, final String value) {</span>
-<span class="source-line-no">019</span><span id="line.19">        return new LocalizedStringEntry(locale, value);</span>
-<span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    /**</span>
-<span class="source-line-no">023</span><span id="line.23">     * Creates an entry for language tag and a value.</span>
-<span class="source-line-no">024</span><span id="line.24">     *</span>
-<span class="source-line-no">025</span><span id="line.25">     * &lt;p&gt;The language tag can be just a language code or language and a country&lt;/p&gt;</span>
-<span class="source-line-no">026</span><span id="line.26">     *</span>
-<span class="source-line-no">027</span><span id="line.27">     * @param languageTag language tag as in {@link Locale#forLanguageTag(String)}</span>
-<span class="source-line-no">028</span><span id="line.28">     * @param value value of this entry</span>
-<span class="source-line-no">029</span><span id="line.29">     * @return entry</span>
-<span class="source-line-no">030</span><span id="line.30">     */</span>
-<span class="source-line-no">031</span><span id="line.31">    public static LocalizedStringEntry of(final String languageTag, final String value) {</span>
-<span class="source-line-no">032</span><span id="line.32">        final Locale locale = Locale.forLanguageTag(languageTag);</span>
-<span class="source-line-no">033</span><span id="line.33">        return of(locale, value);</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public Locale getLocale() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return locale;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public String getValue() {</span>
-<span class="source-line-no">041</span><span id="line.41">        return value;</span>
-<span class="source-line-no">042</span><span id="line.42">    }</span>
-<span class="source-line-no">043</span><span id="line.43">}</span>
+<span class="source-line-no">006</span><span id="line.6">public final class LocalizedStringEntry {</span>
+<span class="source-line-no">007</span><span id="line.7">    private final Locale locale;</span>
+<span class="source-line-no">008</span><span id="line.8">    private final String value;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">    private LocalizedStringEntry(final Locale locale, final String value) {</span>
+<span class="source-line-no">011</span><span id="line.11">        this.locale = locale;</span>
+<span class="source-line-no">012</span><span id="line.12">        this.value = value;</span>
+<span class="source-line-no">013</span><span id="line.13">    }</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    public static LocalizedStringEntry of(final Locale locale, final String value) {</span>
+<span class="source-line-no">016</span><span id="line.16">        return new LocalizedStringEntry(locale, value);</span>
+<span class="source-line-no">017</span><span id="line.17">    }</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    /**</span>
+<span class="source-line-no">020</span><span id="line.20">     * Creates an entry for language tag and a value.</span>
+<span class="source-line-no">021</span><span id="line.21">     *</span>
+<span class="source-line-no">022</span><span id="line.22">     * &lt;p&gt;The language tag can be just a language code or language and a country&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23">     *</span>
+<span class="source-line-no">024</span><span id="line.24">     * @param languageTag language tag as in {@link Locale#forLanguageTag(String)}</span>
+<span class="source-line-no">025</span><span id="line.25">     * @param value value of this entry</span>
+<span class="source-line-no">026</span><span id="line.26">     * @return entry</span>
+<span class="source-line-no">027</span><span id="line.27">     */</span>
+<span class="source-line-no">028</span><span id="line.28">    public static LocalizedStringEntry of(final String languageTag, final String value) {</span>
+<span class="source-line-no">029</span><span id="line.29">        final Locale locale = Locale.forLanguageTag(languageTag);</span>
+<span class="source-line-no">030</span><span id="line.30">        return of(locale, value);</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public Locale getLocale() {</span>
+<span class="source-line-no">034</span><span id="line.34">        return locale;</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public String getValue() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return value;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40">}</span>
 
 
 

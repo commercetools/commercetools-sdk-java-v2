@@ -27,111 +27,86 @@
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * OrderCustomerSetMessage</span>
-<span class="source-line-no">019</span><span id="line.19"> *</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> *     OrderCustomerSetMessage orderCustomerSetMessage = OrderCustomerSetMessage.builder()</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .id("{id}")</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .version(0.3)</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .sequenceNumber(0.3)</span>
-<span class="source-line-no">030</span><span id="line.30"> *             .resource(resourceBuilder -&gt; resourceBuilder)</span>
-<span class="source-line-no">031</span><span id="line.31"> *             .resourceVersion(0.3)</span>
-<span class="source-line-no">032</span><span id="line.32"> *             .build()</span>
-<span class="source-line-no">033</span><span id="line.33"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> * &lt;/div&gt;</span>
-<span class="source-line-no">035</span><span id="line.35"> */</span>
-<span class="source-line-no">036</span><span id="line.36">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">037</span><span id="line.37">@JsonDeserialize(as = OrderCustomerSetMessageImpl.class)</span>
-<span class="source-line-no">038</span><span id="line.38">public interface OrderCustomerSetMessage extends OrderMessage {</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    String ORDER_CUSTOMER_SET = "OrderCustomerSet";</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Reference to a Customer.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45">    @Valid</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("customer")</span>
-<span class="source-line-no">047</span><span id="line.47">    public CustomerReference getCustomer();</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18">@JsonDeserialize(as = OrderCustomerSetMessageImpl.class)</span>
+<span class="source-line-no">019</span><span id="line.19">public interface OrderCustomerSetMessage extends OrderMessage {</span>
+<span class="source-line-no">020</span><span id="line.20"></span>
+<span class="source-line-no">021</span><span id="line.21">    String ORDER_CUSTOMER_SET = "OrderCustomerSet";</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    @Valid</span>
+<span class="source-line-no">024</span><span id="line.24">    @JsonProperty("customer")</span>
+<span class="source-line-no">025</span><span id="line.25">    public CustomerReference getCustomer();</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    /**</span>
+<span class="source-line-no">028</span><span id="line.28">    *  &lt;p&gt;&lt;a href="/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroup&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">029</span><span id="line.29">    */</span>
+<span class="source-line-no">030</span><span id="line.30">    @Valid</span>
+<span class="source-line-no">031</span><span id="line.31">    @JsonProperty("customerGroup")</span>
+<span class="source-line-no">032</span><span id="line.32">    public CustomerGroupReference getCustomerGroup();</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    @Valid</span>
+<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("oldCustomer")</span>
+<span class="source-line-no">036</span><span id="line.36">    public CustomerReference getOldCustomer();</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    /**</span>
+<span class="source-line-no">039</span><span id="line.39">    *  &lt;p&gt;&lt;a href="/types#reference"&gt;Reference&lt;/a&gt; to a &lt;a href="ctp:api:type:CustomerGroup"&gt;CustomerGroup&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">    */</span>
+<span class="source-line-no">041</span><span id="line.41">    @Valid</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("oldCustomerGroup")</span>
+<span class="source-line-no">043</span><span id="line.43">    public CustomerGroupReference getOldCustomerGroup();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public void setCustomer(final CustomerReference customer);</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
-<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("customerGroup")</span>
-<span class="source-line-no">054</span><span id="line.54">    public CustomerGroupReference getCustomerGroup();</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Reference to a Customer.&lt;/p&gt;</span>
-<span class="source-line-no">058</span><span id="line.58">     */</span>
-<span class="source-line-no">059</span><span id="line.59">    @Valid</span>
-<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("oldCustomer")</span>
-<span class="source-line-no">061</span><span id="line.61">    public CustomerReference getOldCustomer();</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">     */</span>
-<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("oldCustomerGroup")</span>
-<span class="source-line-no">068</span><span id="line.68">    public CustomerGroupReference getOldCustomerGroup();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setCustomer(final CustomerReference customer);</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setOldCustomer(final CustomerReference oldCustomer);</span>
+<span class="source-line-no">049</span><span id="line.49">    public void setOldCustomer(final CustomerReference oldCustomer);</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public static OrderCustomerSetMessage of() {</span>
+<span class="source-line-no">054</span><span id="line.54">        return new OrderCustomerSetMessageImpl();</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public static OrderCustomerSetMessage of(final OrderCustomerSetMessage template) {</span>
+<span class="source-line-no">058</span><span id="line.58">        OrderCustomerSetMessageImpl instance = new OrderCustomerSetMessageImpl();</span>
+<span class="source-line-no">059</span><span id="line.59">        instance.setId(template.getId());</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">064</span><span id="line.64">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">065</span><span id="line.65">        instance.setSequenceNumber(template.getSequenceNumber());</span>
+<span class="source-line-no">066</span><span id="line.66">        instance.setResource(template.getResource());</span>
+<span class="source-line-no">067</span><span id="line.67">        instance.setResourceVersion(template.getResourceVersion());</span>
+<span class="source-line-no">068</span><span id="line.68">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
+<span class="source-line-no">069</span><span id="line.69">        instance.setCustomer(template.getCustomer());</span>
+<span class="source-line-no">070</span><span id="line.70">        instance.setCustomerGroup(template.getCustomerGroup());</span>
+<span class="source-line-no">071</span><span id="line.71">        instance.setOldCustomer(template.getOldCustomer());</span>
+<span class="source-line-no">072</span><span id="line.72">        instance.setOldCustomerGroup(template.getOldCustomerGroup());</span>
+<span class="source-line-no">073</span><span id="line.73">        return instance;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static OrderCustomerSetMessage of() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return new OrderCustomerSetMessageImpl();</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public static OrderCustomerSetMessage of(final OrderCustomerSetMessage template) {</span>
-<span class="source-line-no">083</span><span id="line.83">        OrderCustomerSetMessageImpl instance = new OrderCustomerSetMessageImpl();</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setId(template.getId());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setSequenceNumber(template.getSequenceNumber());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setResource(template.getResource());</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setResourceVersion(template.getResourceVersion());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
-<span class="source-line-no">094</span><span id="line.94">        instance.setCustomer(template.getCustomer());</span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setCustomerGroup(template.getCustomerGroup());</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setOldCustomer(template.getOldCustomer());</span>
-<span class="source-line-no">097</span><span id="line.97">        instance.setOldCustomerGroup(template.getOldCustomerGroup());</span>
-<span class="source-line-no">098</span><span id="line.98">        return instance;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static OrderCustomerSetMessageBuilder builder() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return OrderCustomerSetMessageBuilder.of();</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static OrderCustomerSetMessageBuilder builder(final OrderCustomerSetMessage template) {</span>
-<span class="source-line-no">106</span><span id="line.106">        return OrderCustomerSetMessageBuilder.of(template);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    default &lt;T&gt; T withOrderCustomerSetMessage(Function&lt;OrderCustomerSetMessage, T&gt; helper) {</span>
-<span class="source-line-no">110</span><span id="line.110">        return helper.apply(this);</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderCustomerSetMessage&gt; typeReference() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderCustomerSetMessage&gt;() {</span>
-<span class="source-line-no">115</span><span id="line.115">            @Override</span>
-<span class="source-line-no">116</span><span id="line.116">            public String toString() {</span>
-<span class="source-line-no">117</span><span id="line.117">                return "TypeReference&lt;OrderCustomerSetMessage&gt;";</span>
-<span class="source-line-no">118</span><span id="line.118">            }</span>
-<span class="source-line-no">119</span><span id="line.119">        };</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121">}</span>
+<span class="source-line-no">076</span><span id="line.76">    public static OrderCustomerSetMessageBuilder builder() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return OrderCustomerSetMessageBuilder.of();</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public static OrderCustomerSetMessageBuilder builder(final OrderCustomerSetMessage template) {</span>
+<span class="source-line-no">081</span><span id="line.81">        return OrderCustomerSetMessageBuilder.of(template);</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    default &lt;T&gt; T withOrderCustomerSetMessage(Function&lt;OrderCustomerSetMessage, T&gt; helper) {</span>
+<span class="source-line-no">085</span><span id="line.85">        return helper.apply(this);</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderCustomerSetMessage&gt; typeReference() {</span>
+<span class="source-line-no">089</span><span id="line.89">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderCustomerSetMessage&gt;() {</span>
+<span class="source-line-no">090</span><span id="line.90">            @Override</span>
+<span class="source-line-no">091</span><span id="line.91">            public String toString() {</span>
+<span class="source-line-no">092</span><span id="line.92">                return "TypeReference&lt;OrderCustomerSetMessage&gt;";</span>
+<span class="source-line-no">093</span><span id="line.93">            }</span>
+<span class="source-line-no">094</span><span id="line.94">        };</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96">}</span>
 
 
 

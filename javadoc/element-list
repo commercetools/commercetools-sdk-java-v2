@@ -31,7 +31,6 @@ com.commercetools.api.models.project
 com.commercetools.api.models.review
 com.commercetools.api.models.shipping_method
 com.commercetools.api.models.shopping_list
-com.commercetools.api.models.standalone_price
 com.commercetools.api.models.state
 com.commercetools.api.models.store
 com.commercetools.api.models.subscription

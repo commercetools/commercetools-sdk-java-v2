@@ -29,124 +29,94 @@
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">/**</span>
-<span class="source-line-no">020</span><span id="line.20"> * InventoryEntryDraft</span>
-<span class="source-line-no">021</span><span id="line.21"> *</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> *     InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraft.builder()</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .sku("{sku}")</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .quantityOnStock(0.3)</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
-<span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> */</span>
-<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">034</span><span id="line.34">@JsonDeserialize(as = InventoryEntryDraftImpl.class)</span>
-<span class="source-line-no">035</span><span id="line.35">public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft&lt;InventoryEntryDraft&gt; {</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     *</span>
-<span class="source-line-no">039</span><span id="line.39">     */</span>
-<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("sku")</span>
-<span class="source-line-no">042</span><span id="line.42">    public String getSku();</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;User-defined unique identifier for the InventoryEntry.&lt;/p&gt;</span>
-<span class="source-line-no">046</span><span id="line.46">     */</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("key")</span>
-<span class="source-line-no">049</span><span id="line.49">    public String getKey();</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("supplyChannel")</span>
-<span class="source-line-no">056</span><span id="line.56">    public ChannelResourceIdentifier getSupplyChannel();</span>
+<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = InventoryEntryDraftImpl.class)</span>
+<span class="source-line-no">021</span><span id="line.21">public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft&lt;InventoryEntryDraft&gt; {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    @NotNull</span>
+<span class="source-line-no">024</span><span id="line.24">    @JsonProperty("sku")</span>
+<span class="source-line-no">025</span><span id="line.25">    public String getSku();</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    /**</span>
+<span class="source-line-no">028</span><span id="line.28">    *  &lt;p&gt;User-defined unique identifier for the InventoryEntry.</span>
+<span class="source-line-no">029</span><span id="line.29">    *  Keys can only contain alphanumeric characters, underscores, and hyphens.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30">    */</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("key")</span>
+<span class="source-line-no">033</span><span id="line.33">    public String getKey();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @Valid</span>
+<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("supplyChannel")</span>
+<span class="source-line-no">037</span><span id="line.37">    public ChannelResourceIdentifier getSupplyChannel();</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("quantityOnStock")</span>
+<span class="source-line-no">041</span><span id="line.41">    public Long getQuantityOnStock();</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("restockableInDays")</span>
+<span class="source-line-no">044</span><span id="line.44">    public Long getRestockableInDays();</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("expectedDelivery")</span>
+<span class="source-line-no">047</span><span id="line.47">    public ZonedDateTime getExpectedDelivery();</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("custom")</span>
+<span class="source-line-no">054</span><span id="line.54">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setSku(final String sku);</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("quantityOnStock")</span>
-<span class="source-line-no">063</span><span id="line.63">    public Long getQuantityOnStock();</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     *</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("restockableInDays")</span>
-<span class="source-line-no">070</span><span id="line.70">    public Long getRestockableInDays();</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("expectedDelivery")</span>
-<span class="source-line-no">077</span><span id="line.77">    public ZonedDateTime getExpectedDelivery();</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82">    @Valid</span>
-<span class="source-line-no">083</span><span id="line.83">    @JsonProperty("custom")</span>
-<span class="source-line-no">084</span><span id="line.84">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">058</span><span id="line.58">    public void setKey(final String key);</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setQuantityOnStock(final Long quantityOnStock);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setRestockableInDays(final Long restockableInDays);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public void setExpectedDelivery(final ZonedDateTime expectedDelivery);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public static InventoryEntryDraft of() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return new InventoryEntryDraftImpl();</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public static InventoryEntryDraft of(final InventoryEntryDraft template) {</span>
+<span class="source-line-no">075</span><span id="line.75">        InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();</span>
+<span class="source-line-no">076</span><span id="line.76">        instance.setSku(template.getSku());</span>
+<span class="source-line-no">077</span><span id="line.77">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setSupplyChannel(template.getSupplyChannel());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setQuantityOnStock(template.getQuantityOnStock());</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setRestockableInDays(template.getRestockableInDays());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setExpectedDelivery(template.getExpectedDelivery());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public void setSku(final String sku);</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public void setKey(final String key);</span>
+<span class="source-line-no">086</span><span id="line.86">    public static InventoryEntryDraftBuilder builder() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return InventoryEntryDraftBuilder.of();</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public void setQuantityOnStock(final Long quantityOnStock);</span>
+<span class="source-line-no">090</span><span id="line.90">    public static InventoryEntryDraftBuilder builder(final InventoryEntryDraft template) {</span>
+<span class="source-line-no">091</span><span id="line.91">        return InventoryEntryDraftBuilder.of(template);</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public void setRestockableInDays(final Long restockableInDays);</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public void setExpectedDelivery(final ZonedDateTime expectedDelivery);</span>
+<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withInventoryEntryDraft(Function&lt;InventoryEntryDraft, T&gt; helper) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public static InventoryEntryDraft of() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return new InventoryEntryDraftImpl();</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public static InventoryEntryDraft of(final InventoryEntryDraft template) {</span>
-<span class="source-line-no">105</span><span id="line.105">        InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setSku(template.getSku());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setSupplyChannel(template.getSupplyChannel());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setQuantityOnStock(template.getQuantityOnStock());</span>
-<span class="source-line-no">110</span><span id="line.110">        instance.setRestockableInDays(template.getRestockableInDays());</span>
-<span class="source-line-no">111</span><span id="line.111">        instance.setExpectedDelivery(template.getExpectedDelivery());</span>
-<span class="source-line-no">112</span><span id="line.112">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">113</span><span id="line.113">        return instance;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static InventoryEntryDraftBuilder builder() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return InventoryEntryDraftBuilder.of();</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public static InventoryEntryDraftBuilder builder(final InventoryEntryDraft template) {</span>
-<span class="source-line-no">121</span><span id="line.121">        return InventoryEntryDraftBuilder.of(template);</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    default &lt;T&gt; T withInventoryEntryDraft(Function&lt;InventoryEntryDraft, T&gt; helper) {</span>
-<span class="source-line-no">125</span><span id="line.125">        return helper.apply(this);</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public static com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryDraft&gt; typeReference() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return new com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryDraft&gt;() {</span>
-<span class="source-line-no">130</span><span id="line.130">            @Override</span>
-<span class="source-line-no">131</span><span id="line.131">            public String toString() {</span>
-<span class="source-line-no">132</span><span id="line.132">                return "TypeReference&lt;InventoryEntryDraft&gt;";</span>
-<span class="source-line-no">133</span><span id="line.133">            }</span>
-<span class="source-line-no">134</span><span id="line.134">        };</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136">}</span>
+<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryDraft&gt; typeReference() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryDraft&gt;() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;InventoryEntryDraft&gt;";</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104">        };</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

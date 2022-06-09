@@ -1,6 +1,7 @@
 
 package com.commercetools.compat;
 
+import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -20,6 +21,7 @@ import io.sphere.sdk.projects.Project;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.sphere.sdk.queries.PagedQueryResult;
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpMethod;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -124,6 +126,22 @@ public class CompatSphereClientTest {
         Assertions.assertThatThrownBy(() -> {
             client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();
         }).hasCauseInstanceOf(NotFoundException.class);
+    }
+
+    @Test
+    public void compatApiHttpClientNull() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .addNotFoundExceptionMiddleware(Collections.singleton(ApiHttpMethod.GET))
+                .buildClient();
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey);
+
+        Assertions.assertThat(client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get()).isNull();
     }
 
     @Test

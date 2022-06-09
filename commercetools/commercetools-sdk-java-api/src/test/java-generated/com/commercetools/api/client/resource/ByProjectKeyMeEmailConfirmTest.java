@@ -63,14 +63,14 @@ public class ByProjectKeyMeEmailConfirmTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().emailConfirm().post().createHttpRequest(),
-                        "post", "/test_projectKey/me/email/confirm", } };
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").me().emailConfirm().post(null).createHttpRequest(), "post",
+                "/test_projectKey/me/email/confirm", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().emailConfirm().post(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().emailConfirm().post(null), } };
     }
 }

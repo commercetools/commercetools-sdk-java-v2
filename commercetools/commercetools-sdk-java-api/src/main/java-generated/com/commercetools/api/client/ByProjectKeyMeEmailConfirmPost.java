@@ -19,30 +19,35 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .me()
  *            .emailConfirm()
- *            .post()
+ *            .post(null)
  *            .execute()
  * }</code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyMeEmailConfirmPost
-        extends ApiMethod<ByProjectKeyMeEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode>
+public class ByProjectKeyMeEmailConfirmPost extends
+        BodyApiMethod<ByProjectKeyMeEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerEmailVerify>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeEmailConfirmPost> {
 
     private String projectKey;
 
-    public ByProjectKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey) {
+    private com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify;
+
+    public ByProjectKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey,
+            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+        this.customerEmailVerify = customerEmailVerify;
     }
 
     public ByProjectKeyMeEmailConfirmPost(ByProjectKeyMeEmailConfirmPost t) {
         super(t);
         this.projectKey = t.projectKey;
+        this.customerEmailVerify = t.customerEmailVerify;
     }
 
     @Override
@@ -52,19 +57,22 @@ public class ByProjectKeyMeEmailConfirmPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+            io.vrap.rmf.base.client.utils.json.JsonUtils
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerEmailVerify)));
+
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
             final Duration timeout) {
-        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
+        return executeBlocking(client, timeout, com.commercetools.api.models.customer.Customer.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(
             final ApiHttpClient client) {
-        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
+        return execute(client, com.commercetools.api.models.customer.Customer.class);
     }
 
     public String getProjectKey() {
@@ -73,6 +81,17 @@ public class ByProjectKeyMeEmailConfirmPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    public com.commercetools.api.models.customer.CustomerEmailVerify getBody() {
+        return customerEmailVerify;
+    }
+
+    public ByProjectKeyMeEmailConfirmPost withBody(
+            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+        ByProjectKeyMeEmailConfirmPost t = copy();
+        t.customerEmailVerify = customerEmailVerify;
+        return t;
     }
 
     @Override
@@ -85,12 +104,14 @@ public class ByProjectKeyMeEmailConfirmPost
 
         ByProjectKeyMeEmailConfirmPost that = (ByProjectKeyMeEmailConfirmPost) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(customerEmailVerify, that.customerEmailVerify)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey).append(customerEmailVerify).toHashCode();
     }
 
     @Override

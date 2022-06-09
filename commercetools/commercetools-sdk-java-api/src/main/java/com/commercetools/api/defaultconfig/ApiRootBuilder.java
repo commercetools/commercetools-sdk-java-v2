@@ -5,7 +5,9 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -261,11 +263,19 @@ public class ApiRootBuilder {
         return with(ClientBuilder::addNotFoundExceptionMiddleware);
     }
 
-    public ApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
+    public ApiRootBuilder addNotFoundExceptionMiddleware(final Set<ApiHttpMethod> method) {
+        return with(clientBuilder -> clientBuilder.addNotFoundExceptionMiddleware(method));
+    }
+
+    public ApiRootBuilder addNotFoundExceptionMiddleware(final Predicate<ApiHttpRequest> requestPredicate) {
+        return with(clientBuilder -> clientBuilder.addNotFoundExceptionMiddleware(requestPredicate));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Supplier<RetryRequestMiddleware> retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
-    public ApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 

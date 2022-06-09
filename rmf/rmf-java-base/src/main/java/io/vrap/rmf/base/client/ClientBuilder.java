@@ -6,6 +6,7 @@ import static java.util.Objects.requireNonNull;
 import java.net.URI;
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
@@ -421,16 +422,24 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of());
     }
 
-    public ClientBuilder addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware exceptionMiddleware) {
+    public ClientBuilder addNotFoundExceptionMiddleware(final Set<ApiHttpMethod> methods) {
+        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(methods));
+    }
+
+    public ClientBuilder addNotFoundExceptionMiddleware(final Predicate<ApiHttpRequest> requestPredicate) {
+        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(requestPredicate));
+    }
+
+    public ClientBuilder addNotFoundExceptionMiddleware(final NotFoundExceptionMiddleware exceptionMiddleware) {
         return addMiddleware(exceptionMiddleware);
     }
 
-    public ClientBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
+    public ClientBuilder withRetryMiddleware(final Supplier<RetryRequestMiddleware> retryMiddleware) {
         this.retryMiddleware = retryMiddleware;
         return this;
     }
 
-    public ClientBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
+    public ClientBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {
         return withRetryMiddleware(() -> retryMiddleware);
     }
 

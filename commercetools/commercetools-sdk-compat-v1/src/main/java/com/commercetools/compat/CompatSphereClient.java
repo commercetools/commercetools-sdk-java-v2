@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.sphere.sdk.client.*;
+import io.sphere.sdk.http.HttpHeaders;
 import io.sphere.sdk.http.HttpRequest;
 import io.sphere.sdk.http.HttpResponse;
 import io.sphere.sdk.json.JsonException;
@@ -191,11 +192,13 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
 
         if (exceptionMode == ExceptionMode.SDK_V2) {
             return compatRequest.send()
-                    .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest))
+                    .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest,
+                        HttpHeaders.ofMapEntryList(response.getHeaders().getHeaders())))
                     .thenApplyAsync(sphereRequest::deserialize);
         }
         return compatRequest.send()
-                .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest))
+                .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest,
+                    HttpHeaders.ofMapEntryList(response.getHeaders().getHeaders())))
                 .thenApplyAsync(httpResponse -> {
                     try {
                         return sphereRequest.deserialize(httpResponse);
@@ -212,7 +215,8 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
                         ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
                         if (errorResponse != null) {
                             HttpResponse httpResponse = HttpResponse.of(errorResponse.getStatusCode(),
-                                errorResponse.getBody(), httpRequest);
+                                errorResponse.getBody(), httpRequest,
+                                HttpHeaders.ofMapEntryList(errorResponse.getHeaders().getHeaders()));
                             Throwable e = createExceptionFor(httpResponse, sphereRequest, mapper, projectKey,
                                 httpRequest);
                             throw new CompletionException(e);

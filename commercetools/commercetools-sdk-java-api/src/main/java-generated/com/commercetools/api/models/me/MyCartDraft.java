@@ -129,7 +129,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
     @Valid
     @JsonProperty("store")

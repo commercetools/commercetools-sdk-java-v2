@@ -29,7 +29,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     String SET_LANGUAGES = "setLanguages";
 
     /**
-     *
+     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
      */
 
     @JsonProperty("languages")

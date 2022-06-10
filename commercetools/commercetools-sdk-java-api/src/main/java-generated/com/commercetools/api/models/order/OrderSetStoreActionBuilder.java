@@ -27,7 +27,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public OrderSetStoreActionBuilder store(
@@ -37,7 +37,7 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public OrderSetStoreActionBuilder store(

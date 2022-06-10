@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -21,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreRemoveSupplyChannelAction storeRemoveSupplyChannelAction = StoreRemoveSupplyChannelAction.builder()
+ *             .supplyChannel(supplyChannelBuilder -> supplyChannelBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -32,8 +34,9 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     String REMOVE_SUPPLY_CHANNEL = "removeSupplyChannel";
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();

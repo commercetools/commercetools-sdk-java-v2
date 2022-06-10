@@ -44,7 +44,7 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
     }
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {

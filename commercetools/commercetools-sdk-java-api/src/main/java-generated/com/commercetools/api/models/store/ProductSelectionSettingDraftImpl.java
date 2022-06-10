@@ -36,7 +36,7 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
     }
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     *  <p>Resource Identifier of a ProductSelection.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
@@ -44,7 +44,7 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {

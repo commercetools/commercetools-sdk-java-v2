@@ -24,7 +24,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     private String key;
 
     /**
-     *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     *  <p>Unique and immutable key of the referenced Store.</p>
      */
 
     public StoreKeyReferenceBuilder key(final String key) {

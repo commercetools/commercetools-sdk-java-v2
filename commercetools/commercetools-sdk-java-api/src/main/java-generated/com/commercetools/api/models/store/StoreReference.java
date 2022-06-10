@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -14,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreReference
+ *  <p>Reference to a Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,13 +34,22 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
     String STORE = "store";
 
     /**
-     *
+     *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
      */
     @Valid
     @JsonProperty("obj")
     public Store getObj();
 
+    /**
+     *  <p>Unique ID of the referenced Store.</p>
+     */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
     public void setObj(final Store obj);
+
+    public void setId(final String id);
 
     public static StoreReference of() {
         return new StoreReferenceImpl();

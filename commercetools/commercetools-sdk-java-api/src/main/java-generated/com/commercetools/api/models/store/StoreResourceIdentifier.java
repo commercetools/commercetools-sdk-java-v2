@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreResourceIdentifier
+ *  <p>ResourceIdentifier to a Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +28,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StoreResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Store> {
 
     String STORE = "store";
+
+    /**
+     *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    public void setId(final String id);
+
+    public void setKey(final String key);
 
     public static StoreResourceIdentifier of() {
         return new StoreResourceIdentifierImpl();

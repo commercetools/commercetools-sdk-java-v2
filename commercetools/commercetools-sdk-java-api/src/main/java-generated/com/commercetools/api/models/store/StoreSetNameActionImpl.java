@@ -43,7 +43,7 @@ public class StoreSetNameActionImpl implements StoreSetNameAction, ModelBase {
     }
 
     /**
-     *  <p>The updated name of the store</p>
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

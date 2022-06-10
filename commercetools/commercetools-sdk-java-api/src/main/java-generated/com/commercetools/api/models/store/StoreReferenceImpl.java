@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreReference
+ *  <p>Reference to a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreReferenceImpl implements StoreReference, ModelBase {
@@ -48,7 +48,7 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
     }
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     *  <p>Unique ID of the referenced Store.</p>
      */
 
     public String getId() {
@@ -56,7 +56,7 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
      */
 
     public com.commercetools.api.models.store.Store getObj() {

@@ -34,49 +34,53 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft> {
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The name of the store</p>
+     *  <p>Name of the Store.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
      */
 
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
     @Valid
     @JsonProperty("distributionChannels")
     public List<ChannelResourceIdentifier> getDistributionChannels();
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *  </ul>
      */
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSettingDraft> getProductSelections();
 
     /**
-     *
+     *  <p>Custom fields for the Store.</p>
      */
     @Valid
     @JsonProperty("custom")

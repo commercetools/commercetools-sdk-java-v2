@@ -329,7 +329,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public MyCartDraftBuilder store(
@@ -339,7 +339,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {

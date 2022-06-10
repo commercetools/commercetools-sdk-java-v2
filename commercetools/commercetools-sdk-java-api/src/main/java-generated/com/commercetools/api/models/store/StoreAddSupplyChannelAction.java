@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -14,13 +15,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreAddSupplyChannelAction
+ *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreAddSupplyChannelAction storeAddSupplyChannelAction = StoreAddSupplyChannelAction.builder()
+ *             .supplyChannel(supplyChannelBuilder -> supplyChannelBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -32,8 +34,9 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     String ADD_SUPPLY_CHANNEL = "addSupplyChannel";
 
     /**
-     *
+     *  <p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();

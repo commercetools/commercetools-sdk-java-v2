@@ -29,7 +29,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     private String key;
 
     /**
-     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public StoreResourceIdentifierBuilder id(@Nullable final String id) {
@@ -38,7 +38,7 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
      */
 
     public StoreResourceIdentifierBuilder key(@Nullable final String key) {

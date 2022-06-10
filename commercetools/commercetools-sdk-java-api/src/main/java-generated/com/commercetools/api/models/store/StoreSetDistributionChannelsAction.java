@@ -32,7 +32,7 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     String SET_DISTRIBUTION_CHANNELS = "setDistributionChannels";
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
     @Valid
     @JsonProperty("distributionChannels")

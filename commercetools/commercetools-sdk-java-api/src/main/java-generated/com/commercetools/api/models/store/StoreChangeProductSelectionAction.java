@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.ResourceIdentifier;
+import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreChangeProductSelectionAction
+ *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +34,21 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     String CHANGE_PRODUCT_SELECTION_ACTIVE = "changeProductSelectionActive";
 
     /**
-     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public ResourceIdentifier getProductSelection();
+    public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     @JsonProperty("active")
     public Boolean getActive();
 
-    public void setProductSelection(final ResourceIdentifier productSelection);
+    public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
 
     public void setActive(final Boolean active);
 

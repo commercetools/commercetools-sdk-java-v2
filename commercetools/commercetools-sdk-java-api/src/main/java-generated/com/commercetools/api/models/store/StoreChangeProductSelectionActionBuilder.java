@@ -24,34 +24,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreChangeProductSelectionActionBuilder implements Builder<StoreChangeProductSelectionAction> {
 
-    private com.commercetools.api.models.common.ResourceIdentifier productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
 
     @Nullable
     private Boolean active;
 
     /**
-     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
-            final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
-        this.productSelection = productSelection;
-        return this;
-    }
-
-    /**
-     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
-     */
-
-    public StoreChangeProductSelectionActionBuilder productSelection(
-            Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
-        this.productSelection = builder.apply(com.commercetools.api.models.common.ResourceIdentifierBuilder.of())
+            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     */
+
+    public StoreChangeProductSelectionActionBuilder productSelection(
+            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
+        this.productSelection = productSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {
@@ -59,7 +60,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
         return this;
     }
 
-    public com.commercetools.api.models.common.ResourceIdentifier getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
 

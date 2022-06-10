@@ -88,7 +88,7 @@
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     *</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Current version of the InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    public InventoryEntryBuilder version(final Long version) {</span>
@@ -97,7 +97,7 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Date and time (UTC) the InventoryEntry was initially created.&lt;/p&gt;</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    public InventoryEntryBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
@@ -106,7 +106,7 @@
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
 <span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *</span>
+<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;Date and time (UTC) the InventoryEntry was last updated.&lt;/p&gt;</span>
 <span class="source-line-no">097</span><span id="line.97">     */</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    public InventoryEntryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
@@ -163,7 +163,7 @@
 <span class="source-line-no">150</span><span id="line.150">    }</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
 <span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *</span>
+<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;ProductVariant &lt;code&gt;sku&lt;/code&gt; of the InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">154</span><span id="line.154">     */</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
 <span class="source-line-no">156</span><span id="line.156">    public InventoryEntryBuilder sku(final String sku) {</span>
@@ -172,7 +172,7 @@
 <span class="source-line-no">159</span><span id="line.159">    }</span>
 <span class="source-line-no">160</span><span id="line.160"></span>
 <span class="source-line-no">161</span><span id="line.161">    /**</span>
-<span class="source-line-no">162</span><span id="line.162">     *  &lt;p&gt;Connection to a particular supplier.&lt;/p&gt;</span>
+<span class="source-line-no">162</span><span id="line.162">     *  &lt;p&gt;Channel that supplies this InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">163</span><span id="line.163">     */</span>
 <span class="source-line-no">164</span><span id="line.164"></span>
 <span class="source-line-no">165</span><span id="line.165">    public InventoryEntryBuilder supplyChannel(</span>
@@ -182,7 +182,7 @@
 <span class="source-line-no">169</span><span id="line.169">    }</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
 <span class="source-line-no">171</span><span id="line.171">    /**</span>
-<span class="source-line-no">172</span><span id="line.172">     *  &lt;p&gt;Connection to a particular supplier.&lt;/p&gt;</span>
+<span class="source-line-no">172</span><span id="line.172">     *  &lt;p&gt;Channel that supplies this InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">173</span><span id="line.173">     */</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
 <span class="source-line-no">175</span><span id="line.175">    public InventoryEntryBuilder supplyChannel(</span>
@@ -192,7 +192,7 @@
 <span class="source-line-no">179</span><span id="line.179">    }</span>
 <span class="source-line-no">180</span><span id="line.180"></span>
 <span class="source-line-no">181</span><span id="line.181">    /**</span>
-<span class="source-line-no">182</span><span id="line.182">     *  &lt;p&gt;Overall amount of stock. (available + reserved)&lt;/p&gt;</span>
+<span class="source-line-no">182</span><span id="line.182">     *  &lt;p&gt;Overall amount of stock (&lt;code&gt;availableQuantity&lt;/code&gt; + reserved).&lt;/p&gt;</span>
 <span class="source-line-no">183</span><span id="line.183">     */</span>
 <span class="source-line-no">184</span><span id="line.184"></span>
 <span class="source-line-no">185</span><span id="line.185">    public InventoryEntryBuilder quantityOnStock(final Long quantityOnStock) {</span>
@@ -201,7 +201,7 @@
 <span class="source-line-no">188</span><span id="line.188">    }</span>
 <span class="source-line-no">189</span><span id="line.189"></span>
 <span class="source-line-no">190</span><span id="line.190">    /**</span>
-<span class="source-line-no">191</span><span id="line.191">     *  &lt;p&gt;Available amount of stock. (available means: &lt;code&gt;quantityOnStock&lt;/code&gt; - reserved quantity)&lt;/p&gt;</span>
+<span class="source-line-no">191</span><span id="line.191">     *  &lt;p&gt;Available amount of stock (&lt;code&gt;quantityOnStock&lt;/code&gt; - reserved).&lt;/p&gt;</span>
 <span class="source-line-no">192</span><span id="line.192">     */</span>
 <span class="source-line-no">193</span><span id="line.193"></span>
 <span class="source-line-no">194</span><span id="line.194">    public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {</span>
@@ -210,7 +210,7 @@
 <span class="source-line-no">197</span><span id="line.197">    }</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
 <span class="source-line-no">199</span><span id="line.199">    /**</span>
-<span class="source-line-no">200</span><span id="line.200">     *  &lt;p&gt;The time period in days, that tells how often this inventory entry is restocked.&lt;/p&gt;</span>
+<span class="source-line-no">200</span><span id="line.200">     *  &lt;p&gt;How often the InventoryEntry is restocked (in days).&lt;/p&gt;</span>
 <span class="source-line-no">201</span><span id="line.201">     */</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
 <span class="source-line-no">203</span><span id="line.203">    public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {</span>
@@ -219,7 +219,7 @@
 <span class="source-line-no">206</span><span id="line.206">    }</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
 <span class="source-line-no">208</span><span id="line.208">    /**</span>
-<span class="source-line-no">209</span><span id="line.209">     *  &lt;p&gt;The date and time of the next restock.&lt;/p&gt;</span>
+<span class="source-line-no">209</span><span id="line.209">     *  &lt;p&gt;Date and time of the next restock.&lt;/p&gt;</span>
 <span class="source-line-no">210</span><span id="line.210">     */</span>
 <span class="source-line-no">211</span><span id="line.211"></span>
 <span class="source-line-no">212</span><span id="line.212">    public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {</span>
@@ -228,7 +228,7 @@
 <span class="source-line-no">215</span><span id="line.215">    }</span>
 <span class="source-line-no">216</span><span id="line.216"></span>
 <span class="source-line-no">217</span><span id="line.217">    /**</span>
-<span class="source-line-no">218</span><span id="line.218">     *</span>
+<span class="source-line-no">218</span><span id="line.218">     *  &lt;p&gt;Custom Fields of the InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">219</span><span id="line.219">     */</span>
 <span class="source-line-no">220</span><span id="line.220"></span>
 <span class="source-line-no">221</span><span id="line.221">    public InventoryEntryBuilder custom(</span>
@@ -238,7 +238,7 @@
 <span class="source-line-no">225</span><span id="line.225">    }</span>
 <span class="source-line-no">226</span><span id="line.226"></span>
 <span class="source-line-no">227</span><span id="line.227">    /**</span>
-<span class="source-line-no">228</span><span id="line.228">     *</span>
+<span class="source-line-no">228</span><span id="line.228">     *  &lt;p&gt;Custom Fields of the InventoryEntry.&lt;/p&gt;</span>
 <span class="source-line-no">229</span><span id="line.229">     */</span>
 <span class="source-line-no">230</span><span id="line.230"></span>
 <span class="source-line-no">231</span><span id="line.231">    public InventoryEntryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>

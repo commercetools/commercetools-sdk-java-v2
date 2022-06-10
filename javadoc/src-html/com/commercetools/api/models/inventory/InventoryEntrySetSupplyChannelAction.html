@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> * InventoryEntrySetSupplyChannelAction</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;If an entry with the same &lt;code&gt;sku&lt;/code&gt; and &lt;code&gt;supplyChannel&lt;/code&gt; already exists, this action will fail and a 400 Bad Request &lt;code&gt;DuplicateField&lt;/code&gt; error will be returned.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *</span>
 <span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
@@ -45,7 +45,7 @@
 <span class="source-line-no">032</span><span id="line.32">    String SET_SUPPLY_CHANNEL = "setSupplyChannel";</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
 <span class="source-line-no">036</span><span id="line.36">     */</span>
 <span class="source-line-no">037</span><span id="line.37">    @Valid</span>
 <span class="source-line-no">038</span><span id="line.38">    @JsonProperty("supplyChannel")</span>

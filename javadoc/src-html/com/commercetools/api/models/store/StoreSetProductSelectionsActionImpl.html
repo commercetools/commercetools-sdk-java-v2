@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * StoreSetProductSelectionsAction</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Instead of adding or removing Product Selections individually, you can also change all the Store's Product Selections in one go using this update action. The Store will only contain the Product Selections specified in the request.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelectionsAction, ModelBase {</span>
@@ -57,44 +57,48 @@
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;The total of Product Selections to be set for this Store.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     */</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSettingDraft&gt; getProductSelections() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return this.productSelections;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Value to set.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;ul&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *   &lt;li&gt;If provided, Product Selections for which &lt;code&gt;active&lt;/code&gt; is set to &lt;code&gt;true&lt;/code&gt; are available in the Store.&lt;/li&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     *   &lt;li&gt;If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public void setProductSelections(</span>
-<span class="source-line-no">055</span><span id="line.55">            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {</span>
-<span class="source-line-no">056</span><span id="line.56">        this.productSelections = new ArrayList&lt;&gt;(Arrays.asList(productSelections));</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setProductSelections(</span>
-<span class="source-line-no">060</span><span id="line.60">            final java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSettingDraft&gt; productSelections) {</span>
-<span class="source-line-no">061</span><span id="line.61">        this.productSelections = productSelections;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    @Override</span>
-<span class="source-line-no">065</span><span id="line.65">    public boolean equals(Object o) {</span>
-<span class="source-line-no">066</span><span id="line.66">        if (this == o)</span>
-<span class="source-line-no">067</span><span id="line.67">            return true;</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">070</span><span id="line.70">            return false;</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">        StoreSetProductSelectionsActionImpl that = (StoreSetProductSelectionsActionImpl) o;</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">075</span><span id="line.75">                .append(productSelections, that.productSelections)</span>
-<span class="source-line-no">076</span><span id="line.76">                .isEquals();</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    @Override</span>
-<span class="source-line-no">080</span><span id="line.80">    public int hashCode() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return new HashCodeBuilder(17, 37).append(action).append(productSelections).toHashCode();</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">054</span><span id="line.54">    public java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSettingDraft&gt; getProductSelections() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return this.productSelections;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public void setProductSelections(</span>
+<span class="source-line-no">059</span><span id="line.59">            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {</span>
+<span class="source-line-no">060</span><span id="line.60">        this.productSelections = new ArrayList&lt;&gt;(Arrays.asList(productSelections));</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public void setProductSelections(</span>
+<span class="source-line-no">064</span><span id="line.64">            final java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSettingDraft&gt; productSelections) {</span>
+<span class="source-line-no">065</span><span id="line.65">        this.productSelections = productSelections;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    @Override</span>
+<span class="source-line-no">069</span><span id="line.69">    public boolean equals(Object o) {</span>
+<span class="source-line-no">070</span><span id="line.70">        if (this == o)</span>
+<span class="source-line-no">071</span><span id="line.71">            return true;</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">074</span><span id="line.74">            return false;</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">        StoreSetProductSelectionsActionImpl that = (StoreSetProductSelectionsActionImpl) o;</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">079</span><span id="line.79">                .append(productSelections, that.productSelections)</span>
+<span class="source-line-no">080</span><span id="line.80">                .isEquals();</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    @Override</span>
+<span class="source-line-no">084</span><span id="line.84">    public int hashCode() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return new HashCodeBuilder(17, 37).append(action).append(productSelections).toHashCode();</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">}</span>
 
 
 

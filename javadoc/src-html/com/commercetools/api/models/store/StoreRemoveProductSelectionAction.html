@@ -21,14 +21,14 @@
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.Valid;</span>
 <span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.ResourceIdentifier;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;</span>
 <span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * StoreRemoveProductSelectionAction</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;This action has no effect if the given Product Selection is not in the Store.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *</span>
 <span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
@@ -47,14 +47,14 @@
 <span class="source-line-no">034</span><span id="line.34">    String REMOVE_PRODUCT_SELECTION = "removeProductSelection";</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;A Product Selection to be removed from the current Product Selections of this Store.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Value to remove. The removed Product Selection is made offline.&lt;/p&gt;</span>
 <span class="source-line-no">038</span><span id="line.38">     */</span>
 <span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
 <span class="source-line-no">040</span><span id="line.40">    @Valid</span>
 <span class="source-line-no">041</span><span id="line.41">    @JsonProperty("productSelection")</span>
-<span class="source-line-no">042</span><span id="line.42">    public ResourceIdentifier getProductSelection();</span>
+<span class="source-line-no">042</span><span id="line.42">    public ProductSelectionResourceIdentifier getProductSelection();</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public void setProductSelection(final ResourceIdentifier productSelection);</span>
+<span class="source-line-no">044</span><span id="line.44">    public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    public static StoreRemoveProductSelectionAction of() {</span>
 <span class="source-line-no">047</span><span id="line.47">        return new StoreRemoveProductSelectionActionImpl();</span>

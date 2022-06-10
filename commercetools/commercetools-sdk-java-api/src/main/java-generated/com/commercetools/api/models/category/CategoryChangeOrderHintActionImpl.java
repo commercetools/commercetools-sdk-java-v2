@@ -43,7 +43,7 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
     }
 
     /**
-     *
+     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
      */
 
     public String getOrderHint() {

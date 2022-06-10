@@ -44,7 +44,7 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

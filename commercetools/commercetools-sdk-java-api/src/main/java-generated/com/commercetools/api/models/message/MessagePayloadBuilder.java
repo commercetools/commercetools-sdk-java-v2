@@ -355,6 +355,22 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadBuilder standalonePriceDeletedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadBuilder standalonePriceDiscountSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder storeCreatedBuilder() {
         return com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder.of();
     }

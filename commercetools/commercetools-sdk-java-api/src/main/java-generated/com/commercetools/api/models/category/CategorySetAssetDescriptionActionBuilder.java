@@ -33,7 +33,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
@@ -42,7 +42,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,7 +51,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetAssetDescriptionActionBuilder description(
@@ -61,7 +61,7 @@ public class CategorySetAssetDescriptionActionBuilder implements Builder<Categor
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetAssetDescriptionActionBuilder description(

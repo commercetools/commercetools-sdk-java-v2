@@ -32,14 +32,14 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
     String SET_ASSET_CUSTOM_FIELD = "setAssetCustomField";
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")

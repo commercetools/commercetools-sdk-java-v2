@@ -44,12 +44,21 @@ public interface ExtensionTrigger {
     @JsonProperty("actions")
     public List<ExtensionAction> getActions();
 
+    /**
+     *  <p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p>
+     */
+
+    @JsonProperty("condition")
+    public String getCondition();
+
     public void setResourceTypeId(final ExtensionResourceTypeId resourceTypeId);
 
     @JsonIgnore
     public void setActions(final ExtensionAction... actions);
 
     public void setActions(final List<ExtensionAction> actions);
+
+    public void setCondition(final String condition);
 
     public static ExtensionTrigger of() {
         return new ExtensionTriggerImpl();
@@ -59,6 +68,7 @@ public interface ExtensionTrigger {
         ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
         instance.setActions(template.getActions());
+        instance.setCondition(template.getCondition());
         return instance;
     }
 

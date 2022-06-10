@@ -15,8 +15,9 @@ public class ByProjectKeyMeEmailConfirmRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyMeEmailConfirmPost post() {
-        return new ByProjectKeyMeEmailConfirmPost(apiHttpClient, projectKey);
+    public ByProjectKeyMeEmailConfirmPost post(
+            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+        return new ByProjectKeyMeEmailConfirmPost(apiHttpClient, projectKey, customerEmailVerify);
     }
 
 }

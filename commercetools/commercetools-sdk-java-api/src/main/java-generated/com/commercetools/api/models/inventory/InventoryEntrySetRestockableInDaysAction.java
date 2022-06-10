@@ -29,7 +29,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
     String SET_RESTOCKABLE_IN_DAYS = "setRestockableInDays";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("restockableInDays")

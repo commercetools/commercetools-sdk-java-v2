@@ -51,21 +51,21 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public String getId();
 
     /**
-     *
+     *  <p>Current version of the InventoryEntry.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -93,49 +93,49 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public String getKey();
 
     /**
-     *
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      */
     @NotNull
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>Connection to a particular supplier.</p>
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>Overall amount of stock. (available + reserved)</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      */
     @NotNull
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
 
     /**
-     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
      */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-     *  <p>The date and time of the next restock.</p>
+     *  <p>Date and time of the next restock.</p>
      */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
     @Valid
     @JsonProperty("custom")

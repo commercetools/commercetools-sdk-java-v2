@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CategoryChangeAssetOrderAction
+ *  <p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOrderAction, ModelBase {
@@ -43,7 +43,7 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
     }
 
     /**
-     *
+     *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      */
 
     public java.util.List<String> getAssetOrder() {

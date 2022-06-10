@@ -33,10 +33,10 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetId(@Nullable final String assetId) {
@@ -45,7 +45,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
@@ -77,7 +77,18 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
      *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
-    public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+    public CategorySetAssetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     */
+
+    public CategorySetAssetCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
@@ -98,7 +109,7 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
     }
 
     @Nullable
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

@@ -27,7 +27,7 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
     private Long restockableInDays;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public InventoryEntrySetRestockableInDaysActionBuilder restockableInDays(@Nullable final Long restockableInDays) {

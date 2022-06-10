@@ -50,7 +50,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -58,7 +58,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {
@@ -66,7 +66,7 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
     }
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public java.util.List<String> getTags() {

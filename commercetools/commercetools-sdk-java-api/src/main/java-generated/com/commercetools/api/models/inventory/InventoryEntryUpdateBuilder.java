@@ -28,7 +28,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the InventoryEntry on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public InventoryEntryUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the InventoryEntry.</p>
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -47,7 +47,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the InventoryEntry.</p>
      */
 
     public InventoryEntryUpdateBuilder actions(
@@ -57,7 +57,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the InventoryEntry.</p>
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -70,7 +70,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the InventoryEntry.</p>
      */
 
     public InventoryEntryUpdateBuilder plusActions(
@@ -84,7 +84,7 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the InventoryEntry.</p>
      */
 
     public InventoryEntryUpdateBuilder withActions(

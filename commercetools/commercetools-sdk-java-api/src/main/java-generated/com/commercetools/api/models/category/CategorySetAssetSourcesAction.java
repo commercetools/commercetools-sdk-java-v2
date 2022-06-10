@@ -34,21 +34,21 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
     String SET_ASSET_SOURCES = "setAssetSources";
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
     @NotNull
     @Valid

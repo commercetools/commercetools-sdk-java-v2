@@ -26,7 +26,7 @@ public class CategorySetExternalIdActionBuilder implements Builder<CategorySetEx
     private String externalId;
 
     /**
-     *  <p>If not defined, the external ID is unset.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetExternalIdActionBuilder externalId(@Nullable final String externalId) {

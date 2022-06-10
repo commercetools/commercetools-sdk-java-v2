@@ -32,7 +32,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
     String SET_META_KEYWORDS = "setMetaKeywords";
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @Valid
     @JsonProperty("metaKeywords")

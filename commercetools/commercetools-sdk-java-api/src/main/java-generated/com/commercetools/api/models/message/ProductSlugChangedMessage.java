@@ -41,7 +41,7 @@ public interface ProductSlugChangedMessage extends Message {
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface ProductSlugChangedMessage extends Message {
     public LocalizedString getSlug();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
     @Valid
     @JsonProperty("oldSlug")

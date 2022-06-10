@@ -43,7 +43,7 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
     }
 
     /**
-     *
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

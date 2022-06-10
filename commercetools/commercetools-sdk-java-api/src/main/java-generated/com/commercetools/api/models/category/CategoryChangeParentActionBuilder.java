@@ -25,7 +25,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
     private com.commercetools.api.models.category.CategoryResourceIdentifier parent;
 
     /**
-     *
+     *  <p>New value to set as parent.</p>
      */
 
     public CategoryChangeParentActionBuilder parent(
@@ -36,7 +36,7 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
     }
 
     /**
-     *
+     *  <p>New value to set as parent.</p>
      */
 
     public CategoryChangeParentActionBuilder parent(

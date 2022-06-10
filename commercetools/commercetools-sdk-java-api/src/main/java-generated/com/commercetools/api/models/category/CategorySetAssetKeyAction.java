@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CategorySetAssetKeyAction
+ *  <p>Set or remove the <code>key</code> of an Asset.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,14 +32,14 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
     String SET_ASSET_KEY = "setAssetKey";
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("assetKey")

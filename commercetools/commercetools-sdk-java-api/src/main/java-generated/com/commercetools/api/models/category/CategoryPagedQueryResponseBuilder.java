@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CategoryPagedQueryResponse categoryPagedQueryResponse = CategoryPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.category.Category> results;
 
@@ -48,24 +48,6 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
-     */
-
-    public CategoryPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public CategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      */
 
@@ -75,7 +57,25 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public CategoryPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
+    public CategoryPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>Category matching the query.</p>
      */
 
     public CategoryPagedQueryResponseBuilder results(final com.commercetools.api.models.category.Category... results) {
@@ -84,7 +84,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
+     *  <p>Category matching the query.</p>
      */
 
     public CategoryPagedQueryResponseBuilder results(
@@ -94,7 +94,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
+     *  <p>Category matching the query.</p>
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -107,7 +107,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
+     *  <p>Category matching the query.</p>
      */
 
     public CategoryPagedQueryResponseBuilder plusResults(
@@ -120,7 +120,7 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
-     *
+     *  <p>Category matching the query.</p>
      */
 
     public CategoryPagedQueryResponseBuilder withResults(
@@ -134,6 +134,10 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -143,27 +147,23 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.category.Category> getResults() {
         return this.results;
     }
 
     public CategoryPagedQueryResponse build() {
         Objects.requireNonNull(limit, CategoryPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, CategoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, CategoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, CategoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, CategoryPagedQueryResponse.class + ": results is missing");
-        return new CategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CategoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds CategoryPagedQueryResponse without checking for non null required values
      */
     public CategoryPagedQueryResponse buildUnchecked() {
-        return new CategoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CategoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static CategoryPagedQueryResponseBuilder of() {
@@ -173,9 +173,9 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     public static CategoryPagedQueryResponseBuilder of(final CategoryPagedQueryResponse template) {
         CategoryPagedQueryResponseBuilder builder = new CategoryPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

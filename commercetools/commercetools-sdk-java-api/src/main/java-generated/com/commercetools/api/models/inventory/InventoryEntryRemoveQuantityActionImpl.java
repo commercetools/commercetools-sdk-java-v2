@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InventoryEntryRemoveQuantityAction
+ *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRemoveQuantityAction, ModelBase {
@@ -43,7 +43,7 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>quantityOnStock</code>.</p>
      */
 
     public Long getQuantity() {

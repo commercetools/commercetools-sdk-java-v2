@@ -55,21 +55,21 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public String getId();
 
     /**
-     *  <p>The current version of the category.</p>
+     *  <p>Current version of the Category.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Category was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Category was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -90,7 +90,7 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public CreatedBy getCreatedBy();
 
     /**
-     *
+     *  <p>Name of the Category.</p>
      */
     @NotNull
     @Valid
@@ -98,7 +98,7 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public LocalizedString getName();
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      */
     @NotNull
     @Valid
@@ -106,14 +106,14 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public LocalizedString getSlug();
 
     /**
-     *
+     *  <p>Description of the Category.</p>
      */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
     @NotNull
     @Valid
@@ -121,56 +121,56 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public List<CategoryReference> getAncestors();
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     *  <p>Parent Category of this Category.</p>
      */
     @Valid
     @JsonProperty("parent")
     public CategoryReference getParent();
 
     /**
-     *  <p>An attribute as base for a custom category order in one level.</p>
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
      */
     @NotNull
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     *
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      */
 
     @JsonProperty("externalId")
     public String getExternalId();
 
     /**
-     *
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      */
     @Valid
     @JsonProperty("metaKeywords")
     public LocalizedString getMetaKeywords();
 
     /**
-     *
+     *  <p>Custom Fields for the Category.</p>
      */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
     @Valid
     @JsonProperty("assets")

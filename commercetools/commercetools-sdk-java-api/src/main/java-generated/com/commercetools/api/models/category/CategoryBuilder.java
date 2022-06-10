@@ -90,7 +90,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>The current version of the category.</p>
+     *  <p>Current version of the Category.</p>
      */
 
     public CategoryBuilder version(final Long version) {
@@ -99,7 +99,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Category was initially created.</p>
      */
 
     public CategoryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -108,7 +108,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Category was last updated.</p>
      */
 
     public CategoryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -156,7 +156,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Name of the Category.</p>
      */
 
     public CategoryBuilder name(
@@ -166,7 +166,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Name of the Category.</p>
      */
 
     public CategoryBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
@@ -175,7 +175,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      */
 
     public CategoryBuilder slug(
@@ -185,7 +185,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      */
 
     public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
@@ -194,7 +194,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Description of the Category.</p>
      */
 
     public CategoryBuilder description(
@@ -204,7 +204,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Description of the Category.</p>
      */
 
     public CategoryBuilder description(
@@ -214,7 +214,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
 
     public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -223,7 +223,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
 
     public CategoryBuilder ancestors(
@@ -233,7 +233,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
 
     public CategoryBuilder plusAncestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
@@ -245,7 +245,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
 
     public CategoryBuilder plusAncestors(
@@ -258,7 +258,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Contains the parent path towards the root category.</p>
+     *  <p>Contains the parent path towards the root Category.</p>
      */
 
     public CategoryBuilder withAncestors(
@@ -269,7 +269,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     *  <p>Parent Category of this Category.</p>
      */
 
     public CategoryBuilder parent(
@@ -279,7 +279,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>A category that is the parent of this category in the category tree.</p>
+     *  <p>Parent Category of this Category.</p>
      */
 
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
@@ -288,7 +288,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>An attribute as base for a custom category order in one level.</p>
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
      */
 
     public CategoryBuilder orderHint(final String orderHint) {
@@ -297,7 +297,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
      */
 
     public CategoryBuilder externalId(@Nullable final String externalId) {
@@ -306,7 +306,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaTitle(
@@ -316,7 +316,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
@@ -325,7 +325,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaDescription(
@@ -335,7 +335,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaDescription(
@@ -345,7 +345,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaKeywords(
@@ -355,7 +355,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      */
 
     public CategoryBuilder metaKeywords(
@@ -365,7 +365,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Category.</p>
      */
 
     public CategoryBuilder custom(
@@ -375,7 +375,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Category.</p>
      */
 
     public CategoryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
@@ -384,7 +384,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
 
     public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -393,7 +393,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
 
     public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
@@ -402,7 +402,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
 
     public CategoryBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -414,7 +414,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
 
     public CategoryBuilder plusAssets(
@@ -427,7 +427,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Can be used to store images, icons or movies related to this category.</p>
+     *  <p>Media related to the Category.</p>
      */
 
     public CategoryBuilder withAssets(

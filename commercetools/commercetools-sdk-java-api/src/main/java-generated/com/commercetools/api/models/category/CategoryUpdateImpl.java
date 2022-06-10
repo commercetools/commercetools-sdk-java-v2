@@ -35,7 +35,7 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {

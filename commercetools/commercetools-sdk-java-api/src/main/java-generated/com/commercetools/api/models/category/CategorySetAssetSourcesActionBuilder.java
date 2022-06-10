@@ -33,7 +33,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -42,7 +42,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -51,7 +51,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -61,7 +61,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder sources(
@@ -71,7 +71,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -84,7 +84,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder plusSources(
@@ -97,7 +97,7 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
-     *
+     *  <p>Must not be empty. At least one entry is required.</p>
      */
 
     public CategorySetAssetSourcesActionBuilder withSources(

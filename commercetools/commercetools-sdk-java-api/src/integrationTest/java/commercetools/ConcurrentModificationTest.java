@@ -120,10 +120,9 @@ public class ConcurrentModificationTest {
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
         Assertions.assertThat(testLogAppender.loggingEvents)
-                .anyMatch(iLoggingEvent ->
-                        iLoggingEvent.getFormattedMessage().matches("GET https://api.commercetools.com/ 409 \\d+ - -")
-                                && iLoggingEvent.getLevel().toString().equals(Level.INFO.toString())
-                );
+                .anyMatch(iLoggingEvent -> iLoggingEvent.getFormattedMessage()
+                        .matches("GET https://api.commercetools.com/ 409 \\d+ - -")
+                        && iLoggingEvent.getLevel().toString().equals(Level.INFO.toString()));
         testLogAppender.stop();
     }
 
@@ -151,10 +150,9 @@ public class ConcurrentModificationTest {
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
         Assertions.assertThat(testLogAppender.loggingEvents)
-                .anyMatch(iLoggingEvent ->
-                        iLoggingEvent.getFormattedMessage().matches("GET https://api.commercetools.com/ 409 \\d+ - -")
-                        && iLoggingEvent.getLevel().toString().equals(Level.DEBUG.toString())
-                );
+                .anyMatch(iLoggingEvent -> iLoggingEvent.getFormattedMessage()
+                        .matches("GET https://api.commercetools.com/ 409 \\d+ - -")
+                        && iLoggingEvent.getLevel().toString().equals(Level.DEBUG.toString()));
 
         testLogAppender.stop();
     }

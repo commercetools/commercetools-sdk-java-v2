@@ -278,7 +278,7 @@ types:
           return HighPrecisionMoneyDraft.of(this);
       }
       @Override
-      default MonetaryOperator createMoneyOperator() {
+      default javax.money.MonetaryOperator createMoneyOperator() {
           return amount -> MoneyUtil.of(amount, getFractionDigits());
       }
   HighPrecisionMoneyDraft:
@@ -295,19 +295,19 @@ types:
           return instance;
       }
       @Override
-      default MonetaryOperator createMoneyOperator() {
+      default javax.money.MonetaryOperator createMoneyOperator() {
           return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
       }
   TypedMoney:
     (java-mixin): |
       @Override
-      default MonetaryOperator createMoneyOperator() {
+      default javax.money.MonetaryOperator createMoneyOperator() {
           return MoneyUtil::of;
       }
   TypedMoneyDraft:
     (java-mixin): |
       @Override
-      default MonetaryOperator createMoneyOperator() {
+      default javax.money.MonetaryOperator createMoneyOperator() {
           return MoneyUtil::draftOf;
       }
   Money:

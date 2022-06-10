@@ -5,6 +5,7 @@ import static commercetools.product.ProductFixtures.*;
 import static io.vrap.rmf.base.client.utils.ClientUtils.*;
 
 import java.time.Duration;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -47,6 +48,30 @@ public class GraphQLTest {
             final ApiHttpResponse<JsonNode> jsonNode = blockingWait(jsonResponse, Duration.ofSeconds(10));
             Assertions.assertThat(jsonNode.getBody()).isInstanceOf(ObjectNode.class);
 
+        });
+    }
+
+    @Test
+    public void t() {
+        ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        withProduct(product -> {
+
+            GraphQLRequest request = GraphQLRequest.builder()
+                    .query("query($productFilter:String) { products(where: $productFilter) { results { id } } }")
+                    .variables(builder -> builder.addValue("productFilter", "id = \"" + product.getId() + "\""))
+                    .build();
+            final ApiHttpResponse<GraphQLResponse> response = apiRoot.graphql()
+                    .post(request)
+                    .executeBlocking();
+
+            Assertions.assertThat(response.getBody()).isInstanceOf(GraphQLResponse.class);
+            Assertions.assertThat(response.getBody().getData()).isInstanceOf(Map.class);
+
+            final ApiHttpResponse<JsonNode> response2 = apiRoot.graphql()
+                    .post(request)
+                    .executeBlocking(JsonNode.class);
+
+            Assertions.assertThat(response2.getBody()).isInstanceOf(JsonNode.class);
         });
     }
 }

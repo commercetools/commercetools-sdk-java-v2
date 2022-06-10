@@ -60,16 +60,12 @@ public class GraphQLTest {
                     .query("query($productFilter:String) { products(where: $productFilter) { results { id } } }")
                     .variables(builder -> builder.addValue("productFilter", "id = \"" + product.getId() + "\""))
                     .build();
-            final ApiHttpResponse<GraphQLResponse> response = apiRoot.graphql()
-                    .post(request)
-                    .executeBlocking();
+            final ApiHttpResponse<GraphQLResponse> response = apiRoot.graphql().post(request).executeBlocking();
 
             Assertions.assertThat(response.getBody()).isInstanceOf(GraphQLResponse.class);
             Assertions.assertThat(response.getBody().getData()).isInstanceOf(Map.class);
 
-            final ApiHttpResponse<JsonNode> response2 = apiRoot.graphql()
-                    .post(request)
-                    .executeBlocking(JsonNode.class);
+            final ApiHttpResponse<JsonNode> response2 = apiRoot.graphql().post(request).executeBlocking(JsonNode.class);
 
             Assertions.assertThat(response2.getBody()).isInstanceOf(JsonNode.class);
         });

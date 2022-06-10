@@ -52,7 +52,7 @@ public class GraphQLTest {
     }
 
     @Test
-    public void t() {
+    public void variables() {
         ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
         withProduct(product -> {
 

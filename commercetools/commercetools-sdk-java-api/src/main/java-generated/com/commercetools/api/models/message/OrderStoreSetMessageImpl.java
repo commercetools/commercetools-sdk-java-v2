@@ -162,7 +162,7 @@ public class OrderStoreSetMessageImpl implements OrderStoreSetMessage, ModelBase
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

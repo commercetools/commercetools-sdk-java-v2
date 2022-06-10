@@ -36,7 +36,7 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
     }
 
     /**
-     *  <p>Reference to a Product Selection</p>
+     *  <p>Reference to a ProductSelection.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
@@ -44,7 +44,7 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {

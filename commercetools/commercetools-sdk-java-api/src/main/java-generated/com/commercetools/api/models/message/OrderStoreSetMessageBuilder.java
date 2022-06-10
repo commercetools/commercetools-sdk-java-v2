@@ -192,7 +192,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public OrderStoreSetMessageBuilder store(
@@ -202,7 +202,7 @@ public class OrderStoreSetMessageBuilder implements Builder<OrderStoreSetMessage
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public OrderStoreSetMessageBuilder store(final com.commercetools.api.models.store.StoreKeyReference store) {

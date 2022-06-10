@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreKeyReference
+ *  <p>Reference to a Store by its key.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
@@ -44,7 +44,7 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     *  <p>Unique and immutable key of the referenced Store.</p>
      */
 
     public String getKey() {

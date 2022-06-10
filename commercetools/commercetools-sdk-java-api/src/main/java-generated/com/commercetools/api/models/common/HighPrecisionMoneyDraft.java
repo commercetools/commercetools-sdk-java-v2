@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.money.MonetaryOperator;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -101,6 +100,11 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
         return instance;
     }
 
+    @Override
+    default javax.money.MonetaryOperator createMoneyOperator() {
+        return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
             @Override
@@ -108,10 +112,5 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
                 return "TypeReference<HighPrecisionMoneyDraft>";
             }
         };
-    }
-
-    @Override
-    default MonetaryOperator createMoneyOperator() {
-        return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
     }
 }

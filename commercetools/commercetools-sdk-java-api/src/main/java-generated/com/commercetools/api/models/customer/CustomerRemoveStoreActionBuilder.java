@@ -25,7 +25,7 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public CustomerRemoveStoreActionBuilder store(
@@ -35,7 +35,7 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public CustomerRemoveStoreActionBuilder store(

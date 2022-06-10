@@ -55,7 +55,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *  <p>The name of the store</p>
+     *  <p>Name of the Store.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -71,7 +71,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Languages defined in Project. Only languages defined in the Project can be used.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -79,7 +79,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers to a Channel with <code>ProductDistribution</code> role</p>
+     *  <p>ResourceIdentifier to a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {
@@ -87,7 +87,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     *  <p>ResourceIdentifier to a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
@@ -95,7 +95,11 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *  </ul>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
@@ -103,7 +107,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom fields for the Store.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

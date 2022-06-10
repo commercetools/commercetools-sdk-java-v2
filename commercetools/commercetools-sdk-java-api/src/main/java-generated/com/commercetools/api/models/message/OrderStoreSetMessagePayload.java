@@ -34,7 +34,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
     String ORDER_STORE_SET = "OrderStoreSet";
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
     @NotNull
     @Valid

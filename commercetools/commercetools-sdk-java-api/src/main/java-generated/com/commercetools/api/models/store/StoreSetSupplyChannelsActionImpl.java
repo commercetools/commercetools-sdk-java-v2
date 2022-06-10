@@ -44,7 +44,7 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {

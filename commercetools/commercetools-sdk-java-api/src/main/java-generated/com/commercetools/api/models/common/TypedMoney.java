@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.money.MonetaryOperator;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -68,6 +67,11 @@ public interface TypedMoney extends Money {
         return helper.apply(this);
     }
 
+    @Override
+    default javax.money.MonetaryOperator createMoneyOperator() {
+        return MoneyUtil::of;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
             @Override
@@ -75,10 +79,5 @@ public interface TypedMoney extends Money {
                 return "TypeReference<TypedMoney>";
             }
         };
-    }
-
-    @Override
-    default MonetaryOperator createMoneyOperator() {
-        return MoneyUtil::of;
     }
 }

@@ -44,7 +44,7 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels() {

@@ -43,7 +43,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
     }
 
     /**
-     *
+     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
      */
 
     public java.util.List<String> getLanguages() {

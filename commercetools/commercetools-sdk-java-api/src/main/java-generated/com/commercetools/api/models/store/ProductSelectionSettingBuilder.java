@@ -28,7 +28,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     private Boolean active;
 
     /**
-     *  <p>Reference to a Product Selection</p>
+     *  <p>Reference to a ProductSelection.</p>
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -40,7 +40,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *  <p>Reference to a Product Selection</p>
+     *  <p>Reference to a ProductSelection.</p>
      */
 
     public ProductSelectionSettingBuilder productSelection(
@@ -50,7 +50,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      */
 
     public ProductSelectionSettingBuilder active(final Boolean active) {

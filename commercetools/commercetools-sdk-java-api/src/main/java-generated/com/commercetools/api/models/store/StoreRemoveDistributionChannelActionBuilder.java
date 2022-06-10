@@ -25,7 +25,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(
@@ -37,7 +37,7 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
     }
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
 
     public StoreRemoveDistributionChannelActionBuilder distributionChannel(

@@ -78,7 +78,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique ID of the Store.</p>
      */
 
     public String getId() {
@@ -86,7 +86,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Store.</p>
      */
 
     public Long getVersion() {
@@ -94,7 +94,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Store was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -102,7 +102,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Store was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -126,7 +126,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     *  <p>User-defined unique and immutable identifier for the Store.</p>
      */
 
     public String getKey() {
@@ -134,7 +134,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *  <p>The name of the store</p>
+     *  <p>Name of the Store.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -142,7 +142,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -150,7 +150,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+     *  <p>Product Distribution Channels allowed for the Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -158,7 +158,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     *  <p>Inventory Supply Channels allowed for the Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -166,7 +166,11 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <ul>
+     *   <li>If empty all Products in the Project are available in this Store.</li>
+     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *  </ul>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -174,7 +178,7 @@ public class StoreImpl implements Store, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom fields for the Store.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

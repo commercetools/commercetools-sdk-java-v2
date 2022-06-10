@@ -27,7 +27,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>The updated name of the store</p>
+     *  <p>Value to set.</p>
      */
 
     public StoreSetNameActionBuilder name(
@@ -37,7 +37,7 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
     }
 
     /**
-     *  <p>The updated name of the store</p>
+     *  <p>Value to set.</p>
      */
 
     public StoreSetNameActionBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {

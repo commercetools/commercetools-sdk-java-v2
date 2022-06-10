@@ -44,7 +44,7 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

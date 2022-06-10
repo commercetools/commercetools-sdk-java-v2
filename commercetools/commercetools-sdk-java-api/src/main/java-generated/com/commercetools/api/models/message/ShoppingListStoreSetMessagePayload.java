@@ -34,7 +34,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
     @NotNull
     @Valid

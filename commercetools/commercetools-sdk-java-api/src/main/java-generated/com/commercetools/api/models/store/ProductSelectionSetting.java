@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionSetting {
 
     /**
-     *  <p>Reference to a Product Selection</p>
+     *  <p>Reference to a ProductSelection.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ProductSelectionSetting {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
      */
     @NotNull
     @JsonProperty("active")

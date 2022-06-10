@@ -15,20 +15,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreChangeProductSelectionAction
+ *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreChangeProductSelectionActionImpl implements StoreChangeProductSelectionAction, ModelBase {
 
     private String action;
 
-    private com.commercetools.api.models.common.ResourceIdentifier productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
 
     private Boolean active;
 
     @JsonCreator
     StoreChangeProductSelectionActionImpl(
-            @JsonProperty("productSelection") final com.commercetools.api.models.common.ResourceIdentifier productSelection,
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection,
             @JsonProperty("active") final Boolean active) {
         this.productSelection = productSelection;
         this.active = active;
@@ -48,22 +48,23 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
     }
 
     /**
-     *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      */
 
-    public com.commercetools.api.models.common.ResourceIdentifier getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {
         return this.active;
     }
 
-    public void setProductSelection(final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
+    public void setProductSelection(
+            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
     }
 

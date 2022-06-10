@@ -32,7 +32,7 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
     String SET_SUPPLY_CHANNELS = "setSupplyChannels";
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
     @Valid
     @JsonProperty("supplyChannels")

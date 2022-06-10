@@ -34,7 +34,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     String REMOVE_DISTRIBUTION_CHANNEL = "removeDistributionChannel";
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      */
     @NotNull
     @Valid

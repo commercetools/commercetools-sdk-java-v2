@@ -119,12 +119,11 @@ public class ConcurrentModificationTest {
             response.getBodyAsString().orElse(""), response.getHeaders(), response.getMessage(), response)));
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel())
-                .isEqualTo(ch.qos.logback.classic.Level.INFO);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 409 \\d+ - -");
-
+        Assertions.assertThat(testLogAppender.loggingEvents)
+                .anyMatch(iLoggingEvent ->
+                        iLoggingEvent.getFormattedMessage().matches("GET https://api.commercetools.com/ 409 \\d+ - -")
+                                && iLoggingEvent.getLevel().toString().equals(Level.INFO.toString())
+                );
         testLogAppender.stop();
     }
 
@@ -151,11 +150,11 @@ public class ConcurrentModificationTest {
             response.getBodyAsString().orElse(""), response.getHeaders(), response.getMessage(), response)));
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel())
-                .isEqualTo(ch.qos.logback.classic.Level.DEBUG);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
-                .matches("GET https://api.commercetools.com/ 409 \\d+ - -");
+        Assertions.assertThat(testLogAppender.loggingEvents)
+                .anyMatch(iLoggingEvent ->
+                        iLoggingEvent.getFormattedMessage().matches("GET https://api.commercetools.com/ 409 \\d+ - -")
+                        && iLoggingEvent.getLevel().toString().equals(Level.DEBUG.toString())
+                );
 
         testLogAppender.stop();
     }

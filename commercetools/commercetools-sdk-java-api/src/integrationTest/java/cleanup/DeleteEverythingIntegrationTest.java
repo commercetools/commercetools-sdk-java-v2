@@ -121,8 +121,9 @@ public class DeleteEverythingIntegrationTest {
 
     private void deleteAllPayments() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().payments().get(),
-                (payment) -> deleteType(payment.getId(), payment.getVersion()));
+            (payment) -> deleteType(payment.getId(), payment.getVersion()));
     }
+
     private void deleteAllTypes() {
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().types().get(),
             (type) -> deleteType(type.getId(), type.getVersion()));

@@ -1,0 +1,54 @@
+{
+    "dependencies": [
+        {
+            "moduleName": "javax.annotation:javax.annotation-api",
+            "moduleVersion": "1.3.2",
+            "moduleUrls": [
+                "http://jcp.org/en/jsr/detail?id=250",
+                "https://javaee.github.io/glassfish"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "CDDL + GPLv2 with classpath exception",
+                    "moduleLicenseUrl": "https://github.com/javaee/javax.annotation/blob/master/LICENSE"
+                },
+                {
+                    "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0",
+                    "moduleLicenseUrl": "https://oss.oracle.com/licenses/CDDL"
+                }
+            ]
+        },
+        {
+            "moduleName": "javax.money:money-api",
+            "moduleVersion": "1.1",
+            "moduleUrls": [
+                "http://www.javamoney.org",
+                "https://javamoney.github.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "JSR 354 Spec Evaluation/Implementation License",
+                    "moduleLicenseUrl": null
+                }
+            ]
+        },
+        {
+            "moduleName": "org.javamoney.moneta:moneta-core",
+            "moduleVersion": "1.4.2",
+            "moduleUrls": [
+                "http://javamoney.org",
+                "http://www.javamoney.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        }
+    ]
+}

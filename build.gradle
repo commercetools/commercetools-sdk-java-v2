@@ -1,9 +1,6 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            url "https://dl.bintray.com/vrapio/vrapio"
-        }
     }
 }
 
@@ -18,8 +15,6 @@ plugins {
 
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
-
-    id 'com.softeq.gradle.itest' version '1.0.4'
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
 }
@@ -146,14 +141,23 @@ subprojects { project ->
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    apply plugin: 'com.softeq.gradle.itest'
-
     group='com.commercetools.sdk'
 
     version = globalVersion
 
-    itestSourceSet {
-        name = "integrationTest"
+    sourceSets {
+        itest {
+            compileClasspath += sourceSets.main.output
+            runtimeClasspath += sourceSets.main.output
+            java {
+            }
+        }
+    }
+
+    configurations {
+        itestImplementation.extendsFrom(testImplementation)
+        itestApi.extendsFrom(testApi)
+        itestRuntimeOnly.extendsFrom(testRuntimeOnly)
     }
 
     task sourcesJar(type: Jar) {

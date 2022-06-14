@@ -9,6 +9,7 @@ import io.vrap.rmf.base.client.utils.Utils;
 import okhttp3.*;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,6 +25,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
+            .protocols(Collections.singletonList(Protocol.HTTP_1_1))
             .readTimeout(120, TimeUnit.SECONDS);
 
     private final OkHttpClient okHttpClient;

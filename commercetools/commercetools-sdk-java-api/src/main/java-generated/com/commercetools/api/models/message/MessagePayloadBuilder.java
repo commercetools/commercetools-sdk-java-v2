@@ -367,6 +367,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder standalonePriceExternalDiscountSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }

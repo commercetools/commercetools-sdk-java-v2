@@ -38,6 +38,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
+    @Deprecated
     private String description;
 
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
@@ -96,7 +97,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>The current version of the shipping method.</p>
+     *  <p>Current version of the ShippingMethod.</p>
      */
 
     public Long getVersion() {
@@ -104,7 +105,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -112,7 +113,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -144,7 +145,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the ShippingMethod.</p>
      */
 
     public String getName() {
@@ -152,7 +153,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Localized name of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
@@ -160,15 +161,15 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the ShippingMethod.</p>
      */
-
+    @Deprecated
     public String getDescription() {
         return this.description;
     }
 
     /**
-     *
+     *  <p>Localized description of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
@@ -176,7 +177,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -184,7 +185,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
@@ -192,7 +193,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>One shipping method in a project can be default.</p>
+     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
      */
 
     public Boolean getIsDefault() {
@@ -200,7 +201,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
      */
 
     public String getPredicate() {
@@ -208,7 +209,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -251,6 +252,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.localizedName = localizedName;
     }
 
+    @Deprecated
     public void setDescription(final String description) {
         this.description = description;
     }

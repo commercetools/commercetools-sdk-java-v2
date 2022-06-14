@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ShippingMethodSetCustomFieldAction
+ *  <p>This action sets, overwrites, or removes any existing Custom Field for an existing ShippingMethod.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSetCustomFieldAction, ModelBase {

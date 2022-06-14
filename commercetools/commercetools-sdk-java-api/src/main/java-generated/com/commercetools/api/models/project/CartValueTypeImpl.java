@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartValueType
+ *  <p>Used when the ShippingRate maps to the sum of LineItem Prices. The value of the Cart is used to select a tier. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartValueTypeImpl implements CartValueType, ModelBase {
@@ -28,7 +28,7 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {

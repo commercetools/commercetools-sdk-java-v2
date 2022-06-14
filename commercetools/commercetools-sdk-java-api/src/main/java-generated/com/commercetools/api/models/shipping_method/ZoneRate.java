@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ZoneRate
+ *  <p>Defines shipping rates in different currencies for a specific Zone.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ZoneRate {
 
     /**
-     *
+     *  <p>Zone for which the shipping rates are valid.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ZoneRate {
     public ZoneReference getZone();
 
     /**
-     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     *  <p>Shipping rates defined per currency.</p>
      */
     @NotNull
     @Valid

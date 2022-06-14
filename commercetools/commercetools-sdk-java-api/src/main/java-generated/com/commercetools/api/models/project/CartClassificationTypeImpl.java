@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartClassificationType
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the Cart. Keys must be unique.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartClassificationTypeImpl implements CartClassificationType, ModelBase {
@@ -37,7 +37,7 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {

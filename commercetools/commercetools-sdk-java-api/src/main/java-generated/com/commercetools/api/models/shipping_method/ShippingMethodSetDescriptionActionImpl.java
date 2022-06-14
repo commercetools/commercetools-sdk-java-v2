@@ -43,7 +43,7 @@ public class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSet
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getDescription() {

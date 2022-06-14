@@ -39,7 +39,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
 
     public ShippingMethodReferenceBuilder obj(
@@ -49,7 +49,7 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      */
 
     public ShippingMethodReferenceBuilder obj(

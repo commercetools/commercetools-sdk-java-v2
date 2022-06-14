@@ -48,7 +48,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     *
+     *  <p>Zone to which the ShippingRate should be added.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
@@ -56,7 +56,7 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
     }
 
     /**
-     *
+     *  <p>Value to add to <code>shippingRates</code>.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ZoneRate
+ *  <p>Defines shipping rates in different currencies for a specific Zone.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneRateImpl implements ZoneRate, ModelBase {
@@ -35,7 +35,7 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Zone for which the shipping rates are valid.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneReference getZone() {
@@ -43,7 +43,7 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
     }
 
     /**
-     *  <p>The array does not contain two shipping rates with the same currency.</p>
+     *  <p>Shipping rates defined per currency.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> getShippingRates() {

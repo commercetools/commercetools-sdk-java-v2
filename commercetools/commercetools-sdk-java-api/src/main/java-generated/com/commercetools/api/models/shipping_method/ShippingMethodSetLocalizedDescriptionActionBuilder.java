@@ -28,7 +28,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
@@ -39,7 +39,7 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(

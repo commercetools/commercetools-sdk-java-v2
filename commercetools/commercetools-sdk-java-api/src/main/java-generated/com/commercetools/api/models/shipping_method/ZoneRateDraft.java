@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ZoneRateDraft {
 
     /**
-     *
+     *  <p>Sets the Zone for which the shippng rates are valid.</p>
      */
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ZoneRateDraft {
     public ZoneResourceIdentifier getZone();
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
      */
     @NotNull
     @Valid

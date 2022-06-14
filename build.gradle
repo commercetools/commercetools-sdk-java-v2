@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         mavenCentral()
-        jcenter()
         maven {
             url "https://dl.bintray.com/vrapio/vrapio"
         }
@@ -15,14 +14,14 @@ plugins {
 
     id 'maven'
     id 'maven-publish'
+    id 'signing'
 
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id 'com.jfrog.bintray' version '1.8.3'
-
     id 'com.softeq.gradle.itest' version '1.0.4'
 
+    id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
 }
 
 import java.text.SimpleDateFormat
@@ -38,9 +37,9 @@ class Version {
     Version(String versionValue) {
         buildTime = new Date()
         originalVersion = versionValue
+        thisVersion = versionValue
         if (originalVersion.endsWith('-SNAPSHOT')) {
             status = 'integration'
-            thisVersion = originalVersion.substring(0, originalVersion.length() - 'SNAPSHOT'.length()) + getTimestamp()
         } else {
             status = 'release'
             thisVersion = versionValue
@@ -121,20 +120,31 @@ def pomConfig = {
     }
 }
 
+
+group='com.commercetools.sdk'
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            username = System.getenv('CTP_OSS_USER')
+            password = System.getenv('CTP_OSS_SECRET')
+        }
+    }
+}
+
 subprojects { project ->
     repositories {
         mavenCentral()
-        jcenter()
     }
 
     apply plugin: 'idea'
 
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
+    apply plugin: 'signing'
 
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
-    apply plugin: 'com.jfrog.bintray'
 
     apply plugin: 'com.softeq.gradle.itest'
 
@@ -176,31 +186,6 @@ subprojects { project ->
 
     if (project.file("build.gradle").exists()) {
 
-        bintray {
-            user = System.getenv('CTP_BINTRAY_USER')
-            key = System.getenv('CTP_BINTRAY_KEY')
-            publications = [ 'Maven' ]
-
-            publish = true
-
-            pkg {
-                repo = 'maven'
-                name = project.name
-                desc = rootProject.description
-                userOrg = 'commercetools'
-                licenses = ['Apache-2.0']
-
-                vcsUrl = scmHttpsUrl
-                publicDownloadNumbers = true
-
-                version {
-                    gpg {
-                        sign = true
-                    }
-                }
-            }
-        }
-
         publishing {
             publications {
                 Maven(MavenPublication) {
@@ -231,17 +216,9 @@ subprojects { project ->
             }
         }
 
-        task bintrayMavenSync(type: MavenCentralSync) {
-            mustRunAfter bintrayPublish
-            dryRun = System.getenv("MAVEN_SYNC") != "true"
-            repo = 'maven'
-            pkgName = project.name
-            subject = 'commercetools'
-            bintrayUser = System.getenv('CTP_BINTRAY_USER') ?: ''
-            bintrayApiKey = System.getenv('CTP_BINTRAY_KEY') ?: ''
-            ossUser = System.getenv('CTP_OSS_USER') ?: ''
-            ossPassword = System.getenv('CTP_OSS_SECRET') ?: ''
-            versionName = version.toString()
+        signing {
+            useGpgCmd()
+            sign publishing.publications.Maven
         }
     }
 
@@ -263,94 +240,4 @@ task alljavadoc(type: Javadoc) {
     classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
     destinationDir = file("${buildDir}/docs/javadoc")
     options.noTimestamp = true
-}
-
-import com.jfrog.bintray.gradle.Utils
-import com.jfrog.bintray.gradle.BintrayHttpClientFactory
-import static groovyx.net.http.ContentType.JSON
-import static groovyx.net.http.Method.POST
-
-class MavenCentralSync extends DefaultTask {
-    static final String TASK_NAME = "bintrayMavenSync"
-
-    @Input
-    Boolean dryRun = true
-
-    @Input
-    String repo
-
-    @Input
-    String pkgName
-
-    @Input
-    String subject
-
-    @Input
-    String versionName
-
-    @Input
-    String apiUrl = 'https://api.bintray.com'
-
-    @Input
-    String bintrayUser
-
-    @Input
-    String bintrayApiKey
-
-    @Input
-    String ossUser
-
-    @Input
-    String ossPassword
-
-    @Input
-    String ossCloseRepo = true
-
-
-    @TaskAction
-    void taskAction() throws IOException {
-        mavenCentralSync()
-    }
-
-
-    private void mavenCentralSync() {
-        def httpBuilder = BintrayHttpClientFactory.create(apiUrl, bintrayUser, bintrayApiKey)
-        def pkgPath = "$subject/$repo/$pkgName"
-        def mavenPackageExists = MavenPackageSearch.exists("com.commercetools.sdk", pkgName, versionName)
-        if (mavenPackageExists) {
-            println("Package already exists: $pkgPath")
-            return
-        }
-        if (dryRun) {
-            logger.info("(Dry run) Sync to Maven Central performed for '$pkgPath/$versionName'.")
-            return
-        }
-
-        httpBuilder.request(POST, JSON) {
-            Utils.addHeaders(headers)
-            uri.path = "/maven_central_sync/$pkgPath/versions/$versionName"
-            body = [username: ossUser, password: ossPassword]
-            if (ossCloseRepo != null) {
-                body << [close: ossCloseRepo]
-            }
-            response.success = { resp ->
-                logger.info("Sync to Maven Central performed for '$pkgPath/$versionName'.")
-            }
-            response.failure = { resp, reader ->
-                throw new GradleException("Could not sync '$pkgPath/$versionName' to Maven Central: $resp.statusLine $reader")
-            }
-        }
-    }
-}
-
-import groovy.json.JsonSlurper
-
-class MavenPackageSearch {
-    static boolean exists(group, artifact, versionName) {
-
-        String url = "https://search.maven.org/solrsearch/select?q=g:%22$group%22%20AND%20a:%22$artifact%22%20AND%20v:%22$versionName%22&rows=20&wt=json"
-        def json = new JsonSlurper().parseText(url.toURL().text)
-
-        return json.get('response')?.get('docs')?.getAt(0)?.get("v") == versionName
-    }
 }

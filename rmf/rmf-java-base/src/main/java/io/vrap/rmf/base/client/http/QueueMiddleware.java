@@ -10,8 +10,8 @@ import java.util.function.Function;
 import dev.failsafe.Bulkhead;
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
-
 import dev.failsafe.spi.Scheduler;
+
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
@@ -23,7 +23,8 @@ public class QueueMiddleware implements Middleware, AutoCloseable {
         this(Scheduler.of(executorService), maxConnection, maxWaitTime);
     }
 
-    public QueueMiddleware(final ScheduledExecutorService executorService, final int maxConnection, final Duration maxWaitTime) {
+    public QueueMiddleware(final ScheduledExecutorService executorService, final int maxConnection,
+            final Duration maxWaitTime) {
         this(Scheduler.of(executorService), maxConnection, maxWaitTime);
     }
 

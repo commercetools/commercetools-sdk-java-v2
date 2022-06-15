@@ -9,8 +9,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.Timeout;
-
 import dev.failsafe.spi.Scheduler;
+
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.AutoCloseableService;
 
@@ -24,6 +24,7 @@ public class InMemoryTokenSupplier extends AutoCloseableService implements Refre
     public InMemoryTokenSupplier(TokenSupplier tokenSupplier) {
         this(Scheduler.DEFAULT, tokenSupplier);
     }
+
     public InMemoryTokenSupplier(ScheduledExecutorService executorService, TokenSupplier tokenSupplier) {
         this(Scheduler.of(executorService), tokenSupplier);
     }
@@ -34,7 +35,7 @@ public class InMemoryTokenSupplier extends AutoCloseableService implements Refre
 
     public InMemoryTokenSupplier(Scheduler scheduler, TokenSupplier tokenSupplier) {
         this.supplier = tokenSupplier;
-        this.failsafeExecutor = Failsafe.with(Timeout.<AuthenticationToken>of(Duration.ofSeconds(10))).with(scheduler);
+        this.failsafeExecutor = Failsafe.with(Timeout.<AuthenticationToken> of(Duration.ofSeconds(10))).with(scheduler);
     }
 
     public CompletableFuture<AuthenticationToken> getToken() {

@@ -10,6 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 
 import dev.failsafe.spi.Scheduler;
+
 import io.vrap.rmf.base.client.ApiHttpException;
 
 public interface RetryRequestMiddleware extends Middleware {
@@ -52,104 +53,117 @@ public interface RetryRequestMiddleware extends Middleware {
     }
 
     public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries) {
-        return new RetryMiddleware(scheduler, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, DEFAULT_RETRY_STATUS_CODES,
-                null);
+        return new RetryMiddleware(scheduler, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY,
+            DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final List<Integer> statusCodes) {
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries,
+            final List<Integer> statusCodes) {
         return new RetryMiddleware(scheduler, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, null);
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final List<Integer> statusCodes,
-            final List<Class<? extends Throwable>> failures) {
-        return new RetryMiddleware(scheduler, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, failures);
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        return new RetryMiddleware(scheduler, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes,
+            failures);
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay) {
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay,
+            final long maxDelay) {
         return new RetryMiddleware(scheduler, maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes) {
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay,
+            final long maxDelay, final List<Integer> statusCodes) {
         return new RetryMiddleware(scheduler, maxRetries, delay, maxDelay, statusCodes, null);
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay,
+            final long maxDelay, final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
         return new RetryMiddleware(scheduler, maxRetries, delay, maxDelay,
-                handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
-    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
-            final FailsafeRetryPolicyBuilderOptions fn) {
+    public static RetryRequestMiddleware of(final Scheduler scheduler, final int maxRetries, final long delay,
+            final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
         return new RetryMiddleware(scheduler, maxRetries, delay, maxDelay, fn);
     }
 
     public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, DEFAULT_RETRY_STATUS_CODES,
-                null);
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY,
+            DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final List<Integer> statusCodes) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, null);
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final List<Integer> statusCodes) {
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes,
+            null);
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final List<Integer> statusCodes,
-            final List<Class<? extends Throwable>> failures) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, failures);
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes,
+            failures);
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay) {
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes) {
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final List<Integer> statusCodes) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, statusCodes, null);
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay,
-                handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
-    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final FailsafeRetryPolicyBuilderOptions fn) {
+    public static RetryRequestMiddleware of(final ScheduledExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, fn);
     }
 
     public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, DEFAULT_RETRY_STATUS_CODES,
-                null);
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY,
+            DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final List<Integer> statusCodes) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, null);
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final List<Integer> statusCodes) {
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes,
+            null);
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final List<Integer> statusCodes,
-            final List<Class<? extends Throwable>> failures) {
-        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes, failures);
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        return new RetryMiddleware(executorService, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes,
+            failures);
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay) {
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES, null);
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes) {
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final List<Integer> statusCodes) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, statusCodes, null);
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay,
-                handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
+            handleFailures(failures).andThen(handleStatusCodes(statusCodes)));
     }
 
-    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
-            final FailsafeRetryPolicyBuilderOptions fn) {
+    public static RetryRequestMiddleware of(final ExecutorService executorService, final int maxRetries,
+            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
         return new RetryMiddleware(executorService, maxRetries, delay, maxDelay, fn);
     }
 

@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -16,6 +18,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.client.*;
 import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
+import dev.failsafe.spi.Scheduler;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
@@ -302,6 +305,81 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, List<Integer> statusCodes) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(
+                clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, List<Integer> statusCodes) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(
+                clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(
+                clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, delay, maxDelay, fn));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

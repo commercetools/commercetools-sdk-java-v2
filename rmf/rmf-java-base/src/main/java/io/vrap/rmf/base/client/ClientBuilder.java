@@ -5,12 +5,15 @@ import static java.util.Objects.requireNonNull;
 
 import java.net.URI;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import javax.annotation.Nullable;
 
+import dev.failsafe.spi.Scheduler;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
@@ -467,6 +470,84 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
         return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, List<Integer> statusCodes) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(
+                RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                        .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, List<Integer> statusCodes) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(
+                RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                        .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+    }
+
+    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+    }
+
+    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries));
+    }
+
+    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes));
+    }
+
+    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes, failures));
+    }
+
+    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(
+                RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                        .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+    }
+
+    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));
     }
 
     public ClientBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {

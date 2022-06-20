@@ -24,7 +24,7 @@ public class ProductTypeChangeDescriptionActionBuilder implements Builder<Produc
     private String description;
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public ProductTypeChangeDescriptionActionBuilder description(final String description) {

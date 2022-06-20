@@ -25,7 +25,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -35,7 +35,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public AttributeLocalizedEnumTypeBuilder values(
@@ -45,7 +45,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -58,7 +58,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public AttributeLocalizedEnumTypeBuilder plusValues(
@@ -72,7 +72,7 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public AttributeLocalizedEnumTypeBuilder withValues(

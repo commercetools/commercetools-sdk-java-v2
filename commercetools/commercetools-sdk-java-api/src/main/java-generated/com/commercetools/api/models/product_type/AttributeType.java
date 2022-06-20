@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeType
+ *  <p>Umbrellla type for specific attribute types discriminated by property <code>name</code>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

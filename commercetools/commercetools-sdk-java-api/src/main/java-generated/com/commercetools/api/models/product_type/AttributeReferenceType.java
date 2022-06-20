@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -21,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
- *             .referenceTypeId(ReferenceTypeId.CART)
+ *             .referenceTypeId(AttributeReferenceTypeId.CART)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,13 +32,13 @@ public interface AttributeReferenceType extends AttributeType {
     String REFERENCE = "reference";
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Name of the resource type that the value should reference.</p>
      */
     @NotNull
     @JsonProperty("referenceTypeId")
-    public ReferenceTypeId getReferenceTypeId();
+    public AttributeReferenceTypeId getReferenceTypeId();
 
-    public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
+    public void setReferenceTypeId(final AttributeReferenceTypeId referenceTypeId);
 
     public static AttributeReferenceType of() {
         return new AttributeReferenceTypeImpl();

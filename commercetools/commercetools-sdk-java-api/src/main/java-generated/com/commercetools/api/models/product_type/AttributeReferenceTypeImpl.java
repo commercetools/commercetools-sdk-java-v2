@@ -22,11 +22,11 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
 
     private String name;
 
-    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
+    private com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId;
 
     @JsonCreator
     AttributeReferenceTypeImpl(
-            @JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+            @JsonProperty("referenceTypeId") final com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         this.name = REFERENCE;
     }
@@ -44,14 +44,15 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
     }
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Name of the resource type that the value should reference.</p>
      */
 
-    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {
+    public com.commercetools.api.models.product_type.AttributeReferenceTypeId getReferenceTypeId() {
         return this.referenceTypeId;
     }
 
-    public void setReferenceTypeId(final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+    public void setReferenceTypeId(
+            final com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
     }
 

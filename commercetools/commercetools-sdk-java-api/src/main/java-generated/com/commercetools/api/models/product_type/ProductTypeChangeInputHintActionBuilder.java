@@ -27,7 +27,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
     private com.commercetools.api.models.product_type.TextInputHint newValue;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeInputHintActionBuilder attributeName(final String attributeName) {
@@ -36,7 +36,7 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
     }
 
     /**
-     *
+     *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      */
 
     public ProductTypeChangeInputHintActionBuilder newValue(

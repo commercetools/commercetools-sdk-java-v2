@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeAddLocalizedEnumValueAction
+ *  <p>Adds a localizable enum to the values of AttributeLocalizedEnumType. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAddLocalizedEnumValueAction, ModelBase {
@@ -47,7 +47,7 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
     }
 
     /**
-     *
+     *  <p>Value to append to the array.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getValue() {

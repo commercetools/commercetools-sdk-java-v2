@@ -28,7 +28,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      */
 
     public AttributeLocalizedEnumValueBuilder key(final String key) {
@@ -37,7 +37,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Descriptive, localized label of the value.</p>
      */
 
     public AttributeLocalizedEnumValueBuilder label(
@@ -47,7 +47,7 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Descriptive, localized label of the value.</p>
      */
 
     public AttributeLocalizedEnumValueBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

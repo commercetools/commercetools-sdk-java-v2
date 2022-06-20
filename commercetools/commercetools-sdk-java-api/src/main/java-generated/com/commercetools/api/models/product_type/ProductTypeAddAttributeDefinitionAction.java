@@ -33,7 +33,7 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
     String ADD_ATTRIBUTE_DEFINITION = "addAttributeDefinition";
 
     /**
-     *
+     *  <p>Value to append to <code>attributes</code>.</p>
      */
     @NotNull
     @Valid

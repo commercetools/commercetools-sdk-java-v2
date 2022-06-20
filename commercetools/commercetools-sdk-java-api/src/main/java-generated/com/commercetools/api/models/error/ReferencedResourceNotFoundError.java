@@ -34,7 +34,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     String REFERENCED_RESOURCE_NOT_FOUND = "ReferencedResourceNotFound";
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      */
     @NotNull
     @JsonProperty("typeId")

@@ -50,7 +50,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
 
     public String getName() {
@@ -58,7 +58,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
 
     public String getDescription() {
@@ -66,7 +66,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {

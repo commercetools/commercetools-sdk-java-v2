@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changes the <code>label</code> of a LocalizedEnumValue of an LocalizedEnumType FieldDefinition.</p>
+ *  <p>Changes the <code>label</code> of a LocalizedEnumValue of a LocalizedEnumType FieldDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -61,7 +61,7 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
     }
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      */
 
     public ReferenceExistsErrorBuilder referencedBy(

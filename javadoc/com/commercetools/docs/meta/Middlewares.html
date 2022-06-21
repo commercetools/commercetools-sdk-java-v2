@@ -88,12 +88,30 @@ loadScripts(document, 'script');</script>
     converts responses with a status code 400 or higher to exceptions. For creating the exceptions it uses a
     <a href="../../../../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error"><code>HttpExceptionFactory</code></a>.</p>
 
-    <div id="io-vrap-rmf-base-client-http-ErrorMiddlewareImpl-invoke-io-vrap-rmf-base-client-ApiHttpRequest--java-util-function-Function-%s" class=code-example><pre><code class='java'>return next.apply(request).thenApply(response -&gt; {
-    if (response.getStatusCode() &gt;= 400) {
-        throw exceptionFactory.create(request, response);
+    <div id="io-vrap-rmf-base-client-http-ErrorMiddlewareImpl-invoke-io-vrap-rmf-base-client-ApiHttpRequest--java-util-function-Function-%s" class=code-example><pre><code class='java'>if (exceptionMode == ExceptionMode.COMPLETION_EXCEPTION) {
+    return next.apply(request).thenApply(response -&gt; {
+        if (response.getStatusCode() &gt;= 400) {
+            throw exceptionFactory.create(request, response);
+        }
+        return response;
+    });
+}
+
+CompletableFuture&lt;ApiHttpResponse&lt;byte[]&gt;&gt; result = new CompletableFuture&lt;&gt;();
+next.apply(request).whenComplete((response, throwable) -&gt; {
+    if (throwable != null) {
+        Throwable unwrap = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+        result.completeExceptionally(unwrap);
     }
-    return response;
+    if (response != null) {
+        if (response.getStatusCode() &gt;= 400) {
+            result.completeExceptionally(exceptionFactory.create(request, response));
+        }
+    }
+    result.complete(response);
 });
+
+return result;
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/ErrorMiddlewareImpl.java" target="_blank">test code</a>.</pre></div>
 
     <h3>OAuthMiddleware</h3>

@@ -70,7 +70,8 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             final CircuitBreaker<ApiHttpResponse<byte[]>> circuitBreaker = CircuitBreaker
                     .<ApiHttpResponse<byte[]>> builder()
                     .handleIf((response, throwable) -> {
-                        if (throwable.getCause() instanceof AuthException) {
+                        Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+                        if (cause instanceof AuthException) {
                             return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
                         }
                         return response.getStatusCode() == 400;

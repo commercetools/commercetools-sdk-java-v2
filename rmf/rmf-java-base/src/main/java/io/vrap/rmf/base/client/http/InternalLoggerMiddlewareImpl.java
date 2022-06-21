@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client.http;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 
 import io.vrap.rmf.base.client.*;
@@ -87,7 +88,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
-                if (throwable.getCause() instanceof ApiHttpException) {
+                Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+                if (cause instanceof ApiHttpException) {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
                             .getResponse();
                     final Level level = exceptionLogEvents.entrySet()

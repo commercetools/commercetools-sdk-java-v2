@@ -3,6 +3,8 @@ package commercetools.request_errors;
 
 import static commercetools.category.CategoryFixtures.*;
 
+import java.util.concurrent.CompletionException;
+
 import com.commercetools.api.models.error.ErrorResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -35,7 +37,8 @@ public class CategoryErrorHandlingIntegrationTests {
                 .get()
                 .execute()
                 .exceptionally(throwable -> {
-                    if (throwable.getCause() instanceof NotFoundException) {
+                    Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+                    if (cause instanceof NotFoundException) {
                         NotFoundException apiHttpException = (NotFoundException) throwable.getCause();
                         Assertions.assertEquals(apiHttpException.getStatusCode(), 404);
                     }
@@ -52,7 +55,8 @@ public class CategoryErrorHandlingIntegrationTests {
                     .delete()
                     .execute()
                     .exceptionally(throwable -> {
-                        if (throwable.getCause() instanceof BadRequestException) {
+                        Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+                        if (cause instanceof BadRequestException) {
                             BadRequestException apiHttpException = (BadRequestException) throwable.getCause();
                             ErrorResponse errorResponse = apiHttpException.getBodyAs(ErrorResponse.class);
                             Assertions.assertEquals(errorResponse.getStatusCode(), HttpStatusCode.BAD_REQUEST_400);

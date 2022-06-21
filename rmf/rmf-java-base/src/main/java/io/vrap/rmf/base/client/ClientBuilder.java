@@ -422,6 +422,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         return withErrorMiddleware(() -> errorMiddleware);
     }
 
+    public ClientBuilder withErrorMiddleware(ErrorMiddleware.ExceptionMode exceptionMode) {
+        return withErrorMiddleware(() -> ErrorMiddleware.of(httpExceptionFactory.get(), exceptionMode));
+    }
+
     public ClientBuilder addNotFoundExceptionMiddleware() {
         return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of());
     }

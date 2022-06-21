@@ -10,6 +10,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 
+import io.vrap.rmf.base.client.http.ErrorMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {
@@ -26,7 +27,8 @@ public class CommercetoolsTestUtils {
         ApiRootBuilder builder = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    authURL, apiUrl);
+                    authURL, apiUrl)
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
         projectApiRoot = builder.build(getProjectKey());
     }
 

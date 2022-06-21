@@ -238,6 +238,10 @@ public class ApiRootBuilder {
         return with(ClientBuilder::withErrorMiddleware);
     }
 
+    public ApiRootBuilder withErrorMiddleware(ErrorMiddleware.ExceptionMode exceptionMode) {
+        return with(clientBuilder -> clientBuilder.withErrorMiddleware(exceptionMode));
+    }
+
     public ApiRootBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {
         return with(clientBuilder -> clientBuilder.withErrorMiddleware(errorMiddleware));
     }

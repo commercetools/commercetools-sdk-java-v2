@@ -68,5 +68,4 @@ public class TypeFixtures {
 
         return type;
     }
-
 }

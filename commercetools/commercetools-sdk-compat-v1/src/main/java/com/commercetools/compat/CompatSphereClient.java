@@ -196,37 +196,38 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
                         HttpHeaders.ofMapEntryList(response.getHeaders().getHeaders())))
                     .thenApplyAsync(sphereRequest::deserialize);
         }
-        return compatRequest.send()
+        final CompletableFuture<T> result = new CompletableFuture<>();
+        compatRequest.send()
                 .thenApply(response -> HttpResponse.of(response.getStatusCode(), response.getBody(), httpRequest,
                     HttpHeaders.ofMapEntryList(response.getHeaders().getHeaders())))
-                .thenApplyAsync(httpResponse -> {
+                .whenComplete((httpResponse, throwable) -> {
+                    if (throwable != null) {
+                        Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+                        if (cause instanceof ApiHttpException) {
+                            ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
+                            if (errorResponse != null) {
+                                HttpResponse httpErrorResponse = HttpResponse.of(errorResponse.getStatusCode(),
+                                    errorResponse.getBody(), httpRequest,
+                                    HttpHeaders.ofMapEntryList(errorResponse.getHeaders().getHeaders()));
+                                Throwable e = createExceptionFor(httpErrorResponse, sphereRequest, mapper, projectKey,
+                                    httpRequest);
+                                result.completeExceptionally(e);
+                            }
+                            else {
+                                result.completeExceptionally(cause);
+                            }
+                        }
+                    }
                     try {
-                        return sphereRequest.deserialize(httpResponse);
+                        result.complete(sphereRequest.deserialize(httpResponse));
                     }
                     catch (final JsonException e) {
                         final byte[] bytes = httpResponse.getResponseBody();
                         e.addNote("Cannot parse " + bytesToString(bytes));
-                        throw e;
+                        result.completeExceptionally(e);
                     }
-                })
-                .exceptionally((throwable) -> {
-                    Throwable cause = throwable.getCause();
-                    if (cause instanceof ApiHttpException) {
-                        ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
-                        if (errorResponse != null) {
-                            HttpResponse httpResponse = HttpResponse.of(errorResponse.getStatusCode(),
-                                errorResponse.getBody(), httpRequest,
-                                HttpHeaders.ofMapEntryList(errorResponse.getHeaders().getHeaders()));
-                            Throwable e = createExceptionFor(httpResponse, sphereRequest, mapper, projectKey,
-                                httpRequest);
-                            throw new CompletionException(e);
-                        }
-                    }
-                    if (throwable instanceof CompletionException) {
-                        throw new CompletionException(cause);
-                    }
-                    throw new CompletionException(throwable);
                 });
+        return result;
     }
 
     public enum ExceptionMode {

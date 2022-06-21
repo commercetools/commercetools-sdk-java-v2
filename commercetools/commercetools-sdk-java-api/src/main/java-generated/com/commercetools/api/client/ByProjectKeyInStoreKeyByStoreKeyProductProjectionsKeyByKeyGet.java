@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a product by its ID from a specific Store.</p>
+ *  <p>Gets the current or staged representation of a Product by its key from the specified Store.</p>
  *
  * <hr>
  * <div class=code-example>

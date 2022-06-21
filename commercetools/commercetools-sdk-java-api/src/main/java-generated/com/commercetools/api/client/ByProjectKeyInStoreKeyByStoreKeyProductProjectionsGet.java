@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>You can use the product projections query endpoint to get the current or staged representations of Products. When used with an API client that has the view_published_products:{projectKey} scope, this endpoint only returns published (current) product projections.</p>
+ *  <p>Use this endpoint to get the current or staged projection of Products in the Store specified by <code>storeKey</code>. When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *
  * <hr>
  * <div class=code-example>

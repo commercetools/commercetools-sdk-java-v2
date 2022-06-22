@@ -55,21 +55,21 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public String getId();
 
     /**
-     *  <p>The current version of the shipping method.</p>
+     *  <p>Current version of the ShippingMethod.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -97,35 +97,35 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public String getKey();
 
     /**
-     *
+     *  <p>Name of the ShippingMethod.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *
+     *  <p>Localized name of the ShippingMethod.</p>
      */
     @Valid
     @JsonProperty("localizedName")
     public LocalizedString getLocalizedName();
 
     /**
-     *
+     *  <p>Description of the ShippingMethod.</p>
      */
-
+    @Deprecated
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     *
+     *  <p>Localized description of the ShippingMethod.</p>
      */
     @Valid
     @JsonProperty("localizedDescription")
     public LocalizedString getLocalizedDescription();
 
     /**
-     *
+     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
      */
     @NotNull
     @Valid
@@ -133,7 +133,7 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
      */
     @NotNull
     @Valid
@@ -141,21 +141,21 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     public List<ZoneRate> getZoneRates();
 
     /**
-     *  <p>One shipping method in a project can be default.</p>
+     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
      */
     @NotNull
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
     /**
-     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
      */
 
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-     *
+     *  <p>Custom Fields of the ShippingMethod.</p>
      */
     @Valid
     @JsonProperty("custom")
@@ -179,6 +179,7 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
 
     public void setLocalizedName(final LocalizedString localizedName);
 
+    @Deprecated
     public void setDescription(final String description);
 
     public void setLocalizedDescription(final LocalizedString localizedDescription);

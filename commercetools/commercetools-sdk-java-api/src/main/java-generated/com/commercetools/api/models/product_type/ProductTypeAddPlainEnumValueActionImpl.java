@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeAddPlainEnumValueAction
+ *  <p>Adds an enum to the values of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeEnumType AttributeDefinition.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPlainEnumValueAction, ModelBase {
@@ -47,7 +47,7 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
     }
 
     /**
-     *
+     *  <p>Value to append to the array.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributePlainEnumValue getValue() {

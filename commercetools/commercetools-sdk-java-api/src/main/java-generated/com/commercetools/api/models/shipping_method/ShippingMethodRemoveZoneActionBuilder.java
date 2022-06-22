@@ -25,7 +25,7 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
     /**
-     *
+     *  <p>Value to remove from <code>zoneRates</code>.</p>
      */
 
     public ShippingMethodRemoveZoneActionBuilder zone(
@@ -35,7 +35,7 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>zoneRates</code>.</p>
      */
 
     public ShippingMethodRemoveZoneActionBuilder zone(

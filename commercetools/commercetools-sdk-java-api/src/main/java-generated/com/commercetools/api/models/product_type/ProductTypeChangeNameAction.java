@@ -32,7 +32,7 @@ public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
     @NotNull
     @JsonProperty("name")

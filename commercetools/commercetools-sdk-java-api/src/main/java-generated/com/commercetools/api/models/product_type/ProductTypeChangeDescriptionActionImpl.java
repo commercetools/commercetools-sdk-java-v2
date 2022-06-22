@@ -43,7 +43,7 @@ public class ProductTypeChangeDescriptionActionImpl implements ProductTypeChange
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public String getDescription() {

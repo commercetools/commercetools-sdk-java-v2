@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeInputHintAction
+ *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     String CHANGE_INPUT_HINT = "changeInputHint";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      */
     @NotNull
     @JsonProperty("newValue")

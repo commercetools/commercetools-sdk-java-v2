@@ -32,7 +32,7 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     String SET_LOCALIZED_NAME = "setLocalizedName";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("localizedName")

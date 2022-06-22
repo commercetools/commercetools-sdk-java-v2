@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeEnumType
+ *  <p>Attribute type for plain enum values. Useful for predefined language-agnostic values selectable in drop downs when only one value should be selected. Use AttributeSetType of AttributeEnumType instead if multiple values can be selected from the list.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface AttributeEnumType extends AttributeType {
     String ENUM = "enum";
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
     @NotNull
     @Valid

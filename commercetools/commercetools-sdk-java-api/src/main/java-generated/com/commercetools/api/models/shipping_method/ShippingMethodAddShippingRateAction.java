@@ -35,7 +35,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     String ADD_SHIPPING_RATE = "addShippingRate";
 
     /**
-     *
+     *  <p>Zone to which the ShippingRate should be added.</p>
      */
     @NotNull
     @Valid
@@ -43,7 +43,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     public ZoneResourceIdentifier getZone();
 
     /**
-     *
+     *  <p>Value to add to <code>shippingRates</code>.</p>
      */
     @NotNull
     @Valid

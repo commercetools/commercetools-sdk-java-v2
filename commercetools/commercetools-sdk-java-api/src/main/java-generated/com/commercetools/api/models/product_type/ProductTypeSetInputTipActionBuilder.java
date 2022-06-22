@@ -30,7 +30,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     private com.commercetools.api.models.common.LocalizedString inputTip;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeSetInputTipActionBuilder attributeName(final String attributeName) {
@@ -39,7 +39,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(
@@ -49,7 +49,7 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductTypeSetInputTipActionBuilder inputTip(

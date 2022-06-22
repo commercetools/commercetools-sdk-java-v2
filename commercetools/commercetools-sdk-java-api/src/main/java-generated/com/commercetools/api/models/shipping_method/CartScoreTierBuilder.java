@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
-    private Double score;
+    private Integer score;
 
     @Nullable
     private com.commercetools.api.models.common.Money price;
@@ -36,17 +36,16 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     private Boolean isMatching;
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
      */
 
-    public CartScoreTierBuilder score(final Double score) {
+    public CartScoreTierBuilder score(final Integer score) {
         this.score = score;
         return this;
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
      */
 
     public CartScoreTierBuilder price(
@@ -56,8 +55,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
      */
 
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
@@ -66,7 +64,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
      */
 
     public CartScoreTierBuilder priceFunction(
@@ -77,7 +75,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
      */
 
     public CartScoreTierBuilder priceFunction(
@@ -87,7 +85,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     public CartScoreTierBuilder isMatching(@Nullable final Boolean isMatching) {
@@ -95,7 +93,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
-    public Double getScore() {
+    public Integer getScore() {
         return this.score;
     }
 

@@ -54,7 +54,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
     /**
-     *  <p>Unique identifier for the ProductType.</p>
+     *  <p>Unique identifier of the ProductType.</p>
      */
 
     public ProductTypeBuilder id(final String id) {
@@ -63,7 +63,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *  <p>The current version of the product type.</p>
+     *  <p>Current version of the ProductType.</p>
      */
 
     public ProductTypeBuilder version(final Long version) {
@@ -72,7 +72,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ProductType was initially created.</p>
      */
 
     public ProductTypeBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -81,7 +81,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
      */
 
     public ProductTypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -138,7 +138,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
 
     public ProductTypeBuilder name(final String name) {
@@ -147,7 +147,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
 
     public ProductTypeBuilder description(final String description) {
@@ -156,7 +156,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public ProductTypeBuilder attributes(
@@ -166,7 +166,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public ProductTypeBuilder attributes(
@@ -176,7 +176,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -189,7 +189,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public ProductTypeBuilder plusAttributes(
@@ -203,7 +203,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public ProductTypeBuilder withAttributes(

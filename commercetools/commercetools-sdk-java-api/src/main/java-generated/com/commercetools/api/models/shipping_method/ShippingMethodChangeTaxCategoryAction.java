@@ -34,7 +34,7 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     String CHANGE_TAX_CATEGORY = "changeTaxCategory";
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @Valid

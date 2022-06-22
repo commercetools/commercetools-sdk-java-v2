@@ -15,14 +15,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartScoreTier
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTierImpl implements CartScoreTier, ModelBase {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
-    private Double score;
+    private Integer score;
 
     private com.commercetools.api.models.common.Money price;
 
@@ -31,7 +31,7 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     private Boolean isMatching;
 
     @JsonCreator
-    CartScoreTierImpl(@JsonProperty("score") final Double score,
+    CartScoreTierImpl(@JsonProperty("score") final Integer score,
             @JsonProperty("price") final com.commercetools.api.models.common.Money price,
             @JsonProperty("priceFunction") final com.commercetools.api.models.shipping_method.PriceFunction priceFunction,
             @JsonProperty("isMatching") final Boolean isMatching) {
@@ -47,7 +47,7 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
@@ -55,16 +55,15 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
      */
 
-    public Double getScore() {
+    public Integer getScore() {
         return this.score;
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -72,7 +71,7 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
      */
 
     public com.commercetools.api.models.shipping_method.PriceFunction getPriceFunction() {
@@ -80,14 +79,14 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     public Boolean getIsMatching() {
         return this.isMatching;
     }
 
-    public void setScore(final Double score) {
+    public void setScore(final Integer score) {
         this.score = score;
     }
 

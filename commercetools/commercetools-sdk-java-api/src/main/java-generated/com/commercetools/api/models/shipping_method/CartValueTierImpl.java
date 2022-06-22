@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartValueTier
+ *  <p>Used when the ShippingRate maps to the sum of LineItem Prices. The value of the Cart is used to select a tier. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the Cart. Tiers contain the <code>centAmount</code> (a value of <code>100</code> in the currency <code>USD</code> corresponds to <code>$ 1.00</code>), and start at <code>1</code>.'</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartValueTierImpl implements CartValueTier, ModelBase {
@@ -43,7 +43,7 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
@@ -51,7 +51,7 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Minimum total price of a Cart for which a shipping rate applies.</p>
      */
 
     public Long getMinimumCentAmount() {
@@ -59,8 +59,7 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Fixed shipping rate Price for a CartValue.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -68,7 +67,7 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
     }
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     public Boolean getIsMatching() {

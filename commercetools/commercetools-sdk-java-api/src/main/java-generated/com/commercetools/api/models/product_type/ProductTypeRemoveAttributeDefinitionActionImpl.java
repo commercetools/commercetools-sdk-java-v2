@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeRemoveAttributeDefinitionAction
+ *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
+ *  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveAttributeDefinitionActionImpl
@@ -44,7 +45,7 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
     }
 
     /**
-     *  <p>The name of the attribute to remove.</p>
+     *  <p>Name of the Attribute to remove.</p>
      */
 
     public String getName() {

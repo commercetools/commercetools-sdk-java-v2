@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeTextType
+ *  <p>Attribute type for plain text values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

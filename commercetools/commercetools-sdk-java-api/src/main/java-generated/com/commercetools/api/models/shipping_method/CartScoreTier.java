@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartScoreTier
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,35 +34,34 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     String CART_SCORE = "CartScore";
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
      */
     @NotNull
     @JsonProperty("score")
-    public Double getScore();
+    public Integer getScore();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
      */
     @Valid
     @JsonProperty("price")
     public Money getPrice();
 
     /**
-     *
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
      */
     @Valid
     @JsonProperty("priceFunction")
     public PriceFunction getPriceFunction();
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
-    public void setScore(final Double score);
+    public void setScore(final Integer score);
 
     public void setPrice(final Money price);
 

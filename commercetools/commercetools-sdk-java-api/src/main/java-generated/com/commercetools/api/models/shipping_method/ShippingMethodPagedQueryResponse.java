@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShippingMethodPagedQueryResponse
+ *  <p>PagedQueryResult with <code>results</code> containing an array of ShippingMethod.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,14 +40,14 @@ public interface ShippingMethodPagedQueryResponse
     public Long getLimit();
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     @JsonProperty("total")
@@ -61,7 +61,7 @@ public interface ShippingMethodPagedQueryResponse
     public Long getOffset();
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
     @NotNull
     @Valid

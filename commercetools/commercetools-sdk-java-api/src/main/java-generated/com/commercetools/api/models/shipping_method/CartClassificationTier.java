@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartClassificationTier
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,15 +35,14 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *
+     *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
      */
     @NotNull
     @JsonProperty("value")
     public String getValue();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Fixed shipping rate for the selected classification.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +50,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     @JsonProperty("isMatching")

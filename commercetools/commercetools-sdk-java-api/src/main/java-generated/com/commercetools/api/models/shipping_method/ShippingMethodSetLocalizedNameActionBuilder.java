@@ -27,7 +27,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(
@@ -37,7 +37,7 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ShippingMethodSetLocalizedNameActionBuilder localizedName(

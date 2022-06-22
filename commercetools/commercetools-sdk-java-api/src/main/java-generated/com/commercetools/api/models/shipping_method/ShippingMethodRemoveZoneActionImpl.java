@@ -44,7 +44,7 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>zoneRates</code>.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

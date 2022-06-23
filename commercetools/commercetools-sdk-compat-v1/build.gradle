@@ -1,3 +1,12 @@
+apply plugin: "me.champeau.jmh"
+
+jmh {
+    iterations = 10
+    benchmarkMode = ['thrpt', 'avgt']
+    threads = 25
+    fork = 3
+    timeOnIteration = '1s'
+}
 dependencies {
 
     api project(':rmf:rmf-java-base')
@@ -12,6 +21,8 @@ dependencies {
     api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version versions.ctpJvmSdk
     api "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
 
+    jmhImplementation project(':commercetools:commercetools-async-http-client')
+    jmhImplementation project(':commercetools:commercetools-apachehttp-client')
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version versions.ctpJvmSdk
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-convenience" version versions.ctpJvmSdk

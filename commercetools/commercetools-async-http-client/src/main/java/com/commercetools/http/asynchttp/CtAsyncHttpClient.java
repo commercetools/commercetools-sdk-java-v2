@@ -8,14 +8,11 @@ import java.util.function.Supplier;
 
 import io.netty.handler.codec.http.HttpHeaderValues;
 import io.netty.util.AsciiString;
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
 
 import org.asynchttpclient.*;
 
-public class CtAsyncHttpClient implements VrapHttpClient, AutoCloseable {
+public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient, AutoCloseable {
     public static final int MAX_REQUESTS = 64;
 
     private final AsyncHttpClient asyncHttpClient;
@@ -58,7 +55,7 @@ public class CtAsyncHttpClient implements VrapHttpClient, AutoCloseable {
         final Request request = asAhcRequest(httpRequest);
         final CompletableFuture<Response> future = new CompletableFuture<>();
         asyncHttpClient.executeRequest(request, new ResponseAsyncCompletionHandler(future));
-        return future.thenApplyAsync(this::convert);
+        return future.thenApplyAsync(this::convert, executor());
     }
 
     private ApiHttpResponse<byte[]> convert(final Response response) {
@@ -94,7 +91,7 @@ public class CtAsyncHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void closeDelegate() throws Exception {
         asyncHttpClient.close();
     }
 }

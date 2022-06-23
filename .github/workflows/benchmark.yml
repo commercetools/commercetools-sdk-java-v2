@@ -1,0 +1,28 @@
+on:
+    - workflow_dispatch
+
+name: Benchmark
+
+jobs:
+    benchmark:
+        name: Benchmark
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Java
+              uses: actions/setup-java@v3
+              with:
+                  distribution: 'temurin'
+                  java-version: '8'
+
+            - name: Run benchmark
+              run: ./gradlew clean benchmark
+              env:
+                  CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
+                  CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+                  CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY_PR }}
+                  CTP_JVM_SDK_LOG_LEVEL: OFF

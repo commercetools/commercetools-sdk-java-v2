@@ -16,6 +16,8 @@ plugins {
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
     id 'com.github.jk1.dependency-license-report' version '2.0'
+
+    id "me.champeau.jmh" version "0.6.6"
 }
 
 configurations {
@@ -179,6 +181,15 @@ def documentationProjects= [
         ":commercetools:internal-docs",
         ":rmf:okhttp-client"
 ]
+
+allprojects {
+    project -> {
+        if (project.file('src/jmh').exists())
+            task benchmark(type: Task) {
+                dependsOn 'jmh'
+            }
+    }
+}
 
 task alljavadoc(type: Javadoc) {
     source documentationProjects.collect { project(it).sourceSets.main.allJava }

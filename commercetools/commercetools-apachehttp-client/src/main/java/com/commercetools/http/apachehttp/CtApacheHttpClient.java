@@ -33,7 +33,7 @@ import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
 import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
-public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
+public class CtApacheHttpClient extends HttpClientBase {
     public static final int MAX_REQUESTS = 64;
 
     private final CloseableHttpAsyncClient apacheHttpClient;
@@ -121,7 +121,7 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
         final CompletableFuture<SimpleHttpResponse> apacheResponseFuture = new CompletableFuture<>();
         apacheHttpClient.execute(toApacheRequest(request), SimpleResponseConsumer.create(),
             new CompletableFutureCallbackAdapter<>(apacheResponseFuture));
-        return apacheResponseFuture.thenApply(CtApacheHttpClient::toResponse);
+        return apacheResponseFuture.thenApplyAsync(CtApacheHttpClient::toResponse, executor());
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final SimpleHttpResponse response) {
@@ -154,7 +154,7 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void closeDelegate() throws Exception {
         apacheHttpClient.close();
     }
 }

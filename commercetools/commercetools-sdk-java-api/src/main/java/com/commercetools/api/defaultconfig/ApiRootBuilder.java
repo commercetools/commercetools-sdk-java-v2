@@ -46,6 +46,10 @@ public class ApiRootBuilder {
         return new ApiRootBuilder(ClientBuilder.of());
     }
 
+    public static ApiRootBuilder of(ExecutorService httpClientExecutorService) {
+        return new ApiRootBuilder(ClientBuilder.of(httpClientExecutorService));
+    }
+
     public static ApiRootBuilder of(final ApiHttpClient httpClient) {
         return new ApiRootBuilder(ClientBuilder.of(httpClient));
     }
@@ -130,6 +134,14 @@ public class ApiRootBuilder {
     public ApiRootBuilder defaultClient(final URI apiEndpoint) {
         return with(clientBuilder -> clientBuilder.defaultClient(apiEndpoint)
                 .withInternalLoggerFactory(ApiInternalLoggerFactory::get));
+    }
+
+    public ApiRootBuilder withOAuthExecutorService(final ExecutorService executorService) {
+        return with(clientBuilder -> clientBuilder.withOAuthExecutorService(executorService));
+    }
+
+    public ApiRootBuilder withOAuthExecutorService(final Supplier<ExecutorService> executorService) {
+        return with(clientBuilder -> clientBuilder.withOAuthExecutorService(executorService));
     }
 
     public ApiRootBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {

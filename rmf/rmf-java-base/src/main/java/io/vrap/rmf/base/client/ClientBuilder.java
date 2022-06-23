@@ -49,12 +49,17 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ResponseSerializer> serializer;
     private Supplier<HttpExceptionFactory> httpExceptionFactory;
 
+    private Supplier<ExecutorService> oauthExecutorService;
     /**
      * <p>Creates a default client builder</p>
      * @return ClientBuilder instance
      */
     public static ClientBuilder of() {
         return new ClientBuilder();
+    }
+
+    public static ClientBuilder of(ExecutorService httpClientExecutorService) {
+        return new ClientBuilder(httpClientExecutorService);
     }
 
     /**
@@ -97,6 +102,17 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder() {
         this.httpClient = HttpClientSupplier.of().get();
+        this.oauthHttpClient = httpClient;
+        this.stack = stackSupplier();
+        ResponseSerializer serializer = ResponseSerializer.of();
+        this.serializer = () -> serializer;
+        this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
+        this.useAuthCircuitBreaker = false;
+        this.authRetries = 1;
+    }
+
+    private ClientBuilder(ExecutorService httpClientExecutorService) {
+        this.httpClient = HttpClientSupplier.of(httpClientExecutorService).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
         ResponseSerializer serializer = ResponseSerializer.of();
@@ -214,6 +230,26 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     public ClientBuilder withHttpExceptionFactory(final Supplier<HttpExceptionFactory> factory) {
         this.httpExceptionFactory = factory;
+        return this;
+    }
+
+    /**
+     * configures an ExecutorService to be used for the Middlewares
+     * @param executorService supplier of the executor service to be used
+     * @return
+     */
+    public ClientBuilder withOAuthExecutorService(final Supplier<ExecutorService> executorService) {
+        this.oauthExecutorService = executorService;
+        return this;
+    }
+
+    /**
+     * configures an ExecutorService to be used for the Middlewares
+     * @param executorService executor service to be used
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withOAuthExecutorService(final ExecutorService executorService) {
+        this.oauthExecutorService = () -> executorService;
         return this;
     }
 
@@ -359,7 +395,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     private TokenSupplier createInMemoryTokenSupplier(TokenSupplier tokenSupplier) {
-        return new InMemoryTokenSupplier(tokenSupplier);
+        return Optional.ofNullable(oauthExecutorService)
+                .map(executorService -> new InMemoryTokenSupplier(executorService.get(), tokenSupplier))
+                .orElse(new InMemoryTokenSupplier(tokenSupplier));
     }
 
     private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,
@@ -570,7 +608,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withTokenSupplier(final Supplier<TokenSupplier> tokenSupplier) {
         return withOAuthMiddleware(() -> {
             final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier.get());
-            return OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker);
+            return Optional.ofNullable(oauthExecutorService)
+                    .map(executorService -> OAuthMiddleware.of(executorService.get(), oAuthHandler, authRetries,
+                        useAuthCircuitBreaker))
+                    .orElse(OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));
         });
     }
 

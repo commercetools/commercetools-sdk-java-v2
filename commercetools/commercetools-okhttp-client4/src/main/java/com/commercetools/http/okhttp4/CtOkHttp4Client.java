@@ -11,11 +11,11 @@ import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
 
-import io.vrap.rmf.base.client.*;
 import okhttp3.OkHttpClient;
 import okio.GzipSource;
 import okio.Okio;
 
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 
 public class CtOkHttp4Client extends HttpClientBase {

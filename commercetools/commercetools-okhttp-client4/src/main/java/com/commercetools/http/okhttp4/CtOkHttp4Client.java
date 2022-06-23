@@ -11,17 +11,14 @@ import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
 
+import io.vrap.rmf.base.client.*;
 import okhttp3.OkHttpClient;
 import okio.GzipSource;
 import okio.Okio;
 
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.utils.Utils;
 
-public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
+public class CtOkHttp4Client extends HttpClientBase {
 
     public static final int MAX_REQUESTS = 64;
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
@@ -89,7 +86,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
-        return makeRequest(okHttpClient, toRequest(request)).thenApply(CtOkHttp4Client::toResponse);
+        return makeRequest(okHttpClient, toRequest(request)).thenApplyAsync(CtOkHttp4Client::toResponse, executor());
 
     }
 
@@ -172,7 +169,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     }
 
     @Override
-    public void close() throws IOException {
+    public void closeDelegate() throws IOException {
         okHttpClient.dispatcher().executorService().shutdown();
         okHttpClient.connectionPool().evictAll();
         if (okHttpClient.cache() != null)

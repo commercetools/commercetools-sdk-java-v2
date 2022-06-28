@@ -46,7 +46,7 @@
 <span class="source-line-no">033</span><span id="line.33">import org.apache.hc.core5.reactor.IOReactorStatus;</span>
 <span class="source-line-no">034</span><span id="line.34">import org.apache.hc.core5.reactor.ssl.TlsDetails;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {</span>
+<span class="source-line-no">036</span><span id="line.36">public class CtApacheHttpClient extends HttpClientBase {</span>
 <span class="source-line-no">037</span><span id="line.37">    public static final int MAX_REQUESTS = 64;</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    private final CloseableHttpAsyncClient apacheHttpClient;</span>
@@ -134,7 +134,7 @@
 <span class="source-line-no">121</span><span id="line.121">        final CompletableFuture&lt;SimpleHttpResponse&gt; apacheResponseFuture = new CompletableFuture&lt;&gt;();</span>
 <span class="source-line-no">122</span><span id="line.122">        apacheHttpClient.execute(toApacheRequest(request), SimpleResponseConsumer.create(),</span>
 <span class="source-line-no">123</span><span id="line.123">            new CompletableFutureCallbackAdapter&lt;&gt;(apacheResponseFuture));</span>
-<span class="source-line-no">124</span><span id="line.124">        return apacheResponseFuture.thenApply(CtApacheHttpClient::toResponse);</span>
+<span class="source-line-no">124</span><span id="line.124">        return apacheResponseFuture.thenApplyAsync(CtApacheHttpClient::toResponse, executor());</span>
 <span class="source-line-no">125</span><span id="line.125">    }</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
 <span class="source-line-no">127</span><span id="line.127">    private static ApiHttpResponse&lt;byte[]&gt; toResponse(final SimpleHttpResponse response) {</span>
@@ -167,7 +167,7 @@
 <span class="source-line-no">154</span><span id="line.154">    }</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
 <span class="source-line-no">156</span><span id="line.156">    @Override</span>
-<span class="source-line-no">157</span><span id="line.157">    public void close() throws Exception {</span>
+<span class="source-line-no">157</span><span id="line.157">    public void closeDelegate() throws Exception {</span>
 <span class="source-line-no">158</span><span id="line.158">        apacheHttpClient.close();</span>
 <span class="source-line-no">159</span><span id="line.159">    }</span>
 <span class="source-line-no">160</span><span id="line.160">}</span>

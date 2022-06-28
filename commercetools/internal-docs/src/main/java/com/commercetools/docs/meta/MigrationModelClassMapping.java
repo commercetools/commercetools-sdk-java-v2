@@ -1,5 +1,5 @@
-package com.commercetools.docs.meta;
 
+package com.commercetools.docs.meta;
 
 /**
  *

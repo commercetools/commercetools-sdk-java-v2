@@ -53,7 +53,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             println("# Classes: " + result.filter { (_, value) -> value.sdkV2Classes.isEmpty()  }.size)
             writer.appendLine("/**")
             writer.appendLine(" *")
-            writer.appendLine(" * <h2>Mapping of classes from SDK v1 to v2</h2>")
+            writer.appendLine(" * <h2>Mapping of model classes from SDK v1 to v2</h2>")
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")

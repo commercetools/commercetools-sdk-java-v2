@@ -3,7 +3,7 @@ package com.commercetools.docs.meta;
 
 /**
  *
- * <h2>Mapping of classes from SDK v1 to v2</h2>
+ * <h2>Mapping of model classes from SDK v1 to v2</h2>
  *
  * <table>
  * <caption></caption>

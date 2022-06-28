@@ -56,6 +56,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" * <h2>Mapping of classes from SDK v1 to v2</h2>")
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
+            writer.appendLine(" * <caption>class mapping</caption>")
             writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
 
             result.filter { (_, value) -> value.sdkV2Classes.isNotEmpty()  }
@@ -72,6 +73,8 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" * <h2>Classes with no representation in the v2 SDK</h2>")
             writer.appendLine(" *")
             writer.appendLine(" * <table>")
+            writer.appendLine(" * <caption>non represented classes</caption>")
+            writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
             result.filter { (_, value) -> value.sdkV2Classes.isEmpty()  }.forEach { (key, value) ->
                 run {
                     writer.appendLine(" * <tr>")
@@ -86,6 +89,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" *")
             writer.appendLine(" * Please be aware that shows to which package a class may have been moved based on the source package")
             writer.appendLine(" * <table>")
+            writer.appendLine(" * <caption>package name changes</caption>")
             writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")
 
             result.filter { (_, value) -> value.sdkV2Classes.isNotEmpty()  }

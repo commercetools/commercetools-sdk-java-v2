@@ -6,6 +6,7 @@ package com.commercetools.docs.meta;
  * <h2>Mapping of classes from SDK v1 to v2</h2>
  *
  * <table>
+ * <caption>class mapping</caption>
  * <tr><th>v1</td><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient.ApiClient}</td>
@@ -2640,6 +2641,8 @@ package com.commercetools.docs.meta;
  * <h2>Classes with no representation in the v2 SDK</h2>
  *
  * <table>
+ * <caption>non represented classes</caption>
+ * <tr><th>v1</td><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.CartDiscountPredicate}</td>
  *   <td>n/a</td>
@@ -2746,6 +2749,7 @@ package com.commercetools.docs.meta;
  *
  * Please be aware that shows to which package a class may have been moved based on the source package
  * <table>
+ * <caption>package name changes</caption>
  * <tr><th>v1</td><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient}</td>

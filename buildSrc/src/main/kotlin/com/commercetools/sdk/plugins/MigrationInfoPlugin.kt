@@ -86,7 +86,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             writer.appendLine(" *")
             writer.appendLine(" * <h2>Package name changes</h2>")
             writer.appendLine(" *")
-            writer.appendLine(" * Please be aware that shows to which package a class may have been moved based on the source package")
+            writer.appendLine(" * Please be aware this list shows to which package a class may have been moved based on the source package")
             writer.appendLine(" * <table>")
             writer.appendLine(" * <caption></caption>")
             writer.appendLine(" * <tr><th>v1</td><th>v2</th></tr>")

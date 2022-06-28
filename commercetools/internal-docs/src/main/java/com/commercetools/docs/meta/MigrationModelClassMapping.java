@@ -2722,7 +2722,7 @@ package com.commercetools.docs.meta;
  *
  * <h2>Package name changes</h2>
  *
- * Please be aware that shows to which package a class may have been moved based on the source package
+ * Please be aware this list shows to which package a class may have been moved based on the source package
  * <table>
  * <caption></caption>
  * <tr><th>v1</td><th>v2</th></tr>

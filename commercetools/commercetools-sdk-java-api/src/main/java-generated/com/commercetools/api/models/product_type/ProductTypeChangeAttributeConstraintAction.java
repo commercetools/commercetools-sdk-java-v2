@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeAttributeConstraintAction
+ *  <p>Updates the <code>attributeConstraint</code> of an AttributeDefinition. For now only following changes are supported: <code>SameForAll</code> to <code>None</code> and <code>Unique</code> to <code>None</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
     String CHANGE_ATTRIBUTE_CONSTRAINT = "changeAttributeConstraint";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p><code>None</code></p>
      */
     @NotNull
     @JsonProperty("newValue")

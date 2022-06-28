@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeNestedType
+ *  <p>Attribute type for nesting Attributes based on some existing ProductType. It does not support <code>isSearchable</code> and is not supported in queries. The only supported AttributeConstraint is <code>None</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ public interface AttributeNestedType extends AttributeType {
     String NESTED = "nested";
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
      */
     @NotNull
     @Valid

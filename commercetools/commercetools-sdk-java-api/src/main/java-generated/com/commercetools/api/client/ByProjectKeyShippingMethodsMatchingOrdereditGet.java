@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Retrieves all the ShippingMethods that can ship to the given Location for an OrderEdit. In case the OrderEdit preview cannot be created an EditPreviewFailed error is raised.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributePlainEnumValue
+ *  <p>A plain enum value must be unique within the enum, otherwise a DuplicateEnumValues error will be returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,14 +31,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributePlainEnumValue {
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>Descriptive label of the value.</p>
      */
     @NotNull
     @JsonProperty("label")

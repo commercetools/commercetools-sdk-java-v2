@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartScoreType
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

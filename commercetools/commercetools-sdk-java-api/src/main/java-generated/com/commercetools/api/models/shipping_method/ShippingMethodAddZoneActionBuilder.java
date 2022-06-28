@@ -25,7 +25,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
     /**
-     *
+     *  <p>Value to add to <code>zoneRates</code>.</p>
      */
 
     public ShippingMethodAddZoneActionBuilder zone(
@@ -35,7 +35,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
     }
 
     /**
-     *
+     *  <p>Value to add to <code>zoneRates</code>.</p>
      */
 
     public ShippingMethodAddZoneActionBuilder zone(

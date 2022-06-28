@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeRemoveEnumValuesAction
+ *  <p>Removes enum values from an AttributeDefinition of AttributeEnumType, AttributeLocalizedEnumType, AttributeSetType of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
+ *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an eventually consistent way. If the Attribute is required, the operation will fail with the EnumValueIsUsed error code.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +34,14 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     String REMOVE_ENUM_VALUES = "removeEnumValues";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      */
     @NotNull
     @JsonProperty("keys")

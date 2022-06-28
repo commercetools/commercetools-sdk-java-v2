@@ -29,7 +29,7 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueLabelActionBuilder attributeName(final String attributeName) {
@@ -38,7 +38,7 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(
@@ -49,7 +49,7 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
 
     public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(

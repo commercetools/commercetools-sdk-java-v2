@@ -29,7 +29,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
@@ -38,7 +38,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
@@ -49,7 +49,7 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
     }
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
 
     public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(

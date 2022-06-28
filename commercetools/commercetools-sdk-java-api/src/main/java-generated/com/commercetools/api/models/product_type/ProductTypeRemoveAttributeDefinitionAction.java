@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeRemoveAttributeDefinitionAction
+ *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
+ *  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +33,7 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
     String REMOVE_ATTRIBUTE_DEFINITION = "removeAttributeDefinition";
 
     /**
-     *  <p>The name of the attribute to remove.</p>
+     *  <p>Name of the Attribute to remove.</p>
      */
     @NotNull
     @JsonProperty("name")

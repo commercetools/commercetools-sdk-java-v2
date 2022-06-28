@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeNestedType
+ *  <p>Attribute type for nesting Attributes based on some existing ProductType. It does not support <code>isSearchable</code> and is not supported in queries. The only supported AttributeConstraint is <code>None</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
@@ -44,7 +44,7 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
     }
 
     /**
-     *  <p>Reference to a ProductType.</p>
+     *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference() {

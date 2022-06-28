@@ -36,7 +36,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers;
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      */
 
     public ShippingRateBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
@@ -45,7 +45,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      */
 
     public ShippingRateBuilder price(
@@ -55,7 +55,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
@@ -64,7 +64,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public ShippingRateBuilder freeAbove(
@@ -74,7 +74,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
      */
 
     public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
@@ -83,7 +83,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public ShippingRateBuilder tiers(
@@ -93,7 +93,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public ShippingRateBuilder tiers(
@@ -103,7 +103,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public ShippingRateBuilder plusTiers(
@@ -116,7 +116,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public ShippingRateBuilder plusTiers(
@@ -130,7 +130,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-     *  <p>A list of shipping rate price tiers.</p>
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public ShippingRateBuilder withTiers(

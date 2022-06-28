@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeAttributeNameAction
+ *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     String CHANGE_ATTRIBUTE_NAME = "changeAttributeName";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>New user-defined name of the Attribute that is unique with the Project. When using the same <code>name</code> for an Attribute in two or more ProductTypes all fields of the AttributeDefinition of this Attribute need to be the same across the ProductTypes, otherwise an AttributeDefinitionAlreadyExistsError will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      */
     @NotNull
     @JsonProperty("newAttributeName")

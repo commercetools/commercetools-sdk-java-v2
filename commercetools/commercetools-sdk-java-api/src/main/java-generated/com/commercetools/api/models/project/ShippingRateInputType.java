@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingRateInputType {
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
     @NotNull
     @JsonProperty("type")

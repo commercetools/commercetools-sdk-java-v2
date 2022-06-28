@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShippingMethodSetCustomFieldAction
+ *  <p>This action sets, overwrites, or removes any existing Custom Field for an existing ShippingMethod.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -48,7 +48,7 @@ public class ShippingMethodRemoveShippingRateActionImpl implements ShippingMetho
     }
 
     /**
-     *
+     *  <p>Zone from which the ShippingRate should be removed.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
@@ -56,7 +56,7 @@ public class ShippingMethodRemoveShippingRateActionImpl implements ShippingMetho
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>shippingRates</code>.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {

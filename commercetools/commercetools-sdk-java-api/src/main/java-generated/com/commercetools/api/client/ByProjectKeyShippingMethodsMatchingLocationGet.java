@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Retrieves all the ShippingMethods that can ship to the given Location. If the <code>currency</code> parameter is given, then the ShippingMethods must also have a rate defined in the specified currency. Each ShippingMethod contains at least one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. If the <code>currency</code> parameter is given, exactly one ShippingRate will contain it.</p>
  *
  * <hr>
  * <div class=code-example>

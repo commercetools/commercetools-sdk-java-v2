@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeLocalizedEnumValue
+ *  <p>Attribute type for localized enum values. Useful for predefined language-specific values selectable in drop-down menus if only one value can be selected. Use AttributeSetType of AttributeLocalizedEnumValue instead if multiple values can be selected.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeLocalizedEnumValue {
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Descriptive, localized label of the value.</p>
      */
     @NotNull
     @Valid

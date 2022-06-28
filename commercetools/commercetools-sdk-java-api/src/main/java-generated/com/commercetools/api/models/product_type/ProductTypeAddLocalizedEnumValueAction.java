@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeAddLocalizedEnumValueAction
+ *  <p>Adds a localizable enum to the values of AttributeLocalizedEnumType. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>Value to append to the array.</p>
      */
     @NotNull
     @Valid

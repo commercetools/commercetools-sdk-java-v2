@@ -25,7 +25,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     private java.util.List<String> attributeNames;
 
     /**
-     *
+     *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(final String... attributeNames) {
@@ -34,7 +34,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     /**
-     *
+     *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames(
@@ -44,7 +44,7 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
     }
 
     /**
-     *
+     *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      */
 
     public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {

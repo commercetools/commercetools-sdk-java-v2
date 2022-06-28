@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeEnumKeyAction
+ *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new key in an eventually consistent way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnumKeyAction, ModelBase {
@@ -50,7 +51,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -58,7 +59,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     *
+     *  <p>Existing key to be changed.</p>
      */
 
     public String getKey() {
@@ -66,7 +67,7 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     }
 
     /**
-     *
+     *  <p>New key to be set.</p>
      */
 
     public String getNewKey() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeAttributeConstraintAction
+ *  <p>Updates the <code>attributeConstraint</code> of an AttributeDefinition. For now only following changes are supported: <code>SameForAll</code> to <code>None</code> and <code>Unique</code> to <code>None</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeConstraintActionImpl
@@ -48,7 +48,7 @@ public class ProductTypeChangeAttributeConstraintActionImpl
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangeAttributeConstraintActionImpl
     }
 
     /**
-     *
+     *  <p><code>None</code></p>
      */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue() {

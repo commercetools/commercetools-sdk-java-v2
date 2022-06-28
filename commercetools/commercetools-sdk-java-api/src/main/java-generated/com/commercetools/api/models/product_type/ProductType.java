@@ -42,28 +42,28 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
         com.commercetools.api.models.ResourceIdentifiable<ProductType> {
 
     /**
-     *  <p>Unique identifier for the ProductType.</p>
+     *  <p>Unique identifier of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>The current version of the product type.</p>
+     *  <p>Current version of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the ProductType was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -91,21 +91,21 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
     public String getKey();
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
     @Valid
     @JsonProperty("attributes")

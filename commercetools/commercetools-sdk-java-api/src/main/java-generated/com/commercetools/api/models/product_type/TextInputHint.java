@@ -10,13 +10,20 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TextInputHint
+ *  <p>A text input hint is a string with one of the following values:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TextInputHint {
 
-    TextInputHint SINGLE_LINE = TextInputHintEnum.SINGLE_LINE;
+    /**
+    	<p>Hint for GUIs to display the field's content in a single line of text.</p>
 
+    */
+    TextInputHint SINGLE_LINE = TextInputHintEnum.SINGLE_LINE;
+    /**
+    	<p>Hint for GUIs to display the field's content over multiple lines of text.</p>
+
+    */
     TextInputHint MULTI_LINE = TextInputHintEnum.MULTI_LINE;
 
     enum TextInputHintEnum implements TextInputHint {

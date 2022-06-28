@@ -39,21 +39,21 @@ public interface ProductTypeDraft {
     public String getKey();
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
     @Valid
     @JsonProperty("attributes")

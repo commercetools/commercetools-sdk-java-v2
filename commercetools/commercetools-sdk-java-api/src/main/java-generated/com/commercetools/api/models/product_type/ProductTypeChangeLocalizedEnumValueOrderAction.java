@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeLocalizedEnumValueOrderAction
+ *  <p>Updates the order of localized enum <code>values</code> in an AttributeLocalizedEnumType AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
      */
     @NotNull
     @Valid

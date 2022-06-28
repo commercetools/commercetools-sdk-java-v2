@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeIsSearchableAction
+ *  <p>Following this update the Products are reindexed asynchronously to reflect this change on the search endpoint. When enabling search on an existing Attribute type definition, the constraint regarding the maximum size of a searchable Attribute will not be enforced. Instead, Product AttributeDefinitions exceeding this limit will be treated as not searchable and will not be available for full-text search.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChangeIsSearchableAction, ModelBase {
@@ -47,7 +47,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
     }
 
     /**
-     *
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
      */
 
     public Boolean getIsSearchable() {

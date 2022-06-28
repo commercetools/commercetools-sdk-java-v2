@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartValueTier
+ *  <p>Used when the ShippingRate maps to the sum of LineItem Prices. The value of the Cart is used to select a tier. If chosen, it is not possible to set a value for the <code>shippingRateInput</code> on the Cart. Tiers contain the <code>centAmount</code> (a value of <code>100</code> in the currency <code>USD</code> corresponds to <code>$ 1.00</code>), and start at <code>1</code>.'</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,15 +35,14 @@ public interface CartValueTier extends ShippingRatePriceTier {
     String CART_VALUE = "CartValue";
 
     /**
-     *
+     *  <p>Minimum total price of a Cart for which a shipping rate applies.</p>
      */
     @NotNull
     @JsonProperty("minimumCentAmount")
     public Long getMinimumCentAmount();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Fixed shipping rate Price for a CartValue.</p>
      */
     @NotNull
     @Valid
@@ -51,7 +50,7 @@ public interface CartValueTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     @JsonProperty("isMatching")

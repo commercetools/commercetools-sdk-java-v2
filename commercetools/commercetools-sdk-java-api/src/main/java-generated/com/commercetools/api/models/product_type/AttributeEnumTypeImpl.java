@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeEnumType
+ *  <p>Attribute type for plain enum values. Useful for predefined language-agnostic values selectable in drop downs when only one value should be selected. Use AttributeSetType of AttributeEnumType instead if multiple values can be selected from the list.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
@@ -44,7 +44,7 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {

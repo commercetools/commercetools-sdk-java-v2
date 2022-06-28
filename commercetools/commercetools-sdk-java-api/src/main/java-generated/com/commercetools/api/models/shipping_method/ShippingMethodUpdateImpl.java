@@ -35,7 +35,7 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
     }
 
     /**
-     *
+     *  <p>Expected version of the ShippingMethod on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -43,7 +43,7 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the ShippingMethod.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> getActions() {

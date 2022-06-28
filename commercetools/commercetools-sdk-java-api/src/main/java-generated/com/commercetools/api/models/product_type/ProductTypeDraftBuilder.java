@@ -45,7 +45,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
 
     public ProductTypeDraftBuilder name(final String name) {
@@ -54,7 +54,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
 
     public ProductTypeDraftBuilder description(final String description) {
@@ -63,7 +63,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public ProductTypeDraftBuilder attributes(
@@ -73,7 +73,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public ProductTypeDraftBuilder attributes(
@@ -83,7 +83,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public ProductTypeDraftBuilder plusAttributes(
@@ -96,7 +96,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public ProductTypeDraftBuilder plusAttributes(
@@ -110,7 +110,7 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
-     *
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
      */
 
     public ProductTypeDraftBuilder withAttributes(

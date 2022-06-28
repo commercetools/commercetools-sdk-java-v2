@@ -6,7 +6,7 @@ package com.commercetools.docs.meta;
  * <h2>Mapping of classes from SDK v1 to v2</h2>
  *
  * <table>
- * <caption>class mapping</caption>
+ * <caption></caption>
  * <tr><th>v1</td><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient.ApiClient}</td>
@@ -2641,107 +2641,82 @@ package com.commercetools.docs.meta;
  * <h2>Classes with no representation in the v2 SDK</h2>
  *
  * <table>
- * <caption>non represented classes</caption>
- * <tr><th>v1</td><th>v2</th></tr>
+ * <caption></caption>
+ * <tr><th>v1</td></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.CartDiscountPredicate}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.CartPredicate}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.carts.LineItemLike}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.inventory.AvailabilityInfo}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.messages.GenericMessage}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders.messages.SimpleOrderMessage}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.productdiscounts.ProductDiscountPredicate}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.AttributeContainer}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.AttributeContainerDraft}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ByIdVariantIdentifier}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.BySkuVariantIdentifier}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.PriceLike}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductIdentifiable}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ProductLike}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.VariantIdentifier}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.AttributeAccess}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.AttributeImportDraft}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.AttributeMapper}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.NamedAttributeAccess}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.ProductAttributeConverter}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.commands.updateactions.MetaAttributesUpdateActions}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.messages.SimpleProductMessage}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.AttributeDefinitionContainer}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.MetaProductType}</td>
- *   <td>n/a</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.producttypes.ProductTypeLocalRepository}</td>
- *   <td>n/a</td>
  * </tr>
  * </table>
  *
@@ -2749,7 +2724,7 @@ package com.commercetools.docs.meta;
  *
  * Please be aware that shows to which package a class may have been moved based on the source package
  * <table>
- * <caption>package name changes</caption>
+ * <caption></caption>
  * <tr><th>v1</td><th>v2</th></tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.apiclient}</td>
@@ -2757,7 +2732,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts}</td>
- *   <td>{@link com.commercetools.api.models.cart_discount, com.commercetools.api.models.cart}</td>
+ *   <td>{@link com.commercetools.api.models.cart_discount}, {@link com.commercetools.api.models.cart}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.cartdiscounts.commands.updateactions}</td>
@@ -2765,7 +2740,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.carts}</td>
- *   <td>{@link com.commercetools.api.models.cart, com.commercetools.api.models.order, com.commercetools.api.models.project}</td>
+ *   <td>{@link com.commercetools.api.models.cart}, {@link com.commercetools.api.models.order}, {@link com.commercetools.api.models.project}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.carts.commands.updateactions}</td>
@@ -2809,7 +2784,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.discountcodes}</td>
- *   <td>{@link com.commercetools.api.models.discount_code, com.commercetools.api.models.cart}</td>
+ *   <td>{@link com.commercetools.api.models.discount_code}, {@link com.commercetools.api.models.cart}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.discountcodes.commands.updateactions}</td>
@@ -2837,7 +2812,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.models}</td>
- *   <td>{@link com.commercetools.api.models.common, com.commercetools.api.models.message}</td>
+ *   <td>{@link com.commercetools.api.models.common}, {@link com.commercetools.api.models.message}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orderedits}</td>
@@ -2849,7 +2824,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders}</td>
- *   <td>{@link com.commercetools.api.models.cart, com.commercetools.api.models.order}</td>
+ *   <td>{@link com.commercetools.api.models.cart}, {@link com.commercetools.api.models.order}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders.commands.updateactions}</td>
@@ -2869,7 +2844,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.productdiscounts}</td>
- *   <td>{@link com.commercetools.api.models.common, com.commercetools.api.models.product_discount}</td>
+ *   <td>{@link com.commercetools.api.models.common}, {@link com.commercetools.api.models.product_discount}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.productdiscounts.commands.updateactions}</td>
@@ -2877,11 +2852,11 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products}</td>
- *   <td>{@link com.commercetools.api.models.common, com.commercetools.api.models.product}</td>
+ *   <td>{@link com.commercetools.api.models.common}, {@link com.commercetools.api.models.product}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes}</td>
- *   <td>{@link com.commercetools.api.models.product, com.commercetools.api.models.product_type}</td>
+ *   <td>{@link com.commercetools.api.models.product}, {@link com.commercetools.api.models.product_type}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.commands.updateactions}</td>
@@ -2905,7 +2880,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.projects}</td>
- *   <td>{@link com.commercetools.api.models.project, com.commercetools.api.models.message}</td>
+ *   <td>{@link com.commercetools.api.models.project}, {@link com.commercetools.api.models.message}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.projects.commands.updateactions}</td>
@@ -2961,7 +2936,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.taxcategories}</td>
- *   <td>{@link com.commercetools.api.models.cart, com.commercetools.api.models.tax_category}</td>
+ *   <td>{@link com.commercetools.api.models.cart}, {@link com.commercetools.api.models.tax_category}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.taxcategories.commands.updateactions}</td>
@@ -2969,7 +2944,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.types}</td>
- *   <td>{@link com.commercetools.api.models, com.commercetools.api.models.type}</td>
+ *   <td>{@link com.commercetools.api.models}, {@link com.commercetools.api.models.type}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.types.commands.updateactions}</td>

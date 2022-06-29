@@ -4,6 +4,7 @@ package com.commercetools.http.asynchttp;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
 import java.util.function.Supplier;
 
 import io.netty.handler.codec.http.HttpHeaderValues;
@@ -28,25 +29,60 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
     }
 
     public CtAsyncHttpClient() {
+        super();
         asyncHttpClient = new DefaultAsyncHttpClient(clientBuilder.get().build());
     }
 
     public CtAsyncHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
+        super();
         asyncHttpClient = new DefaultAsyncHttpClient(
             clientBuilder.get().setMaxConnections(maxConnTotal).setMaxConnectionsPerHost(maxConnPerRoute).build());
     }
 
     public CtAsyncHttpClient(final BuilderOptions options) {
+        super();
         asyncHttpClient = new DefaultAsyncHttpClient(options.plus(clientBuilder.get()).build());
     }
 
     public CtAsyncHttpClient(final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
+        super();
         asyncHttpClient = new DefaultAsyncHttpClient(
             options.plus(clientBuilder.get().setMaxConnections(maxConnTotal).setMaxConnectionsPerHost(maxConnPerRoute))
                     .build());
     }
 
     public CtAsyncHttpClient(final Supplier<DefaultAsyncHttpClientConfig.Builder> builderSupplier) {
+        super();
+        asyncHttpClient = new DefaultAsyncHttpClient(builderSupplier.get().build());
+    }
+
+    public CtAsyncHttpClient(final ExecutorService executor) {
+        super(executor);
+        asyncHttpClient = new DefaultAsyncHttpClient(clientBuilder.get().build());
+    }
+
+    public CtAsyncHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute) {
+        super(executor);
+        asyncHttpClient = new DefaultAsyncHttpClient(
+            clientBuilder.get().setMaxConnections(maxConnTotal).setMaxConnectionsPerHost(maxConnPerRoute).build());
+    }
+
+    public CtAsyncHttpClient(final ExecutorService executor, final BuilderOptions options) {
+        super(executor);
+        asyncHttpClient = new DefaultAsyncHttpClient(options.plus(clientBuilder.get()).build());
+    }
+
+    public CtAsyncHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute,
+            final BuilderOptions options) {
+        super(executor);
+        asyncHttpClient = new DefaultAsyncHttpClient(
+            options.plus(clientBuilder.get().setMaxConnections(maxConnTotal).setMaxConnectionsPerHost(maxConnPerRoute))
+                    .build());
+    }
+
+    public CtAsyncHttpClient(final ExecutorService executor,
+            final Supplier<DefaultAsyncHttpClientConfig.Builder> builderSupplier) {
+        super(executor);
         asyncHttpClient = new DefaultAsyncHttpClient(builderSupplier.get().build());
     }
 

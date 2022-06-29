@@ -9,7 +9,15 @@ import java.util.concurrent.ForkJoinPool;
 import io.vrap.rmf.base.client.error.BaseException;
 
 public abstract class HttpClientBase implements VrapHttpClient, Closeable {
-    private final ExecutorService executorService = new ForkJoinPool();
+    private final ExecutorService executorService;
+
+    protected HttpClientBase() {
+        this.executorService = new ForkJoinPool();
+    }
+
+    protected HttpClientBase(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
 
     @Override
     public final void close() {

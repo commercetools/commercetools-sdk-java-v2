@@ -31,28 +31,45 @@ public class CtOkHttp4Client extends HttpClientBase {
     private final OkHttpClient okHttpClient;
 
     public CtOkHttp4Client() {
+        super();
         okHttpClient = clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)).build();
     }
 
     public CtOkHttp4Client(final BuilderOptions options) {
+        super();
         okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)))
                 .build();
     }
 
     public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
+        super();
         okHttpClient = builderSupplier.get().build();
     }
 
     public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost) {
+        super();
         okHttpClient = clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)).build();
     }
 
     public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost, final BuilderOptions options) {
+        super();
         okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)))
                 .build();
     }
 
+    public CtOkHttp4Client(final ExecutorService executor) {
+        super(executor);
+        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(executor, MAX_REQUESTS, MAX_REQUESTS)).build();
+    }
+
+    public CtOkHttp4Client(final ExecutorService executor, final BuilderOptions options) {
+        super(executor);
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)))
+                .build();
+    }
+
     public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        super(executor);
         okHttpClient = clientBuilder.get()
                 .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
                 .build();
@@ -60,6 +77,7 @@ public class CtOkHttp4Client extends HttpClientBase {
 
     public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost,
             final BuilderOptions options) {
+        super(executor);
         okHttpClient = options
                 .plus(clientBuilder.get().dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost)))
                 .build();

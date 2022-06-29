@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client;
 
 import java.text.MessageFormat;
 import java.util.ServiceLoader;
+import java.util.concurrent.ExecutorService;
 import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.error.BaseException;
@@ -10,8 +11,7 @@ import io.vrap.rmf.base.client.error.BaseException;
 /**
  * Interface to supply a HTTP client implementation specified by a {@link ServiceLoader}
  */
-public interface HttpClientSupplier extends Supplier<VrapHttpClient> {
-
+public interface HttpClientSupplier extends Supplier<VrapHttpClient>, ExecutorHttpClientSupplier {
     static Supplier<VrapHttpClient> of() {
         final ServiceLoader<HttpClientSupplier> loader = ServiceLoader.load(HttpClientSupplier.class,
             HttpClientSupplier.class.getClassLoader());
@@ -29,5 +29,25 @@ public interface HttpClientSupplier extends Supplier<VrapHttpClient> {
             throw new BaseException(new NoClassDefFoundError(s));
         }
         return httpClientFactory;
+    }
+
+    static Supplier<VrapHttpClient> of(ExecutorService executorService) {
+        final ServiceLoader<ExecutorHttpClientSupplier> loader = ServiceLoader.load(ExecutorHttpClientSupplier.class,
+            ExecutorHttpClientSupplier.class.getClassLoader());
+        ExecutorHttpClientSupplier httpClientFactory = null;
+        try {
+            httpClientFactory = loader.iterator().next();
+        }
+        catch (Throwable ignored) {
+        }
+
+        if (httpClientFactory == null) {
+            final String s = MessageFormat.format(
+                "No {0} found. A dependency providing a compatible HTTP client may be missing e.g. commercetools-http-client.",
+                HttpClientSupplier.class.getCanonicalName());
+            throw new BaseException(new NoClassDefFoundError(s));
+        }
+        return httpClientFactory.get(executorService);
+
     }
 }

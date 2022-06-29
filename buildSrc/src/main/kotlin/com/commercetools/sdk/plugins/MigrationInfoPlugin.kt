@@ -5,7 +5,6 @@ import com.github.javaparser.ast.CompilationUnit
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
 import com.github.javaparser.ast.body.TypeDeclaration
 import com.google.common.base.CaseFormat
-import com.google.gson.stream.JsonWriter
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import java.io.File
@@ -13,8 +12,7 @@ import java.io.IOException
 import java.io.Writer
 import java.nio.file.Files
 import java.nio.file.Paths
-import java.util.*
-import java.util.Map.entry
+import java.util.AbstractMap.SimpleEntry
 import kotlin.io.path.exists
 import kotlin.io.path.name
 
@@ -127,7 +125,7 @@ class MigrationInfoPlugin : Plugin<Project> {
                 .filter { declaration -> declaration.fullyQualifiedName.get().contains(".commands").not().or(declaration.fullyQualifiedName.get().contains(".updateactions")) }
 
         return declarations.flatMap { declaration ->
-            listOf(entry(declaration.fullyQualifiedName.get(), Info(
+            listOf(SimpleEntry(declaration.fullyQualifiedName.get(), Info(
                     "class",
                     declaration.fullyQualifiedName.get(),
                     relativeFile.toString(),

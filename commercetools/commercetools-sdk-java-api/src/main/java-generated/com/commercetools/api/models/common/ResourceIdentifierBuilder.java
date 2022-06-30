@@ -71,6 +71,14 @@ public class ResourceIdentifierBuilder {
         return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder quoteRequestBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder.of();
+    }
+
+    public com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder quoteBuilder() {
+        return com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();
     }
@@ -81,6 +89,10 @@ public class ResourceIdentifierBuilder {
 
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();
+    }
+
+    public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierBuilder stagedQuoteBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierBuilder.of();
     }
 
     public com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {

@@ -104,6 +104,9 @@ public class CartBuilder implements Builder<Cart> {
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -600,6 +603,63 @@ public class CartBuilder implements Builder<Cart> {
      *
      */
 
+    public CartBuilder directDiscounts(
+            @Nullable final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+        this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartBuilder directDiscounts(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
+        this.directDiscounts = directDiscounts;
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartBuilder plusDirectDiscounts(
+            @Nullable final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+        if (this.directDiscounts == null) {
+            this.directDiscounts = new ArrayList<>();
+        }
+        this.directDiscounts.addAll(Arrays.asList(directDiscounts));
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartBuilder plusDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscountBuilder> builder) {
+        if (this.directDiscounts == null) {
+            this.directDiscounts = new ArrayList<>();
+        }
+        this.directDiscounts.add(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *
+     */
+
+    public CartBuilder withDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscountBuilder> builder) {
+        this.directDiscounts = new ArrayList<>();
+        this.directDiscounts.add(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *
+     */
+
     public CartBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
@@ -926,6 +986,11 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     @Nullable
+    public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
+        return this.directDiscounts;
+    }
+
+    @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -985,8 +1050,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
-            country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
-            refusedGifts, origin, shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
+            country, shippingInfo, discountCodes, directDiscounts, custom, paymentInfo, locale,
+            deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses,
+            totalLineItemQuantity);
     }
 
     /**
@@ -996,8 +1062,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId,
             customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState,
             shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup,
-            country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification,
-            refusedGifts, origin, shippingRateInput, itemShippingAddresses, totalLineItemQuantity);
+            country, shippingInfo, discountCodes, directDiscounts, custom, paymentInfo, locale,
+            deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses,
+            totalLineItemQuantity);
     }
 
     public static CartBuilder of() {
@@ -1032,6 +1099,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.country = template.getCountry();
         builder.shippingInfo = template.getShippingInfo();
         builder.discountCodes = template.getDiscountCodes();
+        builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
         builder.paymentInfo = template.getPaymentInfo();
         builder.locale = template.getLocale();

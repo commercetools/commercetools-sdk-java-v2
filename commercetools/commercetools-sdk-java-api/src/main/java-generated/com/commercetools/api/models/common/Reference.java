@@ -23,9 +23,12 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_discount.ProductDiscountReference;
 import com.commercetools.api.models.product_selection.ProductSelectionReference;
 import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.quote.QuoteReference;
+import com.commercetools.api.models.quote_request.QuoteRequestReference;
 import com.commercetools.api.models.review.ReviewReference;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
 import com.commercetools.api.models.shopping_list.ShoppingListReference;
+import com.commercetools.api.models.staged_quote.StagedQuoteReference;
 import com.commercetools.api.models.standalone_price.StandalonePriceReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreReference;
@@ -67,9 +70,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionReferenceImpl.class, name = ProductSelectionReference.PRODUCT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteReferenceImpl.class, name = QuoteReference.QUOTE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestReferenceImpl.class, name = QuoteRequestReference.QUOTE_REQUEST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = ReviewReference.REVIEW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = ShippingMethodReference.SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListReferenceImpl.class, name = ShoppingListReference.SHOPPING_LIST),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteReferenceImpl.class, name = StagedQuoteReference.STAGED_QUOTE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl.class, name = StandalonePriceReference.STANDALONE_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateReferenceImpl.class, name = StateReference.STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreReferenceImpl.class, name = StoreReference.STORE),
@@ -161,6 +167,14 @@ public interface Reference {
         return com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of();
     }
 
+    public static com.commercetools.api.models.quote.QuoteReferenceBuilder quoteBuilder() {
+        return com.commercetools.api.models.quote.QuoteReferenceBuilder.of();
+    }
+
+    public static com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder quoteRequestBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of();
+    }
+
     public static com.commercetools.api.models.review.ReviewReferenceBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewReferenceBuilder.of();
     }
@@ -171,6 +185,10 @@ public interface Reference {
 
     public static com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder.of();
+    }
+
+    public static com.commercetools.api.models.staged_quote.StagedQuoteReferenceBuilder stagedQuoteBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteReferenceBuilder.of();
     }
 
     public static com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder standalonePriceBuilder() {

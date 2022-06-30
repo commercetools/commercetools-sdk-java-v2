@@ -59,6 +59,10 @@ public class ByProjectKeyMeRequestBuilder {
         return new ByProjectKeyMePaymentsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMeQuoteRequestsRequestBuilder quoteRequests() {
+        return new ByProjectKeyMeQuoteRequestsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMeShoppingListsRequestBuilder shoppingLists() {
         return new ByProjectKeyMeShoppingListsRequestBuilder(apiHttpClient, projectKey);
     }

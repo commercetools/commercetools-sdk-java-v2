@@ -319,6 +319,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageBuilder productSelectionVariantSelectionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductSlugChangedMessageBuilder productSlugChangedBuilder() {
         return com.commercetools.api.models.message.ProductSlugChangedMessageBuilder.of();
     }

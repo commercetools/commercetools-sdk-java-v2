@@ -35,6 +35,10 @@ public class ProductSelectionUpdateActionBuilder {
         return com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder setVariantSelectionBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder.of();
+    }
+
     public static ProductSelectionUpdateActionBuilder of() {
         return new ProductSelectionUpdateActionBuilder();
     }

@@ -18,11 +18,4 @@ public class ByProjectKeyCategoriesRequestBuilder {
     public ByProjectKeyCategoriesImportContainersRequestBuilder importContainers() {
         return new ByProjectKeyCategoriesImportContainersRequestBuilder(apiHttpClient, projectKey);
     }
-
-    @Deprecated
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder importSinkKeyWithImportSinkKeyValue(
-            String importSinkKey) {
-        return new ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyRequestBuilder(apiHttpClient, projectKey,
-            importSinkKey);
-    }
 }

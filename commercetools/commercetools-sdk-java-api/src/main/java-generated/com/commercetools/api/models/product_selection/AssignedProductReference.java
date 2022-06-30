@@ -32,14 +32,23 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssignedProductReference {
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     */
+    @Valid
+    @JsonProperty("variantSelection")
+    public ProductVariantSelection getVariantSelection();
+
     public void setProduct(final ProductReference product);
+
+    public void setVariantSelection(final ProductVariantSelection variantSelection);
 
     public static AssignedProductReference of() {
         return new AssignedProductReferenceImpl();
@@ -48,6 +57,7 @@ public interface AssignedProductReference {
     public static AssignedProductReference of(final AssignedProductReference template) {
         AssignedProductReferenceImpl instance = new AssignedProductReferenceImpl();
         instance.setProduct(template.getProduct());
+        instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
 

@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Queries Product Selection assignments in a specific Store.</p>
+ *  <p>The response will include duplicate Products whenever more than one active Product Selection of the Store includes a Product. To make clear through which Product Selection a Product is available in the Store the response contains assignments including both the Product and the Product Selection. Only Products of Product Selections that are activated in Store will be returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -88,6 +89,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
         return this.storeKey;
     }
 
+    public List<String> getLimit() {
+        return this.getQueryParam("limit");
+    }
+
+    public List<String> getOffset() {
+        return this.getQueryParam("offset");
+    }
+
+    public List<String> getWithTotal() {
+        return this.getQueryParam("withTotal");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -98,6 +111,198 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final TValue limit) {
+        return copy().withQueryParam("limit", limit);
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final TValue limit) {
+        return copy().addQueryParam("limit", limit);
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withLimit(final List<TValue> limit) {
+        return copy().withoutQueryParam("limit")
+                .addQueryParams(
+                    limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional limit query parameters
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addLimit(final List<TValue> limit) {
+        return copy().addQueryParams(
+            limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final TValue offset) {
+        return copy().withQueryParam("offset", offset);
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final TValue offset) {
+        return copy().addQueryParam("offset", offset);
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withOffset(
+            final List<TValue> offset) {
+        return copy().withoutQueryParam("offset")
+                .addQueryParams(
+                    offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional offset query parameters
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addOffset(
+            final List<TValue> offset) {
+        return copy().addQueryParams(
+            offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
+            final TValue withTotal) {
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
+            final TValue withTotal) {
+        return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
+            final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
+            final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWithTotal(
+            final List<TValue> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWithTotal(
+            final List<TValue> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**

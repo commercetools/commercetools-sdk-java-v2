@@ -25,10 +25,14 @@ public class ProductSelectionProductAddedMessagePayloadImpl
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     @JsonCreator
     ProductSelectionProductAddedMessagePayloadImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.product = product;
+        this.variantSelection = variantSelection;
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }
 
@@ -52,8 +56,21 @@ public class ProductSelectionProductAddedMessagePayloadImpl
         return this.product;
     }
 
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
+    }
+
+    public void setVariantSelection(
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
     }
 
     @Override
@@ -66,12 +83,15 @@ public class ProductSelectionProductAddedMessagePayloadImpl
 
         ProductSelectionProductAddedMessagePayloadImpl that = (ProductSelectionProductAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(product, that.product).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(product, that.product)
+                .append(variantSelection, that.variantSelection)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(product).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(product).append(variantSelection).toHashCode();
     }
 
 }

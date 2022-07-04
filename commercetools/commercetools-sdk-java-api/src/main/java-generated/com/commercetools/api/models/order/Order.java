@@ -28,6 +28,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.quote.QuoteReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
@@ -294,6 +295,13 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public CartReference getCart();
 
     /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+    @Valid
+    @JsonProperty("quote")
+    public QuoteReference getQuote();
+
+    /**
      *
      */
     @Valid
@@ -437,6 +445,8 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
 
     public void setCart(final CartReference cart);
 
+    public void setQuote(final QuoteReference quote);
+
     public void setCustom(final CustomFields custom);
 
     public void setPaymentInfo(final PaymentInfo paymentInfo);
@@ -499,6 +509,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCart(template.getCart());
+        instance.setQuote(template.getQuote());
         instance.setCustom(template.getCustom());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setLocale(template.getLocale());

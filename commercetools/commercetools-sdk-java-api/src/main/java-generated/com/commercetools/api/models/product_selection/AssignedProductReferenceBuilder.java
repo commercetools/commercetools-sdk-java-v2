@@ -4,6 +4,8 @@ package com.commercetools.api.models.product_selection;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,8 +26,11 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      */
 
     public AssignedProductReferenceBuilder product(
@@ -35,7 +40,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      */
 
     public AssignedProductReferenceBuilder product(
@@ -44,20 +49,47 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         return this;
     }
 
+    /**
+     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     */
+
+    public AssignedProductReferenceBuilder variantSelection(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     */
+
+    public AssignedProductReferenceBuilder variantSelection(
+            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public AssignedProductReference build() {
         Objects.requireNonNull(product, AssignedProductReference.class + ": product is missing");
-        return new AssignedProductReferenceImpl(product);
+        return new AssignedProductReferenceImpl(product, variantSelection);
     }
 
     /**
      * builds AssignedProductReference without checking for non null required values
      */
     public AssignedProductReference buildUnchecked() {
-        return new AssignedProductReferenceImpl(product);
+        return new AssignedProductReferenceImpl(product, variantSelection);
     }
 
     public static AssignedProductReferenceBuilder of() {
@@ -67,6 +99,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     public static AssignedProductReferenceBuilder of(final AssignedProductReference template) {
         AssignedProductReferenceBuilder builder = new AssignedProductReferenceBuilder();
         builder.product = template.getProduct();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

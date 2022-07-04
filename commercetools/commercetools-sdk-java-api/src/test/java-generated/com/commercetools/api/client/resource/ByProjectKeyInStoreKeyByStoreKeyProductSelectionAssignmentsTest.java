@@ -69,6 +69,31 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .productSelectionAssignments()
                                 .get()
+                                .withLimit(7)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .withOffset(3)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?offset=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get",
@@ -85,6 +110,21 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withLimit(7), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withOffset(3), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productSelectionAssignments()

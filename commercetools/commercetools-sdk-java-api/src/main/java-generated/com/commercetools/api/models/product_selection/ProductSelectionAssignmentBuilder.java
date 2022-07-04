@@ -4,6 +4,8 @@ package com.commercetools.api.models.product_selection;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,6 +29,9 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     /**
      *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
      */
@@ -48,7 +53,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      */
 
     public ProductSelectionAssignmentBuilder productSelection(
@@ -60,12 +65,34 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      */
 
     public ProductSelectionAssignmentBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     */
+
+    public ProductSelectionAssignmentBuilder variantSelection(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     */
+
+    public ProductSelectionAssignmentBuilder variantSelection(
+            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
+                .build();
         return this;
     }
 
@@ -77,17 +104,22 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         return this.productSelection;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public ProductSelectionAssignment build() {
         Objects.requireNonNull(product, ProductSelectionAssignment.class + ": product is missing");
         Objects.requireNonNull(productSelection, ProductSelectionAssignment.class + ": productSelection is missing");
-        return new ProductSelectionAssignmentImpl(product, productSelection);
+        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection);
     }
 
     /**
      * builds ProductSelectionAssignment without checking for non null required values
      */
     public ProductSelectionAssignment buildUnchecked() {
-        return new ProductSelectionAssignmentImpl(product, productSelection);
+        return new ProductSelectionAssignmentImpl(product, productSelection, variantSelection);
     }
 
     public static ProductSelectionAssignmentBuilder of() {
@@ -98,6 +130,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
         ProductSelectionAssignmentBuilder builder = new ProductSelectionAssignmentBuilder();
         builder.product = template.getProduct();
         builder.productSelection = template.getProductSelection();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

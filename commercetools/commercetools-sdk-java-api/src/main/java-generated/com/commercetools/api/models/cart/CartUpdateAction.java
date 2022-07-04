@@ -69,6 +69,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionImpl.class, name = CartSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionImpl.class, name = CartSetDeliveryAddressCustomFieldAction.SET_DELIVERY_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionImpl.class, name = CartSetDeliveryAddressCustomTypeAction.SET_DELIVERY_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDirectDiscountsActionImpl.class, name = CartSetDirectDiscountsAction.SET_DIRECT_DISCOUNTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionImpl.class, name = CartSetItemShippingAddressCustomFieldAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetItemShippingAddressCustomTypeActionImpl.class, name = CartSetItemShippingAddressCustomTypeAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetKeyActionImpl.class, name = CartSetKeyAction.SET_KEY),
@@ -260,6 +261,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder setDeliveryAddressCustomTypeBuilder() {
         return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
+        return com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {

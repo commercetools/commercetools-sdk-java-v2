@@ -22,25 +22,42 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     @JsonCreator
     AssignedProductReferenceImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.product = product;
+        this.variantSelection = variantSelection;
     }
 
     public AssignedProductReferenceImpl() {
     }
 
     /**
-     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>The Variants of the Product that are included, or excluded, from the Product Selection. In absence of this field, all Variants are deemed to be included.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
+    }
+
+    public void setVariantSelection(
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
     }
 
     @Override
@@ -53,12 +70,14 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
         AssignedProductReferenceImpl that = (AssignedProductReferenceImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(variantSelection, that.variantSelection)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product).append(variantSelection).toHashCode();
     }
 
 }

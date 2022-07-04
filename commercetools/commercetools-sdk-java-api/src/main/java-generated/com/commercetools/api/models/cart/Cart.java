@@ -244,6 +244,13 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
      *
      */
     @Valid
+    @JsonProperty("directDiscounts")
+    public List<DirectDiscount> getDirectDiscounts();
+
+    /**
+     *
+     */
+    @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
 
@@ -365,6 +372,11 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
 
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
+    @JsonIgnore
+    public void setDirectDiscounts(final DirectDiscount... directDiscounts);
+
+    public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
+
     public void setCustom(final CustomFields custom);
 
     public void setPaymentInfo(final PaymentInfo paymentInfo);
@@ -421,6 +433,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         instance.setCountry(template.getCountry());
         instance.setShippingInfo(template.getShippingInfo());
         instance.setDiscountCodes(template.getDiscountCodes());
+        instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setLocale(template.getLocale());

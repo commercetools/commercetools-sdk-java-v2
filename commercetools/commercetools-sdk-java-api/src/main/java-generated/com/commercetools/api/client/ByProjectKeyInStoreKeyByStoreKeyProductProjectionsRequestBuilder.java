@@ -18,10 +18,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder {
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet get() {
-        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet(apiHttpClient, projectKey, storeKey);
-    }
-
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder(apiHttpClient, projectKey,
             storeKey, key);

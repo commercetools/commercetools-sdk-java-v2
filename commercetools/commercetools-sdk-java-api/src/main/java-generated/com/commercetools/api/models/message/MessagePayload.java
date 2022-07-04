@@ -103,15 +103,27 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionDeletedMessagePayloadImpl.class, name = ProductSelectionDeletedMessagePayload.PRODUCT_SELECTION_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayloadImpl.class, name = ProductSelectionProductAddedMessagePayload.PRODUCT_SELECTION_PRODUCT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadImpl.class, name = ProductSelectionProductRemovedMessagePayload.PRODUCT_SELECTION_PRODUCT_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadImpl.class, name = ProductSelectionVariantSelectionChangedMessagePayload.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessagePayloadImpl.class, name = ProductSlugChangedMessagePayload.PRODUCT_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessagePayloadImpl.class, name = ProductStateTransitionMessagePayload.PRODUCT_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductUnpublishedMessagePayloadImpl.class, name = ProductUnpublishedMessagePayload.PRODUCT_UNPUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantAddedMessagePayloadImpl.class, name = ProductVariantAddedMessagePayload.PRODUCT_VARIANT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadImpl.class, name = ProductVariantDeletedMessagePayload.PRODUCT_VARIANT_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCreatedMessagePayloadImpl.class, name = QuoteCreatedMessagePayload.QUOTE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteDeletedMessagePayloadImpl.class, name = QuoteDeletedMessagePayload.QUOTE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadImpl.class, name = QuoteRequestCreatedMessagePayload.QUOTE_REQUEST_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadImpl.class, name = QuoteRequestDeletedMessagePayload.QUOTE_REQUEST_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadImpl.class, name = QuoteRequestStateChangedMessagePayload.QUOTE_REQUEST_STATE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteStateChangedMessagePayloadImpl.class, name = QuoteStateChangedMessagePayload.QUOTE_STATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessagePayloadImpl.class, name = ReviewCreatedMessagePayload.REVIEW_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessagePayloadImpl.class, name = ReviewRatingSetMessagePayload.REVIEW_RATING_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadImpl.class, name = ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadImpl.class, name = ShoppingListStoreSetMessagePayload.SHOPPING_LIST_STORE_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadImpl.class, name = StagedQuoteCreatedMessagePayload.STAGED_QUOTE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadImpl.class, name = StagedQuoteDeletedMessagePayload.STAGED_QUOTE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadImpl.class, name = StagedQuoteSellerCommentSetMessagePayload.STAGED_QUOTE_SELLER_COMMENT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadImpl.class, name = StagedQuoteStateChangedMessagePayload.STAGED_QUOTE_STATE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadImpl.class, name = StagedQuoteValidToSetMessagePayload.STAGED_QUOTE_VALID_TO_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadImpl.class, name = StandalonePriceCreatedMessagePayload.STANDALONE_PRICE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl.class, name = StandalonePriceDeletedMessagePayload.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl.class, name = StandalonePriceDiscountSetMessagePayload.STANDALONE_PRICE_DISCOUNT_SET),
@@ -440,6 +452,10 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder productSelectionVariantSelectionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder productSlugChangedBuilder() {
         return com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder.of();
     }
@@ -460,6 +476,30 @@ public interface MessagePayload {
         return com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadBuilder.of();
     }
 
+    public static com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder quoteCreatedBuilder() {
+        return com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder quoteDeletedBuilder() {
+        return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder quoteRequestCreatedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder quoteRequestDeletedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder quoteRequestStateChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder quoteStateChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder.of();
+    }
+
     public static com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder reviewCreatedBuilder() {
         return com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder.of();
     }
@@ -474,6 +514,26 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder shoppingListStoreSetBuilder() {
         return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder stagedQuoteCreatedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder stagedQuoteDeletedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder stagedQuoteSellerCommentSetBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder stagedQuoteStateChangedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder stagedQuoteValidToSetBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {

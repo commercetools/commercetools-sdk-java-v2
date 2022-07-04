@@ -20,9 +20,12 @@ import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier;
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;
+import com.commercetools.api.models.quote.QuoteResourceIdentifier;
+import com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier;
 import com.commercetools.api.models.review.ReviewResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
+import com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier;
 import com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -63,9 +66,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierImpl.class, name = ProductSelectionResourceIdentifier.PRODUCT_SELECTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierImpl.class, name = QuoteRequestResourceIdentifier.QUOTE_REQUEST),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteResourceIdentifierImpl.class, name = QuoteResourceIdentifier.QUOTE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierImpl.class, name = StagedQuoteResourceIdentifier.STAGED_QUOTE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierImpl.class, name = StandalonePriceResourceIdentifier.STANDALONE_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),
@@ -162,6 +168,14 @@ public interface ResourceIdentifier {
         return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();
     }
 
+    public static com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder quoteRequestBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder quoteBuilder() {
+        return com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder.of();
+    }
+
     public static com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();
     }
@@ -172,6 +186,10 @@ public interface ResourceIdentifier {
 
     public static com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierBuilder stagedQuoteBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierBuilder.of();
     }
 
     public static com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {

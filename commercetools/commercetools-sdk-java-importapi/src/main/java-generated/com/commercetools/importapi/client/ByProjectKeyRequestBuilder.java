@@ -15,16 +15,6 @@ public class ByProjectKeyRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    @Deprecated
-    public ByProjectKeyImportSinksRequestBuilder importSinks() {
-        return new ByProjectKeyImportSinksRequestBuilder(apiHttpClient, projectKey);
-    }
-
-    @Deprecated
-    public ByProjectKeyImportSummariesRequestBuilder importSummaries() {
-        return new ByProjectKeyImportSummariesRequestBuilder(apiHttpClient, projectKey);
-    }
-
     public ByProjectKeyImportContainersRequestBuilder importContainers() {
         return new ByProjectKeyImportContainersRequestBuilder(apiHttpClient, projectKey);
     }
@@ -71,5 +61,9 @@ public class ByProjectKeyRequestBuilder {
 
     public ByProjectKeyCustomersRequestBuilder customers() {
         return new ByProjectKeyCustomersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyInventoriesRequestBuilder inventories() {
+        return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
     }
 }

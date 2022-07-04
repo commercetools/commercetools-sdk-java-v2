@@ -56,6 +56,9 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     /**
      *  <p>Unique identifier of the Message.</p>
      */
@@ -212,6 +215,28 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public ProductSelectionProductAddedMessageBuilder variantSelection(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public ProductSelectionProductAddedMessageBuilder variantSelection(
+            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -259,6 +284,11 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
         return this.product;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public ProductSelectionProductAddedMessage build() {
         Objects.requireNonNull(id, ProductSelectionProductAddedMessage.class + ": id is missing");
         Objects.requireNonNull(version, ProductSelectionProductAddedMessage.class + ": version is missing");
@@ -272,7 +302,8 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
             ProductSelectionProductAddedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(product, ProductSelectionProductAddedMessage.class + ": product is missing");
         return new ProductSelectionProductAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product,
+            variantSelection);
     }
 
     /**
@@ -280,7 +311,8 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
      */
     public ProductSelectionProductAddedMessage buildUnchecked() {
         return new ProductSelectionProductAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product,
+            variantSelection);
     }
 
     public static ProductSelectionProductAddedMessageBuilder of() {
@@ -300,6 +332,7 @@ public class ProductSelectionProductAddedMessageBuilder implements Builder<Produ
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.product = template.getProduct();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

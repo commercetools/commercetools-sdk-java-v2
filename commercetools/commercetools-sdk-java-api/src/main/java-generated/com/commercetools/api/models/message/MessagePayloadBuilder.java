@@ -319,6 +319,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder productSelectionVariantSelectionChangedBuilder() {
+        return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder productSlugChangedBuilder() {
         return com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder.of();
     }
@@ -339,6 +343,30 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder quoteCreatedBuilder() {
+        return com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder quoteDeletedBuilder() {
+        return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder quoteRequestCreatedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder quoteRequestDeletedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder quoteRequestStateChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder quoteStateChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder reviewCreatedBuilder() {
         return com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder.of();
     }
@@ -353,6 +381,26 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder shoppingListStoreSetBuilder() {
         return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder stagedQuoteCreatedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder stagedQuoteDeletedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder stagedQuoteSellerCommentSetBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder stagedQuoteStateChangedBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder stagedQuoteValidToSetBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {

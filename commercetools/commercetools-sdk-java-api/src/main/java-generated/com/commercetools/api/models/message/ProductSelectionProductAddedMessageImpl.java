@@ -44,6 +44,8 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     @JsonCreator
     ProductSelectionProductAddedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -55,7 +57,8 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -67,6 +70,7 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.product = product;
+        this.variantSelection = variantSelection;
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }
 
@@ -170,6 +174,14 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         return this.product;
     }
 
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -215,6 +227,11 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         this.product = product;
     }
 
+    public void setVariantSelection(
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -237,6 +254,7 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(product, that.product)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 
@@ -254,6 +272,7 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(product)
+                .append(variantSelection)
                 .toHashCode();
     }
 

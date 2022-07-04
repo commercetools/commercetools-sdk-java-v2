@@ -4,6 +4,8 @@ package com.commercetools.api.models.product_selection;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ProductSelectionAddProductActionBuilder implements Builder<ProductSelectionAddProductAction> {
 
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
+
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
     /**
      *  <p>ResourceIdentifier to Product</p>
@@ -45,20 +50,47 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
         return this;
     }
 
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     */
+
+    public ProductSelectionAddProductActionBuilder variantSelection(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     */
+
+    public ProductSelectionAddProductActionBuilder variantSelection(
+            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public ProductSelectionAddProductAction build() {
         Objects.requireNonNull(product, ProductSelectionAddProductAction.class + ": product is missing");
-        return new ProductSelectionAddProductActionImpl(product);
+        return new ProductSelectionAddProductActionImpl(product, variantSelection);
     }
 
     /**
      * builds ProductSelectionAddProductAction without checking for non null required values
      */
     public ProductSelectionAddProductAction buildUnchecked() {
-        return new ProductSelectionAddProductActionImpl(product);
+        return new ProductSelectionAddProductActionImpl(product, variantSelection);
     }
 
     public static ProductSelectionAddProductActionBuilder of() {
@@ -68,6 +100,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     public static ProductSelectionAddProductActionBuilder of(final ProductSelectionAddProductAction template) {
         ProductSelectionAddProductActionBuilder builder = new ProductSelectionAddProductActionBuilder();
         builder.product = template.getProduct();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

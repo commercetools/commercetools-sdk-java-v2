@@ -72,6 +72,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
+    private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
@@ -116,6 +118,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("country") final String country,
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
+            @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
             @JsonProperty("locale") final String locale,
@@ -151,6 +154,7 @@ public class CartImpl implements Cart, ModelBase {
         this.country = country;
         this.shippingInfo = shippingInfo;
         this.discountCodes = discountCodes;
+        this.directDiscounts = directDiscounts;
         this.custom = custom;
         this.paymentInfo = paymentInfo;
         this.locale = locale;
@@ -377,6 +381,14 @@ public class CartImpl implements Cart, ModelBase {
      *
      */
 
+    public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
+        return this.directDiscounts;
+    }
+
+    /**
+     *
+     */
+
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -564,6 +576,15 @@ public class CartImpl implements Cart, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    public void setDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+        this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
+    }
+
+    public void setDirectDiscounts(
+            final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
+        this.directDiscounts = directDiscounts;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -647,6 +668,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(country, that.country)
                 .append(shippingInfo, that.shippingInfo)
                 .append(discountCodes, that.discountCodes)
+                .append(directDiscounts, that.directDiscounts)
                 .append(custom, that.custom)
                 .append(paymentInfo, that.paymentInfo)
                 .append(locale, that.locale)
@@ -687,6 +709,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(country)
                 .append(shippingInfo)
                 .append(discountCodes)
+                .append(directDiscounts)
                 .append(custom)
                 .append(paymentInfo)
                 .append(locale)

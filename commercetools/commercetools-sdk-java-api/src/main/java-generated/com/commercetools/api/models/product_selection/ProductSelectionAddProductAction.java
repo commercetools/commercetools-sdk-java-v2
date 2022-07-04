@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSelectionAddProductAction
+ *  <p>Adds a Product to the Product Selection. If the given Product is already assigned to the Product Selection with the same Variant Selection nothing happens but if the existing Assignment has a different Variant Selection ProductPresentWithDifferentVariantSelection is raised.'</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,16 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     @JsonProperty("product")
     public ProductResourceIdentifier getProduct();
 
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     */
+    @Valid
+    @JsonProperty("variantSelection")
+    public ProductVariantSelection getVariantSelection();
+
     public void setProduct(final ProductResourceIdentifier product);
+
+    public void setVariantSelection(final ProductVariantSelection variantSelection);
 
     public static ProductSelectionAddProductAction of() {
         return new ProductSelectionAddProductActionImpl();
@@ -50,6 +59,7 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     public static ProductSelectionAddProductAction of(final ProductSelectionAddProductAction template) {
         ProductSelectionAddProductActionImpl instance = new ProductSelectionAddProductActionImpl();
         instance.setProduct(template.getProduct());
+        instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
 

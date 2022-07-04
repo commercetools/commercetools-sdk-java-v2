@@ -123,6 +123,9 @@ public class OrderBuilder implements Builder<Order> {
     private com.commercetools.api.models.cart.CartReference cart;
 
     @Nullable
+    private com.commercetools.api.models.quote.QuoteReference quote;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -781,6 +784,25 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+
+    public OrderBuilder quote(
+            Function<com.commercetools.api.models.quote.QuoteReferenceBuilder, com.commercetools.api.models.quote.QuoteReferenceBuilder> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+
+    public OrderBuilder quote(@Nullable final com.commercetools.api.models.quote.QuoteReference quote) {
+        this.quote = quote;
+        return this;
+    }
+
+    /**
      *
      */
 
@@ -1144,6 +1166,11 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     @Nullable
+    public com.commercetools.api.models.quote.QuoteReference getQuote() {
+        return this.quote;
+    }
+
+    @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -1202,8 +1229,8 @@ public class OrderBuilder implements Builder<Order> {
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
             state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
-            shippingRateInput, itemShippingAddresses, refusedGifts);
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1214,8 +1241,8 @@ public class OrderBuilder implements Builder<Order> {
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
             state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
-            shippingRateInput, itemShippingAddresses, refusedGifts);
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     public static OrderBuilder of() {
@@ -1256,6 +1283,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.discountCodes = template.getDiscountCodes();
         builder.lastMessageSequenceNumber = template.getLastMessageSequenceNumber();
         builder.cart = template.getCart();
+        builder.quote = template.getQuote();
         builder.custom = template.getCustom();
         builder.paymentInfo = template.getPaymentInfo();
         builder.locale = template.getLocale();

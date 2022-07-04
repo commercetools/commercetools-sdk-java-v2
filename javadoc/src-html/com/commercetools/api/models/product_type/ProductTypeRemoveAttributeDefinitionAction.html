@@ -26,67 +26,68 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> * ProductTypeRemoveAttributeDefinitionAction</span>
-<span class="source-line-no">017</span><span id="line.17"> *</span>
-<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *     ProductTypeRemoveAttributeDefinitionAction productTypeRemoveAttributeDefinitionAction = ProductTypeRemoveAttributeDefinitionAction.builder()</span>
-<span class="source-line-no">023</span><span id="line.23"> *             .name("{name}")</span>
-<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> */</span>
-<span class="source-line-no">028</span><span id="line.28">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">029</span><span id="line.29">@JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)</span>
-<span class="source-line-no">030</span><span id="line.30">public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    String REMOVE_ATTRIBUTE_DEFINITION = "removeAttributeDefinition";</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;The name of the attribute to remove.&lt;/p&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">     */</span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("name")</span>
-<span class="source-line-no">039</span><span id="line.39">    public String getName();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public void setName(final String name);</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public static ProductTypeRemoveAttributeDefinitionAction of() {</span>
-<span class="source-line-no">044</span><span id="line.44">        return new ProductTypeRemoveAttributeDefinitionActionImpl();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static ProductTypeRemoveAttributeDefinitionAction of(</span>
-<span class="source-line-no">048</span><span id="line.48">            final ProductTypeRemoveAttributeDefinitionAction template) {</span>
-<span class="source-line-no">049</span><span id="line.49">        ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();</span>
-<span class="source-line-no">050</span><span id="line.50">        instance.setName(template.getName());</span>
-<span class="source-line-no">051</span><span id="line.51">        return instance;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return ProductTypeRemoveAttributeDefinitionActionBuilder.of();</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(</span>
-<span class="source-line-no">059</span><span id="line.59">            final ProductTypeRemoveAttributeDefinitionAction template) {</span>
-<span class="source-line-no">060</span><span id="line.60">        return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    default &lt;T&gt; T withProductTypeRemoveAttributeDefinitionAction(</span>
-<span class="source-line-no">064</span><span id="line.64">            Function&lt;ProductTypeRemoveAttributeDefinitionAction, T&gt; helper) {</span>
-<span class="source-line-no">065</span><span id="line.65">        return helper.apply(this);</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt; typeReference() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt;() {</span>
-<span class="source-line-no">070</span><span id="line.70">            @Override</span>
-<span class="source-line-no">071</span><span id="line.71">            public String toString() {</span>
-<span class="source-line-no">072</span><span id="line.72">                return "TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt;";</span>
-<span class="source-line-no">073</span><span id="line.73">            }</span>
-<span class="source-line-no">074</span><span id="line.74">        };</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76">}</span>
+<span class="source-line-no">016</span><span id="line.16"> *  &lt;p&gt;Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;The &lt;code&gt;CombinationUnique&lt;/code&gt; constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a &lt;code&gt;CombinationUnique&lt;/code&gt; constraint.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     ProductTypeRemoveAttributeDefinitionAction productTypeRemoveAttributeDefinitionAction = ProductTypeRemoveAttributeDefinitionAction.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .name("{name}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)</span>
+<span class="source-line-no">031</span><span id="line.31">public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    String REMOVE_ATTRIBUTE_DEFINITION = "removeAttributeDefinition";</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    /**</span>
+<span class="source-line-no">036</span><span id="line.36">     *  &lt;p&gt;Name of the Attribute to remove.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">     */</span>
+<span class="source-line-no">038</span><span id="line.38">    @NotNull</span>
+<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("name")</span>
+<span class="source-line-no">040</span><span id="line.40">    public String getName();</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public void setName(final String name);</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public static ProductTypeRemoveAttributeDefinitionAction of() {</span>
+<span class="source-line-no">045</span><span id="line.45">        return new ProductTypeRemoveAttributeDefinitionActionImpl();</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public static ProductTypeRemoveAttributeDefinitionAction of(</span>
+<span class="source-line-no">049</span><span id="line.49">            final ProductTypeRemoveAttributeDefinitionAction template) {</span>
+<span class="source-line-no">050</span><span id="line.50">        ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();</span>
+<span class="source-line-no">051</span><span id="line.51">        instance.setName(template.getName());</span>
+<span class="source-line-no">052</span><span id="line.52">        return instance;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return ProductTypeRemoveAttributeDefinitionActionBuilder.of();</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(</span>
+<span class="source-line-no">060</span><span id="line.60">            final ProductTypeRemoveAttributeDefinitionAction template) {</span>
+<span class="source-line-no">061</span><span id="line.61">        return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    default &lt;T&gt; T withProductTypeRemoveAttributeDefinitionAction(</span>
+<span class="source-line-no">065</span><span id="line.65">            Function&lt;ProductTypeRemoveAttributeDefinitionAction, T&gt; helper) {</span>
+<span class="source-line-no">066</span><span id="line.66">        return helper.apply(this);</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt; typeReference() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt;() {</span>
+<span class="source-line-no">071</span><span id="line.71">            @Override</span>
+<span class="source-line-no">072</span><span id="line.72">            public String toString() {</span>
+<span class="source-line-no">073</span><span id="line.73">                return "TypeReference&lt;ProductTypeRemoveAttributeDefinitionAction&gt;";</span>
+<span class="source-line-no">074</span><span id="line.74">            }</span>
+<span class="source-line-no">075</span><span id="line.75">        };</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77">}</span>
 
 
 

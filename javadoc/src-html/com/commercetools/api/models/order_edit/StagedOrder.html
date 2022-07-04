@@ -89,39 +89,40 @@
 <span class="source-line-no">076</span><span id="line.76">        instance.setDiscountCodes(template.getDiscountCodes());</span>
 <span class="source-line-no">077</span><span id="line.77">        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());</span>
 <span class="source-line-no">078</span><span id="line.78">        instance.setCart(template.getCart());</span>
-<span class="source-line-no">079</span><span id="line.79">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setPaymentInfo(template.getPaymentInfo());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setLocale(template.getLocale());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setInventoryMode(template.getInventoryMode());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setOrigin(template.getOrigin());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setShippingRateInput(template.getShippingRateInput());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setRefusedGifts(template.getRefusedGifts());</span>
-<span class="source-line-no">088</span><span id="line.88">        return instance;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static StagedOrderBuilder builder() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return StagedOrderBuilder.of();</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static StagedOrderBuilder builder(final StagedOrder template) {</span>
-<span class="source-line-no">096</span><span id="line.96">        return StagedOrderBuilder.of(template);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    default &lt;T&gt; T withStagedOrder(Function&lt;StagedOrder, T&gt; helper) {</span>
-<span class="source-line-no">100</span><span id="line.100">        return helper.apply(this);</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrder&gt; typeReference() {</span>
-<span class="source-line-no">104</span><span id="line.104">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrder&gt;() {</span>
-<span class="source-line-no">105</span><span id="line.105">            @Override</span>
-<span class="source-line-no">106</span><span id="line.106">            public String toString() {</span>
-<span class="source-line-no">107</span><span id="line.107">                return "TypeReference&lt;StagedOrder&gt;";</span>
-<span class="source-line-no">108</span><span id="line.108">            }</span>
-<span class="source-line-no">109</span><span id="line.109">        };</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111">}</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setQuote(template.getQuote());</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setPaymentInfo(template.getPaymentInfo());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setLocale(template.getLocale());</span>
+<span class="source-line-no">083</span><span id="line.83">        instance.setInventoryMode(template.getInventoryMode());</span>
+<span class="source-line-no">084</span><span id="line.84">        instance.setOrigin(template.getOrigin());</span>
+<span class="source-line-no">085</span><span id="line.85">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
+<span class="source-line-no">086</span><span id="line.86">        instance.setShippingRateInput(template.getShippingRateInput());</span>
+<span class="source-line-no">087</span><span id="line.87">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
+<span class="source-line-no">088</span><span id="line.88">        instance.setRefusedGifts(template.getRefusedGifts());</span>
+<span class="source-line-no">089</span><span id="line.89">        return instance;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public static StagedOrderBuilder builder() {</span>
+<span class="source-line-no">093</span><span id="line.93">        return StagedOrderBuilder.of();</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public static StagedOrderBuilder builder(final StagedOrder template) {</span>
+<span class="source-line-no">097</span><span id="line.97">        return StagedOrderBuilder.of(template);</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    default &lt;T&gt; T withStagedOrder(Function&lt;StagedOrder, T&gt; helper) {</span>
+<span class="source-line-no">101</span><span id="line.101">        return helper.apply(this);</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrder&gt; typeReference() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrder&gt;() {</span>
+<span class="source-line-no">106</span><span id="line.106">            @Override</span>
+<span class="source-line-no">107</span><span id="line.107">            public String toString() {</span>
+<span class="source-line-no">108</span><span id="line.108">                return "TypeReference&lt;StagedOrder&gt;";</span>
+<span class="source-line-no">109</span><span id="line.109">            }</span>
+<span class="source-line-no">110</span><span id="line.110">        };</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112">}</span>
 
 
 

@@ -14,16 +14,24 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.http.okhttp3;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import io.vrap.rmf.base.client.BaseHttpClientSupplier;</span>
-<span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.VrapHttpClient;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.concurrent.ExecutorService;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.util.function.Supplier;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">public class OkHttp3ClientSupplier extends BaseHttpClientSupplier {</span>
-<span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">    @Override</span>
-<span class="source-line-no">010</span><span id="line.10">    public VrapHttpClient get() {</span>
-<span class="source-line-no">011</span><span id="line.11">        return new CtOkHttp3Client();</span>
-<span class="source-line-no">012</span><span id="line.12">    }</span>
-<span class="source-line-no">013</span><span id="line.13">}</span>
+<span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.BaseHttpClientSupplier;</span>
+<span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.VrapHttpClient;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">public class OkHttp3ClientSupplier extends BaseHttpClientSupplier {</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    @Override</span>
+<span class="source-line-no">013</span><span id="line.13">    public VrapHttpClient get() {</span>
+<span class="source-line-no">014</span><span id="line.14">        return new CtOkHttp3Client();</span>
+<span class="source-line-no">015</span><span id="line.15">    }</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    @Override</span>
+<span class="source-line-no">018</span><span id="line.18">    public Supplier&lt;VrapHttpClient&gt; get(ExecutorService executorService) {</span>
+<span class="source-line-no">019</span><span id="line.19">        return () -&gt; new CtOkHttp3Client(executorService);</span>
+<span class="source-line-no">020</span><span id="line.20">    }</span>
+<span class="source-line-no">021</span><span id="line.21">}</span>
 
 
 

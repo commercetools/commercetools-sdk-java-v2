@@ -57,20 +57,20 @@ public class ProductTypeImportIntegrationTest {
                 .executeBlocking()
                 .getBody();
 
-        assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
-            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot()
-                    .productTypes()
-                    .importSinkKeyWithImportSinkKeyValue(importSinkKey)
-                    .importOperations()
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            assertThat(operationPagedResponse).isNotNull();
-            List<ImportOperation> results = operationPagedResponse.getResults();
-            assertThat(results).hasSize(1);
-            assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
-        });
+//        assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
+//            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot()
+//                    .productTypes()
+//                    .importSinkKeyWithImportSinkKeyValue(importSinkKey)
+//                    .importOperations()
+//                    .get()
+//                    .executeBlocking()
+//                    .getBody();
+//
+//            assertThat(operationPagedResponse).isNotNull();
+//            List<ImportOperation> results = operationPagedResponse.getResults();
+//            assertThat(results).hasSize(1);
+//            assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
+//        });
 
         //
         //        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()

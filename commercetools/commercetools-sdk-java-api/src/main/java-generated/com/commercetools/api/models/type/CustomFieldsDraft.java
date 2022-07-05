@@ -72,6 +72,14 @@ public interface CustomFieldsDraft {
         return helper.apply(this);
     }
 
+    public static CustomFieldsDraft of(final CustomFields template) {
+        return template.toDraft();
+    }
+
+    public static CustomFieldsDraftBuilder builder(final CustomFields template) {
+        return template.toDraftBuilder();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft>() {
             @Override

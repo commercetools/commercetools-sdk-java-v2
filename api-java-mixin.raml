@@ -8,6 +8,38 @@ annotationTypes:
 
 types:
   Address:
+    (java-mixin): |
+      public default AddressDraftBuilder toDraftBuilder() {
+          return AddressDraft.builder()
+                  .key(this.getKey())
+                  .country(this.getCountry())
+                  .title(this.getTitle())
+                  .salutation(this.getSalutation())
+                  .firstName(this.getFirstName())
+                  .lastName(this.getLastName())
+                  .streetName(this.getStreetName())
+                  .streetNumber(this.getStreetNumber())
+                  .additionalStreetInfo(this.getAdditionalStreetInfo())
+                  .postalCode(this.getPostalCode())
+                  .city(this.getCity())
+                  .region(this.getRegion())
+                  .state(this.getState())
+                  .company(this.getCompany())
+                  .department(this.getDepartment())
+                  .building(this.getBuilding())
+                  .apartment(this.getApartment())
+                  .pOBox(this.getPOBox())
+                  .phone(this.getPhone())
+                  .mobile(this.getMobile())
+                  .email(this.getEmail())
+                  .fax(this.getFax())
+                  .additionalAddressInfo(this.getAdditionalAddressInfo())
+                  .externalId(this.getExternalId());
+      }
+
+      public default AddressDraft toDraft() {
+          return toDraftBuilder().build();
+      }
     properties:
       id:
         required: false
@@ -339,7 +371,7 @@ types:
       }
 
       public default CustomFieldsDraftBuilder toDraftBuilder() {
-          return CustomFieldsDraftBuilder.of()
+          return CustomFieldsDraft.builder()
                   .type(getType().toResourceIdentifier())
                   .fields(getFields());
       }
@@ -351,4 +383,30 @@ types:
 
       public static CustomFieldsDraftBuilder builder(final CustomFields template) {
           return template.toDraftBuilder();
+      }
+  Parcel:
+    (java-mixin): |
+      public default ParcelDraftBuilder toDraftBuilder() {
+          return ParcelDraft.builder()
+                  .measurements(this.getMeasurements())
+                  .trackingData(this.getTrackingData())
+                  .items(this.getItems())
+                  .custom(this.getCustom().toDraft());
+      }
+
+      public default ParcelDraft toDraft() {
+          return toDraftBuilder().build();
+      }
+  Delivery:
+    (java-mixin): |
+      public default DeliveryDraftBuilder toDraftBuilder() {
+          return DeliveryDraft.builder()
+                  .address(this.getAddress().toDraft())
+                  .items(this.getItems())
+                  .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))
+                  .custom(this.getCustom().toDraft());
+      }
+
+      public default DeliveryDraft toDraft() {
+          return toDraftBuilder().build();
       }

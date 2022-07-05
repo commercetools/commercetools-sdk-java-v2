@@ -219,6 +219,10 @@ public interface Reference {
         return helper.apply(this);
     }
 
+    public default ResourceIdentifier toResourceIdentifier() {
+        return new ResourceIdentifierImpl(this.getTypeId(), this.getId(), null);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Reference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Reference>() {
             @Override

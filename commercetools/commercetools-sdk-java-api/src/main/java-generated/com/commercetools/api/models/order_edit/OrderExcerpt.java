@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderExcerpt orderExcerpt = OrderExcerpt.builder()
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
- *             .version(1)
+ *             .version(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,13 +53,13 @@ public interface OrderExcerpt {
      */
     @NotNull
     @JsonProperty("version")
-    public Integer getVersion();
+    public Long getVersion();
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
-    public void setVersion(final Integer version);
+    public void setVersion(final Long version);
 
     public static OrderExcerpt of() {
         return new OrderExcerptImpl();

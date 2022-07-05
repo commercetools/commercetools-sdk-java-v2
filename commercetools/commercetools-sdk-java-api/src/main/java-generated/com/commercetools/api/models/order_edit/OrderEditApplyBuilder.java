@@ -13,8 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderEditApply orderEditApply = OrderEditApply.builder()
- *             .editVersion(1)
- *             .resourceVersion(1)
+ *             .editVersion(0.3)
+ *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,15 +22,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
 
-    private Integer editVersion;
+    private Long editVersion;
 
-    private Integer resourceVersion;
+    private Long resourceVersion;
 
     /**
      *
      */
 
-    public OrderEditApplyBuilder editVersion(final Integer editVersion) {
+    public OrderEditApplyBuilder editVersion(final Long editVersion) {
         this.editVersion = editVersion;
         return this;
     }
@@ -39,16 +39,16 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
      *
      */
 
-    public OrderEditApplyBuilder resourceVersion(final Integer resourceVersion) {
+    public OrderEditApplyBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
 
-    public Integer getEditVersion() {
+    public Long getEditVersion() {
         return this.editVersion;
     }
 
-    public Integer getResourceVersion() {
+    public Long getResourceVersion() {
         return this.resourceVersion;
     }
 

@@ -20,8 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderEditApply orderEditApply = OrderEditApply.builder()
- *             .editVersion(1)
- *             .resourceVersion(1)
+ *             .editVersion(0.3)
+ *             .resourceVersion(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,18 +35,18 @@ public interface OrderEditApply {
      */
     @NotNull
     @JsonProperty("editVersion")
-    public Integer getEditVersion();
+    public Long getEditVersion();
 
     /**
      *
      */
     @NotNull
     @JsonProperty("resourceVersion")
-    public Integer getResourceVersion();
+    public Long getResourceVersion();
 
-    public void setEditVersion(final Integer editVersion);
+    public void setEditVersion(final Long editVersion);
 
-    public void setResourceVersion(final Integer resourceVersion);
+    public void setResourceVersion(final Long resourceVersion);
 
     public static OrderEditApply of() {
         return new OrderEditApplyImpl();

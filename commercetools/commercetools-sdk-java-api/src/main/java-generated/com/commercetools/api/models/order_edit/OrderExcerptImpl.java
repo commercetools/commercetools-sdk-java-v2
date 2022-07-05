@@ -24,12 +24,12 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
-    private Integer version;
+    private Long version;
 
     @JsonCreator
     OrderExcerptImpl(@JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
-            @JsonProperty("version") final Integer version) {
+            @JsonProperty("version") final Long version) {
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
         this.version = version;
@@ -58,7 +58,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
      *
      */
 
-    public Integer getVersion() {
+    public Long getVersion() {
         return this.version;
     }
 
@@ -70,7 +70,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
-    public void setVersion(final Integer version) {
+    public void setVersion(final Long version) {
         this.version = version;
     }
 

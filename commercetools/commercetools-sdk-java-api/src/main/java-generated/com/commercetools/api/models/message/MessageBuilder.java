@@ -119,8 +119,20 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderCreatedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder orderCustomLineItemAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageBuilder orderCustomLineItemDiscountSetBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessageBuilder orderCustomLineItemQuantityChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder orderCustomLineItemRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderCustomerEmailSetMessageBuilder orderCustomerEmailSetBuilder() {

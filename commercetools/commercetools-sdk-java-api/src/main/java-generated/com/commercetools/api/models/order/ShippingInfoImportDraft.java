@@ -87,7 +87,7 @@ public interface ShippingInfoImportDraft {
      */
     @Valid
     @JsonProperty("deliveries")
-    public List<Delivery> getDeliveries();
+    public List<DeliveryDraft> getDeliveries();
 
     /**
      *
@@ -116,9 +116,9 @@ public interface ShippingInfoImportDraft {
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     @JsonIgnore
-    public void setDeliveries(final Delivery... deliveries);
+    public void setDeliveries(final DeliveryDraft... deliveries);
 
-    public void setDeliveries(final List<Delivery> deliveries);
+    public void setDeliveries(final List<DeliveryDraft> deliveries);
 
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 

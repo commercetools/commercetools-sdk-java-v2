@@ -79,7 +79,7 @@ public interface CustomFields {
     }
 
     public default CustomFieldsDraftBuilder toDraftBuilder() {
-        return CustomFieldsDraftBuilder.of().type(getType().toResourceIdentifier()).fields(getFields());
+        return CustomFieldsDraft.builder().type(getType().toResourceIdentifier()).fields(getFields());
     }
 
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFields> typeReference() {

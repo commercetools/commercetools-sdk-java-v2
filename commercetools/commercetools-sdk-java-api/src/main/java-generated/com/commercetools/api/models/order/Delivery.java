@@ -125,6 +125,18 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
         return helper.apply(this);
     }
 
+    public default DeliveryDraftBuilder toDraftBuilder() {
+        return DeliveryDraft.builder()
+                .address(this.getAddress().toDraft())
+                .items(this.getItems())
+                .parcels(this.getParcels().stream().map(Parcel::toDraft).collect(java.util.stream.Collectors.toList()))
+                .custom(this.getCustom().toDraft());
+    }
+
+    public default DeliveryDraft toDraft() {
+        return toDraftBuilder().build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Delivery> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Delivery>() {
             @Override

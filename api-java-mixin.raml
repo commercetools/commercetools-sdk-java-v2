@@ -321,3 +321,34 @@ types:
                   .currencyCode(this.getCurrencyCode())
                   .build();
       }
+  Reference:
+    (java-mixin): |
+      public default ResourceIdentifier toResourceIdentifier() {
+          return new ResourceIdentifierImpl(this.getTypeId(), this.getId(), null);
+      }
+  TypeReference:
+    (java-mixin): |
+      @Override
+      public default TypeResourceIdentifier toResourceIdentifier() {
+          return TypeResourceIdentifier.builder().id(this.getId()).build();
+      }
+  CustomFields:
+    (java-mixin): |
+      public default CustomFieldsDraft toDraft() {
+          return draftBuilder().build();
+      }
+
+      public default CustomFieldsDraftBuilder toDraftBuilder() {
+          return CustomFieldsDraftBuilder.of()
+                  .type(getType().toResourceIdentifier())
+                  .fields(getFields());
+      }
+  CustomFieldsDraft:
+    (java-mixin): |
+      public static CustomFieldsDraft of(final CustomFields template) {
+          return template.toDraft();
+      }
+
+      public static CustomFieldsDraftBuilder builder(final CustomFields template) {
+          return template.toDraftBuilder();
+      }

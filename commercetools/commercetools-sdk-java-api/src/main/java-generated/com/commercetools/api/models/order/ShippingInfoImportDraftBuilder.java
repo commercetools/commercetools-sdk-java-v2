@@ -42,7 +42,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.order.Delivery> deliveries;
+    private java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries;
 
     @Nullable
     private com.commercetools.api.models.order.DiscountedLineItemPriceDraft discountedPrice;
@@ -168,7 +168,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
-            @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
+            @Nullable final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
         this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
         return this;
     }
@@ -178,7 +178,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      */
 
     public ShippingInfoImportDraftBuilder deliveries(
-            @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
+            @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries) {
         this.deliveries = deliveries;
         return this;
     }
@@ -188,7 +188,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
-            @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
+            @Nullable final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
         if (this.deliveries == null) {
             this.deliveries = new ArrayList<>();
         }
@@ -201,11 +201,11 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
-            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraftBuilder> builder) {
         if (this.deliveries == null) {
             this.deliveries = new ArrayList<>();
         }
-        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()).build());
         return this;
     }
 
@@ -214,9 +214,9 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
-            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraftBuilder> builder) {
         this.deliveries = new ArrayList<>();
-        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()).build());
         return this;
     }
 
@@ -280,7 +280,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
+    public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
 

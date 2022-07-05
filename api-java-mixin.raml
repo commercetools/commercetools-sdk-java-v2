@@ -335,7 +335,7 @@ types:
   CustomFields:
     (java-mixin): |
       public default CustomFieldsDraft toDraft() {
-          return draftBuilder().build();
+          return toDraftBuilder().build();
       }
 
       public default CustomFieldsDraftBuilder toDraftBuilder() {

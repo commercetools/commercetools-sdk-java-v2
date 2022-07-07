@@ -28,7 +28,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     private java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions;
 
     /**
-     *
+     *  <p>The expected version of the review on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public ReviewUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     *
+     *  <p>The list of update actions to be performed on the review.</p>
      */
 
     public ReviewUpdateBuilder actions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     *
+     *  <p>The list of update actions to be performed on the review.</p>
      */
 
     public ReviewUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     *
+     *  <p>The list of update actions to be performed on the review.</p>
      */
 
     public ReviewUpdateBuilder plusActions(final com.commercetools.api.models.review.ReviewUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     *
+     *  <p>The list of update actions to be performed on the review.</p>
      */
 
     public ReviewUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class ReviewUpdateBuilder implements Builder<ReviewUpdate> {
     }
 
     /**
-     *
+     *  <p>The list of update actions to be performed on the review.</p>
      */
 
     public ReviewUpdateBuilder withActions(

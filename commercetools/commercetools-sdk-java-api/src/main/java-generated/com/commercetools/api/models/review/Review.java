@@ -53,21 +53,21 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public String getId();
 
     /**
-     *  <p>The current version of the review.</p>
+     *  <p>Current version of the Review.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -95,77 +95,77 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public String getKey();
 
     /**
-     *
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
      */
 
     @JsonProperty("uniquenessValue")
     public String getUniquenessValue();
 
     /**
-     *
+     *  <p>Language in which the content of the Review is written.</p>
      */
 
     @JsonProperty("locale")
     public String getLocale();
 
     /**
-     *
+     *  <p>Name of the author.</p>
      */
 
     @JsonProperty("authorName")
     public String getAuthorName();
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     @JsonProperty("title")
     public String getTitle();
 
     /**
-     *
+     *  <p>Content of the Review.</p>
      */
 
     @JsonProperty("text")
     public String getText();
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
      */
 
     @JsonProperty("target")
     public Object getTarget();
 
     /**
-     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
 
     /**
-     *  <p>Number between -100 and 100 included.</p>
+     *  <p>Rating of the Product or Channel.</p>
      */
 
     @JsonProperty("rating")
     public Integer getRating();
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-     *
+     *  <p>Custom Fields of the Review.</p>
      */
     @Valid
     @JsonProperty("custom")

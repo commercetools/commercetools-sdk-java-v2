@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewTransitionStateAction
+ *  <p>Transition to a new State. This update action produces the ReviewStateTransitionMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAction, ModelBase {
@@ -48,7 +48,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     *
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
     }
 
     /**
-     *
+     *  <p>Switch validations on or off.</p>
      */
 
     public Boolean getForce() {

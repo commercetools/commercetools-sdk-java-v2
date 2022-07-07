@@ -72,7 +72,7 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
     }
 
     /**
-     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     *  <p>Full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
      */
 
     public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {

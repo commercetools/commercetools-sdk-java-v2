@@ -21,18 +21,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScoreShippingRateInputBuilder implements Builder<ScoreShippingRateInput> {
 
-    private Double score;
+    private Long score;
 
     /**
      *
      */
 
-    public ScoreShippingRateInputBuilder score(final Double score) {
+    public ScoreShippingRateInputBuilder score(final Long score) {
         this.score = score;
         return this;
     }
 
-    public Double getScore() {
+    public Long getScore() {
         return this.score;
     }
 

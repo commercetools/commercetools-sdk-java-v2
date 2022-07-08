@@ -22,10 +22,10 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
 
     private String type;
 
-    private Double score;
+    private Long score;
 
     @JsonCreator
-    ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Double score) {
+    ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Long score) {
         this.score = score;
         this.type = SCORE;
     }
@@ -46,11 +46,11 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
      *
      */
 
-    public Double getScore() {
+    public Long getScore() {
         return this.score;
     }
 
-    public void setScore(final Double score) {
+    public void setScore(final Long score) {
         this.score = score;
     }
 

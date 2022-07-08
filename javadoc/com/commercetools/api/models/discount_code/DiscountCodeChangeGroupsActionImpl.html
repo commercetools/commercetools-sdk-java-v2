@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DiscountCodeChangeGroupsAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeChangeGroupsAction</a></code>, <code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code>, <code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.20">DiscountCodeChangeGroupsActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.17">DiscountCodeChangeGroupsActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeChangeGroupsAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">DiscountCodeChangeGroupsAction</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -141,7 +140,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getGroups()">getGroups</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">New value to set.</div>
+<div class="block">The groups to which this discount code shall belong to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -184,7 +183,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeChangeGroupsActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.33">DiscountCodeChangeGroupsActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.30">DiscountCodeChangeGroupsActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -198,7 +197,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.41">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.34">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code></dd>
@@ -210,8 +209,9 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="getGroups()">
 <h3>getGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.49">getGroups</a></span>()</div>
-<div class="block"><p>New value to set. An empty array removes the DiscountCode from all groups.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.42">getGroups</a></span>()</div>
+<div class="block"><p>The groups to which this discount code shall belong to.
+  Use empty array to remove the code from all groups.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeChangeGroupsAction.html#getGroups()">getGroups</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeChangeGroupsAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeChangeGroupsAction</a></code></dd>
@@ -221,7 +221,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="setGroups(java.lang.String...)">
 <h3>setGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.53">setGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.46">setGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeChangeGroupsAction.html#setGroups(java.lang.String...)">setGroups</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeChangeGroupsAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeChangeGroupsAction</a></code></dd>
@@ -231,7 +231,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="setGroups(java.util.List)">
 <h3>setGroups</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.57">setGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.50">setGroups</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeChangeGroupsAction.html#setGroups(java.util.List)">setGroups</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeChangeGroupsAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeChangeGroupsAction</a></code></dd>
@@ -241,7 +241,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.61">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.54">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -251,7 +251,7 @@ implements <a href="DiscountCodeChangeGroupsAction.html" title="interface in com
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.74">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeChangeGroupsActionImpl.html#line.67">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -84,19 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartClassificationTypeImpl.html" title="class in com.commercetools.api.models.project">CartClassificationTypeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.30">CartClassificationType</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.17">CartClassificationType</a></span><span class="extends-implements">
 extends <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a></span></div>
-<div class="block"><p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>). Only keys defined in the <code>values</code> array can be used to create a tier or to set a value of the <code>shippingRateInput</code> on the Cart. Keys must be unique.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CartClassificationType cartClassificationType = CartClassificationType.builder()
-             .plusValues(valuesBuilder -> valuesBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,7 +124,7 @@ extends <a href="ShippingRateInputType.html" title="interface in com.commercetoo
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getValues()">getValues</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The classification items that can be used for specifiying any ShippingRatePriceTier.</div>
+<div class="block">The classification items that can be used for specifiying any <a href="ctp:api:type:ShippingRatePriceTier">ShippingRatePriceTier</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -175,7 +164,7 @@ extends <a href="ShippingRateInputType.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="CART_CLASSIFICATION">
 <h3>CART_CLASSIFICATION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.34">CART_CLASSIFICATION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.21">CART_CLASSIFICATION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.project.CartClassificationType.CART_CLASSIFICATION">Constant Field Values</a></dd>
@@ -195,56 +184,56 @@ extends <a href="ShippingRateInputType.html" title="interface in com.commercetoo
 <h3>getValues</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.39">getValues</a></span>()</div>
-<div class="block"><p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.26">getValues</a></span>()</div>
+<div class="block"><p>The classification items that can be used for specifiying any <a href="ctp:api:type:ShippingRatePriceTier">ShippingRatePriceTier</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue...)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.44">setValues</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>...&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.31">setValues</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>...&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValues(java.util.List)">
 <h3>setValues</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.47">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.34">setValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&gt;&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.49">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.36">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.CartClassificationType)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTypeBuilder.html" title="class in com.commercetools.api.models.project">CartClassificationTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.59">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTypeBuilder.html" title="class in com.commercetools.api.models.project">CartClassificationTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.46">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.project.CartClassificationType)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTypeBuilder.html" title="class in com.commercetools.api.models.project">CartClassificationTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTypeBuilder.html" title="class in com.commercetools.api.models.project">CartClassificationTypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.50">builder</a></span>&#8203;<span class="parameters">(<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartClassificationType(java.util.function.Function)">
 <h3>withCartClassificationType</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.67">withCartClassificationType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.54">withCartClassificationType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartClassificationType.html#line.58">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

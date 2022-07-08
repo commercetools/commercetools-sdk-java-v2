@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.20">DiscountedLineItemPriceDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.17">DiscountedLineItemPriceDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">DiscountedLineItemPriceDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -172,7 +171,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountedLineItemPriceDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.34">DiscountedLineItemPriceDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.31">DiscountedLineItemPriceDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -186,9 +185,9 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.42">getValue</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.38">getValue</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountedLineItemPriceDraft.html#getValue()">getValue</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code></dd>
@@ -198,7 +197,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="getIncludedDiscounts()">
 <h3>getIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.50">getIncludedDiscounts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.42">getIncludedDiscounts</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountedLineItemPriceDraft.html#getIncludedDiscounts()">getIncludedDiscounts</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code></dd>
@@ -208,7 +207,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="setValue(com.commercetools.api.models.common.Money)">
 <h3>setValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.54">setValue</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.46">setValue</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountedLineItemPriceDraft.html#setValue(com.commercetools.api.models.common.Money)">setValue</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code></dd>
@@ -218,7 +217,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="setIncludedDiscounts(com.commercetools.api.models.cart.DiscountedLineItemPortion...)">
 <h3>setIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.58">setIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.50">setIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>...&nbsp;includedDiscounts)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountedLineItemPriceDraft.html#setIncludedDiscounts(com.commercetools.api.models.cart.DiscountedLineItemPortion...)">setIncludedDiscounts</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code></dd>
@@ -228,7 +227,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="setIncludedDiscounts(java.util.List)">
 <h3>setIncludedDiscounts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.63">setIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>&gt;&nbsp;includedDiscounts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.55">setIncludedDiscounts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPortion.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPortion</a>&gt;&nbsp;includedDiscounts)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountedLineItemPriceDraft.html#setIncludedDiscounts(java.util.List)">setIncludedDiscounts</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.api.models.order">DiscountedLineItemPriceDraft</a></code></dd>
@@ -238,7 +237,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.68">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.60">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -248,7 +247,7 @@ implements <a href="DiscountedLineItemPriceDraft.html" title="interface in com.c
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.83">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/DiscountedLineItemPriceDraftImpl.html#line.75">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

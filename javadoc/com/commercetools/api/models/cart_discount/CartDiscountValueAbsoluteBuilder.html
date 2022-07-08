@@ -83,19 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.22">CartDiscountValueAbsoluteBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.10">CartDiscountValueAbsoluteBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&gt;</span></div>
-<div class="block">CartDiscountValueAbsoluteBuilder
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CartDiscountValueAbsolute cartDiscountValueAbsolute = CartDiscountValueAbsolute.builder()
-             .plusMoney(moneyBuilder -> moneyBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -131,19 +121,15 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">builds CartDiscountValueAbsolute without checking for non null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMoney()">getMoney</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#money(com.commercetools.api.models.common.CentPrecisionMoney...)">money</a></span>&#8203;(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>...&nbsp;money)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Cent precision money values in different currencies.</div>
-</div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#money(com.commercetools.api.models.common.TypedMoney...)">money</a></span>&#8203;(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>...&nbsp;money)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#money(java.util.List)">money</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;money)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Cent precision money values in different currencies.</div>
-</div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#money(java.util.List)">money</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&nbsp;money)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -151,20 +137,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute)">of</a></span>&#8203;(<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusMoney(com.commercetools.api.models.common.CentPrecisionMoney...)">plusMoney</a></span>&#8203;(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>...&nbsp;money)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Cent precision money values in different currencies.</div>
-</div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusMoney(com.commercetools.api.models.common.TypedMoney...)">plusMoney</a></span>&#8203;(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>...&nbsp;money)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusMoney(java.util.function.Function)">plusMoney</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,&#8203;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Cent precision money values in different currencies.</div>
-</div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusMoney(java.util.function.Function)">plusMoney</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMoney(java.util.function.Function)">withMoney</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,&#8203;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Cent precision money values in different currencies.</div>
-</div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withMoney(java.util.function.Function)">withMoney</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -185,7 +165,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartDiscountValueAbsoluteBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.23">CartDiscountValueAbsoluteBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.11">CartDiscountValueAbsoluteBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -197,50 +177,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="money(com.commercetools.api.models.common.CentPrecisionMoney...)">
+<section class="detail" id="money(com.commercetools.api.models.common.TypedMoney...)">
 <h3>money</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.31">money</a></span>&#8203;<span class="parameters">(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>...&nbsp;money)</span></div>
-<div class="block"><p>Cent precision money values in different currencies.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.15">money</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>...&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="money(java.util.List)">
 <h3>money</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.41">money</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;money)</span></div>
-<div class="block"><p>Cent precision money values in different currencies.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.20">money</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&nbsp;money)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="plusMoney(com.commercetools.api.models.common.CentPrecisionMoney...)">
+<section class="detail" id="plusMoney(com.commercetools.api.models.common.TypedMoney...)">
 <h3>plusMoney</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.51">plusMoney</a></span>&#8203;<span class="parameters">(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>...&nbsp;money)</span></div>
-<div class="block"><p>Cent precision money values in different currencies.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.26">plusMoney</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>...&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusMoney(java.util.function.Function)">
 <h3>plusMoney</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.64">plusMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,&#8203;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cent precision money values in different currencies.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.34">plusMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMoney(java.util.function.Function)">
 <h3>withMoney</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.77">withMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,&#8203;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cent precision money values in different currencies.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.43">withMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMoney()">
 <h3>getMoney</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.84">getMoney</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.50">getMoney</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.88">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.54">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&gt;</code></dd>
@@ -250,20 +225,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.96">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.62">buildUnchecked</a></span>()</div>
 <div class="block">builds CartDiscountValueAbsolute without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.100">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.66">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.104">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueAbsoluteBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueAbsolute.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsolute</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

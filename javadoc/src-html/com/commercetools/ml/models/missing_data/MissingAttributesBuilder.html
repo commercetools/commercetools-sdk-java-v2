@@ -22,257 +22,182 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> * MissingAttributesBuilder</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> *     MissingAttributes missingAttributes = MissingAttributes.builder()</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .product(productBuilder -&gt; productBuilder)</span>
-<span class="source-line-no">020</span><span id="line.20"> *             .productType(productTypeBuilder -&gt; productTypeBuilder)</span>
-<span class="source-line-no">021</span><span id="line.21"> *             .variantId(0.3)</span>
-<span class="source-line-no">022</span><span id="line.22"> *             .plusMissingAttributeValues(missingAttributeValuesBuilder -&gt; missingAttributeValuesBuilder)</span>
-<span class="source-line-no">023</span><span id="line.23"> *             .build()</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;/div&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> */</span>
-<span class="source-line-no">027</span><span id="line.27">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">028</span><span id="line.28">public class MissingAttributesBuilder implements Builder&lt;MissingAttributes&gt; {</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.ml.models.common.ProductReference product;</span>
+<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">013</span><span id="line.13">public class MissingAttributesBuilder implements Builder&lt;MissingAttributes&gt; {</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    private com.commercetools.ml.models.common.ProductReference product;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    private com.commercetools.ml.models.common.ProductTypeReference productType;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">    private Integer variantId;</span>
+<span class="source-line-no">020</span><span id="line.20"></span>
+<span class="source-line-no">021</span><span id="line.21">    private java.util.List&lt;String&gt; missingAttributeValues;</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
+<span class="source-line-no">024</span><span id="line.24">    private java.util.List&lt;String&gt; missingAttributeNames;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
+<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.ml.models.missing_data.AttributeCount attributeCount;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
+<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.ml.models.common.ProductTypeReference productType;</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    private Integer variantId;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    private java.util.List&lt;String&gt; missingAttributeValues;</span>
+<span class="source-line-no">032</span><span id="line.32">    public MissingAttributesBuilder product(</span>
+<span class="source-line-no">033</span><span id="line.33">            Function&lt;com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">034</span><span id="line.34">        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();</span>
+<span class="source-line-no">035</span><span id="line.35">        return this;</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @Nullable</span>
-<span class="source-line-no">039</span><span id="line.39">    private java.util.List&lt;String&gt; missingAttributeNames;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
-<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.ml.models.missing_data.AttributeCount attributeCount;</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
-<span class="source-line-no">045</span><span id="line.45">    private com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage;</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">     *</span>
-<span class="source-line-no">049</span><span id="line.49">     */</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public MissingAttributesBuilder product(</span>
-<span class="source-line-no">052</span><span id="line.52">            Function&lt;com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public MissingAttributesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.product = product;</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
+<span class="source-line-no">038</span><span id="line.38">    public MissingAttributesBuilder product(final com.commercetools.ml.models.common.ProductReference product) {</span>
+<span class="source-line-no">039</span><span id="line.39">        this.product = product;</span>
+<span class="source-line-no">040</span><span id="line.40">        return this;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public MissingAttributesBuilder productType(</span>
+<span class="source-line-no">044</span><span id="line.44">            Function&lt;com.commercetools.ml.models.common.ProductTypeReferenceBuilder, com.commercetools.ml.models.common.ProductTypeReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">045</span><span id="line.45">        this.productType = builder.apply(com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of()).build();</span>
+<span class="source-line-no">046</span><span id="line.46">        return this;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public MissingAttributesBuilder productType(</span>
+<span class="source-line-no">050</span><span id="line.50">            final com.commercetools.ml.models.common.ProductTypeReference productType) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.productType = productType;</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public MissingAttributesBuilder variantId(final Integer variantId) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.variantId = variantId;</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public MissingAttributesBuilder missingAttributeValues(final String... missingAttributeValues) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.missingAttributeValues = new ArrayList&lt;&gt;(Arrays.asList(missingAttributeValues));</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public MissingAttributesBuilder missingAttributeValues(final java.util.List&lt;String&gt; missingAttributeValues) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.missingAttributeValues = missingAttributeValues;</span>
+<span class="source-line-no">067</span><span id="line.67">        return this;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public MissingAttributesBuilder productType(</span>
-<span class="source-line-no">071</span><span id="line.71">            Function&lt;com.commercetools.ml.models.common.ProductTypeReferenceBuilder, com.commercetools.ml.models.common.ProductTypeReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.productType = builder.apply(com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of()).build();</span>
-<span class="source-line-no">073</span><span id="line.73">        return this;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *</span>
-<span class="source-line-no">078</span><span id="line.78">     */</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public MissingAttributesBuilder productType(</span>
-<span class="source-line-no">081</span><span id="line.81">            final com.commercetools.ml.models.common.ProductTypeReference productType) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.productType = productType;</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;ID of a ProductVariant.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public MissingAttributesBuilder variantId(final Integer variantId) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.variantId = variantId;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public MissingAttributesBuilder missingAttributeValues(final String... missingAttributeValues) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.missingAttributeValues = new ArrayList&lt;&gt;(Arrays.asList(missingAttributeValues));</span>
+<span class="source-line-no">070</span><span id="line.70">    public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {</span>
+<span class="source-line-no">071</span><span id="line.71">        if (this.missingAttributeValues == null) {</span>
+<span class="source-line-no">072</span><span id="line.72">            this.missingAttributeValues = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">073</span><span id="line.73">        }</span>
+<span class="source-line-no">074</span><span id="line.74">        this.missingAttributeValues.addAll(Arrays.asList(missingAttributeValues));</span>
+<span class="source-line-no">075</span><span id="line.75">        return this;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.missingAttributeNames = new ArrayList&lt;&gt;(Arrays.asList(missingAttributeNames));</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public MissingAttributesBuilder missingAttributeNames(</span>
+<span class="source-line-no">084</span><span id="line.84">            @Nullable final java.util.List&lt;String&gt; missingAttributeNames) {</span>
+<span class="source-line-no">085</span><span id="line.85">        this.missingAttributeNames = missingAttributeNames;</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {</span>
+<span class="source-line-no">090</span><span id="line.90">        if (this.missingAttributeNames == null) {</span>
+<span class="source-line-no">091</span><span id="line.91">            this.missingAttributeNames = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">092</span><span id="line.92">        }</span>
+<span class="source-line-no">093</span><span id="line.93">        this.missingAttributeNames.addAll(Arrays.asList(missingAttributeNames));</span>
+<span class="source-line-no">094</span><span id="line.94">        return this;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public MissingAttributesBuilder attributeCount(</span>
+<span class="source-line-no">098</span><span id="line.98">            Function&lt;com.commercetools.ml.models.missing_data.AttributeCountBuilder, com.commercetools.ml.models.missing_data.AttributeCountBuilder&gt; builder) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.attributeCount = builder.apply(com.commercetools.ml.models.missing_data.AttributeCountBuilder.of())</span>
+<span class="source-line-no">100</span><span id="line.100">                .build();</span>
 <span class="source-line-no">101</span><span id="line.101">        return this;</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public MissingAttributesBuilder missingAttributeValues(final java.util.List&lt;String&gt; missingAttributeValues) {</span>
-<span class="source-line-no">109</span><span id="line.109">        this.missingAttributeValues = missingAttributeValues;</span>
-<span class="source-line-no">110</span><span id="line.110">        return this;</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public MissingAttributesBuilder attributeCount(</span>
+<span class="source-line-no">105</span><span id="line.105">            @Nullable final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {</span>
+<span class="source-line-no">106</span><span id="line.106">        this.attributeCount = attributeCount;</span>
+<span class="source-line-no">107</span><span id="line.107">        return this;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public MissingAttributesBuilder attributeCoverage(</span>
+<span class="source-line-no">111</span><span id="line.111">            Function&lt;com.commercetools.ml.models.missing_data.AttributeCoverageBuilder, com.commercetools.ml.models.missing_data.AttributeCoverageBuilder&gt; builder) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.attributeCoverage = builder.apply(com.commercetools.ml.models.missing_data.AttributeCoverageBuilder.of())</span>
+<span class="source-line-no">113</span><span id="line.113">                .build();</span>
+<span class="source-line-no">114</span><span id="line.114">        return this;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {</span>
-<span class="source-line-no">118</span><span id="line.118">        if (this.missingAttributeValues == null) {</span>
-<span class="source-line-no">119</span><span id="line.119">            this.missingAttributeValues = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">120</span><span id="line.120">        }</span>
-<span class="source-line-no">121</span><span id="line.121">        this.missingAttributeValues.addAll(Arrays.asList(missingAttributeValues));</span>
-<span class="source-line-no">122</span><span id="line.122">        return this;</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {</span>
-<span class="source-line-no">130</span><span id="line.130">        this.missingAttributeNames = new ArrayList&lt;&gt;(Arrays.asList(missingAttributeNames));</span>
-<span class="source-line-no">131</span><span id="line.131">        return this;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">136</span><span id="line.136">     */</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public MissingAttributesBuilder missingAttributeNames(</span>
-<span class="source-line-no">139</span><span id="line.139">            @Nullable final java.util.List&lt;String&gt; missingAttributeNames) {</span>
-<span class="source-line-no">140</span><span id="line.140">        this.missingAttributeNames = missingAttributeNames;</span>
-<span class="source-line-no">141</span><span id="line.141">        return this;</span>
+<span class="source-line-no">117</span><span id="line.117">    public MissingAttributesBuilder attributeCoverage(</span>
+<span class="source-line-no">118</span><span id="line.118">            @Nullable final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage) {</span>
+<span class="source-line-no">119</span><span id="line.119">        this.attributeCoverage = attributeCoverage;</span>
+<span class="source-line-no">120</span><span id="line.120">        return this;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public com.commercetools.ml.models.common.ProductReference getProduct() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return this.product;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public com.commercetools.ml.models.common.ProductTypeReference getProductType() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return this.productType;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public Integer getVariantId() {</span>
+<span class="source-line-no">132</span><span id="line.132">        return this.variantId;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public java.util.List&lt;String&gt; getMissingAttributeValues() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return this.missingAttributeValues;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    @Nullable</span>
+<span class="source-line-no">140</span><span id="line.140">    public java.util.List&lt;String&gt; getMissingAttributeNames() {</span>
+<span class="source-line-no">141</span><span id="line.141">        return this.missingAttributeNames;</span>
 <span class="source-line-no">142</span><span id="line.142">    }</span>
 <span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {</span>
-<span class="source-line-no">149</span><span id="line.149">        if (this.missingAttributeNames == null) {</span>
-<span class="source-line-no">150</span><span id="line.150">            this.missingAttributeNames = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">151</span><span id="line.151">        }</span>
-<span class="source-line-no">152</span><span id="line.152">        this.missingAttributeNames.addAll(Arrays.asList(missingAttributeNames));</span>
-<span class="source-line-no">153</span><span id="line.153">        return this;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     *</span>
-<span class="source-line-no">158</span><span id="line.158">     */</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public MissingAttributesBuilder attributeCount(</span>
-<span class="source-line-no">161</span><span id="line.161">            Function&lt;com.commercetools.ml.models.missing_data.AttributeCountBuilder, com.commercetools.ml.models.missing_data.AttributeCountBuilder&gt; builder) {</span>
-<span class="source-line-no">162</span><span id="line.162">        this.attributeCount = builder.apply(com.commercetools.ml.models.missing_data.AttributeCountBuilder.of())</span>
-<span class="source-line-no">163</span><span id="line.163">                .build();</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    /**</span>
-<span class="source-line-no">168</span><span id="line.168">     *</span>
-<span class="source-line-no">169</span><span id="line.169">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    @Nullable</span>
+<span class="source-line-no">145</span><span id="line.145">    public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return this.attributeCount;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    @Nullable</span>
+<span class="source-line-no">150</span><span id="line.150">    public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return this.attributeCoverage;</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public MissingAttributes build() {</span>
+<span class="source-line-no">155</span><span id="line.155">        Objects.requireNonNull(product, MissingAttributes.class + ": product is missing");</span>
+<span class="source-line-no">156</span><span id="line.156">        Objects.requireNonNull(productType, MissingAttributes.class + ": productType is missing");</span>
+<span class="source-line-no">157</span><span id="line.157">        Objects.requireNonNull(variantId, MissingAttributes.class + ": variantId is missing");</span>
+<span class="source-line-no">158</span><span id="line.158">        Objects.requireNonNull(missingAttributeValues, MissingAttributes.class + ": missingAttributeValues is missing");</span>
+<span class="source-line-no">159</span><span id="line.159">        return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,</span>
+<span class="source-line-no">160</span><span id="line.160">            attributeCount, attributeCoverage);</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     * builds MissingAttributes without checking for non null required values</span>
+<span class="source-line-no">165</span><span id="line.165">     */</span>
+<span class="source-line-no">166</span><span id="line.166">    public MissingAttributes buildUnchecked() {</span>
+<span class="source-line-no">167</span><span id="line.167">        return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,</span>
+<span class="source-line-no">168</span><span id="line.168">            attributeCount, attributeCoverage);</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public MissingAttributesBuilder attributeCount(</span>
-<span class="source-line-no">172</span><span id="line.172">            @Nullable final com.commercetools.ml.models.missing_data.AttributeCount attributeCount) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.attributeCount = attributeCount;</span>
-<span class="source-line-no">174</span><span id="line.174">        return this;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    /**</span>
-<span class="source-line-no">178</span><span id="line.178">     *</span>
-<span class="source-line-no">179</span><span id="line.179">     */</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public MissingAttributesBuilder attributeCoverage(</span>
-<span class="source-line-no">182</span><span id="line.182">            Function&lt;com.commercetools.ml.models.missing_data.AttributeCoverageBuilder, com.commercetools.ml.models.missing_data.AttributeCoverageBuilder&gt; builder) {</span>
-<span class="source-line-no">183</span><span id="line.183">        this.attributeCoverage = builder.apply(com.commercetools.ml.models.missing_data.AttributeCoverageBuilder.of())</span>
-<span class="source-line-no">184</span><span id="line.184">                .build();</span>
-<span class="source-line-no">185</span><span id="line.185">        return this;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    /**</span>
-<span class="source-line-no">189</span><span id="line.189">     *</span>
-<span class="source-line-no">190</span><span id="line.190">     */</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public MissingAttributesBuilder attributeCoverage(</span>
-<span class="source-line-no">193</span><span id="line.193">            @Nullable final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage) {</span>
-<span class="source-line-no">194</span><span id="line.194">        this.attributeCoverage = attributeCoverage;</span>
-<span class="source-line-no">195</span><span id="line.195">        return this;</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public com.commercetools.ml.models.common.ProductReference getProduct() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.product;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public com.commercetools.ml.models.common.ProductTypeReference getProductType() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return this.productType;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public Integer getVariantId() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.variantId;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public java.util.List&lt;String&gt; getMissingAttributeValues() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return this.missingAttributeValues;</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    @Nullable</span>
-<span class="source-line-no">215</span><span id="line.215">    public java.util.List&lt;String&gt; getMissingAttributeNames() {</span>
-<span class="source-line-no">216</span><span id="line.216">        return this.missingAttributeNames;</span>
-<span class="source-line-no">217</span><span id="line.217">    }</span>
-<span class="source-line-no">218</span><span id="line.218"></span>
-<span class="source-line-no">219</span><span id="line.219">    @Nullable</span>
-<span class="source-line-no">220</span><span id="line.220">    public com.commercetools.ml.models.missing_data.AttributeCount getAttributeCount() {</span>
-<span class="source-line-no">221</span><span id="line.221">        return this.attributeCount;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    @Nullable</span>
-<span class="source-line-no">225</span><span id="line.225">    public com.commercetools.ml.models.missing_data.AttributeCoverage getAttributeCoverage() {</span>
-<span class="source-line-no">226</span><span id="line.226">        return this.attributeCoverage;</span>
-<span class="source-line-no">227</span><span id="line.227">    }</span>
-<span class="source-line-no">228</span><span id="line.228"></span>
-<span class="source-line-no">229</span><span id="line.229">    public MissingAttributes build() {</span>
-<span class="source-line-no">230</span><span id="line.230">        Objects.requireNonNull(product, MissingAttributes.class + ": product is missing");</span>
-<span class="source-line-no">231</span><span id="line.231">        Objects.requireNonNull(productType, MissingAttributes.class + ": productType is missing");</span>
-<span class="source-line-no">232</span><span id="line.232">        Objects.requireNonNull(variantId, MissingAttributes.class + ": variantId is missing");</span>
-<span class="source-line-no">233</span><span id="line.233">        Objects.requireNonNull(missingAttributeValues, MissingAttributes.class + ": missingAttributeValues is missing");</span>
-<span class="source-line-no">234</span><span id="line.234">        return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,</span>
-<span class="source-line-no">235</span><span id="line.235">            attributeCount, attributeCoverage);</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    /**</span>
-<span class="source-line-no">239</span><span id="line.239">     * builds MissingAttributes without checking for non null required values</span>
-<span class="source-line-no">240</span><span id="line.240">     */</span>
-<span class="source-line-no">241</span><span id="line.241">    public MissingAttributes buildUnchecked() {</span>
-<span class="source-line-no">242</span><span id="line.242">        return new MissingAttributesImpl(product, productType, variantId, missingAttributeValues, missingAttributeNames,</span>
-<span class="source-line-no">243</span><span id="line.243">            attributeCount, attributeCoverage);</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    public static MissingAttributesBuilder of() {</span>
-<span class="source-line-no">247</span><span id="line.247">        return new MissingAttributesBuilder();</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    public static MissingAttributesBuilder of(final MissingAttributes template) {</span>
-<span class="source-line-no">251</span><span id="line.251">        MissingAttributesBuilder builder = new MissingAttributesBuilder();</span>
-<span class="source-line-no">252</span><span id="line.252">        builder.product = template.getProduct();</span>
-<span class="source-line-no">253</span><span id="line.253">        builder.productType = template.getProductType();</span>
-<span class="source-line-no">254</span><span id="line.254">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">255</span><span id="line.255">        builder.missingAttributeValues = template.getMissingAttributeValues();</span>
-<span class="source-line-no">256</span><span id="line.256">        builder.missingAttributeNames = template.getMissingAttributeNames();</span>
-<span class="source-line-no">257</span><span id="line.257">        builder.attributeCount = template.getAttributeCount();</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.attributeCoverage = template.getAttributeCoverage();</span>
-<span class="source-line-no">259</span><span id="line.259">        return builder;</span>
-<span class="source-line-no">260</span><span id="line.260">    }</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">}</span>
+<span class="source-line-no">171</span><span id="line.171">    public static MissingAttributesBuilder of() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return new MissingAttributesBuilder();</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public static MissingAttributesBuilder of(final MissingAttributes template) {</span>
+<span class="source-line-no">176</span><span id="line.176">        MissingAttributesBuilder builder = new MissingAttributesBuilder();</span>
+<span class="source-line-no">177</span><span id="line.177">        builder.product = template.getProduct();</span>
+<span class="source-line-no">178</span><span id="line.178">        builder.productType = template.getProductType();</span>
+<span class="source-line-no">179</span><span id="line.179">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">180</span><span id="line.180">        builder.missingAttributeValues = template.getMissingAttributeValues();</span>
+<span class="source-line-no">181</span><span id="line.181">        builder.missingAttributeNames = template.getMissingAttributeNames();</span>
+<span class="source-line-no">182</span><span id="line.182">        builder.attributeCount = template.getAttributeCount();</span>
+<span class="source-line-no">183</span><span id="line.183">        builder.attributeCoverage = template.getAttributeCoverage();</span>
+<span class="source-line-no">184</span><span id="line.184">        return builder;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">}</span>
 
 
 

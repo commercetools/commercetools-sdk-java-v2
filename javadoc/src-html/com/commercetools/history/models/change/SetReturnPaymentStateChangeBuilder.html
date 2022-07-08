@@ -19,97 +19,71 @@
 <span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">/**</span>
-<span class="source-line-no">010</span><span id="line.10"> * SetReturnPaymentStateChangeBuilder</span>
-<span class="source-line-no">011</span><span id="line.11"> * &lt;hr&gt;</span>
-<span class="source-line-no">012</span><span id="line.12"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">013</span><span id="line.13"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> *     SetReturnPaymentStateChange setReturnPaymentStateChange = SetReturnPaymentStateChange.builder()</span>
-<span class="source-line-no">016</span><span id="line.16"> *             .change("{change}")</span>
-<span class="source-line-no">017</span><span id="line.17"> *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)</span>
-<span class="source-line-no">018</span><span id="line.18"> *             .previousValue(ReturnPaymentState.NON_REFUNDABLE)</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> */</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public class SetReturnPaymentStateChangeBuilder implements Builder&lt;SetReturnPaymentStateChange&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private String change;</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.history.models.common.ReturnPaymentState nextValue;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.history.models.common.ReturnPaymentState previousValue;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    /**</span>
-<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Update action for &lt;code&gt;setReturnPaymentState&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">     */</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public SetReturnPaymentStateChangeBuilder change(final String change) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.change = change;</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public SetReturnPaymentStateChangeBuilder nextValue(</span>
-<span class="source-line-no">046</span><span id="line.46">            final com.commercetools.history.models.common.ReturnPaymentState nextValue) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.nextValue = nextValue;</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public SetReturnPaymentStateChangeBuilder previousValue(</span>
-<span class="source-line-no">056</span><span id="line.56">            final com.commercetools.history.models.common.ReturnPaymentState previousValue) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.previousValue = previousValue;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
+<span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">010</span><span id="line.10">public class SetReturnPaymentStateChangeBuilder implements Builder&lt;SetReturnPaymentStateChange&gt; {</span>
+<span class="source-line-no">011</span><span id="line.11"></span>
+<span class="source-line-no">012</span><span id="line.12">    private String change;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">    private com.commercetools.history.models.common.ReturnPaymentState nextValue;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">    private com.commercetools.history.models.common.ReturnPaymentState previousValue;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    public SetReturnPaymentStateChangeBuilder change(final String change) {</span>
+<span class="source-line-no">019</span><span id="line.19">        this.change = change;</span>
+<span class="source-line-no">020</span><span id="line.20">        return this;</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    public SetReturnPaymentStateChangeBuilder nextValue(</span>
+<span class="source-line-no">024</span><span id="line.24">            final com.commercetools.history.models.common.ReturnPaymentState nextValue) {</span>
+<span class="source-line-no">025</span><span id="line.25">        this.nextValue = nextValue;</span>
+<span class="source-line-no">026</span><span id="line.26">        return this;</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public SetReturnPaymentStateChangeBuilder previousValue(</span>
+<span class="source-line-no">030</span><span id="line.30">            final com.commercetools.history.models.common.ReturnPaymentState previousValue) {</span>
+<span class="source-line-no">031</span><span id="line.31">        this.previousValue = previousValue;</span>
+<span class="source-line-no">032</span><span id="line.32">        return this;</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public String getChange() {</span>
+<span class="source-line-no">036</span><span id="line.36">        return this.change;</span>
+<span class="source-line-no">037</span><span id="line.37">    }</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {</span>
+<span class="source-line-no">040</span><span id="line.40">        return this.nextValue;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public com.commercetools.history.models.common.ReturnPaymentState getPreviousValue() {</span>
+<span class="source-line-no">044</span><span id="line.44">        return this.previousValue;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public SetReturnPaymentStateChange build() {</span>
+<span class="source-line-no">048</span><span id="line.48">        Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");</span>
+<span class="source-line-no">049</span><span id="line.49">        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">050</span><span id="line.50">        Objects.requireNonNull(previousValue, SetReturnPaymentStateChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">051</span><span id="line.51">        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     * builds SetReturnPaymentStateChange without checking for non null required values</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57">    public SetReturnPaymentStateChange buildUnchecked() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);</span>
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public String getChange() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.change;</span>
+<span class="source-line-no">061</span><span id="line.61">    public static SetReturnPaymentStateChangeBuilder of() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return new SetReturnPaymentStateChangeBuilder();</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.nextValue;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public com.commercetools.history.models.common.ReturnPaymentState getPreviousValue() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.previousValue;</span>
+<span class="source-line-no">065</span><span id="line.65">    public static SetReturnPaymentStateChangeBuilder of(final SetReturnPaymentStateChange template) {</span>
+<span class="source-line-no">066</span><span id="line.66">        SetReturnPaymentStateChangeBuilder builder = new SetReturnPaymentStateChangeBuilder();</span>
+<span class="source-line-no">067</span><span id="line.67">        builder.change = template.getChange();</span>
+<span class="source-line-no">068</span><span id="line.68">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">069</span><span id="line.69">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">070</span><span id="line.70">        return builder;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public SetReturnPaymentStateChange build() {</span>
-<span class="source-line-no">074</span><span id="line.74">        Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");</span>
-<span class="source-line-no">075</span><span id="line.75">        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(previousValue, SetReturnPaymentStateChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">077</span><span id="line.77">        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     * builds SetReturnPaymentStateChange without checking for non null required values</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83">    public SetReturnPaymentStateChange buildUnchecked() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static SetReturnPaymentStateChangeBuilder of() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return new SetReturnPaymentStateChangeBuilder();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static SetReturnPaymentStateChangeBuilder of(final SetReturnPaymentStateChange template) {</span>
-<span class="source-line-no">092</span><span id="line.92">        SetReturnPaymentStateChangeBuilder builder = new SetReturnPaymentStateChangeBuilder();</span>
-<span class="source-line-no">093</span><span id="line.93">        builder.change = template.getChange();</span>
-<span class="source-line-no">094</span><span id="line.94">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">095</span><span id="line.95">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">096</span><span id="line.96">        return builder;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">}</span>
+<span class="source-line-no">073</span><span id="line.73">}</span>
 
 
 

@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.20">ItemShippingDetailsDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.17">ItemShippingDetailsDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">ItemShippingDetailsDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,7 +165,7 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ItemShippingDetailsDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.31">ItemShippingDetailsDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.28">ItemShippingDetailsDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,8 +179,11 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="getTargets()">
 <h3>getTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.38">getTargets</a></span>()</div>
-<div class="block"><p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.37">getTargets</a></span>()</div>
+<div class="block"><p>Used to capture one or more (custom) line item specific shipping addresses.
+  By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item.
+  A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item.
+  For the order creation and order updates the <code>targets</code> sum must match the quantity.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ItemShippingDetailsDraft.html#getTargets()">getTargets</a></code>&nbsp;in interface&nbsp;<code><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></dd>
@@ -191,7 +193,7 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="setTargets(com.commercetools.api.models.cart.ItemShippingTarget...)">
 <h3>setTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.42">setTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.41">setTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>...&nbsp;targets)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ItemShippingDetailsDraft.html#setTargets(com.commercetools.api.models.cart.ItemShippingTarget...)">setTargets</a></code>&nbsp;in interface&nbsp;<code><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></dd>
@@ -201,7 +203,7 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="setTargets(java.util.List)">
 <h3>setTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.46">setTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.45">setTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.api.models.cart">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ItemShippingDetailsDraft.html#setTargets(java.util.List)">setTargets</a></code>&nbsp;in interface&nbsp;<code><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></dd>
@@ -211,7 +213,7 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.50">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.49">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -221,7 +223,7 @@ implements <a href="ItemShippingDetailsDraft.html" title="interface in com.comme
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.63">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ItemShippingDetailsDraftImpl.html#line.62">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

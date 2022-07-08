@@ -84,20 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MissingRoleOnChannelErrorImpl.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.32">MissingRoleOnChannelError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.18">MissingRoleOnChannelError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
-<div class="block">MissingRoleOnChannelError
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     MissingRoleOnChannelError missingRoleOnChannelError = MissingRoleOnChannelError.builder()
-             .message("{message}")
-             .missingRole(ChannelRoleEnum.INVENTORY_SUPPLY)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -136,7 +124,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getChannel()">getChannel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">ResourceIdentifier to a Channel.</div>
+<div class="block"><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="../channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMissingRole()">getMissingRole</a></span>()</code></div>
@@ -181,7 +169,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="MISSING_ROLE_ON_CHANNEL">
 <h3>MISSING_ROLE_ON_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.36">MISSING_ROLE_ON_CHANNEL</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.22">MISSING_ROLE_ON_CHANNEL</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL">Constant Field Values</a></dd>
@@ -200,64 +188,64 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.41">getChannel</a></span>()</div>
-<div class="block"><p>ResourceIdentifier to a Channel.</p></div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.27">getChannel</a></span>()</div>
+<div class="block"><p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissingRole()">
 <h3>getMissingRole</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.48">getMissingRole</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.34">getMissingRole</a></span>()</div>
 <div class="block"><p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.52">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.38">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMissingRole(com.commercetools.api.models.channel.ChannelRoleEnum)">
 <h3>setMissingRole</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.54">setMissingRole</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&nbsp;missingRole)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.40">setMissingRole</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&nbsp;missingRole)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.42">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.MissingRoleOnChannelError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.69">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.MissingRoleOnChannelError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.73">builder</a></span>&#8203;<span class="parameters">(<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MissingRoleOnChannelErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingRoleOnChannelErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMissingRoleOnChannelError(java.util.function.Function)">
 <h3>withMissingRoleOnChannelError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.77">withMissingRoleOnChannelError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.63">withMissingRoleOnChannelError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.81">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MissingRoleOnChannelError.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -88,20 +88,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AzureFunctionsAuthenticationImpl.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.29">AzureFunctionsAuthentication</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.20">AzureFunctionsAuthentication</a></span><span class="extends-implements">
 extends <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></span></div>
-<div class="block"><p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the function's key to be used inside the <code>x-functions-key</code> header. For more information, see the Azure Functions documentation.</p>
-  <p>To protect the secret key from being exposed, remove the code parameter and secret key from the URL. For example, use <code>https://foo.azurewebsites.net/api/bar</code> instead of <code>https://foo.azurewebsites.net/api/bar?code=secret</code>.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     AzureFunctionsAuthentication azureFunctionsAuthentication = AzureFunctionsAuthentication.builder()
-             .key("{key}")
-             .build()
- </code></pre>
- </div></div>
+<div class="block"><p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the functions key. The commercetools Platform will set the <code>x-functions-key</code> header. For more information, see the <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook#keys">Azure Functions documentation</a>.</p>
+  <p>To protect the secret key from being exposed, remove the code parameter and secret key from the URL. For example, use <code>https://foo.azurewebsites.net/api/bar</code> instead of
+  <code>https://foo.azurewebsites.net/api/bar?code=secret</code>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -177,7 +168,7 @@ extends <a href="HttpDestinationAuthentication.html" title="interface in com.com
 <li>
 <section class="detail" id="AZURE_FUNCTIONS">
 <h3>AZURE_FUNCTIONS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.33">AZURE_FUNCTIONS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.24">AZURE_FUNCTIONS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.extension.AzureFunctionsAuthentication.AZURE_FUNCTIONS">Constant Field Values</a></dd>
@@ -196,50 +187,50 @@ extends <a href="HttpDestinationAuthentication.html" title="interface in com.com
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.38">getKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.29">getKey</a></span>()</div>
 <div class="block"><p>Partially hidden on retrieval for security reasons.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.42">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.33">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.44">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.35">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.AzureFunctionsAuthentication)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.48">of</a></span>&#8203;<span class="parameters">(<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.54">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.45">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.extension.AzureFunctionsAuthentication)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.58">builder</a></span>&#8203;<span class="parameters">(<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureFunctionsAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">AzureFunctionsAuthenticationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.49">builder</a></span>&#8203;<span class="parameters">(<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAzureFunctionsAuthentication(java.util.function.Function)">
 <h3>withAzureFunctionsAuthentication</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.62">withAzureFunctionsAuthentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.53">withAzureFunctionsAuthentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.66">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AzureFunctionsAuthentication.html" title="interface in com.commercetools.api.models.extension">AzureFunctionsAuthentication</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/AzureFunctionsAuthentication.html#line.57">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

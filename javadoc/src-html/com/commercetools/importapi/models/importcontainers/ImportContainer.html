@@ -28,105 +28,95 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Serves as the entry point of resources. An Import Container is not resource type-specific.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> *</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> *     ImportContainer importContainer = ImportContainer.builder()</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .key("{key}")</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .version(0.3)</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
-<span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> */</span>
-<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">034</span><span id="line.34">@JsonDeserialize(as = ImportContainerImpl.class)</span>
-<span class="source-line-no">035</span><span id="line.35">public interface ImportContainer {</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     *  &lt;p&gt;User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).&lt;/p&gt;</span>
-<span class="source-line-no">039</span><span id="line.39">     */</span>
-<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("key")</span>
-<span class="source-line-no">042</span><span id="line.42">    public String getKey();</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.&lt;/p&gt;</span>
-<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;Serves as the entry point of resources.</span>
+<span class="source-line-no">019</span><span id="line.19">*  An Import Container is not resource type-specific.&lt;/p&gt;</span>
+<span class="source-line-no">020</span><span id="line.20">*/</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">@JsonDeserialize(as = ImportContainerImpl.class)</span>
+<span class="source-line-no">023</span><span id="line.23">public interface ImportContainer {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    /**</span>
+<span class="source-line-no">026</span><span id="line.26">    *  &lt;p&gt;User-defined unique identifier for the ImportContainer.</span>
+<span class="source-line-no">027</span><span id="line.27">    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).&lt;/p&gt;</span>
+<span class="source-line-no">028</span><span id="line.28">    */</span>
+<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
+<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("key")</span>
+<span class="source-line-no">031</span><span id="line.31">    public String getKey();</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    /**</span>
+<span class="source-line-no">034</span><span id="line.34">    *  &lt;p&gt;The &lt;a href="#importresourcetype"&gt;resource type&lt;/a&gt; the ImportContainer is able to handle.</span>
+<span class="source-line-no">035</span><span id="line.35">    *  If not present, the ImportContainer is able to import all of the supported &lt;a href="#importresourcetype"&gt;ImportResourceTypes&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("resourceType")</span>
+<span class="source-line-no">039</span><span id="line.39">    public ImportResourceType getResourceType();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;The version of the ImportContainer.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">    */</span>
+<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("version")</span>
+<span class="source-line-no">046</span><span id="line.46">    public Long getVersion();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("resourceType")</span>
-<span class="source-line-no">049</span><span id="line.49">    public ImportResourceType getResourceType();</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;The version of the ImportContainer.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("version")</span>
-<span class="source-line-no">056</span><span id="line.56">    public Long getVersion();</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;The time when the ImportContainer was created.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">063</span><span id="line.63">    public ZonedDateTime getCreatedAt();</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;The last time when the ImportContainer was modified.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68">    @NotNull</span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("lastModifiedAt")</span>
-<span class="source-line-no">070</span><span id="line.70">    public ZonedDateTime getLastModifiedAt();</span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">    *  &lt;p&gt;The time when the ImportContainer was created.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">    */</span>
+<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">053</span><span id="line.53">    public ZonedDateTime getCreatedAt();</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;The last time when the ImportContainer was modified.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">    */</span>
+<span class="source-line-no">058</span><span id="line.58">    @NotNull</span>
+<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("lastModifiedAt")</span>
+<span class="source-line-no">060</span><span id="line.60">    public ZonedDateTime getLastModifiedAt();</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setKey(final String key);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setResourceType(final ImportResourceType resourceType);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public void setVersion(final Long version);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setKey(final String key);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setResourceType(final ImportResourceType resourceType);</span>
+<span class="source-line-no">072</span><span id="line.72">    public static ImportContainer of() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return new ImportContainerImpl();</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setVersion(final Long version);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public static ImportContainer of() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return new ImportContainerImpl();</span>
+<span class="source-line-no">076</span><span id="line.76">    public static ImportContainer of(final ImportContainer template) {</span>
+<span class="source-line-no">077</span><span id="line.77">        ImportContainerImpl instance = new ImportContainerImpl();</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setResourceType(template.getResourceType());</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public static ImportContainer of(final ImportContainer template) {</span>
-<span class="source-line-no">087</span><span id="line.87">        ImportContainerImpl instance = new ImportContainerImpl();</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setResourceType(template.getResourceType());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">093</span><span id="line.93">        return instance;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static ImportContainerBuilder builder() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return ImportContainerBuilder.of();</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public static ImportContainerBuilder builder(final ImportContainer template) {</span>
-<span class="source-line-no">101</span><span id="line.101">        return ImportContainerBuilder.of(template);</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    default &lt;T&gt; T withImportContainer(Function&lt;ImportContainer, T&gt; helper) {</span>
-<span class="source-line-no">105</span><span id="line.105">        return helper.apply(this);</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainer&gt; typeReference() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainer&gt;() {</span>
-<span class="source-line-no">110</span><span id="line.110">            @Override</span>
-<span class="source-line-no">111</span><span id="line.111">            public String toString() {</span>
-<span class="source-line-no">112</span><span id="line.112">                return "TypeReference&lt;ImportContainer&gt;";</span>
-<span class="source-line-no">113</span><span id="line.113">            }</span>
-<span class="source-line-no">114</span><span id="line.114">        };</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116">}</span>
+<span class="source-line-no">086</span><span id="line.86">    public static ImportContainerBuilder builder() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return ImportContainerBuilder.of();</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static ImportContainerBuilder builder(final ImportContainer template) {</span>
+<span class="source-line-no">091</span><span id="line.91">        return ImportContainerBuilder.of(template);</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withImportContainer(Function&lt;ImportContainer, T&gt; helper) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainer&gt; typeReference() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainer&gt;() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;ImportContainer&gt;";</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104">        };</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

@@ -84,19 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryChangeAssetOrderActionImpl.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.28">CategoryChangeAssetOrderAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.15">CategoryChangeAssetOrderAction</a></span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
-<div class="block"><p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CategoryChangeAssetOrderAction categoryChangeAssetOrderAction = CategoryChangeAssetOrderAction.builder()
-             .plusAssetOrder(assetOrderBuilder -> assetOrderBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,9 +123,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAssetOrder()">getAssetOrder</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">New value to set.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -178,7 +165,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="CHANGE_ASSET_ORDER">
 <h3>CHANGE_ASSET_ORDER</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.32">CHANGE_ASSET_ORDER</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.19">CHANGE_ASSET_ORDER</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.category.CategoryChangeAssetOrderAction.CHANGE_ASSET_ORDER">Constant Field Values</a></dd>
@@ -197,56 +184,55 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <section class="detail" id="getAssetOrder()">
 <h3>getAssetOrder</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.37">getAssetOrder</a></span>()</div>
-<div class="block"><p>New value to set. Must contain all Asset <code>id</code>s.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.21">getAssetOrder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetOrder(java.lang.String...)">
 <h3>setAssetOrder</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.41">setAssetOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;assetOrder)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.25">setAssetOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;assetOrder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetOrder(java.util.List)">
 <h3>setAssetOrder</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.44">setAssetOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;assetOrder)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.28">setAssetOrder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;assetOrder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.46">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.30">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategoryChangeAssetOrderAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.56">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.40">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategoryChangeAssetOrderAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeAssetOrderActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryChangeAssetOrderAction(java.util.function.Function)">
 <h3>withCategoryChangeAssetOrderAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.64">withCategoryChangeAssetOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.48">withCategoryChangeAssetOrderAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.68">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeAssetOrderAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeAssetOrderAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeAssetOrderAction.html#line.52">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

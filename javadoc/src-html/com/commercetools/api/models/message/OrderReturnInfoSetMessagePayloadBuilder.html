@@ -22,107 +22,76 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">/**</span>
-<span class="source-line-no">013</span><span id="line.13"> * OrderReturnInfoSetMessagePayloadBuilder</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> *     OrderReturnInfoSetMessagePayload orderReturnInfoSetMessagePayload = OrderReturnInfoSetMessagePayload.builder()</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> */</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public class OrderReturnInfoSetMessagePayloadBuilder implements Builder&lt;OrderReturnInfoSetMessagePayload&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; returnInfo;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    /**</span>
-<span class="source-line-no">030</span><span id="line.30">     *</span>
-<span class="source-line-no">031</span><span id="line.31">     */</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(</span>
-<span class="source-line-no">034</span><span id="line.34">            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {</span>
-<span class="source-line-no">035</span><span id="line.35">        this.returnInfo = new ArrayList&lt;&gt;(Arrays.asList(returnInfo));</span>
+<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">013</span><span id="line.13">public class OrderReturnInfoSetMessagePayloadBuilder implements Builder&lt;OrderReturnInfoSetMessagePayload&gt; {</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
+<span class="source-line-no">016</span><span id="line.16">    private java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; returnInfo;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18">    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(</span>
+<span class="source-line-no">019</span><span id="line.19">            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {</span>
+<span class="source-line-no">020</span><span id="line.20">        this.returnInfo = new ArrayList&lt;&gt;(Arrays.asList(returnInfo));</span>
+<span class="source-line-no">021</span><span id="line.21">        return this;</span>
+<span class="source-line-no">022</span><span id="line.22">    }</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(</span>
+<span class="source-line-no">025</span><span id="line.25">            @Nullable final java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; returnInfo) {</span>
+<span class="source-line-no">026</span><span id="line.26">        this.returnInfo = returnInfo;</span>
+<span class="source-line-no">027</span><span id="line.27">        return this;</span>
+<span class="source-line-no">028</span><span id="line.28">    }</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(</span>
+<span class="source-line-no">031</span><span id="line.31">            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {</span>
+<span class="source-line-no">032</span><span id="line.32">        if (this.returnInfo == null) {</span>
+<span class="source-line-no">033</span><span id="line.33">            this.returnInfo = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">034</span><span id="line.34">        }</span>
+<span class="source-line-no">035</span><span id="line.35">        this.returnInfo.addAll(Arrays.asList(returnInfo));</span>
 <span class="source-line-no">036</span><span id="line.36">        return this;</span>
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *</span>
-<span class="source-line-no">041</span><span id="line.41">     */</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(</span>
-<span class="source-line-no">044</span><span id="line.44">            @Nullable final java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; returnInfo) {</span>
-<span class="source-line-no">045</span><span id="line.45">        this.returnInfo = returnInfo;</span>
-<span class="source-line-no">046</span><span id="line.46">        return this;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(</span>
-<span class="source-line-no">054</span><span id="line.54">            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {</span>
-<span class="source-line-no">055</span><span id="line.55">        if (this.returnInfo == null) {</span>
-<span class="source-line-no">056</span><span id="line.56">            this.returnInfo = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">057</span><span id="line.57">        }</span>
-<span class="source-line-no">058</span><span id="line.58">        this.returnInfo.addAll(Arrays.asList(returnInfo));</span>
-<span class="source-line-no">059</span><span id="line.59">        return this;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">     *</span>
-<span class="source-line-no">064</span><span id="line.64">     */</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(</span>
-<span class="source-line-no">067</span><span id="line.67">            Function&lt;com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">068</span><span id="line.68">        if (this.returnInfo == null) {</span>
-<span class="source-line-no">069</span><span id="line.69">            this.returnInfo = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">070</span><span id="line.70">        }</span>
-<span class="source-line-no">071</span><span id="line.71">        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());</span>
-<span class="source-line-no">072</span><span id="line.72">        return this;</span>
+<span class="source-line-no">039</span><span id="line.39">    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(</span>
+<span class="source-line-no">040</span><span id="line.40">            Function&lt;com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder&gt; builder) {</span>
+<span class="source-line-no">041</span><span id="line.41">        if (this.returnInfo == null) {</span>
+<span class="source-line-no">042</span><span id="line.42">            this.returnInfo = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">043</span><span id="line.43">        }</span>
+<span class="source-line-no">044</span><span id="line.44">        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());</span>
+<span class="source-line-no">045</span><span id="line.45">        return this;</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(</span>
+<span class="source-line-no">049</span><span id="line.49">            Function&lt;com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder&gt; builder) {</span>
+<span class="source-line-no">050</span><span id="line.50">        this.returnInfo = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">051</span><span id="line.51">        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
+<span class="source-line-no">056</span><span id="line.56">    public java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; getReturnInfo() {</span>
+<span class="source-line-no">057</span><span id="line.57">        return this.returnInfo;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public OrderReturnInfoSetMessagePayload build() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    /**</span>
+<span class="source-line-no">065</span><span id="line.65">     * builds OrderReturnInfoSetMessagePayload without checking for non null required values</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
+<span class="source-line-no">067</span><span id="line.67">    public OrderReturnInfoSetMessagePayload buildUnchecked() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public static OrderReturnInfoSetMessagePayloadBuilder of() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return new OrderReturnInfoSetMessagePayloadBuilder();</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *</span>
-<span class="source-line-no">077</span><span id="line.77">     */</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(</span>
-<span class="source-line-no">080</span><span id="line.80">            Function&lt;com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.returnInfo = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">082</span><span id="line.82">        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    @Nullable</span>
-<span class="source-line-no">087</span><span id="line.87">    public java.util.List&lt;com.commercetools.api.models.order.ReturnInfo&gt; getReturnInfo() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return this.returnInfo;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public OrderReturnInfoSetMessagePayload build() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     * builds OrderReturnInfoSetMessagePayload without checking for non null required values</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98">    public OrderReturnInfoSetMessagePayload buildUnchecked() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new OrderReturnInfoSetMessagePayloadImpl(returnInfo);</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static OrderReturnInfoSetMessagePayloadBuilder of() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return new OrderReturnInfoSetMessagePayloadBuilder();</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public static OrderReturnInfoSetMessagePayloadBuilder of(final OrderReturnInfoSetMessagePayload template) {</span>
-<span class="source-line-no">107</span><span id="line.107">        OrderReturnInfoSetMessagePayloadBuilder builder = new OrderReturnInfoSetMessagePayloadBuilder();</span>
-<span class="source-line-no">108</span><span id="line.108">        builder.returnInfo = template.getReturnInfo();</span>
-<span class="source-line-no">109</span><span id="line.109">        return builder;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">}</span>
+<span class="source-line-no">075</span><span id="line.75">    public static OrderReturnInfoSetMessagePayloadBuilder of(final OrderReturnInfoSetMessagePayload template) {</span>
+<span class="source-line-no">076</span><span id="line.76">        OrderReturnInfoSetMessagePayloadBuilder builder = new OrderReturnInfoSetMessagePayloadBuilder();</span>
+<span class="source-line-no">077</span><span id="line.77">        builder.returnInfo = template.getReturnInfo();</span>
+<span class="source-line-no">078</span><span id="line.78">        return builder;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">}</span>
 
 
 

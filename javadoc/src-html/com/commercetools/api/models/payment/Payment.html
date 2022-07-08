@@ -33,244 +33,209 @@
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">/**</span>
-<span class="source-line-no">024</span><span id="line.24"> * Payment</span>
-<span class="source-line-no">025</span><span id="line.25"> *</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;hr&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">028</span><span id="line.28"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> *     Payment payment = Payment.builder()</span>
-<span class="source-line-no">031</span><span id="line.31"> *             .id("{id}")</span>
-<span class="source-line-no">032</span><span id="line.32"> *             .version(0.3)</span>
-<span class="source-line-no">033</span><span id="line.33"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">034</span><span id="line.34"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">035</span><span id="line.35"> *             .amountPlanned(amountPlannedBuilder -&gt; amountPlannedBuilder)</span>
-<span class="source-line-no">036</span><span id="line.36"> *             .paymentMethodInfo(paymentMethodInfoBuilder -&gt; paymentMethodInfoBuilder)</span>
-<span class="source-line-no">037</span><span id="line.37"> *             .paymentStatus(paymentStatusBuilder -&gt; paymentStatusBuilder)</span>
-<span class="source-line-no">038</span><span id="line.38"> *             .plusTransactions(transactionsBuilder -&gt; transactionsBuilder)</span>
-<span class="source-line-no">039</span><span id="line.39"> *             .plusInterfaceInteractions(interfaceInteractionsBuilder -&gt; interfaceInteractionsBuilder)</span>
-<span class="source-line-no">040</span><span id="line.40"> *             .build()</span>
-<span class="source-line-no">041</span><span id="line.41"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">042</span><span id="line.42"> * &lt;/div&gt;</span>
-<span class="source-line-no">043</span><span id="line.43"> */</span>
-<span class="source-line-no">044</span><span id="line.44">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">045</span><span id="line.45">@JsonDeserialize(as = PaymentImpl.class)</span>
-<span class="source-line-no">046</span><span id="line.46">public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource&lt;Payment&gt;,</span>
-<span class="source-line-no">047</span><span id="line.47">        com.commercetools.api.models.Referencable&lt;Payment&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Payment&gt;,</span>
-<span class="source-line-no">048</span><span id="line.48">        com.commercetools.api.models.Customizable&lt;Payment&gt; {</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Unique identifier of the Payment.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("id")</span>
-<span class="source-line-no">055</span><span id="line.55">    public String getId();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("version")</span>
-<span class="source-line-no">062</span><span id="line.62">    public Long getVersion();</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67">    @NotNull</span>
-<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">069</span><span id="line.69">    public ZonedDateTime getCreatedAt();</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *</span>
-<span class="source-line-no">073</span><span id="line.73">     */</span>
-<span class="source-line-no">074</span><span id="line.74">    @NotNull</span>
-<span class="source-line-no">075</span><span id="line.75">    @JsonProperty("lastModifiedAt")</span>
-<span class="source-line-no">076</span><span id="line.76">    public ZonedDateTime getLastModifiedAt();</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">080</span><span id="line.80">     */</span>
-<span class="source-line-no">081</span><span id="line.81">    @Valid</span>
-<span class="source-line-no">082</span><span id="line.82">    @JsonProperty("lastModifiedBy")</span>
-<span class="source-line-no">083</span><span id="line.83">    public LastModifiedBy getLastModifiedBy();</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">087</span><span id="line.87">     */</span>
-<span class="source-line-no">088</span><span id="line.88">    @Valid</span>
-<span class="source-line-no">089</span><span id="line.89">    @JsonProperty("createdBy")</span>
-<span class="source-line-no">090</span><span id="line.90">    public CreatedBy getCreatedBy();</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">     */</span>
-<span class="source-line-no">095</span><span id="line.95">    @Valid</span>
-<span class="source-line-no">096</span><span id="line.96">    @JsonProperty("customer")</span>
-<span class="source-line-no">097</span><span id="line.97">    public CustomerReference getCustomer();</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    @JsonProperty("anonymousId")</span>
-<span class="source-line-no">104</span><span id="line.104">    public String getAnonymousId();</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo &lt;code&gt;paymentInterface&lt;/code&gt; must be unique.&lt;/p&gt;</span>
-<span class="source-line-no">108</span><span id="line.108">     */</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    @JsonProperty("interfaceId")</span>
-<span class="source-line-no">111</span><span id="line.111">    public String getInterfaceId();</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">     */</span>
-<span class="source-line-no">116</span><span id="line.116">    @NotNull</span>
-<span class="source-line-no">117</span><span id="line.117">    @Valid</span>
-<span class="source-line-no">118</span><span id="line.118">    @JsonProperty("amountPlanned")</span>
-<span class="source-line-no">119</span><span id="line.119">    public TypedMoney getAmountPlanned();</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    /**</span>
-<span class="source-line-no">122</span><span id="line.122">     *</span>
-<span class="source-line-no">123</span><span id="line.123">     */</span>
-<span class="source-line-no">124</span><span id="line.124">    @NotNull</span>
-<span class="source-line-no">125</span><span id="line.125">    @Valid</span>
-<span class="source-line-no">126</span><span id="line.126">    @JsonProperty("paymentMethodInfo")</span>
-<span class="source-line-no">127</span><span id="line.127">    public PaymentMethodInfo getPaymentMethodInfo();</span>
+<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">024</span><span id="line.24">@JsonDeserialize(as = PaymentImpl.class)</span>
+<span class="source-line-no">025</span><span id="line.25">public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource&lt;Payment&gt;,</span>
+<span class="source-line-no">026</span><span id="line.26">        com.commercetools.api.models.Referencable&lt;Payment&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Payment&gt;,</span>
+<span class="source-line-no">027</span><span id="line.27">        com.commercetools.api.models.Customizable&lt;Payment&gt; {</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
+<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("id")</span>
+<span class="source-line-no">031</span><span id="line.31">    public String getId();</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("version")</span>
+<span class="source-line-no">035</span><span id="line.35">    public Long getVersion();</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">039</span><span id="line.39">    public ZonedDateTime getCreatedAt();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("lastModifiedAt")</span>
+<span class="source-line-no">043</span><span id="line.43">    public ZonedDateTime getLastModifiedAt();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("lastModifiedBy")</span>
+<span class="source-line-no">050</span><span id="line.50">    public LastModifiedBy getLastModifiedBy();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">    */</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("createdBy")</span>
+<span class="source-line-no">057</span><span id="line.57">    public CreatedBy getCreatedBy();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">    */</span>
+<span class="source-line-no">062</span><span id="line.62">    @Valid</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("customer")</span>
+<span class="source-line-no">064</span><span id="line.64">    public CustomerReference getCustomer();</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">    */</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("anonymousId")</span>
+<span class="source-line-no">071</span><span id="line.71">    public String getAnonymousId();</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">    *  &lt;p&gt;The identifier that is used by the interface that manages the payment (usually the PSP).</span>
+<span class="source-line-no">075</span><span id="line.75">    *  Cannot be changed once it has been set.</span>
+<span class="source-line-no">076</span><span id="line.76">    *  The combination of this ID and the PaymentMethodInfo &lt;code&gt;paymentInterface&lt;/code&gt; must be unique.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">    */</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("interfaceId")</span>
+<span class="source-line-no">080</span><span id="line.80">    public String getInterfaceId();</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">    *  &lt;p&gt;How much money this payment intends to receive from the customer.</span>
+<span class="source-line-no">084</span><span id="line.84">    *  The value usually matches the cart or order gross total.&lt;/p&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">    */</span>
+<span class="source-line-no">086</span><span id="line.86">    @NotNull</span>
+<span class="source-line-no">087</span><span id="line.87">    @Valid</span>
+<span class="source-line-no">088</span><span id="line.88">    @JsonProperty("amountPlanned")</span>
+<span class="source-line-no">089</span><span id="line.89">    public TypedMoney getAmountPlanned();</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    @NotNull</span>
+<span class="source-line-no">092</span><span id="line.92">    @Valid</span>
+<span class="source-line-no">093</span><span id="line.93">    @JsonProperty("paymentMethodInfo")</span>
+<span class="source-line-no">094</span><span id="line.94">    public PaymentMethodInfo getPaymentMethodInfo();</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    @NotNull</span>
+<span class="source-line-no">097</span><span id="line.97">    @Valid</span>
+<span class="source-line-no">098</span><span id="line.98">    @JsonProperty("paymentStatus")</span>
+<span class="source-line-no">099</span><span id="line.99">    public PaymentStatus getPaymentStatus();</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">    */</span>
+<span class="source-line-no">104</span><span id="line.104">    @NotNull</span>
+<span class="source-line-no">105</span><span id="line.105">    @Valid</span>
+<span class="source-line-no">106</span><span id="line.106">    @JsonProperty("transactions")</span>
+<span class="source-line-no">107</span><span id="line.107">    public List&lt;Transaction&gt; getTransactions();</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP.</span>
+<span class="source-line-no">111</span><span id="line.111">    *  Some interactions may result in a transaction.</span>
+<span class="source-line-no">112</span><span id="line.112">    *  If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction.</span>
+<span class="source-line-no">113</span><span id="line.113">    *  Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">    */</span>
+<span class="source-line-no">115</span><span id="line.115">    @NotNull</span>
+<span class="source-line-no">116</span><span id="line.116">    @Valid</span>
+<span class="source-line-no">117</span><span id="line.117">    @JsonProperty("interfaceInteractions")</span>
+<span class="source-line-no">118</span><span id="line.118">    public List&lt;CustomFields&gt; getInterfaceInteractions();</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    @Valid</span>
+<span class="source-line-no">121</span><span id="line.121">    @JsonProperty("custom")</span>
+<span class="source-line-no">122</span><span id="line.122">    public CustomFields getCustom();</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">    *  &lt;p&gt;User-specific unique identifier for the payment (max.</span>
+<span class="source-line-no">126</span><span id="line.126">    *  256 characters).&lt;/p&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">    */</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     *</span>
-<span class="source-line-no">131</span><span id="line.131">     */</span>
-<span class="source-line-no">132</span><span id="line.132">    @NotNull</span>
-<span class="source-line-no">133</span><span id="line.133">    @Valid</span>
-<span class="source-line-no">134</span><span id="line.134">    @JsonProperty("paymentStatus")</span>
-<span class="source-line-no">135</span><span id="line.135">    public PaymentStatus getPaymentStatus();</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    /**</span>
-<span class="source-line-no">138</span><span id="line.138">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">139</span><span id="line.139">     */</span>
-<span class="source-line-no">140</span><span id="line.140">    @NotNull</span>
-<span class="source-line-no">141</span><span id="line.141">    @Valid</span>
-<span class="source-line-no">142</span><span id="line.142">    @JsonProperty("transactions")</span>
-<span class="source-line-no">143</span><span id="line.143">    public List&lt;Transaction&gt; getTransactions();</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">147</span><span id="line.147">     */</span>
-<span class="source-line-no">148</span><span id="line.148">    @NotNull</span>
-<span class="source-line-no">149</span><span id="line.149">    @Valid</span>
-<span class="source-line-no">150</span><span id="line.150">    @JsonProperty("interfaceInteractions")</span>
-<span class="source-line-no">151</span><span id="line.151">    public List&lt;CustomFields&gt; getInterfaceInteractions();</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    /**</span>
-<span class="source-line-no">154</span><span id="line.154">     *</span>
-<span class="source-line-no">155</span><span id="line.155">     */</span>
-<span class="source-line-no">156</span><span id="line.156">    @Valid</span>
-<span class="source-line-no">157</span><span id="line.157">    @JsonProperty("custom")</span>
-<span class="source-line-no">158</span><span id="line.158">    public CustomFields getCustom();</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    /**</span>
-<span class="source-line-no">161</span><span id="line.161">     *  &lt;p&gt;User-defined unique identifier of the Payment.&lt;/p&gt;</span>
-<span class="source-line-no">162</span><span id="line.162">     */</span>
+<span class="source-line-no">129</span><span id="line.129">    @JsonProperty("key")</span>
+<span class="source-line-no">130</span><span id="line.130">    public String getKey();</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public void setId(final String id);</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    public void setVersion(final Long version);</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public void setCustomer(final CustomerReference customer);</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public void setAnonymousId(final String anonymousId);</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public void setInterfaceId(final String interfaceId);</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    public void setAmountPlanned(final TypedMoney amountPlanned);</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public void setPaymentStatus(final PaymentStatus paymentStatus);</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    @JsonIgnore</span>
+<span class="source-line-no">157</span><span id="line.157">    public void setTransactions(final Transaction... transactions);</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    public void setTransactions(final List&lt;Transaction&gt; transactions);</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    @JsonIgnore</span>
+<span class="source-line-no">162</span><span id="line.162">    public void setInterfaceInteractions(final CustomFields... interfaceInteractions);</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    @JsonProperty("key")</span>
-<span class="source-line-no">165</span><span id="line.165">    public String getKey();</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setId(final String id);</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public void setVersion(final Long version);</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public void setCreatedBy(final CreatedBy createdBy);</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public void setCustomer(final CustomerReference customer);</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setAnonymousId(final String anonymousId);</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public void setInterfaceId(final String interfaceId);</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public void setAmountPlanned(final TypedMoney amountPlanned);</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public void setPaymentStatus(final PaymentStatus paymentStatus);</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    @JsonIgnore</span>
-<span class="source-line-no">192</span><span id="line.192">    public void setTransactions(final Transaction... transactions);</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public void setTransactions(final List&lt;Transaction&gt; transactions);</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    @JsonIgnore</span>
-<span class="source-line-no">197</span><span id="line.197">    public void setInterfaceInteractions(final CustomFields... interfaceInteractions);</span>
+<span class="source-line-no">164</span><span id="line.164">    public void setInterfaceInteractions(final List&lt;CustomFields&gt; interfaceInteractions);</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    public void setKey(final String key);</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    public static Payment of() {</span>
+<span class="source-line-no">171</span><span id="line.171">        return new PaymentImpl();</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public static Payment of(final Payment template) {</span>
+<span class="source-line-no">175</span><span id="line.175">        PaymentImpl instance = new PaymentImpl();</span>
+<span class="source-line-no">176</span><span id="line.176">        instance.setId(template.getId());</span>
+<span class="source-line-no">177</span><span id="line.177">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">178</span><span id="line.178">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">179</span><span id="line.179">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">180</span><span id="line.180">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">181</span><span id="line.181">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">182</span><span id="line.182">        instance.setCustomer(template.getCustomer());</span>
+<span class="source-line-no">183</span><span id="line.183">        instance.setAnonymousId(template.getAnonymousId());</span>
+<span class="source-line-no">184</span><span id="line.184">        instance.setInterfaceId(template.getInterfaceId());</span>
+<span class="source-line-no">185</span><span id="line.185">        instance.setAmountPlanned(template.getAmountPlanned());</span>
+<span class="source-line-no">186</span><span id="line.186">        instance.setPaymentMethodInfo(template.getPaymentMethodInfo());</span>
+<span class="source-line-no">187</span><span id="line.187">        instance.setPaymentStatus(template.getPaymentStatus());</span>
+<span class="source-line-no">188</span><span id="line.188">        instance.setTransactions(template.getTransactions());</span>
+<span class="source-line-no">189</span><span id="line.189">        instance.setInterfaceInteractions(template.getInterfaceInteractions());</span>
+<span class="source-line-no">190</span><span id="line.190">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">191</span><span id="line.191">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">192</span><span id="line.192">        return instance;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    public static PaymentBuilder builder() {</span>
+<span class="source-line-no">196</span><span id="line.196">        return PaymentBuilder.of();</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    public void setInterfaceInteractions(final List&lt;CustomFields&gt; interfaceInteractions);</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">199</span><span id="line.199">    public static PaymentBuilder builder(final Payment template) {</span>
+<span class="source-line-no">200</span><span id="line.200">        return PaymentBuilder.of(template);</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public void setKey(final String key);</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public static Payment of() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return new PaymentImpl();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public static Payment of(final Payment template) {</span>
-<span class="source-line-no">210</span><span id="line.210">        PaymentImpl instance = new PaymentImpl();</span>
-<span class="source-line-no">211</span><span id="line.211">        instance.setId(template.getId());</span>
-<span class="source-line-no">212</span><span id="line.212">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">213</span><span id="line.213">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">214</span><span id="line.214">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">215</span><span id="line.215">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">216</span><span id="line.216">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">217</span><span id="line.217">        instance.setCustomer(template.getCustomer());</span>
-<span class="source-line-no">218</span><span id="line.218">        instance.setAnonymousId(template.getAnonymousId());</span>
-<span class="source-line-no">219</span><span id="line.219">        instance.setInterfaceId(template.getInterfaceId());</span>
-<span class="source-line-no">220</span><span id="line.220">        instance.setAmountPlanned(template.getAmountPlanned());</span>
-<span class="source-line-no">221</span><span id="line.221">        instance.setPaymentMethodInfo(template.getPaymentMethodInfo());</span>
-<span class="source-line-no">222</span><span id="line.222">        instance.setPaymentStatus(template.getPaymentStatus());</span>
-<span class="source-line-no">223</span><span id="line.223">        instance.setTransactions(template.getTransactions());</span>
-<span class="source-line-no">224</span><span id="line.224">        instance.setInterfaceInteractions(template.getInterfaceInteractions());</span>
-<span class="source-line-no">225</span><span id="line.225">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">226</span><span id="line.226">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">227</span><span id="line.227">        return instance;</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    public static PaymentBuilder builder() {</span>
-<span class="source-line-no">231</span><span id="line.231">        return PaymentBuilder.of();</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public static PaymentBuilder builder(final Payment template) {</span>
-<span class="source-line-no">235</span><span id="line.235">        return PaymentBuilder.of(template);</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    default &lt;T&gt; T withPayment(Function&lt;Payment, T&gt; helper) {</span>
-<span class="source-line-no">239</span><span id="line.239">        return helper.apply(this);</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    @Override</span>
-<span class="source-line-no">243</span><span id="line.243">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">244</span><span id="line.244">        return com.commercetools.api.models.payment.PaymentResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">245</span><span id="line.245">    }</span>
-<span class="source-line-no">246</span><span id="line.246"></span>
-<span class="source-line-no">247</span><span id="line.247">    @Override</span>
-<span class="source-line-no">248</span><span id="line.248">    public default com.commercetools.api.models.common.Reference toReference() {</span>
-<span class="source-line-no">249</span><span id="line.249">        return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();</span>
-<span class="source-line-no">250</span><span id="line.250">    }</span>
-<span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Payment&gt; typeReference() {</span>
-<span class="source-line-no">253</span><span id="line.253">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Payment&gt;() {</span>
-<span class="source-line-no">254</span><span id="line.254">            @Override</span>
-<span class="source-line-no">255</span><span id="line.255">            public String toString() {</span>
-<span class="source-line-no">256</span><span id="line.256">                return "TypeReference&lt;Payment&gt;";</span>
-<span class="source-line-no">257</span><span id="line.257">            }</span>
-<span class="source-line-no">258</span><span id="line.258">        };</span>
-<span class="source-line-no">259</span><span id="line.259">    }</span>
-<span class="source-line-no">260</span><span id="line.260">}</span>
+<span class="source-line-no">203</span><span id="line.203">    default &lt;T&gt; T withPayment(Function&lt;Payment, T&gt; helper) {</span>
+<span class="source-line-no">204</span><span id="line.204">        return helper.apply(this);</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    @Override</span>
+<span class="source-line-no">208</span><span id="line.208">    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {</span>
+<span class="source-line-no">209</span><span id="line.209">        return com.commercetools.api.models.payment.PaymentResourceIdentifier.builder().id(getId()).build();</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    @Override</span>
+<span class="source-line-no">213</span><span id="line.213">    public default com.commercetools.api.models.common.Reference toReference() {</span>
+<span class="source-line-no">214</span><span id="line.214">        return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Payment&gt; typeReference() {</span>
+<span class="source-line-no">218</span><span id="line.218">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Payment&gt;() {</span>
+<span class="source-line-no">219</span><span id="line.219">            @Override</span>
+<span class="source-line-no">220</span><span id="line.220">            public String toString() {</span>
+<span class="source-line-no">221</span><span id="line.221">                return "TypeReference&lt;Payment&gt;";</span>
+<span class="source-line-no">222</span><span id="line.222">            }</span>
+<span class="source-line-no">223</span><span id="line.223">        };</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225">}</span>
 
 
 

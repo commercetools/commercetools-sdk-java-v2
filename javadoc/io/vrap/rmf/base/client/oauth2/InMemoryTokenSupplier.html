@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a></code>, <code><a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.17">InMemoryTokenSupplier</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.14">InMemoryTokenSupplier</a></span>
 <span class="extends-implements">extends <a href="../AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a>
 implements <a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a></span></div>
 </section>
@@ -108,17 +108,8 @@ implements <a href="RefreshableTokenSupplier.html" title="interface in io.vrap.r
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(dev.failsafe.spi.Scheduler,io.vrap.rmf.base.client.oauth2.TokenSupplier)">InMemoryTokenSupplier</a></span>&#8203;(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.oauth2.TokenSupplier)">InMemoryTokenSupplier</a></span>&#8203;(<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(io.vrap.rmf.base.client.oauth2.TokenSupplier)">InMemoryTokenSupplier</a></span>&#8203;(<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,io.vrap.rmf.base.client.oauth2.TokenSupplier)">InMemoryTokenSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ScheduledExecutorService,io.vrap.rmf.base.client.oauth2.TokenSupplier)">InMemoryTokenSupplier</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -168,28 +159,7 @@ implements <a href="RefreshableTokenSupplier.html" title="interface in io.vrap.r
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.oauth2.TokenSupplier)">
 <h3>InMemoryTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.24">InMemoryTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ScheduledExecutorService,io.vrap.rmf.base.client.oauth2.TokenSupplier)">
-<h3>InMemoryTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.28">InMemoryTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,io.vrap.rmf.base.client.oauth2.TokenSupplier)">
-<h3>InMemoryTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.32">InMemoryTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(dev.failsafe.spi.Scheduler,io.vrap.rmf.base.client.oauth2.TokenSupplier)">
-<h3>InMemoryTokenSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.36">InMemoryTokenSupplier</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- <a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.21">InMemoryTokenSupplier</a></span>&#8203;<span class="parameters">(<a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</span></div>
 </section>
 </li>
 </ul>
@@ -203,7 +173,7 @@ implements <a href="RefreshableTokenSupplier.html" title="interface in io.vrap.r
 <li>
 <section class="detail" id="getToken()">
 <h3>getToken</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.41">getToken</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.26">getToken</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TokenSupplier.html#getToken()">getToken</a></code>&nbsp;in interface&nbsp;<code><a href="TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a></code></dd>
@@ -213,7 +183,7 @@ implements <a href="RefreshableTokenSupplier.html" title="interface in io.vrap.r
 <li>
 <section class="detail" id="refreshToken()">
 <h3>refreshToken</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.52">refreshToken</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/oauth2/InMemoryTokenSupplier.html#line.37">refreshToken</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RefreshableTokenSupplier.html#refreshToken()">refreshToken</a></code>&nbsp;in interface&nbsp;<code><a href="RefreshableTokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">RefreshableTokenSupplier</a></code></dd>

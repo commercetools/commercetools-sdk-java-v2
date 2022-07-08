@@ -17,7 +17,7 @@
 <span class="source-line-no">004</span><span id="line.4">import io.vrap.rmf.base.client.ApiHttpClient;</span>
 <span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">008</span><span id="line.8">public class ByProjectKeyProductVariantsRequestBuilder {</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
 <span class="source-line-no">010</span><span id="line.10">    private final ApiHttpClient apiHttpClient;</span>
@@ -31,7 +31,14 @@
 <span class="source-line-no">018</span><span id="line.18">    public ByProjectKeyProductVariantsImportContainersRequestBuilder importContainers() {</span>
 <span class="source-line-no">019</span><span id="line.19">        return new ByProjectKeyProductVariantsImportContainersRequestBuilder(apiHttpClient, projectKey);</span>
 <span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21">}</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    @Deprecated</span>
+<span class="source-line-no">023</span><span id="line.23">    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyRequestBuilder importSinkKeyWithImportSinkKeyValue(</span>
+<span class="source-line-no">024</span><span id="line.24">            String importSinkKey) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">026</span><span id="line.26">            importSinkKey);</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28">}</span>
 
 
 

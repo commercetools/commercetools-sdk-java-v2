@@ -84,21 +84,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductVariantImportImpl.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.35">ProductVariantImport</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.23">ProductVariantImport</a></span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ProductVariantImport productVariantImport = ProductVariantImport.builder()
-             .key("{key}")
-             .isMasterVariant(true)
-             .product(productBuilder -> productBuilder)
-             .build()
- </code></pre>
- </div></div>
+<div class="block"><p>The data representation for a ProductVariant to be imported that is persisted as a <a href="/../api/projects/products#productvariant">ProductVariant</a> in the Project.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -142,7 +130,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProduct()">getProduct</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The Product to which this Product Variant belongs.</div>
+<div class="block">The <a href="/../api/projects/products#productvariant">Product</a> to which this Product Variant belongs.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPublish()">getPublish</a></span>()</code></div>
@@ -216,7 +204,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.43">getSku</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.31">getSku</a></span>()</div>
 <div class="block"><p>Maps to <code>ProductVariant.sku</code>.</p></div>
 </section>
 </li>
@@ -224,7 +212,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getIsMasterVariant()">
 <h3>getIsMasterVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.49">getIsMasterVariant</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.37">getIsMasterVariant</a></span>()</div>
 <div class="block"><p>Maps to <code>ProductVariant.isMasterVariant</code>.</p></div>
 </section>
 </li>
@@ -232,15 +220,16 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getAttributes()">
 <h3>getAttributes</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.56">getAttributes</a></span>()</div>
-<div class="block"><p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p></div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.45">getAttributes</a></span>()</div>
+<div class="block"><p>Maps to <code>ProductVariant.attributes</code>.
+  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getImages()">
 <h3>getImages</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.63">getImages</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.52">getImages</a></span>()</div>
 <div class="block"><p>Maps to <code>ProductVariant.images</code>.</p></div>
 </section>
 </li>
@@ -248,15 +237,17 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getAssets()">
 <h3>getAssets</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.70">getAssets</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.59">getAssets</a></span>()</div>
 <div class="block"><p>Maps to <code>ProductVariant.assets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.78">getPublish</a></span>()</div>
-<div class="block"><p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.69">getPublish</a></span>()</div>
+<div class="block"><p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.
+  If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.
+  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p></div>
 </section>
 </li>
 <li>
@@ -264,104 +255,106 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.84">getProduct</a></span>()</div>
-<div class="block"><p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.77">getProduct</a></span>()</div>
+<div class="block"><p>The <a href="/../api/projects/products#productvariant">Product</a> to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>.
+  The Reference to the <a href="/../api/projects/products#product">Product</a> with which the ProductVariant is associated.
+  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Product is created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.89">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.82">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsMasterVariant(java.lang.Boolean)">
 <h3>setIsMasterVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.91">setIsMasterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.84">setIsMasterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributes(com.commercetools.importapi.models.productvariants.Attribute...)">
 <h3>setAttributes</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.93">setAttributes</a></span>&#8203;<span class="parameters">(<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.86">setAttributes</a></span>&#8203;<span class="parameters">(<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributes(java.util.List)">
 <h3>setAttributes</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.96">setAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.89">setAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setImages(com.commercetools.importapi.models.common.Image...)">
 <h3>setImages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.98">setImages</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>...&nbsp;images)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.91">setImages</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>...&nbsp;images)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setImages(java.util.List)">
 <h3>setImages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.101">setImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;&nbsp;images)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.94">setImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;&nbsp;images)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssets(com.commercetools.importapi.models.common.Asset...)">
 <h3>setAssets</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.103">setAssets</a></span>&#8203;<span class="parameters">(<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.96">setAssets</a></span>&#8203;<span class="parameters">(<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssets(java.util.List)">
 <h3>setAssets</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.106">setAssets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.99">setAssets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPublish(java.lang.Boolean)">
 <h3>setPublish</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.108">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.101">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProduct(com.commercetools.importapi.models.common.ProductKeyReference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.110">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.103">setProduct</a></span>&#8203;<span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.112">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.105">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.productvariants.ProductVariantImport)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.116">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.109">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.129">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.122">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.productvariants.ProductVariantImport)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.133">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.126">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductVariantImport(java.util.function.Function)">
 <h3>withProductVariantImport</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.137">withProductVariantImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.130">withProductVariantImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.141">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/ProductVariantImport.html#line.134">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

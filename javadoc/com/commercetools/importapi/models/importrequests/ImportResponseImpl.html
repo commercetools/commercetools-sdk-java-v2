@@ -83,10 +83,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.20">ImportResponseImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.21">ImportResponseImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p></div>
+<div class="block"><p>A list of the ID's and validation statuses of newly created <a href="#importoperation">ImportOperations</a>.
+  Used as a response at each resource-specific import endpoint, for example, at <a href="/category#import-categories">Import Categories</a> and <a href="/product-type#import-producttypes">Import ProductTypes</a>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,7 +165,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImportResponseImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.31">ImportResponseImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.32">ImportResponseImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -178,7 +179,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="getOperationStatus()">
 <h3>getOperationStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.38">getOperationStatus</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.35">getOperationStatus</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportResponse.html#getOperationStatus()">getOperationStatus</a></code>&nbsp;in interface&nbsp;<code><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></code></dd>
@@ -188,7 +189,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="setOperationStatus(com.commercetools.importapi.models.importoperations.ImportOperationStatus...)">
 <h3>setOperationStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.42">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>...&nbsp;operationStatus)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.39">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>...&nbsp;operationStatus)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportResponse.html#setOperationStatus(com.commercetools.importapi.models.importoperations.ImportOperationStatus...)">setOperationStatus</a></code>&nbsp;in interface&nbsp;<code><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></code></dd>
@@ -198,7 +199,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="setOperationStatus(java.util.List)">
 <h3>setOperationStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.47">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;&nbsp;operationStatus)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.44">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;&nbsp;operationStatus)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImportResponse.html#setOperationStatus(java.util.List)">setOperationStatus</a></code>&nbsp;in interface&nbsp;<code><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></code></dd>
@@ -208,7 +209,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.52">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.49">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -218,7 +219,7 @@ implements <a href="ImportResponse.html" title="interface in com.commercetools.i
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.65">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponseImpl.html#line.62">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

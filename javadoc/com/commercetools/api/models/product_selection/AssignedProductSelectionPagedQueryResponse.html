@@ -84,22 +84,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AssignedProductSelectionPagedQueryResponseImpl.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponseImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.32">AssignedProductSelectionPagedQueryResponse</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.19">AssignedProductSelectionPagedQueryResponse</a></span><span class="extends-implements">
 extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</span></div>
-<div class="block"><p>PagedQueryResult containing an array of AssignedProductSelection.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     AssignedProductSelectionPagedQueryResponse assignedProductSelectionPagedQueryResponse = AssignedProductSelectionPagedQueryResponse.builder()
-             .limit(0.3)
-             .offset(0.3)
-             .count(0.3)
-             .plusResults(resultsBuilder -> resultsBuilder)
-             .build()
- </code></pre>
- </div></div>
+<div class="block"><p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> containing an array of <a href="ctp:api:type:AssignedProductSelection">AssignedProductSelection</a>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,17 +115,17 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Number of results requested.</div>
+<div class="block">Number of results requested in the query request.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Number of elements skipped.</div>
+<div class="block">Offset supplied by the client or the server default.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResults()">getResults</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">References to ProductSelection that are assigned to the Product.</div>
+<div class="block">References to Product Selection that are assigned to the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotal()">getTotal</a></span>()</code></div>
@@ -193,8 +180,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.40">getLimit</a></span>()</div>
-<div class="block"><p>Number of results requested.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.27">getLimit</a></span>()</div>
+<div class="block"><p>Number of results requested in the query request.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
@@ -205,8 +192,9 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.47">getOffset</a></span>()</div>
-<div class="block"><p>Number of elements skipped.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.35">getOffset</a></span>()</div>
+<div class="block"><p>Offset supplied by the client or the server default.
+  It is the number of elements skipped, not a page number.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
@@ -217,7 +205,7 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.54">getCount</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.42">getCount</a></span>()</div>
 <div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -228,8 +216,12 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.62">getTotal</a></span>()</div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.54">getTotal</a></span>()</div>
+<div class="block"><p>Total number of results matching the query.
+  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
+  Unlike other endpoints, the Product Selection endpoint does not return this field by default.
+  To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>.
+  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/limits#queries">limit</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getTotal()">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
@@ -241,8 +233,8 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <h3>getResults</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.68">getResults</a></span>()</div>
-<div class="block"><p>References to ProductSelection that are assigned to the Product.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.60">getResults</a></span>()</div>
+<div class="block"><p>References to Product Selection that are assigned to the Product.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourcePagedQueryResponse.html#getResults()">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourcePagedQueryResponse.html" title="interface in com.commercetools.api.models">ResourcePagedQueryResponse</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
@@ -252,73 +244,73 @@ extends <a href="../ResourcePagedQueryResponse.html" title="interface in com.com
 <li>
 <section class="detail" id="setLimit(java.lang.Long)">
 <h3>setLimit</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.73">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.65">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOffset(java.lang.Long)">
 <h3>setOffset</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.75">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.67">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCount(java.lang.Long)">
 <h3>setCount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.77">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.69">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.79">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.71">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResults(com.commercetools.api.models.product_selection.AssignedProductSelection...)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.81">setResults</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.73">setResults</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>...&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResults(java.util.List)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.84">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.76">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.86">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.78">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.90">of</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.101">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.93">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.105">builder</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.97">builder</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAssignedProductSelectionPagedQueryResponse(java.util.function.Function)">
 <h3>withAssignedProductSelectionPagedQueryResponse</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.110">withAssignedProductSelectionPagedQueryResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.102">withAssignedProductSelectionPagedQueryResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.115">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AssignedProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelectionPagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionPagedQueryResponse.html#line.107">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

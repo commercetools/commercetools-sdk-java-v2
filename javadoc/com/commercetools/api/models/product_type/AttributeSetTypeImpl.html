@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AttributeSetType.html" title="interface in com.commercetools.api.models.product_type">AttributeSetType</a></code>, <code><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.20">AttributeSetTypeImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.17">AttributeSetTypeImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="AttributeSetType.html" title="interface in com.commercetools.api.models.product_type">AttributeSetType</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>AttributeType that defines a set (without duplicate elements) with values of the given <code>elementType</code>. It does not support <code>isRequired</code>. Since this type itself is an AttributeType, it is possible to construct an AttributeSetType of an AttributeSetType of any AttributeType, and to continue with this iteration until terminating with any non-AttributeSetType. In case the AttributeSetType iteration terminates with an AttributeNestedType, the iteration can have 5 steps at maximum.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -137,9 +136,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getElementType()">getElementType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Attribute type of the elements in the set.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -178,7 +175,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AttributeSetTypeImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.34">AttributeSetTypeImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.31">AttributeSetTypeImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -192,7 +189,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.42">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.35">getName</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AttributeType.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></code></dd>
@@ -202,8 +199,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getElementType()">
 <h3>getElementType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.50">getElementType</a></span>()</div>
-<div class="block"><p>Attribute type of the elements in the set.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.39">getElementType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AttributeSetType.html#getElementType()">getElementType</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeSetType.html" title="interface in com.commercetools.api.models.product_type">AttributeSetType</a></code></dd>
@@ -213,7 +209,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="setElementType(com.commercetools.api.models.product_type.AttributeType)">
 <h3>setElementType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.54">setElementType</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;elementType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.43">setElementType</a></span>&#8203;<span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;elementType)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AttributeSetType.html#setElementType(com.commercetools.api.models.product_type.AttributeType)">setElementType</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeSetType.html" title="interface in com.commercetools.api.models.product_type">AttributeSetType</a></code></dd>
@@ -223,7 +219,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.58">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.47">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -233,7 +229,7 @@ implements <a href="AttributeSetType.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.71">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeSetTypeImpl.html#line.60">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

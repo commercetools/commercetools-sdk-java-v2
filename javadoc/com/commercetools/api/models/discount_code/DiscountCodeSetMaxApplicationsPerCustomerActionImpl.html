@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetMaxApplicationsPerCustomerAction</a></code>, <code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code>, <code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.20">DiscountCodeSetMaxApplicationsPerCustomerActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.17">DiscountCodeSetMaxApplicationsPerCustomerActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetMaxApplicationsPerCustomerAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">DiscountCodeSetMaxApplicationsPerCustomerAction</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -141,7 +140,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMaxApplicationsPerCustomer()">getMaxApplicationsPerCustomer</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Value to set.</div>
+<div class="block">If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -181,7 +180,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeSetMaxApplicationsPerCustomerActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.35">DiscountCodeSetMaxApplicationsPerCustomerActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.32">DiscountCodeSetMaxApplicationsPerCustomerActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,7 +194,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.43">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.36">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeUpdateAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeUpdateAction</a></code></dd>
@@ -207,8 +206,8 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="getMaxApplicationsPerCustomer()">
 <h3>getMaxApplicationsPerCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.51">getMaxApplicationsPerCustomer</a></span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.43">getMaxApplicationsPerCustomer</a></span>()</div>
+<div class="block"><p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html#getMaxApplicationsPerCustomer()">getMaxApplicationsPerCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetMaxApplicationsPerCustomerAction</a></code></dd>
@@ -218,7 +217,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="setMaxApplicationsPerCustomer(java.lang.Long)">
 <h3>setMaxApplicationsPerCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.55">setMaxApplicationsPerCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.47">setMaxApplicationsPerCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html#setMaxApplicationsPerCustomer(java.lang.Long)">setMaxApplicationsPerCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetMaxApplicationsPerCustomerAction</a></code></dd>
@@ -228,7 +227,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.59">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.51">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -238,7 +237,7 @@ implements <a href="DiscountCodeSetMaxApplicationsPerCustomerAction.html" title=
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.74">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeSetMaxApplicationsPerCustomerActionImpl.html#line.66">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

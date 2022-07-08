@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="StoreUpdateAction.html" title="interface in com.commercetools.api.models.store">StoreUpdateAction</a>&gt;</code>, <code><a href="StoreAddSupplyChannelAction.html" title="interface in com.commercetools.api.models.store">StoreAddSupplyChannelAction</a></code>, <code><a href="StoreUpdateAction.html" title="interface in com.commercetools.api.models.store">StoreUpdateAction</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.20">StoreAddSupplyChannelActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.17">StoreAddSupplyChannelActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.commercetools.api.models.store">StoreAddSupplyChannelAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>This action has no effect if a given supply channel is already present in a Store.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -140,9 +139,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSupplyChannel()">getSupplyChannel</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -181,7 +178,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StoreAddSupplyChannelActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.34">StoreAddSupplyChannelActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.31">StoreAddSupplyChannelActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,7 +192,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.42">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.35">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="StoreUpdateAction.html" title="interface in com.commercetools.api.models.store">StoreUpdateAction</a>&gt;</code></dd>
@@ -207,8 +204,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.50">getSupplyChannel</a></span>()</div>
-<div class="block"><p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.39">getSupplyChannel</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StoreAddSupplyChannelAction.html#getSupplyChannel()">getSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="StoreAddSupplyChannelAction.html" title="interface in com.commercetools.api.models.store">StoreAddSupplyChannelAction</a></code></dd>
@@ -218,7 +214,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.54">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.43">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StoreAddSupplyChannelAction.html#setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">setSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="StoreAddSupplyChannelAction.html" title="interface in com.commercetools.api.models.store">StoreAddSupplyChannelAction</a></code></dd>
@@ -228,7 +224,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.58">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.47">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -238,7 +234,7 @@ implements <a href="StoreAddSupplyChannelAction.html" title="interface in com.co
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.71">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreAddSupplyChannelActionImpl.html#line.60">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

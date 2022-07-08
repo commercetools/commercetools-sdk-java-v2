@@ -84,19 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartDiscountValueFixedDraftImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.30">CartDiscountValueFixedDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.17">CartDiscountValueFixedDraft</a></span><span class="extends-implements">
 extends <a href="CartDiscountValueDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueDraft</a></span></div>
-<div class="block"><p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CartDiscountValueFixedDraft cartDiscountValueFixedDraft = CartDiscountValueFixedDraft.builder()
-             .plusMoney(moneyBuilder -> moneyBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,9 +123,7 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMoney()">getMoney</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Money values in different currencies.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -175,7 +162,7 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="FIXED">
 <h3>FIXED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.34">FIXED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.21">FIXED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft.FIXED">Constant Field Values</a></dd>
@@ -195,56 +182,55 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <h3>getMoney</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.39">getMoney</a></span>()</div>
-<div class="block"><p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.23">getMoney</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money...)">
 <h3>setMoney</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.44">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.28">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMoney(java.util.List)">
 <h3>setMoney</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.47">setMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.31">setMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.49">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.33">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.37">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.59">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.43">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountValueFixedDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.47">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartDiscountValueFixedDraft(java.util.function.Function)">
 <h3>withCartDiscountValueFixedDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.67">withCartDiscountValueFixedDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.51">withCartDiscountValueFixedDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountValueFixedDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueFixedDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountValueFixedDraft.html#line.55">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

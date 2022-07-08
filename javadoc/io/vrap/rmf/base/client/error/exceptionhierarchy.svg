@@ -35,7 +35,7 @@ reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.bas
 reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.base.client.error.ConcurrentModification--><path d="M605,446.9531 C605,446.9531 486.13,481.6431 403.02,505.8931 " fill="none" id="io.vrap.rmf.base.client.error.ApiClientException-backto-io.vrap.rmf.base.client.error.ConcurrentModification" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d90d56d9bcc6d7cd90d33c7507cba973]
 reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.base.client.error.ForbiddenException--><path d="M605,446.9531 C605,446.9531 571.78,481.4331 548.43,505.6731 " fill="none" id="io.vrap.rmf.base.client.error.ApiClientException-backto-io.vrap.rmf.base.client.error.ForbiddenException" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0564611abd0fe5f2bf366619ea206674]
 reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.base.client.error.NotFoundException--><path d="M605,446.9531 C605,446.9531 651.95,481.6431 684.78,505.8931 " fill="none" id="io.vrap.rmf.base.client.error.ApiClientException-backto-io.vrap.rmf.base.client.error.NotFoundException" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b3c78b8a93ec5d06c82bdeac047d9b1b]
-reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.base.client.error.UnauthorizedException--><path d="M605,446.9531 C605,446.9531 736.56,481.6431 828.54,505.8931 " fill="none" id="io.vrap.rmf.base.client.error.ApiClientException-backto-io.vrap.rmf.base.client.error.UnauthorizedException" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[56e85ea82cacad436293ba7ac7dff6ec]
+reverse link io.vrap.rmf.base.client.error.ApiClientException to io.vrap.rmf.base.client.error.UnauthorizedException--><path d="M605,446.9531 C605,446.9531 736.56,481.6431 828.54,505.8931 " fill="none" id="io.vrap.rmf.base.client.error.ApiClientException-backto-io.vrap.rmf.base.client.error.UnauthorizedException" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c4610a4b875629895a03de2cc99e9280]
 @startuml
 title Exception hierarchy
  skinparam groupInheritance 2
@@ -66,7 +66,7 @@ title Exception hierarchy
  }
 @enduml
 
-PlantUML version 1.2022.0(Tue Jan 11 16:16:42 UTC 2022)
+PlantUML version 1.2021.15(Tue Nov 30 16:45:34 UTC 2021)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM

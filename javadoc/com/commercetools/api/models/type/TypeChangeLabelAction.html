@@ -84,20 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TypeChangeLabelActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.31">TypeChangeLabelAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.17">TypeChangeLabelAction</a></span><span class="extends-implements">
 extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></span></div>
-<div class="block">TypeChangeLabelAction
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     TypeChangeLabelAction typeChangeLabelAction = TypeChangeLabelAction.builder()
-             .fieldName("{fieldName}")
-             .label(labelBuilder -> labelBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -136,13 +124,11 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Name of the Field Definition to update.</div>
+<div class="block">Name of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLabel()">getLabel</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -184,7 +170,7 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="CHANGE_LABEL">
 <h3>CHANGE_LABEL</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.35">CHANGE_LABEL</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.21">CHANGE_LABEL</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.type.TypeChangeLabelAction.CHANGE_LABEL">Constant Field Values</a></dd>
@@ -203,8 +189,8 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.40">getFieldName</a></span>()</div>
-<div class="block"><p>Name of the Field Definition to update.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.26">getFieldName</a></span>()</div>
+<div class="block"><p>Name of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p></div>
 </section>
 </li>
 <li>
@@ -212,56 +198,55 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <h3>getLabel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.47">getLabel</a></span>()</div>
-<div class="block"><p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.30">getLabel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldName(java.lang.String)">
 <h3>setFieldName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.52">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.35">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLabel(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLabel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.54">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.37">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.39">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeChangeLabelAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.67">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.50">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.TypeChangeLabelAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypeChangeLabelAction(java.util.function.Function)">
 <h3>withTypeChangeLabelAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.75">withTypeChangeLabelAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.58">withTypeChangeLabelAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.79">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLabelAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeLabelAction.html#line.62">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

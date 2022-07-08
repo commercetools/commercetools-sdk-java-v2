@@ -83,19 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.23">BooleanSetAttributeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.11">BooleanSetAttributeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a>&gt;</span></div>
-<div class="block">BooleanSetAttributeBuilder
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     BooleanSetAttribute booleanSetAttribute = BooleanSetAttribute.builder()
-             .plusValue(valueBuilder -> valueBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,9 +129,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.lang.String)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The name of this attribute must match a name of the product types attribute definitions.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -177,7 +165,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>BooleanSetAttributeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.24">BooleanSetAttributeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.12">BooleanSetAttributeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -191,46 +179,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.35">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.19">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.lang.Boolean...)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.44">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>...&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.24">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>...&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.util.List)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.53">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.29">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusValue(java.lang.Boolean...)">
 <h3>plusValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.62">plusValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>...&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.34">plusValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>...&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.70">getName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.42">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.75">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.47">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.79">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a>&gt;</code></dd>
@@ -240,20 +227,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.87">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds BooleanSetAttribute without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.91">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.productvariants.BooleanSetAttribute)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="BooleanSetAttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">BooleanSetAttributeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productvariants/BooleanSetAttributeBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="BooleanSetAttribute.html" title="interface in com.commercetools.importapi.models.productvariants">BooleanSetAttribute</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

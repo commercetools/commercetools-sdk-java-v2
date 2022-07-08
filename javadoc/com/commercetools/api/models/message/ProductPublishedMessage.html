@@ -77,35 +77,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="ProductPublishedMessageImpl.html" title="class in com.commercetools.api.models.message">ProductPublishedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.40">ProductPublishedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.18">ProductPublishedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
-<div class="block">ProductPublishedMessage
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ProductPublishedMessage productPublishedMessage = ProductPublishedMessage.builder()
-             .id("{id}")
-             .version(0.3)
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .sequenceNumber(0.3)
-             .resource(resourceBuilder -> resourceBuilder)
-             .resourceVersion(0.3)
-             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
-             .productProjection(productProjectionBuilder -> productProjectionBuilder)
-             .scope(ProductPublishScope.ALL)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -200,7 +180,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PRODUCT_PUBLISHED">
 <h3>PRODUCT_PUBLISHED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.44">PRODUCT_PUBLISHED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.22">PRODUCT_PUBLISHED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ProductPublishedMessage.PRODUCT_PUBLISHED">Constant Field Values</a></dd>
@@ -219,7 +199,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <section class="detail" id="getRemovedImageUrls()">
 <h3>getRemovedImageUrls</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.49">getRemovedImageUrls</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.24">getRemovedImageUrls</a></span>()</div>
 </section>
 </li>
 <li>
@@ -227,74 +207,74 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getProductProjection</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.56">getProductProjection</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.28">getProductProjection</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getScope()">
 <h3>getScope</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../cart/ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.64">getScope</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../cart/ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.33">getScope</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.lang.String...)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.68">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.37">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.util.List)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.71">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.40">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductProjection(com.commercetools.api.models.product.ProductProjection)">
 <h3>setProductProjection</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.73">setProductProjection</a></span>&#8203;<span class="parameters">(<a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&nbsp;productProjection)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.42">setProductProjection</a></span>&#8203;<span class="parameters">(<a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&nbsp;productProjection)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setScope(com.commercetools.api.models.cart.ProductPublishScope)">
 <h3>setScope</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.75">setScope</a></span>&#8203;<span class="parameters">(<a href="../cart/ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>&nbsp;scope)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.44">setScope</a></span>&#8203;<span class="parameters">(<a href="../cart/ProductPublishScope.html" title="interface in com.commercetools.api.models.cart">ProductPublishScope</a>&nbsp;scope)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.77">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductPublishedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.81">of</a></span>&#8203;<span class="parameters">(<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.99">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.68">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ProductPublishedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.103">builder</a></span>&#8203;<span class="parameters">(<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.72">builder</a></span>&#8203;<span class="parameters">(<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductPublishedMessage(java.util.function.Function)">
 <h3>withProductPublishedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.107">withProductPublishedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.76">withProductPublishedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.111">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductPublishedMessage.html" title="interface in com.commercetools.api.models.message">ProductPublishedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductPublishedMessage.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

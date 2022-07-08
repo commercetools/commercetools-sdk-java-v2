@@ -84,19 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentDraftImpl.html" title="class in com.commercetools.api.models.payment">PaymentDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.32">PaymentDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.19">PaymentDraft</a></span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</span></div>
-<div class="block">PaymentDraft
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     PaymentDraft paymentDraft = PaymentDraft.builder()
-             .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +160,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier for the Payment.</div>
+<div class="block">User-specific unique identifier for the payment (max.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPaymentMethodInfo()">getPaymentMethodInfo</a></span>()</code></div>
@@ -270,14 +259,14 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.39">getCustomer</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.26">getCustomer</a></span>()</div>
 <div class="block"><p>A reference to the customer this payment belongs to.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.47">getAnonymousId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.34">getAnonymousId</a></span>()</div>
 <div class="block"><p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p></div>
 </section>
 </li>
@@ -285,15 +274,17 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.53">getExternalId</a></span>()</div>
+</span><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.37">getExternalId</a></span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInterfaceId()">
 <h3>getInterfaceId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.61">getInterfaceId</a></span>()</div>
-<div class="block"><p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.47">getInterfaceId</a></span>()</div>
+<div class="block"><p>The identifier that is used by the interface that manages the payment (usually the PSP).
+  Cannot be changed once it has been set.
+  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p></div>
 </section>
 </li>
 <li>
@@ -301,62 +292,63 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getAmountPlanned</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.67">getAmountPlanned</a></span>()</div>
-<div class="block"><p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.54">getAmountPlanned</a></span>()</div>
+<div class="block"><p>How much money this payment intends to receive from the customer.
+  The value usually matches the cart or order gross total.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAmountAuthorized()">
 <h3>getAmountAuthorized</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.76">getAmountAuthorized</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.63">getAmountAuthorized</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAuthorizedUntil()">
 <h3>getAuthorizedUntil</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.84">getAuthorizedUntil</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.67">getAuthorizedUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAmountPaid()">
 <h3>getAmountPaid</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.91">getAmountPaid</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.74">getAmountPaid</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAmountRefunded()">
 <h3>getAmountRefunded</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.99">getAmountRefunded</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.82">getAmountRefunded</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPaymentMethodInfo()">
 <h3>getPaymentMethodInfo</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.106">getPaymentMethodInfo</a></span>()</div>
+</span><span class="return-type">@Valid <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.86">getPaymentMethodInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPaymentStatus()">
 <h3>getPaymentStatus</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.113">getPaymentStatus</a></span>()</div>
+</span><span class="return-type">@Valid <a href="PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.90">getPaymentStatus</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTransactions()">
 <h3>getTransactions</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.120">getTransactions</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.97">getTransactions</a></span>()</div>
 <div class="block"><p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p></div>
 </section>
 </li>
@@ -364,15 +356,18 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getInterfaceInteractions()">
 <h3>getInterfaceInteractions</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.127">getInterfaceInteractions</a></span>()</div>
-<div class="block"><p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p></div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.107">getInterfaceInteractions</a></span>()</div>
+<div class="block"><p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.
+  Some interactions may result in a transaction.
+  If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
+  Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.134">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.111">getCustom</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code></dd>
@@ -382,106 +377,107 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.142">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier for the Payment.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.120">getKey</a></span>()</div>
+<div class="block"><p>User-specific unique identifier for the payment (max.
+  256 characters).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomer(com.commercetools.api.models.customer.CustomerResourceIdentifier)">
 <h3>setCustomer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.145">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.123">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a>&nbsp;customer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.147">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.125">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalId(java.lang.String)">
 <h3>setExternalId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.149">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+</span><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.127">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInterfaceId(java.lang.String)">
 <h3>setInterfaceId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.152">setInterfaceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.130">setInterfaceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountPlanned(com.commercetools.api.models.common.Money)">
 <h3>setAmountPlanned</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.154">setAmountPlanned</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.132">setAmountPlanned</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountAuthorized(com.commercetools.api.models.common.Money)">
 <h3>setAmountAuthorized</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.156">setAmountAuthorized</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountAuthorized)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.134">setAmountAuthorized</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountAuthorized)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAuthorizedUntil(java.lang.String)">
 <h3>setAuthorizedUntil</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.158">setAuthorizedUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;authorizedUntil)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.136">setAuthorizedUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;authorizedUntil)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountPaid(com.commercetools.api.models.common.Money)">
 <h3>setAmountPaid</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.160">setAmountPaid</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPaid)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.138">setAmountPaid</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPaid)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountRefunded(com.commercetools.api.models.common.Money)">
 <h3>setAmountRefunded</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.162">setAmountRefunded</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountRefunded)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.140">setAmountRefunded</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountRefunded)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfo)">
 <h3>setPaymentMethodInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.164">setPaymentMethodInfo</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.142">setPaymentMethodInfo</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPaymentStatus(com.commercetools.api.models.payment.PaymentStatusDraft)">
 <h3>setPaymentStatus</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.166">setPaymentStatus</a></span>&#8203;<span class="parameters">(<a href="PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a>&nbsp;paymentStatus)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.144">setPaymentStatus</a></span>&#8203;<span class="parameters">(<a href="PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a>&nbsp;paymentStatus)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactions(com.commercetools.api.models.payment.TransactionDraft...)">
 <h3>setTransactions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.168">setTransactions</a></span>&#8203;<span class="parameters">(<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>...&nbsp;transactions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.146">setTransactions</a></span>&#8203;<span class="parameters">(<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>...&nbsp;transactions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactions(java.util.List)">
 <h3>setTransactions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.171">setTransactions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;&nbsp;transactions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.149">setTransactions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;&nbsp;transactions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInterfaceInteractions(com.commercetools.api.models.type.CustomFieldsDraft...)">
 <h3>setInterfaceInteractions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.173">setInterfaceInteractions</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>...&nbsp;interfaceInteractions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.151">setInterfaceInteractions</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>...&nbsp;interfaceInteractions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInterfaceInteractions(java.util.List)">
 <h3>setInterfaceInteractions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.176">setInterfaceInteractions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;interfaceInteractions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.154">setInterfaceInteractions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;interfaceInteractions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.178">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.156">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code></dd>
@@ -491,43 +487,43 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.180">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.158">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.182">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.160">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.PaymentDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.186">of</a></span>&#8203;<span class="parameters">(<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.164">of</a></span>&#8203;<span class="parameters">(<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraftBuilder.html" title="class in com.commercetools.api.models.payment">PaymentDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.206">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraftBuilder.html" title="class in com.commercetools.api.models.payment">PaymentDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.184">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.payment.PaymentDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraftBuilder.html" title="class in com.commercetools.api.models.payment">PaymentDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.210">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentDraftBuilder.html" title="class in com.commercetools.api.models.payment">PaymentDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.188">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentDraft(java.util.function.Function)">
 <h3>withPaymentDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.214">withPaymentDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.192">withPaymentDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.218">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentDraft.html#line.196">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

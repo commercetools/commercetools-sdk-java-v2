@@ -84,19 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="InventoryEntryAddQuantityActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.28">InventoryEntryAddQuantityAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.15">InventoryEntryAddQuantityAction</a></span><span class="extends-implements">
 extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a></span></div>
-<div class="block"><p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     InventoryEntryAddQuantityAction inventoryEntryAddQuantityAction = InventoryEntryAddQuantityAction.builder()
-             .quantity(0.3)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,9 +123,7 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Value to add to <code>quantityOnStock</code>.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -175,7 +162,7 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <li>
 <section class="detail" id="ADD_QUANTITY">
 <h3>ADD_QUANTITY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.32">ADD_QUANTITY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.19">ADD_QUANTITY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction.ADD_QUANTITY">Constant Field Values</a></dd>
@@ -194,50 +181,49 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.37">getQuantity</a></span>()</div>
-<div class="block"><p>Value to add to <code>quantityOnStock</code>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.21">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.41">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.25">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.27">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.31">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.37">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryAddQuantityActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryAddQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.41">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInventoryEntryAddQuantityAction(java.util.function.Function)">
 <h3>withInventoryEntryAddQuantityAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.61">withInventoryEntryAddQuantityAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.45">withInventoryEntryAddQuantityAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryAddQuantityAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryAddQuantityAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryAddQuantityAction.html#line.49">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

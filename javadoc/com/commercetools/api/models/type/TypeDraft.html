@@ -80,20 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TypeDraftImpl.html" title="class in com.commercetools.api.models.type">TypeDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.32">TypeDraft</a></span></div>
-<div class="block">TypeDraft
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     TypeDraft typeDraft = TypeDraft.builder()
-             .key("{key}")
-             .name(nameBuilder -> nameBuilder)
-             .plusResourceTypeIds(resourceTypeIdsBuilder -> resourceTypeIdsBuilder)
-             .build()
- </code></pre>
- </div></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.17">TypeDraft</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -190,7 +177,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.39">getKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.24">getKey</a></span>()</div>
 <div class="block"><p>User-defined unique identifier for the Type.</p></div>
 </section>
 </li>
@@ -199,7 +186,7 @@ loadScripts(document, 'script');</script>
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.46">getName</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.31">getName</a></span>()</div>
 <div class="block"><p>Name of the Type.</p></div>
 </section>
 </li>
@@ -207,7 +194,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.54">getDescription</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.39">getDescription</a></span>()</div>
 <div class="block"><p>Description of the Type.</p></div>
 </section>
 </li>
@@ -215,7 +202,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getResourceTypeIds()">
 <h3>getResourceTypeIds</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.61">getResourceTypeIds</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.46">getResourceTypeIds</a></span>()</div>
 <div class="block"><p>Resources and/or data types for which the Type is defined.</p></div>
 </section>
 </li>
@@ -223,86 +210,86 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getFieldDefinitions()">
 <h3>getFieldDefinitions</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.68">getFieldDefinitions</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.53">getFieldDefinitions</a></span>()</div>
 <div class="block"><p>Defines Custom Fields.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.72">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.57">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.74">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.59">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.76">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.61">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResourceTypeIds(com.commercetools.api.models.type.ResourceTypeId...)">
 <h3>setResourceTypeIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.78">setResourceTypeIds</a></span>&#8203;<span class="parameters">(<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>...&nbsp;resourceTypeIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.63">setResourceTypeIds</a></span>&#8203;<span class="parameters">(<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>...&nbsp;resourceTypeIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResourceTypeIds(java.util.List)">
 <h3>setResourceTypeIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.81">setResourceTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;&nbsp;resourceTypeIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.66">setResourceTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;&nbsp;resourceTypeIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldDefinitions(com.commercetools.api.models.type.FieldDefinition...)">
 <h3>setFieldDefinitions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.83">setFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.68">setFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldDefinitions(java.util.List)">
 <h3>setFieldDefinitions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.86">setFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;&nbsp;fieldDefinitions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.71">setFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;&nbsp;fieldDefinitions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.88">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.73">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraftBuilder.html" title="class in com.commercetools.api.models.type">TypeDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.102">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraftBuilder.html" title="class in com.commercetools.api.models.type">TypeDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.87">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.TypeDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraftBuilder.html" title="class in com.commercetools.api.models.type">TypeDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.106">builder</a></span>&#8203;<span class="parameters">(<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeDraftBuilder.html" title="class in com.commercetools.api.models.type">TypeDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.91">builder</a></span>&#8203;<span class="parameters">(<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypeDraft(java.util.function.Function)">
 <h3>withTypeDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.110">withTypeDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.95">withTypeDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.114">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeDraft.html" title="interface in com.commercetools.api.models.type">TypeDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeDraft.html#line.99">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

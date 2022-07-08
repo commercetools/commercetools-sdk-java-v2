@@ -84,22 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AddToCategoryChangeImpl.html" title="class in com.commercetools.history.models.change">AddToCategoryChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.33">AddToCategoryChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.17">AddToCategoryChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block">AddToCategoryChange
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     AddToCategoryChange addToCategoryChange = AddToCategoryChange.builder()
-             .change("{change}")
-             .category(categoryBuilder -> categoryBuilder)
-             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-             .plusNextValue(nextValueBuilder -> nextValueBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -202,7 +188,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="ADD_TO_CATEGORY_CHANGE">
 <h3>ADD_TO_CATEGORY_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.37">ADD_TO_CATEGORY_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.21">ADD_TO_CATEGORY_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.AddToCategoryChange.ADD_TO_CATEGORY_CHANGE">Constant Field Values</a></dd>
@@ -221,7 +207,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.42">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.23">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -232,7 +218,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.49">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.30">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>addToCategory</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -245,7 +231,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getCategory</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.56">getCategory</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.34">getCategory</a></span>()</div>
 </section>
 </li>
 <li>
@@ -253,7 +239,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.64">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.39">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
@@ -261,13 +247,13 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.72">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.44">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.77">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.49">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -277,67 +263,67 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setCategory(com.commercetools.history.models.common.Reference)">
 <h3>setCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.79">setCategory</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;category)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.51">setCategory</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;category)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.Reference...)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.81">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.53">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(java.util.List)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.84">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.56">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.Reference...)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.86">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.58">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(java.util.List)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.89">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.61">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.91">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddToCategoryChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChangeBuilder.html" title="class in com.commercetools.history.models.change">AddToCategoryChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.104">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChangeBuilder.html" title="class in com.commercetools.history.models.change">AddToCategoryChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.76">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.AddToCategoryChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChangeBuilder.html" title="class in com.commercetools.history.models.change">AddToCategoryChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.108">builder</a></span>&#8203;<span class="parameters">(<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddToCategoryChangeBuilder.html" title="class in com.commercetools.history.models.change">AddToCategoryChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.80">builder</a></span>&#8203;<span class="parameters">(<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAddToCategoryChange(java.util.function.Function)">
 <h3>withAddToCategoryChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.112">withAddToCategoryChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.84">withAddToCategoryChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.116">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddToCategoryChange.html" title="interface in com.commercetools.history.models.change">AddToCategoryChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddToCategoryChange.html#line.88">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

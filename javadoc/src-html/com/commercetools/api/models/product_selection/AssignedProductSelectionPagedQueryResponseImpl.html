@@ -28,9 +28,9 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;PagedQueryResult containing an array of AssignedProductSelection.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> */</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;&lt;a href="/general-concepts#pagedqueryresult"&gt;PagedQueryResult&lt;/a&gt; containing an array of &lt;a href="ctp:api:type:AssignedProductSelection"&gt;AssignedProductSelection&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">*/</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class AssignedProductSelectionPagedQueryResponseImpl</span>
 <span class="source-line-no">022</span><span id="line.22">        implements AssignedProductSelectionPagedQueryResponse, ModelBase {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
@@ -60,41 +60,41 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public Long getLimit() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return this.limit;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     */</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public Long getOffset() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.offset;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public Long getCount() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.count;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get &lt;code&gt;total&lt;/code&gt;, pass the query parameter &lt;code&gt;withTotal&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">     */</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public Long getTotal() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return this.total;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;References to ProductSelection that are assigned to the Product.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     */</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;Number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    public Long getLimit() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return this.limit;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">    *  &lt;p&gt;Offset supplied by the client or the server default.</span>
+<span class="source-line-no">058</span><span id="line.58">    *  It is the number of elements skipped, not a page number.&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">    */</span>
+<span class="source-line-no">060</span><span id="line.60">    public Long getOffset() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return this.offset;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    /**</span>
+<span class="source-line-no">065</span><span id="line.65">    *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">    */</span>
+<span class="source-line-no">067</span><span id="line.67">    public Long getCount() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.count;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">    *  &lt;p&gt;Total number of results matching the query.</span>
+<span class="source-line-no">073</span><span id="line.73">    *  This number is an estimation that is not &lt;a href="/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.</span>
+<span class="source-line-no">074</span><span id="line.74">    *  Unlike other endpoints, the Product Selection endpoint does not return this field by default.</span>
+<span class="source-line-no">075</span><span id="line.75">    *  To get &lt;code&gt;total&lt;/code&gt;, pass the query parameter &lt;code&gt;withTotal&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;.</span>
+<span class="source-line-no">076</span><span id="line.76">    *  When the results are filtered with a &lt;a href="/predicates/query"&gt;Query Predicate&lt;/a&gt;, &lt;code&gt;total&lt;/code&gt; is subject to a &lt;a href="/limits#queries"&gt;limit&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">    */</span>
+<span class="source-line-no">078</span><span id="line.78">    public Long getTotal() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.total;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">    *  &lt;p&gt;References to Product Selection that are assigned to the Product.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">    */</span>
 <span class="source-line-no">085</span><span id="line.85">    public java.util.List&lt;com.commercetools.api.models.product_selection.AssignedProductSelection&gt; getResults() {</span>
 <span class="source-line-no">086</span><span id="line.86">        return this.results;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>

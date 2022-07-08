@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code>, <code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.20">PriceDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.17">PriceDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">PriceDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,47 +128,39 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getChannel()">getChannel</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</div>
+<div class="block"><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCountry()">getCountry</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is only valid for the specified country.</div>
+<div class="block">A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Custom Fields for the Price.</div>
+<div class="block">The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustomerGroup()">getCustomerGroup</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is only valid for the referenced CustomerGroup.</div>
+<div class="block"><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDiscounted()">getDiscounted</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field to add a DiscountedPrice from an external service.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTiers()">getTiers</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field to specify different Prices for certain LineItem quantities.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidFrom()">getValidFrom</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is valid only valid from the specified date and time.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValidUntil()">getValidUntil</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Set this field if this Price is valid only valid until the specified date and time.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getValue()">getValue</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Money value of this Price.</div>
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -233,7 +224,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>PriceDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.62">PriceDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.59">PriceDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -247,8 +238,9 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.69">getValue</a></span>()</div>
-<div class="block"><p>Money value of this Price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.66">getValue</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getValue()">getValue</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -258,8 +250,8 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.77">getCountry</a></span>()</div>
-<div class="block"><p>Set this field if this Price is only valid for the specified country.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.73">getCountry</a></span>()</div>
+<div class="block"><p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getCountry()">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -269,8 +261,8 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.85">getCustomerGroup</a></span>()</div>
-<div class="block"><p>Set this field if this Price is only valid for the referenced CustomerGroup.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.80">getCustomerGroup</a></span>()</div>
+<div class="block"><p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getCustomerGroup()">getCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -280,8 +272,8 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.93">getChannel</a></span>()</div>
-<div class="block"><p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.87">getChannel</a></span>()</div>
+<div class="block"><p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getChannel()">getChannel</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -291,8 +283,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.101">getValidFrom</a></span>()</div>
-<div class="block"><p>Set this field if this Price is valid only valid from the specified date and time.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.91">getValidFrom</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getValidFrom()">getValidFrom</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -302,8 +293,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.109">getValidUntil</a></span>()</div>
-<div class="block"><p>Set this field if this Price is valid only valid until the specified date and time.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.95">getValidUntil</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#getValidUntil()">getValidUntil</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -311,38 +301,10 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 </section>
 </li>
 <li>
-<section class="detail" id="getDiscounted()">
-<h3>getDiscounted</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.123">getDiscounted</a></span>()</div>
-<div class="block"><p>Set this field to add a DiscountedPrice from an external service.</p>
-  <p>The API sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
-  <ul>
-   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-   <li>A ProductDiscountValue of type <code>external</code>.</li>
-   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
-  </ul></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="PriceDraft.html#getDiscounted()">getDiscounted</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getTiers()">
-<h3>getTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.131">getTiers</a></span>()</div>
-<div class="block"><p>Set this field to specify different Prices for certain LineItem quantities.</p></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="PriceDraft.html#getTiers()">getTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.139">getCustom</a></span>()</div>
-<div class="block"><p>Custom Fields for the Price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.102">getCustom</a></span>()</div>
+<div class="block"><p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</code></dd>
@@ -352,9 +314,29 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 </section>
 </li>
 <li>
+<section class="detail" id="getTiers()">
+<h3>getTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.106">getTiers</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PriceDraft.html#getTiers()">getTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDiscounted()">
+<h3>getDiscounted</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.110">getDiscounted</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PriceDraft.html#getDiscounted()">getDiscounted</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setValue(com.commercetools.api.models.common.Money)">
 <h3>setValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.143">setValue</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.114">setValue</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setValue(com.commercetools.api.models.common.Money)">setValue</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -364,7 +346,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.147">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.118">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setCountry(java.lang.String)">setCountry</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -374,7 +356,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>setCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.151">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.122">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">setCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -384,7 +366,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.156">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.127">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">setChannel</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -394,7 +376,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.160">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.131">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setValidFrom(java.time.ZonedDateTime)">setValidFrom</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -404,7 +386,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.164">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.135">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceDraft.html#setValidUntil(java.time.ZonedDateTime)">setValidUntil</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
@@ -412,39 +394,9 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 </section>
 </li>
 <li>
-<section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">
-<h3>setDiscounted</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.168">setDiscounted</a></span>&#8203;<span class="parameters">(<a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="PriceDraft.html#setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">setDiscounted</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setTiers(com.commercetools.api.models.common.PriceTierDraft...)">
-<h3>setTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.172">setTiers</a></span>&#8203;<span class="parameters">(<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>...&nbsp;tiers)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="PriceDraft.html#setTiers(com.commercetools.api.models.common.PriceTierDraft...)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setTiers(java.util.List)">
-<h3>setTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.176">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;&nbsp;tiers)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="PriceDraft.html#setTiers(java.util.List)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.180">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.139">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</code></dd>
@@ -454,9 +406,39 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 </section>
 </li>
 <li>
+<section class="detail" id="setTiers(com.commercetools.api.models.common.PriceTierDraft...)">
+<h3>setTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.143">setTiers</a></span>&#8203;<span class="parameters">(<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>...&nbsp;tiers)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PriceDraft.html#setTiers(com.commercetools.api.models.common.PriceTierDraft...)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTiers(java.util.List)">
+<h3>setTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.147">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;&nbsp;tiers)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PriceDraft.html#setTiers(java.util.List)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">
+<h3>setDiscounted</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.151">setDiscounted</a></span>&#8203;<span class="parameters">(<a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PriceDraft.html#setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">setDiscounted</a></code>&nbsp;in interface&nbsp;<code><a href="PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.184">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.155">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -466,7 +448,7 @@ implements <a href="PriceDraft.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.206">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/PriceDraftImpl.html#line.177">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

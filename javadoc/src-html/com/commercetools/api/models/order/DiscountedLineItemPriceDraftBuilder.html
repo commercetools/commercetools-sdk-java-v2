@@ -20,140 +20,97 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">/**</span>
-<span class="source-line-no">011</span><span id="line.11"> * DiscountedLineItemPriceDraftBuilder</span>
-<span class="source-line-no">012</span><span id="line.12"> * &lt;hr&gt;</span>
-<span class="source-line-no">013</span><span id="line.13"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">016</span><span id="line.16"> *     DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()</span>
-<span class="source-line-no">017</span><span id="line.17"> *             .value(valueBuilder -&gt; valueBuilder)</span>
-<span class="source-line-no">018</span><span id="line.18"> *             .plusIncludedDiscounts(includedDiscountsBuilder -&gt; includedDiscountsBuilder)</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> */</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public class DiscountedLineItemPriceDraftBuilder implements Builder&lt;DiscountedLineItemPriceDraft&gt; {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.common.Money value;</span>
+<span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">011</span><span id="line.11">public class DiscountedLineItemPriceDraftBuilder implements Builder&lt;DiscountedLineItemPriceDraft&gt; {</span>
+<span class="source-line-no">012</span><span id="line.12"></span>
+<span class="source-line-no">013</span><span id="line.13">    private com.commercetools.api.models.common.Money value;</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">    private java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; includedDiscounts;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    public DiscountedLineItemPriceDraftBuilder value(</span>
+<span class="source-line-no">018</span><span id="line.18">            Function&lt;com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder&gt; builder) {</span>
+<span class="source-line-no">019</span><span id="line.19">        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();</span>
+<span class="source-line-no">020</span><span id="line.20">        return this;</span>
+<span class="source-line-no">021</span><span id="line.21">    }</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {</span>
+<span class="source-line-no">024</span><span id="line.24">        this.value = value;</span>
+<span class="source-line-no">025</span><span id="line.25">        return this;</span>
+<span class="source-line-no">026</span><span id="line.26">    }</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    private java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; includedDiscounts;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">033</span><span id="line.33">     */</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    public DiscountedLineItemPriceDraftBuilder value(</span>
-<span class="source-line-no">036</span><span id="line.36">            Function&lt;com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder&gt; builder) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.value = value;</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public DiscountedLineItemPriceDraftBuilder includedDiscounts(</span>
-<span class="source-line-no">056</span><span id="line.56">            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.includedDiscounts = new ArrayList&lt;&gt;(Arrays.asList(includedDiscounts));</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *</span>
-<span class="source-line-no">063</span><span id="line.63">     */</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public DiscountedLineItemPriceDraftBuilder includedDiscounts(</span>
-<span class="source-line-no">066</span><span id="line.66">            final java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; includedDiscounts) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.includedDiscounts = includedDiscounts;</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
+<span class="source-line-no">028</span><span id="line.28">    public DiscountedLineItemPriceDraftBuilder includedDiscounts(</span>
+<span class="source-line-no">029</span><span id="line.29">            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {</span>
+<span class="source-line-no">030</span><span id="line.30">        this.includedDiscounts = new ArrayList&lt;&gt;(Arrays.asList(includedDiscounts));</span>
+<span class="source-line-no">031</span><span id="line.31">        return this;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public DiscountedLineItemPriceDraftBuilder includedDiscounts(</span>
+<span class="source-line-no">035</span><span id="line.35">            final java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; includedDiscounts) {</span>
+<span class="source-line-no">036</span><span id="line.36">        this.includedDiscounts = includedDiscounts;</span>
+<span class="source-line-no">037</span><span id="line.37">        return this;</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(</span>
+<span class="source-line-no">041</span><span id="line.41">            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {</span>
+<span class="source-line-no">042</span><span id="line.42">        if (this.includedDiscounts == null) {</span>
+<span class="source-line-no">043</span><span id="line.43">            this.includedDiscounts = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">044</span><span id="line.44">        }</span>
+<span class="source-line-no">045</span><span id="line.45">        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));</span>
+<span class="source-line-no">046</span><span id="line.46">        return this;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(</span>
+<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder&gt; builder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        if (this.includedDiscounts == null) {</span>
+<span class="source-line-no">052</span><span id="line.52">            this.includedDiscounts = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">053</span><span id="line.53">        }</span>
+<span class="source-line-no">054</span><span id="line.54">        this.includedDiscounts</span>
+<span class="source-line-no">055</span><span id="line.55">                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());</span>
+<span class="source-line-no">056</span><span id="line.56">        return this;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(</span>
+<span class="source-line-no">060</span><span id="line.60">            Function&lt;com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder&gt; builder) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.includedDiscounts = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">062</span><span id="line.62">        this.includedDiscounts</span>
+<span class="source-line-no">063</span><span id="line.63">                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public com.commercetools.api.models.common.Money getValue() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.value;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *</span>
-<span class="source-line-no">073</span><span id="line.73">     */</span>
+<span class="source-line-no">071</span><span id="line.71">    public java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; getIncludedDiscounts() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.includedDiscounts;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(</span>
-<span class="source-line-no">076</span><span id="line.76">            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {</span>
-<span class="source-line-no">077</span><span id="line.77">        if (this.includedDiscounts == null) {</span>
-<span class="source-line-no">078</span><span id="line.78">            this.includedDiscounts = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">079</span><span id="line.79">        }</span>
-<span class="source-line-no">080</span><span id="line.80">        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));</span>
-<span class="source-line-no">081</span><span id="line.81">        return this;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     *</span>
-<span class="source-line-no">086</span><span id="line.86">     */</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(</span>
-<span class="source-line-no">089</span><span id="line.89">            Function&lt;com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder&gt; builder) {</span>
-<span class="source-line-no">090</span><span id="line.90">        if (this.includedDiscounts == null) {</span>
-<span class="source-line-no">091</span><span id="line.91">            this.includedDiscounts = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">092</span><span id="line.92">        }</span>
-<span class="source-line-no">093</span><span id="line.93">        this.includedDiscounts</span>
-<span class="source-line-no">094</span><span id="line.94">                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());</span>
-<span class="source-line-no">095</span><span id="line.95">        return this;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">     *</span>
-<span class="source-line-no">100</span><span id="line.100">     */</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(</span>
-<span class="source-line-no">103</span><span id="line.103">            Function&lt;com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder&gt; builder) {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.includedDiscounts = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">105</span><span id="line.105">        this.includedDiscounts</span>
-<span class="source-line-no">106</span><span id="line.106">                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());</span>
-<span class="source-line-no">107</span><span id="line.107">        return this;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.common.Money getValue() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return this.value;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public java.util.List&lt;com.commercetools.api.models.cart.DiscountedLineItemPortion&gt; getIncludedDiscounts() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return this.includedDiscounts;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public DiscountedLineItemPriceDraft build() {</span>
-<span class="source-line-no">119</span><span id="line.119">        Objects.requireNonNull(value, DiscountedLineItemPriceDraft.class + ": value is missing");</span>
-<span class="source-line-no">120</span><span id="line.120">        Objects.requireNonNull(includedDiscounts,</span>
-<span class="source-line-no">121</span><span id="line.121">            DiscountedLineItemPriceDraft.class + ": includedDiscounts is missing");</span>
-<span class="source-line-no">122</span><span id="line.122">        return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">     * builds DiscountedLineItemPriceDraft without checking for non null required values</span>
-<span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128">    public DiscountedLineItemPriceDraft buildUnchecked() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public static DiscountedLineItemPriceDraftBuilder of() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return new DiscountedLineItemPriceDraftBuilder();</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public static DiscountedLineItemPriceDraftBuilder of(final DiscountedLineItemPriceDraft template) {</span>
-<span class="source-line-no">137</span><span id="line.137">        DiscountedLineItemPriceDraftBuilder builder = new DiscountedLineItemPriceDraftBuilder();</span>
-<span class="source-line-no">138</span><span id="line.138">        builder.value = template.getValue();</span>
-<span class="source-line-no">139</span><span id="line.139">        builder.includedDiscounts = template.getIncludedDiscounts();</span>
-<span class="source-line-no">140</span><span id="line.140">        return builder;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">}</span>
+<span class="source-line-no">075</span><span id="line.75">    public DiscountedLineItemPriceDraft build() {</span>
+<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(value, DiscountedLineItemPriceDraft.class + ": value is missing");</span>
+<span class="source-line-no">077</span><span id="line.77">        Objects.requireNonNull(includedDiscounts,</span>
+<span class="source-line-no">078</span><span id="line.78">            DiscountedLineItemPriceDraft.class + ": includedDiscounts is missing");</span>
+<span class="source-line-no">079</span><span id="line.79">        return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     * builds DiscountedLineItemPriceDraft without checking for non null required values</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85">    public DiscountedLineItemPriceDraft buildUnchecked() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static DiscountedLineItemPriceDraftBuilder of() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return new DiscountedLineItemPriceDraftBuilder();</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public static DiscountedLineItemPriceDraftBuilder of(final DiscountedLineItemPriceDraft template) {</span>
+<span class="source-line-no">094</span><span id="line.94">        DiscountedLineItemPriceDraftBuilder builder = new DiscountedLineItemPriceDraftBuilder();</span>
+<span class="source-line-no">095</span><span id="line.95">        builder.value = template.getValue();</span>
+<span class="source-line-no">096</span><span id="line.96">        builder.includedDiscounts = template.getIncludedDiscounts();</span>
+<span class="source-line-no">097</span><span id="line.97">        return builder;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">}</span>
 
 
 

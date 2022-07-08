@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a>,&#8203;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;<a href="TypeUpdateBuilder.html" title="class in com.commercetools.api.models.type">TypeUpdateBuilder</a>&gt;</code>, <code><a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.20">TypeUpdateImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.17">TypeUpdateImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">TypeUpdate</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -177,7 +176,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TypeUpdateImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.34">TypeUpdateImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.31">TypeUpdateImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -191,8 +190,9 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.41">getVersion</a></span>()</div>
-<div class="block"><p>Expected version of the type on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.38">getVersion</a></span>()</div>
+<div class="block"><p>Expected version of the type on which the changes should be applied.
+  If the expected version does not match the actual version, a 409 Conflict will be returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a>,&#8203;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;<a href="TypeUpdateBuilder.html" title="class in com.commercetools.api.models.type">TypeUpdateBuilder</a>&gt;</code></dd>
@@ -204,7 +204,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.49">getActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.45">getActions</a></span>()</div>
 <div class="block"><p>Update actions to be performed on the Type.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -217,7 +217,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.53">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.49">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a>,&#8203;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;<a href="TypeUpdateBuilder.html" title="class in com.commercetools.api.models.type">TypeUpdateBuilder</a>&gt;</code></dd>
@@ -229,7 +229,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setActions(com.commercetools.api.models.type.TypeUpdateAction...)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.57">setActions</a></span>&#8203;<span class="parameters">(<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.53">setActions</a></span>&#8203;<span class="parameters">(<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>...&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeUpdate.html#setActions(com.commercetools.api.models.type.TypeUpdateAction...)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a></code></dd>
@@ -239,7 +239,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setActions(java.util.List)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.61">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.57">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="TypeUpdate.html" title="interface in com.commercetools.api.models.type">TypeUpdate</a>,&#8203;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;<a href="TypeUpdateBuilder.html" title="class in com.commercetools.api.models.type">TypeUpdateBuilder</a>&gt;</code></dd>
@@ -251,7 +251,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.65">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.61">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -261,7 +261,7 @@ implements <a href="TypeUpdate.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.78">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateImpl.html#line.74">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartSetShippingRateInputAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingRateInputAction</a></code>, <code><a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></code>, <code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.20">CartSetShippingRateInputActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.17">CartSetShippingRateInputActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="CartSetShippingRateInputAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingRateInputAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">CartSetShippingRateInputAction</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +180,7 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartSetShippingRateInputActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.34">CartSetShippingRateInputActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.31">CartSetShippingRateInputActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,7 +194,7 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.42">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.35">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></code></dd>
@@ -207,8 +206,11 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="getShippingRateInput()">
 <h3>getShippingRateInput</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.50">getShippingRateInput</a></span>()</div>
-<div class="block"><p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.45">getShippingRateInput</a></span>()</div>
+<div class="block"><p>Based on the definition of ShippingRateInputType.
+  If CartClassification is defined, it must be ClassificationShippingRateInput.
+  If CartScore is defined, it must be ScoreShippingRateInput.
+  Otherwise it can not bet set.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartSetShippingRateInputAction.html#getShippingRateInput()">getShippingRateInput</a></code>&nbsp;in interface&nbsp;<code><a href="CartSetShippingRateInputAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingRateInputAction</a></code></dd>
@@ -218,7 +220,7 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft)">
 <h3>setShippingRateInput</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.54">setShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&nbsp;shippingRateInput)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.49">setShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&nbsp;shippingRateInput)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartSetShippingRateInputAction.html#setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft)">setShippingRateInput</a></code>&nbsp;in interface&nbsp;<code><a href="CartSetShippingRateInputAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingRateInputAction</a></code></dd>
@@ -228,7 +230,7 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.58">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.53">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -238,7 +240,7 @@ implements <a href="CartSetShippingRateInputAction.html" title="interface in com
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.73">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetShippingRateInputActionImpl.html#line.68">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

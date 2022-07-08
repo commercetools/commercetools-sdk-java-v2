@@ -75,18 +75,17 @@ loadScripts(document, 'script');</script>
 <h1 title="Class CtOkHttp3Client" class="title">Class CtOkHttp3Client</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="../../../../io/vrap/rmf/base/client/HttpClientBase.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.HttpClientBase</a>
 <div class="inheritance">com.commercetools.http.okhttp3.CtOkHttp3Client</div>
-</div>
 </div>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link">Closeable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.19">CtOkHttp3Client</a></span>
-<span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/HttpClientBase.html" title="class in io.vrap.rmf.base.client">HttpClientBase</a></span></div>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.22">CtOkHttp3Client</a></span>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,18 +138,13 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(com.commercetools.http.okhttp3.BuilderOptions)">CtOkHttp3Client</a></span>&#8203;(<a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.okhttp3.BuilderOptions)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.okhttp3.BuilderOptions)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,com.commercetools.http.okhttp3.BuilderOptions)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.function.Supplier)">CtOkHttp3Client</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;okhttp3.OkHttpClient.Builder&gt;&nbsp;builderSupplier)</code></div>
@@ -170,7 +164,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#closeDelegate()">closeDelegate</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#close()">close</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>okhttp3.Dispatcher</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createDispatcher(int,int)">createDispatcher</a></span>&#8203;(int&nbsp;maxRequests,
@@ -188,9 +182,6 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.HttpClientBase">Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/HttpClientBase.html" title="class in io.vrap.rmf.base.client">HttpClientBase</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/HttpClientBase.html#close()">close</a></code></div>
-<div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
@@ -207,7 +198,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="MAX_REQUESTS">
 <h3>MAX_REQUESTS</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.21">MAX_REQUESTS</a></span></div>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.24">MAX_REQUESTS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../constant-values.html#com.commercetools.http.okhttp3.CtOkHttp3Client.MAX_REQUESTS">Constant Field Values</a></dd>
@@ -225,19 +216,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.31">CtOkHttp3Client</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.34">CtOkHttp3Client</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.http.okhttp3.BuilderOptions)">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.36">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.38">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(java.util.function.Supplier)">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.42">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;okhttp3.OkHttpClient.Builder&gt;&nbsp;builderSupplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.43">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;okhttp3.OkHttpClient.Builder&gt;&nbsp;builderSupplier)</span></div>
 </section>
 </li>
 <li>
@@ -250,28 +241,15 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(int,int,com.commercetools.http.okhttp3.BuilderOptions)">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.52">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(int&nbsp;maxRequests,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.51">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService)">
-<h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.58">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,com.commercetools.http.okhttp3.BuilderOptions)">
-<h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.63">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,int)">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.70">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.56">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost)</span></div>
 </section>
@@ -279,7 +257,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.okhttp3.BuilderOptions)">
 <h3>CtOkHttp3Client</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.77">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.62">CtOkHttp3Client</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.okhttp3">BuilderOptions</a>&nbsp;options)</span></div>
@@ -296,14 +274,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createDispatcher(int,int)">
 <h3>createDispatcher</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">okhttp3.Dispatcher</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.85">createDispatcher</a></span>&#8203;<span class="parameters">(int&nbsp;maxRequests,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">okhttp3.Dispatcher</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.69">createDispatcher</a></span>&#8203;<span class="parameters">(int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createDispatcher(java.util.concurrent.ExecutorService,int,int)">
 <h3>createDispatcher</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">okhttp3.Dispatcher</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.92">createDispatcher</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">okhttp3.Dispatcher</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.76">createDispatcher</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxRequests,
  int&nbsp;maxRequestsPerHost)</span></div>
 </section>
@@ -311,15 +289,21 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpRequest)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.104">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.88">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="closeDelegate()">
-<h3>closeDelegate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.182">closeDelegate</a></span>()
-                   throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<section class="detail" id="close()">
+<h3>close</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/http/okhttp3/CtOkHttp3Client.html#line.166">close</a></span>()
+           throws <span class="exceptions"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
 </dl>

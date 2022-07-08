@@ -77,32 +77,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code>, <code><a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="OrderEditImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.42">OrderEdit</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.23">OrderEdit</a></span><span class="extends-implements">
 extends <a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a>, <a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;, <a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;, <a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;, <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</span></div>
-<div class="block">OrderEdit
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     OrderEdit orderEdit = OrderEdit.builder()
-             .id("{id}")
-             .version(0.3)
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .resource(resourceBuilder -> resourceBuilder)
-             .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
-             .result(resultBuilder -> resultBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,7 +117,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCreatedBy()">getCreatedBy</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
@@ -142,12 +125,12 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Unique identifier of the OrderEdit.</div>
+<div class="block">The unique ID of the OrderEdit.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier of the OrderEdit.</div>
+<div class="block">Unique identifier for this edit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLastModifiedAt()">getLastModifiedAt</a></span>()</code></div>
@@ -155,7 +138,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLastModifiedBy()">getLastModifiedBy</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getResource()">getResource</a></span>()</code></div>
@@ -261,8 +244,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.52">getId</a></span>()</div>
-<div class="block"><p>Unique identifier of the OrderEdit.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.33">getId</a></span>()</div>
+<div class="block"><p>The unique ID of the OrderEdit.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -270,8 +253,6 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dd><code><a href="../DomainResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../Versioned.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>ID</dd>
 </dl>
@@ -281,15 +262,13 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.59">getVersion</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.40">getVersion</a></span>()</div>
 <div class="block"><p>The current version of the OrderEdit.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../DomainResource.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../Versioned.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
@@ -297,7 +276,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.66">getCreatedAt</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.44">getCreatedAt</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getCreatedAt()">getCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -308,7 +287,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.73">getLastModifiedAt</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.48">getLastModifiedAt</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getLastModifiedAt()">getLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -319,23 +298,23 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.80">getLastModifiedBy</a></span>()</div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.55">getLastModifiedBy</a></span>()</div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.87">getCreatedBy</a></span>()</div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+</span><span class="return-type">@Valid <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.62">getCreatedBy</a></span>()</div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.95">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier of the OrderEdit.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.70">getKey</a></span>()</div>
+<div class="block"><p>Unique identifier for this edit.</p></div>
 </section>
 </li>
 <li>
@@ -343,7 +322,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getResource</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.101">getResource</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.76">getResource</a></span>()</div>
 <div class="block"><p>The order to be updated with this edit.</p></div>
 </section>
 </li>
@@ -352,15 +331,16 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getStagedActions</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.109">getStagedActions</a></span>()</div>
-<div class="block"><p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.85">getStagedActions</a></span>()</div>
+<div class="block"><p>The actions to apply to the Order.
+  Cannot be updated after the edit has been applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.117">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.90">getCustom</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
@@ -372,21 +352,22 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getResult</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.124">getResult</a></span>()</div>
-<div class="block"><p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.98">getResult</a></span>()</div>
+<div class="block"><p>Contains a preview of the changes in case of unapplied edit.
+  For applied edits, it contains the summary of the changes.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getComment()">
 <h3>getComment</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.133">getComment</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.107">getComment</a></span>()</div>
 <div class="block"><p>This field can be used to add textual information regarding the edit.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.136">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.110">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -396,7 +377,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.138">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.112">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -406,7 +387,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.140">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.114">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -416,7 +397,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setLastModifiedAt(java.time.ZonedDateTime)">
 <h3>setLastModifiedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.142">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.116">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -426,43 +407,43 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>setLastModifiedBy</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.144">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.118">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCreatedBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>setCreatedBy</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.146">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.120">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.148">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.122">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResource(com.commercetools.api.models.order.OrderReference)">
 <h3>setResource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.150">setResource</a></span>&#8203;<span class="parameters">(<a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;resource)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.124">setResource</a></span>&#8203;<span class="parameters">(<a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;resource)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStagedActions(com.commercetools.api.models.order.StagedOrderUpdateAction...)">
 <h3>setStagedActions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.152">setStagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.126">setStagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStagedActions(java.util.List)">
 <h3>setStagedActions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.155">setStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&nbsp;stagedActions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.129">setStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&nbsp;stagedActions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.157">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.131">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
@@ -472,49 +453,49 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setResult(com.commercetools.api.models.order_edit.OrderEditResult)">
 <h3>setResult</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.159">setResult</a></span>&#8203;<span class="parameters">(<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>&nbsp;result)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.133">setResult</a></span>&#8203;<span class="parameters">(<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>&nbsp;result)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setComment(java.lang.String)">
 <h3>setComment</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.161">setComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.135">setComment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.163">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.137">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.OrderEdit)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.167">of</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.141">of</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.184">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.158">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.OrderEdit)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.188">builder</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.162">builder</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderEdit(java.util.function.Function)">
 <h3>withOrderEdit</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.192">withOrderEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.166">withOrderEdit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier()">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.196">toResourceIdentifier</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.170">toResourceIdentifier</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceIdentifiable.html#toResourceIdentifier()">toResourceIdentifier</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
@@ -524,7 +505,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="toReference()">
 <h3>toReference</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.201">toReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.175">toReference</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Referencable.html#toReference()">toReference</a></code>&nbsp;in interface&nbsp;<code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</code></dd>
@@ -534,7 +515,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.206">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEdit.html#line.180">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

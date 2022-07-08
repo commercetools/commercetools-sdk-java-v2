@@ -84,20 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderChangeCustomLineItemMoneyActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.32">StagedOrderChangeCustomLineItemMoneyAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.18">StagedOrderChangeCustomLineItemMoneyAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block">StagedOrderChangeCustomLineItemMoneyAction
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     StagedOrderChangeCustomLineItemMoneyAction stagedOrderChangeCustomLineItemMoneyAction = StagedOrderChangeCustomLineItemMoneyAction.builder()
-             .customLineItemId("{customLineItemId}")
-             .money(moneyBuilder -> moneyBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -182,7 +170,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="CHANGE_CUSTOM_LINE_ITEM_MONEY">
 <h3>CHANGE_CUSTOM_LINE_ITEM_MONEY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.36">CHANGE_CUSTOM_LINE_ITEM_MONEY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.22">CHANGE_CUSTOM_LINE_ITEM_MONEY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY">Constant Field Values</a></dd>
@@ -201,7 +189,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.41">getCustomLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.24">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
@@ -209,57 +197,57 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getMoney</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.49">getMoney</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.32">getMoney</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.54">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.37">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money)">
 <h3>setMoney</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.56">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.39">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.58">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.41">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.70">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderChangeCustomLineItemMoneyActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderChangeCustomLineItemMoneyAction(java.util.function.Function)">
 <h3>withStagedOrderChangeCustomLineItemMoneyAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.79">withStagedOrderChangeCustomLineItemMoneyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.62">withStagedOrderChangeCustomLineItemMoneyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.84">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderChangeCustomLineItemMoneyAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderChangeCustomLineItemMoneyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderChangeCustomLineItemMoneyAction.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

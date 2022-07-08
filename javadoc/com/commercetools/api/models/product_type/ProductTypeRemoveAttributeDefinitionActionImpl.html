@@ -83,11 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a></code>, <code><a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></code>, <code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.21">ProductTypeRemoveAttributeDefinitionActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.17">ProductTypeRemoveAttributeDefinitionActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
-  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -142,7 +140,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Name of the Attribute to remove.</div>
+<div class="block">The name of the attribute to remove.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -182,7 +180,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductTypeRemoveAttributeDefinitionActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.35">ProductTypeRemoveAttributeDefinitionActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.31">ProductTypeRemoveAttributeDefinitionActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -196,7 +194,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.43">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.35">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductTypeUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></code></dd>
@@ -208,8 +206,8 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.51">getName</a></span>()</div>
-<div class="block"><p>Name of the Attribute to remove.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.42">getName</a></span>()</div>
+<div class="block"><p>The name of the attribute to remove.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductTypeRemoveAttributeDefinitionAction.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a></code></dd>
@@ -219,7 +217,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.55">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.46">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductTypeRemoveAttributeDefinitionAction.html#setName(java.lang.String)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a></code></dd>
@@ -229,7 +227,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.59">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.50">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -239,7 +237,7 @@ implements <a href="ProductTypeRemoveAttributeDefinitionAction.html" title="inte
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.72">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeRemoveAttributeDefinitionActionImpl.html#line.63">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

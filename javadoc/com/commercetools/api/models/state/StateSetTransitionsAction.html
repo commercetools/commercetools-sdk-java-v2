@@ -84,18 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StateSetTransitionsActionImpl.html" title="class in com.commercetools.api.models.state">StateSetTransitionsActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.27">StateSetTransitionsAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.15">StateSetTransitionsAction</a></span><span class="extends-implements">
 extends <a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a></span></div>
-<div class="block">StateSetTransitionsAction
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     StateSetTransitionsAction stateSetTransitionsAction = StateSetTransitionsAction.builder()
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -177,7 +167,7 @@ extends <a href="StateUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="SET_TRANSITIONS">
 <h3>SET_TRANSITIONS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.31">SET_TRANSITIONS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.19">SET_TRANSITIONS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.state.StateSetTransitionsAction.SET_TRANSITIONS">Constant Field Values</a></dd>
@@ -196,59 +186,62 @@ extends <a href="StateUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="getTransitions()">
 <h3>getTransitions</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.39">getTransitions</a></span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed.</p>
-  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
-  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.30">getTransitions</a></span>()</div>
+<div class="block"><p>Value to set.
+  If empty, any existing value will be removed.</p>
+  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>).
+  When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
+  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed.
+  If <code>transitions</code> is not set, the validation is turned off.</p>
   <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransitions(com.commercetools.api.models.state.StateResourceIdentifier...)">
 <h3>setTransitions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.43">setTransitions</a></span>&#8203;<span class="parameters">(<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>...&nbsp;transitions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.34">setTransitions</a></span>&#8203;<span class="parameters">(<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>...&nbsp;transitions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransitions(java.util.List)">
 <h3>setTransitions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.46">setTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&gt;&nbsp;transitions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.37">setTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&gt;&nbsp;transitions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.48">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.39">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.state.StateSetTransitionsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.52">of</a></span>&#8203;<span class="parameters">(<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsActionBuilder.html" title="class in com.commercetools.api.models.state">StateSetTransitionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.58">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsActionBuilder.html" title="class in com.commercetools.api.models.state">StateSetTransitionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.49">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.state.StateSetTransitionsAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsActionBuilder.html" title="class in com.commercetools.api.models.state">StateSetTransitionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.62">builder</a></span>&#8203;<span class="parameters">(<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StateSetTransitionsActionBuilder.html" title="class in com.commercetools.api.models.state">StateSetTransitionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.53">builder</a></span>&#8203;<span class="parameters">(<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStateSetTransitionsAction(java.util.function.Function)">
 <h3>withStateSetTransitionsAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.66">withStateSetTransitionsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.57">withStateSetTransitionsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.70">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StateSetTransitionsAction.html" title="interface in com.commercetools.api.models.state">StateSetTransitionsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateSetTransitionsAction.html#line.61">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

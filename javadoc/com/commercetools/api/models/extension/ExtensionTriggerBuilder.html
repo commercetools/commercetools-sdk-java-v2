@@ -83,20 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.24">ExtensionTriggerBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.9">ExtensionTriggerBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</span></div>
-<div class="block">ExtensionTriggerBuilder
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ExtensionTrigger extensionTrigger = ExtensionTrigger.builder()
-             .resourceTypeId(ExtensionResourceTypeId.CART)
-             .plusActions(actionsBuilder -> actionsBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,14 +115,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#actions(com.commercetools.api.models.extension.ExtensionAction...)">actions</a></span>&#8203;(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>Create</code> and <code>Update</code> requests are supported.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#actions(java.util.List)">actions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;&nbsp;actions)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>Create</code> and <code>Update</code> requests are supported.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -142,16 +127,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">builds ExtensionTrigger without checking for non null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#condition(java.lang.String)">condition</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;condition)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Valid predicate that controls the conditions under which the API Extension is called.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getActions()">getActions</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCondition()">getCondition</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getActions()">getActions</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResourceTypeId()">getResourceTypeId</a></span>()</code></div>
@@ -164,14 +141,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusActions(com.commercetools.api.models.extension.ExtensionAction...)">plusActions</a></span>&#8203;(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>Create</code> and <code>Update</code> requests are supported.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceTypeId(com.commercetools.api.models.extension.ExtensionResourceTypeId)">resourceTypeId</a></span>&#8203;(<a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a>&nbsp;resourceTypeId)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -192,7 +165,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ExtensionTriggerBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.25">ExtensionTriggerBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.10">ExtensionTriggerBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -206,62 +179,43 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="resourceTypeId(com.commercetools.api.models.extension.ExtensionResourceTypeId)">
 <h3>resourceTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.38">resourceTypeId</a></span>&#8203;<span class="parameters">(<a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a>&nbsp;resourceTypeId)</span></div>
-<div class="block"><p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.16">resourceTypeId</a></span>&#8203;<span class="parameters">(<a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a>&nbsp;resourceTypeId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(com.commercetools.api.models.extension.ExtensionAction...)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.48">actions</a></span>&#8203;<span class="parameters">(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</span></div>
-<div class="block"><p><code>Create</code> and <code>Update</code> requests are supported.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.22">actions</a></span>&#8203;<span class="parameters">(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(java.util.List)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.57">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;&nbsp;actions)</span></div>
-<div class="block"><p><code>Create</code> and <code>Update</code> requests are supported.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.27">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusActions(com.commercetools.api.models.extension.ExtensionAction...)">
 <h3>plusActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.67">plusActions</a></span>&#8203;<span class="parameters">(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</span></div>
-<div class="block"><p><code>Create</code> and <code>Update</code> requests are supported.</p></div>
-</section>
-</li>
-<li>
-<section class="detail" id="condition(java.lang.String)">
-<h3>condition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.80">condition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;condition)</span></div>
-<div class="block"><p>Valid predicate that controls the conditions under which the API Extension is called. The Extension is not triggered when the specified condition is not fulfilled.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.33">plusActions</a></span>&#8203;<span class="parameters">(<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>...&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceTypeId()">
 <h3>getResourceTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.85">getResourceTypeId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.42">getResourceTypeId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.89">getActions</a></span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCondition()">
-<h3>getCondition</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.93">getCondition</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ExtensionAction.html" title="interface in com.commercetools.api.models.extension">ExtensionAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.46">getActions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.98">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.50">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&gt;</code></dd>
@@ -271,20 +225,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.107">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds ExtensionTrigger without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.111">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.ExtensionTrigger)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.115">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ExtensionTrigger.html" title="interface in com.commercetools.api.models.extension">ExtensionTrigger</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

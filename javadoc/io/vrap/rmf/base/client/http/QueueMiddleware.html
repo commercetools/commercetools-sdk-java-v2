@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.18">QueueMiddleware</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.15">QueueMiddleware</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></span></div>
 </section>
@@ -97,21 +97,9 @@ implements <a href="Middleware.html" title="interface in io.vrap.rmf.base.client
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(int,java.time.Duration)">QueueMiddleware</a></span>&#8203;(int&nbsp;maxConnection,
+<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(int,java.time.Duration)">QueueMiddleware</a></span>&#8203;(int&nbsp;maxConnections,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(dev.failsafe.spi.Scheduler,int,java.time.Duration)">QueueMiddleware</a></span>&#8203;(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxConnections,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-constructor-name even-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,java.time.Duration)">QueueMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxConnection,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-constructor-name odd-row-color"><code><span class="member-name-link"><a href="#%3Cinit%3E(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">QueueMiddleware</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
- int&nbsp;maxConnection,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -151,33 +139,9 @@ implements <a href="Middleware.html" title="interface in io.vrap.rmf.base.client
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,java.time.Duration)">
-<h3>QueueMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.22">QueueMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxConnection,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">
-<h3>QueueMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.26">QueueMiddleware</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
- int&nbsp;maxConnection,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
-</section>
-</li>
-<li>
 <section class="detail" id="&lt;init&gt;(int,java.time.Duration)">
 <h3>QueueMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.31">QueueMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxConnection,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(dev.failsafe.spi.Scheduler,int,java.time.Duration)">
-<h3>QueueMiddleware</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.35">QueueMiddleware</a></span>&#8203;<span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxConnections,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.19">QueueMiddleware</a></span>&#8203;<span class="parameters">(int&nbsp;maxConnections,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
 </section>
 </li>
@@ -192,7 +156,7 @@ implements <a href="Middleware.html" title="interface in io.vrap.rmf.base.client
 <li>
 <section class="detail" id="invoke(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)">
 <h3>invoke</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.42">invoke</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.26">invoke</a></span>&#8203;<span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;&gt;&nbsp;next)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -203,7 +167,7 @@ implements <a href="Middleware.html" title="interface in io.vrap.rmf.base.client
 <li>
 <section class="detail" id="close()">
 <h3>close</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.48">close</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/QueueMiddleware.html#line.32">close</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close()" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>

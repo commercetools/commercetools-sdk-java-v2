@@ -80,14 +80,14 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="ExecutorHttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">ExecutorHttpClientSupplier</a></code>, <code><a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">HttpClientSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></dd>
+<dd><code><a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">HttpClientSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="../../../../../com/commercetools/http/apachehttp/ApacheHttpClientSupplier.html" title="class in com.commercetools.http.apachehttp">ApacheHttpClientSupplier</a></code>, <code><a href="../../../../../com/commercetools/http/okhttp3/OkHttp3ClientSupplier.html" title="class in com.commercetools.http.okhttp3">OkHttp3ClientSupplier</a></code>, <code><a href="../../../../../com/commercetools/http/okhttp4/OkHttp4ClientSupplier.html" title="class in com.commercetools.http.okhttp4">OkHttp4ClientSupplier</a></code>, <code><a href="../../okhttp/VrapOkHttpClientSupplier.html" title="class in io.vrap.rmf.okhttp">VrapOkHttpClientSupplier</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.11">BaseHttpClientSupplier</a></span>
+<div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.8">BaseHttpClientSupplier</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">HttpClientSupplier</a></span></div>
 <div class="block">In order to work, the sdk needs an <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> provider, this can be done by extending <a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client"><code>HttpClientSupplier</code></a>
@@ -124,9 +124,6 @@ implements <a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.bas
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
 <div class="block">The <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> provider method</div>
 </div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#get(java.util.concurrent.ExecutorService)">get</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -147,7 +144,7 @@ implements <a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.bas
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>BaseHttpClientSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.11">BaseHttpClientSupplier</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.8">BaseHttpClientSupplier</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -161,23 +158,13 @@ implements <a href="HttpClientSupplier.html" title="interface in io.vrap.rmf.bas
 <li>
 <section class="detail" id="get()">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.17">get</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.14">get</a></span>()</div>
 <div class="block">The <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> provider method</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html#get()" title="class or interface in java.util.function" class="external-link">get</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>HttpClient implementation</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="get(java.util.concurrent.ExecutorService)">
-<h3>get</h3>
-<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/io/vrap/rmf/base/client/BaseHttpClientSupplier.html#line.19">get</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="ExecutorHttpClientSupplier.html#get(java.util.concurrent.ExecutorService)">get</a></code>&nbsp;in interface&nbsp;<code><a href="ExecutorHttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">ExecutorHttpClientSupplier</a></code></dd>
 </dl>
 </section>
 </li>

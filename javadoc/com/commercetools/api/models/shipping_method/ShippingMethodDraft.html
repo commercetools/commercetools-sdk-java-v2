@@ -84,22 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShippingMethodDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.35">ShippingMethodDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.19">ShippingMethodDraft</a></span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&gt;</span></div>
-<div class="block">ShippingMethodDraft
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()
-             .name("{name}")
-             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
-             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
-             .isDefault(true)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -108,7 +94,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -122,54 +108,38 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Custom Fields for the ShippingMethod.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getIsDefault()">getIsDefault</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</div>
+<div class="block">If <code>true</code> the shipping method will be the default one in a project.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">User-defined unique identifier for the ShippingMethod.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLocalizedDescription()">getLocalizedDescription</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Localized description of the ShippingMethod.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLocalizedName()">getLocalizedName</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Localized name of the ShippingMethod.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Name of the ShippingMethod.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPredicate()">getPredicate</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Valid Cart predicate to select a ShippingMethod for a Cart.</div>
+<div class="block">A Cart predicate which can be used to more precisely select a shipping method for a cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">TaxCategory for all ZoneRates of the ShippingMethod.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getZoneRates()">getZoneRates</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines ShippingRates (prices) for specific zones.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -179,11 +149,9 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></span>&#8203;(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setDescription(java.lang.String)">setDescription</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setDescription(java.lang.String)">setDescription</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setIsDefault(java.lang.Boolean)">setIsDefault</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
@@ -237,41 +205,34 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.43">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier for the ShippingMethod.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.23">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.49">getName</a></span>()</div>
-<div class="block"><p>Name of the ShippingMethod.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.26">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLocalizedName()">
 <h3>getLocalizedName</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.56">getLocalizedName</a></span>()</div>
-<div class="block"><p>Localized name of the ShippingMethod.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.30">getLocalizedName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.63">getDescription</a></span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block"><p>Description of the ShippingMethod.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.34">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLocalizedDescription()">
 <h3>getLocalizedDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.70">getLocalizedDescription</a></span>()</div>
-<div class="block"><p>Localized description of the ShippingMethod.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.37">getLocalizedDescription</a></span>()</div>
 </section>
 </li>
 <li>
@@ -279,8 +240,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.77">getTaxCategory</a></span>()</div>
-<div class="block"><p>TaxCategory for all ZoneRates of the ShippingMethod.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.41">getTaxCategory</a></span>()</div>
 </section>
 </li>
 <li>
@@ -288,31 +248,29 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getZoneRates</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.85">getZoneRates</a></span>()</div>
-<div class="block"><p>Defines ShippingRates (prices) for specific zones.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.46">getZoneRates</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsDefault()">
 <h3>getIsDefault</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.93">getIsDefault</a></span>()</div>
-<div class="block"><p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.54">getIsDefault</a></span>()</div>
+<div class="block"><p>If <code>true</code> the shipping method will be the default one in a project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPredicate()">
 <h3>getPredicate</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.101">getPredicate</a></span>()</div>
-<div class="block"><p>Valid Cart predicate to select a ShippingMethod for a Cart.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.62">getPredicate</a></span>()</div>
+<div class="block"><p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.107">getCustom</a></span>()</div>
-<div class="block"><p>Custom Fields for the ShippingMethod.</p></div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.65">getCustom</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&gt;</code></dd>
@@ -322,69 +280,67 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.111">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.69">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.113">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.71">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLocalizedName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLocalizedName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.115">setLocalizedName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.73">setLocalizedName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(java.lang.String)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.117">setDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.75">setDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLocalizedDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLocalizedDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.120">setLocalizedDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedDescription)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.77">setLocalizedDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;localizedDescription)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.122">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.79">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setZoneRates(com.commercetools.api.models.shipping_method.ZoneRateDraft...)">
 <h3>setZoneRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.124">setZoneRates</a></span>&#8203;<span class="parameters">(<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>...&nbsp;zoneRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.81">setZoneRates</a></span>&#8203;<span class="parameters">(<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>...&nbsp;zoneRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setZoneRates(java.util.List)">
 <h3>setZoneRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.127">setZoneRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&gt;&nbsp;zoneRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.84">setZoneRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&gt;&nbsp;zoneRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsDefault(java.lang.Boolean)">
 <h3>setIsDefault</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.129">setIsDefault</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.86">setIsDefault</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPredicate(java.lang.String)">
 <h3>setPredicate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.131">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.88">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.133">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.90">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&gt;</code></dd>
@@ -394,37 +350,37 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.135">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.92">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shipping_method.ShippingMethodDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.139">of</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.154">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.111">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.shipping_method.ShippingMethodDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.158">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShippingMethodDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.115">builder</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withShippingMethodDraft(java.util.function.Function)">
 <h3>withShippingMethodDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.162">withShippingMethodDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.119">withShippingMethodDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.166">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingMethodDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodDraft.html#line.123">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

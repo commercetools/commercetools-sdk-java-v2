@@ -77,33 +77,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="CategoryCreatedMessageImpl.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.37">CategoryCreatedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.17">CategoryCreatedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
-<div class="block">CategoryCreatedMessage
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CategoryCreatedMessage categoryCreatedMessage = CategoryCreatedMessage.builder()
-             .id("{id}")
-             .version(0.3)
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .sequenceNumber(0.3)
-             .resource(resourceBuilder -> resourceBuilder)
-             .resourceVersion(0.3)
-             .category(categoryBuilder -> categoryBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -183,7 +165,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="CATEGORY_CREATED">
 <h3>CATEGORY_CREATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.41">CATEGORY_CREATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.21">CATEGORY_CREATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.CategoryCreatedMessage.CATEGORY_CREATED">Constant Field Values</a></dd>
@@ -203,49 +185,49 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getCategory</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../category/Category.html" title="interface in com.commercetools.api.models.category">Category</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.46">getCategory</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../category/Category.html" title="interface in com.commercetools.api.models.category">Category</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.23">getCategory</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCategory(com.commercetools.api.models.category.Category)">
 <h3>setCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.51">setCategory</a></span>&#8203;<span class="parameters">(<a href="../category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;category)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.28">setCategory</a></span>&#8203;<span class="parameters">(<a href="../category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;category)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.30">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.CategoryCreatedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.73">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.50">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.CategoryCreatedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.77">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryCreatedMessage(java.util.function.Function)">
 <h3>withCategoryCreatedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.81">withCategoryCreatedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.58">withCategoryCreatedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.85">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryCreatedMessage.html" title="interface in com.commercetools.api.models.message">CategoryCreatedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CategoryCreatedMessage.html#line.62">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

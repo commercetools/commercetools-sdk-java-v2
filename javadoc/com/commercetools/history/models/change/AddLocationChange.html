@@ -84,21 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AddLocationChangeImpl.html" title="class in com.commercetools.history.models.change">AddLocationChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.32">AddLocationChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.17">AddLocationChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block">AddLocationChange
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     AddLocationChange addLocationChange = AddLocationChange.builder()
-             .change("{change}")
-             .previousValue(previousValueBuilder -> previousValueBuilder)
-             .nextValue(nextValueBuilder -> nextValueBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -193,7 +180,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="ADD_LOCATION_CHANGE">
 <h3>ADD_LOCATION_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.36">ADD_LOCATION_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.21">ADD_LOCATION_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.AddLocationChange.ADD_LOCATION_CHANGE">Constant Field Values</a></dd>
@@ -212,7 +199,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.41">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.23">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -223,7 +210,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.48">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.30">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>addLocation</code> on zones</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -236,7 +223,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.55">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.37">getPreviousValue</a></span>()</div>
 <div class="block"><p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p></div>
 </section>
 </li>
@@ -245,14 +232,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.63">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.45">getNextValue</a></span>()</div>
 <div class="block"><p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.68">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.50">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -262,49 +249,49 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.Location)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.70">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.52">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.Location)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.72">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.54">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.74">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddLocationChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.78">of</a></span>&#8203;<span class="parameters">(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChangeBuilder.html" title="class in com.commercetools.history.models.change">AddLocationChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.86">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChangeBuilder.html" title="class in com.commercetools.history.models.change">AddLocationChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.68">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.AddLocationChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChangeBuilder.html" title="class in com.commercetools.history.models.change">AddLocationChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.90">builder</a></span>&#8203;<span class="parameters">(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AddLocationChangeBuilder.html" title="class in com.commercetools.history.models.change">AddLocationChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.72">builder</a></span>&#8203;<span class="parameters">(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAddLocationChange(java.util.function.Function)">
 <h3>withAddLocationChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.94">withAddLocationChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.76">withAddLocationChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.98">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddLocationChange.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -80,13 +80,12 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="../ResourceIdentifiable.html" title="interface in com.commercetools.api.models">ResourceIdentifiable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code>, <code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.20">StateImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.17">StateImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="State.html" title="interface in com.commercetools.api.models.state">State</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">State</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -129,7 +128,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getBuiltIn()">getBuiltIn</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>true</code> for States that are an integral part of the Project.</div>
+<div class="block"><code>true</code> for States that are an integral part of the <a href="ctp:api:type:Project">Project</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedAt()">getCreatedAt</a></span>()</code></div>
@@ -139,7 +138,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCreatedBy()">getCreatedBy</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
@@ -149,7 +148,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Unique identifier of the State.</div>
+<div class="block">Unique ID of the State.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getInitial()">getInitial</a></span>()</code></div>
@@ -159,7 +158,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">User-defined unique identifier of the State.</div>
+<div class="block">User-defined unique identifier for the State.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedAt()">getLastModifiedAt</a></span>()</code></div>
@@ -169,7 +168,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLastModifiedBy()">getLastModifiedBy</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+<div class="block">Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
@@ -179,13 +178,13 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getRoles()">getRoles</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Roles the State can fulfill for Reviews and Line Items.</div>
+<div class="block">Roles the State can fulfill for <a href="ctp:api:type:Review">Reviews</a> and <a href="ctp:api:type:LineItem">Line Items</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTransitions()">getTransitions</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">
-   list of States of the same <code>type</code> that the current State can be transitioned to.</div>
+  list of States of the same <code>type</code> that the current State can be transitioned to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
@@ -280,7 +279,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StateImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.80">StateImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.77">StateImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -294,8 +293,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.87">getId</a></span>()</div>
-<div class="block"><p>Unique identifier of the State.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.83">getId</a></span>()</div>
+<div class="block"><p>Unique ID of the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -305,8 +304,6 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../Versioned.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>ID</dd>
 </dl>
@@ -315,7 +312,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.95">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.90">getVersion</a></span>()</div>
 <div class="block"><p>Current version of the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -324,15 +321,13 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <dd><code><a href="../DomainResource.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="../Versioned.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.103">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.97">getCreatedAt</a></span>()</div>
 <div class="block"><p>Date and time (UTC) the State was initially created.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -345,7 +340,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.111">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.104">getLastModifiedAt</a></span>()</div>
 <div class="block"><p>Date and time (UTC) the State was last updated.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -358,8 +353,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.119">getLastModifiedBy</a></span>()</div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.111">getLastModifiedBy</a></span>()</div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getLastModifiedBy()">getLastModifiedBy</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -369,8 +364,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.127">getCreatedBy</a></span>()</div>
-<div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.118">getCreatedBy</a></span>()</div>
+<div class="block"><p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getCreatedBy()">getCreatedBy</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -380,8 +375,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.135">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier of the State.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.125">getKey</a></span>()</div>
+<div class="block"><p>User-defined unique identifier for the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -391,7 +386,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.143">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.132">getType</a></span>()</div>
 <div class="block"><p>Indicates to which resource or object types the State is assigned to.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -402,7 +397,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.151">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.139">getName</a></span>()</div>
 <div class="block"><p>Name of the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -413,7 +408,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.159">getDescription</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.146">getDescription</a></span>()</div>
 <div class="block"><p>Description of the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -424,7 +419,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getInitial()">
 <h3>getInitial</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.167">getInitial</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.153">getInitial</a></span>()</div>
 <div class="block"><p><code>true</code> for an initial State, the first State in a workflow.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -435,8 +430,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getBuiltIn()">
 <h3>getBuiltIn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.175">getBuiltIn</a></span>()</div>
-<div class="block"><p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.160">getBuiltIn</a></span>()</div>
+<div class="block"><p><code>true</code> for States that are an integral part of the <a href="ctp:api:type:Project">Project</a>. Those States cannot be deleted and their <code>key</code> cannot be changed.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getBuiltIn()">getBuiltIn</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -446,8 +441,8 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getRoles()">
 <h3>getRoles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.183">getRoles</a></span>()</div>
-<div class="block"><p>Roles the State can fulfill for Reviews and Line Items.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.167">getRoles</a></span>()</div>
+<div class="block"><p>Roles the State can fulfill for <a href="ctp:api:type:Review">Reviews</a> and <a href="ctp:api:type:LineItem">Line Items</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#getRoles()">getRoles</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -457,11 +452,11 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getTransitions()">
 <h3>getTransitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.195">getTransitions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.178">getTransitions</a></span>()</div>
 <div class="block"><ul>
-   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+  <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of <a href="ctp:api:type:StateTypeEnum">StateType</a> <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+  <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+  <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
   </ul></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -472,7 +467,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.199">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.182">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -484,7 +479,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.203">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.186">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -496,7 +491,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.207">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.190">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -508,7 +503,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setLastModifiedAt(java.time.ZonedDateTime)">
 <h3>setLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.211">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.194">setLastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
@@ -520,7 +515,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>setLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.215">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.198">setLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -530,7 +525,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setCreatedBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>setCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.219">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.202">setCreatedBy</a></span>&#8203;<span class="parameters">(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -540,7 +535,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.223">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.206">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -550,7 +545,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.state.StateTypeEnum)">
 <h3>setType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.227">setType</a></span>&#8203;<span class="parameters">(<a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.210">setType</a></span>&#8203;<span class="parameters">(<a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a>&nbsp;type)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setType(com.commercetools.api.models.state.StateTypeEnum)">setType</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -560,7 +555,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.231">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.214">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setName(com.commercetools.api.models.common.LocalizedString)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -570,7 +565,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.235">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.218">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setDescription(com.commercetools.api.models.common.LocalizedString)">setDescription</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -580,7 +575,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setInitial(java.lang.Boolean)">
 <h3>setInitial</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.239">setInitial</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;initial)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.222">setInitial</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;initial)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setInitial(java.lang.Boolean)">setInitial</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -590,7 +585,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setBuiltIn(java.lang.Boolean)">
 <h3>setBuiltIn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.243">setBuiltIn</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;builtIn)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.226">setBuiltIn</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;builtIn)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setBuiltIn(java.lang.Boolean)">setBuiltIn</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -600,7 +595,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setRoles(com.commercetools.api.models.state.StateRoleEnum...)">
 <h3>setRoles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.247">setRoles</a></span>&#8203;<span class="parameters">(<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>...&nbsp;roles)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.230">setRoles</a></span>&#8203;<span class="parameters">(<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>...&nbsp;roles)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setRoles(com.commercetools.api.models.state.StateRoleEnum...)">setRoles</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -610,7 +605,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setRoles(java.util.List)">
 <h3>setRoles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.251">setRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;&nbsp;roles)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.234">setRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;&nbsp;roles)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setRoles(java.util.List)">setRoles</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -620,7 +615,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setTransitions(com.commercetools.api.models.state.StateReference...)">
 <h3>setTransitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.255">setTransitions</a></span>&#8203;<span class="parameters">(<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>...&nbsp;transitions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.238">setTransitions</a></span>&#8203;<span class="parameters">(<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>...&nbsp;transitions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setTransitions(com.commercetools.api.models.state.StateReference...)">setTransitions</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -630,7 +625,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setTransitions(java.util.List)">
 <h3>setTransitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.259">setTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;&nbsp;transitions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.242">setTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;&nbsp;transitions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="State.html#setTransitions(java.util.List)">setTransitions</a></code>&nbsp;in interface&nbsp;<code><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></code></dd>
@@ -640,7 +635,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.263">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.246">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -650,7 +645,7 @@ implements <a href="State.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.290">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateImpl.html#line.273">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

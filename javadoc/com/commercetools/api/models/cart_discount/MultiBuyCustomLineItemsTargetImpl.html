@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a></code>, <code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.20">MultiBuyCustomLineItemsTargetImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.17">MultiBuyCustomLineItemsTargetImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>This Discount target is similar to <code>MultiBuyLineItems</code>, but is applied on Custom Line Items instead of Line Items.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,27 +137,25 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDiscountedQuantity()">getDiscountedQuantity</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of Custom Line Items that are discounted per application of this Discount.</div>
+<div class="block">Quantity of line items that are discounted per application of this discount.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMaxOccurrence()">getMaxOccurrence</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Maximum number of times this Discount can be applied.</div>
+<div class="block">Maximum number of applications of this discount.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPredicate()">getPredicate</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Valid CustomLineItems target predicate.</div>
+<div class="block">A valid custom line item target predicate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSelectionMode()">getSelectionMode</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Discounts particular Line Items only according to the SelectionMode.</div>
-</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTriggerQuantity()">getTriggerQuantity</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of Custom Line Items to be present in order to trigger an application of this Discount.</div>
+<div class="block">Quantity of line items that need to be present in order to trigger an application of this discount.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
@@ -210,7 +207,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MultiBuyCustomLineItemsTargetImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.49">MultiBuyCustomLineItemsTargetImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.46">MultiBuyCustomLineItemsTargetImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -224,7 +221,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.57">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.50">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartDiscountTarget.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a></code></dd>
@@ -234,8 +231,9 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getPredicate()">
 <h3>getPredicate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.65">getPredicate</a></span>()</div>
-<div class="block"><p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.58">getPredicate</a></span>()</div>
+<div class="block"><p>A valid custom line item target predicate. The discount will be applied to custom line items that are
+  matched by the predicate.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#getPredicate()">getPredicate</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -245,8 +243,8 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getTriggerQuantity()">
 <h3>getTriggerQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.73">getTriggerQuantity</a></span>()</div>
-<div class="block"><p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.65">getTriggerQuantity</a></span>()</div>
+<div class="block"><p>Quantity of line items that need to be present in order to trigger an application of this discount.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#getTriggerQuantity()">getTriggerQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -256,8 +254,8 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getDiscountedQuantity()">
 <h3>getDiscountedQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.81">getDiscountedQuantity</a></span>()</div>
-<div class="block"><p>Number of Custom Line Items that are discounted per application of this Discount.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.72">getDiscountedQuantity</a></span>()</div>
+<div class="block"><p>Quantity of line items that are discounted per application of this discount.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#getDiscountedQuantity()">getDiscountedQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -267,8 +265,8 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getMaxOccurrence()">
 <h3>getMaxOccurrence</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.89">getMaxOccurrence</a></span>()</div>
-<div class="block"><p>Maximum number of times this Discount can be applied.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.79">getMaxOccurrence</a></span>()</div>
+<div class="block"><p>Maximum number of applications of this discount.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#getMaxOccurrence()">getMaxOccurrence</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -278,8 +276,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="getSelectionMode()">
 <h3>getSelectionMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.97">getSelectionMode</a></span>()</div>
-<div class="block"><p>Discounts particular Line Items only according to the SelectionMode.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.83">getSelectionMode</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#getSelectionMode()">getSelectionMode</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -289,7 +286,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="setPredicate(java.lang.String)">
 <h3>setPredicate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.101">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.87">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#setPredicate(java.lang.String)">setPredicate</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -299,7 +296,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="setTriggerQuantity(java.lang.Integer)">
 <h3>setTriggerQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.105">setTriggerQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;triggerQuantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.91">setTriggerQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;triggerQuantity)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#setTriggerQuantity(java.lang.Integer)">setTriggerQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -309,7 +306,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="setDiscountedQuantity(java.lang.Integer)">
 <h3>setDiscountedQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.109">setDiscountedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;discountedQuantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.95">setDiscountedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;discountedQuantity)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#setDiscountedQuantity(java.lang.Integer)">setDiscountedQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -319,7 +316,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="setMaxOccurrence(java.lang.Integer)">
 <h3>setMaxOccurrence</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.113">setMaxOccurrence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxOccurrence)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.99">setMaxOccurrence</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxOccurrence)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#setMaxOccurrence(java.lang.Integer)">setMaxOccurrence</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -329,7 +326,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="setSelectionMode(com.commercetools.api.models.cart_discount.SelectionMode)">
 <h3>setSelectionMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.117">setSelectionMode</a></span>&#8203;<span class="parameters">(<a href="SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a>&nbsp;selectionMode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.103">setSelectionMode</a></span>&#8203;<span class="parameters">(<a href="SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a>&nbsp;selectionMode)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MultiBuyCustomLineItemsTarget.html#setSelectionMode(com.commercetools.api.models.cart_discount.SelectionMode)">setSelectionMode</a></code>&nbsp;in interface&nbsp;<code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code></dd>
@@ -339,7 +336,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.121">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.107">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -349,7 +346,7 @@ implements <a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.140">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetImpl.html#line.126">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

@@ -88,19 +88,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="HttpDestinationImpl.html" title="class in com.commercetools.api.models.extension">HttpDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.29">HttpDestination</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.19">HttpDestination</a></span><span class="extends-implements">
 extends <a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a></span></div>
-<div class="block"><p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     HttpDestination httpDestination = HttpDestination.builder()
-             .url("{url}")
-             .build()
- </code></pre>
- </div></div>
+<div class="block"><p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -184,7 +174,7 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="HTTP">
 <h3>HTTP</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.33">HTTP</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.23">HTTP</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.extension.HttpDestination.HTTP">Constant Field Values</a></dd>
@@ -203,7 +193,7 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <section class="detail" id="getUrl()">
 <h3>getUrl</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.38">getUrl</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.28">getUrl</a></span>()</div>
 <div class="block"><p>URL to the target destination.</p></div>
 </section>
 </li>
@@ -211,56 +201,56 @@ extends <a href="ExtensionDestination.html" title="interface in com.commercetool
 <section class="detail" id="getAuthentication()">
 <h3>getAuthentication</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.45">getAuthentication</a></span>()</div>
+</span><span class="return-type">@Valid <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.35">getAuthentication</a></span>()</div>
 <div class="block"><p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setUrl(java.lang.String)">
 <h3>setUrl</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.49">setUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.39">setUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAuthentication(com.commercetools.api.models.extension.HttpDestinationAuthentication)">
 <h3>setAuthentication</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.51">setAuthentication</a></span>&#8203;<span class="parameters">(<a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&nbsp;authentication)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.41">setAuthentication</a></span>&#8203;<span class="parameters">(<a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&nbsp;authentication)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.HttpDestination)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.64">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.54">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.extension.HttpDestination)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.58">builder</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHttpDestination(java.util.function.Function)">
 <h3>withHttpDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.72">withHttpDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.62">withHttpDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.76">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestination.html#line.66">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

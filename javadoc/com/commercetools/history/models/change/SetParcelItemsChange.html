@@ -84,22 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SetParcelItemsChangeImpl.html" title="class in com.commercetools.history.models.change">SetParcelItemsChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.34">SetParcelItemsChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.18">SetParcelItemsChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
-<div class="block">SetParcelItemsChange
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     SetParcelItemsChange setParcelItemsChange = SetParcelItemsChange.builder()
-             .change("{change}")
-             .parcel(parcelBuilder -> parcelBuilder)
-             .plusNextValue(nextValueBuilder -> nextValueBuilder)
-             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -202,7 +188,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="SET_PARCEL_ITEMS_CHANGE">
 <h3>SET_PARCEL_ITEMS_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.38">SET_PARCEL_ITEMS_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.22">SET_PARCEL_ITEMS_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.SetParcelItemsChange.SET_PARCEL_ITEMS_CHANGE">Constant Field Values</a></dd>
@@ -221,7 +207,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.43">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.24">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -232,7 +218,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.50">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.31">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>setParcelItems</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -245,7 +231,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getParcel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../change_value/ParcelChangeValue.html" title="interface in com.commercetools.history.models.change_value">ParcelChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.57">getParcel</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../change_value/ParcelChangeValue.html" title="interface in com.commercetools.history.models.change_value">ParcelChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.35">getParcel</a></span>()</div>
 </section>
 </li>
 <li>
@@ -253,7 +239,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.65">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.40">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
@@ -261,13 +247,13 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.73">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.45">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.78">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.50">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -277,67 +263,67 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setParcel(com.commercetools.history.models.change_value.ParcelChangeValue)">
 <h3>setParcel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.80">setParcel</a></span>&#8203;<span class="parameters">(<a href="../change_value/ParcelChangeValue.html" title="interface in com.commercetools.history.models.change_value">ParcelChangeValue</a>&nbsp;parcel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.52">setParcel</a></span>&#8203;<span class="parameters">(<a href="../change_value/ParcelChangeValue.html" title="interface in com.commercetools.history.models.change_value">ParcelChangeValue</a>&nbsp;parcel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.DeliveryItem...)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.82">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.54">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(java.util.List)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.85">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.57">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.DeliveryItem...)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.87">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.59">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(java.util.List)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.90">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.62">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.92">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.64">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetParcelItemsChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetParcelItemsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.105">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetParcelItemsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.77">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.SetParcelItemsChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetParcelItemsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.109">builder</a></span>&#8203;<span class="parameters">(<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetParcelItemsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetParcelItemsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.81">builder</a></span>&#8203;<span class="parameters">(<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetParcelItemsChange(java.util.function.Function)">
 <h3>withSetParcelItemsChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.113">withSetParcelItemsChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.85">withSetParcelItemsChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.117">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetParcelItemsChange.html" title="interface in com.commercetools.history.models.change">SetParcelItemsChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetParcelItemsChange.html#line.89">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

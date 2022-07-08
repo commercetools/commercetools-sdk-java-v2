@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.20">ExtensionPagedQueryResponseImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>PagedQueryResult with <code>results</code> containing an array of Extension.</p></div>
+<div class="block"><p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:Extension">Extension</a>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,12 +134,12 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of results requested.</div>
+<div class="block">Number of results requested in the query request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of elements skipped.</div>
+<div class="block">Offset supplied by the client or server default.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResults()">getResults</a></span>()</code></div>
@@ -212,8 +212,8 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.51">getLimit</a></span>()</div>
-<div class="block"><p>Number of results requested.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.50">getLimit</a></span>()</div>
+<div class="block"><p>Number of results requested in the query request.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -225,8 +225,8 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.59">getOffset</a></span>()</div>
-<div class="block"><p>Number of elements skipped.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.57">getOffset</a></span>()</div>
+<div class="block"><p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -238,7 +238,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.67">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.64">getCount</a></span>()</div>
 <div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -252,7 +252,11 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.75">getTotal</a></span>()</div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p></div>
+<div class="block"><p>Total number of results matching the query.
+  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
+  This field is returned by default.
+  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
+  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#getTotal()">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -264,7 +268,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.83">getResults</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.82">getResults</a></span>()</div>
 <div class="block"><p>Extensions matching the query.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -277,7 +281,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setLimit(java.lang.Long)">
 <h3>setLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.87">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.86">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setLimit(java.lang.Long)">setLimit</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -287,7 +291,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setOffset(java.lang.Long)">
 <h3>setOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.91">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.90">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setOffset(java.lang.Long)">setOffset</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -297,7 +301,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setCount(java.lang.Long)">
 <h3>setCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.95">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.94">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setCount(java.lang.Long)">setCount</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -307,7 +311,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.99">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.98">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setTotal(java.lang.Long)">setTotal</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -317,7 +321,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setResults(com.commercetools.api.models.extension.Extension...)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.103">setResults</a></span>&#8203;<span class="parameters">(<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.102">setResults</a></span>&#8203;<span class="parameters">(<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>...&nbsp;results)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setResults(com.commercetools.api.models.extension.Extension...)">setResults</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -327,7 +331,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="setResults(java.util.List)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.107">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.106">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Extension.html" title="interface in com.commercetools.api.models.extension">Extension</a>&gt;&nbsp;results)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtensionPagedQueryResponse.html#setResults(java.util.List)">setResults</a></code>&nbsp;in interface&nbsp;<code><a href="ExtensionPagedQueryResponse.html" title="interface in com.commercetools.api.models.extension">ExtensionPagedQueryResponse</a></code></dd>
@@ -337,7 +341,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.111">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.110">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -347,7 +351,7 @@ implements <a href="ExtensionPagedQueryResponse.html" title="interface in com.co
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.129">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionPagedQueryResponseImpl.html#line.128">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

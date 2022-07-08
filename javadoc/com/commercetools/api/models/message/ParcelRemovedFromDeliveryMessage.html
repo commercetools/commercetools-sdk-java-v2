@@ -77,34 +77,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></code>, <code><a href="../Versioned.html" title="interface in com.commercetools.api.models">Versioned</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="ParcelRemovedFromDeliveryMessageImpl.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.38">ParcelRemovedFromDeliveryMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.17">ParcelRemovedFromDeliveryMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
-<div class="block">ParcelRemovedFromDeliveryMessage
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ParcelRemovedFromDeliveryMessage parcelRemovedFromDeliveryMessage = ParcelRemovedFromDeliveryMessage.builder()
-             .id("{id}")
-             .version(0.3)
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .sequenceNumber(0.3)
-             .resource(resourceBuilder -> resourceBuilder)
-             .resourceVersion(0.3)
-             .deliveryId("{deliveryId}")
-             .parcel(parcelBuilder -> parcelBuilder)
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -193,7 +174,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <li>
 <section class="detail" id="PARCEL_REMOVED_FROM_DELIVERY">
 <h3>PARCEL_REMOVED_FROM_DELIVERY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.42">PARCEL_REMOVED_FROM_DELIVERY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.21">PARCEL_REMOVED_FROM_DELIVERY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage.PARCEL_REMOVED_FROM_DELIVERY">Constant Field Values</a></dd>
@@ -212,7 +193,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <section class="detail" id="getDeliveryId()">
 <h3>getDeliveryId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.47">getDeliveryId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.23">getDeliveryId</a></span>()</div>
 </section>
 </li>
 <li>
@@ -220,55 +201,55 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <h3>getParcel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../order/Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.54">getParcel</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../order/Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.27">getParcel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeliveryId(java.lang.String)">
 <h3>setDeliveryId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.59">setDeliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.32">setDeliveryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;deliveryId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcel(com.commercetools.api.models.order.Parcel)">
 <h3>setParcel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.61">setParcel</a></span>&#8203;<span class="parameters">(<a href="../order/Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&nbsp;parcel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.34">setParcel</a></span>&#8203;<span class="parameters">(<a href="../order/Parcel.html" title="interface in com.commercetools.api.models.order">Parcel</a>&nbsp;parcel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.63">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.36">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.84">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.57">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.88">builder</a></span>&#8203;<span class="parameters">(<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withParcelRemovedFromDeliveryMessage(java.util.function.Function)">
 <h3>withParcelRemovedFromDeliveryMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.92">withParcelRemovedFromDeliveryMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.65">withParcelRemovedFromDeliveryMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.96">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ParcelRemovedFromDeliveryMessage.html" title="interface in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ParcelRemovedFromDeliveryMessage.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

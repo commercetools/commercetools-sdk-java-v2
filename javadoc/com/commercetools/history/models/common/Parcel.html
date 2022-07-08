@@ -80,22 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ParcelImpl.html" title="class in com.commercetools.history.models.common">ParcelImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.33">Parcel</a></span></div>
-<div class="block">Parcel
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     Parcel parcel = Parcel.builder()
-             .id("{id}")
-             .createdAt("{createdAt}")
-             .measurements(measurementsBuilder -> measurementsBuilder)
-             .trackingData(trackingDataBuilder -> trackingDataBuilder)
-             .plusItems(itemsBuilder -> itemsBuilder)
-             .build()
- </code></pre>
- </div></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.16">Parcel</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -179,14 +164,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.40">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.20">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.47">getCreatedAt</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.24">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
@@ -194,7 +179,7 @@ loadScripts(document, 'script');</script>
 <h3>getMeasurements</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.54">getMeasurements</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.28">getMeasurements</a></span>()</div>
 </section>
 </li>
 <li>
@@ -202,7 +187,7 @@ loadScripts(document, 'script');</script>
 <h3>getTrackingData</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="TrackingData.html" title="interface in com.commercetools.history.models.common">TrackingData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.62">getTrackingData</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="TrackingData.html" title="interface in com.commercetools.history.models.common">TrackingData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.33">getTrackingData</a></span>()</div>
 </section>
 </li>
 <li>
@@ -210,79 +195,79 @@ loadScripts(document, 'script');</script>
 <h3>getItems</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.70">getItems</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.38">getItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.75">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.43">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCreatedAt(java.lang.String)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.77">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.45">setCreatedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;createdAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMeasurements(com.commercetools.history.models.common.ParcelMeasurements)">
 <h3>setMeasurements</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.79">setMeasurements</a></span>&#8203;<span class="parameters">(<a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a>&nbsp;measurements)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.47">setMeasurements</a></span>&#8203;<span class="parameters">(<a href="ParcelMeasurements.html" title="interface in com.commercetools.history.models.common">ParcelMeasurements</a>&nbsp;measurements)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTrackingData(com.commercetools.history.models.common.TrackingData)">
 <h3>setTrackingData</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.81">setTrackingData</a></span>&#8203;<span class="parameters">(<a href="TrackingData.html" title="interface in com.commercetools.history.models.common">TrackingData</a>&nbsp;trackingData)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.49">setTrackingData</a></span>&#8203;<span class="parameters">(<a href="TrackingData.html" title="interface in com.commercetools.history.models.common">TrackingData</a>&nbsp;trackingData)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(com.commercetools.history.models.common.DeliveryItem...)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.83">setItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.51">setItems</a></span>&#8203;<span class="parameters">(<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>...&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setItems(java.util.List)">
 <h3>setItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.86">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;items)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.54">setItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryItem.html" title="interface in com.commercetools.history.models.common">DeliveryItem</a>&gt;&nbsp;items)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.88">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.Parcel)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelBuilder.html" title="class in com.commercetools.history.models.common">ParcelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.102">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelBuilder.html" title="class in com.commercetools.history.models.common">ParcelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.70">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.common.Parcel)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelBuilder.html" title="class in com.commercetools.history.models.common">ParcelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.106">builder</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelBuilder.html" title="class in com.commercetools.history.models.common">ParcelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withParcel(java.util.function.Function)">
 <h3>withParcel</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.110">withParcel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.78">withParcel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.114">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Parcel.html" title="interface in com.commercetools.history.models.common">Parcel</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/Parcel.html#line.82">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

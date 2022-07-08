@@ -80,19 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ZoneRateImpl.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.31">ZoneRate</a></span></div>
-<div class="block"><p>Defines shipping rates in different currencies for a specific Zone.</p>
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     ZoneRate zoneRate = ZoneRate.builder()
-             .zone(zoneBuilder -> zoneBuilder)
-             .plusShippingRates(shippingRatesBuilder -> shippingRatesBuilder)
-             .build()
- </code></pre>
- </div></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.17">ZoneRate</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -116,13 +104,11 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getShippingRates()">getShippingRates</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Shipping rates defined per currency.</div>
+<div class="block">The array does not contain two shipping rates with the same currency.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getZone()">getZone</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Zone for which the shipping rates are valid.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -163,8 +149,7 @@ loadScripts(document, 'script');</script>
 <h3>getZone</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.38">getZone</a></span>()</div>
-<div class="block"><p>Zone for which the shipping rates are valid.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.21">getZone</a></span>()</div>
 </section>
 </li>
 <li>
@@ -172,62 +157,62 @@ loadScripts(document, 'script');</script>
 <h3>getShippingRates</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.46">getShippingRates</a></span>()</div>
-<div class="block"><p>Shipping rates defined per currency.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.29">getShippingRates</a></span>()</div>
+<div class="block"><p>The array does not contain two shipping rates with the same currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setZone(com.commercetools.api.models.zone.ZoneReference)">
 <h3>setZone</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.51">setZone</a></span>&#8203;<span class="parameters">(<a href="../zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;zone)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.34">setZone</a></span>&#8203;<span class="parameters">(<a href="../zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;zone)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingRates(com.commercetools.api.models.shipping_method.ShippingRate...)">
 <h3>setShippingRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.53">setShippingRates</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>...&nbsp;shippingRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.36">setShippingRates</a></span>&#8203;<span class="parameters">(<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>...&nbsp;shippingRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingRates(java.util.List)">
 <h3>setShippingRates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.56">setShippingRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;&nbsp;shippingRates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.39">setShippingRates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&gt;&nbsp;shippingRates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.58">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.41">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shipping_method.ZoneRate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.69">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.52">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.shipping_method.ZoneRate)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.73">builder</a></span>&#8203;<span class="parameters">(<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ZoneRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withZoneRate(java.util.function.Function)">
 <h3>withZoneRate</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.77">withZoneRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.60">withZoneRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.81">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ZoneRate.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ZoneRate.html#line.64">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

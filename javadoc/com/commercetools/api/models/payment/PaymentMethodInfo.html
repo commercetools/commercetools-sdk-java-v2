@@ -80,17 +80,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentMethodInfoImpl.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.28">PaymentMethodInfo</a></span></div>
-<div class="block">PaymentMethodInfo
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     PaymentMethodInfo paymentMethodInfo = PaymentMethodInfo.builder()
-             .build()
- </code></pre>
- </div></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.16">PaymentMethodInfo</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,77 +154,82 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getPaymentInterface()">
 <h3>getPaymentInterface</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.36">getPaymentInterface</a></span>()</div>
-<div class="block"><p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.26">getPaymentInterface</a></span>()</div>
+<div class="block"><p>The interface that handles the payment (usually a PSP).
+  Cannot be changed once it has been set.
+  The combination of Payment<code>interfaceId</code> and this field must be unique.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMethod()">
 <h3>getMethod</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.43">getMethod</a></span>()</div>
-<div class="block"><p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.35">getMethod</a></span>()</div>
+<div class="block"><p>The payment method that is used, e.g.
+  e.g.
+  a conventional string representing Credit Card, Cash Advance etc.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.49">getName</a></span>()</div>
-<div class="block"><p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p></div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.42">getName</a></span>()</div>
+<div class="block"><p>A human-readable, localized name for the payment method, e.g.
+  'Credit Card'.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPaymentInterface(java.lang.String)">
 <h3>setPaymentInterface</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.53">setPaymentInterface</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentInterface)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.46">setPaymentInterface</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentInterface)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMethod(java.lang.String)">
 <h3>setMethod</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.55">setMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.48">setMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.57">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.50">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.59">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.52">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.PaymentMethodInfo)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.71">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.payment.PaymentMethodInfo)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.75">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentMethodInfoBuilder.html" title="class in com.commercetools.api.models.payment">PaymentMethodInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentMethodInfo(java.util.function.Function)">
 <h3>withPaymentMethodInfo</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.79">withPaymentMethodInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.72">withPaymentMethodInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.83">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentMethodInfo.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

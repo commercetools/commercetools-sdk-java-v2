@@ -83,10 +83,9 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.20">TaxedItemPriceDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.17">TaxedItemPriceDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block">TaxedItemPriceDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +170,7 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TaxedItemPriceDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.34">TaxedItemPriceDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.31">TaxedItemPriceDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -185,9 +184,9 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getTotalNet()">
 <h3>getTotalNet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.42">getTotalNet</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.38">getTotalNet</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedItemPriceDraft.html#getTotalNet()">getTotalNet</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></code></dd>
@@ -197,9 +196,9 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getTotalGross()">
 <h3>getTotalGross</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.51">getTotalGross</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.46">getTotalGross</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedItemPriceDraft.html#getTotalGross()">getTotalGross</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></code></dd>
@@ -209,7 +208,7 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setTotalNet(com.commercetools.api.models.common.Money)">
 <h3>setTotalNet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.55">setTotalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.50">setTotalNet</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalNet)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedItemPriceDraft.html#setTotalNet(com.commercetools.api.models.common.Money)">setTotalNet</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></code></dd>
@@ -219,7 +218,7 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setTotalGross(com.commercetools.api.models.common.Money)">
 <h3>setTotalGross</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.59">setTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.54">setTotalGross</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalGross)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TaxedItemPriceDraft.html#setTotalGross(com.commercetools.api.models.common.Money)">setTotalGross</a></code>&nbsp;in interface&nbsp;<code><a href="TaxedItemPriceDraft.html" title="interface in com.commercetools.api.models.order">TaxedItemPriceDraft</a></code></dd>
@@ -229,7 +228,7 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.63">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.58">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -239,7 +238,7 @@ implements <a href="TaxedItemPriceDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.76">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/TaxedItemPriceDraftImpl.html#line.71">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

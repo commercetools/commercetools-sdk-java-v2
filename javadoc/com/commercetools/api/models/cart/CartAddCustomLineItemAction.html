@@ -84,22 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartAddCustomLineItemActionImpl.html" title="class in com.commercetools.api.models.cart">CartAddCustomLineItemActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.36">CartAddCustomLineItemAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.20">CartAddCustomLineItemAction</a></span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>, <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&gt;</span></div>
-<div class="block">CartAddCustomLineItemAction
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     CartAddCustomLineItemAction cartAddCustomLineItemAction = CartAddCustomLineItemAction.builder()
-             .money(moneyBuilder -> moneyBuilder)
-             .name(nameBuilder -> nameBuilder)
-             .quantity(0.3)
-             .slug("{slug}")
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,7 +124,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The representation used when creating or updating a customizable data type with Custom Fields.</div>
+<div class="block">The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getExternalTaxRate()">getExternalTaxRate</a></span>()</code></div>
@@ -150,9 +136,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getQuantity()">getQuantity</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
@@ -162,7 +146,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">ResourceIdentifier to a TaxCategory.</div>
+<div class="block"><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -223,7 +207,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="ADD_CUSTOM_LINE_ITEM">
 <h3>ADD_CUSTOM_LINE_ITEM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.41">ADD_CUSTOM_LINE_ITEM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.25">ADD_CUSTOM_LINE_ITEM</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM">Constant Field Values</a></dd>
@@ -243,9 +227,9 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <h3>getMoney</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.47">getMoney</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
-  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.31">getMoney</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
@@ -253,38 +237,37 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.55">getName</a></span>()</div>
-<div class="block"><p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.36">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.63">getQuantity</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.41">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSlug()">
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.70">getSlug</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.45">getSlug</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.77">getTaxCategory</a></span>()</div>
-<div class="block"><p>ResourceIdentifier to a TaxCategory.</p></div>
+</span><span class="return-type">@Valid <a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.52">getTaxCategory</a></span>()</div>
+<div class="block"><p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.84">getCustom</a></span>()</div>
-<div class="block"><p>The representation used when creating or updating a customizable data type with Custom Fields.</p></div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.59">getCustom</a></span>()</div>
+<div class="block"><p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&gt;</code></dd>
@@ -295,43 +278,43 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getExternalTaxRate()">
 <h3>getExternalTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.91">getExternalTaxRate</a></span>()</div>
+</span><span class="return-type">@Valid <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.63">getExternalTaxRate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money)">
 <h3>setMoney</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.95">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.67">setMoney</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;money)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.97">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.69">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setQuantity(java.lang.Long)">
 <h3>setQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.99">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.71">setQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(java.lang.String)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.101">setSlug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.73">setSlug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.103">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.75">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.105">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.77">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&gt;</code></dd>
@@ -341,43 +324,43 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)">
 <h3>setExternalTaxRate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.107">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.79">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.109">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.81">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartAddCustomLineItemAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.113">of</a></span>&#8203;<span class="parameters">(<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddCustomLineItemActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.125">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddCustomLineItemActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.97">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CartAddCustomLineItemAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddCustomLineItemActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.129">builder</a></span>&#8203;<span class="parameters">(<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartAddCustomLineItemActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddCustomLineItemActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.101">builder</a></span>&#8203;<span class="parameters">(<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartAddCustomLineItemAction(java.util.function.Function)">
 <h3>withCartAddCustomLineItemAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.133">withCartAddCustomLineItemAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.105">withCartAddCustomLineItemAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.137">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartAddCustomLineItemAction.html" title="interface in com.commercetools.api.models.cart">CartAddCustomLineItemAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartAddCustomLineItemAction.html#line.109">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,18 +84,8 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderSetBillingAddressCustomTypeActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.30">StagedOrderSetBillingAddressCustomTypeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.18">StagedOrderSetBillingAddressCustomTypeAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
-<div class="block">StagedOrderSetBillingAddressCustomTypeAction
-
- <hr>
- Example to create an instance using the builder pattern
- <div class=code-example>
- <pre><code class='java'>
-     StagedOrderSetBillingAddressCustomTypeAction stagedOrderSetBillingAddressCustomTypeAction = StagedOrderSetBillingAddressCustomTypeAction.builder()
-             .build()
- </code></pre>
- </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,12 +124,12 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Sets the Custom Fields fields for the <code>billingAddress</code>.</div>
+<div class="block">Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>billingAddress</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">Defines the Type that extends the <code>billingAddress</code> with Custom Fields.</div>
+<div class="block">Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>billingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -182,7 +172,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="SET_BILLING_ADDRESS_CUSTOM_TYPE">
 <h3>SET_BILLING_ADDRESS_CUSTOM_TYPE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.34">SET_BILLING_ADDRESS_CUSTOM_TYPE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.22">SET_BILLING_ADDRESS_CUSTOM_TYPE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction.SET_BILLING_ADDRESS_CUSTOM_TYPE">Constant Field Values</a></dd>
@@ -201,64 +191,65 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.39">getType</a></span>()</div>
-<div class="block"><p>Defines the Type that extends the <code>billingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.28">getType</a></span>()</div>
+<div class="block"><p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>billingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+  If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.46">getFields</a></span>()</div>
-<div class="block"><p>Sets the Custom Fields fields for the <code>billingAddress</code>.</p></div>
+</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.35">getFields</a></span>()</div>
+<div class="block"><p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>billingAddress</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.50">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.39">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.52">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.41">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.66">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetBillingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderSetBillingAddressCustomTypeAction(java.util.function.Function)">
 <h3>withStagedOrderSetBillingAddressCustomTypeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.75">withStagedOrderSetBillingAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.64">withStagedOrderSetBillingAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.80">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetBillingAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetBillingAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetBillingAddressCustomTypeAction.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

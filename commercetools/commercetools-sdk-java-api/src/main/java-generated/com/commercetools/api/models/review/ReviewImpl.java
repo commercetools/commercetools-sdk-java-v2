@@ -106,7 +106,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>The current version of the review.</p>
+     *  <p>Current version of the Review.</p>
      */
 
     public Long getVersion() {
@@ -114,7 +114,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -122,7 +122,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -154,7 +154,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
      */
 
     public String getUniquenessValue() {
@@ -162,7 +162,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Language in which the content of the Review is written.</p>
      */
 
     public String getLocale() {
@@ -170,7 +170,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the author.</p>
      */
 
     public String getAuthorName() {
@@ -178,7 +178,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     public String getTitle() {
@@ -186,7 +186,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Content of the Review.</p>
      */
 
     public String getText() {
@@ -194,7 +194,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
      */
 
     public java.lang.Object getTarget() {
@@ -202,7 +202,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
 
     public Boolean getIncludedInStatistics() {
@@ -210,7 +210,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Number between -100 and 100 included.</p>
+     *  <p>Rating of the Product or Channel.</p>
      */
 
     public Integer getRating() {
@@ -218,7 +218,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -226,7 +226,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -234,7 +234,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the Review.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

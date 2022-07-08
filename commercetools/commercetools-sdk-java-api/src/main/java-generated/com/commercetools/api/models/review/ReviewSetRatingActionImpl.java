@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewSetRatingAction
+ *  <p>This update action produces the ReviewRatingSetMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBase {
@@ -43,7 +43,7 @@ public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBa
     }
 
     /**
-     *  <p>Number between -100 and 100 included. If <code>rating</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public Integer getRating() {

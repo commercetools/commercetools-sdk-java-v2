@@ -26,7 +26,7 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
     private String locale;
 
     /**
-     *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ReviewSetLocaleActionBuilder locale(@Nullable final String locale) {

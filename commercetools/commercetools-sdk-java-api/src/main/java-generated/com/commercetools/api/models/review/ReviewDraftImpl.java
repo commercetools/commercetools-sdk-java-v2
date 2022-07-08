@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ReviewDraft
+ *  <p>When creating a new Review, at least one of <code>title</code>, <code>text</code> or <code>rating</code> should be set.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewDraftImpl implements ReviewDraft, ModelBase {
@@ -79,7 +79,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
      */
 
     public String getUniquenessValue() {
@@ -87,7 +87,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Language in which the content of the Review is written.</p>
      */
 
     public String getLocale() {
@@ -95,7 +95,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the author.</p>
      */
 
     public String getAuthorName() {
@@ -103,7 +103,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     public String getTitle() {
@@ -111,7 +111,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Content of the Review.</p>
      */
 
     public String getText() {
@@ -119,7 +119,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively.</p>
      */
 
     public java.lang.Object getTarget() {
@@ -127,7 +127,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -135,7 +135,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
      */
 
     public Integer getRating() {
@@ -143,7 +143,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -151,7 +151,7 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Review.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {

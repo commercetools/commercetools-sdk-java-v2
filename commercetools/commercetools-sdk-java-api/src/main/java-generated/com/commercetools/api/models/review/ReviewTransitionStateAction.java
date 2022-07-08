@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReviewTransitionStateAction
+ *  <p>Transition to a new State. This update action produces the ReviewStateTransitionMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *
+     *  <p>Switch validations on or off.</p>
      */
 
     @JsonProperty("force")

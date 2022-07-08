@@ -27,7 +27,7 @@
         </plugins>
     </build>
     <properties>
-        <commercetools.version>8.8.0-SNAPSHOT</commercetools.version>
+        <commercetools.version>9.1.0-SNAPSHOT</commercetools.version>
     </properties>
     <dependencies>
         <dependency>

@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.17">FieldDefinitionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.20">FieldDefinitionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">FieldDefinition</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -180,7 +181,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>FieldDefinitionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.39">FieldDefinitionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.42">FieldDefinitionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -194,7 +195,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.42">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.49">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -204,7 +205,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.49">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.57">getName</a></span>()</div>
 <div class="block"><p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -215,7 +216,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.53">getLabel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.65">getLabel</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#getLabel()">getLabel</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -225,7 +226,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.57">getInputHint</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.73">getInputHint</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#getInputHint()">getInputHint</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -235,7 +236,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="setType(com.commercetools.history.models.common.FieldType)">
 <h3>setType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.61">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.77">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.history.models.common">FieldType</a>&nbsp;type)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#setType(com.commercetools.history.models.common.FieldType)">setType</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -245,7 +246,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.65">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.81">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#setName(java.lang.String)">setName</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -255,7 +256,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="setLabel(com.commercetools.history.models.common.LocalizedString)">
 <h3>setLabel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.69">setLabel</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.85">setLabel</a></span>&#8203;<span class="parameters">(<a href="LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#setLabel(com.commercetools.history.models.common.LocalizedString)">setLabel</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -265,7 +266,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="setInputHint(com.commercetools.history.models.common.TextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.73">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.89">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TextInputHint.html" title="interface in com.commercetools.history.models.common">TextInputHint</a>&nbsp;inputHint)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#setInputHint(com.commercetools.history.models.common.TextInputHint)">setInputHint</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.history.models.common">FieldDefinition</a></code></dd>
@@ -275,7 +276,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.77">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.93">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -285,7 +286,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.94">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/FieldDefinitionImpl.html#line.110">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

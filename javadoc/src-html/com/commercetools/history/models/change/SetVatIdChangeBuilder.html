@@ -19,69 +19,95 @@
 <span class="source-line-no">006</span><span id="line.6">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">010</span><span id="line.10">public class SetVatIdChangeBuilder implements Builder&lt;SetVatIdChange&gt; {</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">    private String change;</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    private String previousValue;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    private String nextValue;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    public SetVatIdChangeBuilder change(final String change) {</span>
-<span class="source-line-no">019</span><span id="line.19">        this.change = change;</span>
-<span class="source-line-no">020</span><span id="line.20">        return this;</span>
-<span class="source-line-no">021</span><span id="line.21">    }</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    public SetVatIdChangeBuilder previousValue(final String previousValue) {</span>
-<span class="source-line-no">024</span><span id="line.24">        this.previousValue = previousValue;</span>
-<span class="source-line-no">025</span><span id="line.25">        return this;</span>
-<span class="source-line-no">026</span><span id="line.26">    }</span>
+<span class="source-line-no">009</span><span id="line.9">/**</span>
+<span class="source-line-no">010</span><span id="line.10"> * SetVatIdChangeBuilder</span>
+<span class="source-line-no">011</span><span id="line.11"> * &lt;hr&gt;</span>
+<span class="source-line-no">012</span><span id="line.12"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">013</span><span id="line.13"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> *     SetVatIdChange setVatIdChange = SetVatIdChange.builder()</span>
+<span class="source-line-no">016</span><span id="line.16"> *             .change("{change}")</span>
+<span class="source-line-no">017</span><span id="line.17"> *             .previousValue("{previousValue}")</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .nextValue("{nextValue}")</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> */</span>
+<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">024</span><span id="line.24">public class SetVatIdChangeBuilder implements Builder&lt;SetVatIdChange&gt; {</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private String change;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    public SetVatIdChangeBuilder nextValue(final String nextValue) {</span>
-<span class="source-line-no">029</span><span id="line.29">        this.nextValue = nextValue;</span>
-<span class="source-line-no">030</span><span id="line.30">        return this;</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public String getChange() {</span>
-<span class="source-line-no">034</span><span id="line.34">        return this.change;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public String getPreviousValue() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return this.previousValue;</span>
+<span class="source-line-no">028</span><span id="line.28">    private String previousValue;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    private String nextValue;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    /**</span>
+<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Shape of the action for &lt;code&gt;setVatId&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">034</span><span id="line.34">     */</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    public SetVatIdChangeBuilder change(final String change) {</span>
+<span class="source-line-no">037</span><span id="line.37">        this.change = change;</span>
+<span class="source-line-no">038</span><span id="line.38">        return this;</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public String getNextValue() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return this.nextValue;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     *</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public SetVatIdChange build() {</span>
-<span class="source-line-no">046</span><span id="line.46">        Objects.requireNonNull(change, SetVatIdChange.class + ": change is missing");</span>
-<span class="source-line-no">047</span><span id="line.47">        Objects.requireNonNull(previousValue, SetVatIdChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">048</span><span id="line.48">        Objects.requireNonNull(nextValue, SetVatIdChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">049</span><span id="line.49">        return new SetVatIdChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     * builds SetVatIdChange without checking for non null required values</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    public SetVatIdChange buildUnchecked() {</span>
-<span class="source-line-no">056</span><span id="line.56">        return new SetVatIdChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">045</span><span id="line.45">    public SetVatIdChangeBuilder previousValue(final String previousValue) {</span>
+<span class="source-line-no">046</span><span id="line.46">        this.previousValue = previousValue;</span>
+<span class="source-line-no">047</span><span id="line.47">        return this;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    /**</span>
+<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public SetVatIdChangeBuilder nextValue(final String nextValue) {</span>
+<span class="source-line-no">055</span><span id="line.55">        this.nextValue = nextValue;</span>
+<span class="source-line-no">056</span><span id="line.56">        return this;</span>
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public static SetVatIdChangeBuilder of() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return new SetVatIdChangeBuilder();</span>
+<span class="source-line-no">059</span><span id="line.59">    public String getChange() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return this.change;</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public static SetVatIdChangeBuilder of(final SetVatIdChange template) {</span>
-<span class="source-line-no">064</span><span id="line.64">        SetVatIdChangeBuilder builder = new SetVatIdChangeBuilder();</span>
-<span class="source-line-no">065</span><span id="line.65">        builder.change = template.getChange();</span>
-<span class="source-line-no">066</span><span id="line.66">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">067</span><span id="line.67">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">068</span><span id="line.68">        return builder;</span>
+<span class="source-line-no">063</span><span id="line.63">    public String getPreviousValue() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return this.previousValue;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public String getNextValue() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.nextValue;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">}</span>
+<span class="source-line-no">071</span><span id="line.71">    public SetVatIdChange build() {</span>
+<span class="source-line-no">072</span><span id="line.72">        Objects.requireNonNull(change, SetVatIdChange.class + ": change is missing");</span>
+<span class="source-line-no">073</span><span id="line.73">        Objects.requireNonNull(previousValue, SetVatIdChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">074</span><span id="line.74">        Objects.requireNonNull(nextValue, SetVatIdChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">075</span><span id="line.75">        return new SetVatIdChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     * builds SetVatIdChange without checking for non null required values</span>
+<span class="source-line-no">080</span><span id="line.80">     */</span>
+<span class="source-line-no">081</span><span id="line.81">    public SetVatIdChange buildUnchecked() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new SetVatIdChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static SetVatIdChangeBuilder of() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new SetVatIdChangeBuilder();</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static SetVatIdChangeBuilder of(final SetVatIdChange template) {</span>
+<span class="source-line-no">090</span><span id="line.90">        SetVatIdChangeBuilder builder = new SetVatIdChangeBuilder();</span>
+<span class="source-line-no">091</span><span id="line.91">        builder.change = template.getChange();</span>
+<span class="source-line-no">092</span><span id="line.92">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">093</span><span id="line.93">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">094</span><span id="line.94">        return builder;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">}</span>
 
 
 

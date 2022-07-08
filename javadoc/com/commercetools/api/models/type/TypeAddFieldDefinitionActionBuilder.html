@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.10">TypeAddFieldDefinitionActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.22">TypeAddFieldDefinitionActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a>&gt;</span></div>
+<div class="block">TypeAddFieldDefinitionActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TypeAddFieldDefinitionAction typeAddFieldDefinitionAction = TypeAddFieldDefinitionAction.builder()
+             .fieldDefinition(fieldDefinitionBuilder -> fieldDefinitionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,10 +133,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fieldDefinition(com.commercetools.api.models.type.FieldDefinition)">fieldDefinition</a></span>&#8203;(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;fieldDefinition)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to append to the array.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fieldDefinition(java.util.function.Function)">fieldDefinition</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to append to the array.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFieldDefinition()">getFieldDefinition</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -156,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TypeAddFieldDefinitionActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.11">TypeAddFieldDefinitionActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.23">TypeAddFieldDefinitionActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +184,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="fieldDefinition(java.util.function.Function)">
 <h3>fieldDefinition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.15">fieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.31">fieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Value to append to the array.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fieldDefinition(com.commercetools.api.models.type.FieldDefinition)">
 <h3>fieldDefinition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.21">fieldDefinition</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;fieldDefinition)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.41">fieldDefinition</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;fieldDefinition)</span></div>
+<div class="block"><p>Value to append to the array.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFieldDefinition()">
 <h3>getFieldDefinition</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.27">getFieldDefinition</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.47">getFieldDefinition</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a>&gt;</code></dd>
@@ -198,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds TypeAddFieldDefinitionAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeAddFieldDefinitionAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddFieldDefinitionActionBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="TypeAddFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeAddFieldDefinitionAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.10">OrderReturnInfoAddedMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.22">OrderReturnInfoAddedMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a>&gt;</span></div>
+<div class="block">OrderReturnInfoAddedMessagePayloadBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderReturnInfoAddedMessagePayload orderReturnInfoAddedMessagePayload = OrderReturnInfoAddedMessagePayload.builder()
+             .returnInfo(returnInfoBuilder -> returnInfoBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -156,7 +166,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderReturnInfoAddedMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.11">OrderReturnInfoAddedMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.23">OrderReturnInfoAddedMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +180,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="returnInfo(java.util.function.Function)">
 <h3>returnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.15">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.31">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="returnInfo(com.commercetools.api.models.order.ReturnInfo)">
 <h3>returnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.21">returnInfo</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;returnInfo)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.41">returnInfo</a></span>&#8203;<span class="parameters">(<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;returnInfo)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnInfo()">
 <h3>getReturnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.27">getReturnInfo</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.47">getReturnInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a>&gt;</code></dd>
@@ -198,20 +208,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderReturnInfoAddedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderReturnInfoAddedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoAddedMessagePayloadBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnInfoAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

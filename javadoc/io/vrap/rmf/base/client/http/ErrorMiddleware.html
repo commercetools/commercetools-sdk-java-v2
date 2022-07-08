@@ -45,7 +45,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -80,12 +80,27 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.10">ErrorMiddleware</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.13">ErrorMiddleware</a></span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
 <div class="block">Used to convert API errors to Exceptions</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested.class.summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Interface</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a></span></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method.summary">
@@ -102,6 +117,13 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.error.HttpExceptionFactory)">of</a></span>&#8203;(<a href="../error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;exceptionFactory)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.error.HttpExceptionFactory,io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)">of</a></span>&#8203;(<a href="../error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;exceptionFactory,
+ <a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)">of</a></span>&#8203;(<a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table"><code>static <a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab6 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ResponseSerializer)">of</a></span>&#8203;(<a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
@@ -128,21 +150,34 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.12">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.32">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.ResponseSerializer)">
 <h3>of</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.16">of</a></span>&#8203;<span class="parameters">(<a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
+</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.36">of</a></span>&#8203;<span class="parameters">(<a href="../ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(io.vrap.rmf.base.client.error.HttpExceptionFactory)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.21">of</a></span>&#8203;<span class="parameters">(<a href="../error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;exceptionFactory)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.41">of</a></span>&#8203;<span class="parameters">(<a href="../error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;exceptionFactory)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.error.HttpExceptionFactory,io.vrap.rmf.base.client.http.ErrorMiddleware.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http">ErrorMiddleware</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/io/vrap/rmf/base/client/http/ErrorMiddleware.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="../error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a>&nbsp;exceptionFactory,
+ <a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
 </section>
 </li>
 </ul>

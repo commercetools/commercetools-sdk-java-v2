@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartDiscountSetValidFromActionImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.14">CartDiscountSetValidFromAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.26">CartDiscountSetValidFromAction</a></span><span class="extends-implements">
 extends <a href="CartDiscountUpdateAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountUpdateAction</a></span></div>
+<div class="block">CartDiscountSetValidFromAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CartDiscountSetValidFromAction cartDiscountSetValidFromAction = CartDiscountSetValidFromAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,7 +134,7 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getValidFrom()">getValidFrom</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">If absent, the field with the value is removed in case a value was set before.</div>
+<div class="block">Value to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -164,7 +174,7 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <li>
 <section class="detail" id="SET_VALID_FROM">
 <h3>SET_VALID_FROM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.18">SET_VALID_FROM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.30">SET_VALID_FROM</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction.SET_VALID_FROM">Constant Field Values</a></dd>
@@ -182,50 +192,50 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.24">getValidFrom</a></span>()</div>
-<div class="block"><p>If absent, the field with the value is removed in case a value was set before.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.36">getValidFrom</a></span>()</div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.27">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.39">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.41">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.39">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.51">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.43">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountSetValidFromActionBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.55">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartDiscountSetValidFromAction(java.util.function.Function)">
 <h3>withCartDiscountSetValidFromAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.47">withCartDiscountSetValidFromAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.59">withCartDiscountSetValidFromAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.51">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountSetValidFromAction.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountSetValidFromAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountSetValidFromAction.html#line.63">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

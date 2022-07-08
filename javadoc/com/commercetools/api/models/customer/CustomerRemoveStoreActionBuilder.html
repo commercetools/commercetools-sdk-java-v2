@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.10">CustomerRemoveStoreActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.22">CustomerRemoveStoreActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a>&gt;</span></div>
+<div class="block">CustomerRemoveStoreActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CustomerRemoveStoreAction customerRemoveStoreAction = CustomerRemoveStoreAction.builder()
+             .store(storeBuilder -> storeBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,10 +142,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#store(com.commercetools.api.models.store.StoreResourceIdentifier)">store</a></span>&#8203;(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">ResourceIdentifier to a Store.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#store(java.util.function.Function)">store</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>,&#8203;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">ResourceIdentifier to a Store.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerRemoveStoreActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.11">CustomerRemoveStoreActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.23">CustomerRemoveStoreActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +184,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="store(java.util.function.Function)">
 <h3>store</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.15">store</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>,&#8203;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.31">store</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>,&#8203;<a href="../store/StoreResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.store">StoreResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>ResourceIdentifier to a Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="store(com.commercetools.api.models.store.StoreResourceIdentifier)">
 <h3>store</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.21">store</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.41">store</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</span></div>
+<div class="block"><p>ResourceIdentifier to a Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStore()">
 <h3>getStore</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.27">getStore</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.47">getStore</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a>&gt;</code></dd>
@@ -198,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerRemoveStoreAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.customer.CustomerRemoveStoreAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerRemoveStoreActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerRemoveStoreActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerRemoveStoreActionBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="CustomerRemoveStoreAction.html" title="interface in com.commercetools.api.models.customer">CustomerRemoveStoreAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

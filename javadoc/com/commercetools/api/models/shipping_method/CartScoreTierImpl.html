@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code>, <code><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.17">CartScoreTierImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.20">CartScoreTierImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block"><p>Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges). Either <code>price</code> or <code>priceFunction</code> is required.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -136,23 +137,27 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getIsMatching()">getIsMatching</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPrice()">getPrice</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Draft type that stores amounts in cent precision for the specified currency.</div>
+<div class="block">Defines a fixed price for the <code>score</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPriceFunction()">getPriceFunction</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Dynamically calculates a Price for a range of scores.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getScore()">getScore</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Abstract value for categorizing a Cart.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateTierType.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateTierType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Can be one of the following or absent.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -166,7 +171,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setPriceFunction(com.commercetools.api.models.shipping_method.PriceFunction)">setPriceFunction</a></span>&#8203;(<a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a>&nbsp;priceFunction)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setScore(java.lang.Double)">setScore</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;score)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setScore(java.lang.Integer)">setScore</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;score)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
@@ -197,7 +202,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartScoreTierImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.42">CartScoreTierImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.45">CartScoreTierImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -211,8 +216,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateTierType.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateTierType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.49">getType</a></span>()</div>
-<div class="block"><p>Can be one of the following or absent.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateTierType.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateTierType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.53">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRatePriceTier.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a></code></dd>
@@ -222,7 +226,8 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getScore()">
 <h3>getScore</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.53">getScore</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.61">getScore</a></span>()</div>
+<div class="block"><p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#getScore()">getScore</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -232,9 +237,8 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.61">getPrice</a></span>()</div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
-  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.69">getPrice</a></span>()</div>
+<div class="block"><p>Defines a fixed price for the <code>score</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#getPrice()">getPrice</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -244,7 +248,8 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getPriceFunction()">
 <h3>getPriceFunction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.65">getPriceFunction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.77">getPriceFunction</a></span>()</div>
+<div class="block"><p>Dynamically calculates a Price for a range of scores.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#getPriceFunction()">getPriceFunction</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -254,7 +259,8 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.69">getIsMatching</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.85">getIsMatching</a></span>()</div>
+<div class="block"><p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#getIsMatching()">getIsMatching</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -262,19 +268,19 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 </section>
 </li>
 <li>
-<section class="detail" id="setScore(java.lang.Double)">
+<section class="detail" id="setScore(java.lang.Integer)">
 <h3>setScore</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.73">setScore</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;score)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.89">setScore</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;score)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="CartScoreTier.html#setScore(java.lang.Double)">setScore</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
+<dd><code><a href="CartScoreTier.html#setScore(java.lang.Integer)">setScore</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setPrice(com.commercetools.api.models.common.Money)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.77">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.93">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#setPrice(com.commercetools.api.models.common.Money)">setPrice</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -284,7 +290,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setPriceFunction(com.commercetools.api.models.shipping_method.PriceFunction)">
 <h3>setPriceFunction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.81">setPriceFunction</a></span>&#8203;<span class="parameters">(<a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a>&nbsp;priceFunction)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.97">setPriceFunction</a></span>&#8203;<span class="parameters">(<a href="PriceFunction.html" title="interface in com.commercetools.api.models.shipping_method">PriceFunction</a>&nbsp;priceFunction)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#setPriceFunction(com.commercetools.api.models.shipping_method.PriceFunction)">setPriceFunction</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -294,7 +300,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.85">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.101">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CartScoreTier.html#setIsMatching(java.lang.Boolean)">setIsMatching</a></code>&nbsp;in interface&nbsp;<code><a href="CartScoreTier.html" title="interface in com.commercetools.api.models.shipping_method">CartScoreTier</a></code></dd>
@@ -304,7 +310,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.89">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.105">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -314,7 +320,7 @@ implements <a href="CartScoreTier.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.107">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/CartScoreTierImpl.html#line.123">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

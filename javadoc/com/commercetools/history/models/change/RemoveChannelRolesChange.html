@@ -84,8 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="RemoveChannelRolesChangeImpl.html" title="class in com.commercetools.history.models.change">RemoveChannelRolesChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.16">RemoveChannelRolesChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.31">RemoveChannelRolesChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
+<div class="block">RemoveChannelRolesChange
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     RemoveChannelRolesChange removeChannelRolesChange = RemoveChannelRolesChange.builder()
+             .change("{change}")
+             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -180,7 +193,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="REMOVE_CHANNEL_ROLES_CHANGE">
 <h3>REMOVE_CHANNEL_ROLES_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.20">REMOVE_CHANNEL_ROLES_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.35">REMOVE_CHANNEL_ROLES_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.RemoveChannelRolesChange.REMOVE_CHANNEL_ROLES_CHANGE">Constant Field Values</a></dd>
@@ -199,7 +212,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.22">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.40">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -210,7 +223,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.26">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.47">getChange</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getChange()">getChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -221,20 +234,20 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.30">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.54">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.34">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.61">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.38">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.65">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -244,61 +257,61 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.ChannelRole...)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.40">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.67">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(java.util.List)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.43">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.70">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.ChannelRole...)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.45">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.72">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(java.util.List)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.48">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.75">setNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ChannelRole.html" title="interface in com.commercetools.history.models.common">ChannelRole</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.50">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.77">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.RemoveChannelRolesChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.81">of</a></span>&#8203;<span class="parameters">(<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveChannelRolesChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.62">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveChannelRolesChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.89">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.RemoveChannelRolesChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveChannelRolesChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.66">builder</a></span>&#8203;<span class="parameters">(<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RemoveChannelRolesChangeBuilder.html" title="class in com.commercetools.history.models.change">RemoveChannelRolesChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.93">builder</a></span>&#8203;<span class="parameters">(<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withRemoveChannelRolesChange(java.util.function.Function)">
 <h3>withRemoveChannelRolesChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.70">withRemoveChannelRolesChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.97">withRemoveChannelRolesChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.74">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="RemoveChannelRolesChange.html" title="interface in com.commercetools.history.models.change">RemoveChannelRolesChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/RemoveChannelRolesChange.html#line.101">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

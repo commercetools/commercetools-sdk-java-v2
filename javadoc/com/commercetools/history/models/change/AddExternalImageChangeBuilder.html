@@ -83,9 +83,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.10">AddExternalImageChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.25">AddExternalImageChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a>&gt;</span></div>
+<div class="block">AddExternalImageChangeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     AddExternalImageChange addExternalImageChange = AddExternalImageChange.builder()
+             .change("{change}")
+             .catalogData("{catalogData}")
+             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,7 +139,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#change(java.lang.String)">change</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Update actions for adding an external image</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCatalogData()">getCatalogData</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -195,7 +210,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AddExternalImageChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.11">AddExternalImageChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.26">AddExternalImageChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -209,103 +224,104 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.21">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.40">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="block"><p>Update actions for adding an external image</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="catalogData(java.lang.String)">
 <h3>catalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.26">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.49">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.Image...)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.31">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.58">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.List)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.37">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.68">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(com.commercetools.history.models.common.Image...)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.43">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.78">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(java.util.function.Function)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.52">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.91">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPreviousValue(java.util.function.Function)">
 <h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.61">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.104">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.Image...)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.68">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.115">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.List)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.73">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.124">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(com.commercetools.history.models.common.Image...)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.79">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.134">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(java.util.function.Function)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.88">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.147">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withNextValue(java.util.function.Function)">
 <h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.97">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.160">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.history.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.104">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.167">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCatalogData()">
 <h3>getCatalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.108">getCatalogData</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.171">getCatalogData</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.112">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.175">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.116">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.history.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.179">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.120">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.183">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a>&gt;</code></dd>
@@ -315,20 +331,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.131">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.194">buildUnchecked</a></span>()</div>
 <div class="block">builds AddExternalImageChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.135">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.198">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddExternalImageChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.139">of</a></span>&#8203;<span class="parameters">(<a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddExternalImageChangeBuilder.html" title="class in com.commercetools.history.models.change">AddExternalImageChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddExternalImageChangeBuilder.html#line.202">of</a></span>&#8203;<span class="parameters">(<a href="AddExternalImageChange.html" title="interface in com.commercetools.history.models.change">AddExternalImageChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

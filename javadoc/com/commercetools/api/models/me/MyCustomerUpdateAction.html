@@ -88,8 +88,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MyCustomerAddAddressActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerAddAddressActionImpl</a></code>, <code><a href="MyCustomerAddBillingAddressIdActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerAddBillingAddressIdActionImpl</a></code>, <code><a href="MyCustomerAddShippingAddressIdActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerAddShippingAddressIdActionImpl</a></code>, <code><a href="MyCustomerChangeAddressActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerChangeAddressActionImpl</a></code>, <code><a href="MyCustomerChangeEmailActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerChangeEmailActionImpl</a></code>, <code><a href="MyCustomerRemoveAddressActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveAddressActionImpl</a></code>, <code><a href="MyCustomerRemoveBillingAddressIdActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveBillingAddressIdActionImpl</a></code>, <code><a href="MyCustomerRemoveShippingAddressIdActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveShippingAddressIdActionImpl</a></code>, <code><a href="MyCustomerSetCompanyNameActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetCompanyNameActionImpl</a></code>, <code><a href="MyCustomerSetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomFieldActionImpl</a></code>, <code><a href="MyCustomerSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomTypeActionImpl</a></code>, <code><a href="MyCustomerSetDateOfBirthActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetDateOfBirthActionImpl</a></code>, <code><a href="MyCustomerSetDefaultBillingAddressActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultBillingAddressActionImpl</a></code>, <code><a href="MyCustomerSetDefaultShippingAddressActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultShippingAddressActionImpl</a></code>, <code><a href="MyCustomerSetFirstNameActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetFirstNameActionImpl</a></code>, <code><a href="MyCustomerSetLastNameActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetLastNameActionImpl</a></code>, <code><a href="MyCustomerSetLocaleActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetLocaleActionImpl</a></code>, <code><a href="MyCustomerSetMiddleNameActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetMiddleNameActionImpl</a></code>, <code><a href="MyCustomerSetSalutationActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetSalutationActionImpl</a></code>, <code><a href="MyCustomerSetTitleActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetTitleActionImpl</a></code>, <code><a href="MyCustomerSetVatIdActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerSetVatIdActionImpl</a></code>, <code><a href="MyCustomerUpdateActionImpl.html" title="class in com.commercetools.api.models.me">MyCustomerUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.15">MyCustomerUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.28">MyCustomerUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>&gt;</span></div>
+<div class="block">MyCustomerUpdateAction
+
+ <hr>
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     MyCustomerUpdateAction myCustomerUpdateAction = MyCustomerUpdateAction.addAddressBuilder()
+             address(addressBuilder -> addressBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -197,7 +208,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.43">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.59">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>&gt;</code></dd>
@@ -207,139 +218,139 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addAddressBuilder()">
 <h3>addAddressBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.47">addAddressBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.63">addAddressBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addBillingAddressIdBuilder()">
 <h3>addBillingAddressIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddBillingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddBillingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.51">addBillingAddressIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddBillingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddBillingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.67">addBillingAddressIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addShippingAddressIdBuilder()">
 <h3>addShippingAddressIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddShippingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddShippingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.55">addShippingAddressIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerAddShippingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerAddShippingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.71">addShippingAddressIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAddressBuilder()">
 <h3>changeAddressBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.59">changeAddressBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.75">changeAddressBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeEmailBuilder()">
 <h3>changeEmailBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerChangeEmailActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerChangeEmailActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.63">changeEmailBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerChangeEmailActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerChangeEmailActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.79">changeEmailBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeAddressBuilder()">
 <h3>removeAddressBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.67">removeAddressBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.83">removeAddressBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeBillingAddressIdBuilder()">
 <h3>removeBillingAddressIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveBillingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveBillingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.71">removeBillingAddressIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveBillingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveBillingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.87">removeBillingAddressIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeShippingAddressIdBuilder()">
 <h3>removeShippingAddressIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveShippingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveShippingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.75">removeShippingAddressIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerRemoveShippingAddressIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerRemoveShippingAddressIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.91">removeShippingAddressIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCompanyNameBuilder()">
 <h3>setCompanyNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCompanyNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCompanyNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.79">setCompanyNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCompanyNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCompanyNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.95">setCompanyNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomFieldBuilder()">
 <h3>setCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.83">setCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.99">setCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomTypeBuilder()">
 <h3>setCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.87">setCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.103">setCustomTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDateOfBirthBuilder()">
 <h3>setDateOfBirthBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDateOfBirthActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDateOfBirthActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.91">setDateOfBirthBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDateOfBirthActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDateOfBirthActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.107">setDateOfBirthBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDefaultBillingAddressBuilder()">
 <h3>setDefaultBillingAddressBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDefaultBillingAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultBillingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.95">setDefaultBillingAddressBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDefaultBillingAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultBillingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.111">setDefaultBillingAddressBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDefaultShippingAddressBuilder()">
 <h3>setDefaultShippingAddressBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDefaultShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.99">setDefaultShippingAddressBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetDefaultShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetDefaultShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.115">setDefaultShippingAddressBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFirstNameBuilder()">
 <h3>setFirstNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetFirstNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetFirstNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.103">setFirstNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetFirstNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetFirstNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.119">setFirstNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLastNameBuilder()">
 <h3>setLastNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetLastNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetLastNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.107">setLastNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetLastNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetLastNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.123">setLastNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLocaleBuilder()">
 <h3>setLocaleBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetLocaleActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetLocaleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.111">setLocaleBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetLocaleActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetLocaleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.127">setLocaleBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMiddleNameBuilder()">
 <h3>setMiddleNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetMiddleNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetMiddleNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.115">setMiddleNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetMiddleNameActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetMiddleNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.131">setMiddleNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSalutationBuilder()">
 <h3>setSalutationBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetSalutationActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetSalutationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.119">setSalutationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetSalutationActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetSalutationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.135">setSalutationBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTitleBuilder()">
 <h3>setTitleBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetTitleActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.123">setTitleBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetTitleActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.139">setTitleBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVatIdBuilder()">
 <h3>setVatIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetVatIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetVatIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.127">setVatIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyCustomerSetVatIdActionBuilder.html" title="class in com.commercetools.api.models.me">MyCustomerSetVatIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.143">setVatIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMyCustomerUpdateAction(java.util.function.Function)">
 <h3>withMyCustomerUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.131">withMyCustomerUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.147">withMyCustomerUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.135">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyCustomerUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCustomerUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyCustomerUpdateAction.html#line.151">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

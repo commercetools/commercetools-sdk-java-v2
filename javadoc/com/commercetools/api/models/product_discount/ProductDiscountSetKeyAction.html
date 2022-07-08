@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductDiscountSetKeyActionImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountSetKeyActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.13">ProductDiscountSetKeyAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.25">ProductDiscountSetKeyAction</a></span><span class="extends-implements">
 extends <a href="ProductDiscountUpdateAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountUpdateAction</a></span></div>
+<div class="block">ProductDiscountSetKeyAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductDiscountSetKeyAction productDiscountSetKeyAction = ProductDiscountSetKeyAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,7 +134,7 @@ extends <a href="ProductDiscountUpdateAction.html" title="interface in com.comme
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The key to set.</div>
+<div class="block">Value to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -164,7 +174,7 @@ extends <a href="ProductDiscountUpdateAction.html" title="interface in com.comme
 <li>
 <section class="detail" id="SET_KEY">
 <h3>SET_KEY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.17">SET_KEY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.29">SET_KEY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction.SET_KEY">Constant Field Values</a></dd>
@@ -182,51 +192,50 @@ extends <a href="ProductDiscountUpdateAction.html" title="interface in com.comme
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.24">getKey</a></span>()</div>
-<div class="block"><p>The key to set.
-  If you provide a <code>null</code> value or do not set this field at all, the existing <code>key</code> field is removed.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.35">getKey</a></span>()</div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.27">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.38">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.40">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.44">of</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.39">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.50">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.43">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductDiscountSetKeyAction(java.util.function.Function)">
 <h3>withProductDiscountSetKeyAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.47">withProductDiscountSetKeyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.58">withProductDiscountSetKeyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.51">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDiscountSetKeyAction.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountSetKeyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountSetKeyAction.html#line.62">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="InventoryEntryCreatedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.17">InventoryEntryCreatedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.30">InventoryEntryCreatedMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
+<div class="block">InventoryEntryCreatedMessagePayload
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     InventoryEntryCreatedMessagePayload inventoryEntryCreatedMessagePayload = InventoryEntryCreatedMessagePayload.builder()
+             .inventoryEntry(inventoryEntryBuilder -> inventoryEntryBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -159,7 +170,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="INVENTORY_ENTRY_CREATED">
 <h3>INVENTORY_ENTRY_CREATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.21">INVENTORY_ENTRY_CREATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.34">INVENTORY_ENTRY_CREATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload.INVENTORY_ENTRY_CREATED">Constant Field Values</a></dd>
@@ -179,49 +190,49 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getInventoryEntry</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.23">getInventoryEntry</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.39">getInventoryEntry</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInventoryEntry(com.commercetools.api.models.inventory.InventoryEntry)">
 <h3>setInventoryEntry</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.28">setInventoryEntry</a></span>&#8203;<span class="parameters">(<a href="../inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;inventoryEntry)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.44">setInventoryEntry</a></span>&#8203;<span class="parameters">(<a href="../inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;inventoryEntry)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInventoryEntryCreatedMessagePayload(java.util.function.Function)">
 <h3>withInventoryEntryCreatedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.49">withInventoryEntryCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.65">withInventoryEntryCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.53">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntryCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/InventoryEntryCreatedMessagePayload.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

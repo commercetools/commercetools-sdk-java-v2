@@ -83,9 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.10">UpdateSyncInfoChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.24">UpdateSyncInfoChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a>&gt;</span></div>
+<div class="block">UpdateSyncInfoChangeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
+             .change("{change}")
+             .channelId("{channelId}")
+             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +135,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#change(java.lang.String)">change</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Update action for <code>updateSyncInfo</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#channelId(java.lang.String)">channelId</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;channelId)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -168,7 +182,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>UpdateSyncInfoChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.11">UpdateSyncInfoChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.25">UpdateSyncInfoChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -182,49 +196,50 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.19">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.37">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="block"><p>Update action for <code>updateSyncInfo</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="channelId(java.lang.String)">
 <h3>channelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.24">channelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;channelId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.46">channelId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;channelId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.29">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a>,&#8203;<a href="../common/SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.55">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a>,&#8203;<a href="../common/SyncInfoBuilder.html" title="class in com.commercetools.history.models.common">SyncInfoBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.SyncInfo)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.35">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/SyncInfo.html" title="interface in com.commercetools.history.models.common">SyncInfo</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.65">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/SyncInfo.html" title="interface in com.commercetools.history.models.common">SyncInfo</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.40">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.70">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChannelId()">
 <h3>getChannelId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.44">getChannelId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.74">getChannelId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/SyncInfo.html" title="interface in com.commercetools.history.models.common">SyncInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.48">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/SyncInfo.html" title="interface in com.commercetools.history.models.common">SyncInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.78">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.52">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.82">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a>&gt;</code></dd>
@@ -234,20 +249,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.62">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.92">buildUnchecked</a></span>()</div>
 <div class="block">builds UpdateSyncInfoChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.66">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.96">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.UpdateSyncInfoChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="UpdateSyncInfoChangeBuilder.html" title="class in com.commercetools.history.models.change">UpdateSyncInfoChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/UpdateSyncInfoChangeBuilder.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="UpdateSyncInfoChange.html" title="interface in com.commercetools.history.models.change">UpdateSyncInfoChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

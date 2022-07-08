@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;javax.money.MonetaryAmount&gt;</code>, <code>javax.money.CurrencySupplier</code>, <code>javax.money.MonetaryAmount</code>, <code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code>javax.money.NumberSupplier</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -88,10 +88,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CentPrecisionMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyDraftImpl</a></code>, <code><a href="CentPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyImpl</a></code>, <code><a href="HighPrecisionMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftImpl</a></code>, <code><a href="HighPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyImpl</a></code>, <code><a href="MoneyImpl.html" title="class in com.commercetools.api.models.common">MoneyImpl</a></code>, <code><a href="TypedMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyDraftImpl</a></code>, <code><a href="TypedMoneyImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.19">Money</a></span><span class="extends-implements">
-extends <a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></span></div>
-<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.
-  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.30">Money</a></span><span class="extends-implements">
+extends <a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a>, javax.money.MonetaryAmount</span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
+  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     Money money = Money.builder()
+             .centAmount(0.3)
+             .currencyCode("{currencyCode}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,46 +117,157 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#abs()">abs</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#add(javax.money.MonetaryAmount)">add</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;augend)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder()">builder</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.common.Money)">builder</a></span>&#8203;(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">amount in the smallest indivisible unit of a currency, such as</div>
-</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCurrencyCode()">getCurrencyCode</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default int</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#compareTo(javax.money.MonetaryAmount)">compareTo</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;o)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryOperator</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#createMoneyOperator()">createMoneyOperator</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divide(double)">divide</a></span>&#8203;(double&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divide(long)">divide</a></span>&#8203;(long&nbsp;divisor)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divide(java.lang.Number)">divide</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount[]</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideAndRemainder(double)">divideAndRemainder</a></span>&#8203;(double&nbsp;divisor)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount[]</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideAndRemainder(long)">divideAndRemainder</a></span>&#8203;(long&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount[]</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideAndRemainder(java.lang.Number)">divideAndRemainder</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideToIntegralValue(double)">divideToIntegralValue</a></span>&#8203;(double&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideToIntegralValue(long)">divideToIntegralValue</a></span>&#8203;(long&nbsp;divisor)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#divideToIntegralValue(java.lang.Number)">divideToIntegralValue</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</div>
+<div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryContext</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getContext()">getContext</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.CurrencyUnit</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getCurrency()">getCurrency</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCurrencyCode()">getCurrencyCode</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Currency code compliant to ISO 4217.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmountFactory&lt;? extends javax.money.MonetaryAmount&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getFactory()">getFactory</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.NumberValue</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#getNumber()">getNumber</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#isEqualTo(javax.money.MonetaryAmount)">isEqualTo</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default boolean</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#isGreaterThan(javax.money.MonetaryAmount)">isGreaterThan</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;amount)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#isGreaterThanOrEqualTo(javax.money.MonetaryAmount)">isGreaterThanOrEqualTo</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default boolean</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#isLessThan(javax.money.MonetaryAmount)">isLessThan</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;amount)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#isLessThanOrEqualTo(javax.money.MonetaryAmount)">isLessThanOrEqualTo</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;amount)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#multiply(double)">multiply</a></span>&#8203;(double&nbsp;multiplicand)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#multiply(long)">multiply</a></span>&#8203;(long&nbsp;multiplicand)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#multiply(java.lang.Number)">multiply</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;multiplicand)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#negate()">negate</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.common.Money)">of</a></span>&#8203;(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#plus()">plus</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;R&gt;&nbsp;R</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#query(javax.money.MonetaryQuery)">query</a></span>&#8203;(javax.money.MonetaryQuery&lt;R&gt;&nbsp;query)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#remainder(double)">remainder</a></span>&#8203;(double&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#remainder(long)">remainder</a></span>&#8203;(long&nbsp;divisor)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#remainder(java.lang.Number)">remainder</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#scaleByPowerOfTen(int)">scaleByPowerOfTen</a></span>&#8203;(int&nbsp;power)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCentAmount(java.lang.Long)">setCentAmount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCurrencyCode(java.lang.String)">setCurrencyCode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#toDraft()">toDraft</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default int</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#signum()">signum</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#stripTrailingZeros()">stripTrailingZeros</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#subtract(javax.money.MonetaryAmount)">subtract</a></span>&#8203;(javax.money.MonetaryAmount&nbsp;subtrahend)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#toDraft()">toDraft</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default javax.money.MonetaryAmount</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#with(javax.money.MonetaryOperator)">with</a></span>&#8203;(javax.money.MonetaryOperator&nbsp;operator)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withMoney(java.util.function.Function)">withMoney</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>,&#8203;T&gt;&nbsp;helper)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.javax.money.MonetaryAmount">Methods inherited from interface&nbsp;javax.money.MonetaryAmount</h3>
+<code>isNegative, isNegativeOrZero, isPositive, isPositiveOrZero, isZero</code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.MonetaryAmountConvertable">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></h3>
 <code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
@@ -164,11 +286,11 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <section class="detail" id="getCentAmount()">
 <h3>getCentAmount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.30">getCentAmount</a></span>()</div>
-<div class="block"><p>amount in the smallest indivisible unit of a currency, such as</p>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.41">getCentAmount</a></span>()</div>
+<div class="block"><p>Amount in the smallest indivisible unit of a currency, such as:</p>
   <ul>
-  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
   </ul></div>
 </section>
 </li>
@@ -176,50 +298,50 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <section class="detail" id="getCurrencyCode()">
 <h3>getCurrencyCode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.37">getCurrencyCode</a></span>()</div>
-<div class="block"><p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.48">getCurrencyCode</a></span>()</div>
+<div class="block"><p>Currency code compliant to ISO 4217.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCentAmount(java.lang.Long)">
 <h3>setCentAmount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.41">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.52">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCurrencyCode(java.lang.String)">
 <h3>setCurrencyCode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.43">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.54">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.Money)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.56">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.Money)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMoney(java.util.function.Function)">
 <h3>withMoney</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.64">withMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.75">withMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="MonetaryAmountConvertable.html#withMoney(java.util.function.Function)">withMoney</a></code>&nbsp;in interface&nbsp;<code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code></dd>
@@ -229,13 +351,369 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <li>
 <section class="detail" id="toDraft()">
 <h3>toDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.68">toDraft</a></span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.79">toDraft</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.78">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.89">typeReference</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="createMoneyOperator()">
+<h3>createMoneyOperator</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryOperator</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.98">createMoneyOperator</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getContext()">
+<h3>getContext</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryContext</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.102">getContext</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getContext</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFactory()">
+<h3>getFactory</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmountFactory&lt;? extends javax.money.MonetaryAmount&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.107">getFactory</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getFactory</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isGreaterThan(javax.money.MonetaryAmount)">
+<h3>isGreaterThan</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.112">isGreaterThan</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;amount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>isGreaterThan</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isGreaterThanOrEqualTo(javax.money.MonetaryAmount)">
+<h3>isGreaterThanOrEqualTo</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.117">isGreaterThanOrEqualTo</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;amount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>isGreaterThanOrEqualTo</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isLessThan(javax.money.MonetaryAmount)">
+<h3>isLessThan</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.122">isLessThan</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;amount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>isLessThan</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isLessThanOrEqualTo(javax.money.MonetaryAmount)">
+<h3>isLessThanOrEqualTo</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.127">isLessThanOrEqualTo</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;amount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>isLessThanOrEqualTo</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isEqualTo(javax.money.MonetaryAmount)">
+<h3>isEqualTo</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.132">isEqualTo</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;amount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>isEqualTo</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="signum()">
+<h3>signum</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.137">signum</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>signum</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="add(javax.money.MonetaryAmount)">
+<h3>add</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.142">add</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;augend)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>add</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="subtract(javax.money.MonetaryAmount)">
+<h3>subtract</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.147">subtract</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;subtrahend)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>subtract</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="multiply(long)">
+<h3>multiply</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.152">multiply</a></span>&#8203;<span class="parameters">(long&nbsp;multiplicand)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>multiply</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="multiply(double)">
+<h3>multiply</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.157">multiply</a></span>&#8203;<span class="parameters">(double&nbsp;multiplicand)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>multiply</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="multiply(java.lang.Number)">
+<h3>multiply</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.162">multiply</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;multiplicand)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>multiply</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divide(long)">
+<h3>divide</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.167">divide</a></span>&#8203;<span class="parameters">(long&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divide</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divide(double)">
+<h3>divide</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.172">divide</a></span>&#8203;<span class="parameters">(double&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divide</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divide(java.lang.Number)">
+<h3>divide</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.177">divide</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divide</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="remainder(long)">
+<h3>remainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.182">remainder</a></span>&#8203;<span class="parameters">(long&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>remainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="remainder(double)">
+<h3>remainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.187">remainder</a></span>&#8203;<span class="parameters">(double&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>remainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="remainder(java.lang.Number)">
+<h3>remainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.192">remainder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>remainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideAndRemainder(long)">
+<h3>divideAndRemainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.197">divideAndRemainder</a></span>&#8203;<span class="parameters">(long&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideAndRemainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideAndRemainder(double)">
+<h3>divideAndRemainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.205">divideAndRemainder</a></span>&#8203;<span class="parameters">(double&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideAndRemainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideAndRemainder(java.lang.Number)">
+<h3>divideAndRemainder</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.213">divideAndRemainder</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideAndRemainder</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideToIntegralValue(long)">
+<h3>divideToIntegralValue</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.221">divideToIntegralValue</a></span>&#8203;<span class="parameters">(long&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideToIntegralValue</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideToIntegralValue(double)">
+<h3>divideToIntegralValue</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.226">divideToIntegralValue</a></span>&#8203;<span class="parameters">(double&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideToIntegralValue</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="divideToIntegralValue(java.lang.Number)">
+<h3>divideToIntegralValue</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.231">divideToIntegralValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>divideToIntegralValue</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="scaleByPowerOfTen(int)">
+<h3>scaleByPowerOfTen</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.236">scaleByPowerOfTen</a></span>&#8203;<span class="parameters">(int&nbsp;power)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>scaleByPowerOfTen</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="abs()">
+<h3>abs</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.241">abs</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>abs</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="negate()">
+<h3>negate</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.246">negate</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>negate</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plus()">
+<h3>plus</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.251">plus</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>plus</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="stripTrailingZeros()">
+<h3>stripTrailingZeros</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.256">stripTrailingZeros</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>stripTrailingZeros</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="compareTo(javax.money.MonetaryAmount)">
+<h3>compareTo</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.261">compareTo</a></span>&#8203;<span class="parameters">(javax.money.MonetaryAmount&nbsp;o)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo(T)" title="class or interface in java.lang" class="external-link">compareTo</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;javax.money.MonetaryAmount&gt;</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCurrency()">
+<h3>getCurrency</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.CurrencyUnit</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.266">getCurrency</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getCurrency</code>&nbsp;in interface&nbsp;<code>javax.money.CurrencySupplier</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNumber()">
+<h3>getNumber</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.NumberValue</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.271">getNumber</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>getNumber</code>&nbsp;in interface&nbsp;<code>javax.money.NumberSupplier</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="query(javax.money.MonetaryQuery)">
+<h3>query</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;R&gt;</span>&nbsp;<span class="return-type">R</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.276">query</a></span>&#8203;<span class="parameters">(javax.money.MonetaryQuery&lt;R&gt;&nbsp;query)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>query</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="with(javax.money.MonetaryOperator)">
+<h3>with</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">javax.money.MonetaryAmount</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/Money.html#line.281">with</a></span>&#8203;<span class="parameters">(javax.money.MonetaryOperator&nbsp;operator)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code>with</code>&nbsp;in interface&nbsp;<code>javax.money.MonetaryAmount</code></dd>
+</dl>
 </section>
 </li>
 </ul>

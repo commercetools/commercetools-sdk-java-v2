@@ -87,9 +87,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ExtensionHttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionHttpDestinationBuilder</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.12">HttpDestinationBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.24">HttpDestinationBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&gt;</span></div>
+<div class="block">HttpDestinationBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     HttpDestination httpDestination = HttpDestination.builder()
+             .url("{url}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,10 +129,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#authentication(com.commercetools.api.models.extension.HttpDestinationAuthentication)">authentication</a></span>&#8203;(<a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&nbsp;authentication)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#authentication(java.util.function.Function)">authentication</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HttpDestinationAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationAuthenticationBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#build()">build</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -145,7 +159,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#url(java.lang.String)">url</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">URL to the target destination.</div>
+</div>
 </div>
 </div>
 </div>
@@ -166,7 +182,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>HttpDestinationBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.13">HttpDestinationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.25">HttpDestinationBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,39 +196,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="url(java.lang.String)">
 <h3>url</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.20">url</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.36">url</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
+<div class="block"><p>URL to the target destination.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="authentication(com.commercetools.api.models.extension.HttpDestinationAuthentication)">
 <h3>authentication</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.25">authentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.45">authentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&nbsp;authentication)</span></div>
+<div class="block"><p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="authentication(java.util.function.Function)">
 <h3>authentication</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.31">authentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HttpDestinationAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationAuthenticationBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.55">authentication</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HttpDestinationAuthenticationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationAuthenticationBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getUrl()">
 <h3>getUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.39">getUrl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.63">getUrl</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAuthentication()">
 <h3>getAuthentication</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.43">getAuthentication</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestinationAuthentication.html" title="interface in com.commercetools.api.models.extension">HttpDestinationAuthentication</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.67">getAuthentication</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.48">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.72">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&gt;</code></dd>
@@ -222,20 +241,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.56">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.80">buildUnchecked</a></span>()</div>
 <div class="block">builds HttpDestination without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.60">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.84">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.extension.HttpDestination)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.64">of</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/HttpDestinationBuilder.html#line.88">of</a></span>&#8203;<span class="parameters">(<a href="HttpDestination.html" title="interface in com.commercetools.api.models.extension">HttpDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -80,9 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ImportResponseImpl.html" title="class in com.commercetools.importapi.models.importrequests">ImportResponseImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.21">ImportResponse</a></span></div>
-<div class="block"><p>A list of the ID's and validation statuses of newly created <a href="#importoperation">ImportOperations</a>.
-  Used as a response at each resource-specific import endpoint, for example, at <a href="/category#import-categories">Import Categories</a> and <a href="/product-type#import-producttypes">Import ProductTypes</a>.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.30">ImportResponse</a></span></div>
+<div class="block"><p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ImportResponse importResponse = ImportResponse.builder()
+             .plusOperationStatus(operationStatusBuilder -> operationStatusBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -143,55 +152,55 @@ loadScripts(document, 'script');</script>
 <h3>getOperationStatus</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.25">getOperationStatus</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.37">getOperationStatus</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOperationStatus(com.commercetools.importapi.models.importoperations.ImportOperationStatus...)">
 <h3>setOperationStatus</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.30">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>...&nbsp;operationStatus)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.42">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>...&nbsp;operationStatus)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOperationStatus(java.util.List)">
 <h3>setOperationStatus</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.33">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;&nbsp;operationStatus)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.45">setOperationStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../importoperations/ImportOperationStatus.html" title="interface in com.commercetools.importapi.models.importoperations">ImportOperationStatus</a>&gt;&nbsp;operationStatus)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.47">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importrequests.ImportResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponseBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ImportResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.45">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponseBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ImportResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.57">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.importrequests.ImportResponse)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponseBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ImportResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.49">builder</a></span>&#8203;<span class="parameters">(<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportResponseBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ImportResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withImportResponse(java.util.function.Function)">
 <h3>withImportResponse</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.53">withImportResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.65">withImportResponse</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.57">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ImportResponse.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

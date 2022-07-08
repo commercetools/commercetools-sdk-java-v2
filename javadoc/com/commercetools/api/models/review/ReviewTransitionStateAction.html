@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReviewTransitionStateActionImpl.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.17">ReviewTransitionStateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.30">ReviewTransitionStateAction</a></span><span class="extends-implements">
 extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a></span></div>
+<div class="block"><p>Transition to a new State. This update action produces the ReviewStateTransitionMessage.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ReviewTransitionStateAction reviewTransitionStateAction = ReviewTransitionStateAction.builder()
+             .state(stateBuilder -> stateBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,10 +134,14 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getForce()">getForce</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Switch validations on or off.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Value to set.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -168,7 +183,7 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="TRANSITION_STATE">
 <h3>TRANSITION_STATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.21">TRANSITION_STATE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.34">TRANSITION_STATE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.review.ReviewTransitionStateAction.TRANSITION_STATE">Constant Field Values</a></dd>
@@ -188,61 +203,63 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.23">getState</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.39">getState</a></span>()</div>
+<div class="block"><p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getForce()">
 <h3>getForce</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.28">getForce</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.48">getForce</a></span>()</div>
+<div class="block"><p>Switch validations on or off.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.state.StateResourceIdentifier)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.31">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.51">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setForce(java.lang.Boolean)">
 <h3>setForce</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.33">setForce</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;force)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.53">setForce</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;force)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.55">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.review.ReviewTransitionStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.46">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.66">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.review.ReviewTransitionStateAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.50">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReviewTransitionStateAction(java.util.function.Function)">
 <h3>withReviewTransitionStateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.54">withReviewTransitionStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.74">withReviewTransitionStateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.58">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewTransitionStateAction.html" title="interface in com.commercetools.api.models.review">ReviewTransitionStateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewTransitionStateAction.html#line.78">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

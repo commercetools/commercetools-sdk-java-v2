@@ -80,7 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SearchKeywordImpl.html" title="class in com.commercetools.importapi.models.products">SearchKeywordImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.16">SearchKeyword</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.29">SearchKeyword</a></span></div>
+<div class="block">SearchKeyword
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SearchKeyword searchKeyword = SearchKeyword.builder()
+             .text("{text}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,7 +115,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.importapi.models.products">SuggestTokenizer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSuggestTokenizer()">getSuggestTokenizer</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The tokenizer defines the tokens that are used to match against the <a href="/../products-suggestions#suggest-query">Suggest Query</a> input.</div>
+<div class="block">The tokenizer defines the tokens that are used to match against the Suggest Query input.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getText()">getText</a></span>()</code></div>
@@ -145,63 +156,63 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getText()">
 <h3>getText</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.20">getText</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.36">getText</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSuggestTokenizer()">
 <h3>getSuggestTokenizer</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.importapi.models.products">SuggestTokenizer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.27">getSuggestTokenizer</a></span>()</div>
-<div class="block"><p>The tokenizer defines the tokens that are used to match against the <a href="/../products-suggestions#suggest-query">Suggest Query</a> input.</p></div>
+</span><span class="return-type">@Valid <a href="SuggestTokenizer.html" title="interface in com.commercetools.importapi.models.products">SuggestTokenizer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.43">getSuggestTokenizer</a></span>()</div>
+<div class="block"><p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setText(java.lang.String)">
 <h3>setText</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.31">setText</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.47">setText</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSuggestTokenizer(com.commercetools.importapi.models.products.SuggestTokenizer)">
 <h3>setSuggestTokenizer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.33">setSuggestTokenizer</a></span>&#8203;<span class="parameters">(<a href="SuggestTokenizer.html" title="interface in com.commercetools.importapi.models.products">SuggestTokenizer</a>&nbsp;suggestTokenizer)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.49">setSuggestTokenizer</a></span>&#8203;<span class="parameters">(<a href="SuggestTokenizer.html" title="interface in com.commercetools.importapi.models.products">SuggestTokenizer</a>&nbsp;suggestTokenizer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.51">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.products.SearchKeyword)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.55">of</a></span>&#8203;<span class="parameters">(<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.46">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.62">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.products.SearchKeyword)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.50">builder</a></span>&#8203;<span class="parameters">(<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SearchKeywordBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.66">builder</a></span>&#8203;<span class="parameters">(<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSearchKeyword(java.util.function.Function)">
 <h3>withSearchKeyword</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.54">withSearchKeyword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.70">withSearchKeyword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.58">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/products/SearchKeyword.html#line.74">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

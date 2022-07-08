@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.20">RecordPagedQueryResponseImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>Response to a query request for <a href="#record">Record</a>.</p></div>
+<div class="block"><p>Response to a query request for Record.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,12 +134,12 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Maximum number of results requested in the query request.</div>
+<div class="block">Number of results requested.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The number of elements skipped, not a page number.</div>
+<div class="block">Number of elements skipped.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResults()">getResults</a></span>()</code></div>
@@ -210,8 +210,8 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.50">getLimit</a></span>()</div>
-<div class="block"><p>Maximum number of results requested in the query request.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.51">getLimit</a></span>()</div>
+<div class="block"><p>Number of results requested.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -221,7 +221,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.57">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.59">getCount</a></span>()</div>
 <div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -232,9 +232,8 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.65">getTotal</a></span>()</div>
-<div class="block"><p>Total number of results matching the query.
-  This number is an estimation and not <a href="/general-concepts#strong-consistency">strongly consistent</a>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.67">getTotal</a></span>()</div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#getTotal()">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -244,8 +243,8 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.72">getOffset</a></span>()</div>
-<div class="block"><p>The number of elements skipped, not a page number. Supplied by the client or the server default.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.75">getOffset</a></span>()</div>
+<div class="block"><p>Number of elements skipped.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -255,7 +254,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.76">getResults</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.83">getResults</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#getResults()">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -265,7 +264,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setLimit(java.lang.Integer)">
 <h3>setLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.80">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.87">setLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setLimit(java.lang.Integer)">setLimit</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -275,7 +274,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setCount(java.lang.Integer)">
 <h3>setCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.84">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.91">setCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;count)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setCount(java.lang.Integer)">setCount</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -285,7 +284,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setTotal(java.lang.Integer)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.88">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.95">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;total)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setTotal(java.lang.Integer)">setTotal</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -295,7 +294,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setOffset(java.lang.Integer)">
 <h3>setOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.92">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.99">setOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;offset)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setOffset(java.lang.Integer)">setOffset</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -305,7 +304,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setResults(com.commercetools.history.models.change_history.Record...)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.96">setResults</a></span>&#8203;<span class="parameters">(<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.103">setResults</a></span>&#8203;<span class="parameters">(<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>...&nbsp;results)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setResults(com.commercetools.history.models.change_history.Record...)">setResults</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -315,7 +314,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="setResults(java.util.List)">
 <h3>setResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.100">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.107">setResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Record.html" title="interface in com.commercetools.history.models.change_history">Record</a>&gt;&nbsp;results)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RecordPagedQueryResponse.html#setResults(java.util.List)">setResults</a></code>&nbsp;in interface&nbsp;<code><a href="RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a></code></dd>
@@ -325,7 +324,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.104">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.111">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -335,7 +334,7 @@ implements <a href="RecordPagedQueryResponse.html" title="interface in com.comme
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.122">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/RecordPagedQueryResponseImpl.html#line.129">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

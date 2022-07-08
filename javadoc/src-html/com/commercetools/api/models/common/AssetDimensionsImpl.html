@@ -27,57 +27,68 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">018</span><span id="line.18">public class AssetDimensionsImpl implements AssetDimensions, ModelBase {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private Integer w;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private Integer h;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @JsonCreator</span>
-<span class="source-line-no">025</span><span id="line.25">    AssetDimensionsImpl(@JsonProperty("w") final Integer w, @JsonProperty("h") final Integer h) {</span>
-<span class="source-line-no">026</span><span id="line.26">        this.w = w;</span>
-<span class="source-line-no">027</span><span id="line.27">        this.h = h;</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public AssetDimensionsImpl() {</span>
+<span class="source-line-no">017</span><span id="line.17">/**</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Dimensions of the Asset source specified by the number of pixels.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">021</span><span id="line.21">public class AssetDimensionsImpl implements AssetDimensions, ModelBase {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    private Integer w;</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    private Integer h;</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    @JsonCreator</span>
+<span class="source-line-no">028</span><span id="line.28">    AssetDimensionsImpl(@JsonProperty("w") final Integer w, @JsonProperty("h") final Integer h) {</span>
+<span class="source-line-no">029</span><span id="line.29">        this.w = w;</span>
+<span class="source-line-no">030</span><span id="line.30">        this.h = h;</span>
 <span class="source-line-no">031</span><span id="line.31">    }</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public Integer getW() {</span>
-<span class="source-line-no">034</span><span id="line.34">        return this.w;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public Integer getH() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return this.h;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public void setW(final Integer w) {</span>
-<span class="source-line-no">042</span><span id="line.42">        this.w = w;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public void setH(final Integer h) {</span>
-<span class="source-line-no">046</span><span id="line.46">        this.h = h;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Override</span>
-<span class="source-line-no">050</span><span id="line.50">    public boolean equals(Object o) {</span>
-<span class="source-line-no">051</span><span id="line.51">        if (this == o)</span>
-<span class="source-line-no">052</span><span id="line.52">            return true;</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">055</span><span id="line.55">            return false;</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">        AssetDimensionsImpl that = (AssetDimensionsImpl) o;</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">        return new EqualsBuilder().append(w, that.w).append(h, that.h).isEquals();</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @Override</span>
-<span class="source-line-no">063</span><span id="line.63">    public int hashCode() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return new HashCodeBuilder(17, 37).append(w).append(h).toHashCode();</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">}</span>
+<span class="source-line-no">033</span><span id="line.33">    public AssetDimensionsImpl() {</span>
+<span class="source-line-no">034</span><span id="line.34">    }</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Width of the Asset source.&lt;/p&gt;</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public Integer getW() {</span>
+<span class="source-line-no">041</span><span id="line.41">        return this.w;</span>
+<span class="source-line-no">042</span><span id="line.42">    }</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;Height of the Asset source.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public Integer getH() {</span>
+<span class="source-line-no">049</span><span id="line.49">        return this.h;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public void setW(final Integer w) {</span>
+<span class="source-line-no">053</span><span id="line.53">        this.w = w;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setH(final Integer h) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.h = h;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    @Override</span>
+<span class="source-line-no">061</span><span id="line.61">    public boolean equals(Object o) {</span>
+<span class="source-line-no">062</span><span id="line.62">        if (this == o)</span>
+<span class="source-line-no">063</span><span id="line.63">            return true;</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">066</span><span id="line.66">            return false;</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">        AssetDimensionsImpl that = (AssetDimensionsImpl) o;</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">        return new EqualsBuilder().append(w, that.w).append(h, that.h).isEquals();</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    @Override</span>
+<span class="source-line-no">074</span><span id="line.74">    public int hashCode() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return new HashCodeBuilder(17, 37).append(w).append(h).toHashCode();</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">}</span>
 
 
 

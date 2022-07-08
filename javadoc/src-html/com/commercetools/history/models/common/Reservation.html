@@ -26,69 +26,97 @@
 <span class="source-line-no">013</span><span id="line.13"></span>
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">@JsonDeserialize(as = ReservationImpl.class)</span>
-<span class="source-line-no">018</span><span id="line.18">public interface Reservation {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    @NotNull</span>
-<span class="source-line-no">021</span><span id="line.21">    @JsonProperty("quantity")</span>
-<span class="source-line-no">022</span><span id="line.22">    public Integer getQuantity();</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
-<span class="source-line-no">025</span><span id="line.25">    @Valid</span>
-<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("owner")</span>
-<span class="source-line-no">027</span><span id="line.27">    public Reference getOwner();</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
-<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">031</span><span id="line.31">    public String getCreatedAt();</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("checkoutStartedAt")</span>
-<span class="source-line-no">035</span><span id="line.35">    public String getCheckoutStartedAt();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public void setQuantity(final Integer quantity);</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public void setOwner(final Reference owner);</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public void setCreatedAt(final String createdAt);</span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> * Reservation</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     Reservation reservation = Reservation.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .quantity(1)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .owner(ownerBuilder -&gt; ownerBuilder)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .createdAt("{createdAt}")</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .checkoutStartedAt("{checkoutStartedAt}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> */</span>
+<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = ReservationImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">public interface Reservation {</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     *</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    @NotNull</span>
+<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("quantity")</span>
+<span class="source-line-no">041</span><span id="line.41">    public Integer getQuantity();</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public void setCheckoutStartedAt(final String checkoutStartedAt);</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public static Reservation of() {</span>
-<span class="source-line-no">046</span><span id="line.46">        return new ReservationImpl();</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static Reservation of(final Reservation template) {</span>
-<span class="source-line-no">050</span><span id="line.50">        ReservationImpl instance = new ReservationImpl();</span>
-<span class="source-line-no">051</span><span id="line.51">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">052</span><span id="line.52">        instance.setOwner(template.getOwner());</span>
-<span class="source-line-no">053</span><span id="line.53">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">054</span><span id="line.54">        instance.setCheckoutStartedAt(template.getCheckoutStartedAt());</span>
-<span class="source-line-no">055</span><span id="line.55">        return instance;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     *</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
+<span class="source-line-no">047</span><span id="line.47">    @Valid</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("owner")</span>
+<span class="source-line-no">049</span><span id="line.49">    public Reference getOwner();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     *</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">056</span><span id="line.56">    public String getCreatedAt();</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static ReservationBuilder builder() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return ReservationBuilder.of();</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static ReservationBuilder builder(final Reservation template) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return ReservationBuilder.of(template);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    default &lt;T&gt; T withReservation(Function&lt;Reservation, T&gt; helper) {</span>
-<span class="source-line-no">067</span><span id="line.67">        return helper.apply(this);</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Reservation&gt; typeReference() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Reservation&gt;() {</span>
-<span class="source-line-no">072</span><span id="line.72">            @Override</span>
-<span class="source-line-no">073</span><span id="line.73">            public String toString() {</span>
-<span class="source-line-no">074</span><span id="line.74">                return "TypeReference&lt;Reservation&gt;";</span>
-<span class="source-line-no">075</span><span id="line.75">            }</span>
-<span class="source-line-no">076</span><span id="line.76">        };</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78">}</span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *</span>
+<span class="source-line-no">060</span><span id="line.60">     */</span>
+<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("checkoutStartedAt")</span>
+<span class="source-line-no">063</span><span id="line.63">    public String getCheckoutStartedAt();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public void setQuantity(final Integer quantity);</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public void setOwner(final Reference owner);</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public void setCreatedAt(final String createdAt);</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setCheckoutStartedAt(final String checkoutStartedAt);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public static Reservation of() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return new ReservationImpl();</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public static Reservation of(final Reservation template) {</span>
+<span class="source-line-no">078</span><span id="line.78">        ReservationImpl instance = new ReservationImpl();</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setOwner(template.getOwner());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setCheckoutStartedAt(template.getCheckoutStartedAt());</span>
+<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public static ReservationBuilder builder() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return ReservationBuilder.of();</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static ReservationBuilder builder(final Reservation template) {</span>
+<span class="source-line-no">091</span><span id="line.91">        return ReservationBuilder.of(template);</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withReservation(Function&lt;Reservation, T&gt; helper) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Reservation&gt; typeReference() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Reservation&gt;() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;Reservation&gt;";</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104">        };</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

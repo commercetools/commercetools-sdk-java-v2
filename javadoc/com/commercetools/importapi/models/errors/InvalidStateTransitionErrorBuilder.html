@@ -83,9 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.9">InvalidStateTransitionErrorBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.23">InvalidStateTransitionErrorBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a>&gt;</span></div>
+<div class="block">InvalidStateTransitionErrorBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
+             .message("{message}")
+             .currentState(ProcessingState.PROCESSING)
+             .newState(ProcessingState.PROCESSING)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +135,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#currentState(com.commercetools.importapi.models.common.ProcessingState)">currentState</a></span>&#8203;(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;currentState)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Every Import Operation is assigned with one of the following states.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCurrentState()">getCurrentState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -138,7 +152,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#newState(com.commercetools.importapi.models.common.ProcessingState)">newState</a></span>&#8203;(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;newState)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Every Import Operation is assigned with one of the following states.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -165,7 +181,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>InvalidStateTransitionErrorBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.10">InvalidStateTransitionErrorBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.24">InvalidStateTransitionErrorBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -179,43 +195,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.18">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.36">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="currentState(com.commercetools.importapi.models.common.ProcessingState)">
 <h3>currentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.23">currentState</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;currentState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.45">currentState</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;currentState)</span></div>
+<div class="block"><p>Every Import Operation is assigned with one of the following states.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="newState(com.commercetools.importapi.models.common.ProcessingState)">
 <h3>newState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.29">newState</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;newState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.55">newState</a></span>&#8203;<span class="parameters">(<a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a>&nbsp;newState)</span></div>
+<div class="block"><p>Every Import Operation is assigned with one of the following states.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.35">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.61">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCurrentState()">
 <h3>getCurrentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.39">getCurrentState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.65">getCurrentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNewState()">
 <h3>getNewState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.43">getNewState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.69">getNewState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.47">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.73">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a>&gt;</code></dd>
@@ -225,20 +243,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.57">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.83">buildUnchecked</a></span>()</div>
 <div class="block">builds InvalidStateTransitionError without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.87">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.errors.InvalidStateTransitionError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidStateTransitionErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidStateTransitionErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidStateTransitionErrorBuilder.html#line.91">of</a></span>&#8203;<span class="parameters">(<a href="InvalidStateTransitionError.html" title="interface in com.commercetools.importapi.models.errors">InvalidStateTransitionError</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

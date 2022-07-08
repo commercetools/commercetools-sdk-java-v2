@@ -84,8 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SetReturnShipmentStateChangeImpl.html" title="class in com.commercetools.history.models.change">SetReturnShipmentStateChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.16">SetReturnShipmentStateChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.31">SetReturnShipmentStateChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
+<div class="block">SetReturnShipmentStateChange
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SetReturnShipmentStateChange setReturnShipmentStateChange = SetReturnShipmentStateChange.builder()
+             .change("{change}")
+             .nextValue(ReturnShipmentState.ADVISED)
+             .previousValue(ReturnShipmentState.ADVISED)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -176,7 +189,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="SET_RETURN_SHIPMENT_STATE_CHANGE">
 <h3>SET_RETURN_SHIPMENT_STATE_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.20">SET_RETURN_SHIPMENT_STATE_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.35">SET_RETURN_SHIPMENT_STATE_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.SetReturnShipmentStateChange.SET_RETURN_SHIPMENT_STATE_CHANGE">Constant Field Values</a></dd>
@@ -195,7 +208,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.22">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.40">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -206,7 +219,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.29">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.47">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>setReturnShipmentState</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -218,20 +231,20 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.33">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.54">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.37">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.61">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.41">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.65">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -241,49 +254,49 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.ReturnShipmentState)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.43">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.67">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.ReturnShipmentState)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.45">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.69">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReturnShipmentState.html" title="interface in com.commercetools.history.models.common">ReturnShipmentState</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.47">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.71">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetReturnShipmentStateChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.75">of</a></span>&#8203;<span class="parameters">(<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.59">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.83">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.SetReturnShipmentStateChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetReturnShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetReturnShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.87">builder</a></span>&#8203;<span class="parameters">(<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetReturnShipmentStateChange(java.util.function.Function)">
 <h3>withSetReturnShipmentStateChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.67">withSetReturnShipmentStateChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.91">withSetReturnShipmentStateChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetReturnShipmentStateChange.html" title="interface in com.commercetools.history.models.change">SetReturnShipmentStateChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetReturnShipmentStateChange.html#line.95">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.10">ItemShippingDetailsDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.22">ItemShippingDetailsDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&gt;</span></div>
+<div class="block">ItemShippingDetailsDraftBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ItemShippingDetailsDraft itemShippingDetailsDraft = ItemShippingDetailsDraft.builder()
+             .plusTargets(targetsBuilder -> targetsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,19 +142,29 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTargets(com.commercetools.importapi.models.orders.ItemShippingTarget...)">plusTargets</a></span>&#8203;(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ItemShippingDetailsDraft.targets</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTargets(java.util.function.Function)">plusTargets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ItemShippingDetailsDraft.targets</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#targets(com.commercetools.importapi.models.orders.ItemShippingTarget...)">targets</a></span>&#8203;(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ItemShippingDetailsDraft.targets</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#targets(java.util.List)">targets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>&gt;&nbsp;targets)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ItemShippingDetailsDraft.targets</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTargets(java.util.function.Function)">withTargets</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Maps to <code>ItemShippingDetailsDraft.targets</code>.</div>
+</div>
 </div>
 </div>
 </div>
@@ -165,7 +185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ItemShippingDetailsDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.11">ItemShippingDetailsDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.23">ItemShippingDetailsDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -179,43 +199,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="targets(com.commercetools.importapi.models.orders.ItemShippingTarget...)">
 <h3>targets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.15">targets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.31">targets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="block"><p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="targets(java.util.List)">
 <h3>targets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.21">targets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.41">targets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>&gt;&nbsp;targets)</span></div>
+<div class="block"><p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTargets(com.commercetools.importapi.models.orders.ItemShippingTarget...)">
 <h3>plusTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.27">plusTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.51">plusTargets</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>...&nbsp;targets)</span></div>
+<div class="block"><p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusTargets(java.util.function.Function)">
 <h3>plusTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.36">plusTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.64">plusTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTargets(java.util.function.Function)">
 <h3>withTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.46">withTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.78">withTargets</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>,&#8203;<a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTargets()">
 <h3>getTargets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.54">getTargets</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.86">getTargets</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.58">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.90">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&gt;</code></dd>
@@ -225,20 +250,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.66">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.98">buildUnchecked</a></span>()</div>
 <div class="block">builds ItemShippingDetailsDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.70">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.102">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/ItemShippingDetailsDraftBuilder.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

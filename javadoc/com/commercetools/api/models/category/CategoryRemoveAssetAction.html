@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryRemoveAssetActionImpl.html" title="class in com.commercetools.api.models.category">CategoryRemoveAssetActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.13">CategoryRemoveAssetAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.25">CategoryRemoveAssetAction</a></span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
+<div class="block">CategoryRemoveAssetAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     CategoryRemoveAssetAction categoryRemoveAssetAction = CategoryRemoveAssetAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,10 +133,14 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAssetId()">getAssetId</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Value to remove.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAssetKey()">getAssetKey</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Value to remove.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -168,7 +182,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="REMOVE_ASSET">
 <h3>REMOVE_ASSET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.17">REMOVE_ASSET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.29">REMOVE_ASSET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.category.CategoryRemoveAssetAction.REMOVE_ASSET">Constant Field Values</a></dd>
@@ -186,61 +200,63 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getAssetId()">
 <h3>getAssetId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.19">getAssetId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.35">getAssetId</a></span>()</div>
+<div class="block"><p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAssetKey()">
 <h3>getAssetKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.22">getAssetKey</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.42">getAssetKey</a></span>()</div>
+<div class="block"><p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetId(java.lang.String)">
 <h3>setAssetId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.25">setAssetId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.45">setAssetId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetKey(java.lang.String)">
 <h3>setAssetKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.27">setAssetKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.47">setAssetKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.49">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategoryRemoveAssetAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryRemoveAssetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryRemoveAssetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.60">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategoryRemoveAssetAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryRemoveAssetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryRemoveAssetActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryRemoveAssetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.64">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryRemoveAssetAction(java.util.function.Function)">
 <h3>withCategoryRemoveAssetAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.48">withCategoryRemoveAssetAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.68">withCategoryRemoveAssetAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.52">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryRemoveAssetAction.html" title="interface in com.commercetools.api.models.category">CategoryRemoveAssetAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryRemoveAssetAction.html#line.72">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

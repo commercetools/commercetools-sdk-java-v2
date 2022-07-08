@@ -83,11 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.21">FieldDefinitionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.20">FieldDefinitionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>Defines a <a href="/../api/projects/custom-fields">Custom Field</a> and its meta-information.
-  This FieldDefinition is similar to an <a href="ctp:api:type:AttributeDefinition">AttributeDefinition</a> of <a href="/../api/projects/productTypes">Product Types</a>.</p></div>
+<div class="block"><p>Defines a Custom Field and its meta-information. This FieldDefinition is similar to an AttributeDefinition of Product Types.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -196,7 +195,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>FieldDefinitionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.47">FieldDefinitionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.46">FieldDefinitionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -221,10 +220,8 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.62">getName</a></span>()</div>
-<div class="block"><p>Name of the Custom Field to define.
-  Must be unique for a given <a href="ctp:api:type:ResourceTypeId">ResourceTypeId</a>.
-  In case there is a FieldDefinition with the same <code>name</code> in another <a href="ctp:api:type:Type">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.61">getName</a></span>()</div>
+<div class="block"><p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></dd>
@@ -245,7 +242,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getRequired()">
 <h3>getRequired</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.76">getRequired</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.77">getRequired</a></span>()</div>
 <div class="block"><p>Defines whether the field is required to have a value.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -257,9 +254,7 @@ implements <a href="FieldDefinition.html" title="interface in com.commercetools.
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinitionImpl.html#line.85">getInputHint</a></span>()</div>
-<div class="block"><p>Must be either <code>SingleLine</code> or <code>MultiLine</code>.
-  Defines the visual representation of the field in user interfaces like the Merchant Center.
-  It is only relevant for string-based <a href="ctp:api:type:FieldType">FieldTypes</a> like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>.</p></div>
+<div class="block"><p>Must be either <code>SingleLine</code> or <code>MultiLine</code>. Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="FieldDefinition.html#getInputHint()">getInputHint</a></code>&nbsp;in interface&nbsp;<code><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></dd>

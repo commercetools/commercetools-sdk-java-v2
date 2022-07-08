@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.12">VariantValuesBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.25">VariantValuesBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a>&gt;</span></div>
+<div class="block">VariantValuesBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     VariantValues variantValues = VariantValues.builder()
+             .plusPrices(pricesBuilder -> pricesBuilder)
+             .plusAttributes(attributesBuilder -> attributesBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -189,7 +200,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>VariantValuesBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.13">VariantValuesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.26">VariantValuesBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -203,93 +214,93 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="sku(java.lang.String)">
 <h3>sku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.22">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.39">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="prices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>prices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.27">prices</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.48">prices</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="prices(java.util.List)">
 <h3>prices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.32">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.57">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPrices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>plusPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.37">plusPrices</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.66">plusPrices</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPrices(java.util.function.Function)">
 <h3>plusPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.45">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.78">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPrices(java.util.function.Function)">
 <h3>withPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.54">withPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.91">withPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributes(com.commercetools.api.models.product.Attribute...)">
 <h3>attributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.61">attributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.102">attributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributes(java.util.List)">
 <h3>attributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.66">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.111">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusAttributes(com.commercetools.api.models.product.Attribute...)">
 <h3>plusAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.72">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.121">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusAttributes(java.util.function.Function)">
 <h3>plusAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.80">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.133">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAttributes(java.util.function.Function)">
 <h3>withAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.89">withAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.146">withAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.96">getSku</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.153">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrices()">
 <h3>getPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.101">getPrices</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.158">getPrices</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributes()">
 <h3>getAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.105">getAttributes</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.162">getAttributes</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.109">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.166">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a>&gt;</code></dd>
@@ -299,20 +310,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.118">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.175">buildUnchecked</a></span>()</div>
 <div class="block">builds VariantValues without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.122">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.179">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.VariantValues)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.126">of</a></span>&#8203;<span class="parameters">(<a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="VariantValuesBuilder.html" title="class in com.commercetools.api.models.error">VariantValuesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/VariantValuesBuilder.html#line.183">of</a></span>&#8203;<span class="parameters">(<a href="VariantValues.html" title="interface in com.commercetools.api.models.error">VariantValues</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

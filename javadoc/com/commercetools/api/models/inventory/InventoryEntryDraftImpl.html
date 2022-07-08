@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a>&gt;</code>, <code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.17">InventoryEntryDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.20">InventoryEntryDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">InventoryEntryDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,11 +129,13 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The custom fields.</div>
+<div class="block">Custom Fields of the InventoryEntry.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getExpectedDelivery()">getExpectedDelivery</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time of the next restock.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -140,16 +143,24 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getQuantityOnStock()">getQuantityOnStock</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Overall amount of stock.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getRestockableInDays()">getRestockableInDays</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">How often the InventoryEntry is restocked (in days).</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSku()">getSku</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">ProductVariant <code>sku</code> of the InventoryEntry.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getSupplyChannel()">getSupplyChannel</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Channel that supplies this InventoryEntry.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -203,7 +214,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>InventoryEntryDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.50">InventoryEntryDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.53">InventoryEntryDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -217,7 +228,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.53">getSku</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.60">getSku</a></span>()</div>
+<div class="block"><p>ProductVariant <code>sku</code> of the InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getSku()">getSku</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -227,9 +239,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.61">getKey</a></span>()</div>
-<div class="block"><p>User-defined unique identifier for the InventoryEntry.
-  Keys can only contain alphanumeric characters, underscores, and hyphens.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.68">getKey</a></span>()</div>
+<div class="block"><p>User-defined unique identifier for the InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -239,7 +250,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.65">getSupplyChannel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.76">getSupplyChannel</a></span>()</div>
+<div class="block"><p>Channel that supplies this InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getSupplyChannel()">getSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -249,7 +261,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getQuantityOnStock()">
 <h3>getQuantityOnStock</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.69">getQuantityOnStock</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.84">getQuantityOnStock</a></span>()</div>
+<div class="block"><p>Overall amount of stock.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getQuantityOnStock()">getQuantityOnStock</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -259,7 +272,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getRestockableInDays()">
 <h3>getRestockableInDays</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.73">getRestockableInDays</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.92">getRestockableInDays</a></span>()</div>
+<div class="block"><p>How often the InventoryEntry is restocked (in days).</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getRestockableInDays()">getRestockableInDays</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -269,7 +283,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getExpectedDelivery()">
 <h3>getExpectedDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.77">getExpectedDelivery</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.100">getExpectedDelivery</a></span>()</div>
+<div class="block"><p>Date and time of the next restock.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#getExpectedDelivery()">getExpectedDelivery</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -279,8 +294,8 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.84">getCustom</a></span>()</div>
-<div class="block"><p>The custom fields.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.108">getCustom</a></span>()</div>
+<div class="block"><p>Custom Fields of the InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a>&gt;</code></dd>
@@ -292,7 +307,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.88">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.112">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setSku(java.lang.String)">setSku</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -302,7 +317,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.92">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.116">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -312,7 +327,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.96">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.120">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">setSupplyChannel</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -322,7 +337,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setQuantityOnStock(java.lang.Long)">
 <h3>setQuantityOnStock</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.100">setQuantityOnStock</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.124">setQuantityOnStock</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setQuantityOnStock(java.lang.Long)">setQuantityOnStock</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -332,7 +347,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setRestockableInDays(java.lang.Long)">
 <h3>setRestockableInDays</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.104">setRestockableInDays</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.128">setRestockableInDays</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setRestockableInDays(java.lang.Long)">setRestockableInDays</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -342,7 +357,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setExpectedDelivery(java.time.ZonedDateTime)">
 <h3>setExpectedDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.108">setExpectedDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expectedDelivery)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.132">setExpectedDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expectedDelivery)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntryDraft.html#setExpectedDelivery(java.time.ZonedDateTime)">setExpectedDelivery</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a></code></dd>
@@ -352,7 +367,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.112">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.136">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="InventoryEntryDraft.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryDraft</a>&gt;</code></dd>
@@ -364,7 +379,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.116">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.140">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -374,7 +389,7 @@ implements <a href="InventoryEntryDraft.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.136">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntryDraftImpl.html#line.160">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

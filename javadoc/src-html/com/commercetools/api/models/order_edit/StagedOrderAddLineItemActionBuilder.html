@@ -22,256 +22,345 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class StagedOrderAddLineItemActionBuilder implements Builder&lt;StagedOrderAddLineItemAction&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
-<span class="source-line-no">016</span><span id="line.16">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    @Nullable</span>
-<span class="source-line-no">019</span><span id="line.19">    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    @Nullable</span>
-<span class="source-line-no">022</span><span id="line.22">    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @Nullable</span>
-<span class="source-line-no">025</span><span id="line.25">    private String productId;</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    @Nullable</span>
-<span class="source-line-no">028</span><span id="line.28">    private Long variantId;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
-<span class="source-line-no">031</span><span id="line.31">    private String sku;</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
-<span class="source-line-no">034</span><span id="line.34">    private Long quantity;</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
-<span class="source-line-no">037</span><span id="line.37">    private java.time.ZonedDateTime addedAt;</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
-<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
-<span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.common.Money externalPrice;</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
-<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
-<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public StagedOrderAddLineItemActionBuilder custom(</span>
-<span class="source-line-no">052</span><span id="line.52">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public StagedOrderAddLineItemActionBuilder custom(</span>
-<span class="source-line-no">058</span><span id="line.58">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.custom = custom;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public StagedOrderAddLineItemActionBuilder distributionChannel(</span>
-<span class="source-line-no">064</span><span id="line.64">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.distributionChannel = builder</span>
-<span class="source-line-no">066</span><span id="line.66">                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">067</span><span id="line.67">                .build();</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public StagedOrderAddLineItemActionBuilder distributionChannel(</span>
-<span class="source-line-no">072</span><span id="line.72">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.distributionChannel = distributionChannel;</span>
-<span class="source-line-no">074</span><span id="line.74">        return this;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public StagedOrderAddLineItemActionBuilder externalTaxRate(</span>
-<span class="source-line-no">078</span><span id="line.78">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
-<span class="source-line-no">080</span><span id="line.80">                .build();</span>
-<span class="source-line-no">081</span><span id="line.81">        return this;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public StagedOrderAddLineItemActionBuilder externalTaxRate(</span>
-<span class="source-line-no">085</span><span id="line.85">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
-<span class="source-line-no">086</span><span id="line.86">        this.externalTaxRate = externalTaxRate;</span>
-<span class="source-line-no">087</span><span id="line.87">        return this;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.productId = productId;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.variantId = variantId;</span>
-<span class="source-line-no">097</span><span id="line.97">        return this;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.sku = sku;</span>
-<span class="source-line-no">102</span><span id="line.102">        return this;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {</span>
-<span class="source-line-no">106</span><span id="line.106">        this.quantity = quantity;</span>
-<span class="source-line-no">107</span><span id="line.107">        return this;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {</span>
-<span class="source-line-no">111</span><span id="line.111">        this.addedAt = addedAt;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> * StagedOrderAddLineItemActionBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     StagedOrderAddLineItemAction stagedOrderAddLineItemAction = StagedOrderAddLineItemAction.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .build()</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/div&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> */</span>
+<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">024</span><span id="line.24">public class StagedOrderAddLineItemActionBuilder implements Builder&lt;StagedOrderAddLineItemAction&gt; {</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
+<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
+<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    @Nullable</span>
+<span class="source-line-no">033</span><span id="line.33">    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @Nullable</span>
+<span class="source-line-no">036</span><span id="line.36">    private String productId;</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    @Nullable</span>
+<span class="source-line-no">039</span><span id="line.39">    private Long variantId;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
+<span class="source-line-no">042</span><span id="line.42">    private String sku;</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
+<span class="source-line-no">045</span><span id="line.45">    private Long quantity;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @Nullable</span>
+<span class="source-line-no">048</span><span id="line.48">    private java.time.ZonedDateTime addedAt;</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
+<span class="source-line-no">051</span><span id="line.51">    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @Nullable</span>
+<span class="source-line-no">054</span><span id="line.54">    private com.commercetools.api.models.common.Money externalPrice;</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    @Nullable</span>
+<span class="source-line-no">057</span><span id="line.57">    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    @Nullable</span>
+<span class="source-line-no">060</span><span id="line.60">    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;The representation used when creating or updating a customizable data type with Custom Fields.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public StagedOrderAddLineItemActionBuilder custom(</span>
+<span class="source-line-no">067</span><span id="line.67">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">068</span><span id="line.68">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">069</span><span id="line.69">        return this;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;The representation used when creating or updating a customizable data type with Custom Fields.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public StagedOrderAddLineItemActionBuilder custom(</span>
+<span class="source-line-no">077</span><span id="line.77">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.custom = custom;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;ResourceIdentifier to a Channel.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public StagedOrderAddLineItemActionBuilder distributionChannel(</span>
+<span class="source-line-no">087</span><span id="line.87">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.distributionChannel = builder</span>
+<span class="source-line-no">089</span><span id="line.89">                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">090</span><span id="line.90">                .build();</span>
+<span class="source-line-no">091</span><span id="line.91">        return this;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    /**</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;ResourceIdentifier to a Channel.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public StagedOrderAddLineItemActionBuilder distributionChannel(</span>
+<span class="source-line-no">099</span><span id="line.99">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.distributionChannel = distributionChannel;</span>
+<span class="source-line-no">101</span><span id="line.101">        return this;</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    /**</span>
+<span class="source-line-no">105</span><span id="line.105">     *</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public StagedOrderAddLineItemActionBuilder externalTaxRate(</span>
+<span class="source-line-no">109</span><span id="line.109">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">110</span><span id="line.110">        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
+<span class="source-line-no">111</span><span id="line.111">                .build();</span>
 <span class="source-line-no">112</span><span id="line.112">        return this;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public StagedOrderAddLineItemActionBuilder supplyChannel(</span>
-<span class="source-line-no">116</span><span id="line.116">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">117</span><span id="line.117">        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">118</span><span id="line.118">                .build();</span>
-<span class="source-line-no">119</span><span id="line.119">        return this;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public StagedOrderAddLineItemActionBuilder supplyChannel(</span>
-<span class="source-line-no">123</span><span id="line.123">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
-<span class="source-line-no">124</span><span id="line.124">        this.supplyChannel = supplyChannel;</span>
-<span class="source-line-no">125</span><span id="line.125">        return this;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public StagedOrderAddLineItemActionBuilder externalPrice(</span>
-<span class="source-line-no">129</span><span id="line.129">            Function&lt;com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder&gt; builder) {</span>
-<span class="source-line-no">130</span><span id="line.130">        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();</span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     *</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public StagedOrderAddLineItemActionBuilder externalTaxRate(</span>
+<span class="source-line-no">120</span><span id="line.120">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
+<span class="source-line-no">121</span><span id="line.121">        this.externalTaxRate = externalTaxRate;</span>
+<span class="source-line-no">122</span><span id="line.122">        return this;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     *</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {</span>
+<span class="source-line-no">130</span><span id="line.130">        this.productId = productId;</span>
 <span class="source-line-no">131</span><span id="line.131">        return this;</span>
 <span class="source-line-no">132</span><span id="line.132">    }</span>
 <span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public StagedOrderAddLineItemActionBuilder externalPrice(</span>
-<span class="source-line-no">135</span><span id="line.135">            @Nullable final com.commercetools.api.models.common.Money externalPrice) {</span>
-<span class="source-line-no">136</span><span id="line.136">        this.externalPrice = externalPrice;</span>
-<span class="source-line-no">137</span><span id="line.137">        return this;</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public StagedOrderAddLineItemActionBuilder externalTotalPrice(</span>
-<span class="source-line-no">141</span><span id="line.141">            Function&lt;com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder&gt; builder) {</span>
-<span class="source-line-no">142</span><span id="line.142">        this.externalTotalPrice = builder</span>
-<span class="source-line-no">143</span><span id="line.143">                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())</span>
-<span class="source-line-no">144</span><span id="line.144">                .build();</span>
-<span class="source-line-no">145</span><span id="line.145">        return this;</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public StagedOrderAddLineItemActionBuilder externalTotalPrice(</span>
-<span class="source-line-no">149</span><span id="line.149">            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
-<span class="source-line-no">150</span><span id="line.150">        this.externalTotalPrice = externalTotalPrice;</span>
-<span class="source-line-no">151</span><span id="line.151">        return this;</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public StagedOrderAddLineItemActionBuilder shippingDetails(</span>
-<span class="source-line-no">155</span><span id="line.155">            Function&lt;com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">156</span><span id="line.156">        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())</span>
-<span class="source-line-no">157</span><span id="line.157">                .build();</span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     *</span>
+<span class="source-line-no">136</span><span id="line.136">     */</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {</span>
+<span class="source-line-no">139</span><span id="line.139">        this.variantId = variantId;</span>
+<span class="source-line-no">140</span><span id="line.140">        return this;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    /**</span>
+<span class="source-line-no">144</span><span id="line.144">     *</span>
+<span class="source-line-no">145</span><span id="line.145">     */</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {</span>
+<span class="source-line-no">148</span><span id="line.148">        this.sku = sku;</span>
+<span class="source-line-no">149</span><span id="line.149">        return this;</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    /**</span>
+<span class="source-line-no">153</span><span id="line.153">     *</span>
+<span class="source-line-no">154</span><span id="line.154">     */</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {</span>
+<span class="source-line-no">157</span><span id="line.157">        this.quantity = quantity;</span>
 <span class="source-line-no">158</span><span id="line.158">        return this;</span>
 <span class="source-line-no">159</span><span id="line.159">    }</span>
 <span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public StagedOrderAddLineItemActionBuilder shippingDetails(</span>
-<span class="source-line-no">162</span><span id="line.162">            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.shippingDetails = shippingDetails;</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    @Nullable</span>
-<span class="source-line-no">168</span><span id="line.168">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return this.custom;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    @Nullable</span>
-<span class="source-line-no">173</span><span id="line.173">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return this.distributionChannel;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    @Nullable</span>
-<span class="source-line-no">178</span><span id="line.178">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
-<span class="source-line-no">179</span><span id="line.179">        return this.externalTaxRate;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    @Nullable</span>
-<span class="source-line-no">183</span><span id="line.183">    public String getProductId() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return this.productId;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    @Nullable</span>
-<span class="source-line-no">188</span><span id="line.188">    public Long getVariantId() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.variantId;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    @Nullable</span>
-<span class="source-line-no">193</span><span id="line.193">    public String getSku() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return this.sku;</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    @Nullable</span>
-<span class="source-line-no">198</span><span id="line.198">    public Long getQuantity() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.quantity;</span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     *</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {</span>
+<span class="source-line-no">166</span><span id="line.166">        this.addedAt = addedAt;</span>
+<span class="source-line-no">167</span><span id="line.167">        return this;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    /**</span>
+<span class="source-line-no">171</span><span id="line.171">     *  &lt;p&gt;ResourceIdentifier to a Channel.&lt;/p&gt;</span>
+<span class="source-line-no">172</span><span id="line.172">     */</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public StagedOrderAddLineItemActionBuilder supplyChannel(</span>
+<span class="source-line-no">175</span><span id="line.175">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">176</span><span id="line.176">        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">177</span><span id="line.177">                .build();</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    /**</span>
+<span class="source-line-no">182</span><span id="line.182">     *  &lt;p&gt;ResourceIdentifier to a Channel.&lt;/p&gt;</span>
+<span class="source-line-no">183</span><span id="line.183">     */</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public StagedOrderAddLineItemActionBuilder supplyChannel(</span>
+<span class="source-line-no">186</span><span id="line.186">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {</span>
+<span class="source-line-no">187</span><span id="line.187">        this.supplyChannel = supplyChannel;</span>
+<span class="source-line-no">188</span><span id="line.188">        return this;</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    /**</span>
+<span class="source-line-no">192</span><span id="line.192">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">193</span><span id="line.193">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">194</span><span id="line.194">     */</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    public StagedOrderAddLineItemActionBuilder externalPrice(</span>
+<span class="source-line-no">197</span><span id="line.197">            Function&lt;com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder&gt; builder) {</span>
+<span class="source-line-no">198</span><span id="line.198">        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();</span>
+<span class="source-line-no">199</span><span id="line.199">        return this;</span>
 <span class="source-line-no">200</span><span id="line.200">    }</span>
 <span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    @Nullable</span>
-<span class="source-line-no">203</span><span id="line.203">    public java.time.ZonedDateTime getAddedAt() {</span>
-<span class="source-line-no">204</span><span id="line.204">        return this.addedAt;</span>
-<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">202</span><span id="line.202">    /**</span>
+<span class="source-line-no">203</span><span id="line.203">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">204</span><span id="line.204">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">205</span><span id="line.205">     */</span>
 <span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">    @Nullable</span>
-<span class="source-line-no">208</span><span id="line.208">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
-<span class="source-line-no">209</span><span id="line.209">        return this.supplyChannel;</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    @Nullable</span>
-<span class="source-line-no">213</span><span id="line.213">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return this.externalPrice;</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">207</span><span id="line.207">    public StagedOrderAddLineItemActionBuilder externalPrice(</span>
+<span class="source-line-no">208</span><span id="line.208">            @Nullable final com.commercetools.api.models.common.Money externalPrice) {</span>
+<span class="source-line-no">209</span><span id="line.209">        this.externalPrice = externalPrice;</span>
+<span class="source-line-no">210</span><span id="line.210">        return this;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    /**</span>
+<span class="source-line-no">214</span><span id="line.214">     *</span>
+<span class="source-line-no">215</span><span id="line.215">     */</span>
 <span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    @Nullable</span>
-<span class="source-line-no">218</span><span id="line.218">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
-<span class="source-line-no">219</span><span id="line.219">        return this.externalTotalPrice;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
-<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
-<span class="source-line-no">224</span><span id="line.224">        return this.shippingDetails;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    public StagedOrderAddLineItemAction build() {</span>
-<span class="source-line-no">228</span><span id="line.228">        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,</span>
-<span class="source-line-no">229</span><span id="line.229">            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    /**</span>
-<span class="source-line-no">233</span><span id="line.233">     * builds StagedOrderAddLineItemAction without checking for non null required values</span>
-<span class="source-line-no">234</span><span id="line.234">     */</span>
-<span class="source-line-no">235</span><span id="line.235">    public StagedOrderAddLineItemAction buildUnchecked() {</span>
-<span class="source-line-no">236</span><span id="line.236">        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,</span>
-<span class="source-line-no">237</span><span id="line.237">            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);</span>
-<span class="source-line-no">238</span><span id="line.238">    }</span>
-<span class="source-line-no">239</span><span id="line.239"></span>
-<span class="source-line-no">240</span><span id="line.240">    public static StagedOrderAddLineItemActionBuilder of() {</span>
-<span class="source-line-no">241</span><span id="line.241">        return new StagedOrderAddLineItemActionBuilder();</span>
-<span class="source-line-no">242</span><span id="line.242">    }</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">    public static StagedOrderAddLineItemActionBuilder of(final StagedOrderAddLineItemAction template) {</span>
-<span class="source-line-no">245</span><span id="line.245">        StagedOrderAddLineItemActionBuilder builder = new StagedOrderAddLineItemActionBuilder();</span>
-<span class="source-line-no">246</span><span id="line.246">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">247</span><span id="line.247">        builder.distributionChannel = template.getDistributionChannel();</span>
-<span class="source-line-no">248</span><span id="line.248">        builder.externalTaxRate = template.getExternalTaxRate();</span>
-<span class="source-line-no">249</span><span id="line.249">        builder.productId = template.getProductId();</span>
-<span class="source-line-no">250</span><span id="line.250">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">251</span><span id="line.251">        builder.sku = template.getSku();</span>
-<span class="source-line-no">252</span><span id="line.252">        builder.quantity = template.getQuantity();</span>
-<span class="source-line-no">253</span><span id="line.253">        builder.addedAt = template.getAddedAt();</span>
-<span class="source-line-no">254</span><span id="line.254">        builder.supplyChannel = template.getSupplyChannel();</span>
-<span class="source-line-no">255</span><span id="line.255">        builder.externalPrice = template.getExternalPrice();</span>
-<span class="source-line-no">256</span><span id="line.256">        builder.externalTotalPrice = template.getExternalTotalPrice();</span>
-<span class="source-line-no">257</span><span id="line.257">        builder.shippingDetails = template.getShippingDetails();</span>
-<span class="source-line-no">258</span><span id="line.258">        return builder;</span>
+<span class="source-line-no">217</span><span id="line.217">    public StagedOrderAddLineItemActionBuilder externalTotalPrice(</span>
+<span class="source-line-no">218</span><span id="line.218">            Function&lt;com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder&gt; builder) {</span>
+<span class="source-line-no">219</span><span id="line.219">        this.externalTotalPrice = builder</span>
+<span class="source-line-no">220</span><span id="line.220">                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())</span>
+<span class="source-line-no">221</span><span id="line.221">                .build();</span>
+<span class="source-line-no">222</span><span id="line.222">        return this;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    /**</span>
+<span class="source-line-no">226</span><span id="line.226">     *</span>
+<span class="source-line-no">227</span><span id="line.227">     */</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public StagedOrderAddLineItemActionBuilder externalTotalPrice(</span>
+<span class="source-line-no">230</span><span id="line.230">            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {</span>
+<span class="source-line-no">231</span><span id="line.231">        this.externalTotalPrice = externalTotalPrice;</span>
+<span class="source-line-no">232</span><span id="line.232">        return this;</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    /**</span>
+<span class="source-line-no">236</span><span id="line.236">     *</span>
+<span class="source-line-no">237</span><span id="line.237">     */</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    public StagedOrderAddLineItemActionBuilder shippingDetails(</span>
+<span class="source-line-no">240</span><span id="line.240">            Function&lt;com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">241</span><span id="line.241">        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())</span>
+<span class="source-line-no">242</span><span id="line.242">                .build();</span>
+<span class="source-line-no">243</span><span id="line.243">        return this;</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">    /**</span>
+<span class="source-line-no">247</span><span id="line.247">     *</span>
+<span class="source-line-no">248</span><span id="line.248">     */</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">    public StagedOrderAddLineItemActionBuilder shippingDetails(</span>
+<span class="source-line-no">251</span><span id="line.251">            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
+<span class="source-line-no">252</span><span id="line.252">        this.shippingDetails = shippingDetails;</span>
+<span class="source-line-no">253</span><span id="line.253">        return this;</span>
+<span class="source-line-no">254</span><span id="line.254">    }</span>
+<span class="source-line-no">255</span><span id="line.255"></span>
+<span class="source-line-no">256</span><span id="line.256">    @Nullable</span>
+<span class="source-line-no">257</span><span id="line.257">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">258</span><span id="line.258">        return this.custom;</span>
 <span class="source-line-no">259</span><span id="line.259">    }</span>
 <span class="source-line-no">260</span><span id="line.260"></span>
-<span class="source-line-no">261</span><span id="line.261">}</span>
+<span class="source-line-no">261</span><span id="line.261">    @Nullable</span>
+<span class="source-line-no">262</span><span id="line.262">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
+<span class="source-line-no">263</span><span id="line.263">        return this.distributionChannel;</span>
+<span class="source-line-no">264</span><span id="line.264">    }</span>
+<span class="source-line-no">265</span><span id="line.265"></span>
+<span class="source-line-no">266</span><span id="line.266">    @Nullable</span>
+<span class="source-line-no">267</span><span id="line.267">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
+<span class="source-line-no">268</span><span id="line.268">        return this.externalTaxRate;</span>
+<span class="source-line-no">269</span><span id="line.269">    }</span>
+<span class="source-line-no">270</span><span id="line.270"></span>
+<span class="source-line-no">271</span><span id="line.271">    @Nullable</span>
+<span class="source-line-no">272</span><span id="line.272">    public String getProductId() {</span>
+<span class="source-line-no">273</span><span id="line.273">        return this.productId;</span>
+<span class="source-line-no">274</span><span id="line.274">    }</span>
+<span class="source-line-no">275</span><span id="line.275"></span>
+<span class="source-line-no">276</span><span id="line.276">    @Nullable</span>
+<span class="source-line-no">277</span><span id="line.277">    public Long getVariantId() {</span>
+<span class="source-line-no">278</span><span id="line.278">        return this.variantId;</span>
+<span class="source-line-no">279</span><span id="line.279">    }</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    @Nullable</span>
+<span class="source-line-no">282</span><span id="line.282">    public String getSku() {</span>
+<span class="source-line-no">283</span><span id="line.283">        return this.sku;</span>
+<span class="source-line-no">284</span><span id="line.284">    }</span>
+<span class="source-line-no">285</span><span id="line.285"></span>
+<span class="source-line-no">286</span><span id="line.286">    @Nullable</span>
+<span class="source-line-no">287</span><span id="line.287">    public Long getQuantity() {</span>
+<span class="source-line-no">288</span><span id="line.288">        return this.quantity;</span>
+<span class="source-line-no">289</span><span id="line.289">    }</span>
+<span class="source-line-no">290</span><span id="line.290"></span>
+<span class="source-line-no">291</span><span id="line.291">    @Nullable</span>
+<span class="source-line-no">292</span><span id="line.292">    public java.time.ZonedDateTime getAddedAt() {</span>
+<span class="source-line-no">293</span><span id="line.293">        return this.addedAt;</span>
+<span class="source-line-no">294</span><span id="line.294">    }</span>
+<span class="source-line-no">295</span><span id="line.295"></span>
+<span class="source-line-no">296</span><span id="line.296">    @Nullable</span>
+<span class="source-line-no">297</span><span id="line.297">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
+<span class="source-line-no">298</span><span id="line.298">        return this.supplyChannel;</span>
+<span class="source-line-no">299</span><span id="line.299">    }</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">    @Nullable</span>
+<span class="source-line-no">302</span><span id="line.302">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
+<span class="source-line-no">303</span><span id="line.303">        return this.externalPrice;</span>
+<span class="source-line-no">304</span><span id="line.304">    }</span>
+<span class="source-line-no">305</span><span id="line.305"></span>
+<span class="source-line-no">306</span><span id="line.306">    @Nullable</span>
+<span class="source-line-no">307</span><span id="line.307">    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {</span>
+<span class="source-line-no">308</span><span id="line.308">        return this.externalTotalPrice;</span>
+<span class="source-line-no">309</span><span id="line.309">    }</span>
+<span class="source-line-no">310</span><span id="line.310"></span>
+<span class="source-line-no">311</span><span id="line.311">    @Nullable</span>
+<span class="source-line-no">312</span><span id="line.312">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
+<span class="source-line-no">313</span><span id="line.313">        return this.shippingDetails;</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    public StagedOrderAddLineItemAction build() {</span>
+<span class="source-line-no">317</span><span id="line.317">        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,</span>
+<span class="source-line-no">318</span><span id="line.318">            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);</span>
+<span class="source-line-no">319</span><span id="line.319">    }</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">    /**</span>
+<span class="source-line-no">322</span><span id="line.322">     * builds StagedOrderAddLineItemAction without checking for non null required values</span>
+<span class="source-line-no">323</span><span id="line.323">     */</span>
+<span class="source-line-no">324</span><span id="line.324">    public StagedOrderAddLineItemAction buildUnchecked() {</span>
+<span class="source-line-no">325</span><span id="line.325">        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,</span>
+<span class="source-line-no">326</span><span id="line.326">            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);</span>
+<span class="source-line-no">327</span><span id="line.327">    }</span>
+<span class="source-line-no">328</span><span id="line.328"></span>
+<span class="source-line-no">329</span><span id="line.329">    public static StagedOrderAddLineItemActionBuilder of() {</span>
+<span class="source-line-no">330</span><span id="line.330">        return new StagedOrderAddLineItemActionBuilder();</span>
+<span class="source-line-no">331</span><span id="line.331">    }</span>
+<span class="source-line-no">332</span><span id="line.332"></span>
+<span class="source-line-no">333</span><span id="line.333">    public static StagedOrderAddLineItemActionBuilder of(final StagedOrderAddLineItemAction template) {</span>
+<span class="source-line-no">334</span><span id="line.334">        StagedOrderAddLineItemActionBuilder builder = new StagedOrderAddLineItemActionBuilder();</span>
+<span class="source-line-no">335</span><span id="line.335">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">336</span><span id="line.336">        builder.distributionChannel = template.getDistributionChannel();</span>
+<span class="source-line-no">337</span><span id="line.337">        builder.externalTaxRate = template.getExternalTaxRate();</span>
+<span class="source-line-no">338</span><span id="line.338">        builder.productId = template.getProductId();</span>
+<span class="source-line-no">339</span><span id="line.339">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">340</span><span id="line.340">        builder.sku = template.getSku();</span>
+<span class="source-line-no">341</span><span id="line.341">        builder.quantity = template.getQuantity();</span>
+<span class="source-line-no">342</span><span id="line.342">        builder.addedAt = template.getAddedAt();</span>
+<span class="source-line-no">343</span><span id="line.343">        builder.supplyChannel = template.getSupplyChannel();</span>
+<span class="source-line-no">344</span><span id="line.344">        builder.externalPrice = template.getExternalPrice();</span>
+<span class="source-line-no">345</span><span id="line.345">        builder.externalTotalPrice = template.getExternalTotalPrice();</span>
+<span class="source-line-no">346</span><span id="line.346">        builder.shippingDetails = template.getShippingDetails();</span>
+<span class="source-line-no">347</span><span id="line.347">        return builder;</span>
+<span class="source-line-no">348</span><span id="line.348">    }</span>
+<span class="source-line-no">349</span><span id="line.349"></span>
+<span class="source-line-no">350</span><span id="line.350">}</span>
 
 
 

@@ -17,7 +17,7 @@
 <span class="source-line-no">004</span><span id="line.4">import io.vrap.rmf.base.client.ApiHttpClient;</span>
 <span class="source-line-no">005</span><span id="line.5">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">007</span><span id="line.7">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">008</span><span id="line.8">public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder {</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
 <span class="source-line-no">010</span><span id="line.10">    private final ApiHttpClient apiHttpClient;</span>
@@ -31,20 +31,16 @@
 <span class="source-line-no">018</span><span id="line.18">        this.storeKey = storeKey;</span>
 <span class="source-line-no">019</span><span id="line.19">    }</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet get() {</span>
-<span class="source-line-no">022</span><span id="line.22">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsGet(apiHttpClient, projectKey, storeKey);</span>
-<span class="source-line-no">023</span><span id="line.23">    }</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder withKey(String key) {</span>
-<span class="source-line-no">026</span><span id="line.26">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
-<span class="source-line-no">027</span><span id="line.27">            storeKey, key);</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder withId(String ID) {</span>
-<span class="source-line-no">031</span><span id="line.31">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder(apiHttpClient, projectKey,</span>
-<span class="source-line-no">032</span><span id="line.32">            storeKey, ID);</span>
-<span class="source-line-no">033</span><span id="line.33">    }</span>
-<span class="source-line-no">034</span><span id="line.34">}</span>
+<span class="source-line-no">021</span><span id="line.21">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder withKey(String key) {</span>
+<span class="source-line-no">022</span><span id="line.22">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">023</span><span id="line.23">            storeKey, key);</span>
+<span class="source-line-no">024</span><span id="line.24">    }</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder withId(String ID) {</span>
+<span class="source-line-no">027</span><span id="line.27">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">028</span><span id="line.28">            storeKey, ID);</span>
+<span class="source-line-no">029</span><span id="line.29">    }</span>
+<span class="source-line-no">030</span><span id="line.30">}</span>
 
 
 

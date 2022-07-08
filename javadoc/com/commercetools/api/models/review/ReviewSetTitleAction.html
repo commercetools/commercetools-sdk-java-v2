@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ReviewSetTitleActionImpl.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.13">ReviewSetTitleAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.25">ReviewSetTitleAction</a></span><span class="extends-implements">
 extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a></span></div>
+<div class="block">ReviewSetTitleAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ReviewSetTitleAction reviewSetTitleAction = ReviewSetTitleAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,7 +134,7 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTitle()">getTitle</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</div>
+<div class="block">Value to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -164,7 +174,7 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="SET_TITLE">
 <h3>SET_TITLE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.17">SET_TITLE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.29">SET_TITLE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.review.ReviewSetTitleAction.SET_TITLE">Constant Field Values</a></dd>
@@ -182,50 +192,50 @@ extends <a href="ReviewUpdateAction.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.23">getTitle</a></span>()</div>
-<div class="block"><p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.35">getTitle</a></span>()</div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTitle(java.lang.String)">
 <h3>setTitle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.26">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.38">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.28">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.40">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.review.ReviewSetTitleAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.32">of</a></span>&#8203;<span class="parameters">(<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.44">of</a></span>&#8203;<span class="parameters">(<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.38">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.50">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.review.ReviewSetTitleAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.42">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withReviewSetTitleAction(java.util.function.Function)">
 <h3>withReviewSetTitleAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.46">withReviewSetTitleAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.58">withReviewSetTitleAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.50">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ReviewSetTitleAction.html" title="interface in com.commercetools.api.models.review">ReviewSetTitleAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewSetTitleAction.html#line.62">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -45,7 +45,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -85,12 +85,30 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClient</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.21">CompatSphereClient</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.27">CompatSphereClient</a></span>
 <span class="extends-implements">extends <a href="../../../io/vrap/rmf/base/client/AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a>
 implements <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClient</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested.class.summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="CompatSphereClient.CompatApiHttpClient.html" title="class in com.commercetools.compat">CompatSphereClient.CompatApiHttpClient</a></span></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static class&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a></span></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
 <!-- ========== METHOD SUMMARY =========== -->
 <li>
 <section class="method-summary" id="method.summary">
@@ -102,15 +120,90 @@ implements <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidoc
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link">CompletionStage</a>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#execute(io.sphere.sdk.client.SphereRequest)">execute</a></span>&#8203;(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereRequest.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereRequest</a>&lt;T&gt;&nbsp;sphereRequest)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#apiRoot()">apiRoot</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link">CompletionStage</a>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#execute(io.sphere.sdk.client.SphereRequest)">execute</a></span>&#8203;(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereRequest.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereRequest</a>&lt;T&gt;&nbsp;sphereRequest)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getClient()">getClient</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereApiConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereApiConfig</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfig()">getConfig</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getExceptionMode()">getExceptionMode</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMapper()">getMapper</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.client.ProjectApiRoot)">of</a></span>&#8203;(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.sphere.sdk.client.SphereClientConfig)">of</a></span>&#8203;(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.client.ProjectApiRoot,com.commercetools.compat.CompatSphereClient.ExceptionMode)">of</a></span>&#8203;(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.client.ProjectApiRoot,com.fasterxml.jackson.databind.ObjectMapper)">of</a></span>&#8203;(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.client.ProjectApiRoot,com.fasterxml.jackson.databind.ObjectMapper,com.commercetools.compat.CompatSphereClient.ExceptionMode)">of</a></span>&#8203;(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.sphere.sdk.client.SphereClientConfig)">of</a></span>&#8203;(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">creates an instance of the CompatSphereClient.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.sphere.sdk.client.SphereClientConfig,com.commercetools.compat.CompatSphereClient.ExceptionMode)">of</a></span>&#8203;(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.ObjectMapper,java.lang.String)">of</a></span>&#8203;(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.ObjectMapper,java.lang.String,com.commercetools.compat.CompatSphereClient.ExceptionMode)">of</a></span>&#8203;(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String)">of</a></span>&#8203;(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,com.commercetools.compat.CompatSphereClient.ExceptionMode)">of</a></span>&#8203;(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -141,15 +234,194 @@ implements <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidoc
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="apiRoot()">
+<h3>apiRoot</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.44">apiRoot</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getClient()">
+<h3>getClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.48">getClient</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getProjectKey()">
+<h3>getProjectKey</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.52">getProjectKey</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getExceptionMode()">
+<h3>getExceptionMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.56">getExceptionMode</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMapper()">
+<h3>getMapper</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.60">getMapper</a></span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="of(io.sphere.sdk.client.SphereClientConfig)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig)</span></div>
+<div class="block">creates an instance of the CompatSphereClient. Please be aware for backwards compatibility the v2 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>clientConfig</code> - client configuration</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.client.ProjectApiRoot)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.79">of</a></span>&#8203;<span class="parameters">(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiRoot</code> - the ApiRoot with the underlying ApiHttpClient to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.client.ProjectApiRoot,com.fasterxml.jackson.databind.ObjectMapper)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.90">of</a></span>&#8203;<span class="parameters">(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiRoot</code> - the ApiRoot with the underlying ApiHttpClient to be used</dd>
+<dd><code>mapper</code> - Jackson ObjectMapper to be used for deserialization</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.99">of</a></span>&#8203;<span class="parameters">(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiHttpClient</code> - the underlying ApiHttpClient to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.ObjectMapper,java.lang.String)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.110">of</a></span>&#8203;<span class="parameters">(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiHttpClient</code> - the underlying ApiHttpClient to be used</dd>
+<dd><code>projectKey</code> - the project key to be used</dd>
+<dd><code>mapper</code> - Jackson ObjectMapper to be used for deserialization</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.sphere.sdk.client.SphereClientConfig,com.commercetools.compat.CompatSphereClient.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.121">of</a></span>&#8203;<span class="parameters">(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClientConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClientConfig</a>&nbsp;clientConfig,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>clientConfig</code> - client configuration</dd>
+<dd><code>exceptionMode</code> - SDKv1 or SDKv2 exceptions to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.client.ProjectApiRoot,com.commercetools.compat.CompatSphereClient.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.132">of</a></span>&#8203;<span class="parameters">(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiRoot</code> - the ApiRoot with the underlying ApiHttpClient to be used</dd>
+<dd><code>exceptionMode</code> - SDKv1 or SDKv2 exceptions to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.api.client.ProjectApiRoot,com.fasterxml.jackson.databind.ObjectMapper,com.commercetools.compat.CompatSphereClient.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.144">of</a></span>&#8203;<span class="parameters">(<a href="../api/client/ProjectApiRoot.html" title="class in com.commercetools.api.client">ProjectApiRoot</a>&nbsp;apiRoot,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiRoot</code> - the ApiRoot with the underlying ApiHttpClient to be used</dd>
+<dd><code>mapper</code> - Jackson ObjectMapper to be used for deserialization</dd>
+<dd><code>exceptionMode</code> - SDKv1 or SDKv2 exceptions to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,com.commercetools.compat.CompatSphereClient.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.156">of</a></span>&#8203;<span class="parameters">(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiHttpClient</code> - the underlying ApiHttpClient to be used</dd>
+<dd><code>projectKey</code> - project key to be used</dd>
+<dd><code>exceptionMode</code> - SDKv1 or SDKv2 exceptions to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.ObjectMapper,java.lang.String,com.commercetools.compat.CompatSphereClient.ExceptionMode)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CompatSphereClient.html" title="class in com.commercetools.compat">CompatSphereClient</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.169">of</a></span>&#8203;<span class="parameters">(<a href="../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.12.4/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">ObjectMapper</a>&nbsp;mapper,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
+ <a href="CompatSphereClient.ExceptionMode.html" title="enum in com.commercetools.compat">CompatSphereClient.ExceptionMode</a>&nbsp;exceptionMode)</span></div>
+<div class="block">Wraps an ApiHttpClient in a SDK v1 compatible SphereClient. SDKv1 Exceptions are thrown</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>apiHttpClient</code> - the underlying ApiHttpClient to be used</dd>
+<dd><code>projectKey</code> - the project key to be used</dd>
+<dd><code>mapper</code> - Jackson ObjectMapper to be used for deserialization</dd>
+<dd><code>exceptionMode</code> - SDKv1 or SDKv2 exceptions to be used</dd>
+<dt>Returns:</dt>
+<dd>SphereClient using a SDK v2 ApiHttpClient as HTTP client</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="execute(io.sphere.sdk.client.SphereRequest)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link">CompletionStage</a>&lt;T&gt;</span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.44">execute</a></span>&#8203;<span class="parameters">(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereRequest.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereRequest</a>&lt;T&gt;&nbsp;sphereRequest)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link">CompletionStage</a>&lt;T&gt;</span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.187">execute</a></span>&#8203;<span class="parameters">(<a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereRequest.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereRequest</a>&lt;T&gt;&nbsp;sphereRequest)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html#execute(io.sphere.sdk.client.SphereRequest)" title="class or interface in io.sphere.sdk.client" class="external-link">execute</a></code>&nbsp;in interface&nbsp;<code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClient</a></code></dd>
@@ -159,7 +431,7 @@ implements <a href="https://commercetools.github.io/commercetools-jvm-sdk/apidoc
 <li>
 <section class="detail" id="getConfig()">
 <h3>getConfig</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereApiConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereApiConfig</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.61">getConfig</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereApiConfig.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereApiConfig</a></span>&nbsp;<span class="element-name"><a href="../../../src-html/com/commercetools/compat/CompatSphereClient.html#line.263">getConfig</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html#getConfig()" title="class or interface in io.sphere.sdk.client" class="external-link">getConfig</a></code>&nbsp;in interface&nbsp;<code><a href="https://commercetools.github.io/commercetools-jvm-sdk/apidocs/io/sphere/sdk/client/SphereClient.html" title="class or interface in io.sphere.sdk.client" class="external-link">SphereClient</a></code></dd>

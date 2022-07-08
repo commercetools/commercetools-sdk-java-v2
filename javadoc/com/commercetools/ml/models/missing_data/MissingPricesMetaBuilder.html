@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.10">MissingPricesMetaBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.23">MissingPricesMetaBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a>&gt;</span></div>
+<div class="block">MissingPricesMetaBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     MissingPricesMeta missingPricesMeta = MissingPricesMeta.builder()
+             .productLevel(productLevelBuilder -> productLevelBuilder)
+             .variantLevel(variantLevelBuilder -> variantLevelBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -165,7 +176,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MissingPricesMetaBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.11">MissingPricesMetaBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.24">MissingPricesMetaBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -179,43 +190,43 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productLevel(java.util.function.Function)">
 <h3>productLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.17">productLevel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingPricesProductLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesProductLevelBuilder</a>,&#8203;<a href="MissingPricesProductLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesProductLevelBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.34">productLevel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingPricesProductLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesProductLevelBuilder</a>,&#8203;<a href="MissingPricesProductLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesProductLevelBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="productLevel(com.commercetools.ml.models.missing_data.MissingPricesProductLevel)">
 <h3>productLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.25">productLevel</a></span>&#8203;<span class="parameters">(<a href="MissingPricesProductLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesProductLevel</a>&nbsp;productLevel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.46">productLevel</a></span>&#8203;<span class="parameters">(<a href="MissingPricesProductLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesProductLevel</a>&nbsp;productLevel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variantLevel(java.util.function.Function)">
 <h3>variantLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.31">variantLevel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingPricesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesVariantLevelBuilder</a>,&#8203;<a href="MissingPricesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesVariantLevelBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.56">variantLevel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MissingPricesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesVariantLevelBuilder</a>,&#8203;<a href="MissingPricesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesVariantLevelBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variantLevel(com.commercetools.ml.models.missing_data.MissingPricesVariantLevel)">
 <h3>variantLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.39">variantLevel</a></span>&#8203;<span class="parameters">(<a href="MissingPricesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesVariantLevel</a>&nbsp;variantLevel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.68">variantLevel</a></span>&#8203;<span class="parameters">(<a href="MissingPricesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesVariantLevel</a>&nbsp;variantLevel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductLevel()">
 <h3>getProductLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesProductLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesProductLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.45">getProductLevel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesProductLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesProductLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.74">getProductLevel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariantLevel()">
 <h3>getVariantLevel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.49">getVariantLevel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.78">getVariantLevel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.53">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.82">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a>&gt;</code></dd>
@@ -225,20 +236,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.62">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.91">buildUnchecked</a></span>()</div>
 <div class="block">builds MissingPricesMeta without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.66">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.95">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.missing_data.MissingPricesMeta)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingPricesMetaBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingPricesMetaBuilder.html#line.99">of</a></span>&#8203;<span class="parameters">(<a href="MissingPricesMeta.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesMeta</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

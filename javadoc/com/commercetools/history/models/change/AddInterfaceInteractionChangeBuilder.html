@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.10">AddInterfaceInteractionChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.23">AddInterfaceInteractionChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a>&gt;</span></div>
+<div class="block">AddInterfaceInteractionChangeBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     AddInterfaceInteractionChange addInterfaceInteractionChange = AddInterfaceInteractionChange.builder()
+             .change("{change}")
+             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +134,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#change(java.lang.String)">change</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Update action for <code>addInterfaceInteraction</code> on payments</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getChange()">getChange</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -132,10 +145,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#nextValue(com.commercetools.history.models.change_value.CustomFieldExpandedValue)">nextValue</a></span>&#8203;(<a href="../change_value/CustomFieldExpandedValue.html" title="interface in com.commercetools.history.models.change_value">CustomFieldExpandedValue</a>&nbsp;nextValue)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Only available if <code>expand</code> is set to true</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#nextValue(java.util.function.Function)">nextValue</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>,&#8203;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Only available if <code>expand</code> is set to true</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -162,7 +179,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AddInterfaceInteractionChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.11">AddInterfaceInteractionChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.24">AddInterfaceInteractionChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,37 +193,40 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.17">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.34">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="block"><p>Update action for <code>addInterfaceInteraction</code> on payments</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.22">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>,&#8203;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.43">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>,&#8203;<a href="../change_value/CustomFieldExpandedValueBuilder.html" title="class in com.commercetools.history.models.change_value">CustomFieldExpandedValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Only available if <code>expand</code> is set to true</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.change_value.CustomFieldExpandedValue)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.30">nextValue</a></span>&#8203;<span class="parameters">(<a href="../change_value/CustomFieldExpandedValue.html" title="interface in com.commercetools.history.models.change_value">CustomFieldExpandedValue</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.55">nextValue</a></span>&#8203;<span class="parameters">(<a href="../change_value/CustomFieldExpandedValue.html" title="interface in com.commercetools.history.models.change_value">CustomFieldExpandedValue</a>&nbsp;nextValue)</span></div>
+<div class="block"><p>Only available if <code>expand</code> is set to true</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.36">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.61">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/CustomFieldExpandedValue.html" title="interface in com.commercetools.history.models.change_value">CustomFieldExpandedValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.40">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../change_value/CustomFieldExpandedValue.html" title="interface in com.commercetools.history.models.change_value">CustomFieldExpandedValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.65">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.44">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.69">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a>&gt;</code></dd>
@@ -216,20 +236,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.53">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.78">buildUnchecked</a></span>()</div>
 <div class="block">builds AddInterfaceInteractionChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.57">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.82">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.AddInterfaceInteractionChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.61">of</a></span>&#8203;<span class="parameters">(<a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AddInterfaceInteractionChangeBuilder.html" title="class in com.commercetools.history.models.change">AddInterfaceInteractionChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/AddInterfaceInteractionChangeBuilder.html#line.86">of</a></span>&#8203;<span class="parameters">(<a href="AddInterfaceInteractionChange.html" title="interface in com.commercetools.history.models.change">AddInterfaceInteractionChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

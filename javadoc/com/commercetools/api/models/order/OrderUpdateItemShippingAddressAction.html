@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderUpdateItemShippingAddressActionImpl.html" title="class in com.commercetools.api.models.order">OrderUpdateItemShippingAddressActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.17">OrderUpdateItemShippingAddressAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.30">OrderUpdateItemShippingAddressAction</a></span><span class="extends-implements">
 extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></span></div>
+<div class="block">OrderUpdateItemShippingAddressAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderUpdateItemShippingAddressAction orderUpdateItemShippingAddressAction = OrderUpdateItemShippingAddressAction.builder()
+             .address(addressBuilder -> addressBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +173,7 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="UPDATE_ITEM_SHIPPING_ADDRESS">
 <h3>UPDATE_ITEM_SHIPPING_ADDRESS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.21">UPDATE_ITEM_SHIPPING_ADDRESS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.34">UPDATE_ITEM_SHIPPING_ADDRESS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS">Constant Field Values</a></dd>
@@ -182,49 +193,49 @@ extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.a
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.23">getAddress</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.39">getAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddress(com.commercetools.api.models.common.BaseAddress)">
 <h3>setAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.28">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.44">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderUpdateItemShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderUpdateItemShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderUpdateItemShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderUpdateItemShippingAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderUpdateItemShippingAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderUpdateItemShippingAddressAction(java.util.function.Function)">
 <h3>withOrderUpdateItemShippingAddressAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.49">withOrderUpdateItemShippingAddressAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.65">withOrderUpdateItemShippingAddressAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.53">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderUpdateItemShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateItemShippingAddressAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderUpdateItemShippingAddressAction.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

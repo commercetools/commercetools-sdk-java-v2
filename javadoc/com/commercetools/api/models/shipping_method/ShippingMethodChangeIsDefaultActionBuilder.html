@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.9">ShippingMethodChangeIsDefaultActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.21">ShippingMethodChangeIsDefaultActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a>&gt;</span></div>
+<div class="block">ShippingMethodChangeIsDefaultActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShippingMethodChangeIsDefaultAction shippingMethodChangeIsDefaultAction = ShippingMethodChangeIsDefaultAction.builder()
+             .isDefault(true)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,7 +136,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#isDefault(java.lang.Boolean)">isDefault</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to set.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -153,7 +165,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ShippingMethodChangeIsDefaultActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.10">ShippingMethodChangeIsDefaultActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.22">ShippingMethodChangeIsDefaultActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -167,19 +179,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="isDefault(java.lang.Boolean)">
 <h3>isDefault</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.14">isDefault</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.30">isDefault</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</span></div>
+<div class="block"><p>Value to set. Only one ShippingMethod can be default in a Project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsDefault()">
 <h3>getIsDefault</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.19">getIsDefault</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.35">getIsDefault</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.23">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.39">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a>&gt;</code></dd>
@@ -189,20 +202,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.31">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.47">buildUnchecked</a></span>()</div>
 <div class="block">builds ShippingMethodChangeIsDefaultAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.51">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingMethodChangeIsDefaultActionBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingMethodChangeIsDefaultActionBuilder.html#line.55">of</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodChangeIsDefaultAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodChangeIsDefaultAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

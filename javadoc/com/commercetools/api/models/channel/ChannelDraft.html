@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ChannelDraftImpl.html" title="class in com.commercetools.api.models.channel">ChannelDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.20">ChannelDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.33">ChannelDraft</a></span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</span></div>
+<div class="block">ChannelDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ChannelDraft channelDraft = ChannelDraft.builder()
+             .key("{key}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -198,24 +209,22 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.27">getKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.40">getKey</a></span>()</div>
 <div class="block"><p>User-defined unique identifier for the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRoles()">
 <h3>getRoles</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.37">getRoles</a></span>()</div>
-<div class="block"><p>Roles of the Channel.
-  Each channel must have at least one role.
-  If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.48">getRoles</a></span>()</div>
+<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.43">getName</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.54">getName</a></span>()</div>
 <div class="block"><p>Name of the Channel.</p></div>
 </section>
 </li>
@@ -223,7 +232,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.50">getDescription</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.61">getDescription</a></span>()</div>
 <div class="block"><p>Description of the Channel.</p></div>
 </section>
 </li>
@@ -231,7 +240,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getAddress()">
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.57">getAddress</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.68">getAddress</a></span>()</div>
 <div class="block"><p>Address where the Channel is located.</p></div>
 </section>
 </li>
@@ -239,7 +248,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.64">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.75">getCustom</a></span>()</div>
 <div class="block"><p>Custom fields defined for the Channel.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -251,51 +260,50 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getGeoLocation()">
 <h3>getGeoLocation</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.72">getGeoLocation</a></span>()</div>
-<div class="block"><p>GeoJSON geometry object encoding the geo location of the Channel.
-  Currently, only the <a href="/../api/types#point">Point</a> type is supported.</p></div>
+</span><span class="return-type">@Valid <a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.82">getGeoLocation</a></span>()</div>
+<div class="block"><p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.76">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.86">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRoles(com.commercetools.api.models.channel.ChannelRoleEnum...)">
 <h3>setRoles</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.78">setRoles</a></span>&#8203;<span class="parameters">(<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.88">setRoles</a></span>&#8203;<span class="parameters">(<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRoles(java.util.List)">
 <h3>setRoles</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.81">setRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;&nbsp;roles)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.91">setRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;&nbsp;roles)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.83">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.93">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.85">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.95">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddress(com.commercetools.api.models.common.BaseAddress)">
 <h3>setAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.87">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.97">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.89">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.99">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</code></dd>
@@ -305,43 +313,43 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setGeoLocation(com.commercetools.api.models.common.GeoJson)">
 <h3>setGeoLocation</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.91">setGeoLocation</a></span>&#8203;<span class="parameters">(<a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&nbsp;geoLocation)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.101">setGeoLocation</a></span>&#8203;<span class="parameters">(<a href="../common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a>&nbsp;geoLocation)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.93">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.103">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.channel.ChannelDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.97">of</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.107">of</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.109">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.119">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.channel.ChannelDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.113">builder</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelDraftBuilder.html" title="class in com.commercetools.api.models.channel">ChannelDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.123">builder</a></span>&#8203;<span class="parameters">(<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withChannelDraft(java.util.function.Function)">
 <h3>withChannelDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.117">withChannelDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.127">withChannelDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.121">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChannelDraft.html" title="interface in com.commercetools.api.models.channel">ChannelDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelDraft.html#line.131">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,27 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.12">ProjectBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.32">ProjectBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&gt;</span></div>
+<div class="block">ProjectBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     Project project = Project.builder()
+             .version(0.3)
+             .key("{key}")
+             .name("{name}")
+             .plusCountries(countriesBuilder -> countriesBuilder)
+             .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+             .plusLanguages(languagesBuilder -> languagesBuilder)
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .messages(messagesBuilder -> messagesBuilder)
+             .carts(cartsBuilder -> cartsBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,31 +141,49 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#carts(com.commercetools.api.models.project.CartsConfiguration)">carts</a></span>&#8203;(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;carts)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Carts feature.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#carts(java.util.function.Function)">carts</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>,&#8203;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Carts feature.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#countries(java.lang.String...)">countries</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Country code of the geographic location.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#countries(java.util.List)">countries</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;countries)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Country code of the geographic location.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createdAt(java.time.ZonedDateTime)">createdAt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date and time (UTC) the Project was initially created.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#currencies(java.lang.String...)">currencies</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Currency code of the country.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#currencies(java.util.List)">currencies</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;currencies)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Currency code of the country.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalOAuth(com.commercetools.api.models.project.ExternalOAuth)">externalOAuth</a></span>&#8203;(<a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;externalOAuth)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#externalOAuth(java.util.function.Function)">externalOAuth</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>,&#8203;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCarts()">getCarts</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -192,22 +228,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#key(java.lang.String)">key</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">User-defined unique identifier of the Project.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#languages(java.lang.String...)">languages</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Language of the country.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#languages(java.util.List)">languages</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Language of the country.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#messages(com.commercetools.api.models.message.MessagesConfiguration)">messages</a></span>&#8203;(<a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a>&nbsp;messages)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Messages Query feature.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#messages(java.util.function.Function)">messages</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>,&#8203;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Messages Query feature.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#name(java.lang.String)">name</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Name of the Project.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -216,37 +264,59 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCountries(java.lang.String...)">plusCountries</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Country code of the geographic location.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCurrencies(java.lang.String...)">plusCurrencies</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Currency code of the country.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusLanguages(java.lang.String...)">plusLanguages</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Language of the country.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#searchIndexing(com.commercetools.api.models.project.SearchIndexingConfiguration)">searchIndexing</a></span>&#8203;(<a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a>&nbsp;searchIndexing)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Controls indexing of resources to be provided on high performance read-only search endpoints.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#searchIndexing(java.util.function.Function)">searchIndexing</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>,&#8203;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Controls indexing of resources to be provided on high performance read-only search endpoints.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingRateInputType(com.commercetools.api.models.project.ShippingRateInputType)">shippingRateInputType</a></span>&#8203;(<a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a>&nbsp;shippingRateInputType)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the tiered shipping rates feature.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shippingRateInputType(java.util.function.Function)">shippingRateInputType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRateInputTypeBuilder.html" title="class in com.commercetools.api.models.project">ShippingRateInputTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a>&gt;&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the tiered shipping rates feature.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shoppingLists(com.commercetools.api.models.project.ShoppingListsConfiguration)">shoppingLists</a></span>&#8203;(<a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a>&nbsp;shoppingLists)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Shopping Lists feature.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#shoppingLists(java.util.function.Function)">shoppingLists</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>,&#8203;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Holds the configuration for the Shopping Lists feature.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#trialUntil(java.lang.String)">trialUntil</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;trialUntil)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Date in YYYY-MM format specifying when the trial period for the Project ends.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#version(java.lang.Long)">version</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Current version of the Project.</div>
+</div>
 </div>
 </div>
 </div>
@@ -267,7 +337,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProjectBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.13">ProjectBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.33">ProjectBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -281,257 +351,283 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.48">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.72">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="block"><p>Current version of the Project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.53">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.81">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined unique identifier of the Project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.58">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.90">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block"><p>Name of the Project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="countries(java.lang.String...)">
 <h3>countries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.63">countries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.99">countries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</span></div>
+<div class="block"><p>Country code of the geographic location.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="countries(java.util.List)">
 <h3>countries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.68">countries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;countries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.108">countries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;countries)</span></div>
+<div class="block"><p>Country code of the geographic location.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusCountries(java.lang.String...)">
 <h3>plusCountries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.73">plusCountries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.117">plusCountries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;countries)</span></div>
+<div class="block"><p>Country code of the geographic location.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="currencies(java.lang.String...)">
 <h3>currencies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.81">currencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.129">currencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</span></div>
+<div class="block"><p>Currency code of the country. A Project must have at least one currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="currencies(java.util.List)">
 <h3>currencies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.86">currencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;currencies)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.138">currencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;currencies)</span></div>
+<div class="block"><p>Currency code of the country. A Project must have at least one currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusCurrencies(java.lang.String...)">
 <h3>plusCurrencies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.91">plusCurrencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.147">plusCurrencies</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;currencies)</span></div>
+<div class="block"><p>Currency code of the country. A Project must have at least one currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="languages(java.lang.String...)">
 <h3>languages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.99">languages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.159">languages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="block"><p>Language of the country. A Project must have at least one language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="languages(java.util.List)">
 <h3>languages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.104">languages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.168">languages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
+<div class="block"><p>Language of the country. A Project must have at least one language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusLanguages(java.lang.String...)">
 <h3>plusLanguages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.109">plusLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.177">plusLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="block"><p>Language of the country. A Project must have at least one language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.117">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.189">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="block"><p>Date and time (UTC) the Project was initially created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="trialUntil(java.lang.String)">
 <h3>trialUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.122">trialUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.198">trialUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;trialUntil)</span></div>
+<div class="block"><p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="messages(java.util.function.Function)">
 <h3>messages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.127">messages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>,&#8203;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.207">messages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>,&#8203;<a href="../message/MessagesConfigurationBuilder.html" title="class in com.commercetools.api.models.message">MessagesConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Holds the configuration for the Messages Query feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="messages(com.commercetools.api.models.message.MessagesConfiguration)">
 <h3>messages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.133">messages</a></span>&#8203;<span class="parameters">(<a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a>&nbsp;messages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.217">messages</a></span>&#8203;<span class="parameters">(<a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a>&nbsp;messages)</span></div>
+<div class="block"><p>Holds the configuration for the Messages Query feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="carts(java.util.function.Function)">
 <h3>carts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.138">carts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>,&#8203;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.226">carts</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>,&#8203;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Holds the configuration for the Carts feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="carts(com.commercetools.api.models.project.CartsConfiguration)">
 <h3>carts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.144">carts</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;carts)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.236">carts</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;carts)</span></div>
+<div class="block"><p>Holds the configuration for the Carts feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shoppingLists(java.util.function.Function)">
 <h3>shoppingLists</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.149">shoppingLists</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>,&#8203;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.245">shoppingLists</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>,&#8203;<a href="ShoppingListsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">ShoppingListsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shoppingLists(com.commercetools.api.models.project.ShoppingListsConfiguration)">
 <h3>shoppingLists</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.156">shoppingLists</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.256">shoppingLists</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a>&nbsp;shoppingLists)</span></div>
+<div class="block"><p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingRateInputType(com.commercetools.api.models.project.ShippingRateInputType)">
 <h3>shippingRateInputType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.162">shippingRateInputType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.266">shippingRateInputType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a>&nbsp;shippingRateInputType)</span></div>
+<div class="block"><p>Holds the configuration for the tiered shipping rates feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingRateInputType(java.util.function.Function)">
 <h3>shippingRateInputType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.168">shippingRateInputType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRateInputTypeBuilder.html" title="class in com.commercetools.api.models.project">ShippingRateInputTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.276">shippingRateInputType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRateInputTypeBuilder.html" title="class in com.commercetools.api.models.project">ShippingRateInputTypeBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Holds the configuration for the tiered shipping rates feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="externalOAuth(java.util.function.Function)">
 <h3>externalOAuth</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.176">externalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>,&#8203;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.288">externalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>,&#8203;<a href="ExternalOAuthBuilder.html" title="class in com.commercetools.api.models.project">ExternalOAuthBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="externalOAuth(com.commercetools.api.models.project.ExternalOAuth)">
 <h3>externalOAuth</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.182">externalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.298">externalOAuth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a>&nbsp;externalOAuth)</span></div>
+<div class="block"><p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="searchIndexing(java.util.function.Function)">
 <h3>searchIndexing</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.188">searchIndexing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>,&#8203;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.308">searchIndexing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>,&#8203;<a href="SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="searchIndexing(com.commercetools.api.models.project.SearchIndexingConfiguration)">
 <h3>searchIndexing</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.196">searchIndexing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.320">searchIndexing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a>&nbsp;searchIndexing)</span></div>
+<div class="block"><p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.202">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.326">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.206">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.330">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.210">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.334">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountries()">
 <h3>getCountries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.214">getCountries</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.338">getCountries</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCurrencies()">
 <h3>getCurrencies</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.218">getCurrencies</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.342">getCurrencies</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLanguages()">
 <h3>getLanguages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.222">getLanguages</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.346">getLanguages</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.226">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.350">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTrialUntil()">
 <h3>getTrialUntil</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.230">getTrialUntil</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.354">getTrialUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessages()">
 <h3>getMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.235">getMessages</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../message/MessagesConfiguration.html" title="interface in com.commercetools.api.models.message">MessagesConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.359">getMessages</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCarts()">
 <h3>getCarts</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.239">getCarts</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.363">getCarts</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShoppingLists()">
 <h3>getShoppingLists</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.243">getShoppingLists</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListsConfiguration.html" title="interface in com.commercetools.api.models.project">ShoppingListsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.367">getShoppingLists</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingRateInputType()">
 <h3>getShippingRateInputType</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.248">getShippingRateInputType</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateInputType.html" title="interface in com.commercetools.api.models.project">ShippingRateInputType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.372">getShippingRateInputType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalOAuth()">
 <h3>getExternalOAuth</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.253">getExternalOAuth</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.377">getExternalOAuth</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSearchIndexing()">
 <h3>getSearchIndexing</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.258">getSearchIndexing</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchIndexingConfiguration.html" title="interface in com.commercetools.api.models.project">SearchIndexingConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.382">getSearchIndexing</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.263">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.387">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&gt;</code></dd>
@@ -541,20 +637,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.280">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.404">buildUnchecked</a></span>()</div>
 <div class="block">builds Project without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.285">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.409">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.Project)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.289">of</a></span>&#8203;<span class="parameters">(<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectBuilder.html" title="class in com.commercetools.api.models.project">ProjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectBuilder.html#line.413">of</a></span>&#8203;<span class="parameters">(<a href="Project.html" title="interface in com.commercetools.api.models.project">Project</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

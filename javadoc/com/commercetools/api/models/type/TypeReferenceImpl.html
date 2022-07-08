@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.21">TypeReferenceImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Type">Type</a>.</p></div>
+<div class="block"><p>Reference to a Type.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,7 +138,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Unique ID of the referenced <a href="ctp:api:type:Type">Type</a>.</div>
+<div class="block">Unique identifier of the referenced Type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getObj()">getObj</a></span>()</code></div>
@@ -147,7 +147,9 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTypeId()">getTypeId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Type of referenced resource.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -171,7 +173,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <code><a href="../common/Reference.html#withReference(java.util.function.Function)">withReference</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.type.TypeReference">Methods inherited from interface&nbsp;com.commercetools.api.models.type.<a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></h3>
-<code><a href="TypeReference.html#withTypeReference(java.util.function.Function)">withTypeReference</a></code></div>
+<code><a href="TypeReference.html#toResourceIdentifier()">toResourceIdentifier</a>, <a href="TypeReference.html#withTypeReference(java.util.function.Function)">withTypeReference</a></code></div>
 </section>
 </li>
 </ul>
@@ -200,7 +202,8 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.42">getTypeId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.46">getTypeId</a></span>()</div>
+<div class="block"><p>Type of referenced resource.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#getTypeId()">getTypeId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
@@ -210,8 +213,8 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.49">getId</a></span>()</div>
-<div class="block"><p>Unique ID of the referenced <a href="ctp:api:type:Type">Type</a>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.54">getId</a></span>()</div>
+<div class="block"><p>Unique identifier of the referenced Type.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&gt;</code></dd>
@@ -227,9 +230,8 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="getObj()">
 <h3>getObj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.57">getObj</a></span>()</div>
-<div class="block"><p>Contains the representation of the expanded Type.
-  Only present in responses to requests with <a href="ctp:api:type:Expansion">Reference Expansion</a> for Types.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.62">getObj</a></span>()</div>
+<div class="block"><p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeReference.html#getObj()">getObj</a></code>&nbsp;in interface&nbsp;<code><a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></code></dd>
@@ -239,7 +241,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.61">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.66">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
@@ -251,7 +253,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="setObj(com.commercetools.api.models.type.Type)">
 <h3>setObj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.65">setObj</a></span>&#8203;<span class="parameters">(<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;obj)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.70">setObj</a></span>&#8203;<span class="parameters">(<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;obj)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeReference.html#setObj(com.commercetools.api.models.type.Type)">setObj</a></code>&nbsp;in interface&nbsp;<code><a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></code></dd>
@@ -261,7 +263,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.69">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.74">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -271,7 +273,7 @@ implements <a href="TypeReference.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.82">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeReferenceImpl.html#line.87">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

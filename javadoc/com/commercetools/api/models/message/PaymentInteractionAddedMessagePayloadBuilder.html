@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.10">PaymentInteractionAddedMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.22">PaymentInteractionAddedMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a>&gt;</span></div>
+<div class="block">PaymentInteractionAddedMessagePayloadBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     PaymentInteractionAddedMessagePayload paymentInteractionAddedMessagePayload = PaymentInteractionAddedMessagePayload.builder()
+             .interaction(interactionBuilder -> interactionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,10 +136,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#interaction(com.commercetools.api.models.type.CustomFields)">interaction</a></span>&#8203;(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;interaction)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#interaction(java.util.function.Function)">interaction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -156,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>PaymentInteractionAddedMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.11">PaymentInteractionAddedMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.23">PaymentInteractionAddedMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +184,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="interaction(java.util.function.Function)">
 <h3>interaction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.15">interaction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.31">interaction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="interaction(com.commercetools.api.models.type.CustomFields)">
 <h3>interaction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.21">interaction</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;interaction)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.41">interaction</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;interaction)</span></div>
+<div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInteraction()">
 <h3>getInteraction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.27">getInteraction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.47">getInteraction</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.31">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.51">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a>&gt;</code></dd>
@@ -198,20 +214,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.39">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds PaymentInteractionAddedMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.PaymentInteractionAddedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentInteractionAddedMessagePayloadBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="PaymentInteractionAddedMessagePayload.html" title="interface in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

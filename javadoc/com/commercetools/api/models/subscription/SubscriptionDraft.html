@@ -80,7 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SubscriptionDraftImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.16">SubscriptionDraft</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.29">SubscriptionDraft</a></span></div>
+<div class="block">SubscriptionDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     SubscriptionDraft subscriptionDraft = SubscriptionDraft.builder()
+             .destination(destinationBuilder -> destinationBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -112,7 +123,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">User-defined unique identifier for the Subscription.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMessages()">getMessages</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
@@ -167,7 +180,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getChanges()">
 <h3>getChanges</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.20">getChanges</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.36">getChanges</a></span>()</div>
 </section>
 </li>
 <li>
@@ -175,105 +188,106 @@ loadScripts(document, 'script');</script>
 <h3>getDestination</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.24">getDestination</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.43">getDestination</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.29">getKey</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.52">getKey</a></span>()</div>
+<div class="block"><p>User-defined unique identifier for the Subscription.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessages()">
 <h3>getMessages</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.32">getMessages</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.58">getMessages</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFormat()">
 <h3>getFormat</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.36">getFormat</a></span>()</div>
+</span><span class="return-type">@Valid <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.65">getFormat</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChanges(com.commercetools.api.models.subscription.ChangeSubscription...)">
 <h3>setChanges</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.40">setChanges</a></span>&#8203;<span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.69">setChanges</a></span>&#8203;<span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChanges(java.util.List)">
 <h3>setChanges</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.43">setChanges</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.72">setChanges</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDestination(com.commercetools.api.models.subscription.Destination)">
 <h3>setDestination</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.45">setDestination</a></span>&#8203;<span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.74">setDestination</a></span>&#8203;<span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.47">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.76">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMessages(com.commercetools.api.models.subscription.MessageSubscription...)">
 <h3>setMessages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.49">setMessages</a></span>&#8203;<span class="parameters">(<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>...&nbsp;messages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.78">setMessages</a></span>&#8203;<span class="parameters">(<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>...&nbsp;messages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMessages(java.util.List)">
 <h3>setMessages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.52">setMessages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.81">setMessages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFormat(com.commercetools.api.models.subscription.DeliveryFormat)">
 <h3>setFormat</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.54">setFormat</a></span>&#8203;<span class="parameters">(<a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&nbsp;format)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.83">setFormat</a></span>&#8203;<span class="parameters">(<a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&nbsp;format)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.85">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.SubscriptionDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.89">of</a></span>&#8203;<span class="parameters">(<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.70">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.99">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.subscription.SubscriptionDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.103">builder</a></span>&#8203;<span class="parameters">(<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSubscriptionDraft(java.util.function.Function)">
 <h3>withSubscriptionDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.78">withSubscriptionDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.107">withSubscriptionDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.82">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SubscriptionDraft.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionDraft.html#line.111">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

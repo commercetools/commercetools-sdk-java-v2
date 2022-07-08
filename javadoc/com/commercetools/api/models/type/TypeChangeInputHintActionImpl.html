@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.20">TypeChangeInputHintActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p>Changes the <code>inputHint</code> of <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, a <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, and <a href="ctp:api:type:CustomFieldSetType">CustomFieldSetType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> of these string-based FieldTypes.</p></div>
+<div class="block"><p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -141,7 +141,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block"><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</div>
+<div class="block"><code>name</code> of the Field Definition to update.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getInputHint()">getInputHint</a></span>()</code></div>
@@ -203,7 +203,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.41">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.45">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</code></dd>
@@ -215,8 +215,8 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.48">getFieldName</a></span>()</div>
-<div class="block"><p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.53">getFieldName</a></span>()</div>
+<div class="block"><p><code>name</code> of the Field Definition to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeInputHintAction.html#getFieldName()">getFieldName</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></code></dd>
@@ -226,9 +226,8 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.56">getInputHint</a></span>()</div>
-<div class="block"><p>New value to set.
-  Must not be empty.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.61">getInputHint</a></span>()</div>
+<div class="block"><p>New value to set. Must not be empty.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeInputHintAction.html#getInputHint()">getInputHint</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></code></dd>
@@ -238,7 +237,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="setFieldName(java.lang.String)">
 <h3>setFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.60">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.65">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeInputHintAction.html#setFieldName(java.lang.String)">setFieldName</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></code></dd>
@@ -248,7 +247,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="setInputHint(com.commercetools.api.models.type.TypeTextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.64">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.69">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeInputHintAction.html#setInputHint(com.commercetools.api.models.type.TypeTextInputHint)">setInputHint</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></code></dd>
@@ -258,7 +257,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.68">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.73">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -268,7 +267,7 @@ implements <a href="TypeChangeInputHintAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.84">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintActionImpl.html#line.89">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

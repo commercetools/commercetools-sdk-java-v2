@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.20">ProductSelectionPagedQueryResponseImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionPagedQueryResponse</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
-<div class="block"><p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> containing an array of <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p></div>
+<div class="block"><p>PagedQueryResult containing an array of ProductSelection.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,17 +134,17 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Number of results requested in the query request.</div>
+<div class="block">Number of results requested.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Offset supplied by the client or the server default.</div>
+<div class="block">Number of elements skipped.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductSelection</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getResults()">getResults</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The Product Selections matching the query.</div>
+<div class="block">ProductSelections matching the query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTotal()">getTotal</a></span>()</code></div>
@@ -212,8 +212,8 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.51">getLimit</a></span>()</div>
-<div class="block"><p>Number of results requested in the query request.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.52">getLimit</a></span>()</div>
+<div class="block"><p>Number of results requested.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSelectionPagedQueryResponse.html#getLimit()">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionPagedQueryResponse</a></code></dd>
@@ -225,9 +225,8 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.59">getOffset</a></span>()</div>
-<div class="block"><p>Offset supplied by the client or the server default.
-  It is the number of elements skipped, not a page number.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.60">getOffset</a></span>()</div>
+<div class="block"><p>Number of elements skipped.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSelectionPagedQueryResponse.html#getOffset()">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionPagedQueryResponse</a></code></dd>
@@ -239,7 +238,7 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.66">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.68">getCount</a></span>()</div>
 <div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -252,12 +251,8 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.77">getTotal</a></span>()</div>
-<div class="block"><p>Total number of results matching the query.
-  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
-  Unlike other endpoints, the Product Selection endpoint does not return this field by default.
-  To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>.
-  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/limits#queries">limit</a>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.76">getTotal</a></span>()</div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSelectionPagedQueryResponse.html#getTotal()">getTotal</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionPagedQueryResponse</a></code></dd>
@@ -270,7 +265,7 @@ implements <a href="ProductSelectionPagedQueryResponse.html" title="interface in
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductSelection</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionPagedQueryResponseImpl.html#line.84">getResults</a></span>()</div>
-<div class="block"><p>The Product Selections matching the query.</p></div>
+<div class="block"><p>ProductSelections matching the query.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductSelectionPagedQueryResponse.html#getResults()">getResults</a></code>&nbsp;in interface&nbsp;<code><a href="ProductSelectionPagedQueryResponse.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionPagedQueryResponse</a></code></dd>

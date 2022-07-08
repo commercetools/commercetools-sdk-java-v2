@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.10">TypeAddEnumValueActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.23">TypeAddEnumValueActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a>&gt;</span></div>
+<div class="block">TypeAddEnumValueActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TypeAddEnumValueAction typeAddEnumValueAction = TypeAddEnumValueAction.builder()
+             .fieldName("{fieldName}")
+             .value(valueBuilder -> valueBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +134,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#fieldName(java.lang.String)">fieldName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><code>name</code> of the Field Definition to update.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -138,10 +151,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#value(com.commercetools.api.models.type.CustomFieldEnumValue)">value</a></span>&#8203;(<a href="CustomFieldEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldEnumValue</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to append to the array.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#value(java.util.function.Function)">value</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>,&#8203;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Value to append to the array.</div>
+</div>
 </div>
 </div>
 </div>
@@ -162,7 +179,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TypeAddEnumValueActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.11">TypeAddEnumValueActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.24">TypeAddEnumValueActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,37 +193,40 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="fieldName(java.lang.String)">
 <h3>fieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.17">fieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.34">fieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="block"><p><code>name</code> of the Field Definition to update.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.22">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>,&#8203;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.43">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>,&#8203;<a href="CustomFieldEnumValueBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldEnumValueBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Value to append to the array.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.api.models.type.CustomFieldEnumValue)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.28">value</a></span>&#8203;<span class="parameters">(<a href="CustomFieldEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldEnumValue</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.53">value</a></span>&#8203;<span class="parameters">(<a href="CustomFieldEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldEnumValue</a>&nbsp;value)</span></div>
+<div class="block"><p>Value to append to the array.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.33">getFieldName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.58">getFieldName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.37">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.62">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.41">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.66">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a>&gt;</code></dd>
@@ -216,20 +236,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.50">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.75">buildUnchecked</a></span>()</div>
 <div class="block">builds TypeAddEnumValueAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.79">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeAddEnumValueAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeAddEnumValueActionBuilder.html#line.83">of</a></span>&#8203;<span class="parameters">(<a href="TypeAddEnumValueAction.html" title="interface in com.commercetools.api.models.type">TypeAddEnumValueAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

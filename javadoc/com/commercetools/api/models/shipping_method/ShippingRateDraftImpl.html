@@ -83,9 +83,10 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.17">ShippingRateDraftImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.20">ShippingRateDraftImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block">ShippingRateDraft</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,15 +129,17 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFreeAbove()">getFreeAbove</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value.</div>
+<div class="block">Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getPrice()">getPrice</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Money value of the ShippingRate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getTiers()">getTiers</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A list of shipping rate price tiers.</div>
+<div class="block">Price tiers for the ShippingRate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -179,7 +182,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ShippingRateDraftImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.35">ShippingRateDraftImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.38">ShippingRateDraftImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -193,7 +196,8 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.38">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.45">getPrice</a></span>()</div>
+<div class="block"><p>Money value of the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#getPrice()">getPrice</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -203,10 +207,8 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getFreeAbove()">
 <h3>getFreeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.47">getFreeAbove</a></span>()</div>
-<div class="block"><p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value.
-  Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios.
-  Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.53">getFreeAbove</a></span>()</div>
+<div class="block"><p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#getFreeAbove()">getFreeAbove</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -216,8 +218,8 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getTiers()">
 <h3>getTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.54">getTiers</a></span>()</div>
-<div class="block"><p>A list of shipping rate price tiers.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.61">getTiers</a></span>()</div>
+<div class="block"><p>Price tiers for the ShippingRate.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#getTiers()">getTiers</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -227,7 +229,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setPrice(com.commercetools.api.models.common.Money)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.58">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.65">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#setPrice(com.commercetools.api.models.common.Money)">setPrice</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -237,7 +239,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setFreeAbove(com.commercetools.api.models.common.Money)">
 <h3>setFreeAbove</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.62">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;freeAbove)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.69">setFreeAbove</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;freeAbove)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#setFreeAbove(com.commercetools.api.models.common.Money)">setFreeAbove</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -247,7 +249,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setTiers(com.commercetools.api.models.shipping_method.ShippingRatePriceTier...)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.66">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.73">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#setTiers(com.commercetools.api.models.shipping_method.ShippingRatePriceTier...)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -257,7 +259,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.70">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.77">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ShippingRateDraft.html#setTiers(java.util.List)">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></dd>
@@ -267,7 +269,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.75">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.82">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -277,7 +279,7 @@ implements <a href="ShippingRateDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.91">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html#line.98">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

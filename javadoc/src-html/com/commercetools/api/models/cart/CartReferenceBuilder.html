@@ -22,63 +22,87 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class CartReferenceBuilder implements Builder&lt;CartReference&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private String id;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    @Nullable</span>
-<span class="source-line-no">018</span><span id="line.18">    private com.commercetools.api.models.cart.Cart obj;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    public CartReferenceBuilder id(final String id) {</span>
-<span class="source-line-no">021</span><span id="line.21">        this.id = id;</span>
-<span class="source-line-no">022</span><span id="line.22">        return this;</span>
-<span class="source-line-no">023</span><span id="line.23">    }</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public CartReferenceBuilder obj(</span>
-<span class="source-line-no">026</span><span id="line.26">            Function&lt;com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder&gt; builder) {</span>
-<span class="source-line-no">027</span><span id="line.27">        this.obj = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();</span>
-<span class="source-line-no">028</span><span id="line.28">        return this;</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public CartReferenceBuilder obj(@Nullable final com.commercetools.api.models.cart.Cart obj) {</span>
-<span class="source-line-no">032</span><span id="line.32">        this.obj = obj;</span>
-<span class="source-line-no">033</span><span id="line.33">        return this;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> * CartReferenceBuilder</span>
+<span class="source-line-no">014</span><span id="line.14"> * &lt;hr&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">016</span><span id="line.16"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *     CartReference cartReference = CartReference.builder()</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .id("{id}")</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .build()</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;/div&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> */</span>
+<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">025</span><span id="line.25">public class CartReferenceBuilder implements Builder&lt;CartReference&gt; {</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private String id;</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
+<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.api.models.cart.Cart obj;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    /**</span>
+<span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Unique identifier of the referenced Cart.&lt;/p&gt;</span>
+<span class="source-line-no">034</span><span id="line.34">     */</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public String getId() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return this.id;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    @Nullable</span>
-<span class="source-line-no">041</span><span id="line.41">    public com.commercetools.api.models.cart.Cart getObj() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return this.obj;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">036</span><span id="line.36">    public CartReferenceBuilder id(final String id) {</span>
+<span class="source-line-no">037</span><span id="line.37">        this.id = id;</span>
+<span class="source-line-no">038</span><span id="line.38">        return this;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public CartReference build() {</span>
-<span class="source-line-no">046</span><span id="line.46">        Objects.requireNonNull(id, CartReference.class + ": id is missing");</span>
-<span class="source-line-no">047</span><span id="line.47">        return new CartReferenceImpl(id, obj);</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     * builds CartReference without checking for non null required values</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53">    public CartReference buildUnchecked() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return new CartReferenceImpl(id, obj);</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static CartReferenceBuilder of() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return new CartReferenceBuilder();</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static CartReferenceBuilder of(final CartReference template) {</span>
-<span class="source-line-no">062</span><span id="line.62">        CartReferenceBuilder builder = new CartReferenceBuilder();</span>
-<span class="source-line-no">063</span><span id="line.63">        builder.id = template.getId();</span>
-<span class="source-line-no">064</span><span id="line.64">        builder.obj = template.getObj();</span>
-<span class="source-line-no">065</span><span id="line.65">        return builder;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">}</span>
+<span class="source-line-no">045</span><span id="line.45">    public CartReferenceBuilder obj(</span>
+<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder&gt; builder) {</span>
+<span class="source-line-no">047</span><span id="line.47">        this.obj = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();</span>
+<span class="source-line-no">048</span><span id="line.48">        return this;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public CartReferenceBuilder obj(@Nullable final com.commercetools.api.models.cart.Cart obj) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.obj = obj;</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public String getId() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return this.id;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @Nullable</span>
+<span class="source-line-no">065</span><span id="line.65">    public com.commercetools.api.models.cart.Cart getObj() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return this.obj;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public CartReference build() {</span>
+<span class="source-line-no">070</span><span id="line.70">        Objects.requireNonNull(id, CartReference.class + ": id is missing");</span>
+<span class="source-line-no">071</span><span id="line.71">        return new CartReferenceImpl(id, obj);</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     * builds CartReference without checking for non null required values</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    public CartReference buildUnchecked() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new CartReferenceImpl(id, obj);</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static CartReferenceBuilder of() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new CartReferenceBuilder();</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static CartReferenceBuilder of(final CartReference template) {</span>
+<span class="source-line-no">086</span><span id="line.86">        CartReferenceBuilder builder = new CartReferenceBuilder();</span>
+<span class="source-line-no">087</span><span id="line.87">        builder.id = template.getId();</span>
+<span class="source-line-no">088</span><span id="line.88">        builder.obj = template.getObj();</span>
+<span class="source-line-no">089</span><span id="line.89">        return builder;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">}</span>
 
 
 

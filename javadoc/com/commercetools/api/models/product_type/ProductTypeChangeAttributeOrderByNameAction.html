@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductTypeChangeAttributeOrderByNameActionImpl.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.15">ProductTypeChangeAttributeOrderByNameAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.28">ProductTypeChangeAttributeOrderByNameAction</a></span><span class="extends-implements">
 extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></span></div>
+<div class="block">ProductTypeChangeAttributeOrderByNameAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductTypeChangeAttributeOrderByNameAction productTypeChangeAttributeOrderByNameAction = ProductTypeChangeAttributeOrderByNameAction.builder()
+             .plusAttributeNames(attributeNamesBuilder -> attributeNamesBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +134,9 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAttributeNames()">getAttributeNames</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Names of Attributes to reorder.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -165,7 +178,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="CHANGE_ATTRIBUTE_ORDER_BY_NAME">
 <h3>CHANGE_ATTRIBUTE_ORDER_BY_NAME</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.19">CHANGE_ATTRIBUTE_ORDER_BY_NAME</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.32">CHANGE_ATTRIBUTE_ORDER_BY_NAME</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction.CHANGE_ATTRIBUTE_ORDER_BY_NAME">Constant Field Values</a></dd>
@@ -184,55 +197,56 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAttributeNames()">
 <h3>getAttributeNames</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.21">getAttributeNames</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.37">getAttributeNames</a></span>()</div>
+<div class="block"><p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributeNames(java.lang.String...)">
 <h3>setAttributeNames</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.25">setAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;attributeNames)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.41">setAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;attributeNames)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributeNames(java.util.List)">
 <h3>setAttributeNames</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.28">setAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;attributeNames)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.44">setAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;attributeNames)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.41">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.57">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.45">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductTypeChangeAttributeOrderByNameActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductTypeChangeAttributeOrderByNameAction(java.util.function.Function)">
 <h3>withProductTypeChangeAttributeOrderByNameAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.50">withProductTypeChangeAttributeOrderByNameAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.66">withProductTypeChangeAttributeOrderByNameAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.55">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeChangeAttributeOrderByNameAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeChangeAttributeOrderByNameAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/ProductTypeChangeAttributeOrderByNameAction.html#line.71">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

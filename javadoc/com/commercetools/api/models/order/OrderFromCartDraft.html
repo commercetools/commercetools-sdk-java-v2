@@ -80,7 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderFromCartDraftImpl.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.19">OrderFromCartDraft</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.32">OrderFromCartDraft</a></span></div>
+<div class="block">OrderFromCartDraft
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     OrderFromCartDraft orderFromCartDraft = OrderFromCartDraft.builder()
+             .version(0.3)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -109,7 +120,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCustom()">getCustom</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block"><a href="/../api/projects/custom-fields">Custom Fields</a> for the Order.</div>
+<div class="block">Custom Fields for the Order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
@@ -197,16 +208,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.26">getId</a></span>()</div>
+</span><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.39">getId</a></span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
-<div class="block"><p>The unique id of the cart from which an order is created.</p></div>
+<div class="block"><p>Unique identifier of the Cart from which you can create an Order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCart()">
 <h3>getCart</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.33">getCart</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.46">getCart</a></span>()</div>
 <div class="block"><p>ResourceIdentifier to the Cart from which this order is created.</p></div>
 </section>
 </li>
@@ -214,36 +225,32 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.37">getVersion</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.53">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderNumber()">
 <h3>getOrderNumber</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.49">getOrderNumber</a></span>()</div>
-<div class="block"><p>String that uniquely identifies an order.
-  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-  It should be unique across a project.
-  Once it's set it cannot be changed.
-  For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.61">getOrderNumber</a></span>()</div>
+<div class="block"><p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPaymentState()">
 <h3>getPaymentState</h3>
-<div class="member-signature"><span class="return-type"><a href="PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.52">getPaymentState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.68">getPaymentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShipmentState()">
 <h3>getShipmentState</h3>
-<div class="member-signature"><span class="return-type"><a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.55">getShipmentState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.75">getShipmentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOrderState()">
 <h3>getOrderState</h3>
-<div class="member-signature"><span class="return-type"><a href="OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.62">getOrderState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.82">getOrderState</a></span>()</div>
 <div class="block"><p>Order will be created with <code>Open</code> status by default.</p></div>
 </section>
 </li>
@@ -251,109 +258,107 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.65">getState</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.88">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.74">getCustom</a></span>()</div>
-<div class="block"><p><a href="/../api/projects/custom-fields">Custom Fields</a> for the Order. The Custom Field type must match the type of the Custom Fields in the referenced <a href="/../api/projects/carts#cart">Cart</a>.
-  If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> and added to the Order.
-  If empty, the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are added to the Order automatically.</p></div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.95">getCustom</a></span>()</div>
+<div class="block"><p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.78">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+</span><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.99">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCart(com.commercetools.api.models.cart.CartResourceIdentifier)">
 <h3>setCart</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.81">setCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.102">setCart</a></span>&#8203;<span class="parameters">(<a href="../cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;cart)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.83">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.104">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOrderNumber(java.lang.String)">
 <h3>setOrderNumber</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.85">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.106">setOrderNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderNumber)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPaymentState(com.commercetools.api.models.order.PaymentState)">
 <h3>setPaymentState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.87">setPaymentState</a></span>&#8203;<span class="parameters">(<a href="PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a>&nbsp;paymentState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.108">setPaymentState</a></span>&#8203;<span class="parameters">(<a href="PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a>&nbsp;paymentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShipmentState(com.commercetools.api.models.order.ShipmentState)">
 <h3>setShipmentState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.89">setShipmentState</a></span>&#8203;<span class="parameters">(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.110">setShipmentState</a></span>&#8203;<span class="parameters">(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOrderState(com.commercetools.api.models.order.OrderState)">
 <h3>setOrderState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.91">setOrderState</a></span>&#8203;<span class="parameters">(<a href="OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;orderState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.112">setOrderState</a></span>&#8203;<span class="parameters">(<a href="OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;orderState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.state.StateResourceIdentifier)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.93">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.114">setState</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.95">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.116">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.97">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.118">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderFromCartDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.101">of</a></span>&#8203;<span class="parameters">(<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.122">of</a></span>&#8203;<span class="parameters">(<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.115">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.136">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order.OrderFromCartDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.119">builder</a></span>&#8203;<span class="parameters">(<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderFromCartDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromCartDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.140">builder</a></span>&#8203;<span class="parameters">(<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderFromCartDraft(java.util.function.Function)">
 <h3>withOrderFromCartDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.123">withOrderFromCartDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.144">withOrderFromCartDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.127">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderFromCartDraft.html#line.148">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

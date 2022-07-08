@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.12">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.24">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a>&gt;</span></div>
+<div class="block">ShoppingListSetTextLineItemDescriptionActionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ShoppingListSetTextLineItemDescriptionAction shoppingListSetTextLineItemDescriptionAction = ShoppingListSetTextLineItemDescriptionAction.builder()
+             .textLineItemId("{textLineItemId}")
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,10 +133,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(com.commercetools.api.models.common.LocalizedString)">description</a></span>&#8203;(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#description(java.util.function.Function)">description</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -162,7 +176,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ShoppingListSetTextLineItemDescriptionActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.13">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.25">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,39 +190,41 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="textLineItemId(java.lang.String)">
 <h3>textLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.21">textLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.37">textLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.26">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.46">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(com.commercetools.api.models.common.LocalizedString)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.32">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.56">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="block"><p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTextLineItemId()">
 <h3>getTextLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.38">getTextLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.62">getTextLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.42">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.66">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.47">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.71">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a>&gt;</code></dd>
@@ -218,20 +234,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.56">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.80">buildUnchecked</a></span>()</div>
 <div class="block">builds ShoppingListSetTextLineItemDescriptionAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.60">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.84">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.64">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShoppingListSetTextLineItemDescriptionActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shopping_list/ShoppingListSetTextLineItemDescriptionActionBuilder.html#line.88">of</a></span>&#8203;<span class="parameters">(<a href="ShoppingListSetTextLineItemDescriptionAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetTextLineItemDescriptionAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

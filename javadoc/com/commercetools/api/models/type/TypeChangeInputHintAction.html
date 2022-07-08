@@ -84,9 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TypeChangeInputHintActionImpl.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.18">TypeChangeInputHintAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.29">TypeChangeInputHintAction</a></span><span class="extends-implements">
 extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></span></div>
-<div class="block"><p>Changes the <code>inputHint</code> of <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, a <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, and <a href="ctp:api:type:CustomFieldSetType">CustomFieldSetType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> of these string-based FieldTypes.</p></div>
+<div class="block"><p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     TypeChangeInputHintAction typeChangeInputHintAction = TypeChangeInputHintAction.builder()
+             .fieldName("{fieldName}")
+             .inputHint(TypeTextInputHint.SINGLE_LINE)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -125,7 +136,7 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block"><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</div>
+<div class="block"><code>name</code> of the Field Definition to update.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getInputHint()">getInputHint</a></span>()</code></div>
@@ -173,7 +184,7 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="CHANGE_INPUT_HINT">
 <h3>CHANGE_INPUT_HINT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.22">CHANGE_INPUT_HINT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.33">CHANGE_INPUT_HINT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.type.TypeChangeInputHintAction.CHANGE_INPUT_HINT">Constant Field Values</a></dd>
@@ -192,65 +203,64 @@ extends <a href="TypeUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.27">getFieldName</a></span>()</div>
-<div class="block"><p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p></div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.38">getFieldName</a></span>()</div>
+<div class="block"><p><code>name</code> of the Field Definition to update.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.35">getInputHint</a></span>()</div>
-<div class="block"><p>New value to set.
-  Must not be empty.</p></div>
+</span><span class="return-type">@NotNull <a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.45">getInputHint</a></span>()</div>
+<div class="block"><p>New value to set. Must not be empty.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFieldName(java.lang.String)">
 <h3>setFieldName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.39">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.49">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputHint(com.commercetools.api.models.type.TypeTextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.41">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.51">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.TypeChangeInputHintAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.54">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.TypeChangeInputHintAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.58">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypeChangeInputHintAction(java.util.function.Function)">
 <h3>withTypeChangeInputHintAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.62">withTypeChangeInputHintAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.72">withTypeChangeInputHintAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.66">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypeChangeInputHintAction.html" title="interface in com.commercetools.api.models.type">TypeChangeInputHintAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeInputHintAction.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,9 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductDraftImportRequestImpl.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.20">ProductDraftImportRequest</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.30">ProductDraftImportRequest</a></span><span class="extends-implements">
 extends <a href="ImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ImportRequest</a></span></div>
-<div class="block"><p>The request body to <a href="#import-productdrafts">import ProductDrafts</a>. Contains data for <a href="/../api/projects/products#productdraft">Products</a> to be created or updated in a commercetools Project.</p></div>
+<div class="block"><p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a Project.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductDraftImportRequest productDraftImportRequest = ProductDraftImportRequest.builder()
+             .plusResources(resourcesBuilder -> resourcesBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -165,7 +175,7 @@ extends <a href="ImportRequest.html" title="interface in com.commercetools.impor
 <li>
 <section class="detail" id="PRODUCT_DRAFT">
 <h3>PRODUCT_DRAFT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.24">PRODUCT_DRAFT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.34">PRODUCT_DRAFT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.importapi.models.importrequests.ProductDraftImportRequest.PRODUCT_DRAFT">Constant Field Values</a></dd>
@@ -185,56 +195,56 @@ extends <a href="ImportRequest.html" title="interface in com.commercetools.impor
 <h3>getResources</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.29">getResources</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.39">getResources</a></span>()</div>
 <div class="block"><p>The product draft import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResources(com.commercetools.importapi.models.productdrafts.ProductDraftImport...)">
 <h3>setResources</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.34">setResources</a></span>&#8203;<span class="parameters">(<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>...&nbsp;resources)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.44">setResources</a></span>&#8203;<span class="parameters">(<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>...&nbsp;resources)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResources(java.util.List)">
 <h3>setResources</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.37">setResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;&nbsp;resources)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.47">setResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productdrafts/ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;&nbsp;resources)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.39">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.49">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importrequests.ProductDraftImportRequest)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.53">of</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.49">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.59">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.importrequests.ProductDraftImportRequest)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.53">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductDraftImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductDraftImportRequest(java.util.function.Function)">
 <h3>withProductDraftImportRequest</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.57">withProductDraftImportRequest</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.67">withProductDraftImportRequest</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.61">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDraftImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductDraftImportRequest</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductDraftImportRequest.html#line.71">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

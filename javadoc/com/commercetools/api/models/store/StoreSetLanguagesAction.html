@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StoreSetLanguagesActionImpl.html" title="class in com.commercetools.api.models.store">StoreSetLanguagesActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.13">StoreSetLanguagesAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.25">StoreSetLanguagesAction</a></span><span class="extends-implements">
 extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.api.models.store">StoreUpdateAction</a></span></div>
+<div class="block">StoreSetLanguagesAction
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     StoreSetLanguagesAction storeSetLanguagesAction = StoreSetLanguagesAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +133,9 @@ extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getLanguages()">getLanguages</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Value to set.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -165,7 +177,7 @@ extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="SET_LANGUAGES">
 <h3>SET_LANGUAGES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.17">SET_LANGUAGES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.29">SET_LANGUAGES</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.store.StoreSetLanguagesAction.SET_LANGUAGES">Constant Field Values</a></dd>
@@ -183,55 +195,56 @@ extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="getLanguages()">
 <h3>getLanguages</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.19">getLanguages</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.35">getLanguages</a></span>()</div>
+<div class="block"><p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.lang.String...)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.22">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.38">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.util.List)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.25">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.41">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.27">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.store.StoreSetLanguagesAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.31">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.37">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.store.StoreSetLanguagesAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.41">builder</a></span>&#8203;<span class="parameters">(<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetLanguagesActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetLanguagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreSetLanguagesAction(java.util.function.Function)">
 <h3>withStoreSetLanguagesAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.45">withStoreSetLanguagesAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.61">withStoreSetLanguagesAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.49">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetLanguagesAction.html#line.65">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

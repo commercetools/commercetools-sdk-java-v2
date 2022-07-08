@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="InventoryEntrySetSupplyChannelActionImpl.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.16">InventoryEntrySetSupplyChannelAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.28">InventoryEntrySetSupplyChannelAction</a></span><span class="extends-implements">
 extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryUpdateAction</a></span></div>
+<div class="block"><p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, this action will fail and a 400 Bad Request <code>DuplicateField</code> error will be returned.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     InventoryEntrySetSupplyChannelAction inventoryEntrySetSupplyChannelAction = InventoryEntrySetSupplyChannelAction.builder()
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,7 +134,7 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getSupplyChannel()">getSupplyChannel</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">If absent, the supply channel is removed.</div>
+<div class="block">Value to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
@@ -164,7 +174,7 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <li>
 <section class="detail" id="SET_SUPPLY_CHANNEL">
 <h3>SET_SUPPLY_CHANNEL</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.20">SET_SUPPLY_CHANNEL</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.32">SET_SUPPLY_CHANNEL</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL">Constant Field Values</a></dd>
@@ -183,51 +193,50 @@ extends <a href="InventoryEntryUpdateAction.html" title="interface in com.commer
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.26">getSupplyChannel</a></span>()</div>
-<div class="block"><p>If absent, the supply channel is removed.
-  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p></div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.37">getSupplyChannel</a></span>()</div>
+<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setSupplyChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.30">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.41">setSupplyChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.32">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.36">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.42">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.46">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntrySetSupplyChannelActionBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withInventoryEntrySetSupplyChannelAction(java.util.function.Function)">
 <h3>withInventoryEntrySetSupplyChannelAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.51">withInventoryEntrySetSupplyChannelAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.62">withInventoryEntrySetSupplyChannelAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.55">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryEntrySetSupplyChannelAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetSupplyChannelAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetSupplyChannelAction.html#line.66">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

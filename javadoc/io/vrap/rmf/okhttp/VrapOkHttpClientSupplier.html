@@ -82,11 +82,11 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../base/client/HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">HttpClientSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></dd>
+<dd><code><a href="../base/client/ExecutorHttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">ExecutorHttpClientSupplier</a></code>, <code><a href="../base/client/HttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">HttpClientSupplier</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.7">VrapOkHttpClientSupplier</a></span>
+</span><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.10">VrapOkHttpClientSupplier</a></span>
 <span class="extends-implements">extends <a href="../base/client/BaseHttpClientSupplier.html" title="class in io.vrap.rmf.base.client">BaseHttpClientSupplier</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
@@ -124,6 +124,11 @@ loadScripts(document, 'script');</script>
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">The <a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> provider method</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#get(java.util.concurrent.ExecutorService)">get</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab6 method-summary-table-tab4 method-summary-table">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </div>
 </div>
@@ -144,7 +149,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>VrapOkHttpClientSupplier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.8">VrapOkHttpClientSupplier</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.11">VrapOkHttpClientSupplier</a></span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
@@ -159,7 +164,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="get()">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.10">get</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.13">get</a></span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="../base/client/BaseHttpClientSupplier.html#get()">BaseHttpClientSupplier</a></code></span></div>
 <div class="block">The <a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>VrapHttpClient</code></a> provider method</div>
@@ -170,6 +175,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../base/client/BaseHttpClientSupplier.html#get()">get</a></code>&nbsp;in class&nbsp;<code><a href="../base/client/BaseHttpClientSupplier.html" title="class in io.vrap.rmf.base.client">BaseHttpClientSupplier</a></code></dd>
 <dt>Returns:</dt>
 <dd>HttpClient implementation</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="get(java.util.concurrent.ExecutorService)">
+<h3>get</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/io/vrap/rmf/okhttp/VrapOkHttpClientSupplier.html#line.18">get</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../base/client/ExecutorHttpClientSupplier.html#get(java.util.concurrent.ExecutorService)">get</a></code>&nbsp;in interface&nbsp;<code><a href="../base/client/ExecutorHttpClientSupplier.html" title="interface in io.vrap.rmf.base.client">ExecutorHttpClientSupplier</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="../base/client/BaseHttpClientSupplier.html#get(java.util.concurrent.ExecutorService)">get</a></code>&nbsp;in class&nbsp;<code><a href="../base/client/BaseHttpClientSupplier.html" title="class in io.vrap.rmf.base.client">BaseHttpClientSupplier</a></code></dd>
 </dl>
 </section>
 </li>

@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.10">AssignedProductSelectionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.24">AssignedProductSelectionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</span></div>
+<div class="block">AssignedProductSelectionBuilder
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     AssignedProductSelection assignedProductSelection = AssignedProductSelection.builder()
+             .productSelection(productSelectionBuilder -> productSelectionBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,18 +134,35 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductSelection()">getProductSelection</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.product_selection.AssignedProductSelection)">of</a></span>&#8203;(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(com.commercetools.api.models.product_selection.ProductSelectionReference)">productSelection</a></span>&#8203;(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVariantSelection()">getVariantSelection</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code>static <a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.product_selection.AssignedProductSelection)">of</a></span>&#8203;(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(java.util.function.Function)">productSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>,&#8203;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(com.commercetools.api.models.product_selection.ProductSelectionReference)">productSelection</a></span>&#8203;(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to the Product Selection that this assignment is part of.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#productSelection(java.util.function.Function)">productSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>,&#8203;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Reference to the Product Selection that this assignment is part of.</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#variantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">variantSelection</a></span>&#8203;(<a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#variantSelection(java.util.function.Function)">variantSelection</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AssignedProductSelectionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.11">AssignedProductSelectionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.25">AssignedProductSelectionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -170,25 +197,49 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productSelection(java.util.function.Function)">
 <h3>productSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.15">productSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>,&#8203;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.36">productSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>,&#8203;<a href="ProductSelectionReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to the Product Selection that this assignment is part of.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="productSelection(com.commercetools.api.models.product_selection.ProductSelectionReference)">
 <h3>productSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.23">productSelection</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.48">productSelection</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a>&nbsp;productSelection)</span></div>
+<div class="block"><p>Reference to the Product Selection that this assignment is part of.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">
+<h3>variantSelection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.58">variantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</span></div>
+<div class="block"><p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantSelection(java.util.function.Function)">
+<h3>variantSelection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.68">variantSelection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductSelection()">
 <h3>getProductSelection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.29">getProductSelection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSelectionReference.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.76">getProductSelection</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getVariantSelection()">
+<h3>getVariantSelection</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.80">getVariantSelection</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.33">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.85">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&gt;</code></dd>
@@ -198,20 +249,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.41">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.93">buildUnchecked</a></span>()</div>
 <div class="block">builds AssignedProductSelection without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.97">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_selection.AssignedProductSelection)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AssignedProductSelectionBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductSelectionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/AssignedProductSelectionBuilder.html#line.101">of</a></span>&#8203;<span class="parameters">(<a href="AssignedProductSelection.html" title="interface in com.commercetools.api.models.product_selection">AssignedProductSelection</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -84,9 +84,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductDraftImportImpl.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.26">ProductDraftImport</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.39">ProductDraftImport</a></span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The representation of a Product Draft for the import purpose.</p></div>
+<div class="block"><p>The representation of a Product Draft for the import purpose.</p>
+
+ <hr>
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+     ProductDraftImport productDraftImport = ProductDraftImport.builder()
+             .key("{key}")
+             .productType(productTypeBuilder -> productTypeBuilder)
+             .name(nameBuilder -> nameBuilder)
+             .slug(slugBuilder -> slugBuilder)
+             .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -110,7 +123,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCategories()">getCategories</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The Reference to the <a href="/../api/projects/categories#category">Categories</a> with which the ProductDraft is associated.</div>
+<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getDescription()">getDescription</a></span>()</code></div>
@@ -125,17 +138,17 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</div>
+<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaKeywords()">getMetaKeywords</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</div>
+<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getMetaTitle()">getMetaTitle</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</div>
+<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getName()">getName</a></span>()</code></div>
@@ -143,7 +156,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getProductType()">getProductType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.</div>
+<div class="block">The <code>productType</code> of a Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPublish()">getPublish</a></span>()</code></div>
@@ -163,12 +176,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getState()">getState</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The Reference to the <a href="/../api/projects/states#state">State</a> with which the ProductDraft is associated.</div>
+<div class="block">The Reference to the State with which the ProductDraft is associated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTaxCategory()">getTaxCategory</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
-<div class="block">The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the ProductDraft is associated.</div>
+<div class="block">The Reference to the TaxCategory with which the ProductDraft is associated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getVariants()">getVariants</a></span>()</code></div>
@@ -257,11 +270,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getProductType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.36">getProductType</a></span>()</div>
-<div class="block"><p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
-  Maps to <code>Product.productType</code>.
-  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the ProductDraft is associated.
-  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.46">getProductType</a></span>()</div>
+<div class="block"><p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
 </section>
 </li>
 <li>
@@ -269,7 +279,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.41">getName</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.54">getName</a></span>()</div>
 </section>
 </li>
 <li>
@@ -277,16 +287,15 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.50">getSlug</a></span>()</div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project,
-  but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.62">getSlug</a></span>()</div>
+<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.58">getDescription</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.70">getDescription</a></span>()</div>
 <div class="block"><p>Maps to <code>Product.description</code>.</p></div>
 </section>
 </li>
@@ -294,20 +303,19 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCategories()">
 <h3>getCategories</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.66">getCategories</a></span>()</div>
-<div class="block"><p>The Reference to the <a href="/../api/projects/categories#category">Categories</a> with which the ProductDraft is associated.
-  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.77">getCategories</a></span>()</div>
+<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaTitle()">
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.78">getMetaTitle</a></span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-  <pre><code class="language-json">{
-    &quot;de&quot;: &quot;Hundefutter&quot;,
-    &quot;en&quot;: &quot;dog food&quot;
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.89">getMetaTitle</a></span>()</div>
+<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+  <pre><code>{
+    "de": "Hundefutter",
+    "en": "dog food"
   }
   </code></pre></div>
 </section>
@@ -316,11 +324,11 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getMetaDescription()">
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.90">getMetaDescription</a></span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-  <pre><code class="language-json">{
-    &quot;de&quot;: &quot;Hundefutter&quot;,
-    &quot;en&quot;: &quot;dog food&quot;
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.101">getMetaDescription</a></span>()</div>
+<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+  <pre><code>{
+    "de": "Hundefutter",
+    "en": "dog food"
   }
   </code></pre></div>
 </section>
@@ -329,11 +337,11 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getMetaKeywords()">
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.102">getMetaKeywords</a></span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-  <pre><code class="language-json">{
-    &quot;de&quot;: &quot;Hundefutter&quot;,
-    &quot;en&quot;: &quot;dog food&quot;
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.113">getMetaKeywords</a></span>()</div>
+<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+  <pre><code>{
+    "de": "Hundefutter",
+    "en": "dog food"
   }
   </code></pre></div>
 </section>
@@ -342,16 +350,15 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getMasterVariant()">
 <h3>getMasterVariant</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.110">getMasterVariant</a></span>()</div>
-<div class="block"><p>The master Product variant.
-  Required if the <code>variants</code> array contains a Product Variant.</p></div>
+</span><span class="return-type">@Valid <a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.120">getMasterVariant</a></span>()</div>
+<div class="block"><p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariants()">
 <h3>getVariants</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.117">getVariants</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.127">getVariants</a></span>()</div>
 <div class="block"><p>An array of related Product Variants.</p></div>
 </section>
 </li>
@@ -359,28 +366,27 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.125">getTaxCategory</a></span>()</div>
-<div class="block"><p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the ProductDraft is associated.
-  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
+</span><span class="return-type">@Valid <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.134">getTaxCategory</a></span>()</div>
+<div class="block"><p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSearchKeywords()">
 <h3>getSearchKeywords</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.148">getSearchKeywords</a></span>()</div>
-<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-  <pre><code class="language-json">{
-    &quot;en&quot;: [
-      { &quot;text&quot;: &quot;Multi tool&quot; },
-      { &quot;text&quot;: &quot;Swiss Army Knife&quot;, &quot;suggestTokenizer&quot;: { &quot;type&quot;: &quot;whitespace&quot; } }
+</span><span class="return-type">@Valid <a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.157">getSearchKeywords</a></span>()</div>
+<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+  <pre><code>{
+    "en": [
+      { "text": "Multi tool" },
+      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
     ],
-    &quot;de&quot;: [
+    "de": [
       {
-        &quot;text&quot;: &quot;Schweizer Messer&quot;,
-        &quot;suggestTokenizer&quot;: {
-          &quot;type&quot;: &quot;custom&quot;,
-          &quot;inputs&quot;: [&quot;schweizer messer&quot;, &quot;offiziersmesser&quot;, &quot;sackmesser&quot;]
+        "text": "Schweizer Messer",
+        "suggestTokenizer": {
+          "type": "custom",
+          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
         }
       }
     ]
@@ -392,150 +398,147 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.156">getState</a></span>()</div>
-<div class="block"><p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the ProductDraft is associated.
-  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary State is created.</p></div>
+</span><span class="return-type">@Valid <a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.164">getState</a></span>()</div>
+<div class="block"><p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.166">getPublish</a></span>()</div>
-<div class="block"><p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.
-  If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.
-  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.172">getPublish</a></span>()</div>
+<div class="block"><p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductType(com.commercetools.importapi.models.common.ProductTypeKeyReference)">
 <h3>setProductType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.169">setProductType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.175">setProductType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.171">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.177">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.173">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.179">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.175">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.181">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCategories(com.commercetools.importapi.models.common.CategoryKeyReference...)">
 <h3>setCategories</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.177">setCategories</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.183">setCategories</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCategories(java.util.List)">
 <h3>setCategories</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.180">setCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.186">setCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaTitle(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaTitle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.182">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.188">setMetaTitle</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaDescription(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.184">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.190">setMetaDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMetaKeywords(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>setMetaKeywords</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.186">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.192">setMetaKeywords</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMasterVariant(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport)">
 <h3>setMasterVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.188">setMasterVariant</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&nbsp;masterVariant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.194">setMasterVariant</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&nbsp;masterVariant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariants(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport...)">
 <h3>setVariants</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.190">setVariants</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.196">setVariants</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariants(java.util.List)">
 <h3>setVariants</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.193">setVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;variants)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.199">setVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;variants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)">
 <h3>setTaxCategory</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.195">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.201">setTaxCategory</a></span>&#8203;<span class="parameters">(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSearchKeywords(com.commercetools.importapi.models.products.SearchKeywords)">
 <h3>setSearchKeywords</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.197">setSearchKeywords</a></span>&#8203;<span class="parameters">(<a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.203">setSearchKeywords</a></span>&#8203;<span class="parameters">(<a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.importapi.models.common.StateKeyReference)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.199">setState</a></span>&#8203;<span class="parameters">(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.205">setState</a></span>&#8203;<span class="parameters">(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPublish(java.lang.Boolean)">
 <h3>setPublish</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.201">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.207">setPublish</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.203">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.209">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.productdrafts.ProductDraftImport)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.207">of</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.213">of</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.227">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.233">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.productdrafts.ProductDraftImport)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.231">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.237">builder</a></span>&#8203;<span class="parameters">(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductDraftImport(java.util.function.Function)">
 <h3>withProductDraftImport</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.235">withProductDraftImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.241">withProductDraftImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.239">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/productdrafts/ProductDraftImport.html#line.245">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

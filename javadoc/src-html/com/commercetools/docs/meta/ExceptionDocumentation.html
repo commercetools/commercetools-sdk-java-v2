@@ -25,7 +25,7 @@
 <span class="source-line-no">012</span><span id="line.12"> *</span>
 <span class="source-line-no">013</span><span id="line.13"> * &lt;p&gt;JSON serializing and deserializing problems throw {@link io.vrap.rmf.base.client.utils.json.JsonException}.&lt;/p&gt;</span>
 <span class="source-line-no">014</span><span id="line.14"> *</span>
-<span class="source-line-no">015</span><span id="line.15"> * &lt;p&gt;{@link io.vrap.rmf.base.client.ApiHttpException} is a base exception for all error responses from the commercetools platform (HTTP status code {@code &gt;= 400}).&lt;/p&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;p&gt;{@link io.vrap.rmf.base.client.ApiHttpException} is a base exception for all error responses from Composable Commerce (HTTP status code {@code &gt;= 400}).&lt;/p&gt;</span>
 <span class="source-line-no">016</span><span id="line.16"> *</span>
 <span class="source-line-no">017</span><span id="line.17"> * &lt;p&gt;{@link io.vrap.rmf.base.client.error.ApiClientException} expresses errors which can be recovered by the client side (HTTP status code {@code &gt;= 400 and &lt; 500}).</span>
 <span class="source-line-no">018</span><span id="line.18"> * {@link io.vrap.rmf.base.client.error.ApiServerException} is for server errors.&lt;/p&gt;</span>
@@ -35,7 +35,7 @@
 <span class="source-line-no">022</span><span id="line.22"> * &lt;h3&gt;Errors&lt;/h3&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> *</span>
 <span class="source-line-no">024</span><span id="line.24"> * If a command cannot be performed due to unfulfilled preconditions</span>
-<span class="source-line-no">025</span><span id="line.25"> * the platform can return one error response with multiple errors (&lt;a href="https://docs.commercetools.com/api/errors"&gt;listing of error codes&lt;/a&gt;).</span>
+<span class="source-line-no">025</span><span id="line.25"> * the API can return one error response with multiple errors (&lt;a href="https://docs.commercetools.com/api/errors"&gt;listing of error codes&lt;/a&gt;).</span>
 <span class="source-line-no">026</span><span id="line.26"> * The SDK will then put a {@link io.vrap.rmf.base.client.error.BadRequestException} into a {@link java.util.concurrent.CompletionStage}.</span>
 <span class="source-line-no">027</span><span id="line.27"> *</span>
 <span class="source-line-no">028</span><span id="line.28"> * &lt;h3&gt;Custom HttpExceptionFactory&lt;/h3&gt;</span>

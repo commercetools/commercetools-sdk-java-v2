@@ -3,8 +3,6 @@ package com.commercetools.api.json;
 
 import java.util.Optional;
 
-import javax.money.MonetaryAmount;
-
 import com.commercetools.api.models.cart.ReplicaCartDraft;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.AttributeImpl;

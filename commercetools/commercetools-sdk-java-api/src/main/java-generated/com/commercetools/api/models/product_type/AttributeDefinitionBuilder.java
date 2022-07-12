@@ -48,7 +48,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private Boolean isSearchable;
 
     /**
-     *  <p>Describes the type of the attribute.</p>
+     *  <p>Describes the Type of the Attribute.</p>
      */
 
     public AttributeDefinitionBuilder type(final com.commercetools.api.models.product_type.AttributeType type) {
@@ -57,7 +57,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Describes the type of the attribute.</p>
+     *  <p>Describes the Type of the Attribute.</p>
      */
 
     public AttributeDefinitionBuilder type(
@@ -67,7 +67,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      */
 
     public AttributeDefinitionBuilder name(final String name) {
@@ -76,7 +76,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A human-readable label for the attribute.</p>
+     *  <p>Human-readable label for the Attribute.</p>
      */
 
     public AttributeDefinitionBuilder label(
@@ -86,7 +86,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>A human-readable label for the attribute.</p>
+     *  <p>Human-readable label for the Attribute.</p>
      */
 
     public AttributeDefinitionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
@@ -95,7 +95,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      */
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
@@ -104,7 +104,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Describes how an attribute or a set of attributes should be validated across all variants of a product.</p>
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      */
 
     public AttributeDefinitionBuilder attributeConstraint(
@@ -114,7 +114,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Additional information about the attribute that aids content managers when setting product details.</p>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -124,7 +124,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Additional information about the attribute that aids content managers when setting product details.</p>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      */
 
     public AttributeDefinitionBuilder inputTip(
@@ -134,7 +134,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Provides a visual representation type for this attribute. only relevant for text-based attribute types like TextType and LocalizableTextType.</p>
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      */
 
     public AttributeDefinitionBuilder inputHint(
@@ -144,7 +144,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
+     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidFieldError is returned.</p>
      */
 
     public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {

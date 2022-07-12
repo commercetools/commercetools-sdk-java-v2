@@ -44,7 +44,7 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
     }
 
     /**
-     *
+     *  <p>Value to append to <code>attributes</code>.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute() {

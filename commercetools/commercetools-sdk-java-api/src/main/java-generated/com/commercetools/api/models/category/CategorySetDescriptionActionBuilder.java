@@ -27,7 +27,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetDescriptionActionBuilder description(
@@ -37,7 +37,7 @@ public class CategorySetDescriptionActionBuilder implements Builder<CategorySetD
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public CategorySetDescriptionActionBuilder description(

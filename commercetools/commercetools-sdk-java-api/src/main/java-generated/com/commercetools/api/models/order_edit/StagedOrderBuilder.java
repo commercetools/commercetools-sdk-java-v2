@@ -123,6 +123,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     private com.commercetools.api.models.cart.CartReference cart;
 
     @Nullable
+    private com.commercetools.api.models.quote.QuoteReference quote;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -789,6 +792,25 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+
+    public StagedOrderBuilder quote(
+            Function<com.commercetools.api.models.quote.QuoteReferenceBuilder, com.commercetools.api.models.quote.QuoteReferenceBuilder> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+
+    public StagedOrderBuilder quote(@Nullable final com.commercetools.api.models.quote.QuoteReference quote) {
+        this.quote = quote;
+        return this;
+    }
+
+    /**
      *
      */
 
@@ -1153,6 +1175,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     @Nullable
+    public com.commercetools.api.models.quote.QuoteReference getQuote() {
+        return this.quote;
+    }
+
+    @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
@@ -1211,8 +1238,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
             state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
-            shippingRateInput, itemShippingAddresses, refusedGifts);
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1223,8 +1250,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             orderNumber, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, taxMode, taxRoundingMode, customerGroup, country, orderState,
             state, shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, discountCodes,
-            lastMessageSequenceNumber, cart, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode,
-            shippingRateInput, itemShippingAddresses, refusedGifts);
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     public static StagedOrderBuilder of() {
@@ -1265,6 +1292,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.discountCodes = template.getDiscountCodes();
         builder.lastMessageSequenceNumber = template.getLastMessageSequenceNumber();
         builder.cart = template.getCart();
+        builder.quote = template.getQuote();
         builder.custom = template.getCustom();
         builder.paymentInfo = template.getPaymentInfo();
         builder.locale = template.getLocale();

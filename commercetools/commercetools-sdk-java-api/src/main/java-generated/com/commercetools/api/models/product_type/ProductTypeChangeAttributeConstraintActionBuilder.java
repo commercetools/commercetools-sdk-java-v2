@@ -28,7 +28,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
     private com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeAttributeConstraintActionBuilder attributeName(final String attributeName) {
@@ -37,7 +37,7 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
     }
 
     /**
-     *
+     *  <p><code>None</code></p>
      */
 
     public ProductTypeChangeAttributeConstraintActionBuilder newValue(

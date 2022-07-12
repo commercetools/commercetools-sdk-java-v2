@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The <code>Unique</code> Attribute Constraint was violated.</p>
+ *  <p>The <code>Unique</code> AttributeConstraintEnum was violated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

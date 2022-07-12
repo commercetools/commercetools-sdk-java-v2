@@ -1,6 +1,9 @@
 
 package com.commercetools.compat;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Collections;
 import java.util.concurrent.ExecutionException;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -12,16 +15,21 @@ import io.sphere.sdk.carts.commands.CartCreateCommand;
 import io.sphere.sdk.carts.queries.CartByKeyGet;
 import io.sphere.sdk.categories.Category;
 import io.sphere.sdk.categories.queries.CategoryQuery;
+import io.sphere.sdk.client.JavaAndHttpResponseSphereRequest;
 import io.sphere.sdk.client.NotFoundException;
 import io.sphere.sdk.client.SphereClient;
 import io.sphere.sdk.client.SphereClientConfig;
+import io.sphere.sdk.http.HttpHeaders;
+import io.sphere.sdk.http.HttpResponse;
 import io.sphere.sdk.models.DefaultCurrencyUnits;
 import io.sphere.sdk.projects.Project;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.sphere.sdk.queries.PagedQueryResult;
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpMethod;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -127,6 +135,22 @@ public class CompatSphereClientTest {
     }
 
     @Test
+    public void compatApiHttpClientNull() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .addNotFoundExceptionMiddleware(Collections.singleton(ApiHttpMethod.GET))
+                .buildClient();
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey);
+
+        Assertions.assertThat(client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get()).isNull();
+    }
+
+    @Test
     public void compatApiHttpClientExceptionsV2() {
         final String projectKey = CommercetoolsTestUtils.getProjectKey();
         final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
@@ -141,5 +165,28 @@ public class CompatSphereClientTest {
         Assertions.assertThatThrownBy(() -> {
             client.execute(CartByKeyGet.of("non-existant")).toCompletableFuture().get();
         }).hasCauseInstanceOf(io.vrap.rmf.base.client.error.NotFoundException.class);
+    }
+
+    @Test
+    public void compatJavaHttpResponse() throws ExecutionException, InterruptedException {
+        final String projectKey = CommercetoolsTestUtils.getProjectKey();
+        final ApiHttpClient apiHttpClient = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build())
+                .buildClient();
+
+        SphereClient client = CompatSphereClient.of(apiHttpClient, projectKey);
+
+        CartCreateCommand cartCreateCommand = CartCreateCommand.of(CartDraft.of(DefaultCurrencyUnits.EUR));
+        final JavaAndHttpResponseSphereRequest<Cart> request = JavaAndHttpResponseSphereRequest.of(cartCreateCommand);
+        final Pair<Cart, HttpResponse> result = client.execute(request).toCompletableFuture().get();
+
+        final Cart categoryJavaObject = result.getLeft();
+        final HttpResponse httpResponse = result.getRight();
+        assertThat(categoryJavaObject).isInstanceOf(Cart.class);
+        assertThat(httpResponse.getHeaders().findFlatHeader(HttpHeaders.CONTENT_TYPE).get())
+                .contains("application/json");
     }
 }

@@ -32,7 +32,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
 
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
 
-    private java.util.List<com.commercetools.api.models.order.Delivery> deliveries;
+    private java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries;
 
     private com.commercetools.api.models.order.DiscountedLineItemPriceDraft discountedPrice;
 
@@ -45,7 +45,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
-            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.Delivery> deliveries,
+            @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries,
             @JsonProperty("discountedPrice") final com.commercetools.api.models.order.DiscountedLineItemPriceDraft discountedPrice,
             @JsonProperty("shippingMethodState") final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {
         this.shippingMethodName = shippingMethodName;
@@ -114,7 +114,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
      *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.order.Delivery> getDeliveries() {
+    public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
         return this.deliveries;
     }
 
@@ -160,11 +160,11 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
         this.shippingMethod = shippingMethod;
     }
 
-    public void setDeliveries(final com.commercetools.api.models.order.Delivery... deliveries) {
+    public void setDeliveries(final com.commercetools.api.models.order.DeliveryDraft... deliveries) {
         this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
     }
 
-    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
+    public void setDeliveries(final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries) {
         this.deliveries = deliveries;
     }
 

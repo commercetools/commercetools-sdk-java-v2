@@ -65,7 +65,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier for the ProductType.</p>
+     *  <p>Unique identifier of the ProductType.</p>
      */
 
     public String getId() {
@@ -73,7 +73,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *  <p>The current version of the product type.</p>
+     *  <p>Current version of the ProductType.</p>
      */
 
     public Long getVersion() {
@@ -81,7 +81,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the ProductType was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -89,7 +89,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Channel was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -121,7 +121,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the ProductType.</p>
      */
 
     public String getName() {
@@ -129,7 +129,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the ProductType.</p>
      */
 
     public String getDescription() {
@@ -137,7 +137,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Attributes specified for the ProductType.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> getAttributes() {

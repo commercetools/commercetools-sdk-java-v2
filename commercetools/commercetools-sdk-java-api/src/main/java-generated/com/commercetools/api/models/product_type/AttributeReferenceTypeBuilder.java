@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
- *             .referenceTypeId(ReferenceTypeId.CART)
+ *             .referenceTypeId(AttributeReferenceTypeId.CART)
  *             .build()
  * </code></pre>
  * </div>
@@ -21,19 +21,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeReferenceTypeBuilder implements Builder<AttributeReferenceType> {
 
-    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
+    private com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId;
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Name of the resource type that the value should reference.</p>
      */
 
     public AttributeReferenceTypeBuilder referenceTypeId(
-            final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+            final com.commercetools.api.models.product_type.AttributeReferenceTypeId referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         return this;
     }
 
-    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {
+    public com.commercetools.api.models.product_type.AttributeReferenceTypeId getReferenceTypeId() {
         return this.referenceTypeId;
     }
 

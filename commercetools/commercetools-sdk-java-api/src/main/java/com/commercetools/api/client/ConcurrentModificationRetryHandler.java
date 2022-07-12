@@ -5,6 +5,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -32,7 +33,8 @@ final class ConcurrentModificationRetryHandler<T extends BodyApiMethod<T, TResul
     @SuppressWarnings("unchecked")
     public CompletableFuture<ApiHttpResponse<TResult>> execute() {
         Function<Throwable, CompletableFuture<ApiHttpResponse<TResult>>> fn = (throwable) -> {
-            if (throwable.getCause() instanceof ConcurrentModificationException) {
+            Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+            if (cause instanceof ConcurrentModificationException) {
                 final TBuilder body1 = updateFn.apply(builderCopyFn.apply(request.getBody()),
                     ((ConcurrentModificationException) throwable.getCause()).getCurrentVersion());
                 return request.withBody(body1.build()).execute();

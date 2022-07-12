@@ -19,10 +19,14 @@ public interface CartOrigin {
 
     CartOrigin MERCHANT = CartOriginEnum.MERCHANT;
 
+    CartOrigin QUOTE = CartOriginEnum.QUOTE;
+
     enum CartOriginEnum implements CartOrigin {
         CUSTOMER("Customer"),
 
-        MERCHANT("Merchant");
+        MERCHANT("Merchant"),
+
+        QUOTE("Quote");
         private final String jsonName;
 
         private CartOriginEnum(final String jsonName) {

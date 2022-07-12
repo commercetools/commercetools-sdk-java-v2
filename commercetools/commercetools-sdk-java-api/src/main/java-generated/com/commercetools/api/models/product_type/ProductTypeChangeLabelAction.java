@@ -35,14 +35,14 @@ public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
     String CHANGE_LABEL = "changeLabel";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid

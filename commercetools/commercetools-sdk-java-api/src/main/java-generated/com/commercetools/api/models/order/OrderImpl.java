@@ -85,6 +85,8 @@ public class OrderImpl implements Order, ModelBase {
 
     private com.commercetools.api.models.cart.CartReference cart;
 
+    private com.commercetools.api.models.quote.QuoteReference quote;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
@@ -134,6 +136,7 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
             @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
+            @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteReference quote,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
             @JsonProperty("locale") final String locale,
@@ -175,6 +178,7 @@ public class OrderImpl implements Order, ModelBase {
         this.discountCodes = discountCodes;
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         this.cart = cart;
+        this.quote = quote;
         this.custom = custom;
         this.paymentInfo = paymentInfo;
         this.locale = locale;
@@ -446,6 +450,14 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
+     *  <p>Set when this order was created from a quote.</p>
+     */
+
+    public com.commercetools.api.models.quote.QuoteReference getQuote() {
+        return this.quote;
+    }
+
+    /**
      *
      */
 
@@ -669,6 +681,10 @@ public class OrderImpl implements Order, ModelBase {
         this.cart = cart;
     }
 
+    public void setQuote(final com.commercetools.api.models.quote.QuoteReference quote) {
+        this.quote = quote;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -758,6 +774,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(discountCodes, that.discountCodes)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(cart, that.cart)
+                .append(quote, that.quote)
                 .append(custom, that.custom)
                 .append(paymentInfo, that.paymentInfo)
                 .append(locale, that.locale)
@@ -804,6 +821,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(discountCodes)
                 .append(lastMessageSequenceNumber)
                 .append(cart)
+                .append(quote)
                 .append(custom)
                 .append(paymentInfo)
                 .append(locale)

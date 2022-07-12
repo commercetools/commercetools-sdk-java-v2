@@ -171,6 +171,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
+        return com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
         return com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionBuilder.of();
     }

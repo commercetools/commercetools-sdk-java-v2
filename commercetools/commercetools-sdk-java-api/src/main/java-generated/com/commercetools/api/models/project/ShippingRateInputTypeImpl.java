@@ -32,7 +32,7 @@ public class ShippingRateInputTypeImpl implements ShippingRateInputType, ModelBa
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {

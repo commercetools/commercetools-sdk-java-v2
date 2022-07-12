@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeLocalizedEnumValueOrderAction
+ *  <p>Updates the order of localized enum <code>values</code> in an AttributeLocalizedEnumType AttributeDefinition. It can update an AttributeLocalizedEnumType AttributeDefinition or an AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
@@ -48,7 +48,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionImpl
     }
 
     /**
-     *
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {

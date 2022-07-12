@@ -73,7 +73,7 @@ public interface ResourceTypeId {
     /**
     	<p><a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>.
     	When a <a href="ctp:api:type:Cart">Cart</a> is ordered, the <a href="ctp:api:type:CustomFields">CustomFields</a> need to be copied to the <a href="ctp:api:type:Order">Order</a>.
-    	For this reason, the Types for a Cart are also valid for an Order, and both Cart and Order are referenced by the same string <code>order</code>.</p>
+    	For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p>
 
     */
     ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
@@ -117,6 +117,13 @@ public interface ResourceTypeId {
 
     */
     ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
+    /**
+    	<p><a href="ctp:api:type:Quote">Quote</a>, <a href="ctp:api:type:QuoteRequest">QuoteRequest</a> and <a href="ctp:api:type:StagedQuote">StagedQuote</a>.
+    	When a <a href="ctp:api:type:StagedQuote">StagedQuote</a> is created, the <a href="ctp:api:type:CustomFields">CustomFields</a> will be copied from the <a href="ctp:api:type:QuoteRequest">QuoteRequest</a> and when a <a href="ctp:api:type:Quote">Quote</a> is created, the <a href="ctp:api:type:CustomFields">CustomFields</a> will be copied from the <a href="ctp:api:type:StagedQuote">StagedQuote</a>.
+    	For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p>
+
+    */
+    ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
     	<p><a href="ctp:api:type:Review">Review</a></p>
 
@@ -188,6 +195,8 @@ public interface ResourceTypeId {
         PRODUCT_PRICE("product-price"),
 
         PRODUCT_SELECTION("product-selection"),
+
+        QUOTE("quote"),
 
         REVIEW("review"),
 

@@ -30,7 +30,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     private String newKey;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeEnumKeyActionBuilder attributeName(final String attributeName) {
@@ -39,7 +39,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     }
 
     /**
-     *
+     *  <p>Existing key to be changed.</p>
      */
 
     public ProductTypeChangeEnumKeyActionBuilder key(final String key) {
@@ -48,7 +48,7 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
     }
 
     /**
-     *
+     *  <p>New key to be set.</p>
      */
 
     public ProductTypeChangeEnumKeyActionBuilder newKey(final String newKey) {

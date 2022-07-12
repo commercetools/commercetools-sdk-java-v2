@@ -25,7 +25,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public OrderStoreSetMessagePayloadBuilder store(
@@ -35,7 +35,7 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public OrderStoreSetMessagePayloadBuilder store(final com.commercetools.api.models.store.StoreKeyReference store) {

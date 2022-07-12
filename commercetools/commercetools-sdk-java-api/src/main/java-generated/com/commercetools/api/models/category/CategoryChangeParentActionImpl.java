@@ -44,7 +44,7 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
     }
 
     /**
-     *
+     *  <p>New value to set as parent.</p>
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {

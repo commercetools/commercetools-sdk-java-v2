@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
+import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,14 +33,14 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     String SET_ASSET_CUSTOM_TYPE = "setAssetCustomType";
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")
@@ -57,7 +58,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
      */
     @Valid
     @JsonProperty("fields")
-    public Object getFields();
+    public FieldContainer getFields();
 
     public void setAssetId(final String assetId);
 
@@ -65,7 +66,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final Object fields);
+    public void setFields(final FieldContainer fields);
 
     public static CategorySetAssetCustomTypeAction of() {
         return new CategorySetAssetCustomTypeActionImpl();

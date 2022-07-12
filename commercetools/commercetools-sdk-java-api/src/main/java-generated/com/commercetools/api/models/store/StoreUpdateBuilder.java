@@ -28,7 +28,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     private java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions;
 
     /**
-     *
+     *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public StoreUpdateBuilder version(final Long version) {
@@ -37,7 +37,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Store.</p>
      */
 
     public StoreUpdateBuilder actions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -46,7 +46,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Store.</p>
      */
 
     public StoreUpdateBuilder actions(
@@ -56,7 +56,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Store.</p>
      */
 
     public StoreUpdateBuilder plusActions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
@@ -68,7 +68,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Store.</p>
      */
 
     public StoreUpdateBuilder plusActions(
@@ -81,7 +81,7 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Store.</p>
      */
 
     public StoreUpdateBuilder withActions(

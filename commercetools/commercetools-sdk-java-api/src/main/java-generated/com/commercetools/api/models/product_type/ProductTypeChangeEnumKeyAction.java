@@ -13,7 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeEnumKeyAction
+ *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new key in an eventually consistent way.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +35,21 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     String CHANGE_ENUM_KEY = "changeEnumKey";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>Existing key to be changed.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>New key to be set.</p>
      */
     @NotNull
     @JsonProperty("newKey")

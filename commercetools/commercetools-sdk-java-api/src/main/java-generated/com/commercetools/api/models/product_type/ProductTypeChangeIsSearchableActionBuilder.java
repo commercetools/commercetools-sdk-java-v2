@@ -27,7 +27,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     private Boolean isSearchable;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeIsSearchableActionBuilder attributeName(final String attributeName) {
@@ -36,7 +36,7 @@ public class ProductTypeChangeIsSearchableActionBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
      */
 
     public ProductTypeChangeIsSearchableActionBuilder isSearchable(final Boolean isSearchable) {

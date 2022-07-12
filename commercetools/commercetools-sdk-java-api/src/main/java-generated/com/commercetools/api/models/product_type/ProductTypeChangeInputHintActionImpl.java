@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeInputHintAction
+ *  <p>Updates the <code>inputHint</code> of an AttributeDefinition.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeInputHintAction, ModelBase {
@@ -47,7 +47,7 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
     }
 
     /**
-     *
+     *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
      */
 
     public com.commercetools.api.models.product_type.TextInputHint getNewValue() {

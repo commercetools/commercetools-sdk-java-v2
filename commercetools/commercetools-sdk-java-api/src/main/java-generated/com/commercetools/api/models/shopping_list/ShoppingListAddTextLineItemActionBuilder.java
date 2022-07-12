@@ -39,7 +39,7 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ShoppingListAddTextLineItemActionBuilder name(
@@ -49,7 +49,7 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ShoppingListAddTextLineItemActionBuilder name(
@@ -59,7 +59,7 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ShoppingListAddTextLineItemActionBuilder description(
@@ -69,7 +69,7 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ShoppingListAddTextLineItemActionBuilder description(

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreAddProductSelectionAction
+ *  <p>To make all included Products available to your customers of a given Store, add the Product Selections to the respective Store. This action has no effect if the given Product Selection is already present in the Store and has the same <code>active</code> flag.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddProductSelectionActionImpl implements StoreAddProductSelectionAction, ModelBase {
@@ -48,7 +48,7 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
     }
 
     /**
-     *  <p>Resource Identifier of a Product Selection</p>
+     *  <p>Product Selection to add to the Store either activated or deactivated.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
@@ -56,7 +56,7 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
     }
 
     /**
-     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     *  <p>Set to <code>true</code> to make all Products assigned to the referenced Product Selection available in the Store.</p>
      */
 
     public Boolean getActive() {

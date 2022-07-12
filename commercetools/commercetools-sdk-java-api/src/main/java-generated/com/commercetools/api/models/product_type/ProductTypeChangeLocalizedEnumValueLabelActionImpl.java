@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangeLocalizedEnumValueLabelAction
+ *  <p>Updates the label of a single enum <code>value</code> in an AttributeLocalizedEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new label in an eventually consistent way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
@@ -48,7 +49,7 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -56,7 +57,7 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
     }
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getNewValue() {

@@ -27,7 +27,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -37,7 +37,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetSupplyChannelsActionBuilder supplyChannels(
@@ -47,7 +47,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -60,7 +60,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
@@ -74,7 +74,7 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset. Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetSupplyChannelsActionBuilder withSupplyChannels(

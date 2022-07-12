@@ -14,7 +14,7 @@ bin
 cache/
 /taglets.jar
 !/licences
-/licenses/*
+/licenses/**/*.jar
 !/licenses/index.json
 !/licenses/**/index.json
 dependencies-without-allowed-license.json

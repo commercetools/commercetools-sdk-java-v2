@@ -54,7 +54,7 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -62,7 +62,7 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {

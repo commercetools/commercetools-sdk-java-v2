@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionImpl.class, name = ProductSelectionRemoveProductAction.REMOVE_PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldActionImpl.class, name = ProductSelectionSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionImpl.class, name = ProductSelectionSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl.class, name = ProductSelectionSetKeyAction.SET_KEY) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl.class, name = ProductSelectionSetKeyAction.SET_KEY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionImpl.class, name = ProductSelectionSetVariantSelectionAction.SET_VARIANT_SELECTION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductSelectionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -67,6 +68,10 @@ public interface ProductSelectionUpdateAction
 
     public static com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder setVariantSelectionBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionBuilder.of();
     }
 
     default <T> T withProductSelectionUpdateAction(Function<ProductSelectionUpdateAction, T> helper) {

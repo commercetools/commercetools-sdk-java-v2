@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.commercetools.api.models.common.KeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -12,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreKeyReference
+ *  <p>Reference to a Store by its key.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +31,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StoreKeyReference extends KeyReference {
 
     String STORE = "store";
+
+    /**
+     *  <p>Unique and immutable key of the referenced Store.</p>
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    public void setKey(final String key);
 
     public static StoreKeyReference of() {
         return new StoreKeyReferenceImpl();

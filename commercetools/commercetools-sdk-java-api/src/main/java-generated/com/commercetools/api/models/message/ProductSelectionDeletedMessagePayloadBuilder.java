@@ -25,7 +25,7 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ProductSelectionDeletedMessagePayloadBuilder name(
@@ -35,7 +35,7 @@ public class ProductSelectionDeletedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      */
 
     public ProductSelectionDeletedMessagePayloadBuilder name(

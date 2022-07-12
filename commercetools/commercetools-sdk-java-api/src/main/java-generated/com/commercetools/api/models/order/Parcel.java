@@ -117,6 +117,18 @@ public interface Parcel extends com.commercetools.api.models.Customizable<Parcel
         return helper.apply(this);
     }
 
+    public default ParcelDraftBuilder toDraftBuilder() {
+        return ParcelDraft.builder()
+                .measurements(this.getMeasurements())
+                .trackingData(this.getTrackingData())
+                .items(this.getItems())
+                .custom(this.getCustom().toDraft());
+    }
+
+    public default ParcelDraft toDraft() {
+        return toDraftBuilder().build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Parcel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Parcel>() {
             @Override

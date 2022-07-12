@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
@@ -33,7 +34,7 @@ import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
 import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
-public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
+public class CtApacheHttpClient extends HttpClientBase {
     public static final int MAX_REQUESTS = 64;
 
     private final CloseableHttpAsyncClient apacheHttpClient;
@@ -61,28 +62,32 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
                 .setTlsStrategy(tlsStrategy);
     }
 
-    public CtApacheHttpClient() {
-        apacheHttpClient = clientBuilder.get().build();
-        init();
-    }
-
-    public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
-        apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
-        init();
-    }
-
     private void init() {
         if (!(apacheHttpClient.getStatus() == IOReactorStatus.ACTIVE)) {
             apacheHttpClient.start();
         }
     }
 
+    public CtApacheHttpClient() {
+        super();
+        apacheHttpClient = clientBuilder.get().build();
+        init();
+    }
+
+    public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
+        super();
+        apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
     public CtApacheHttpClient(final BuilderOptions options) {
+        super();
         apacheHttpClient = options.plus(clientBuilder.get()).build();
         init();
     }
 
     public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
+        super();
         apacheHttpClient = options
                 .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
                 .build();
@@ -90,6 +95,40 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     public CtApacheHttpClient(final Supplier<HttpAsyncClientBuilder> builderSupplier) {
+        super();
+        apacheHttpClient = builderSupplier.get().build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor) {
+        super(executor);
+        apacheHttpClient = clientBuilder.get().build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute) {
+        super(executor);
+        apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final BuilderOptions options) {
+        super(executor);
+        apacheHttpClient = options.plus(clientBuilder.get()).build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final int maxConnTotal, final int maxConnPerRoute,
+            final BuilderOptions options) {
+        super(executor);
+        apacheHttpClient = options
+                .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final Supplier<HttpAsyncClientBuilder> builderSupplier) {
+        super(executor);
         apacheHttpClient = builderSupplier.get().build();
         init();
     }
@@ -121,7 +160,7 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
         final CompletableFuture<SimpleHttpResponse> apacheResponseFuture = new CompletableFuture<>();
         apacheHttpClient.execute(toApacheRequest(request), SimpleResponseConsumer.create(),
             new CompletableFutureCallbackAdapter<>(apacheResponseFuture));
-        return apacheResponseFuture.thenApply(CtApacheHttpClient::toResponse);
+        return apacheResponseFuture.thenApplyAsync(CtApacheHttpClient::toResponse, executor());
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final SimpleHttpResponse response) {
@@ -154,7 +193,7 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void closeDelegate() throws Exception {
         apacheHttpClient.close();
     }
 }

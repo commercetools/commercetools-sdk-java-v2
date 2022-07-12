@@ -29,14 +29,14 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     String REMOVE_ASSET = "removeAsset";
 
     /**
-     *
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")

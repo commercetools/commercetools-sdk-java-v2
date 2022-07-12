@@ -33,7 +33,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     String LENUM = "lenum";
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
     @NotNull
     @Valid

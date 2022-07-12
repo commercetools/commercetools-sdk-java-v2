@@ -87,7 +87,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The current version of the review.</p>
+     *  <p>Current version of the Review.</p>
      */
 
     public ReviewBuilder version(final Long version) {
@@ -96,7 +96,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was initially created.</p>
      */
 
     public ReviewBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -105,7 +105,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Review was last updated.</p>
      */
 
     public ReviewBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -162,7 +162,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
      */
 
     public ReviewBuilder uniquenessValue(@Nullable final String uniquenessValue) {
@@ -171,7 +171,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Language in which the content of the Review is written.</p>
      */
 
     public ReviewBuilder locale(@Nullable final String locale) {
@@ -180,7 +180,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Name of the author.</p>
      */
 
     public ReviewBuilder authorName(@Nullable final String authorName) {
@@ -189,7 +189,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     public ReviewBuilder title(@Nullable final String title) {
@@ -198,7 +198,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Content of the Review.</p>
      */
 
     public ReviewBuilder text(@Nullable final String text) {
@@ -207,7 +207,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductReference or ChannelReference, respectively.</p>
      */
 
     public ReviewBuilder target(@Nullable final java.lang.Object target) {
@@ -216,7 +216,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
      */
 
     public ReviewBuilder includedInStatistics(final Boolean includedInStatistics) {
@@ -225,7 +225,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Number between -100 and 100 included.</p>
+     *  <p>Rating of the Product or Channel.</p>
      */
 
     public ReviewBuilder rating(@Nullable final Integer rating) {
@@ -234,7 +234,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public ReviewBuilder state(
@@ -244,7 +244,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public ReviewBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -253,7 +253,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public ReviewBuilder customer(
@@ -263,7 +263,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
@@ -272,7 +272,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the Review.</p>
      */
 
     public ReviewBuilder custom(
@@ -282,7 +282,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the Review.</p>
      */
 
     public ReviewBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

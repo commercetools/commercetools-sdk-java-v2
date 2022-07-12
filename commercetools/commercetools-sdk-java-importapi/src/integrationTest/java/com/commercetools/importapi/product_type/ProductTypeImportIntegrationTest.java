@@ -1,21 +1,15 @@
 
 package com.commercetools.importapi.product_type;
 
-import static com.commercetools.importapi.utils.ImportApiTestUtils.assertEventually;
 import static com.commercetools.importapi.utils.ImportApiTestUtils.randomKey;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.time.Duration;
 import java.util.Collections;
-import java.util.List;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
-import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.importcontainers.ImportContainer;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
-import com.commercetools.importapi.models.importoperations.ImportOperation;
-import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
@@ -57,20 +51,20 @@ public class ProductTypeImportIntegrationTest {
                 .executeBlocking()
                 .getBody();
 
-        assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
-            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot()
-                    .productTypes()
-                    .importSinkKeyWithImportSinkKeyValue(importSinkKey)
-                    .importOperations()
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            assertThat(operationPagedResponse).isNotNull();
-            List<ImportOperation> results = operationPagedResponse.getResults();
-            assertThat(results).hasSize(1);
-            assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
-        });
+        //        assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
+        //            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot()
+        //                    .productTypes()
+        //                    .importSinkKeyWithImportSinkKeyValue(importSinkKey)
+        //                    .importOperations()
+        //                    .get()
+        //                    .executeBlocking()
+        //                    .getBody();
+        //
+        //            assertThat(operationPagedResponse).isNotNull();
+        //            List<ImportOperation> results = operationPagedResponse.getResults();
+        //            assertThat(results).hasSize(1);
+        //            assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
+        //        });
 
         //
         //        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()

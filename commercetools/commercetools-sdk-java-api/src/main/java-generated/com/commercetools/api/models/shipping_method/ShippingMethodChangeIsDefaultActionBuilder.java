@@ -24,7 +24,7 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
     private Boolean isDefault;
 
     /**
-     *  <p>Only one ShippingMethod in a project can be default.</p>
+     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
      */
 
     public ShippingMethodChangeIsDefaultActionBuilder isDefault(final Boolean isDefault) {

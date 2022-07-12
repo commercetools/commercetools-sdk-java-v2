@@ -28,7 +28,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
     /**
-     *  <p>Reference to a OrderEdit.</p>
+     *  <p>Reference to an OrderEdit.</p>
      */
 
     public OrderEditAppliedMessagePayloadBuilder edit(
@@ -38,7 +38,7 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     }
 
     /**
-     *  <p>Reference to a OrderEdit.</p>
+     *  <p>Reference to an OrderEdit.</p>
      */
 
     public OrderEditAppliedMessagePayloadBuilder edit(

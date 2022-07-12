@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductTypeChangeLocalizedEnumValueLabelAction
+ *  <p>Updates the label of a single enum <code>value</code> in an AttributeLocalizedEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new label in an eventually consistent way.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +35,14 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *
+     *  <p>New value to set. Must be different from the existing value.</p>
      */
     @NotNull
     @Valid

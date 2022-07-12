@@ -34,7 +34,7 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
     String ADD_ZONE = "addZone";
 
     /**
-     *
+     *  <p>Value to add to <code>zoneRates</code>.</p>
      */
     @NotNull
     @Valid

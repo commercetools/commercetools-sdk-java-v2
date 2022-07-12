@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>ResourceIdentifier to a InventoryEntry.</p>
+ *  <p>ResourceIdentifier to an InventoryEntry.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

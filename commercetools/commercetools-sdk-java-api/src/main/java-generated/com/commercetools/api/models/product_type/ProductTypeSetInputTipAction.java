@@ -34,14 +34,14 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
     String SET_INPUT_TIP = "setInputTip";
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("inputTip")

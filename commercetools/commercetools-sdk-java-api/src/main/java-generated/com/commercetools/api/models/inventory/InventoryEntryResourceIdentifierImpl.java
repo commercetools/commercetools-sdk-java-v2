@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a InventoryEntry.</p>
+ *  <p>ResourceIdentifier to an InventoryEntry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryResourceIdentifierImpl implements InventoryEntryResourceIdentifier, ModelBase {

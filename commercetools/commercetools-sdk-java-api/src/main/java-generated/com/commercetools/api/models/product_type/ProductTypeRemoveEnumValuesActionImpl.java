@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeRemoveEnumValuesAction
+ *  <p>Removes enum values from an AttributeDefinition of AttributeEnumType, AttributeLocalizedEnumType, AttributeSetType of AttributeEnumType, or AttributeSetType of AttributeLocalizedEnumType.</p>
+ *  <p>If the Attribute is <strong>not</strong> required, the Attributes of all Products using those enum keys will also be removed in an eventually consistent way. If the Attribute is required, the operation will fail with the EnumValueIsUsed error code.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveEnumValuesAction, ModelBase {
@@ -47,7 +48,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +56,7 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
     }
 
     /**
-     *
+     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
      */
 
     public java.util.List<String> getKeys() {

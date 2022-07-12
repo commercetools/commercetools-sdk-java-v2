@@ -7,6 +7,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.time.Duration;
 import java.util.AbstractMap;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 import io.sphere.sdk.client.SphereRequest;
 import io.sphere.sdk.http.*;
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.FileUtils;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -73,8 +75,12 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
                 if (body instanceof StringHttpRequestBody) {
                     return ((StringHttpRequestBody) body).getString().getBytes(StandardCharsets.UTF_8);
                 }
-                else if (body instanceof FormUrlEncodedHttpRequestBody) {
+                if (body instanceof FormUrlEncodedHttpRequestBody) {
                     return urlEncodedOf((FormUrlEncodedHttpRequestBody) body).getBytes(StandardCharsets.UTF_8);
+                }
+                if (body instanceof FileHttpRequestBody) {
+                    return FileUtils
+                            .executing(() -> Files.readAllBytes(((FileHttpRequestBody) body).getFile().toPath()));
                 }
                 throw new HttpException("Cannot interpret request " + httpRequest);
             }).orElse(null));

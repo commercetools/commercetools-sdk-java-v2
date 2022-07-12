@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderExcerpt orderExcerpt = OrderExcerpt.builder()
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
- *             .version(1)
+ *             .version(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -30,7 +30,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
-    private Integer version;
+    private Long version;
 
     /**
      *
@@ -74,7 +74,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
      *
      */
 
-    public OrderExcerptBuilder version(final Integer version) {
+    public OrderExcerptBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -88,7 +88,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
         return this.taxedPrice;
     }
 
-    public Integer getVersion() {
+    public Long getVersion() {
         return this.version;
     }
 

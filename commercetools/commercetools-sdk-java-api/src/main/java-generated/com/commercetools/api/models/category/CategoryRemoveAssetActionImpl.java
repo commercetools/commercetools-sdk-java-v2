@@ -47,7 +47,7 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
     }
 
     /**
-     *
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -55,7 +55,7 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
     }
 
     /**
-     *
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {

@@ -32,7 +32,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     String SET_NAME = "setName";
 
     /**
-     *  <p>The updated name of the store</p>
+     *  <p>Value to set.</p>
      */
     @Valid
     @JsonProperty("name")

@@ -13,13 +13,10 @@ import okhttp3.OkHttpClient;
 import okio.GzipSource;
 import okio.Okio;
 
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 
-public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
+public class CtOkHttp3Client extends HttpClientBase {
 
     public static final int MAX_REQUESTS = 64;
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
@@ -32,28 +29,46 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     private final OkHttpClient okHttpClient;
 
     public CtOkHttp3Client() {
+        super();
         okHttpClient = clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)).build();
     }
 
     public CtOkHttp3Client(final BuilderOptions options) {
+        super();
         okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)))
                 .build();
     }
 
     public CtOkHttp3Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
+        super();
         okHttpClient = builderSupplier.get().build();
     }
 
     public CtOkHttp3Client(final int maxRequests, final int maxRequestsPerHost) {
+        super();
         okHttpClient = clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)).build();
     }
 
     public CtOkHttp3Client(final int maxRequests, final int maxRequestsPerHost, final BuilderOptions options) {
+        super();
         okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)))
                 .build();
     }
 
+    public CtOkHttp3Client(final ExecutorService executor) {
+        super(executor);
+        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(executor, MAX_REQUESTS, MAX_REQUESTS)).build();
+    }
+
+    public CtOkHttp3Client(final ExecutorService executor, final BuilderOptions options) {
+        super(executor);
+        okHttpClient = options
+                .plus(clientBuilder.get().dispatcher(createDispatcher(executor, MAX_REQUESTS, MAX_REQUESTS)))
+                .build();
+    }
+
     public CtOkHttp3Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        super(executor);
         okHttpClient = clientBuilder.get()
                 .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
                 .build();
@@ -61,6 +76,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
 
     public CtOkHttp3Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost,
             final BuilderOptions options) {
+        super(executor);
         okHttpClient = options
                 .plus(clientBuilder.get().dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost)))
                 .build();
@@ -87,7 +103,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
-        return makeRequest(okHttpClient, toRequest(request)).thenApply(CtOkHttp3Client::toResponse);
+        return makeRequest(okHttpClient, toRequest(request)).thenApplyAsync(CtOkHttp3Client::toResponse, executor());
 
     }
 
@@ -164,7 +180,7 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     }
 
     @Override
-    public void close() throws IOException {
+    public void closeDelegate() throws IOException {
         okHttpClient.dispatcher().executorService().shutdown();
         okHttpClient.connectionPool().evictAll();
         if (okHttpClient.cache() != null)

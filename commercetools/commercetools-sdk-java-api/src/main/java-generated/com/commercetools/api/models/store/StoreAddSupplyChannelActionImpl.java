@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StoreAddSupplyChannelAction
+ *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAction, ModelBase {
@@ -44,7 +44,7 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
     }
 
     /**
-     *
+     *  <p>Any attempt to use Channel without the <code>InventorySupply</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

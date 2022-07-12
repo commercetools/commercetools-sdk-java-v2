@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * InventoryEntrySetSupplyChannelAction
+ *  <p>If an entry with the same <code>sku</code> and <code>supplyChannel</code> already exists, this action will fail and a 400 Bad Request <code>DuplicateField</code> error will be returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntrySetSupplyChannelAction, ModelBase {
@@ -44,7 +44,7 @@ public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntryS
     }
 
     /**
-     *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

@@ -22,26 +22,43 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     @JsonCreator
     AssignedProductSelectionImpl(
-            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.productSelection = productSelection;
+        this.variantSelection = variantSelection;
     }
 
     public AssignedProductSelectionImpl() {
     }
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
 
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public void setProductSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
+    }
+
+    public void setVariantSelection(
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
     }
 
     @Override
@@ -54,12 +71,14 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
         AssignedProductSelectionImpl that = (AssignedProductSelectionImpl) o;
 
-        return new EqualsBuilder().append(productSelection, that.productSelection).isEquals();
+        return new EqualsBuilder().append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productSelection).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productSelection).append(variantSelection).toHashCode();
     }
 
 }

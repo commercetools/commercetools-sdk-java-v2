@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Either the scope <code>view_products:{projectKey}</code> or <code>view_categories:{projectKey}</code> is required.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CategorySetAssetKeyAction
+ *  <p>Set or remove the <code>key</code> of an Asset.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction, ModelBase {
@@ -47,7 +47,7 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public String getAssetId() {
@@ -55,7 +55,7 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
     }
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getAssetKey() {

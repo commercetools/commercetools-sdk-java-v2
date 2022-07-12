@@ -4,6 +4,8 @@ package com.commercetools.api.models.store;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
- *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,34 +23,47 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetProductSelectionsAction> {
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections;
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
-            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
         this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
         return this;
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      */
 
     public StoreSetProductSelectionsActionBuilder productSelections(
-            final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
+            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
         this.productSelections = productSelections;
         return this;
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
-            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
         if (this.productSelections == null) {
             this.productSelections = new ArrayList<>();
         }
@@ -58,7 +72,11 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      */
 
     public StoreSetProductSelectionsActionBuilder plusProductSelections(
@@ -72,7 +90,11 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
     }
 
     /**
-     *  <p>The total of Product Selections to be set for this Store.</p>
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      */
 
     public StoreSetProductSelectionsActionBuilder withProductSelections(
@@ -83,13 +105,12 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
         return this;
     }
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;
     }
 
     public StoreSetProductSelectionsAction build() {
-        Objects.requireNonNull(productSelections,
-            StoreSetProductSelectionsAction.class + ": productSelections is missing");
         return new StoreSetProductSelectionsActionImpl(productSelections);
     }
 

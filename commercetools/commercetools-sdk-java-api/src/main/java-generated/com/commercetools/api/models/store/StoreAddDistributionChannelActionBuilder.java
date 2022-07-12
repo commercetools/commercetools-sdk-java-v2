@@ -25,7 +25,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *
+     *  <p>Value to append. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannelError error.</p>
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(
@@ -37,7 +37,7 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
     }
 
     /**
-     *
+     *  <p>Value to append. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannelError error.</p>
      */
 
     public StoreAddDistributionChannelActionBuilder distributionChannel(

@@ -32,21 +32,21 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
     String SET_ASSET_DESCRIPTION = "setAssetDescription";
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     @JsonProperty("assetKey")
     public String getAssetKey();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("description")

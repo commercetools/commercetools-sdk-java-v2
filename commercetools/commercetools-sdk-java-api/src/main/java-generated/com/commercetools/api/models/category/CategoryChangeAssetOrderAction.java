@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CategoryChangeAssetOrderAction
+ *  <p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
-     *
+     *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
      */
     @NotNull
     @JsonProperty("assetOrder")

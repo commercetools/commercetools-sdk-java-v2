@@ -44,7 +44,7 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
     }
 
     /**
-     *
+     *  <p>ResourceIdentifier to a Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

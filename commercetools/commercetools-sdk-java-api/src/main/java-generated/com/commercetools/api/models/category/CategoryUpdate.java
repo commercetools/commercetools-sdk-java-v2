@@ -33,14 +33,14 @@ public interface CategoryUpdate extends
         com.commercetools.api.models.ResourceUpdate<CategoryUpdate, CategoryUpdateAction, CategoryUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Category.</p>
      */
     @NotNull
     @Valid

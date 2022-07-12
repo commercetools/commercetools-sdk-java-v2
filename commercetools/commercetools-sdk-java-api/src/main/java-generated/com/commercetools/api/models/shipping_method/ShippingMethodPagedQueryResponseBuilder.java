@@ -48,7 +48,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder count(final Long count) {
@@ -57,7 +57,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder total(@Nullable final Long total) {
@@ -75,7 +75,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder plusResults(
@@ -122,7 +122,7 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
-     *
+     *  <p>Shipping Methods matching the query.</p>
      */
 
     public ShippingMethodPagedQueryResponseBuilder withResults(

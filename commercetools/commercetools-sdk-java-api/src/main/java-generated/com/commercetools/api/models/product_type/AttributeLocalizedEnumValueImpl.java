@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeLocalizedEnumValue
+ *  <p>Attribute type for localized enum values. Useful for predefined language-specific values selectable in drop-down menus if only one value can be selected. Use AttributeSetType of AttributeLocalizedEnumValue instead if multiple values can be selected.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumValue, ModelBase {
@@ -35,7 +35,7 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      */
 
     public String getKey() {
@@ -43,7 +43,7 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>Descriptive, localized label of the value.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {

@@ -33,7 +33,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
+ *             .plusLanguages(languagesBuilder -> languagesBuilder)
  *             .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
+ *             .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
+ *             .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -45,28 +48,28 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         com.commercetools.api.models.Customizable<Store> {
 
     /**
-     *
+     *  <p>Unique ID of the Store.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *
+     *  <p>Current version of the Store.</p>
      */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Store was initially created.</p>
      */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Store was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -87,28 +90,28 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+     *  <p>User-defined unique and immutable identifier for the Store.</p>
      */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *  <p>The name of the store</p>
+     *  <p>Name of the Store.</p>
      */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Languages configured for the Store.</p>
      */
-
+    @NotNull
     @JsonProperty("languages")
     public List<String> getLanguages();
 
     /**
-     *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+     *  <p>Product Distribution Channels allowed for the Store.</p>
      */
     @NotNull
     @Valid
@@ -116,21 +119,27 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public List<ChannelReference> getDistributionChannels();
 
     /**
-     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+     *  <p>Inventory Supply Channels allowed for the Store.</p>
      */
+    @NotNull
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelReference> getSupplyChannels();
 
     /**
-     *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+     *  <p>Controls availability of Products for this Store via active Product Selections.</p>
+     *  <ul>
+     *   <li>If empty all Products in the Project are available in this Store.</li>
+     *   <li>If provided, Products from <code>active</code> Product Selections are available in this Store.</li>
+     *  </ul>
      */
+    @NotNull
     @Valid
     @JsonProperty("productSelections")
     public List<ProductSelectionSetting> getProductSelections();
 
     /**
-     *
+     *  <p>Custom fields for the Store.</p>
      */
     @Valid
     @JsonProperty("custom")

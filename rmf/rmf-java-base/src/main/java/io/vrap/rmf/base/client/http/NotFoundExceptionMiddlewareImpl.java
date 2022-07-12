@@ -2,6 +2,7 @@
 package io.vrap.rmf.base.client.http;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -26,7 +27,8 @@ class NotFoundExceptionMiddlewareImpl implements NotFoundExceptionMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return CompletableFutures.exceptionallyCompose(next.apply(request), (throwable) -> {
-            if (throwable.getCause() instanceof NotFoundException && requestPredicate.test(request)) {
+            Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
+            if (cause instanceof NotFoundException && requestPredicate.test(request)) {
                 ApiHttpResponse<byte[]> response = ((NotFoundException) throwable.getCause()).getResponse();
                 return CompletableFuture
                         .completedFuture(new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), null));

@@ -5,12 +5,15 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
 import dev.failsafe.RetryPolicy;
 import dev.failsafe.event.ExecutionAttemptedEvent;
+import dev.failsafe.spi.Scheduler;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.json.JsonException;
@@ -50,8 +53,8 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
-            RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
+        this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
+            RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -59,14 +62,14 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
-            statusCodes, null);
+        this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
+            RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
     }
 
     RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
-            statusCodes, failures);
+        this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
+            RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, failures);
     }
 
     /**
@@ -74,7 +77,7 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
      */
     @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
-        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
+        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
     }
 
     /**
@@ -83,16 +86,49 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
     @Deprecated
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final List<Integer> statusCodes) {
-        this(maxRetries, delay, maxDelay, statusCodes, null);
+        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, statusCodes, null);
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+    }
+
+    RetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        this(executorService, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+    }
+
+    RetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay,
+            final long maxDelay, final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        this(executorService, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
+                .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
+    }
+
+    RetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
+            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
+        this(scheduler, maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
                 .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes)));
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, fn);
+    }
+
+    RetryMiddleware(final ExecutorService executorService, final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        this(Scheduler.of(executorService), maxRetries, delay, maxDelay, fn);
+    }
+
+    RetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries, final long delay,
+            final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
+        this(Scheduler.of(executorService), maxRetries, delay, maxDelay, fn);
+    }
+
+    RetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = fn
                 .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
@@ -101,7 +137,7 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
                         .withMaxRetries(maxRetries)
                         .onRetry(this::logEventFailure))
                 .build();
-        this.failsafeExecutor = Failsafe.with(retryPolicy);
+        this.failsafeExecutor = Failsafe.with(retryPolicy).with(scheduler);
     }
 
     private void logEventFailure(ExecutionAttemptedEvent<ApiHttpResponse<byte[]>> event) {

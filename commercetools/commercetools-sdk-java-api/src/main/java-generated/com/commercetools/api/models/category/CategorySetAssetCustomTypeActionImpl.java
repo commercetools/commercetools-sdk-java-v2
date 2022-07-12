@@ -28,13 +28,13 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
     CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final java.lang.Object fields) {
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.type = type;
@@ -55,7 +55,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetId() {
@@ -63,7 +63,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
     }
 
     /**
-     *
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      */
 
     public String getAssetKey() {
@@ -82,7 +82,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
      *  <p>Sets the Custom Fields fields for the Asset.</p>
      */
 
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
@@ -98,7 +98,7 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
         this.type = type;
     }
 
-    public void setFields(final java.lang.Object fields) {
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
     }
 

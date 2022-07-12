@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     InventoryPagedQueryResponse inventoryPagedQueryResponse = InventoryPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results;
 
@@ -48,24 +48,6 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
-     */
-
-    public InventoryPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public InventoryPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      */
 
@@ -75,7 +57,25 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public InventoryPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
+
+    public InventoryPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>Inventory entries matching the query.</p>
      */
 
     public InventoryPagedQueryResponseBuilder results(
@@ -85,7 +85,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
+     *  <p>Inventory entries matching the query.</p>
      */
 
     public InventoryPagedQueryResponseBuilder results(
@@ -95,7 +95,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
+     *  <p>Inventory entries matching the query.</p>
      */
 
     public InventoryPagedQueryResponseBuilder plusResults(
@@ -108,7 +108,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
+     *  <p>Inventory entries matching the query.</p>
      */
 
     public InventoryPagedQueryResponseBuilder plusResults(
@@ -121,7 +121,7 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
-     *
+     *  <p>Inventory entries matching the query.</p>
      */
 
     public InventoryPagedQueryResponseBuilder withResults(
@@ -135,6 +135,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -144,27 +148,23 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.inventory.InventoryEntry> getResults() {
         return this.results;
     }
 
     public InventoryPagedQueryResponse build() {
         Objects.requireNonNull(limit, InventoryPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, InventoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, InventoryPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, InventoryPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, InventoryPagedQueryResponse.class + ": results is missing");
-        return new InventoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new InventoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds InventoryPagedQueryResponse without checking for non null required values
      */
     public InventoryPagedQueryResponse buildUnchecked() {
-        return new InventoryPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new InventoryPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static InventoryPagedQueryResponseBuilder of() {
@@ -174,9 +174,9 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     public static InventoryPagedQueryResponseBuilder of(final InventoryPagedQueryResponse template) {
         InventoryPagedQueryResponseBuilder builder = new InventoryPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

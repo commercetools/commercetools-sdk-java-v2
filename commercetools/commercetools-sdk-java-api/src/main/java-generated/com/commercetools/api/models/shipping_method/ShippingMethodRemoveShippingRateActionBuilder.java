@@ -28,7 +28,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
     /**
-     *
+     *  <p>Zone from which the ShippingRate should be removed.</p>
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder zone(
@@ -38,7 +38,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *
+     *  <p>Zone from which the ShippingRate should be removed.</p>
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder zone(
@@ -48,7 +48,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>shippingRates</code>.</p>
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(
@@ -59,7 +59,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *
+     *  <p>Value to remove from <code>shippingRates</code>.</p>
      */
 
     public ShippingMethodRemoveShippingRateActionBuilder shippingRate(

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartClassificationTier
+ *  <p>Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartClassificationTierImpl implements CartClassificationTier, ModelBase {
@@ -43,7 +43,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     *  <p>Can be one of the following or absent.</p>
+     *
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
@@ -51,7 +51,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     *
+     *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
      */
 
     public String getValue() {
@@ -59,8 +59,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Fixed shipping rate for the selected classification.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -68,7 +67,7 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
     }
 
     /**
-     *
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
      */
 
     public Boolean getIsMatching() {

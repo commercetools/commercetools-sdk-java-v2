@@ -9,6 +9,22 @@
         {
             "moduleLicense": "CDDL + GPLv2 with classpath exception",
             "moduleName": "javax.annotation:javax.annotation-api"
+        },
+        {
+            "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+            "moduleName": "javax.annotation:javax.annotation-api"
+        },
+        {
+            "moduleLicense": "Eclipse Distribution License - v 1.0",
+            "moduleName": "com.sun.activation:jakarta.activation"
+        },
+        {
+            "moduleLicense": "Eclipse Public License - v 2.0",
+            "moduleName": "com.sun.activation:jakarta.activation"
+        },
+        {
+            "moduleLicense": "Creative Commons Legal Code",
+            "moduleName": "org.reactivestreams:reactive-streams"
         }
     ]
 }

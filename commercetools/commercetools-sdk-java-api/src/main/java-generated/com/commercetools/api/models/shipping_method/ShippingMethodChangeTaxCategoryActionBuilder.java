@@ -25,7 +25,7 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(
@@ -37,7 +37,7 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ShippingMethodChangeTaxCategoryActionBuilder taxCategory(

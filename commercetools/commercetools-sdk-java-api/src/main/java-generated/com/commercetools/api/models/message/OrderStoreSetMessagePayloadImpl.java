@@ -44,7 +44,7 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
     }
 
     /**
-     *
+     *  <p>Reference to a Store by its key.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

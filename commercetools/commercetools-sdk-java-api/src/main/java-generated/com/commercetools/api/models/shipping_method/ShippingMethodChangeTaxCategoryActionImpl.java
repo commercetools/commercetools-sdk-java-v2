@@ -44,7 +44,7 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {

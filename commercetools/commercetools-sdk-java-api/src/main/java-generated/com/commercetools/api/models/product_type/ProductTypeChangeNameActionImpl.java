@@ -43,7 +43,7 @@ public class ProductTypeChangeNameActionImpl implements ProductTypeChangeNameAct
     }
 
     /**
-     *
+     *  <p>New value to set.</p>
      */
 
     public String getName() {

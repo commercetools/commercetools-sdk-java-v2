@@ -35,6 +35,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedName;
 
+    @Deprecated
     @Nullable
     private String description;
 
@@ -63,7 +64,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Name of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder name(final String name) {
@@ -72,7 +73,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Localized name of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder localizedName(
@@ -82,7 +83,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Localized name of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder localizedName(
@@ -92,16 +93,16 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Description of the ShippingMethod.</p>
      */
-
+    @Deprecated
     public ShippingMethodDraftBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
 
     /**
-     *
+     *  <p>Localized description of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder localizedDescription(
@@ -112,7 +113,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Localized description of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder localizedDescription(
@@ -122,7 +123,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder taxCategory(
@@ -134,7 +135,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder taxCategory(
@@ -144,7 +145,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
      */
 
     public ShippingMethodDraftBuilder zoneRates(
@@ -154,7 +155,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
      */
 
     public ShippingMethodDraftBuilder zoneRates(
@@ -164,7 +165,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
      */
 
     public ShippingMethodDraftBuilder plusZoneRates(
@@ -177,7 +178,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
      */
 
     public ShippingMethodDraftBuilder plusZoneRates(
@@ -191,7 +192,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
      */
 
     public ShippingMethodDraftBuilder withZoneRates(
@@ -203,7 +204,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
+     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {
@@ -212,7 +213,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
      */
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
@@ -221,7 +222,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Custom Fields for the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder custom(
@@ -231,7 +232,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *
+     *  <p>Custom Fields for the ShippingMethod.</p>
      */
 
     public ShippingMethodDraftBuilder custom(
@@ -254,6 +255,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this.localizedName;
     }
 
+    @Deprecated
     @Nullable
     public String getDescription() {
         return this.description;

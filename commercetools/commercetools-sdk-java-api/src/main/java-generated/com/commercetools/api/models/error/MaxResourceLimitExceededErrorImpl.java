@@ -67,7 +67,7 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-     *  <p>supported resource type identifiers:</p>
+     *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {

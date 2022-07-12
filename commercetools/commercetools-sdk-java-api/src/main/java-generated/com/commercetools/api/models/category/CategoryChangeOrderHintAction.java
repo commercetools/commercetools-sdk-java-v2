@@ -32,7 +32,7 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
     String CHANGE_ORDER_HINT = "changeOrderHint";
 
     /**
-     *
+     *  <p>New value to set. Must be a decimal value between 0 and 1.</p>
      */
     @NotNull
     @JsonProperty("orderHint")

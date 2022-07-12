@@ -35,7 +35,7 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Sets the Zone for which the shippng rates are valid.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
@@ -43,7 +43,7 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
     }
 
     /**
-     *  <p>The array must not contain two shipping rates with the same currency.</p>
+     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> getShippingRates() {

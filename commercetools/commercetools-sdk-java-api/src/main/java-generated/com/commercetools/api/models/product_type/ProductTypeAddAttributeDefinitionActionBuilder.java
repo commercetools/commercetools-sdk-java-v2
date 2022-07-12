@@ -26,7 +26,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
     private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
     /**
-     *
+     *  <p>Value to append to <code>attributes</code>.</p>
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(
@@ -37,7 +37,7 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
     }
 
     /**
-     *
+     *  <p>Value to append to <code>attributes</code>.</p>
      */
 
     public ProductTypeAddAttributeDefinitionActionBuilder attribute(

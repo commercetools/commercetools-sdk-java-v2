@@ -27,7 +27,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -37,7 +37,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetDistributionChannelsActionBuilder distributionChannels(
@@ -47,7 +47,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -60,7 +60,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
@@ -74,7 +74,7 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
     }
 
     /**
-     *
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset. Any attempt to use Channel without the <code>ProductDistribution</code> ChannelRoleEnum will fail with a MissingRoleOnChannel error.</p>
      */
 
     public StoreSetDistributionChannelsActionBuilder withDistributionChannels(

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributeBooleanType
+ *  <p>Attribute type for Boolean values. Valid values for the Attribute are <code>true</code> and <code>false</code> (JSON Boolean).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeBooleanTypeImpl implements AttributeBooleanType, ModelBase {

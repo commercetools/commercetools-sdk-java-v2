@@ -44,7 +44,7 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
     }
 
     /**
-     *
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {

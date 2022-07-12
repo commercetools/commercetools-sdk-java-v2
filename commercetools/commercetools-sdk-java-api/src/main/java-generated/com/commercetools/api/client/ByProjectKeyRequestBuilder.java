@@ -99,6 +99,18 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductTypesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyQuotesRequestBuilder quotes() {
+        return new ByProjectKeyQuotesRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyQuoteRequestsRequestBuilder quoteRequests() {
+        return new ByProjectKeyQuoteRequestsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyStagedQuotesRequestBuilder stagedQuotes() {
+        return new ByProjectKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyReviewsRequestBuilder reviews() {
         return new ByProjectKeyReviewsRequestBuilder(apiHttpClient, projectKey);
     }

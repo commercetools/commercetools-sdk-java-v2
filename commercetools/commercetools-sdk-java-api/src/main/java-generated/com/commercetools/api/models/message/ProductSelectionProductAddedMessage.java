@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_selection.ProductVariantSelection;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -48,7 +49,16 @@ public interface ProductSelectionProductAddedMessage extends Message {
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+    @Valid
+    @JsonProperty("variantSelection")
+    public ProductVariantSelection getVariantSelection();
+
     public void setProduct(final ProductReference product);
+
+    public void setVariantSelection(final ProductVariantSelection variantSelection);
 
     public static ProductSelectionProductAddedMessage of() {
         return new ProductSelectionProductAddedMessageImpl();
@@ -67,6 +77,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setProduct(template.getProduct());
+        instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
 

@@ -27,7 +27,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
     private com.commercetools.api.models.common.LocalizedString metaDescription;
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public CategorySetMetaDescriptionActionBuilder metaDescription(
@@ -37,7 +37,7 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public CategorySetMetaDescriptionActionBuilder metaDescription(

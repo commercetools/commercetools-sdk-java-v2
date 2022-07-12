@@ -45,7 +45,7 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
     }
 
     /**
-     *
+     *  <p>Names of Attributes to reorder. This array must include all Attributes currently present on a ProductType in a different order.</p>
      */
 
     public java.util.List<String> getAttributeNames() {

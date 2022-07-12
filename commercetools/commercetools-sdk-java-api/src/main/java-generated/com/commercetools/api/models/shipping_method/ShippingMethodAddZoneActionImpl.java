@@ -44,7 +44,7 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
     }
 
     /**
-     *
+     *  <p>Value to add to <code>zoneRates</code>.</p>
      */
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {

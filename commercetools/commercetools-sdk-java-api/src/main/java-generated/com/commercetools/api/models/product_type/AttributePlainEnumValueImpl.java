@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AttributePlainEnumValue
+ *  <p>A plain enum value must be unique within the enum, otherwise a DuplicateEnumValues error will be returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, ModelBase {
@@ -34,7 +34,7 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
      */
 
     public String getKey() {
@@ -42,7 +42,7 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
     }
 
     /**
-     *
+     *  <p>Descriptive label of the value.</p>
      */
 
     public String getLabel() {

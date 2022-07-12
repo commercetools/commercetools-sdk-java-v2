@@ -75,6 +75,14 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.quote.QuoteReferenceBuilder quoteBuilder() {
+        return com.commercetools.api.models.quote.QuoteReferenceBuilder.of();
+    }
+
+    public com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder quoteRequestBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.review.ReviewReferenceBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewReferenceBuilder.of();
     }
@@ -85,6 +93,10 @@ public class ReferenceBuilder {
 
     public com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder.of();
+    }
+
+    public com.commercetools.api.models.staged_quote.StagedQuoteReferenceBuilder stagedQuoteBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteReferenceBuilder.of();
     }
 
     public com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder standalonePriceBuilder() {

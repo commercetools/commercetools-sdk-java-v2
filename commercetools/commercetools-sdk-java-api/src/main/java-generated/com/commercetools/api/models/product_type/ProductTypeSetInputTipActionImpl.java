@@ -47,7 +47,7 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -55,7 +55,7 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getInputTip() {

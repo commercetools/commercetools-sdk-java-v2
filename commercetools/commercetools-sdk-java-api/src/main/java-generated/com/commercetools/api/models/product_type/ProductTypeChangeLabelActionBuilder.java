@@ -28,7 +28,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public ProductTypeChangeLabelActionBuilder attributeName(final String attributeName) {
@@ -37,7 +37,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductTypeChangeLabelActionBuilder label(
@@ -47,7 +47,7 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
     }
 
     /**
-     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     *  <p>New value to set. Must not be empty.</p>
      */
 
     public ProductTypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {

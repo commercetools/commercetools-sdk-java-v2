@@ -44,7 +44,7 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
     }
 
     /**
-     *
+     *  <p>Available values that can be assigned to Products.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> getValues() {

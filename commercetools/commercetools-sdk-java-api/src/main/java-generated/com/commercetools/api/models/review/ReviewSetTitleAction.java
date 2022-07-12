@@ -29,7 +29,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     String SET_TITLE = "setTitle";
 
     /**
-     *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("title")

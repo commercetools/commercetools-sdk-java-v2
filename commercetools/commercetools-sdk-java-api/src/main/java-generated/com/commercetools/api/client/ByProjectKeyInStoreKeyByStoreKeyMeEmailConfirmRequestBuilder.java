@@ -18,8 +18,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmRequestBuilder {
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost post() {
-        return new ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(apiHttpClient, projectKey, storeKey);
+    public ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost post(
+            com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPost(apiHttpClient, projectKey, storeKey,
+            customerEmailVerify);
     }
 
 }

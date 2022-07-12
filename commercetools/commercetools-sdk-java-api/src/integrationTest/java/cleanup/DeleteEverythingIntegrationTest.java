@@ -12,6 +12,7 @@ import static commercetools.discount_code.DiscountCodeFixtures.*;
 import static commercetools.extension.ExtensionFixtures.*;
 import static commercetools.inventory.InventoryEntryFixtures.*;
 import static commercetools.order.OrdersFixtures.*;
+import static commercetools.payment.PaymentFixtures.deletePayment;
 import static commercetools.product_discount.ProductDiscountFixtures.*;
 import static commercetools.product_type.ProductTypeFixtures.*;
 import static commercetools.review.ReviewFixtures.*;
@@ -53,6 +54,7 @@ public class DeleteEverythingIntegrationTest {
             deleteAllOrderEdits();
             deleteAllOrders();
             deleteAllCarts();
+            deleteAllPayments();
             deleteAllDiscountCodes();
             deleteAllShoppingLists();
             deleteAllReviews();
@@ -116,6 +118,11 @@ public class DeleteEverythingIntegrationTest {
                 .isZero());
         deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().carts().get(),
             (cart) -> deleteCart(cart.getId(), cart.getVersion()));
+    }
+
+    private void deleteAllPayments() {
+        deleteAllResources(CommercetoolsTestUtils.getProjectApiRoot().payments().get(),
+            (payment) -> deletePayment(payment.getId(), payment.getVersion()));
     }
 
     private void deleteAllTypes() {

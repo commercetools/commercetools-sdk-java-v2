@@ -89,7 +89,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the InventoryEntry.</p>
      */
 
     public Long getVersion() {
@@ -97,7 +97,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -105,7 +105,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -137,7 +137,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      */
 
     public String getSku() {
@@ -145,7 +145,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Connection to a particular supplier.</p>
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -153,7 +153,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Overall amount of stock. (available + reserved)</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      */
 
     public Long getQuantityOnStock() {
@@ -161,7 +161,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      */
 
     public Long getAvailableQuantity() {
@@ -169,7 +169,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
      */
 
     public Long getRestockableInDays() {
@@ -177,7 +177,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *  <p>The date and time of the next restock.</p>
+     *  <p>Date and time of the next restock.</p>
      */
 
     public java.time.ZonedDateTime getExpectedDelivery() {
@@ -185,7 +185,7 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

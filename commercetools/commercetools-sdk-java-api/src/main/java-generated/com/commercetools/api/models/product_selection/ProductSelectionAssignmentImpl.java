@@ -24,12 +24,16 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     @JsonCreator
     ProductSelectionAssignmentImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
-            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
+            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
         this.product = product;
         this.productSelection = productSelection;
+        this.variantSelection = variantSelection;
     }
 
     public ProductSelectionAssignmentImpl() {
@@ -44,11 +48,19 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     }
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
+    }
+
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
     }
 
     public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
@@ -58,6 +70,11 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     public void setProductSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
+    }
+
+    public void setVariantSelection(
+            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
     }
 
     @Override
@@ -72,12 +89,16 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
         return new EqualsBuilder().append(product, that.product)
                 .append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).append(productSelection).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product)
+                .append(productSelection)
+                .append(variantSelection)
+                .toHashCode();
     }
 
 }

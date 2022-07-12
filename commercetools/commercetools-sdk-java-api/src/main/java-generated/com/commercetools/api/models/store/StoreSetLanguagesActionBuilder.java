@@ -26,7 +26,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     private java.util.List<String> languages;
 
     /**
-     *
+     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
@@ -35,7 +35,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     }
 
     /**
-     *
+     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
      */
 
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
@@ -44,7 +44,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
     }
 
     /**
-     *
+     *  <p>Value to set. Any attempt to use languages other than the ones defined in the Project will fail with a ProjectNotConfiguredForLanguages error.</p>
      */
 
     public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {

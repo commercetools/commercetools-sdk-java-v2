@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>supported resource type identifiers:</p>
+ *  <p>Type of resource the value should reference. Supported resource type identifiers are:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceTypeId {
@@ -106,6 +106,16 @@ public interface ReferenceTypeId {
     */
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
     /**
+    	<p>References a <a href="ctp:api:type:Quote">Quote</a>.</p>
+
+    */
+    ReferenceTypeId QUOTE = ReferenceTypeIdEnum.QUOTE;
+    /**
+    	<p>References a <a href="ctp:api:type:QuoteRequest">QuoteRequest</a>.</p>
+
+    */
+    ReferenceTypeId QUOTE_REQUEST = ReferenceTypeIdEnum.QUOTE_REQUEST;
+    /**
     	<p>References a <a href="ctp:api:type:Review">Review</a>.</p>
 
     */
@@ -120,6 +130,11 @@ public interface ReferenceTypeId {
 
     */
     ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
+    /**
+    	<p>References a <a href="ctp:api:type:StagedQuote">StagedQuote</a>.</p>
+
+    */
+    ReferenceTypeId STAGED_QUOTE = ReferenceTypeIdEnum.STAGED_QUOTE;
     /**
     	<p>References a <a href="ctp:api:type:State">State</a>.</p>
 
@@ -188,11 +203,17 @@ public interface ReferenceTypeId {
 
         PRODUCT_TYPE("product-type"),
 
+        QUOTE("quote"),
+
+        QUOTE_REQUEST("quote-request"),
+
         REVIEW("review"),
 
         SHIPPING_METHOD("shipping-method"),
 
         SHOPPING_LIST("shopping-list"),
+
+        STAGED_QUOTE("staged-quote"),
 
         STATE("state"),
 

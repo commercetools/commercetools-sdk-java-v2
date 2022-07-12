@@ -75,7 +75,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>Current version of the InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder version(final Long version) {
@@ -84,7 +84,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
      */
 
     public InventoryEntryBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -93,7 +93,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
      */
 
     public InventoryEntryBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -150,7 +150,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder sku(final String sku) {
@@ -159,7 +159,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Connection to a particular supplier.</p>
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder supplyChannel(
@@ -169,7 +169,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Connection to a particular supplier.</p>
+     *  <p>Channel that supplies this InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder supplyChannel(
@@ -179,7 +179,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Overall amount of stock. (available + reserved)</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      */
 
     public InventoryEntryBuilder quantityOnStock(final Long quantityOnStock) {
@@ -188,7 +188,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      */
 
     public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {
@@ -197,7 +197,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
      */
 
     public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {
@@ -206,7 +206,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *  <p>The date and time of the next restock.</p>
+     *  <p>Date and time of the next restock.</p>
      */
 
     public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
@@ -215,7 +215,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder custom(
@@ -225,7 +225,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-     *
+     *  <p>Custom Fields of the InventoryEntry.</p>
      */
 
     public InventoryEntryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {

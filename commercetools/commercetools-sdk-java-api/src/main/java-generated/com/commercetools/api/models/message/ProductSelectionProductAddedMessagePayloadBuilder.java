@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,6 +27,9 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    @Nullable
+    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
+
     /**
      *  <p>Reference to a Product.</p>
      */
@@ -45,20 +50,47 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
+            @Nullable final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
+     *  <p>Polymorphic base type for Product Variant Selections. The actual type is determined by the <code>type</code> field.</p>
+     */
+
+    public ProductSelectionProductAddedMessagePayloadBuilder variantSelection(
+            Function<com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductVariantSelection>> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public ProductSelectionProductAddedMessagePayload build() {
         Objects.requireNonNull(product, ProductSelectionProductAddedMessagePayload.class + ": product is missing");
-        return new ProductSelectionProductAddedMessagePayloadImpl(product);
+        return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 
     /**
      * builds ProductSelectionProductAddedMessagePayload without checking for non null required values
      */
     public ProductSelectionProductAddedMessagePayload buildUnchecked() {
-        return new ProductSelectionProductAddedMessagePayloadImpl(product);
+        return new ProductSelectionProductAddedMessagePayloadImpl(product, variantSelection);
     }
 
     public static ProductSelectionProductAddedMessagePayloadBuilder of() {
@@ -69,6 +101,7 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
             final ProductSelectionProductAddedMessagePayload template) {
         ProductSelectionProductAddedMessagePayloadBuilder builder = new ProductSelectionProductAddedMessagePayloadBuilder();
         builder.product = template.getProduct();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

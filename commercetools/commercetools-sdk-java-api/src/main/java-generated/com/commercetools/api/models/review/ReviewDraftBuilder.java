@@ -66,7 +66,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
+     *  <p>If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer <code>id</code>&nbsp;+ Product <code>id</code>.</p>
      */
 
     public ReviewDraftBuilder uniquenessValue(@Nullable final String uniquenessValue) {
@@ -75,7 +75,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Language in which the content of the Review is written.</p>
      */
 
     public ReviewDraftBuilder locale(@Nullable final String locale) {
@@ -84,7 +84,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Name of the author.</p>
      */
 
     public ReviewDraftBuilder authorName(@Nullable final String authorName) {
@@ -93,7 +93,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     public ReviewDraftBuilder title(@Nullable final String title) {
@@ -102,7 +102,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Content of the Review.</p>
      */
 
     public ReviewDraftBuilder text(@Nullable final String text) {
@@ -111,7 +111,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+     *  <p>Identifies the target of the Review. Can be a Product or a Channel, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively.</p>
      */
 
     public ReviewDraftBuilder target(@Nullable final java.lang.Object target) {
@@ -120,7 +120,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public ReviewDraftBuilder state(
@@ -130,7 +130,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      */
 
     public ReviewDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
@@ -139,7 +139,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+     *  <p>Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
      */
 
     public ReviewDraftBuilder rating(@Nullable final Integer rating) {
@@ -148,7 +148,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public ReviewDraftBuilder customer(
@@ -159,7 +159,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *  <p>The customer who created the review.</p>
+     *  <p>Customer who created the Review.</p>
      */
 
     public ReviewDraftBuilder customer(
@@ -169,7 +169,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Review.</p>
      */
 
     public ReviewDraftBuilder custom(
@@ -179,7 +179,7 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     }
 
     /**
-     *
+     *  <p>Custom Fields for the Review.</p>
      */
 
     public ReviewDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

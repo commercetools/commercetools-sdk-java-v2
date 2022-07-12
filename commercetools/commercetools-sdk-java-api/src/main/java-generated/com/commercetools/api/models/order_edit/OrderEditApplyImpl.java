@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
 
-    private Integer editVersion;
+    private Long editVersion;
 
-    private Integer resourceVersion;
+    private Long resourceVersion;
 
     @JsonCreator
-    OrderEditApplyImpl(@JsonProperty("editVersion") final Integer editVersion,
-            @JsonProperty("resourceVersion") final Integer resourceVersion) {
+    OrderEditApplyImpl(@JsonProperty("editVersion") final Long editVersion,
+            @JsonProperty("resourceVersion") final Long resourceVersion) {
         this.editVersion = editVersion;
         this.resourceVersion = resourceVersion;
     }
@@ -38,7 +38,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
      *
      */
 
-    public Integer getEditVersion() {
+    public Long getEditVersion() {
         return this.editVersion;
     }
 
@@ -46,15 +46,15 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
      *
      */
 
-    public Integer getResourceVersion() {
+    public Long getResourceVersion() {
         return this.resourceVersion;
     }
 
-    public void setEditVersion(final Integer editVersion) {
+    public void setEditVersion(final Long editVersion) {
         this.editVersion = editVersion;
     }
 
-    public void setResourceVersion(final Integer resourceVersion) {
+    public void setResourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
     }
 

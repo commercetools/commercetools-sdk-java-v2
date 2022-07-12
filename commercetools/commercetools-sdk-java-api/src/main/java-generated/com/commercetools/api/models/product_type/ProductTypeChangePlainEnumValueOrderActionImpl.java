@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTypeChangePlainEnumValueOrderAction
+ *  <p>Updates the order of enum <code>values</code> in an AttributeEnumType AttributeDefinition. It can update an AttributeEnumType AttributeDefinition or an AttributeSetType of AttributeEnumType AttributeDefinition.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangePlainEnumValueOrderActionImpl
@@ -48,7 +48,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     *
+     *  <p>Name of the AttributeDefinition to update.</p>
      */
 
     public String getAttributeName() {
@@ -56,7 +56,7 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
     }
 
     /**
-     *
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error code will be returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {

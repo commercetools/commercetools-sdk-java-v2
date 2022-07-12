@@ -41,16 +41,25 @@ public interface ProductSelectionAssignment {
     public ProductReference getProduct();
 
     /**
-     *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
     public ProductSelectionReference getProductSelection();
 
+    /**
+     *  <p>Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.</p>
+     */
+    @Valid
+    @JsonProperty("variantSelection")
+    public ProductVariantSelection getVariantSelection();
+
     public void setProduct(final ProductReference product);
 
     public void setProductSelection(final ProductSelectionReference productSelection);
+
+    public void setVariantSelection(final ProductVariantSelection variantSelection);
 
     public static ProductSelectionAssignment of() {
         return new ProductSelectionAssignmentImpl();
@@ -60,6 +69,7 @@ public interface ProductSelectionAssignment {
         ProductSelectionAssignmentImpl instance = new ProductSelectionAssignmentImpl();
         instance.setProduct(template.getProduct());
         instance.setProductSelection(template.getProductSelection());
+        instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
 

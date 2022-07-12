@@ -91,6 +91,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.AddPriceChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.AddProductChangeBuilder addProductChangeBuilder() {
+        return com.commercetools.history.models.change.AddProductChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.AddPropertyChangeBuilder addPropertyChangeBuilder() {
         return com.commercetools.history.models.change.AddPropertyChangeBuilder.of();
     }
@@ -447,6 +451,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.RemovePriceChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.RemoveProductChangeBuilder removeProductChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveProductChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.RemovePropertyChangeBuilder removePropertyChangeBuilder() {
         return com.commercetools.history.models.change.RemovePropertyChangeBuilder.of();
     }
@@ -513,6 +521,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetAttributeChangeBuilder setAttributeChangeBuilder() {
         return com.commercetools.history.models.change.SetAttributeChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetAuthenticationModeChangeBuilder setAuthenticationModeChangeBuilder() {
+        return com.commercetools.history.models.change.SetAuthenticationModeChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetAuthorNameChangeBuilder setAuthorNameChangeBuilder() {
@@ -691,6 +703,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetLastNameChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetLineItemDeactivatedAtChangeBuilder setLineItemDeactivatedAtChangeBuilder() {
+        return com.commercetools.history.models.change.SetLineItemDeactivatedAtChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetLineItemDiscountedPriceChangeBuilder setLineItemDiscountedPriceChangeBuilder() {
         return com.commercetools.history.models.change.SetLineItemDiscountedPriceChangeBuilder.of();
     }
@@ -705,6 +721,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetLineItemPriceChangeBuilder setLineItemPriceChangeBuilder() {
         return com.commercetools.history.models.change.SetLineItemPriceChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetLineItemProductKeyChangeBuilder setLineItemProductKeyChangeBuilder() {
+        return com.commercetools.history.models.change.SetLineItemProductKeyChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetLineItemProductSlugChangeBuilder setLineItemProductSlugChangeBuilder() {
@@ -819,12 +839,20 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetPricesChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetProductCountChangeBuilder setProductCountChangeBuilder() {
+        return com.commercetools.history.models.change.SetProductCountChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetProductPriceCustomFieldChangeBuilder setProductPriceCustomFieldChangeBuilder() {
         return com.commercetools.history.models.change.SetProductPriceCustomFieldChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetProductPriceCustomTypeChangeBuilder setProductPriceCustomTypeChangeBuilder() {
         return com.commercetools.history.models.change.SetProductPriceCustomTypeChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetProductSelectionsChangeBuilder setProductSelectionsChangeBuilder() {
+        return com.commercetools.history.models.change.SetProductSelectionsChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetProductVariantKeyChangeBuilder setProductVariantKeyChangeBuilder() {

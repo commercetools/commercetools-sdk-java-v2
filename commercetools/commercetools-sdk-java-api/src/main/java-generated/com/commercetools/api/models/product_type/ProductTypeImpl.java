@@ -89,7 +89,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     *  <p>Date and time (UTC) the ProductType was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {

@@ -81,7 +81,7 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     *  <p>Date and time (UTC) the ProductType was last updated.</p>
      */
 
     public ProductTypeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {

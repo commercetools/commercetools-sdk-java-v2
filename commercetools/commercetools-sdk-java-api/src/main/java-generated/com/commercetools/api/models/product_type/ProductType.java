@@ -63,7 +63,7 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Date and time (UTC) the Channel was last updated.</p>
+     *  <p>Date and time (UTC) the ProductType was last updated.</p>
      */
     @NotNull
     @JsonProperty("lastModifiedAt")

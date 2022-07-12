@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
-@JsonIgnoreProperties(value = { "negative", "negativeOrZero", "positiveOrZero", "zero", "positive" })
+@JsonIgnoreProperties(value = { "factory", "context", "number", "currency", "negative", "negativeOrZero",
+        "positiveOrZero", "zero", "positive" })
 public interface Money extends com.commercetools.api.models.common.MonetaryAmountConvertable, MonetaryAmount {
 
     /**
@@ -100,43 +101,36 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
         return MoneyUtil::of;
     }
 
-    @JsonIgnore
     @Override
     default MonetaryContext getContext() {
         return toMonetaryAmount().getContext();
     }
 
-    @JsonIgnore
     @Override
     default MonetaryAmountFactory<? extends MonetaryAmount> getFactory() {
         return toMonetaryAmount().getFactory();
     }
 
-    @JsonIgnore
     @Override
     default boolean isGreaterThan(MonetaryAmount amount) {
         return toMonetaryAmount().isGreaterThan(amount);
     }
 
-    @JsonIgnore
     @Override
     default boolean isGreaterThanOrEqualTo(MonetaryAmount amount) {
         return toMonetaryAmount().isGreaterThanOrEqualTo(amount);
     }
 
-    @JsonIgnore
     @Override
     default boolean isLessThan(MonetaryAmount amount) {
         return toMonetaryAmount().isLessThan(amount);
     }
 
-    @JsonIgnore
     @Override
     default boolean isLessThanOrEqualTo(MonetaryAmount amount) {
         return toMonetaryAmount().isLessThanOrEqualTo(amount);
     }
 
-    @JsonIgnore
     @Override
     default boolean isEqualTo(MonetaryAmount amount) {
         return toMonetaryAmount().isEqualTo(amount);
@@ -271,13 +265,11 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
         return toMonetaryAmount().compareTo(o);
     }
 
-    @JsonIgnore
     @Override
     default CurrencyUnit getCurrency() {
         return toMonetaryAmount().getCurrency();
     }
 
-    @JsonIgnore
     @Override
     default NumberValue getNumber() {
         return toMonetaryAmount().getNumber();

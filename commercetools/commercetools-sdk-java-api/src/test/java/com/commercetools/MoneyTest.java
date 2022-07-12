@@ -236,9 +236,10 @@ public class MoneyTest {
 
         JsonNode cartNode = JsonUtils.toJsonNode(cart);
 
-        Assertions.assertThat(cartNode.get("totalPrice")).hasSize(3);
+        Assertions.assertThat(cartNode.get("totalPrice")).hasSize(4);
         Assertions.assertThat(cartNode.get("totalPrice").get("type").asText()).isEqualTo("centPrecision");
         Assertions.assertThat(cartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
+        Assertions.assertThat(cartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(2);
         Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
 
         Cart highCart = Cart.builder()

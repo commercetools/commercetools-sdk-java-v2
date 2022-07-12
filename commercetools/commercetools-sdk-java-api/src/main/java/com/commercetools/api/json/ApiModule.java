@@ -29,7 +29,6 @@ public class ApiModule extends SimpleModule {
                         .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_DATE_FIELD_AS_STRING)));
         addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
         addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
-        addSerializer(MonetaryAmount.class, new MoneySerializer());
         setMixInAnnotation(Review.class, ReviewMixin.class);
         setMixInAnnotation(ReplicaCartDraft.class, ReplicaCartDraftMixin.class);
     }

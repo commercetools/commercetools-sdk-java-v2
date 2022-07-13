@@ -22,6 +22,10 @@ public class ByProjectKeyProductTypesByIDRequestBuilder {
         return new ByProjectKeyProductTypesByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductTypesByIDHead head() {
+        return new ByProjectKeyProductTypesByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyProductTypesByIDPost post(
             com.commercetools.api.models.product_type.ProductTypeUpdate productTypeUpdate) {
         return new ByProjectKeyProductTypesByIDPost(apiHttpClient, projectKey, ID, productTypeUpdate);

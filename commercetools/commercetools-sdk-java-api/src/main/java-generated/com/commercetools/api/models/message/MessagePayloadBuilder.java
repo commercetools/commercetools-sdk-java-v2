@@ -443,6 +443,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreDeletedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder storeDistributionChannelsChangedBuilder() {
+        return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder.of();
     }

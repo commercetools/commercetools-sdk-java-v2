@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StoreRemoveDistributionChannelAction
+ *  <p>This update action produces the StoreDistributionChannelsChangedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

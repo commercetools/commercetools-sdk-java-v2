@@ -63,7 +63,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>The <code>version</code> of the Quote from which an Order is created.</p>
      */
 
     public Long getVersion() {

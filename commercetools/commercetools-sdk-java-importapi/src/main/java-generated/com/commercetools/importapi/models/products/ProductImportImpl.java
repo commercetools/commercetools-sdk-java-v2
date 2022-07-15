@@ -47,6 +47,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
 
     private Boolean publish;
 
+    private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
+
     @JsonCreator
     ProductImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.importapi.models.common.LocalizedString name,
@@ -60,7 +62,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
             @JsonProperty("taxCategory") final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory,
             @JsonProperty("searchKeywords") final com.commercetools.importapi.models.products.SearchKeywords searchKeywords,
             @JsonProperty("state") final com.commercetools.importapi.models.common.StateKeyReference state,
-            @JsonProperty("publish") final Boolean publish) {
+            @JsonProperty("publish") final Boolean publish,
+            @JsonProperty("priceMode") final com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode) {
         this.key = key;
         this.name = name;
         this.productType = productType;
@@ -74,6 +77,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         this.searchKeywords = searchKeywords;
         this.state = state;
         this.publish = publish;
+        this.priceMode = priceMode;
     }
 
     public ProductImportImpl() {
@@ -214,6 +218,14 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         return this.publish;
     }
 
+    /**
+     *  <p>Determines the type of Prices used for Product Price Selection as well as for LineItem Price selection. See ProductPriceMode for more details.</p>
+     */
+
+    public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -271,6 +283,10 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         this.publish = publish;
     }
 
+    public void setPriceMode(final com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -294,6 +310,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(searchKeywords, that.searchKeywords)
                 .append(state, that.state)
                 .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -312,6 +329,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(searchKeywords)
                 .append(state)
                 .append(publish)
+                .append(priceMode)
                 .toHashCode();
     }
 

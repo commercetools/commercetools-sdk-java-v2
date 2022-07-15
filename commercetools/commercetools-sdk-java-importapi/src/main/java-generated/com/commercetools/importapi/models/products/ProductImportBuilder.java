@@ -62,6 +62,9 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     @Nullable
     private Boolean publish;
 
+    @Nullable
+    private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
+
     /**
      *
      */
@@ -404,6 +407,16 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
+    /**
+     *  <p>Determines the type of Prices used for Product Price Selection as well as for LineItem Price selection. See ProductPriceMode for more details.</p>
+     */
+
+    public ProductImportBuilder priceMode(
+            @Nullable final com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public String getKey() {
         return this.key;
     }
@@ -465,13 +478,18 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         return this.publish;
     }
 
+    @Nullable
+    public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public ProductImport build() {
         Objects.requireNonNull(key, ProductImport.class + ": key is missing");
         Objects.requireNonNull(name, ProductImport.class + ": name is missing");
         Objects.requireNonNull(productType, ProductImport.class + ": productType is missing");
         Objects.requireNonNull(slug, ProductImport.class + ": slug is missing");
         return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,
-            metaKeywords, taxCategory, searchKeywords, state, publish);
+            metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
     }
 
     /**
@@ -479,7 +497,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
      */
     public ProductImport buildUnchecked() {
         return new ProductImportImpl(key, name, productType, slug, description, categories, metaTitle, metaDescription,
-            metaKeywords, taxCategory, searchKeywords, state, publish);
+            metaKeywords, taxCategory, searchKeywords, state, publish, priceMode);
     }
 
     public static ProductImportBuilder of() {
@@ -501,6 +519,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         builder.searchKeywords = template.getSearchKeywords();
         builder.state = template.getState();
         builder.publish = template.getPublish();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

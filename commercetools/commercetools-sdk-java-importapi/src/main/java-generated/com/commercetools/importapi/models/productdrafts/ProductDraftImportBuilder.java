@@ -68,6 +68,9 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     @Nullable
     private Boolean publish;
 
+    @Nullable
+    private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
+
     /**
      *
      */
@@ -493,6 +496,16 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+     *  <p>Determines the type of Prices used for Product Price Selection as well as for LineItem Price selection. See ProductPriceMode for more details.</p>
+     */
+
+    public ProductDraftImportBuilder priceMode(
+            @Nullable final com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public String getKey() {
         return this.key;
     }
@@ -564,13 +577,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this.publish;
     }
 
+    @Nullable
+    public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public ProductDraftImport build() {
         Objects.requireNonNull(key, ProductDraftImport.class + ": key is missing");
         Objects.requireNonNull(productType, ProductDraftImport.class + ": productType is missing");
         Objects.requireNonNull(name, ProductDraftImport.class + ": name is missing");
         Objects.requireNonNull(slug, ProductDraftImport.class + ": slug is missing");
         return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
-            metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
+            metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish,
+            priceMode);
     }
 
     /**
@@ -578,7 +597,8 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      */
     public ProductDraftImport buildUnchecked() {
         return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
-            metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish);
+            metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish,
+            priceMode);
     }
 
     public static ProductDraftImportBuilder of() {
@@ -602,6 +622,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         builder.searchKeywords = template.getSearchKeywords();
         builder.state = template.getState();
         builder.publish = template.getPublish();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

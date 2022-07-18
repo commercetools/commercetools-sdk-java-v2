@@ -287,6 +287,14 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.ChangeQuantityChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.ChangeQuoteRequestStateChangeBuilder changeQuoteRequestStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeQuoteRequestStateChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeQuoteStateChangeBuilder changeQuoteStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeQuoteStateChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.ChangeRequiresDiscountCodeChangeBuilder changeRequiresDiscountCodeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeRequiresDiscountCodeChangeBuilder.of();
     }
@@ -317,6 +325,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.ChangeStackingModeChangeBuilder changeStackingModeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeStackingModeChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeStagedQuoteStateChangeBuilder changeStagedQuoteStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeStagedQuoteStateChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeStateTypeChangeBuilder changeStateTypeChangeBuilder() {
@@ -891,6 +903,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetSearchKeywordsChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetSellerCommentChangeBuilder setSellerCommentChangeBuilder() {
+        return com.commercetools.history.models.change.SetSellerCommentChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetShippingAddressChangeBuilder setShippingAddressChangeBuilder() {
         return com.commercetools.history.models.change.SetShippingAddressChangeBuilder.of();
     }
@@ -1005,6 +1021,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetValidFromChangeBuilder setValidFromChangeBuilder() {
         return com.commercetools.history.models.change.SetValidFromChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetValidToChangeBuilder setValidToChangeBuilder() {
+        return com.commercetools.history.models.change.SetValidToChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetValidUntilChangeBuilder setValidUntilChangeBuilder() {

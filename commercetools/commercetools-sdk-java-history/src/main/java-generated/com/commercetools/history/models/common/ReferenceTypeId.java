@@ -53,11 +53,17 @@ public interface ReferenceTypeId {
 
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
 
+    ReferenceTypeId QUOTE = ReferenceTypeIdEnum.QUOTE;
+
+    ReferenceTypeId QUOTE_REQUEST = ReferenceTypeIdEnum.QUOTE_REQUEST;
+
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
 
     ReferenceTypeId SHIPPING_METHOD = ReferenceTypeIdEnum.SHIPPING_METHOD;
 
     ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
+
+    ReferenceTypeId STAGED_QUOTE = ReferenceTypeIdEnum.STAGED_QUOTE;
 
     ReferenceTypeId STATE = ReferenceTypeIdEnum.STATE;
 
@@ -110,11 +116,17 @@ public interface ReferenceTypeId {
 
         PRODUCT_TYPE("product-type"),
 
+        QUOTE("quote"),
+
+        QUOTE_REQUEST("quote-request"),
+
         REVIEW("review"),
 
         SHIPPING_METHOD("shipping-method"),
 
         SHOPPING_LIST("shopping-list"),
+
+        STAGED_QUOTE("staged-quote"),
 
         STATE("state"),
 

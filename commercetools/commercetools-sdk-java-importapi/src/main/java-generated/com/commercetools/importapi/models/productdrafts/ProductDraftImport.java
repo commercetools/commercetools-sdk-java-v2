@@ -174,7 +174,7 @@ public interface ProductDraftImport extends ImportResource {
     public Boolean getPublish();
 
     /**
-     *  <p>Determines the type of Prices used for Product Price Selection as well as for LineItem Price selection. See ProductPriceMode for more details.</p>
+     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      */
 
     @JsonProperty("priceMode")

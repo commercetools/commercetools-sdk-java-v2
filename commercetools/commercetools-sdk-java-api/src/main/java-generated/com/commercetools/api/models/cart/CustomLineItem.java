@@ -35,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .plusState(stateBuilder -> stateBuilder)
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -139,6 +140,13 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @JsonProperty("shippingDetails")
     public ItemShippingDetails getShippingDetails();
 
+    /**
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item: <code>Standard</code> = yes, <code>External</code> = no.</p>
+     */
+    @NotNull
+    @JsonProperty("priceMode")
+    public CustomLineItemPriceMode getPriceMode();
+
     public void setId(final String id);
 
     public void setName(final LocalizedString name);
@@ -172,6 +180,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
 
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
+    public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
     public static CustomLineItem of() {
         return new CustomLineItemImpl();
     }
@@ -191,6 +201,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

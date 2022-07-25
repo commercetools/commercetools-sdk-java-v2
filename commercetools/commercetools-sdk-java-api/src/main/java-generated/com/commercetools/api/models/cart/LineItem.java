@@ -199,6 +199,13 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public CustomFields getCustom();
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Only present if inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
      *  <p>Container for line item specific address(es).</p>
      */
     @Valid
@@ -259,6 +266,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
 
     public void setCustom(final CustomFields custom);
 
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
@@ -289,6 +298,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setPriceMode(template.getPriceMode());
         instance.setLineItemMode(template.getLineItemMode());
         instance.setCustom(template.getCustom());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;

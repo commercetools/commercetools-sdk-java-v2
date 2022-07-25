@@ -110,6 +110,13 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
      *  <p>Container for line item specific address(es).</p>
      */
     @Valid
@@ -138,6 +145,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     public static LineItemDraft of() {
@@ -157,6 +166,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setCustom(template.getCustom());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }

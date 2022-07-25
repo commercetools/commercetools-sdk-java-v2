@@ -84,6 +84,9 @@ public class LineItemBuilder implements Builder<LineItem> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     @Nullable
@@ -481,6 +484,16 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Only present if inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public LineItemBuilder inventoryMode(
+            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+        return this;
+    }
+
+    /**
      *  <p>Container for line item specific address(es).</p>
      */
 
@@ -598,6 +611,11 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     @Nullable
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {
         return this.shippingDetails;
     }
@@ -622,7 +640,8 @@ public class LineItemBuilder implements Builder<LineItem> {
         Objects.requireNonNull(lineItemMode, LineItem.class + ": lineItemMode is missing");
         return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
             totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
-            discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+            discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode, shippingDetails,
+            lastModifiedAt);
     }
 
     /**
@@ -631,7 +650,8 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItem buildUnchecked() {
         return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, taxedPrice,
             totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel,
-            discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
+            discountedPricePerQuantity, priceMode, lineItemMode, custom, inventoryMode, shippingDetails,
+            lastModifiedAt);
     }
 
     public static LineItemBuilder of() {
@@ -660,6 +680,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         builder.priceMode = template.getPriceMode();
         builder.lineItemMode = template.getLineItemMode();
         builder.custom = template.getCustom();
+        builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
         builder.lastModifiedAt = template.getLastModifiedAt();
         return builder;

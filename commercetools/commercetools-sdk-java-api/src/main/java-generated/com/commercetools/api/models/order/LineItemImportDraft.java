@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
@@ -113,6 +114,13 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
      *
      */
     @Valid
@@ -142,6 +150,8 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     public static LineItemImportDraft of() {
@@ -160,6 +170,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setTaxRate(template.getTaxRate());
         instance.setCustom(template.getCustom());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }

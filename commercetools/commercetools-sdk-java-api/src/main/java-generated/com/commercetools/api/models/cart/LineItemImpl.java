@@ -60,6 +60,8 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     private java.time.ZonedDateTime lastModifiedAt;
@@ -84,6 +86,7 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode,
             @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
@@ -106,6 +109,7 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.priceMode = priceMode;
         this.lineItemMode = lineItemMode;
         this.custom = custom;
+        this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.lastModifiedAt = lastModifiedAt;
     }
@@ -274,6 +278,14 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Only present if inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
      *  <p>Container for line item specific address(es).</p>
      */
 
@@ -380,6 +392,10 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.custom = custom;
     }
 
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
     }
@@ -418,6 +434,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(priceMode, that.priceMode)
                 .append(lineItemMode, that.lineItemMode)
                 .append(custom, that.custom)
+                .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
@@ -445,6 +462,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(priceMode)
                 .append(lineItemMode)
                 .append(custom)
+                .append(inventoryMode)
                 .append(shippingDetails)
                 .append(lastModifiedAt)
                 .toHashCode();

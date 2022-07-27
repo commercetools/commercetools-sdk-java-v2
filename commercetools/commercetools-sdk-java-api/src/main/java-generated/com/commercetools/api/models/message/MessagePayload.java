@@ -134,6 +134,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadImpl.class, name = StandalonePriceValueChangedMessagePayload.STANDALONE_PRICE_VALUE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCreatedMessagePayloadImpl.class, name = StoreCreatedMessagePayload.STORE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl.class, name = StoreDeletedMessagePayload.STORE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadImpl.class, name = StoreDistributionChannelsChangedMessagePayload.STORE_DISTRIBUTION_CHANNELS_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadImpl.class, name = StoreProductSelectionsChangedMessagePayload.STORE_PRODUCT_SELECTIONS_CHANGED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessagePayloadImpl.class, visible = true)
 @JsonDeserialize(as = MessagePayloadImpl.class)
@@ -577,6 +578,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StoreDeletedMessagePayloadBuilder storeDeletedBuilder() {
         return com.commercetools.api.models.message.StoreDeletedMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder storeDistributionChannelsChangedBuilder() {
+        return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {

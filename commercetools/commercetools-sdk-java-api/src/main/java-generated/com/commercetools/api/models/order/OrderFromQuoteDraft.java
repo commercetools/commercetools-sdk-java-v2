@@ -42,7 +42,7 @@ public interface OrderFromQuoteDraft {
     public QuoteResourceIdentifier getQuote();
 
     /**
-     *
+     *  <p>The <code>version</code> of the Quote from which an Order is created.</p>
      */
     @NotNull
     @JsonProperty("version")

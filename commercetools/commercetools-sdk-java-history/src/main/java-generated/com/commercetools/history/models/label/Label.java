@@ -33,7 +33,10 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.OrderLabelImpl.class, name = OrderLabel.ORDER_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.PaymentLabelImpl.class, name = PaymentLabel.PAYMENT_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.ProductLabelImpl.class, name = ProductLabel.PRODUCT_LABEL),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.label.QuoteLabelImpl.class, name = QuoteLabel.QUOTE_LABEL),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.label.QuoteRequestLabelImpl.class, name = QuoteRequestLabel.QUOTE_REQUEST_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.ReviewLabelImpl.class, name = ReviewLabel.REVIEW_LABEL),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.label.StagedQuoteLabelImpl.class, name = StagedQuoteLabel.STAGED_QUOTE_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.StringLabelImpl.class, name = StringLabel.STRING_LABEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = LabelImpl.class, visible = true)
 @JsonDeserialize(as = LabelImpl.class)
@@ -71,8 +74,20 @@ public interface Label {
         return com.commercetools.history.models.label.ProductLabelBuilder.of();
     }
 
+    public static com.commercetools.history.models.label.QuoteLabelBuilder quoteLabelBuilder() {
+        return com.commercetools.history.models.label.QuoteLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.QuoteRequestLabelBuilder quoteRequestLabelBuilder() {
+        return com.commercetools.history.models.label.QuoteRequestLabelBuilder.of();
+    }
+
     public static com.commercetools.history.models.label.ReviewLabelBuilder reviewLabelBuilder() {
         return com.commercetools.history.models.label.ReviewLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.StagedQuoteLabelBuilder stagedQuoteLabelBuilder() {
+        return com.commercetools.history.models.label.StagedQuoteLabelBuilder.of();
     }
 
     public static com.commercetools.history.models.label.StringLabelBuilder stringLabelBuilder() {

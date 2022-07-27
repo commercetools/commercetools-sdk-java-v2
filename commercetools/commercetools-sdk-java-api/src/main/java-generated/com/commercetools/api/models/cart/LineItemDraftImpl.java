@@ -42,6 +42,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
@@ -55,6 +57,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.productId = productId;
         this.variantId = variantId;
@@ -67,6 +70,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.custom = custom;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
+        this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
     }
 
@@ -162,6 +166,14 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
      *  <p>Container for line item specific address(es).</p>
      */
 
@@ -215,6 +227,10 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.externalTotalPrice = externalTotalPrice;
     }
 
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
     }
@@ -240,6 +256,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
+                .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
@@ -257,6 +274,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(custom)
                 .append(externalPrice)
                 .append(externalTotalPrice)
+                .append(inventoryMode)
                 .append(shippingDetails)
                 .toHashCode();
     }

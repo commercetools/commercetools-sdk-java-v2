@@ -40,6 +40,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
@@ -53,6 +55,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.productId = productId;
         this.name = name;
@@ -64,6 +67,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.distributionChannel = distributionChannel;
         this.taxRate = taxRate;
         this.custom = custom;
+        this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
     }
 
@@ -151,6 +155,14 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
+     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
      *
      */
 
@@ -203,6 +215,10 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
     }
@@ -227,6 +243,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(distributionChannel, that.distributionChannel)
                 .append(taxRate, that.taxRate)
                 .append(custom, that.custom)
+                .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
@@ -243,6 +260,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(distributionChannel)
                 .append(taxRate)
                 .append(custom)
+                .append(inventoryMode)
                 .append(shippingDetails)
                 .toHashCode();
     }

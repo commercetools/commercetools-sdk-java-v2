@@ -39,11 +39,19 @@ public interface ChangeHistoryResourceType {
 
     ChangeHistoryResourceType PRODUCT_DISCOUNT = ChangeHistoryResourceTypeEnum.PRODUCT_DISCOUNT;
 
+    ChangeHistoryResourceType PRODUCT_SELECTION = ChangeHistoryResourceTypeEnum.PRODUCT_SELECTION;
+
     ChangeHistoryResourceType PRODUCT_TYPE = ChangeHistoryResourceTypeEnum.PRODUCT_TYPE;
+
+    ChangeHistoryResourceType QUOTE_REQUEST = ChangeHistoryResourceTypeEnum.QUOTE_REQUEST;
+
+    ChangeHistoryResourceType QUOTE = ChangeHistoryResourceTypeEnum.QUOTE;
 
     ChangeHistoryResourceType REVIEW = ChangeHistoryResourceTypeEnum.REVIEW;
 
     ChangeHistoryResourceType SHOPPING_LIST = ChangeHistoryResourceTypeEnum.SHOPPING_LIST;
+
+    ChangeHistoryResourceType STAGED_QUOTE = ChangeHistoryResourceTypeEnum.STAGED_QUOTE;
 
     ChangeHistoryResourceType STATE = ChangeHistoryResourceTypeEnum.STATE;
 
@@ -80,11 +88,19 @@ public interface ChangeHistoryResourceType {
 
         PRODUCT_DISCOUNT("product-discount"),
 
+        PRODUCT_SELECTION("product-selection"),
+
         PRODUCT_TYPE("product-type"),
+
+        QUOTE_REQUEST("quote-request"),
+
+        QUOTE("quote"),
 
         REVIEW("review"),
 
         SHOPPING_LIST("shopping-list"),
+
+        STAGED_QUOTE("staged-quote"),
 
         STATE("state"),
 

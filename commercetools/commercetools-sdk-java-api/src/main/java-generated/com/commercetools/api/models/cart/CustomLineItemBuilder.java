@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .plusState(stateBuilder -> stateBuilder)
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
+ *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -61,6 +62,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
+
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
      *  <p>Unique identifier of the CustomLineItem.</p>
@@ -358,6 +361,15 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item: <code>Standard</code> = yes, <code>External</code> = no.</p>
+     */
+
+    public CustomLineItemBuilder priceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -415,6 +427,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this.shippingDetails;
     }
 
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public CustomLineItem build() {
         Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
         Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
@@ -425,8 +441,9 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         Objects.requireNonNull(state, CustomLineItem.class + ": state is missing");
         Objects.requireNonNull(discountedPricePerQuantity,
             CustomLineItem.class + ": discountedPricePerQuantity is missing");
+        Objects.requireNonNull(priceMode, CustomLineItem.class + ": priceMode is missing");
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
-            taxRate, discountedPricePerQuantity, custom, shippingDetails);
+            taxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
     }
 
     /**
@@ -434,7 +451,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
      */
     public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
-            taxRate, discountedPricePerQuantity, custom, shippingDetails);
+            taxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
     }
 
     public static CustomLineItemBuilder of() {
@@ -456,6 +473,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.custom = template.getCustom();
         builder.shippingDetails = template.getShippingDetails();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

@@ -78,6 +78,11 @@ public class ByProjectKeyProductTypesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "/test_projectKey/product-types/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .withId("test_ID")
                         .post(null)
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-types/test_ID?expand=expand", },
@@ -116,6 +121,7 @@ public class ByProjectKeyProductTypesByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .withId("test_ID")

@@ -35,6 +35,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyProductProjectionsByIDGet
         extends ApiMethod<ByProjectKeyProductProjectionsByIDGet, com.commercetools.api.models.product.ProductProjection>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
+        com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
+        com.commercetools.api.client.StoreprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsByIDGet> {

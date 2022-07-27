@@ -37,6 +37,8 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
+        com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>,
+        com.commercetools.api.client.StoreprojectingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSearchGet> {

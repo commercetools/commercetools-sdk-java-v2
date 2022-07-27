@@ -35,6 +35,21 @@ public interface ExtensionResourceTypeId {
 
     */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/quote-requests">QuoteRequests</a>.</p>
+
+    */
+    ExtensionResourceTypeId QUOTE_REQUEST = ExtensionResourceTypeIdEnum.QUOTE_REQUEST;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/staged-quotes">StagedQuotes</a>.</p>
+
+    */
+    ExtensionResourceTypeId STAGED_QUOTE = ExtensionResourceTypeIdEnum.STAGED_QUOTE;
+    /**
+    	<p>Extension triggered for operations on <a href="/../api/projects/quotes">Quotes</a>.</p>
+
+    */
+    ExtensionResourceTypeId QUOTE = ExtensionResourceTypeIdEnum.QUOTE;
 
     enum ExtensionResourceTypeIdEnum implements ExtensionResourceTypeId {
         CART("cart"),
@@ -43,7 +58,13 @@ public interface ExtensionResourceTypeId {
 
         PAYMENT("payment"),
 
-        CUSTOMER("customer");
+        CUSTOMER("customer"),
+
+        QUOTE_REQUEST("quote-request"),
+
+        STAGED_QUOTE("staged-quote"),
+
+        QUOTE("quote");
         private final String jsonName;
 
         private ExtensionResourceTypeIdEnum(final String jsonName) {

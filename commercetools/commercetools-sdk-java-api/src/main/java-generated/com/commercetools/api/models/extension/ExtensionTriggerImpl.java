@@ -40,7 +40,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, and <code>quote</code> are supported.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {

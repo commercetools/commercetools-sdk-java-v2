@@ -5,9 +5,11 @@ import java.util.Collections;
 
 import javax.money.MonetaryAmount;
 
-import com.commercetools.api.models.cart.Cart;
-import com.commercetools.api.models.cart.CartBuilder;
+import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.common.*;
+import com.fasterxml.jackson.databind.JsonNode;
+
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.javamoney.moneta.FastMoney;
@@ -224,5 +226,76 @@ public class MoneyTest {
 
         final MonetaryAmount highFastJpy = org.javamoney.moneta.FastMoney.of(10.00501, "JPY");
         Assertions.assertThat(MoneyUtil.amountToPreciseAmount(highFastJpy, 3)).isEqualTo(10005);
+    }
+
+    @Test
+    public void serialization() {
+        Cart cart = Cart.builder()
+                .totalPrice(b -> b.centPrecisionBuilder().centAmount(100L).fractionDigits(2).currencyCode("EUR"))
+                .buildUnchecked();
+
+        JsonNode cartNode = JsonUtils.toJsonNode(cart);
+
+        Assertions.assertThat(cartNode.get("totalPrice")).hasSize(4);
+        Assertions.assertThat(cartNode.get("totalPrice").get("type").asText()).isEqualTo("centPrecision");
+        Assertions.assertThat(cartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
+        Assertions.assertThat(cartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(2);
+        Assertions.assertThat(cartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
+
+        Cart highCart = Cart.builder()
+                .totalPrice(b -> b.highPrecisionBuilder()
+                        .centAmount(100L)
+                        .fractionDigits(3)
+                        .preciseAmount(1000L)
+                        .currencyCode("EUR"))
+                .buildUnchecked();
+
+        JsonNode highCartNode = JsonUtils.toJsonNode(highCart);
+        Assertions.assertThat(highCartNode.get("totalPrice")).hasSize(5);
+        Assertions.assertThat(highCartNode.get("totalPrice").get("type").asText()).isEqualTo("highPrecision");
+        Assertions.assertThat(highCartNode.get("totalPrice").get("centAmount").asInt()).isEqualTo(100);
+        Assertions.assertThat(highCartNode.get("totalPrice").get("preciseAmount").asInt()).isEqualTo(1000);
+        Assertions.assertThat(highCartNode.get("totalPrice").get("fractionDigits").asInt()).isEqualTo(3);
+        Assertions.assertThat(highCartNode.get("totalPrice").get("currencyCode").asText()).isEqualTo("EUR");
+    }
+
+    @Test
+    public void serializationDraft() {
+        CartDraft cart = CartDraft.builder()
+                .plusCustomLineItems(CustomLineItemDraft.builder()
+                        .money(CentPrecisionMoneyDraft.builder().centAmount(100L).currencyCode("EUR").buildUnchecked())
+                        .buildUnchecked())
+                .buildUnchecked();
+
+        JsonNode cartNode = JsonUtils.toJsonNode(cart);
+
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money")).hasSize(3);
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("type").asText())
+                .isEqualTo("centPrecision");
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("centAmount").asInt())
+                .isEqualTo(100);
+        Assertions.assertThat(cartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
+                .isEqualTo("EUR");
+
+        CartDraft highCart = CartDraft.builder()
+                .customLineItems(CustomLineItemDraft.builder()
+                        .money(HighPrecisionMoneyDraft.builder()
+                                .fractionDigits(3)
+                                .preciseAmount(1000L)
+                                .currencyCode("EUR")
+                                .buildUnchecked())
+                        .buildUnchecked())
+                .buildUnchecked();
+
+        JsonNode highCartNode = JsonUtils.toJsonNode(highCart);
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money")).hasSize(4);
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("type").asText())
+                .isEqualTo("highPrecision");
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("preciseAmount").asInt())
+                .isEqualTo(1000);
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("fractionDigits").asInt())
+                .isEqualTo(3);
+        Assertions.assertThat(highCartNode.get("customLineItems").get(0).get("money").get("currencyCode").asText())
+                .isEqualTo("EUR");
     }
 }

@@ -29,6 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
+@JsonIgnoreProperties(value = { "factory", "context", "number", "currency", "negative", "negativeOrZero",
+        "positiveOrZero", "zero", "positive" })
 public interface Money extends com.commercetools.api.models.common.MonetaryAmountConvertable, MonetaryAmount {
 
     /**

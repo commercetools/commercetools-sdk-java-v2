@@ -6,6 +6,7 @@ import static java.util.Objects.requireNonNull;
 import java.net.URI;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -49,7 +50,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ResponseSerializer> serializer;
     private Supplier<HttpExceptionFactory> httpExceptionFactory;
 
-    private Supplier<ExecutorService> oauthExecutorService;
+    private Supplier<ExecutorService> oauthExecutorService = ForkJoinPool::new;
     /**
      * <p>Creates a default client builder</p>
      * @return ClientBuilder instance
@@ -101,7 +102,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     private ClientBuilder() {
-        this.httpClient = HttpClientSupplier.of().get();
+        this.httpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
         ResponseSerializer serializer = ResponseSerializer.of();
@@ -124,7 +125,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder(final ApiHttpClient httpClient) {
         this.httpClient = httpClient;
-        this.oauthHttpClient = HttpClientSupplier.of().get();
+        this.oauthHttpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.stack = stackSupplier();
         ResponseSerializer serializer = ResponseSerializer.of();
         this.serializer = () -> serializer;

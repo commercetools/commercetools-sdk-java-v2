@@ -439,6 +439,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StoreDeletedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageBuilder storeDistributionChannelsChangedBuilder() {
+        return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder.of();
     }

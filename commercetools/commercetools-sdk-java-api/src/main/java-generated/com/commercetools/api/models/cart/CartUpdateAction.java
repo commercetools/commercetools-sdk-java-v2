@@ -38,6 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl.class, name = CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class, name = CartApplyDeltaToLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyActionImpl.class, name = CartChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionImpl.class, name = CartChangeCustomLineItemPriceModeAction.CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionImpl.class, name = CartChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeLineItemQuantityActionImpl.class, name = CartChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionImpl.class, name = CartChangeTaxCalculationModeAction.CHANGE_TAX_CALCULATION_MODE),
@@ -137,6 +138,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
     public static com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyActionBuilder changeCustomLineItemMoneyBuilder() {
         return com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionBuilder changeCustomLineItemPriceModeBuilder() {
+        return com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionBuilder.of();
     }
 
     public static com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionBuilder changeCustomLineItemQuantityBuilder() {

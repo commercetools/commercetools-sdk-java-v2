@@ -47,6 +47,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionBuilder changeCustomLineItemPriceModeBuilder() {
+        return com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionBuilder changeCustomLineItemQuantityBuilder() {
         return com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionBuilder.of();
     }

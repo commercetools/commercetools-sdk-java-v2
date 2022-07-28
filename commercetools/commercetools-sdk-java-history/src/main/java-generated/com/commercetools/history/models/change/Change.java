@@ -48,6 +48,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPaymentChangeImpl.class, name = AddPaymentChange.ADD_PAYMENT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPlainEnumValueChangeImpl.class, name = AddPlainEnumValueChange.ADD_PLAIN_ENUM_VALUE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPriceChangeImpl.class, name = AddPriceChange.ADD_PRICE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddProductChangeImpl.class, name = AddProductChange.ADD_PRODUCT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPropertyChangeImpl.class, name = AddPropertyChange.ADD_PROPERTY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddReturnInfoChangeImpl.class, name = AddReturnInfoChange.ADD_RETURN_INFO_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddShippingAddressIdChangeImpl.class, name = AddShippingAddressIdChange.ADD_SHIPPING_ADDRESS_ID_CHANGE),
@@ -96,6 +97,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePredicateChangeImpl.class, name = ChangePredicateChange.CHANGE_PREDICATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePriceChangeImpl.class, name = ChangePriceChange.CHANGE_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuantityChangeImpl.class, name = ChangeQuantityChange.CHANGE_QUANTITY_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuoteRequestStateChangeImpl.class, name = ChangeQuoteRequestStateChange.CHANGE_QUOTE_REQUEST_STATE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuoteStateChangeImpl.class, name = ChangeQuoteStateChange.CHANGE_QUOTE_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeRequiresDiscountCodeChangeImpl.class, name = ChangeRequiresDiscountCodeChange.CHANGE_REQUIRES_DISCOUNT_CODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeReviewRatingStatisticsChangeImpl.class, name = ChangeReviewRatingStatisticsChange.CHANGE_REVIEW_RATING_STATISTICS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeShipmentStateChangeImpl.class, name = ChangeShipmentStateChange.CHANGE_SHIPMENT_STATE_CHANGE),
@@ -104,6 +107,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeSlugChangeImpl.class, name = ChangeSlugChange.CHANGE_SLUG_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeSortOrderChangeImpl.class, name = ChangeSortOrderChange.CHANGE_SORT_ORDER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStackingModeChangeImpl.class, name = ChangeStackingModeChange.CHANGE_STACKING_MODE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStagedQuoteStateChangeImpl.class, name = ChangeStagedQuoteStateChange.CHANGE_STAGED_QUOTE_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStateTypeChangeImpl.class, name = ChangeStateTypeChange.CHANGE_STATE_TYPE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeTargetChangeImpl.class, name = ChangeTargetChange.CHANGE_TARGET_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeTaxCalculationModeChangeImpl.class, name = ChangeTaxCalculationModeChange.CHANGE_TAX_CALCULATION_MODE_CHANGE),
@@ -137,6 +141,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveParcelFromDeliveryChangeImpl.class, name = RemoveParcelFromDeliveryChange.REMOVE_PARCEL_FROM_DELIVERY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePaymentChangeImpl.class, name = RemovePaymentChange.REMOVE_PAYMENT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePriceChangeImpl.class, name = RemovePriceChange.REMOVE_PRICE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveProductChangeImpl.class, name = RemoveProductChange.REMOVE_PRODUCT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePropertyChangeImpl.class, name = RemovePropertyChange.REMOVE_PROPERTY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveShippingAddressIdChangeImpl.class, name = RemoveShippingAddressIdChange.REMOVE_SHIPPING_ADDRESS_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveShoppingListLineItemChangeImpl.class, name = RemoveShoppingListLineItemChange.REMOVE_SHOPPING_LIST_LINE_ITEM_CHANGE),
@@ -154,6 +159,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAssetSourcesChangeImpl.class, name = SetAssetSourcesChange.SET_ASSET_SOURCES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAssetTagsChangeImpl.class, name = SetAssetTagsChange.SET_ASSET_TAGS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAttributeChangeImpl.class, name = SetAttributeChange.SET_ATTRIBUTE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAuthenticationModeChangeImpl.class, name = SetAuthenticationModeChange.SET_AUTHENTICATION_MODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAuthorNameChangeImpl.class, name = SetAuthorNameChange.SET_AUTHOR_NAME_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetBillingAddressChangeImpl.class, name = SetBillingAddressChange.SET_BILLING_ADDRESS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCartPredicateChangeImpl.class, name = SetCartPredicateChange.SET_CART_PREDICATE_CHANGE),
@@ -198,10 +204,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetKeyChangeImpl.class, name = SetKeyChange.SET_KEY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLanguagesChangeImpl.class, name = SetLanguagesChange.SET_LANGUAGES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLastNameChangeImpl.class, name = SetLastNameChange.SET_LAST_NAME_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemDeactivatedAtChangeImpl.class, name = SetLineItemDeactivatedAtChange.SET_LINE_ITEM_DEACTIVATED_AT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemDiscountedPriceChangeImpl.class, name = SetLineItemDiscountedPriceChange.SET_LINE_ITEM_DISCOUNTED_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemDiscountedPricePerQuantityChangeImpl.class, name = SetLineItemDiscountedPricePerQuantityChange.SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemDistributionChannelChangeImpl.class, name = SetLineItemDistributionChannelChange.SET_LINE_ITEM_DISTRIBUTION_CHANNEL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemPriceChangeImpl.class, name = SetLineItemPriceChange.SET_LINE_ITEM_PRICE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemProductKeyChangeImpl.class, name = SetLineItemProductKeyChange.SET_LINE_ITEM_PRODUCT_KEY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemProductSlugChangeImpl.class, name = SetLineItemProductSlugChange.SET_LINE_ITEM_PRODUCT_SLUG_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemShippingDetailsChangeImpl.class, name = SetLineItemShippingDetailsChange.SET_LINE_ITEM_SHIPPING_DETAILS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemTaxAmountChangeImpl.class, name = SetLineItemTaxAmountChange.SET_LINE_ITEM_TAX_AMOUNT_CHANGE),
@@ -230,8 +238,10 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetParcelMeasurementsChangeImpl.class, name = SetParcelMeasurementsChange.SET_PARCEL_MEASUREMENTS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetParcelTrackingDataChangeImpl.class, name = SetParcelTrackingDataChange.SET_PARCEL_TRACKING_DATA_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPricesChangeImpl.class, name = SetPricesChange.SET_PRICES_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductCountChangeImpl.class, name = SetProductCountChange.SET_PRODUCT_COUNT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductPriceCustomFieldChangeImpl.class, name = SetProductPriceCustomFieldChange.SET_PRODUCT_PRICE_CUSTOM_FIELD_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductPriceCustomTypeChangeImpl.class, name = SetProductPriceCustomTypeChange.SET_PRODUCT_PRICE_CUSTOM_TYPE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductSelectionsChangeImpl.class, name = SetProductSelectionsChange.SET_PRODUCT_SELECTIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductVariantKeyChangeImpl.class, name = SetProductVariantKeyChange.SET_PRODUCT_VARIANT_KEY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPropertyChangeImpl.class, name = SetPropertyChange.SET_PROPERTY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetRatingChangeImpl.class, name = SetRatingChange.SET_RATING_CHANGE),
@@ -241,6 +251,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetReturnShipmentStateChangeImpl.class, name = SetReturnShipmentStateChange.SET_RETURN_SHIPMENT_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetSalutationChangeImpl.class, name = SetSalutationChange.SET_SALUTATION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetSearchKeywordsChangeImpl.class, name = SetSearchKeywordsChange.SET_SEARCH_KEYWORDS_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetSellerCommentChangeImpl.class, name = SetSellerCommentChange.SET_SELLER_COMMENT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetShippingAddressChangeImpl.class, name = SetShippingAddressChange.SET_SHIPPING_ADDRESS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetShippingInfoPriceChangeImpl.class, name = SetShippingInfoPriceChange.SET_SHIPPING_INFO_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetShippingInfoTaxedPriceChangeImpl.class, name = SetShippingInfoTaxedPriceChange.SET_SHIPPING_INFO_TAXED_PRICE_CHANGE),
@@ -270,6 +281,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetTransitionsChangeImpl.class, name = SetTransitionsChange.SET_TRANSITIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValidFromAndUntilChangeImpl.class, name = SetValidFromAndUntilChange.SET_VALID_FROM_AND_UNTIL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValidFromChangeImpl.class, name = SetValidFromChange.SET_VALID_FROM_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValidToChangeImpl.class, name = SetValidToChange.SET_VALID_TO_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValidUntilChangeImpl.class, name = SetValidUntilChange.SET_VALID_UNTIL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValueChangeImpl.class, name = SetValueChange.SET_VALUE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetVariantAvailabilityChangeImpl.class, name = SetVariantAvailabilityChange.SET_VARIANT_AVAILABILITY_CHANGE),
@@ -380,6 +392,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.AddPriceChangeBuilder addPriceChangeBuilder() {
         return com.commercetools.history.models.change.AddPriceChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.AddProductChangeBuilder addProductChangeBuilder() {
+        return com.commercetools.history.models.change.AddProductChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.AddPropertyChangeBuilder addPropertyChangeBuilder() {
@@ -574,6 +590,14 @@ public interface Change {
         return com.commercetools.history.models.change.ChangeQuantityChangeBuilder.of();
     }
 
+    public static com.commercetools.history.models.change.ChangeQuoteRequestStateChangeBuilder changeQuoteRequestStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeQuoteRequestStateChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.ChangeQuoteStateChangeBuilder changeQuoteStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeQuoteStateChangeBuilder.of();
+    }
+
     public static com.commercetools.history.models.change.ChangeRequiresDiscountCodeChangeBuilder changeRequiresDiscountCodeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeRequiresDiscountCodeChangeBuilder.of();
     }
@@ -604,6 +628,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.ChangeStackingModeChangeBuilder changeStackingModeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeStackingModeChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.ChangeStagedQuoteStateChangeBuilder changeStagedQuoteStateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeStagedQuoteStateChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.ChangeStateTypeChangeBuilder changeStateTypeChangeBuilder() {
@@ -738,6 +766,10 @@ public interface Change {
         return com.commercetools.history.models.change.RemovePriceChangeBuilder.of();
     }
 
+    public static com.commercetools.history.models.change.RemoveProductChangeBuilder removeProductChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveProductChangeBuilder.of();
+    }
+
     public static com.commercetools.history.models.change.RemovePropertyChangeBuilder removePropertyChangeBuilder() {
         return com.commercetools.history.models.change.RemovePropertyChangeBuilder.of();
     }
@@ -804,6 +836,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.SetAttributeChangeBuilder setAttributeChangeBuilder() {
         return com.commercetools.history.models.change.SetAttributeChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.SetAuthenticationModeChangeBuilder setAuthenticationModeChangeBuilder() {
+        return com.commercetools.history.models.change.SetAuthenticationModeChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetAuthorNameChangeBuilder setAuthorNameChangeBuilder() {
@@ -982,6 +1018,10 @@ public interface Change {
         return com.commercetools.history.models.change.SetLastNameChangeBuilder.of();
     }
 
+    public static com.commercetools.history.models.change.SetLineItemDeactivatedAtChangeBuilder setLineItemDeactivatedAtChangeBuilder() {
+        return com.commercetools.history.models.change.SetLineItemDeactivatedAtChangeBuilder.of();
+    }
+
     public static com.commercetools.history.models.change.SetLineItemDiscountedPriceChangeBuilder setLineItemDiscountedPriceChangeBuilder() {
         return com.commercetools.history.models.change.SetLineItemDiscountedPriceChangeBuilder.of();
     }
@@ -996,6 +1036,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.SetLineItemPriceChangeBuilder setLineItemPriceChangeBuilder() {
         return com.commercetools.history.models.change.SetLineItemPriceChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.SetLineItemProductKeyChangeBuilder setLineItemProductKeyChangeBuilder() {
+        return com.commercetools.history.models.change.SetLineItemProductKeyChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetLineItemProductSlugChangeBuilder setLineItemProductSlugChangeBuilder() {
@@ -1110,12 +1154,20 @@ public interface Change {
         return com.commercetools.history.models.change.SetPricesChangeBuilder.of();
     }
 
+    public static com.commercetools.history.models.change.SetProductCountChangeBuilder setProductCountChangeBuilder() {
+        return com.commercetools.history.models.change.SetProductCountChangeBuilder.of();
+    }
+
     public static com.commercetools.history.models.change.SetProductPriceCustomFieldChangeBuilder setProductPriceCustomFieldChangeBuilder() {
         return com.commercetools.history.models.change.SetProductPriceCustomFieldChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetProductPriceCustomTypeChangeBuilder setProductPriceCustomTypeChangeBuilder() {
         return com.commercetools.history.models.change.SetProductPriceCustomTypeChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.SetProductSelectionsChangeBuilder setProductSelectionsChangeBuilder() {
+        return com.commercetools.history.models.change.SetProductSelectionsChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetProductVariantKeyChangeBuilder setProductVariantKeyChangeBuilder() {
@@ -1152,6 +1204,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.SetSearchKeywordsChangeBuilder setSearchKeywordsChangeBuilder() {
         return com.commercetools.history.models.change.SetSearchKeywordsChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.SetSellerCommentChangeBuilder setSellerCommentChangeBuilder() {
+        return com.commercetools.history.models.change.SetSellerCommentChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetShippingAddressChangeBuilder setShippingAddressChangeBuilder() {
@@ -1268,6 +1324,10 @@ public interface Change {
 
     public static com.commercetools.history.models.change.SetValidFromChangeBuilder setValidFromChangeBuilder() {
         return com.commercetools.history.models.change.SetValidFromChangeBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change.SetValidToChangeBuilder setValidToChangeBuilder() {
+        return com.commercetools.history.models.change.SetValidToChangeBuilder.of();
     }
 
     public static com.commercetools.history.models.change.SetValidUntilChangeBuilder setValidUntilChangeBuilder() {

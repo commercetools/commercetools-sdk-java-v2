@@ -100,6 +100,13 @@ public class ByProjectKeyProductTypesTest {
                         "get", "/test_projectKey/product-types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "/test_projectKey/product-types?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head().createHttpRequest(),
+                        "head", "/test_projectKey/product-types", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
                         .post(null)
                         .withExpand("expand")
                         .createHttpRequest(), "post", "/test_projectKey/product-types?expand=expand", },
@@ -121,6 +128,8 @@ public class ByProjectKeyProductTypesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().head(), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").productTypes().post(null).withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null), } };

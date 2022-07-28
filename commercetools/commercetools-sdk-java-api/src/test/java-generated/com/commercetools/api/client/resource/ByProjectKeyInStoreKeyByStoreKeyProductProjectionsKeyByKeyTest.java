@@ -63,7 +63,56 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceCurrency("priceCurrency")
+                        .createHttpRequest(),
+                "get",
+                "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCurrency=priceCurrency", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCountry=priceCountry", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceChannel=priceChannel", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
@@ -87,6 +136,36 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceCurrency("priceCurrency"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceCountry("priceCountry"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withLocaleProjection("localeProjection"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productProjections()

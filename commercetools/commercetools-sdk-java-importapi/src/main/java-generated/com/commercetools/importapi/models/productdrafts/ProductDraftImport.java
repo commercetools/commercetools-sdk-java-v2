@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.common.CategoryKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.LocalizedString;
+import com.commercetools.importapi.models.common.ProductPriceModeEnum;
 import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
@@ -172,6 +173,13 @@ public interface ProductDraftImport extends ImportResource {
     @JsonProperty("publish")
     public Boolean getPublish();
 
+    /**
+     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     */
+
+    @JsonProperty("priceMode")
+    public ProductPriceModeEnum getPriceMode();
+
     public void setProductType(final ProductTypeKeyReference productType);
 
     public void setName(final LocalizedString name);
@@ -206,6 +214,8 @@ public interface ProductDraftImport extends ImportResource {
 
     public void setPublish(final Boolean publish);
 
+    public void setPriceMode(final ProductPriceModeEnum priceMode);
+
     public static ProductDraftImport of() {
         return new ProductDraftImportImpl();
     }
@@ -227,6 +237,7 @@ public interface ProductDraftImport extends ImportResource {
         instance.setSearchKeywords(template.getSearchKeywords());
         instance.setState(template.getState());
         instance.setPublish(template.getPublish());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

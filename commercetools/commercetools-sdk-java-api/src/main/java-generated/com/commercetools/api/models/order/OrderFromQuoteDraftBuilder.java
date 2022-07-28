@@ -64,7 +64,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *
+     *  <p>The <code>version</code> of the Quote from which an Order is created.</p>
      */
 
     public OrderFromQuoteDraftBuilder version(final Long version) {

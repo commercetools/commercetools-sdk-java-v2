@@ -46,6 +46,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
+
     @JsonCreator
     CustomLineItemImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -58,7 +60,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.id = id;
         this.name = name;
         this.money = money;
@@ -72,6 +75,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.custom = custom;
         this.shippingDetails = shippingDetails;
+        this.priceMode = priceMode;
     }
 
     public CustomLineItemImpl() {
@@ -181,6 +185,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         return this.shippingDetails;
     }
 
+    /**
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item: <code>Standard</code> = yes, <code>External</code> = no.</p>
+     */
+
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -243,6 +255,10 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -266,6 +282,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -284,6 +301,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(discountedPricePerQuantity)
                 .append(custom)
                 .append(shippingDetails)
+                .append(priceMode)
                 .toHashCode();
     }
 

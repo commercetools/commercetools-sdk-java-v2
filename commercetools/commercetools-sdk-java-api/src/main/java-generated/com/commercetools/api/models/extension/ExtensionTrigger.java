@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionTrigger {
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, and <code>quote</code> are supported.</p>
      */
     @NotNull
     @JsonProperty("resourceTypeId")

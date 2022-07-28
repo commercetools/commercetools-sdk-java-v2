@@ -86,20 +86,6 @@ public class ByProjectKeyProductsTest {
                         .get()
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "get", "/test_projectKey/products?priceChannel=priceChannel", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .get()
-                                .withLocaleProjection("localeProjection")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/products?localeProjection=localeProjection", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .get()
-                                .withStoreProjection("storeProjection")
-                                .createHttpRequest(),
-                        "get", "/test_projectKey/products?storeProjection=storeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
@@ -157,20 +143,6 @@ public class ByProjectKeyProductsTest {
                         .post(null)
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "post", "/test_projectKey/products?priceChannel=priceChannel", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .post(null)
-                                .withLocaleProjection("localeProjection")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/products?localeProjection=localeProjection", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .post(null)
-                                .withStoreProjection("storeProjection")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/products?storeProjection=storeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(null)
@@ -192,14 +164,6 @@ public class ByProjectKeyProductsTest {
                         .withPriceCustomerGroup("priceCustomerGroup"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").products().get().withPriceChannel("priceChannel"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .get()
-                        .withLocaleProjection("localeProjection"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .get()
-                        .withStoreProjection("storeProjection"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withLimit(7), },
@@ -228,14 +192,6 @@ public class ByProjectKeyProductsTest {
                         .products()
                         .post(null)
                         .withPriceChannel("priceChannel"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .post(null)
-                        .withLocaleProjection("localeProjection"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .post(null)
-                        .withStoreProjection("storeProjection"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().post(null).withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().post(null), } };
     }

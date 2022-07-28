@@ -205,7 +205,7 @@ loadScripts(document, 'script');</script>
 <h3>getPrices</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraft.html#line.51">getPrices</a></span>()</div>
-<div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
+<div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>

@@ -19,739 +19,740 @@
 <span class="source-line-no">006</span><span id="line.6">import java.net.URI;</span>
 <span class="source-line-no">007</span><span id="line.7">import java.util.*;</span>
 <span class="source-line-no">008</span><span id="line.8">import java.util.concurrent.ExecutorService;</span>
-<span class="source-line-no">009</span><span id="line.9">import java.util.concurrent.ScheduledExecutorService;</span>
-<span class="source-line-no">010</span><span id="line.10">import java.util.function.Function;</span>
-<span class="source-line-no">011</span><span id="line.11">import java.util.function.Predicate;</span>
-<span class="source-line-no">012</span><span id="line.12">import java.util.function.Supplier;</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">import javax.annotation.Nullable;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">import dev.failsafe.spi.Scheduler;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.error.HttpExceptionFactory;</span>
-<span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.http.*;</span>
-<span class="source-line-no">020</span><span id="line.20">import io.vrap.rmf.base.client.oauth2.*;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">import org.apache.commons.lang3.SystemUtils;</span>
-<span class="source-line-no">023</span><span id="line.23">import org.slf4j.event.Level;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">/**</span>
-<span class="source-line-no">026</span><span id="line.26">    &lt;p&gt;The ClientBuilder is used to configure and create an {@link ApiHttpClient}. As the ApiHttpClient uses a {@link HandlerStack stack}</span>
-<span class="source-line-no">027</span><span id="line.27">    of middlewares the Builder comes with methods to configure and attach new middlewares. Also it ensures that some default</span>
-<span class="source-line-no">028</span><span id="line.28">    used middlewares are instantiated at the correct location in the middleware stack.&lt;/p&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    &lt;p&gt;The default middlewares and services are added as Supplier to be able to override the ones provided by e.g.: {@link #defaultClient(URI)}&lt;/p&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> */</span>
-<span class="source-line-no">032</span><span id="line.32">public class ClientBuilder implements Builder&lt;ApiHttpClient&gt; {</span>
-<span class="source-line-no">033</span><span id="line.33">    public static final String COMMERCETOOLS = "commercetools";</span>
-<span class="source-line-no">034</span><span id="line.34">    static final String userAgent = "commercetools-sdk-java-v2/";</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    private URI apiBaseUrl;</span>
-<span class="source-line-no">037</span><span id="line.37">    private boolean useAuthCircuitBreaker;</span>
-<span class="source-line-no">038</span><span id="line.38">    private int authRetries;</span>
-<span class="source-line-no">039</span><span id="line.39">    private Supplier&lt;ErrorMiddleware&gt; errorMiddleware;</span>
-<span class="source-line-no">040</span><span id="line.40">    private Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware;</span>
-<span class="source-line-no">041</span><span id="line.41">    private Supplier&lt;RetryRequestMiddleware&gt; retryMiddleware;</span>
-<span class="source-line-no">042</span><span id="line.42">    private Supplier&lt;Middleware&gt; correlationIdMiddleware;</span>
-<span class="source-line-no">043</span><span id="line.43">    private InternalLoggerMiddleware internalLoggerMiddleware;</span>
-<span class="source-line-no">044</span><span id="line.44">    private UserAgentMiddleware userAgentMiddleware;</span>
-<span class="source-line-no">045</span><span id="line.45">    private List&lt;Middleware&gt; middlewares = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">046</span><span id="line.46">    private Supplier&lt;HandlerStack&gt; stack;</span>
-<span class="source-line-no">047</span><span id="line.47">    private VrapHttpClient httpClient;</span>
-<span class="source-line-no">048</span><span id="line.48">    private VrapHttpClient oauthHttpClient;</span>
-<span class="source-line-no">049</span><span id="line.49">    private Supplier&lt;ResponseSerializer&gt; serializer;</span>
-<span class="source-line-no">050</span><span id="line.50">    private Supplier&lt;HttpExceptionFactory&gt; httpExceptionFactory;</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    private Supplier&lt;ExecutorService&gt; oauthExecutorService;</span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">     * &lt;p&gt;Creates a default client builder&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">     * @return ClientBuilder instance</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
-<span class="source-line-no">057</span><span id="line.57">    public static ClientBuilder of() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return new ClientBuilder();</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static ClientBuilder of(ExecutorService httpClientExecutorService) {</span>
-<span class="source-line-no">062</span><span id="line.62">        return new ClientBuilder(httpClientExecutorService);</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     * &lt;p&gt;Creates a client builder with a specific or preconfigured {@link VrapHttpClient} instance. Uses defaults for</span>
-<span class="source-line-no">067</span><span id="line.67">     * the {@link HandlerStack}&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     * @param httpClient the HTTP client to be used</span>
-<span class="source-line-no">069</span><span id="line.69">     * @return ClientBuilder instance</span>
-<span class="source-line-no">070</span><span id="line.70">     */</span>
-<span class="source-line-no">071</span><span id="line.71">    public static ClientBuilder of(final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">072</span><span id="line.72">        return new ClientBuilder(httpClient);</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     * &lt;p&gt;Creates a client builder with a specific or preconfigured {@link ApiHttpClient} instance. Uses defaults for</span>
-<span class="source-line-no">077</span><span id="line.77">     * the {@link HandlerStack}&lt;/p&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">     * @param httpClient the HTTP client to be used</span>
-<span class="source-line-no">079</span><span id="line.79">     * @return ClientBuilder instance</span>
-<span class="source-line-no">080</span><span id="line.80">     */</span>
-<span class="source-line-no">081</span><span id="line.81">    public static ClientBuilder of(final ApiHttpClient httpClient) {</span>
-<span class="source-line-no">082</span><span id="line.82">        return new ClientBuilder(httpClient);</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     * &lt;p&gt;Creates a client builder with a specifig {@link HandlerStack}&lt;/p&gt;</span>
-<span class="source-line-no">087</span><span id="line.87">     * @param stack the HandlerStack to be used</span>
-<span class="source-line-no">088</span><span id="line.88">     * @return ClientBuilder instance</span>
-<span class="source-line-no">089</span><span id="line.89">     */</span>
-<span class="source-line-no">090</span><span id="line.90">    public static ClientBuilder of(final HandlerStack stack) {</span>
-<span class="source-line-no">091</span><span id="line.91">        return new ClientBuilder(stack);</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    private ClientBuilder(final HandlerStack stack) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.stack = () -&gt; stack;</span>
-<span class="source-line-no">096</span><span id="line.96">        ResponseSerializer serializer = ResponseSerializer.of();</span>
-<span class="source-line-no">097</span><span id="line.97">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">098</span><span id="line.98">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
-<span class="source-line-no">099</span><span id="line.99">        this.useAuthCircuitBreaker = false;</span>
-<span class="source-line-no">100</span><span id="line.100">        this.authRetries = 1;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    private ClientBuilder() {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.httpClient = HttpClientSupplier.of().get();</span>
-<span class="source-line-no">105</span><span id="line.105">        this.oauthHttpClient = httpClient;</span>
-<span class="source-line-no">106</span><span id="line.106">        this.stack = stackSupplier();</span>
-<span class="source-line-no">107</span><span id="line.107">        ResponseSerializer serializer = ResponseSerializer.of();</span>
-<span class="source-line-no">108</span><span id="line.108">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">109</span><span id="line.109">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
-<span class="source-line-no">110</span><span id="line.110">        this.useAuthCircuitBreaker = false;</span>
-<span class="source-line-no">111</span><span id="line.111">        this.authRetries = 1;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    private ClientBuilder(ExecutorService httpClientExecutorService) {</span>
-<span class="source-line-no">115</span><span id="line.115">        this.httpClient = HttpClientSupplier.of(httpClientExecutorService).get();</span>
-<span class="source-line-no">116</span><span id="line.116">        this.oauthHttpClient = httpClient;</span>
-<span class="source-line-no">117</span><span id="line.117">        this.stack = stackSupplier();</span>
-<span class="source-line-no">118</span><span id="line.118">        ResponseSerializer serializer = ResponseSerializer.of();</span>
-<span class="source-line-no">119</span><span id="line.119">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">120</span><span id="line.120">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
-<span class="source-line-no">121</span><span id="line.121">        this.useAuthCircuitBreaker = false;</span>
-<span class="source-line-no">122</span><span id="line.122">        this.authRetries = 1;</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    private ClientBuilder(final ApiHttpClient httpClient) {</span>
-<span class="source-line-no">126</span><span id="line.126">        this.httpClient = httpClient;</span>
-<span class="source-line-no">127</span><span id="line.127">        this.oauthHttpClient = HttpClientSupplier.of().get();</span>
-<span class="source-line-no">128</span><span id="line.128">        this.stack = stackSupplier();</span>
-<span class="source-line-no">129</span><span id="line.129">        ResponseSerializer serializer = ResponseSerializer.of();</span>
-<span class="source-line-no">130</span><span id="line.130">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">131</span><span id="line.131">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
-<span class="source-line-no">132</span><span id="line.132">        this.authRetries = 1;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    private ClientBuilder(final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">136</span><span id="line.136">        this.httpClient = httpClient;</span>
-<span class="source-line-no">137</span><span id="line.137">        this.oauthHttpClient = httpClient;</span>
-<span class="source-line-no">138</span><span id="line.138">        this.stack = stackSupplier();</span>
-<span class="source-line-no">139</span><span id="line.139">        ResponseSerializer serializer = ResponseSerializer.of();</span>
-<span class="source-line-no">140</span><span id="line.140">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">141</span><span id="line.141">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
-<span class="source-line-no">142</span><span id="line.142">        this.authRetries = 1;</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">     * Ensures the order of default middlewares to create a {@link HandlerStack}</span>
-<span class="source-line-no">147</span><span id="line.147">     * @return HandlerStack supplier method</span>
-<span class="source-line-no">148</span><span id="line.148">     */</span>
-<span class="source-line-no">149</span><span id="line.149">    private Supplier&lt;HandlerStack&gt; stackSupplier() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return () -&gt; {</span>
-<span class="source-line-no">151</span><span id="line.151">            final List&lt;Middleware&gt; middlewareStack = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">152</span><span id="line.152">            Optional.ofNullable(errorMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
-<span class="source-line-no">153</span><span id="line.153">            Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);</span>
-<span class="source-line-no">154</span><span id="line.154">            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);</span>
-<span class="source-line-no">155</span><span id="line.155">            Optional.ofNullable(oAuthMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
-<span class="source-line-no">156</span><span id="line.156">            Optional.ofNullable(retryMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
-<span class="source-line-no">157</span><span id="line.157">            Optional.ofNullable(correlationIdMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
-<span class="source-line-no">158</span><span id="line.158">            middlewareStack.addAll(middlewares);</span>
-<span class="source-line-no">159</span><span id="line.159">            return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);</span>
-<span class="source-line-no">160</span><span id="line.160">        };</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    /**</span>
-<span class="source-line-no">164</span><span id="line.164">     * Ensures the order of default middlewares to create a {@link HandlerStack}</span>
-<span class="source-line-no">165</span><span id="line.165">     * @return HandlerStack supplier method</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167">    private Supplier&lt;HandlerStack&gt; oauthHandlerSupplier() {</span>
-<span class="source-line-no">168</span><span id="line.168">        return () -&gt; {</span>
-<span class="source-line-no">169</span><span id="line.169">            final List&lt;Middleware&gt; middlewareStack = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">170</span><span id="line.170">            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);</span>
-<span class="source-line-no">171</span><span id="line.171">            Optional.ofNullable(correlationIdMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
-<span class="source-line-no">172</span><span id="line.172">            return HandlerStack.create(HttpHandler.create(requireNonNull(oauthHttpClient)), middlewareStack);</span>
-<span class="source-line-no">173</span><span id="line.173">        };</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public ClientBuilder withoutAuthCircuitBreaker() {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.useAuthCircuitBreaker = false;</span>
-<span class="source-line-no">178</span><span id="line.178">        return this;</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public ClientBuilder withAuthCircuitBreaker() {</span>
-<span class="source-line-no">182</span><span id="line.182">        this.useAuthCircuitBreaker = true;</span>
-<span class="source-line-no">183</span><span id="line.183">        return this;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public ClientBuilder withAuthRetries(final int authRetries) {</span>
-<span class="source-line-no">187</span><span id="line.187">        this.authRetries = authRetries;</span>
-<span class="source-line-no">188</span><span id="line.188">        return this;</span>
-<span class="source-line-no">189</span><span id="line.189">    }</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    public ClientBuilder withHandlerStack(final HandlerStack stack) {</span>
-<span class="source-line-no">192</span><span id="line.192">        this.stack = () -&gt; stack;</span>
-<span class="source-line-no">193</span><span id="line.193">        return this;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public ClientBuilder withHttpClient(final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.httpClient = httpClient;</span>
-<span class="source-line-no">198</span><span id="line.198">        return this;</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public ClientBuilder withOAuthHttpClient(final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">202</span><span id="line.202">        this.oauthHttpClient = httpClient;</span>
-<span class="source-line-no">203</span><span id="line.203">        return this;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public ClientBuilder withSerializer(final ResponseSerializer serializer) {</span>
-<span class="source-line-no">207</span><span id="line.207">        this.serializer = () -&gt; serializer;</span>
-<span class="source-line-no">208</span><span id="line.208">        return this;</span>
-<span class="source-line-no">209</span><span id="line.209">    }</span>
-<span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    public ClientBuilder withSerializer(final Supplier&lt;ResponseSerializer&gt; serializer) {</span>
-<span class="source-line-no">212</span><span id="line.212">        this.serializer = serializer;</span>
-<span class="source-line-no">213</span><span id="line.213">        return this;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public ClientBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {</span>
-<span class="source-line-no">217</span><span id="line.217">        this.httpExceptionFactory = () -&gt; factory;</span>
-<span class="source-line-no">218</span><span id="line.218">        return this;</span>
-<span class="source-line-no">219</span><span id="line.219">    }</span>
-<span class="source-line-no">220</span><span id="line.220"></span>
-<span class="source-line-no">221</span><span id="line.221">    public ClientBuilder withHttpExceptionFactory(final Function&lt;ResponseSerializer, HttpExceptionFactory&gt; factory) {</span>
-<span class="source-line-no">222</span><span id="line.222">        this.httpExceptionFactory = () -&gt; factory.apply(serializer.get());</span>
-<span class="source-line-no">223</span><span id="line.223">        return this;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    /**</span>
-<span class="source-line-no">227</span><span id="line.227">     * configures the Factory for HTTP exception in case.</span>
-<span class="source-line-no">228</span><span id="line.228">     * @param factory</span>
-<span class="source-line-no">229</span><span id="line.229">     * @return</span>
-<span class="source-line-no">230</span><span id="line.230">     */</span>
-<span class="source-line-no">231</span><span id="line.231">    public ClientBuilder withHttpExceptionFactory(final Supplier&lt;HttpExceptionFactory&gt; factory) {</span>
-<span class="source-line-no">232</span><span id="line.232">        this.httpExceptionFactory = factory;</span>
-<span class="source-line-no">233</span><span id="line.233">        return this;</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    /**</span>
-<span class="source-line-no">237</span><span id="line.237">     * configures an ExecutorService to be used for the Middlewares</span>
-<span class="source-line-no">238</span><span id="line.238">     * @param executorService supplier of the executor service to be used</span>
-<span class="source-line-no">239</span><span id="line.239">     * @return</span>
-<span class="source-line-no">240</span><span id="line.240">     */</span>
-<span class="source-line-no">241</span><span id="line.241">    public ClientBuilder withOAuthExecutorService(final Supplier&lt;ExecutorService&gt; executorService) {</span>
-<span class="source-line-no">242</span><span id="line.242">        this.oauthExecutorService = executorService;</span>
-<span class="source-line-no">243</span><span id="line.243">        return this;</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">     * configures an ExecutorService to be used for the Middlewares</span>
-<span class="source-line-no">248</span><span id="line.248">     * @param executorService executor service to be used</span>
-<span class="source-line-no">249</span><span id="line.249">     * @return ClientBuilder instance</span>
-<span class="source-line-no">250</span><span id="line.250">     */</span>
-<span class="source-line-no">251</span><span id="line.251">    public ClientBuilder withOAuthExecutorService(final ExecutorService executorService) {</span>
-<span class="source-line-no">252</span><span id="line.252">        this.oauthExecutorService = () -&gt; executorService;</span>
-<span class="source-line-no">253</span><span id="line.253">        return this;</span>
-<span class="source-line-no">254</span><span id="line.254">    }</span>
-<span class="source-line-no">255</span><span id="line.255"></span>
-<span class="source-line-no">256</span><span id="line.256">    /**</span>
-<span class="source-line-no">257</span><span id="line.257">     * &lt;p&gt;Configures a client with the default middlewares and the given baseUrl&lt;/p&gt;</span>
-<span class="source-line-no">258</span><span id="line.258">     * &lt;p&gt;The following middlewares and services are configured:</span>
-<span class="source-line-no">259</span><span id="line.259">     * &lt;ul&gt;</span>
-<span class="source-line-no">260</span><span id="line.260">     *     &lt;li&gt;{@link ErrorMiddleware}&lt;/li&gt;</span>
-<span class="source-line-no">261</span><span id="line.261">     *     &lt;li&gt;{@link ResponseSerializer}&lt;/li&gt;</span>
-<span class="source-line-no">262</span><span id="line.262">     *     &lt;li&gt;{@link InternalLoggerFactory}&lt;/li&gt;</span>
-<span class="source-line-no">263</span><span id="line.263">     *     &lt;li&gt;{@link UserAgentMiddleware}&lt;/li&gt;</span>
-<span class="source-line-no">264</span><span id="line.264">     *     &lt;li&gt;{@link AcceptGZipMiddleware}&lt;/li&gt;</span>
-<span class="source-line-no">265</span><span id="line.265">     * &lt;/ul&gt;</span>
-<span class="source-line-no">266</span><span id="line.266">     * &lt;/p&gt;</span>
-<span class="source-line-no">267</span><span id="line.267">     * @param apiBaseUrl base URI for the API</span>
-<span class="source-line-no">268</span><span id="line.268">     * @return ClientBuilder instance</span>
-<span class="source-line-no">269</span><span id="line.269">     */</span>
-<span class="source-line-no">270</span><span id="line.270">    public ClientBuilder defaultClient(final URI apiBaseUrl) {</span>
-<span class="source-line-no">271</span><span id="line.271">        return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()</span>
-<span class="source-line-no">272</span><span id="line.272">                .withSerializer(ResponseSerializer.of())</span>
-<span class="source-line-no">273</span><span id="line.273">                .withInternalLoggerFactory((request, topic) -&gt; InternalLogger.getLogger(COMMERCETOOLS + "." + topic))</span>
-<span class="source-line-no">274</span><span id="line.274">                .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)</span>
-<span class="source-line-no">275</span><span id="line.275">                .addAcceptGZipMiddleware();</span>
-<span class="source-line-no">276</span><span id="line.276">    }</span>
-<span class="source-line-no">277</span><span id="line.277"></span>
-<span class="source-line-no">278</span><span id="line.278">    public ClientBuilder defaultClient(final String apiBaseUrl) {</span>
-<span class="source-line-no">279</span><span id="line.279">        return defaultClient(URI.create(apiBaseUrl));</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    public ClientBuilder defaultClient(final String apiBaseUrl, final ClientCredentials credentials,</span>
-<span class="source-line-no">283</span><span id="line.283">            final String tokenEndpoint) {</span>
-<span class="source-line-no">284</span><span id="line.284">        return defaultClient(apiBaseUrl).withClientCredentialsFlow(credentials, tokenEndpoint);</span>
-<span class="source-line-no">285</span><span id="line.285">    }</span>
-<span class="source-line-no">286</span><span id="line.286"></span>
-<span class="source-line-no">287</span><span id="line.287">    public ClientBuilder defaultClient(final ClientCredentials credentials,</span>
-<span class="source-line-no">288</span><span id="line.288">            final ServiceRegionConfig serviceRegionConfig) {</span>
-<span class="source-line-no">289</span><span id="line.289">        return defaultClient(serviceRegionConfig.getApiUrl()).withClientCredentialsFlow(credentials,</span>
-<span class="source-line-no">290</span><span id="line.290">            serviceRegionConfig.getOAuthTokenUrl());</span>
-<span class="source-line-no">291</span><span id="line.291">    }</span>
-<span class="source-line-no">292</span><span id="line.292"></span>
-<span class="source-line-no">293</span><span id="line.293">    /**</span>
-<span class="source-line-no">294</span><span id="line.294">     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String)} instead</span>
-<span class="source-line-no">295</span><span id="line.295">     * @param credentials OAuth credentials</span>
-<span class="source-line-no">296</span><span id="line.296">     * @param tokenEndpoint OAuth endpoint</span>
-<span class="source-line-no">297</span><span id="line.297">     * @return client builder</span>
-<span class="source-line-no">298</span><span id="line.298">     */</span>
-<span class="source-line-no">299</span><span id="line.299">    @Deprecated</span>
-<span class="source-line-no">300</span><span id="line.300">    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint) {</span>
-<span class="source-line-no">301</span><span id="line.301">        return withClientCredentialsFlow(credentials, tokenEndpoint);</span>
-<span class="source-line-no">302</span><span id="line.302">    }</span>
-<span class="source-line-no">303</span><span id="line.303"></span>
-<span class="source-line-no">304</span><span id="line.304">    /**</span>
-<span class="source-line-no">305</span><span id="line.305">     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)} instead</span>
-<span class="source-line-no">306</span><span id="line.306">     * @param credentials OAuth credentials</span>
-<span class="source-line-no">307</span><span id="line.307">     * @param tokenEndpoint OAuth endpoint</span>
-<span class="source-line-no">308</span><span id="line.308">     * @param httpClient HTTP client to be used</span>
-<span class="source-line-no">309</span><span id="line.309">     * @return client builder</span>
-<span class="source-line-no">310</span><span id="line.310">     */</span>
-<span class="source-line-no">311</span><span id="line.311">    @Deprecated</span>
-<span class="source-line-no">312</span><span id="line.312">    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,</span>
-<span class="source-line-no">313</span><span id="line.313">            VrapHttpClient httpClient) {</span>
-<span class="source-line-no">314</span><span id="line.314">        return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);</span>
-<span class="source-line-no">315</span><span id="line.315">    }</span>
-<span class="source-line-no">316</span><span id="line.316"></span>
-<span class="source-line-no">317</span><span id="line.317">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {</span>
-<span class="source-line-no">318</span><span id="line.318">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString());</span>
-<span class="source-line-no">319</span><span id="line.319">    }</span>
-<span class="source-line-no">320</span><span id="line.320"></span>
-<span class="source-line-no">321</span><span id="line.321">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,</span>
-<span class="source-line-no">322</span><span id="line.322">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
-<span class="source-line-no">323</span><span id="line.323">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClientSupplier);</span>
-<span class="source-line-no">324</span><span id="line.324">    }</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,</span>
-<span class="source-line-no">327</span><span id="line.327">            VrapHttpClient httpClient) {</span>
-<span class="source-line-no">328</span><span id="line.328">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330"></span>
-<span class="source-line-no">331</span><span id="line.331">    private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,</span>
-<span class="source-line-no">332</span><span id="line.332">            final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">333</span><span id="line.333">        return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),</span>
-<span class="source-line-no">334</span><span id="line.334">            credentials.getScopes(), tokenEndpoint, httpClient);</span>
-<span class="source-line-no">335</span><span id="line.335">    }</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {</span>
-<span class="source-line-no">338</span><span id="line.338">        return withClientCredentialsFlow(credentials, tokenEndpoint, oauthHandlerSupplier());</span>
-<span class="source-line-no">339</span><span id="line.339">    }</span>
-<span class="source-line-no">340</span><span id="line.340"></span>
-<span class="source-line-no">341</span><span id="line.341">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
-<span class="source-line-no">342</span><span id="line.342">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
-<span class="source-line-no">343</span><span id="line.343">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
-<span class="source-line-no">344</span><span id="line.344">            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));</span>
-<span class="source-line-no">345</span><span id="line.345">    }</span>
-<span class="source-line-no">346</span><span id="line.346"></span>
-<span class="source-line-no">347</span><span id="line.347">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
-<span class="source-line-no">348</span><span id="line.348">            VrapHttpClient httpClient) {</span>
-<span class="source-line-no">349</span><span id="line.349">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
-<span class="source-line-no">350</span><span id="line.350">            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));</span>
-<span class="source-line-no">351</span><span id="line.351">    }</span>
-<span class="source-line-no">352</span><span id="line.352"></span>
-<span class="source-line-no">353</span><span id="line.353">    public ClientBuilder withStaticTokenFlow(final AuthenticationToken token) {</span>
-<span class="source-line-no">354</span><span id="line.354">        return withTokenSupplier(new StaticTokenSupplier(token));</span>
-<span class="source-line-no">355</span><span id="line.355">    }</span>
-<span class="source-line-no">356</span><span id="line.356"></span>
-<span class="source-line-no">357</span><span id="line.357">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint) {</span>
-<span class="source-line-no">358</span><span id="line.358">        return withAnonymousSessionFlow(credentials, tokenEndpoint, oauthHandlerSupplier());</span>
-<span class="source-line-no">359</span><span id="line.359">    }</span>
-<span class="source-line-no">360</span><span id="line.360"></span>
-<span class="source-line-no">361</span><span id="line.361">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
-<span class="source-line-no">362</span><span id="line.362">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
-<span class="source-line-no">363</span><span id="line.363">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
-<span class="source-line-no">364</span><span id="line.364">            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));</span>
-<span class="source-line-no">365</span><span id="line.365">    }</span>
-<span class="source-line-no">366</span><span id="line.366"></span>
-<span class="source-line-no">367</span><span id="line.367">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
-<span class="source-line-no">368</span><span id="line.368">            VrapHttpClient httpClient) {</span>
-<span class="source-line-no">369</span><span id="line.369">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
-<span class="source-line-no">370</span><span id="line.370">            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));</span>
-<span class="source-line-no">371</span><span id="line.371">    }</span>
-<span class="source-line-no">372</span><span id="line.372"></span>
-<span class="source-line-no">373</span><span id="line.373">    private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,</span>
-<span class="source-line-no">374</span><span id="line.374">            final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">375</span><span id="line.375">        return new AnonymousSessionTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),</span>
-<span class="source-line-no">376</span><span id="line.376">            credentials.getScopes(), tokenEndpoint, httpClient);</span>
-<span class="source-line-no">377</span><span id="line.377">    }</span>
-<span class="source-line-no">378</span><span id="line.378"></span>
-<span class="source-line-no">379</span><span id="line.379">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
-<span class="source-line-no">380</span><span id="line.380">            final String refreshTokenEndpoint, final TokenStorage storage) {</span>
-<span class="source-line-no">381</span><span id="line.381">        return withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage,</span>
-<span class="source-line-no">382</span><span id="line.382">            oauthHandlerSupplier());</span>
-<span class="source-line-no">383</span><span id="line.383">    }</span>
-<span class="source-line-no">384</span><span id="line.384"></span>
-<span class="source-line-no">385</span><span id="line.385">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
-<span class="source-line-no">386</span><span id="line.386">            final String refreshTokenEndpoint, final TokenStorage storage, Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
-<span class="source-line-no">387</span><span id="line.387">        return withTokenSupplier(() -&gt; createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,</span>
-<span class="source-line-no">388</span><span id="line.388">            refreshTokenEndpoint, storage, httpClientSupplier.get()));</span>
-<span class="source-line-no">389</span><span id="line.389">    }</span>
-<span class="source-line-no">390</span><span id="line.390"></span>
-<span class="source-line-no">391</span><span id="line.391">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
-<span class="source-line-no">392</span><span id="line.392">            final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {</span>
-<span class="source-line-no">393</span><span id="line.393">        return withTokenSupplier(() -&gt; createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,</span>
-<span class="source-line-no">394</span><span id="line.394">            refreshTokenEndpoint, storage, httpClient));</span>
-<span class="source-line-no">395</span><span id="line.395">    }</span>
-<span class="source-line-no">396</span><span id="line.396"></span>
-<span class="source-line-no">397</span><span id="line.397">    private TokenSupplier createInMemoryTokenSupplier(TokenSupplier tokenSupplier) {</span>
-<span class="source-line-no">398</span><span id="line.398">        return Optional.ofNullable(oauthExecutorService)</span>
-<span class="source-line-no">399</span><span id="line.399">                .map(executorService -&gt; new InMemoryTokenSupplier(executorService.get(), tokenSupplier))</span>
-<span class="source-line-no">400</span><span id="line.400">                .orElse(new InMemoryTokenSupplier(tokenSupplier));</span>
-<span class="source-line-no">401</span><span id="line.401">    }</span>
-<span class="source-line-no">402</span><span id="line.402"></span>
-<span class="source-line-no">403</span><span id="line.403">    private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,</span>
-<span class="source-line-no">404</span><span id="line.404">            final String anonTokenEndpoint, final String refreshTokenEndpoint, final TokenStorage tokenStorage,</span>
-<span class="source-line-no">405</span><span id="line.405">            final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">406</span><span id="line.406">        final RefreshFlowTokenSupplier refreshFlowTokenSupplier = createRefreshFlowSupplier(credentials,</span>
-<span class="source-line-no">407</span><span id="line.407">            refreshTokenEndpoint, tokenStorage, httpClient);</span>
-<span class="source-line-no">408</span><span id="line.408"></span>
-<span class="source-line-no">409</span><span id="line.409">        final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier = new AnonymousFlowTokenSupplier(</span>
-<span class="source-line-no">410</span><span id="line.410">            credentials.getClientId(), credentials.getClientSecret(), credentials.getScopes(), anonTokenEndpoint,</span>
-<span class="source-line-no">411</span><span id="line.411">            refreshFlowTokenSupplier, httpClient);</span>
-<span class="source-line-no">412</span><span id="line.412"></span>
-<span class="source-line-no">413</span><span id="line.413">        return new TokenStorageSupplier(tokenStorage, anonymousFlowTokenSupplier);</span>
-<span class="source-line-no">414</span><span id="line.414">    }</span>
-<span class="source-line-no">415</span><span id="line.415"></span>
-<span class="source-line-no">416</span><span id="line.416">    private RefreshFlowTokenSupplier createRefreshFlowSupplier(final ClientCredentials credentials,</span>
-<span class="source-line-no">417</span><span id="line.417">            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">418</span><span id="line.418">        return new RefreshFlowTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), tokenEndpoint,</span>
-<span class="source-line-no">419</span><span id="line.419">            tokenStorage, httpClient);</span>
-<span class="source-line-no">420</span><span id="line.420">    }</span>
-<span class="source-line-no">421</span><span id="line.421"></span>
-<span class="source-line-no">422</span><span id="line.422">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
-<span class="source-line-no">423</span><span id="line.423">            final String password, final String tokenEndpoint) {</span>
-<span class="source-line-no">424</span><span id="line.424">        return withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, oauthHandlerSupplier());</span>
-<span class="source-line-no">425</span><span id="line.425">    }</span>
-<span class="source-line-no">426</span><span id="line.426"></span>
-<span class="source-line-no">427</span><span id="line.427">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
-<span class="source-line-no">428</span><span id="line.428">            final String password, final String tokenEndpoint, Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
-<span class="source-line-no">429</span><span id="line.429">        return withTokenSupplier(</span>
-<span class="source-line-no">430</span><span id="line.430">            () -&gt; createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,</span>
-<span class="source-line-no">431</span><span id="line.431">                tokenEndpoint, httpClientSupplier.get())));</span>
-<span class="source-line-no">432</span><span id="line.432">    }</span>
-<span class="source-line-no">433</span><span id="line.433"></span>
-<span class="source-line-no">434</span><span id="line.434">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
-<span class="source-line-no">435</span><span id="line.435">            final String password, final String tokenEndpoint, VrapHttpClient httpClient) {</span>
-<span class="source-line-no">436</span><span id="line.436">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
-<span class="source-line-no">437</span><span id="line.437">            createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient)));</span>
-<span class="source-line-no">438</span><span id="line.438">    }</span>
-<span class="source-line-no">439</span><span id="line.439"></span>
-<span class="source-line-no">440</span><span id="line.440">    private TokenSupplier createGlobalCustomerPasswordTokenSupplier(final ClientCredentials credentials,</span>
-<span class="source-line-no">441</span><span id="line.441">            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
-<span class="source-line-no">442</span><span id="line.442">        return new GlobalCustomerPasswordTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), email,</span>
-<span class="source-line-no">443</span><span id="line.443">            password, credentials.getScopes(), tokenEndpoint, httpClient);</span>
-<span class="source-line-no">444</span><span id="line.444">    }</span>
-<span class="source-line-no">445</span><span id="line.445"></span>
-<span class="source-line-no">446</span><span id="line.446">    public ClientBuilder addAcceptGZipMiddleware() {</span>
-<span class="source-line-no">447</span><span id="line.447">        return addMiddleware(AcceptGZipMiddleware.of());</span>
-<span class="source-line-no">448</span><span id="line.448">    }</span>
-<span class="source-line-no">449</span><span id="line.449"></span>
-<span class="source-line-no">450</span><span id="line.450">    public ClientBuilder withErrorMiddleware(final Supplier&lt;ErrorMiddleware&gt; errorMiddleware) {</span>
-<span class="source-line-no">451</span><span id="line.451">        this.errorMiddleware = errorMiddleware;</span>
-<span class="source-line-no">452</span><span id="line.452">        return this;</span>
-<span class="source-line-no">453</span><span id="line.453">    }</span>
-<span class="source-line-no">454</span><span id="line.454"></span>
-<span class="source-line-no">455</span><span id="line.455">    public ClientBuilder withErrorMiddleware() {</span>
-<span class="source-line-no">456</span><span id="line.456">        return withErrorMiddleware(() -&gt; ErrorMiddleware.of(httpExceptionFactory.get()));</span>
-<span class="source-line-no">457</span><span id="line.457">    }</span>
-<span class="source-line-no">458</span><span id="line.458"></span>
-<span class="source-line-no">459</span><span id="line.459">    public ClientBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {</span>
-<span class="source-line-no">460</span><span id="line.460">        return withErrorMiddleware(() -&gt; errorMiddleware);</span>
-<span class="source-line-no">461</span><span id="line.461">    }</span>
-<span class="source-line-no">462</span><span id="line.462"></span>
-<span class="source-line-no">463</span><span id="line.463">    public ClientBuilder withErrorMiddleware(ErrorMiddleware.ExceptionMode exceptionMode) {</span>
-<span class="source-line-no">464</span><span id="line.464">        return withErrorMiddleware(() -&gt; ErrorMiddleware.of(httpExceptionFactory.get(), exceptionMode));</span>
-<span class="source-line-no">465</span><span id="line.465">    }</span>
-<span class="source-line-no">466</span><span id="line.466"></span>
-<span class="source-line-no">467</span><span id="line.467">    public ClientBuilder addNotFoundExceptionMiddleware() {</span>
-<span class="source-line-no">468</span><span id="line.468">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of());</span>
-<span class="source-line-no">469</span><span id="line.469">    }</span>
-<span class="source-line-no">470</span><span id="line.470"></span>
-<span class="source-line-no">471</span><span id="line.471">    public ClientBuilder addNotFoundExceptionMiddleware(final Set&lt;ApiHttpMethod&gt; methods) {</span>
-<span class="source-line-no">472</span><span id="line.472">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(methods));</span>
-<span class="source-line-no">473</span><span id="line.473">    }</span>
-<span class="source-line-no">474</span><span id="line.474"></span>
-<span class="source-line-no">475</span><span id="line.475">    public ClientBuilder addNotFoundExceptionMiddleware(final Predicate&lt;ApiHttpRequest&gt; requestPredicate) {</span>
-<span class="source-line-no">476</span><span id="line.476">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(requestPredicate));</span>
-<span class="source-line-no">477</span><span id="line.477">    }</span>
-<span class="source-line-no">478</span><span id="line.478"></span>
-<span class="source-line-no">479</span><span id="line.479">    public ClientBuilder addNotFoundExceptionMiddleware(final NotFoundExceptionMiddleware exceptionMiddleware) {</span>
-<span class="source-line-no">480</span><span id="line.480">        return addMiddleware(exceptionMiddleware);</span>
-<span class="source-line-no">481</span><span id="line.481">    }</span>
-<span class="source-line-no">482</span><span id="line.482"></span>
-<span class="source-line-no">483</span><span id="line.483">    public ClientBuilder withRetryMiddleware(final Supplier&lt;RetryRequestMiddleware&gt; retryMiddleware) {</span>
-<span class="source-line-no">484</span><span id="line.484">        this.retryMiddleware = retryMiddleware;</span>
-<span class="source-line-no">485</span><span id="line.485">        return this;</span>
-<span class="source-line-no">486</span><span id="line.486">    }</span>
-<span class="source-line-no">487</span><span id="line.487"></span>
-<span class="source-line-no">488</span><span id="line.488">    public ClientBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {</span>
-<span class="source-line-no">489</span><span id="line.489">        return withRetryMiddleware(() -&gt; retryMiddleware);</span>
-<span class="source-line-no">490</span><span id="line.490">    }</span>
-<span class="source-line-no">491</span><span id="line.491"></span>
-<span class="source-line-no">492</span><span id="line.492">    public ClientBuilder withRetryMiddleware(final int maxRetries) {</span>
-<span class="source-line-no">493</span><span id="line.493">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries));</span>
-<span class="source-line-no">494</span><span id="line.494">    }</span>
-<span class="source-line-no">495</span><span id="line.495"></span>
-<span class="source-line-no">496</span><span id="line.496">    public ClientBuilder withRetryMiddleware(final int maxRetries, List&lt;Integer&gt; statusCodes) {</span>
-<span class="source-line-no">497</span><span id="line.497">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes));</span>
-<span class="source-line-no">498</span><span id="line.498">    }</span>
-<span class="source-line-no">499</span><span id="line.499"></span>
-<span class="source-line-no">500</span><span id="line.500">    public ClientBuilder withRetryMiddleware(final int maxRetries, List&lt;Integer&gt; statusCodes,</span>
-<span class="source-line-no">501</span><span id="line.501">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
-<span class="source-line-no">502</span><span id="line.502">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes, failures));</span>
-<span class="source-line-no">503</span><span id="line.503">    }</span>
-<span class="source-line-no">504</span><span id="line.504"></span>
-<span class="source-line-no">505</span><span id="line.505">    public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
-<span class="source-line-no">506</span><span id="line.506">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures,</span>
-<span class="source-line-no">507</span><span id="line.507">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">508</span><span id="line.508">        return withRetryMiddleware(</span>
-<span class="source-line-no">509</span><span id="line.509">            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)</span>
-<span class="source-line-no">510</span><span id="line.510">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
-<span class="source-line-no">511</span><span id="line.511">    }</span>
-<span class="source-line-no">512</span><span id="line.512"></span>
-<span class="source-line-no">513</span><span id="line.513">    public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
-<span class="source-line-no">514</span><span id="line.514">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">515</span><span id="line.515">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));</span>
-<span class="source-line-no">516</span><span id="line.516">    }</span>
-<span class="source-line-no">517</span><span id="line.517"></span>
-<span class="source-line-no">518</span><span id="line.518">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {</span>
-<span class="source-line-no">519</span><span id="line.519">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));</span>
-<span class="source-line-no">520</span><span id="line.520">    }</span>
-<span class="source-line-no">521</span><span id="line.521"></span>
-<span class="source-line-no">522</span><span id="line.522">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">523</span><span id="line.523">            List&lt;Integer&gt; statusCodes) {</span>
-<span class="source-line-no">524</span><span id="line.524">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));</span>
-<span class="source-line-no">525</span><span id="line.525">    }</span>
-<span class="source-line-no">526</span><span id="line.526"></span>
-<span class="source-line-no">527</span><span id="line.527">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">528</span><span id="line.528">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
-<span class="source-line-no">529</span><span id="line.529">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));</span>
-<span class="source-line-no">530</span><span id="line.530">    }</span>
-<span class="source-line-no">531</span><span id="line.531"></span>
-<span class="source-line-no">532</span><span id="line.532">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">533</span><span id="line.533">            final long delay, final long maxDelay, List&lt;Integer&gt; statusCodes,</span>
-<span class="source-line-no">534</span><span id="line.534">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures, final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">535</span><span id="line.535">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,</span>
-<span class="source-line-no">536</span><span id="line.536">            RetryRequestMiddleware.handleFailures(failures)</span>
-<span class="source-line-no">537</span><span id="line.537">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
-<span class="source-line-no">538</span><span id="line.538">    }</span>
-<span class="source-line-no">539</span><span id="line.539"></span>
-<span class="source-line-no">540</span><span id="line.540">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">541</span><span id="line.541">            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">542</span><span id="line.542">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));</span>
-<span class="source-line-no">543</span><span id="line.543">    }</span>
-<span class="source-line-no">544</span><span id="line.544"></span>
-<span class="source-line-no">545</span><span id="line.545">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {</span>
-<span class="source-line-no">546</span><span id="line.546">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));</span>
-<span class="source-line-no">547</span><span id="line.547">    }</span>
-<span class="source-line-no">548</span><span id="line.548"></span>
-<span class="source-line-no">549</span><span id="line.549">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">550</span><span id="line.550">            List&lt;Integer&gt; statusCodes) {</span>
-<span class="source-line-no">551</span><span id="line.551">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));</span>
-<span class="source-line-no">552</span><span id="line.552">    }</span>
-<span class="source-line-no">553</span><span id="line.553"></span>
-<span class="source-line-no">554</span><span id="line.554">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">555</span><span id="line.555">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
-<span class="source-line-no">556</span><span id="line.556">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));</span>
-<span class="source-line-no">557</span><span id="line.557">    }</span>
-<span class="source-line-no">558</span><span id="line.558"></span>
-<span class="source-line-no">559</span><span id="line.559">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">560</span><span id="line.560">            final long delay, final long maxDelay, List&lt;Integer&gt; statusCodes,</span>
-<span class="source-line-no">561</span><span id="line.561">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures, final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">562</span><span id="line.562">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,</span>
-<span class="source-line-no">563</span><span id="line.563">            RetryRequestMiddleware.handleFailures(failures)</span>
-<span class="source-line-no">564</span><span id="line.564">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
-<span class="source-line-no">565</span><span id="line.565">    }</span>
-<span class="source-line-no">566</span><span id="line.566"></span>
-<span class="source-line-no">567</span><span id="line.567">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
-<span class="source-line-no">568</span><span id="line.568">            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">569</span><span id="line.569">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));</span>
-<span class="source-line-no">570</span><span id="line.570">    }</span>
-<span class="source-line-no">571</span><span id="line.571"></span>
-<span class="source-line-no">572</span><span id="line.572">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {</span>
-<span class="source-line-no">573</span><span id="line.573">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries));</span>
-<span class="source-line-no">574</span><span id="line.574">    }</span>
-<span class="source-line-no">575</span><span id="line.575"></span>
-<span class="source-line-no">576</span><span id="line.576">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,</span>
-<span class="source-line-no">577</span><span id="line.577">            List&lt;Integer&gt; statusCodes) {</span>
-<span class="source-line-no">578</span><span id="line.578">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes));</span>
-<span class="source-line-no">579</span><span id="line.579">    }</span>
-<span class="source-line-no">580</span><span id="line.580"></span>
-<span class="source-line-no">581</span><span id="line.581">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List&lt;Integer&gt; statusCodes,</span>
-<span class="source-line-no">582</span><span id="line.582">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
-<span class="source-line-no">583</span><span id="line.583">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes, failures));</span>
-<span class="source-line-no">584</span><span id="line.584">    }</span>
-<span class="source-line-no">585</span><span id="line.585"></span>
-<span class="source-line-no">586</span><span id="line.586">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,</span>
-<span class="source-line-no">587</span><span id="line.587">            final long maxDelay, List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures,</span>
-<span class="source-line-no">588</span><span id="line.588">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">589</span><span id="line.589">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay,</span>
-<span class="source-line-no">590</span><span id="line.590">            RetryRequestMiddleware.handleFailures(failures)</span>
-<span class="source-line-no">591</span><span id="line.591">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
-<span class="source-line-no">592</span><span id="line.592">    }</span>
-<span class="source-line-no">593</span><span id="line.593"></span>
-<span class="source-line-no">594</span><span id="line.594">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,</span>
-<span class="source-line-no">595</span><span id="line.595">            final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
-<span class="source-line-no">596</span><span id="line.596">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));</span>
-<span class="source-line-no">597</span><span id="line.597">    }</span>
-<span class="source-line-no">598</span><span id="line.598"></span>
-<span class="source-line-no">599</span><span id="line.599">    public ClientBuilder withOAuthMiddleware(final Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware) {</span>
-<span class="source-line-no">600</span><span id="line.600">        this.oAuthMiddleware = oAuthMiddleware;</span>
-<span class="source-line-no">601</span><span id="line.601">        return this;</span>
-<span class="source-line-no">602</span><span id="line.602">    }</span>
-<span class="source-line-no">603</span><span id="line.603"></span>
-<span class="source-line-no">604</span><span id="line.604">    public ClientBuilder withOAuthMiddleware(final OAuthMiddleware oAuthMiddleware) {</span>
-<span class="source-line-no">605</span><span id="line.605">        return withOAuthMiddleware(() -&gt; oAuthMiddleware);</span>
-<span class="source-line-no">606</span><span id="line.606">    }</span>
-<span class="source-line-no">607</span><span id="line.607"></span>
-<span class="source-line-no">608</span><span id="line.608">    public ClientBuilder withTokenSupplier(final Supplier&lt;TokenSupplier&gt; tokenSupplier) {</span>
-<span class="source-line-no">609</span><span id="line.609">        return withOAuthMiddleware(() -&gt; {</span>
-<span class="source-line-no">610</span><span id="line.610">            final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier.get());</span>
-<span class="source-line-no">611</span><span id="line.611">            return Optional.ofNullable(oauthExecutorService)</span>
-<span class="source-line-no">612</span><span id="line.612">                    .map(executorService -&gt; OAuthMiddleware.of(executorService.get(), oAuthHandler, authRetries,</span>
-<span class="source-line-no">613</span><span id="line.613">                        useAuthCircuitBreaker))</span>
-<span class="source-line-no">614</span><span id="line.614">                    .orElse(OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));</span>
-<span class="source-line-no">615</span><span id="line.615">        });</span>
-<span class="source-line-no">616</span><span id="line.616">    }</span>
-<span class="source-line-no">617</span><span id="line.617"></span>
-<span class="source-line-no">618</span><span id="line.618">    public ClientBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {</span>
-<span class="source-line-no">619</span><span id="line.619">        return withTokenSupplier(() -&gt; tokenSupplier);</span>
-<span class="source-line-no">620</span><span id="line.620">    }</span>
-<span class="source-line-no">621</span><span id="line.621"></span>
-<span class="source-line-no">622</span><span id="line.622">    public ClientBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {</span>
-<span class="source-line-no">623</span><span id="line.623">        this.internalLoggerMiddleware = internalLoggerMiddleware;</span>
-<span class="source-line-no">624</span><span id="line.624">        return this;</span>
-<span class="source-line-no">625</span><span id="line.625">    }</span>
-<span class="source-line-no">626</span><span id="line.626"></span>
-<span class="source-line-no">627</span><span id="line.627">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {</span>
-<span class="source-line-no">628</span><span id="line.628">        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory));</span>
-<span class="source-line-no">629</span><span id="line.629">    }</span>
-<span class="source-line-no">630</span><span id="line.630"></span>
-<span class="source-line-no">631</span><span id="line.631">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
-<span class="source-line-no">632</span><span id="line.632">            final Level responseLogEvent, final Level deprecationLogEvent) {</span>
-<span class="source-line-no">633</span><span id="line.633">        return withInternalLoggerMiddleware(</span>
-<span class="source-line-no">634</span><span id="line.634">            InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent, deprecationLogEvent));</span>
-<span class="source-line-no">635</span><span id="line.635">    }</span>
-<span class="source-line-no">636</span><span id="line.636"></span>
-<span class="source-line-no">637</span><span id="line.637">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
-<span class="source-line-no">638</span><span id="line.638">            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,</span>
-<span class="source-line-no">639</span><span id="line.639">            final Map&lt;Class&lt;? extends Throwable&gt;, Level&gt; exceptionLogEvents) {</span>
-<span class="source-line-no">640</span><span id="line.640">        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent,</span>
-<span class="source-line-no">641</span><span id="line.641">            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));</span>
-<span class="source-line-no">642</span><span id="line.642">    }</span>
-<span class="source-line-no">643</span><span id="line.643"></span>
-<span class="source-line-no">644</span><span id="line.644">    public ClientBuilder withApiBaseUrl(String apiBaseUrl) {</span>
-<span class="source-line-no">645</span><span id="line.645">        return withApiBaseUrl(URI.create(apiBaseUrl));</span>
-<span class="source-line-no">646</span><span id="line.646">    }</span>
-<span class="source-line-no">647</span><span id="line.647"></span>
-<span class="source-line-no">648</span><span id="line.648">    public ClientBuilder withApiBaseUrl(final URI apiBaseUrl) {</span>
-<span class="source-line-no">649</span><span id="line.649">        this.apiBaseUrl = apiBaseUrl;</span>
-<span class="source-line-no">650</span><span id="line.650">        return this;</span>
-<span class="source-line-no">651</span><span id="line.651">    }</span>
-<span class="source-line-no">652</span><span id="line.652"></span>
-<span class="source-line-no">653</span><span id="line.653">    public ClientBuilder withUserAgentSupplier(final Supplier&lt;String&gt; userAgentSupplier) {</span>
-<span class="source-line-no">654</span><span id="line.654">        return withUserAgentMiddleware(new UserAgentMiddleware(userAgentSupplier.get()));</span>
-<span class="source-line-no">655</span><span id="line.655">    }</span>
-<span class="source-line-no">656</span><span id="line.656"></span>
-<span class="source-line-no">657</span><span id="line.657">    private ClientBuilder withUserAgentMiddleware(final UserAgentMiddleware userAgentMiddleware) {</span>
-<span class="source-line-no">658</span><span id="line.658">        this.userAgentMiddleware = userAgentMiddleware;</span>
-<span class="source-line-no">659</span><span id="line.659">        return this;</span>
-<span class="source-line-no">660</span><span id="line.660">    }</span>
-<span class="source-line-no">661</span><span id="line.661"></span>
-<span class="source-line-no">662</span><span id="line.662">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,</span>
-<span class="source-line-no">663</span><span id="line.663">            final boolean replace) {</span>
-<span class="source-line-no">664</span><span id="line.664">        if (!replace &amp;&amp; correlationIdMiddleware != null) {</span>
-<span class="source-line-no">665</span><span id="line.665">            return this;</span>
-<span class="source-line-no">666</span><span id="line.666">        }</span>
-<span class="source-line-no">667</span><span id="line.667">        if (correlationIdProvider != null) {</span>
-<span class="source-line-no">668</span><span id="line.668">            correlationIdMiddleware = () -&gt; (request, next) -&gt; {</span>
-<span class="source-line-no">669</span><span id="line.669">                if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {</span>
-<span class="source-line-no">670</span><span id="line.670">                    return next.apply(request);</span>
-<span class="source-line-no">671</span><span id="line.671">                }</span>
-<span class="source-line-no">672</span><span id="line.672">                return next.apply(</span>
-<span class="source-line-no">673</span><span id="line.673">                    request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));</span>
-<span class="source-line-no">674</span><span id="line.674">            };</span>
-<span class="source-line-no">675</span><span id="line.675">        }</span>
-<span class="source-line-no">676</span><span id="line.676">        return this;</span>
-<span class="source-line-no">677</span><span id="line.677">    }</span>
-<span class="source-line-no">678</span><span id="line.678"></span>
-<span class="source-line-no">679</span><span id="line.679">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
-<span class="source-line-no">680</span><span id="line.680">        return addCorrelationIdProvider(correlationIdProvider, true);</span>
-<span class="source-line-no">681</span><span id="line.681">    }</span>
-<span class="source-line-no">682</span><span id="line.682"></span>
-<span class="source-line-no">683</span><span id="line.683">    /**</span>
-<span class="source-line-no">684</span><span id="line.684">     * sets the middlewares to be configured for the client.</span>
-<span class="source-line-no">685</span><span id="line.685">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">686</span><span id="line.686">     * @return ClientBuilder instance</span>
-<span class="source-line-no">687</span><span id="line.687">     */</span>
-<span class="source-line-no">688</span><span id="line.688">    public ClientBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">689</span><span id="line.689">        this.middlewares = new ArrayList&lt;&gt;(middlewares);</span>
-<span class="source-line-no">690</span><span id="line.690">        return this;</span>
-<span class="source-line-no">691</span><span id="line.691">    }</span>
-<span class="source-line-no">692</span><span id="line.692"></span>
-<span class="source-line-no">693</span><span id="line.693">    /**</span>
-<span class="source-line-no">694</span><span id="line.694">     * sets the middlewares to be configured for the client.</span>
-<span class="source-line-no">695</span><span id="line.695">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">696</span><span id="line.696">     * @return ClientBuilder instance</span>
-<span class="source-line-no">697</span><span id="line.697">     */</span>
-<span class="source-line-no">698</span><span id="line.698">    public ClientBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">699</span><span id="line.699">        this.middlewares = new ArrayList&lt;&gt;(Collections.singletonList(middleware));</span>
-<span class="source-line-no">700</span><span id="line.700">        if (middlewares.length &gt; 0) {</span>
-<span class="source-line-no">701</span><span id="line.701">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
-<span class="source-line-no">702</span><span id="line.702">        }</span>
-<span class="source-line-no">703</span><span id="line.703">        return this;</span>
-<span class="source-line-no">704</span><span id="line.704">    }</span>
-<span class="source-line-no">705</span><span id="line.705"></span>
-<span class="source-line-no">706</span><span id="line.706">    /**</span>
-<span class="source-line-no">707</span><span id="line.707">     * adds the middlewares to be configured for the client.</span>
-<span class="source-line-no">708</span><span id="line.708">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">709</span><span id="line.709">     * @return ClientBuilder instance</span>
-<span class="source-line-no">710</span><span id="line.710">     */</span>
-<span class="source-line-no">711</span><span id="line.711">    public ClientBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
-<span class="source-line-no">712</span><span id="line.712">        this.middlewares.addAll(middlewares);</span>
-<span class="source-line-no">713</span><span id="line.713">        return this;</span>
-<span class="source-line-no">714</span><span id="line.714">    }</span>
-<span class="source-line-no">715</span><span id="line.715"></span>
-<span class="source-line-no">716</span><span id="line.716">    /**</span>
-<span class="source-line-no">717</span><span id="line.717">     * adds the middlewares to be configured for the client.</span>
-<span class="source-line-no">718</span><span id="line.718">     * @param middlewares {@link Middleware} instances</span>
-<span class="source-line-no">719</span><span id="line.719">     * @return ClientBuilder instance</span>
-<span class="source-line-no">720</span><span id="line.720">     */</span>
-<span class="source-line-no">721</span><span id="line.721">    public ClientBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
-<span class="source-line-no">722</span><span id="line.722">        this.middlewares.add(middleware);</span>
-<span class="source-line-no">723</span><span id="line.723">        if (middlewares.length &gt; 0) {</span>
-<span class="source-line-no">724</span><span id="line.724">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
-<span class="source-line-no">725</span><span id="line.725">        }</span>
-<span class="source-line-no">726</span><span id="line.726">        return this;</span>
-<span class="source-line-no">727</span><span id="line.727">    }</span>
-<span class="source-line-no">728</span><span id="line.728"></span>
-<span class="source-line-no">729</span><span id="line.729">    public ApiHttpClient build() {</span>
-<span class="source-line-no">730</span><span id="line.730">        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),</span>
-<span class="source-line-no">731</span><span id="line.731">            requireNonNull(serializer.get()));</span>
-<span class="source-line-no">732</span><span id="line.732">    }</span>
-<span class="source-line-no">733</span><span id="line.733"></span>
-<span class="source-line-no">734</span><span id="line.734">    public static String buildDefaultUserAgent() {</span>
-<span class="source-line-no">735</span><span id="line.735">        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;</span>
-<span class="source-line-no">736</span><span id="line.736">        String osName = SystemUtils.OS_NAME;</span>
-<span class="source-line-no">737</span><span id="line.737">        String osArch = SystemUtils.OS_ARCH;</span>
-<span class="source-line-no">738</span><span id="line.738">        String sdkVersion = BuildInfo.VERSION;</span>
-<span class="source-line-no">739</span><span id="line.739">        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";</span>
-<span class="source-line-no">740</span><span id="line.740">    }</span>
-<span class="source-line-no">741</span><span id="line.741">}</span>
+<span class="source-line-no">009</span><span id="line.9">import java.util.concurrent.ForkJoinPool;</span>
+<span class="source-line-no">010</span><span id="line.10">import java.util.concurrent.ScheduledExecutorService;</span>
+<span class="source-line-no">011</span><span id="line.11">import java.util.function.Function;</span>
+<span class="source-line-no">012</span><span id="line.12">import java.util.function.Predicate;</span>
+<span class="source-line-no">013</span><span id="line.13">import java.util.function.Supplier;</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">import javax.annotation.Nullable;</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">import dev.failsafe.spi.Scheduler;</span>
+<span class="source-line-no">018</span><span id="line.18"></span>
+<span class="source-line-no">019</span><span id="line.19">import io.vrap.rmf.base.client.error.HttpExceptionFactory;</span>
+<span class="source-line-no">020</span><span id="line.20">import io.vrap.rmf.base.client.http.*;</span>
+<span class="source-line-no">021</span><span id="line.21">import io.vrap.rmf.base.client.oauth2.*;</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">import org.apache.commons.lang3.SystemUtils;</span>
+<span class="source-line-no">024</span><span id="line.24">import org.slf4j.event.Level;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">/**</span>
+<span class="source-line-no">027</span><span id="line.27">    &lt;p&gt;The ClientBuilder is used to configure and create an {@link ApiHttpClient}. As the ApiHttpClient uses a {@link HandlerStack stack}</span>
+<span class="source-line-no">028</span><span id="line.28">    of middlewares the Builder comes with methods to configure and attach new middlewares. Also it ensures that some default</span>
+<span class="source-line-no">029</span><span id="line.29">    used middlewares are instantiated at the correct location in the middleware stack.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    &lt;p&gt;The default middlewares and services are added as Supplier to be able to override the ones provided by e.g.: {@link #defaultClient(URI)}&lt;/p&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> */</span>
+<span class="source-line-no">033</span><span id="line.33">public class ClientBuilder implements Builder&lt;ApiHttpClient&gt; {</span>
+<span class="source-line-no">034</span><span id="line.34">    public static final String COMMERCETOOLS = "commercetools";</span>
+<span class="source-line-no">035</span><span id="line.35">    static final String userAgent = "commercetools-sdk-java-v2/";</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    private URI apiBaseUrl;</span>
+<span class="source-line-no">038</span><span id="line.38">    private boolean useAuthCircuitBreaker;</span>
+<span class="source-line-no">039</span><span id="line.39">    private int authRetries;</span>
+<span class="source-line-no">040</span><span id="line.40">    private Supplier&lt;ErrorMiddleware&gt; errorMiddleware;</span>
+<span class="source-line-no">041</span><span id="line.41">    private Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware;</span>
+<span class="source-line-no">042</span><span id="line.42">    private Supplier&lt;RetryRequestMiddleware&gt; retryMiddleware;</span>
+<span class="source-line-no">043</span><span id="line.43">    private Supplier&lt;Middleware&gt; correlationIdMiddleware;</span>
+<span class="source-line-no">044</span><span id="line.44">    private InternalLoggerMiddleware internalLoggerMiddleware;</span>
+<span class="source-line-no">045</span><span id="line.45">    private UserAgentMiddleware userAgentMiddleware;</span>
+<span class="source-line-no">046</span><span id="line.46">    private List&lt;Middleware&gt; middlewares = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">047</span><span id="line.47">    private Supplier&lt;HandlerStack&gt; stack;</span>
+<span class="source-line-no">048</span><span id="line.48">    private VrapHttpClient httpClient;</span>
+<span class="source-line-no">049</span><span id="line.49">    private VrapHttpClient oauthHttpClient;</span>
+<span class="source-line-no">050</span><span id="line.50">    private Supplier&lt;ResponseSerializer&gt; serializer;</span>
+<span class="source-line-no">051</span><span id="line.51">    private Supplier&lt;HttpExceptionFactory&gt; httpExceptionFactory;</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    private Supplier&lt;ExecutorService&gt; oauthExecutorService = ForkJoinPool::new;</span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     * &lt;p&gt;Creates a default client builder&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     * @return ClientBuilder instance</span>
+<span class="source-line-no">057</span><span id="line.57">     */</span>
+<span class="source-line-no">058</span><span id="line.58">    public static ClientBuilder of() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return new ClientBuilder();</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public static ClientBuilder of(ExecutorService httpClientExecutorService) {</span>
+<span class="source-line-no">063</span><span id="line.63">        return new ClientBuilder(httpClientExecutorService);</span>
+<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">     * &lt;p&gt;Creates a client builder with a specific or preconfigured {@link VrapHttpClient} instance. Uses defaults for</span>
+<span class="source-line-no">068</span><span id="line.68">     * the {@link HandlerStack}&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @param httpClient the HTTP client to be used</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return ClientBuilder instance</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72">    public static ClientBuilder of(final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">073</span><span id="line.73">        return new ClientBuilder(httpClient);</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     * &lt;p&gt;Creates a client builder with a specific or preconfigured {@link ApiHttpClient} instance. Uses defaults for</span>
+<span class="source-line-no">078</span><span id="line.78">     * the {@link HandlerStack}&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     * @param httpClient the HTTP client to be used</span>
+<span class="source-line-no">080</span><span id="line.80">     * @return ClientBuilder instance</span>
+<span class="source-line-no">081</span><span id="line.81">     */</span>
+<span class="source-line-no">082</span><span id="line.82">    public static ClientBuilder of(final ApiHttpClient httpClient) {</span>
+<span class="source-line-no">083</span><span id="line.83">        return new ClientBuilder(httpClient);</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">     * &lt;p&gt;Creates a client builder with a specifig {@link HandlerStack}&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     * @param stack the HandlerStack to be used</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return ClientBuilder instance</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public static ClientBuilder of(final HandlerStack stack) {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new ClientBuilder(stack);</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    private ClientBuilder(final HandlerStack stack) {</span>
+<span class="source-line-no">096</span><span id="line.96">        this.stack = () -&gt; stack;</span>
+<span class="source-line-no">097</span><span id="line.97">        ResponseSerializer serializer = ResponseSerializer.of();</span>
+<span class="source-line-no">098</span><span id="line.98">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">099</span><span id="line.99">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
+<span class="source-line-no">100</span><span id="line.100">        this.useAuthCircuitBreaker = false;</span>
+<span class="source-line-no">101</span><span id="line.101">        this.authRetries = 1;</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    private ClientBuilder() {</span>
+<span class="source-line-no">105</span><span id="line.105">        this.httpClient = HttpClientSupplier.of(new ForkJoinPool()).get();</span>
+<span class="source-line-no">106</span><span id="line.106">        this.oauthHttpClient = httpClient;</span>
+<span class="source-line-no">107</span><span id="line.107">        this.stack = stackSupplier();</span>
+<span class="source-line-no">108</span><span id="line.108">        ResponseSerializer serializer = ResponseSerializer.of();</span>
+<span class="source-line-no">109</span><span id="line.109">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">110</span><span id="line.110">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
+<span class="source-line-no">111</span><span id="line.111">        this.useAuthCircuitBreaker = false;</span>
+<span class="source-line-no">112</span><span id="line.112">        this.authRetries = 1;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    private ClientBuilder(ExecutorService httpClientExecutorService) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.httpClient = HttpClientSupplier.of(httpClientExecutorService).get();</span>
+<span class="source-line-no">117</span><span id="line.117">        this.oauthHttpClient = httpClient;</span>
+<span class="source-line-no">118</span><span id="line.118">        this.stack = stackSupplier();</span>
+<span class="source-line-no">119</span><span id="line.119">        ResponseSerializer serializer = ResponseSerializer.of();</span>
+<span class="source-line-no">120</span><span id="line.120">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">121</span><span id="line.121">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
+<span class="source-line-no">122</span><span id="line.122">        this.useAuthCircuitBreaker = false;</span>
+<span class="source-line-no">123</span><span id="line.123">        this.authRetries = 1;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    private ClientBuilder(final ApiHttpClient httpClient) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.httpClient = httpClient;</span>
+<span class="source-line-no">128</span><span id="line.128">        this.oauthHttpClient = HttpClientSupplier.of(new ForkJoinPool()).get();</span>
+<span class="source-line-no">129</span><span id="line.129">        this.stack = stackSupplier();</span>
+<span class="source-line-no">130</span><span id="line.130">        ResponseSerializer serializer = ResponseSerializer.of();</span>
+<span class="source-line-no">131</span><span id="line.131">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">132</span><span id="line.132">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
+<span class="source-line-no">133</span><span id="line.133">        this.authRetries = 1;</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    private ClientBuilder(final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">137</span><span id="line.137">        this.httpClient = httpClient;</span>
+<span class="source-line-no">138</span><span id="line.138">        this.oauthHttpClient = httpClient;</span>
+<span class="source-line-no">139</span><span id="line.139">        this.stack = stackSupplier();</span>
+<span class="source-line-no">140</span><span id="line.140">        ResponseSerializer serializer = ResponseSerializer.of();</span>
+<span class="source-line-no">141</span><span id="line.141">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">142</span><span id="line.142">        this.httpExceptionFactory = () -&gt; HttpExceptionFactory.of(this.serializer.get());</span>
+<span class="source-line-no">143</span><span id="line.143">        this.authRetries = 1;</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    /**</span>
+<span class="source-line-no">147</span><span id="line.147">     * Ensures the order of default middlewares to create a {@link HandlerStack}</span>
+<span class="source-line-no">148</span><span id="line.148">     * @return HandlerStack supplier method</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150">    private Supplier&lt;HandlerStack&gt; stackSupplier() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return () -&gt; {</span>
+<span class="source-line-no">152</span><span id="line.152">            final List&lt;Middleware&gt; middlewareStack = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">153</span><span id="line.153">            Optional.ofNullable(errorMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
+<span class="source-line-no">154</span><span id="line.154">            Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);</span>
+<span class="source-line-no">155</span><span id="line.155">            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);</span>
+<span class="source-line-no">156</span><span id="line.156">            Optional.ofNullable(oAuthMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
+<span class="source-line-no">157</span><span id="line.157">            Optional.ofNullable(retryMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
+<span class="source-line-no">158</span><span id="line.158">            Optional.ofNullable(correlationIdMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
+<span class="source-line-no">159</span><span id="line.159">            middlewareStack.addAll(middlewares);</span>
+<span class="source-line-no">160</span><span id="line.160">            return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);</span>
+<span class="source-line-no">161</span><span id="line.161">        };</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    /**</span>
+<span class="source-line-no">165</span><span id="line.165">     * Ensures the order of default middlewares to create a {@link HandlerStack}</span>
+<span class="source-line-no">166</span><span id="line.166">     * @return HandlerStack supplier method</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168">    private Supplier&lt;HandlerStack&gt; oauthHandlerSupplier() {</span>
+<span class="source-line-no">169</span><span id="line.169">        return () -&gt; {</span>
+<span class="source-line-no">170</span><span id="line.170">            final List&lt;Middleware&gt; middlewareStack = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">171</span><span id="line.171">            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);</span>
+<span class="source-line-no">172</span><span id="line.172">            Optional.ofNullable(correlationIdMiddleware).map(m -&gt; middlewareStack.add(m.get()));</span>
+<span class="source-line-no">173</span><span id="line.173">            return HandlerStack.create(HttpHandler.create(requireNonNull(oauthHttpClient)), middlewareStack);</span>
+<span class="source-line-no">174</span><span id="line.174">        };</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public ClientBuilder withoutAuthCircuitBreaker() {</span>
+<span class="source-line-no">178</span><span id="line.178">        this.useAuthCircuitBreaker = false;</span>
+<span class="source-line-no">179</span><span id="line.179">        return this;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public ClientBuilder withAuthCircuitBreaker() {</span>
+<span class="source-line-no">183</span><span id="line.183">        this.useAuthCircuitBreaker = true;</span>
+<span class="source-line-no">184</span><span id="line.184">        return this;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    public ClientBuilder withAuthRetries(final int authRetries) {</span>
+<span class="source-line-no">188</span><span id="line.188">        this.authRetries = authRetries;</span>
+<span class="source-line-no">189</span><span id="line.189">        return this;</span>
+<span class="source-line-no">190</span><span id="line.190">    }</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    public ClientBuilder withHandlerStack(final HandlerStack stack) {</span>
+<span class="source-line-no">193</span><span id="line.193">        this.stack = () -&gt; stack;</span>
+<span class="source-line-no">194</span><span id="line.194">        return this;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public ClientBuilder withHttpClient(final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">198</span><span id="line.198">        this.httpClient = httpClient;</span>
+<span class="source-line-no">199</span><span id="line.199">        return this;</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    public ClientBuilder withOAuthHttpClient(final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">203</span><span id="line.203">        this.oauthHttpClient = httpClient;</span>
+<span class="source-line-no">204</span><span id="line.204">        return this;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    public ClientBuilder withSerializer(final ResponseSerializer serializer) {</span>
+<span class="source-line-no">208</span><span id="line.208">        this.serializer = () -&gt; serializer;</span>
+<span class="source-line-no">209</span><span id="line.209">        return this;</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public ClientBuilder withSerializer(final Supplier&lt;ResponseSerializer&gt; serializer) {</span>
+<span class="source-line-no">213</span><span id="line.213">        this.serializer = serializer;</span>
+<span class="source-line-no">214</span><span id="line.214">        return this;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public ClientBuilder withHttpExceptionFactory(final HttpExceptionFactory factory) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.httpExceptionFactory = () -&gt; factory;</span>
+<span class="source-line-no">219</span><span id="line.219">        return this;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    public ClientBuilder withHttpExceptionFactory(final Function&lt;ResponseSerializer, HttpExceptionFactory&gt; factory) {</span>
+<span class="source-line-no">223</span><span id="line.223">        this.httpExceptionFactory = () -&gt; factory.apply(serializer.get());</span>
+<span class="source-line-no">224</span><span id="line.224">        return this;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    /**</span>
+<span class="source-line-no">228</span><span id="line.228">     * configures the Factory for HTTP exception in case.</span>
+<span class="source-line-no">229</span><span id="line.229">     * @param factory</span>
+<span class="source-line-no">230</span><span id="line.230">     * @return</span>
+<span class="source-line-no">231</span><span id="line.231">     */</span>
+<span class="source-line-no">232</span><span id="line.232">    public ClientBuilder withHttpExceptionFactory(final Supplier&lt;HttpExceptionFactory&gt; factory) {</span>
+<span class="source-line-no">233</span><span id="line.233">        this.httpExceptionFactory = factory;</span>
+<span class="source-line-no">234</span><span id="line.234">        return this;</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    /**</span>
+<span class="source-line-no">238</span><span id="line.238">     * configures an ExecutorService to be used for the Middlewares</span>
+<span class="source-line-no">239</span><span id="line.239">     * @param executorService supplier of the executor service to be used</span>
+<span class="source-line-no">240</span><span id="line.240">     * @return</span>
+<span class="source-line-no">241</span><span id="line.241">     */</span>
+<span class="source-line-no">242</span><span id="line.242">    public ClientBuilder withOAuthExecutorService(final Supplier&lt;ExecutorService&gt; executorService) {</span>
+<span class="source-line-no">243</span><span id="line.243">        this.oauthExecutorService = executorService;</span>
+<span class="source-line-no">244</span><span id="line.244">        return this;</span>
+<span class="source-line-no">245</span><span id="line.245">    }</span>
+<span class="source-line-no">246</span><span id="line.246"></span>
+<span class="source-line-no">247</span><span id="line.247">    /**</span>
+<span class="source-line-no">248</span><span id="line.248">     * configures an ExecutorService to be used for the Middlewares</span>
+<span class="source-line-no">249</span><span id="line.249">     * @param executorService executor service to be used</span>
+<span class="source-line-no">250</span><span id="line.250">     * @return ClientBuilder instance</span>
+<span class="source-line-no">251</span><span id="line.251">     */</span>
+<span class="source-line-no">252</span><span id="line.252">    public ClientBuilder withOAuthExecutorService(final ExecutorService executorService) {</span>
+<span class="source-line-no">253</span><span id="line.253">        this.oauthExecutorService = () -&gt; executorService;</span>
+<span class="source-line-no">254</span><span id="line.254">        return this;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    /**</span>
+<span class="source-line-no">258</span><span id="line.258">     * &lt;p&gt;Configures a client with the default middlewares and the given baseUrl&lt;/p&gt;</span>
+<span class="source-line-no">259</span><span id="line.259">     * &lt;p&gt;The following middlewares and services are configured:</span>
+<span class="source-line-no">260</span><span id="line.260">     * &lt;ul&gt;</span>
+<span class="source-line-no">261</span><span id="line.261">     *     &lt;li&gt;{@link ErrorMiddleware}&lt;/li&gt;</span>
+<span class="source-line-no">262</span><span id="line.262">     *     &lt;li&gt;{@link ResponseSerializer}&lt;/li&gt;</span>
+<span class="source-line-no">263</span><span id="line.263">     *     &lt;li&gt;{@link InternalLoggerFactory}&lt;/li&gt;</span>
+<span class="source-line-no">264</span><span id="line.264">     *     &lt;li&gt;{@link UserAgentMiddleware}&lt;/li&gt;</span>
+<span class="source-line-no">265</span><span id="line.265">     *     &lt;li&gt;{@link AcceptGZipMiddleware}&lt;/li&gt;</span>
+<span class="source-line-no">266</span><span id="line.266">     * &lt;/ul&gt;</span>
+<span class="source-line-no">267</span><span id="line.267">     * &lt;/p&gt;</span>
+<span class="source-line-no">268</span><span id="line.268">     * @param apiBaseUrl base URI for the API</span>
+<span class="source-line-no">269</span><span id="line.269">     * @return ClientBuilder instance</span>
+<span class="source-line-no">270</span><span id="line.270">     */</span>
+<span class="source-line-no">271</span><span id="line.271">    public ClientBuilder defaultClient(final URI apiBaseUrl) {</span>
+<span class="source-line-no">272</span><span id="line.272">        return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()</span>
+<span class="source-line-no">273</span><span id="line.273">                .withSerializer(ResponseSerializer.of())</span>
+<span class="source-line-no">274</span><span id="line.274">                .withInternalLoggerFactory((request, topic) -&gt; InternalLogger.getLogger(COMMERCETOOLS + "." + topic))</span>
+<span class="source-line-no">275</span><span id="line.275">                .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)</span>
+<span class="source-line-no">276</span><span id="line.276">                .addAcceptGZipMiddleware();</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
+<span class="source-line-no">278</span><span id="line.278"></span>
+<span class="source-line-no">279</span><span id="line.279">    public ClientBuilder defaultClient(final String apiBaseUrl) {</span>
+<span class="source-line-no">280</span><span id="line.280">        return defaultClient(URI.create(apiBaseUrl));</span>
+<span class="source-line-no">281</span><span id="line.281">    }</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    public ClientBuilder defaultClient(final String apiBaseUrl, final ClientCredentials credentials,</span>
+<span class="source-line-no">284</span><span id="line.284">            final String tokenEndpoint) {</span>
+<span class="source-line-no">285</span><span id="line.285">        return defaultClient(apiBaseUrl).withClientCredentialsFlow(credentials, tokenEndpoint);</span>
+<span class="source-line-no">286</span><span id="line.286">    }</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">    public ClientBuilder defaultClient(final ClientCredentials credentials,</span>
+<span class="source-line-no">289</span><span id="line.289">            final ServiceRegionConfig serviceRegionConfig) {</span>
+<span class="source-line-no">290</span><span id="line.290">        return defaultClient(serviceRegionConfig.getApiUrl()).withClientCredentialsFlow(credentials,</span>
+<span class="source-line-no">291</span><span id="line.291">            serviceRegionConfig.getOAuthTokenUrl());</span>
+<span class="source-line-no">292</span><span id="line.292">    }</span>
+<span class="source-line-no">293</span><span id="line.293"></span>
+<span class="source-line-no">294</span><span id="line.294">    /**</span>
+<span class="source-line-no">295</span><span id="line.295">     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String)} instead</span>
+<span class="source-line-no">296</span><span id="line.296">     * @param credentials OAuth credentials</span>
+<span class="source-line-no">297</span><span id="line.297">     * @param tokenEndpoint OAuth endpoint</span>
+<span class="source-line-no">298</span><span id="line.298">     * @return client builder</span>
+<span class="source-line-no">299</span><span id="line.299">     */</span>
+<span class="source-line-no">300</span><span id="line.300">    @Deprecated</span>
+<span class="source-line-no">301</span><span id="line.301">    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint) {</span>
+<span class="source-line-no">302</span><span id="line.302">        return withClientCredentialsFlow(credentials, tokenEndpoint);</span>
+<span class="source-line-no">303</span><span id="line.303">    }</span>
+<span class="source-line-no">304</span><span id="line.304"></span>
+<span class="source-line-no">305</span><span id="line.305">    /**</span>
+<span class="source-line-no">306</span><span id="line.306">     * @deprecated use {@link #withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)} instead</span>
+<span class="source-line-no">307</span><span id="line.307">     * @param credentials OAuth credentials</span>
+<span class="source-line-no">308</span><span id="line.308">     * @param tokenEndpoint OAuth endpoint</span>
+<span class="source-line-no">309</span><span id="line.309">     * @param httpClient HTTP client to be used</span>
+<span class="source-line-no">310</span><span id="line.310">     * @return client builder</span>
+<span class="source-line-no">311</span><span id="line.311">     */</span>
+<span class="source-line-no">312</span><span id="line.312">    @Deprecated</span>
+<span class="source-line-no">313</span><span id="line.313">    public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,</span>
+<span class="source-line-no">314</span><span id="line.314">            VrapHttpClient httpClient) {</span>
+<span class="source-line-no">315</span><span id="line.315">        return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);</span>
+<span class="source-line-no">316</span><span id="line.316">    }</span>
+<span class="source-line-no">317</span><span id="line.317"></span>
+<span class="source-line-no">318</span><span id="line.318">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint) {</span>
+<span class="source-line-no">319</span><span id="line.319">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString());</span>
+<span class="source-line-no">320</span><span id="line.320">    }</span>
+<span class="source-line-no">321</span><span id="line.321"></span>
+<span class="source-line-no">322</span><span id="line.322">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,</span>
+<span class="source-line-no">323</span><span id="line.323">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
+<span class="source-line-no">324</span><span id="line.324">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClientSupplier);</span>
+<span class="source-line-no">325</span><span id="line.325">    }</span>
+<span class="source-line-no">326</span><span id="line.326"></span>
+<span class="source-line-no">327</span><span id="line.327">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,</span>
+<span class="source-line-no">328</span><span id="line.328">            VrapHttpClient httpClient) {</span>
+<span class="source-line-no">329</span><span id="line.329">        return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);</span>
+<span class="source-line-no">330</span><span id="line.330">    }</span>
+<span class="source-line-no">331</span><span id="line.331"></span>
+<span class="source-line-no">332</span><span id="line.332">    private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,</span>
+<span class="source-line-no">333</span><span id="line.333">            final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">334</span><span id="line.334">        return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),</span>
+<span class="source-line-no">335</span><span id="line.335">            credentials.getScopes(), tokenEndpoint, httpClient);</span>
+<span class="source-line-no">336</span><span id="line.336">    }</span>
+<span class="source-line-no">337</span><span id="line.337"></span>
+<span class="source-line-no">338</span><span id="line.338">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint) {</span>
+<span class="source-line-no">339</span><span id="line.339">        return withClientCredentialsFlow(credentials, tokenEndpoint, oauthHandlerSupplier());</span>
+<span class="source-line-no">340</span><span id="line.340">    }</span>
+<span class="source-line-no">341</span><span id="line.341"></span>
+<span class="source-line-no">342</span><span id="line.342">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
+<span class="source-line-no">343</span><span id="line.343">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
+<span class="source-line-no">344</span><span id="line.344">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
+<span class="source-line-no">345</span><span id="line.345">            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));</span>
+<span class="source-line-no">346</span><span id="line.346">    }</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
+<span class="source-line-no">349</span><span id="line.349">            VrapHttpClient httpClient) {</span>
+<span class="source-line-no">350</span><span id="line.350">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
+<span class="source-line-no">351</span><span id="line.351">            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));</span>
+<span class="source-line-no">352</span><span id="line.352">    }</span>
+<span class="source-line-no">353</span><span id="line.353"></span>
+<span class="source-line-no">354</span><span id="line.354">    public ClientBuilder withStaticTokenFlow(final AuthenticationToken token) {</span>
+<span class="source-line-no">355</span><span id="line.355">        return withTokenSupplier(new StaticTokenSupplier(token));</span>
+<span class="source-line-no">356</span><span id="line.356">    }</span>
+<span class="source-line-no">357</span><span id="line.357"></span>
+<span class="source-line-no">358</span><span id="line.358">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint) {</span>
+<span class="source-line-no">359</span><span id="line.359">        return withAnonymousSessionFlow(credentials, tokenEndpoint, oauthHandlerSupplier());</span>
+<span class="source-line-no">360</span><span id="line.360">    }</span>
+<span class="source-line-no">361</span><span id="line.361"></span>
+<span class="source-line-no">362</span><span id="line.362">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
+<span class="source-line-no">363</span><span id="line.363">            Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
+<span class="source-line-no">364</span><span id="line.364">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
+<span class="source-line-no">365</span><span id="line.365">            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));</span>
+<span class="source-line-no">366</span><span id="line.366">    }</span>
+<span class="source-line-no">367</span><span id="line.367"></span>
+<span class="source-line-no">368</span><span id="line.368">    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,</span>
+<span class="source-line-no">369</span><span id="line.369">            VrapHttpClient httpClient) {</span>
+<span class="source-line-no">370</span><span id="line.370">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
+<span class="source-line-no">371</span><span id="line.371">            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));</span>
+<span class="source-line-no">372</span><span id="line.372">    }</span>
+<span class="source-line-no">373</span><span id="line.373"></span>
+<span class="source-line-no">374</span><span id="line.374">    private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,</span>
+<span class="source-line-no">375</span><span id="line.375">            final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">376</span><span id="line.376">        return new AnonymousSessionTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),</span>
+<span class="source-line-no">377</span><span id="line.377">            credentials.getScopes(), tokenEndpoint, httpClient);</span>
+<span class="source-line-no">378</span><span id="line.378">    }</span>
+<span class="source-line-no">379</span><span id="line.379"></span>
+<span class="source-line-no">380</span><span id="line.380">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
+<span class="source-line-no">381</span><span id="line.381">            final String refreshTokenEndpoint, final TokenStorage storage) {</span>
+<span class="source-line-no">382</span><span id="line.382">        return withAnonymousRefreshFlow(credentials, anonTokenEndpoint, refreshTokenEndpoint, storage,</span>
+<span class="source-line-no">383</span><span id="line.383">            oauthHandlerSupplier());</span>
+<span class="source-line-no">384</span><span id="line.384">    }</span>
+<span class="source-line-no">385</span><span id="line.385"></span>
+<span class="source-line-no">386</span><span id="line.386">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
+<span class="source-line-no">387</span><span id="line.387">            final String refreshTokenEndpoint, final TokenStorage storage, Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
+<span class="source-line-no">388</span><span id="line.388">        return withTokenSupplier(() -&gt; createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,</span>
+<span class="source-line-no">389</span><span id="line.389">            refreshTokenEndpoint, storage, httpClientSupplier.get()));</span>
+<span class="source-line-no">390</span><span id="line.390">    }</span>
+<span class="source-line-no">391</span><span id="line.391"></span>
+<span class="source-line-no">392</span><span id="line.392">    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,</span>
+<span class="source-line-no">393</span><span id="line.393">            final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {</span>
+<span class="source-line-no">394</span><span id="line.394">        return withTokenSupplier(() -&gt; createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,</span>
+<span class="source-line-no">395</span><span id="line.395">            refreshTokenEndpoint, storage, httpClient));</span>
+<span class="source-line-no">396</span><span id="line.396">    }</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">    private TokenSupplier createInMemoryTokenSupplier(TokenSupplier tokenSupplier) {</span>
+<span class="source-line-no">399</span><span id="line.399">        return Optional.ofNullable(oauthExecutorService)</span>
+<span class="source-line-no">400</span><span id="line.400">                .map(executorService -&gt; new InMemoryTokenSupplier(executorService.get(), tokenSupplier))</span>
+<span class="source-line-no">401</span><span id="line.401">                .orElse(new InMemoryTokenSupplier(tokenSupplier));</span>
+<span class="source-line-no">402</span><span id="line.402">    }</span>
+<span class="source-line-no">403</span><span id="line.403"></span>
+<span class="source-line-no">404</span><span id="line.404">    private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,</span>
+<span class="source-line-no">405</span><span id="line.405">            final String anonTokenEndpoint, final String refreshTokenEndpoint, final TokenStorage tokenStorage,</span>
+<span class="source-line-no">406</span><span id="line.406">            final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">407</span><span id="line.407">        final RefreshFlowTokenSupplier refreshFlowTokenSupplier = createRefreshFlowSupplier(credentials,</span>
+<span class="source-line-no">408</span><span id="line.408">            refreshTokenEndpoint, tokenStorage, httpClient);</span>
+<span class="source-line-no">409</span><span id="line.409"></span>
+<span class="source-line-no">410</span><span id="line.410">        final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier = new AnonymousFlowTokenSupplier(</span>
+<span class="source-line-no">411</span><span id="line.411">            credentials.getClientId(), credentials.getClientSecret(), credentials.getScopes(), anonTokenEndpoint,</span>
+<span class="source-line-no">412</span><span id="line.412">            refreshFlowTokenSupplier, httpClient);</span>
+<span class="source-line-no">413</span><span id="line.413"></span>
+<span class="source-line-no">414</span><span id="line.414">        return new TokenStorageSupplier(tokenStorage, anonymousFlowTokenSupplier);</span>
+<span class="source-line-no">415</span><span id="line.415">    }</span>
+<span class="source-line-no">416</span><span id="line.416"></span>
+<span class="source-line-no">417</span><span id="line.417">    private RefreshFlowTokenSupplier createRefreshFlowSupplier(final ClientCredentials credentials,</span>
+<span class="source-line-no">418</span><span id="line.418">            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">419</span><span id="line.419">        return new RefreshFlowTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), tokenEndpoint,</span>
+<span class="source-line-no">420</span><span id="line.420">            tokenStorage, httpClient);</span>
+<span class="source-line-no">421</span><span id="line.421">    }</span>
+<span class="source-line-no">422</span><span id="line.422"></span>
+<span class="source-line-no">423</span><span id="line.423">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
+<span class="source-line-no">424</span><span id="line.424">            final String password, final String tokenEndpoint) {</span>
+<span class="source-line-no">425</span><span id="line.425">        return withGlobalCustomerPasswordFlow(credentials, email, password, tokenEndpoint, oauthHandlerSupplier());</span>
+<span class="source-line-no">426</span><span id="line.426">    }</span>
+<span class="source-line-no">427</span><span id="line.427"></span>
+<span class="source-line-no">428</span><span id="line.428">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
+<span class="source-line-no">429</span><span id="line.429">            final String password, final String tokenEndpoint, Supplier&lt;HandlerStack&gt; httpClientSupplier) {</span>
+<span class="source-line-no">430</span><span id="line.430">        return withTokenSupplier(</span>
+<span class="source-line-no">431</span><span id="line.431">            () -&gt; createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,</span>
+<span class="source-line-no">432</span><span id="line.432">                tokenEndpoint, httpClientSupplier.get())));</span>
+<span class="source-line-no">433</span><span id="line.433">    }</span>
+<span class="source-line-no">434</span><span id="line.434"></span>
+<span class="source-line-no">435</span><span id="line.435">    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,</span>
+<span class="source-line-no">436</span><span id="line.436">            final String password, final String tokenEndpoint, VrapHttpClient httpClient) {</span>
+<span class="source-line-no">437</span><span id="line.437">        return withTokenSupplier(() -&gt; createInMemoryTokenSupplier(</span>
+<span class="source-line-no">438</span><span id="line.438">            createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient)));</span>
+<span class="source-line-no">439</span><span id="line.439">    }</span>
+<span class="source-line-no">440</span><span id="line.440"></span>
+<span class="source-line-no">441</span><span id="line.441">    private TokenSupplier createGlobalCustomerPasswordTokenSupplier(final ClientCredentials credentials,</span>
+<span class="source-line-no">442</span><span id="line.442">            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {</span>
+<span class="source-line-no">443</span><span id="line.443">        return new GlobalCustomerPasswordTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), email,</span>
+<span class="source-line-no">444</span><span id="line.444">            password, credentials.getScopes(), tokenEndpoint, httpClient);</span>
+<span class="source-line-no">445</span><span id="line.445">    }</span>
+<span class="source-line-no">446</span><span id="line.446"></span>
+<span class="source-line-no">447</span><span id="line.447">    public ClientBuilder addAcceptGZipMiddleware() {</span>
+<span class="source-line-no">448</span><span id="line.448">        return addMiddleware(AcceptGZipMiddleware.of());</span>
+<span class="source-line-no">449</span><span id="line.449">    }</span>
+<span class="source-line-no">450</span><span id="line.450"></span>
+<span class="source-line-no">451</span><span id="line.451">    public ClientBuilder withErrorMiddleware(final Supplier&lt;ErrorMiddleware&gt; errorMiddleware) {</span>
+<span class="source-line-no">452</span><span id="line.452">        this.errorMiddleware = errorMiddleware;</span>
+<span class="source-line-no">453</span><span id="line.453">        return this;</span>
+<span class="source-line-no">454</span><span id="line.454">    }</span>
+<span class="source-line-no">455</span><span id="line.455"></span>
+<span class="source-line-no">456</span><span id="line.456">    public ClientBuilder withErrorMiddleware() {</span>
+<span class="source-line-no">457</span><span id="line.457">        return withErrorMiddleware(() -&gt; ErrorMiddleware.of(httpExceptionFactory.get()));</span>
+<span class="source-line-no">458</span><span id="line.458">    }</span>
+<span class="source-line-no">459</span><span id="line.459"></span>
+<span class="source-line-no">460</span><span id="line.460">    public ClientBuilder withErrorMiddleware(final ErrorMiddleware errorMiddleware) {</span>
+<span class="source-line-no">461</span><span id="line.461">        return withErrorMiddleware(() -&gt; errorMiddleware);</span>
+<span class="source-line-no">462</span><span id="line.462">    }</span>
+<span class="source-line-no">463</span><span id="line.463"></span>
+<span class="source-line-no">464</span><span id="line.464">    public ClientBuilder withErrorMiddleware(ErrorMiddleware.ExceptionMode exceptionMode) {</span>
+<span class="source-line-no">465</span><span id="line.465">        return withErrorMiddleware(() -&gt; ErrorMiddleware.of(httpExceptionFactory.get(), exceptionMode));</span>
+<span class="source-line-no">466</span><span id="line.466">    }</span>
+<span class="source-line-no">467</span><span id="line.467"></span>
+<span class="source-line-no">468</span><span id="line.468">    public ClientBuilder addNotFoundExceptionMiddleware() {</span>
+<span class="source-line-no">469</span><span id="line.469">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of());</span>
+<span class="source-line-no">470</span><span id="line.470">    }</span>
+<span class="source-line-no">471</span><span id="line.471"></span>
+<span class="source-line-no">472</span><span id="line.472">    public ClientBuilder addNotFoundExceptionMiddleware(final Set&lt;ApiHttpMethod&gt; methods) {</span>
+<span class="source-line-no">473</span><span id="line.473">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(methods));</span>
+<span class="source-line-no">474</span><span id="line.474">    }</span>
+<span class="source-line-no">475</span><span id="line.475"></span>
+<span class="source-line-no">476</span><span id="line.476">    public ClientBuilder addNotFoundExceptionMiddleware(final Predicate&lt;ApiHttpRequest&gt; requestPredicate) {</span>
+<span class="source-line-no">477</span><span id="line.477">        return addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware.of(requestPredicate));</span>
+<span class="source-line-no">478</span><span id="line.478">    }</span>
+<span class="source-line-no">479</span><span id="line.479"></span>
+<span class="source-line-no">480</span><span id="line.480">    public ClientBuilder addNotFoundExceptionMiddleware(final NotFoundExceptionMiddleware exceptionMiddleware) {</span>
+<span class="source-line-no">481</span><span id="line.481">        return addMiddleware(exceptionMiddleware);</span>
+<span class="source-line-no">482</span><span id="line.482">    }</span>
+<span class="source-line-no">483</span><span id="line.483"></span>
+<span class="source-line-no">484</span><span id="line.484">    public ClientBuilder withRetryMiddleware(final Supplier&lt;RetryRequestMiddleware&gt; retryMiddleware) {</span>
+<span class="source-line-no">485</span><span id="line.485">        this.retryMiddleware = retryMiddleware;</span>
+<span class="source-line-no">486</span><span id="line.486">        return this;</span>
+<span class="source-line-no">487</span><span id="line.487">    }</span>
+<span class="source-line-no">488</span><span id="line.488"></span>
+<span class="source-line-no">489</span><span id="line.489">    public ClientBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {</span>
+<span class="source-line-no">490</span><span id="line.490">        return withRetryMiddleware(() -&gt; retryMiddleware);</span>
+<span class="source-line-no">491</span><span id="line.491">    }</span>
+<span class="source-line-no">492</span><span id="line.492"></span>
+<span class="source-line-no">493</span><span id="line.493">    public ClientBuilder withRetryMiddleware(final int maxRetries) {</span>
+<span class="source-line-no">494</span><span id="line.494">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries));</span>
+<span class="source-line-no">495</span><span id="line.495">    }</span>
+<span class="source-line-no">496</span><span id="line.496"></span>
+<span class="source-line-no">497</span><span id="line.497">    public ClientBuilder withRetryMiddleware(final int maxRetries, List&lt;Integer&gt; statusCodes) {</span>
+<span class="source-line-no">498</span><span id="line.498">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes));</span>
+<span class="source-line-no">499</span><span id="line.499">    }</span>
+<span class="source-line-no">500</span><span id="line.500"></span>
+<span class="source-line-no">501</span><span id="line.501">    public ClientBuilder withRetryMiddleware(final int maxRetries, List&lt;Integer&gt; statusCodes,</span>
+<span class="source-line-no">502</span><span id="line.502">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
+<span class="source-line-no">503</span><span id="line.503">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes, failures));</span>
+<span class="source-line-no">504</span><span id="line.504">    }</span>
+<span class="source-line-no">505</span><span id="line.505"></span>
+<span class="source-line-no">506</span><span id="line.506">    public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
+<span class="source-line-no">507</span><span id="line.507">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures,</span>
+<span class="source-line-no">508</span><span id="line.508">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">509</span><span id="line.509">        return withRetryMiddleware(</span>
+<span class="source-line-no">510</span><span id="line.510">            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)</span>
+<span class="source-line-no">511</span><span id="line.511">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
+<span class="source-line-no">512</span><span id="line.512">    }</span>
+<span class="source-line-no">513</span><span id="line.513"></span>
+<span class="source-line-no">514</span><span id="line.514">    public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,</span>
+<span class="source-line-no">515</span><span id="line.515">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">516</span><span id="line.516">        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));</span>
+<span class="source-line-no">517</span><span id="line.517">    }</span>
+<span class="source-line-no">518</span><span id="line.518"></span>
+<span class="source-line-no">519</span><span id="line.519">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {</span>
+<span class="source-line-no">520</span><span id="line.520">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));</span>
+<span class="source-line-no">521</span><span id="line.521">    }</span>
+<span class="source-line-no">522</span><span id="line.522"></span>
+<span class="source-line-no">523</span><span id="line.523">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">524</span><span id="line.524">            List&lt;Integer&gt; statusCodes) {</span>
+<span class="source-line-no">525</span><span id="line.525">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));</span>
+<span class="source-line-no">526</span><span id="line.526">    }</span>
+<span class="source-line-no">527</span><span id="line.527"></span>
+<span class="source-line-no">528</span><span id="line.528">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">529</span><span id="line.529">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
+<span class="source-line-no">530</span><span id="line.530">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));</span>
+<span class="source-line-no">531</span><span id="line.531">    }</span>
+<span class="source-line-no">532</span><span id="line.532"></span>
+<span class="source-line-no">533</span><span id="line.533">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">534</span><span id="line.534">            final long delay, final long maxDelay, List&lt;Integer&gt; statusCodes,</span>
+<span class="source-line-no">535</span><span id="line.535">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures, final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">536</span><span id="line.536">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,</span>
+<span class="source-line-no">537</span><span id="line.537">            RetryRequestMiddleware.handleFailures(failures)</span>
+<span class="source-line-no">538</span><span id="line.538">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
+<span class="source-line-no">539</span><span id="line.539">    }</span>
+<span class="source-line-no">540</span><span id="line.540"></span>
+<span class="source-line-no">541</span><span id="line.541">    public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">542</span><span id="line.542">            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">543</span><span id="line.543">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));</span>
+<span class="source-line-no">544</span><span id="line.544">    }</span>
+<span class="source-line-no">545</span><span id="line.545"></span>
+<span class="source-line-no">546</span><span id="line.546">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {</span>
+<span class="source-line-no">547</span><span id="line.547">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));</span>
+<span class="source-line-no">548</span><span id="line.548">    }</span>
+<span class="source-line-no">549</span><span id="line.549"></span>
+<span class="source-line-no">550</span><span id="line.550">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">551</span><span id="line.551">            List&lt;Integer&gt; statusCodes) {</span>
+<span class="source-line-no">552</span><span id="line.552">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));</span>
+<span class="source-line-no">553</span><span id="line.553">    }</span>
+<span class="source-line-no">554</span><span id="line.554"></span>
+<span class="source-line-no">555</span><span id="line.555">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">556</span><span id="line.556">            List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
+<span class="source-line-no">557</span><span id="line.557">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));</span>
+<span class="source-line-no">558</span><span id="line.558">    }</span>
+<span class="source-line-no">559</span><span id="line.559"></span>
+<span class="source-line-no">560</span><span id="line.560">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">561</span><span id="line.561">            final long delay, final long maxDelay, List&lt;Integer&gt; statusCodes,</span>
+<span class="source-line-no">562</span><span id="line.562">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures, final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">563</span><span id="line.563">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,</span>
+<span class="source-line-no">564</span><span id="line.564">            RetryRequestMiddleware.handleFailures(failures)</span>
+<span class="source-line-no">565</span><span id="line.565">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
+<span class="source-line-no">566</span><span id="line.566">    }</span>
+<span class="source-line-no">567</span><span id="line.567"></span>
+<span class="source-line-no">568</span><span id="line.568">    public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,</span>
+<span class="source-line-no">569</span><span id="line.569">            final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">570</span><span id="line.570">        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));</span>
+<span class="source-line-no">571</span><span id="line.571">    }</span>
+<span class="source-line-no">572</span><span id="line.572"></span>
+<span class="source-line-no">573</span><span id="line.573">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {</span>
+<span class="source-line-no">574</span><span id="line.574">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries));</span>
+<span class="source-line-no">575</span><span id="line.575">    }</span>
+<span class="source-line-no">576</span><span id="line.576"></span>
+<span class="source-line-no">577</span><span id="line.577">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,</span>
+<span class="source-line-no">578</span><span id="line.578">            List&lt;Integer&gt; statusCodes) {</span>
+<span class="source-line-no">579</span><span id="line.579">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes));</span>
+<span class="source-line-no">580</span><span id="line.580">    }</span>
+<span class="source-line-no">581</span><span id="line.581"></span>
+<span class="source-line-no">582</span><span id="line.582">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List&lt;Integer&gt; statusCodes,</span>
+<span class="source-line-no">583</span><span id="line.583">            final List&lt;Class&lt;? extends Throwable&gt;&gt; failures) {</span>
+<span class="source-line-no">584</span><span id="line.584">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes, failures));</span>
+<span class="source-line-no">585</span><span id="line.585">    }</span>
+<span class="source-line-no">586</span><span id="line.586"></span>
+<span class="source-line-no">587</span><span id="line.587">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,</span>
+<span class="source-line-no">588</span><span id="line.588">            final long maxDelay, List&lt;Integer&gt; statusCodes, final List&lt;Class&lt;? extends Throwable&gt;&gt; failures,</span>
+<span class="source-line-no">589</span><span id="line.589">            final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">590</span><span id="line.590">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay,</span>
+<span class="source-line-no">591</span><span id="line.591">            RetryRequestMiddleware.handleFailures(failures)</span>
+<span class="source-line-no">592</span><span id="line.592">                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));</span>
+<span class="source-line-no">593</span><span id="line.593">    }</span>
+<span class="source-line-no">594</span><span id="line.594"></span>
+<span class="source-line-no">595</span><span id="line.595">    public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,</span>
+<span class="source-line-no">596</span><span id="line.596">            final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {</span>
+<span class="source-line-no">597</span><span id="line.597">        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));</span>
+<span class="source-line-no">598</span><span id="line.598">    }</span>
+<span class="source-line-no">599</span><span id="line.599"></span>
+<span class="source-line-no">600</span><span id="line.600">    public ClientBuilder withOAuthMiddleware(final Supplier&lt;OAuthMiddleware&gt; oAuthMiddleware) {</span>
+<span class="source-line-no">601</span><span id="line.601">        this.oAuthMiddleware = oAuthMiddleware;</span>
+<span class="source-line-no">602</span><span id="line.602">        return this;</span>
+<span class="source-line-no">603</span><span id="line.603">    }</span>
+<span class="source-line-no">604</span><span id="line.604"></span>
+<span class="source-line-no">605</span><span id="line.605">    public ClientBuilder withOAuthMiddleware(final OAuthMiddleware oAuthMiddleware) {</span>
+<span class="source-line-no">606</span><span id="line.606">        return withOAuthMiddleware(() -&gt; oAuthMiddleware);</span>
+<span class="source-line-no">607</span><span id="line.607">    }</span>
+<span class="source-line-no">608</span><span id="line.608"></span>
+<span class="source-line-no">609</span><span id="line.609">    public ClientBuilder withTokenSupplier(final Supplier&lt;TokenSupplier&gt; tokenSupplier) {</span>
+<span class="source-line-no">610</span><span id="line.610">        return withOAuthMiddleware(() -&gt; {</span>
+<span class="source-line-no">611</span><span id="line.611">            final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier.get());</span>
+<span class="source-line-no">612</span><span id="line.612">            return Optional.ofNullable(oauthExecutorService)</span>
+<span class="source-line-no">613</span><span id="line.613">                    .map(executorService -&gt; OAuthMiddleware.of(executorService.get(), oAuthHandler, authRetries,</span>
+<span class="source-line-no">614</span><span id="line.614">                        useAuthCircuitBreaker))</span>
+<span class="source-line-no">615</span><span id="line.615">                    .orElse(OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));</span>
+<span class="source-line-no">616</span><span id="line.616">        });</span>
+<span class="source-line-no">617</span><span id="line.617">    }</span>
+<span class="source-line-no">618</span><span id="line.618"></span>
+<span class="source-line-no">619</span><span id="line.619">    public ClientBuilder withTokenSupplier(final TokenSupplier tokenSupplier) {</span>
+<span class="source-line-no">620</span><span id="line.620">        return withTokenSupplier(() -&gt; tokenSupplier);</span>
+<span class="source-line-no">621</span><span id="line.621">    }</span>
+<span class="source-line-no">622</span><span id="line.622"></span>
+<span class="source-line-no">623</span><span id="line.623">    public ClientBuilder withInternalLoggerMiddleware(final InternalLoggerMiddleware internalLoggerMiddleware) {</span>
+<span class="source-line-no">624</span><span id="line.624">        this.internalLoggerMiddleware = internalLoggerMiddleware;</span>
+<span class="source-line-no">625</span><span id="line.625">        return this;</span>
+<span class="source-line-no">626</span><span id="line.626">    }</span>
+<span class="source-line-no">627</span><span id="line.627"></span>
+<span class="source-line-no">628</span><span id="line.628">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory) {</span>
+<span class="source-line-no">629</span><span id="line.629">        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory));</span>
+<span class="source-line-no">630</span><span id="line.630">    }</span>
+<span class="source-line-no">631</span><span id="line.631"></span>
+<span class="source-line-no">632</span><span id="line.632">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
+<span class="source-line-no">633</span><span id="line.633">            final Level responseLogEvent, final Level deprecationLogEvent) {</span>
+<span class="source-line-no">634</span><span id="line.634">        return withInternalLoggerMiddleware(</span>
+<span class="source-line-no">635</span><span id="line.635">            InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent, deprecationLogEvent));</span>
+<span class="source-line-no">636</span><span id="line.636">    }</span>
+<span class="source-line-no">637</span><span id="line.637"></span>
+<span class="source-line-no">638</span><span id="line.638">    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,</span>
+<span class="source-line-no">639</span><span id="line.639">            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,</span>
+<span class="source-line-no">640</span><span id="line.640">            final Map&lt;Class&lt;? extends Throwable&gt;, Level&gt; exceptionLogEvents) {</span>
+<span class="source-line-no">641</span><span id="line.641">        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent,</span>
+<span class="source-line-no">642</span><span id="line.642">            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));</span>
+<span class="source-line-no">643</span><span id="line.643">    }</span>
+<span class="source-line-no">644</span><span id="line.644"></span>
+<span class="source-line-no">645</span><span id="line.645">    public ClientBuilder withApiBaseUrl(String apiBaseUrl) {</span>
+<span class="source-line-no">646</span><span id="line.646">        return withApiBaseUrl(URI.create(apiBaseUrl));</span>
+<span class="source-line-no">647</span><span id="line.647">    }</span>
+<span class="source-line-no">648</span><span id="line.648"></span>
+<span class="source-line-no">649</span><span id="line.649">    public ClientBuilder withApiBaseUrl(final URI apiBaseUrl) {</span>
+<span class="source-line-no">650</span><span id="line.650">        this.apiBaseUrl = apiBaseUrl;</span>
+<span class="source-line-no">651</span><span id="line.651">        return this;</span>
+<span class="source-line-no">652</span><span id="line.652">    }</span>
+<span class="source-line-no">653</span><span id="line.653"></span>
+<span class="source-line-no">654</span><span id="line.654">    public ClientBuilder withUserAgentSupplier(final Supplier&lt;String&gt; userAgentSupplier) {</span>
+<span class="source-line-no">655</span><span id="line.655">        return withUserAgentMiddleware(new UserAgentMiddleware(userAgentSupplier.get()));</span>
+<span class="source-line-no">656</span><span id="line.656">    }</span>
+<span class="source-line-no">657</span><span id="line.657"></span>
+<span class="source-line-no">658</span><span id="line.658">    private ClientBuilder withUserAgentMiddleware(final UserAgentMiddleware userAgentMiddleware) {</span>
+<span class="source-line-no">659</span><span id="line.659">        this.userAgentMiddleware = userAgentMiddleware;</span>
+<span class="source-line-no">660</span><span id="line.660">        return this;</span>
+<span class="source-line-no">661</span><span id="line.661">    }</span>
+<span class="source-line-no">662</span><span id="line.662"></span>
+<span class="source-line-no">663</span><span id="line.663">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,</span>
+<span class="source-line-no">664</span><span id="line.664">            final boolean replace) {</span>
+<span class="source-line-no">665</span><span id="line.665">        if (!replace &amp;&amp; correlationIdMiddleware != null) {</span>
+<span class="source-line-no">666</span><span id="line.666">            return this;</span>
+<span class="source-line-no">667</span><span id="line.667">        }</span>
+<span class="source-line-no">668</span><span id="line.668">        if (correlationIdProvider != null) {</span>
+<span class="source-line-no">669</span><span id="line.669">            correlationIdMiddleware = () -&gt; (request, next) -&gt; {</span>
+<span class="source-line-no">670</span><span id="line.670">                if (request.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID) != null) {</span>
+<span class="source-line-no">671</span><span id="line.671">                    return next.apply(request);</span>
+<span class="source-line-no">672</span><span id="line.672">                }</span>
+<span class="source-line-no">673</span><span id="line.673">                return next.apply(</span>
+<span class="source-line-no">674</span><span id="line.674">                    request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId()));</span>
+<span class="source-line-no">675</span><span id="line.675">            };</span>
+<span class="source-line-no">676</span><span id="line.676">        }</span>
+<span class="source-line-no">677</span><span id="line.677">        return this;</span>
+<span class="source-line-no">678</span><span id="line.678">    }</span>
+<span class="source-line-no">679</span><span id="line.679"></span>
+<span class="source-line-no">680</span><span id="line.680">    public ClientBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {</span>
+<span class="source-line-no">681</span><span id="line.681">        return addCorrelationIdProvider(correlationIdProvider, true);</span>
+<span class="source-line-no">682</span><span id="line.682">    }</span>
+<span class="source-line-no">683</span><span id="line.683"></span>
+<span class="source-line-no">684</span><span id="line.684">    /**</span>
+<span class="source-line-no">685</span><span id="line.685">     * sets the middlewares to be configured for the client.</span>
+<span class="source-line-no">686</span><span id="line.686">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">687</span><span id="line.687">     * @return ClientBuilder instance</span>
+<span class="source-line-no">688</span><span id="line.688">     */</span>
+<span class="source-line-no">689</span><span id="line.689">    public ClientBuilder withMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">690</span><span id="line.690">        this.middlewares = new ArrayList&lt;&gt;(middlewares);</span>
+<span class="source-line-no">691</span><span id="line.691">        return this;</span>
+<span class="source-line-no">692</span><span id="line.692">    }</span>
+<span class="source-line-no">693</span><span id="line.693"></span>
+<span class="source-line-no">694</span><span id="line.694">    /**</span>
+<span class="source-line-no">695</span><span id="line.695">     * sets the middlewares to be configured for the client.</span>
+<span class="source-line-no">696</span><span id="line.696">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">697</span><span id="line.697">     * @return ClientBuilder instance</span>
+<span class="source-line-no">698</span><span id="line.698">     */</span>
+<span class="source-line-no">699</span><span id="line.699">    public ClientBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">700</span><span id="line.700">        this.middlewares = new ArrayList&lt;&gt;(Collections.singletonList(middleware));</span>
+<span class="source-line-no">701</span><span id="line.701">        if (middlewares.length &gt; 0) {</span>
+<span class="source-line-no">702</span><span id="line.702">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
+<span class="source-line-no">703</span><span id="line.703">        }</span>
+<span class="source-line-no">704</span><span id="line.704">        return this;</span>
+<span class="source-line-no">705</span><span id="line.705">    }</span>
+<span class="source-line-no">706</span><span id="line.706"></span>
+<span class="source-line-no">707</span><span id="line.707">    /**</span>
+<span class="source-line-no">708</span><span id="line.708">     * adds the middlewares to be configured for the client.</span>
+<span class="source-line-no">709</span><span id="line.709">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">710</span><span id="line.710">     * @return ClientBuilder instance</span>
+<span class="source-line-no">711</span><span id="line.711">     */</span>
+<span class="source-line-no">712</span><span id="line.712">    public ClientBuilder addMiddlewares(final List&lt;Middleware&gt; middlewares) {</span>
+<span class="source-line-no">713</span><span id="line.713">        this.middlewares.addAll(middlewares);</span>
+<span class="source-line-no">714</span><span id="line.714">        return this;</span>
+<span class="source-line-no">715</span><span id="line.715">    }</span>
+<span class="source-line-no">716</span><span id="line.716"></span>
+<span class="source-line-no">717</span><span id="line.717">    /**</span>
+<span class="source-line-no">718</span><span id="line.718">     * adds the middlewares to be configured for the client.</span>
+<span class="source-line-no">719</span><span id="line.719">     * @param middlewares {@link Middleware} instances</span>
+<span class="source-line-no">720</span><span id="line.720">     * @return ClientBuilder instance</span>
+<span class="source-line-no">721</span><span id="line.721">     */</span>
+<span class="source-line-no">722</span><span id="line.722">    public ClientBuilder addMiddleware(final Middleware middleware, final Middleware... middlewares) {</span>
+<span class="source-line-no">723</span><span id="line.723">        this.middlewares.add(middleware);</span>
+<span class="source-line-no">724</span><span id="line.724">        if (middlewares.length &gt; 0) {</span>
+<span class="source-line-no">725</span><span id="line.725">            this.middlewares.addAll(Arrays.asList(middlewares));</span>
+<span class="source-line-no">726</span><span id="line.726">        }</span>
+<span class="source-line-no">727</span><span id="line.727">        return this;</span>
+<span class="source-line-no">728</span><span id="line.728">    }</span>
+<span class="source-line-no">729</span><span id="line.729"></span>
+<span class="source-line-no">730</span><span id="line.730">    public ApiHttpClient build() {</span>
+<span class="source-line-no">731</span><span id="line.731">        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()),</span>
+<span class="source-line-no">732</span><span id="line.732">            requireNonNull(serializer.get()));</span>
+<span class="source-line-no">733</span><span id="line.733">    }</span>
+<span class="source-line-no">734</span><span id="line.734"></span>
+<span class="source-line-no">735</span><span id="line.735">    public static String buildDefaultUserAgent() {</span>
+<span class="source-line-no">736</span><span id="line.736">        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;</span>
+<span class="source-line-no">737</span><span id="line.737">        String osName = SystemUtils.OS_NAME;</span>
+<span class="source-line-no">738</span><span id="line.738">        String osArch = SystemUtils.OS_ARCH;</span>
+<span class="source-line-no">739</span><span id="line.739">        String sdkVersion = BuildInfo.VERSION;</span>
+<span class="source-line-no">740</span><span id="line.740">        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";</span>
+<span class="source-line-no">741</span><span id="line.741">    }</span>
+<span class="source-line-no">742</span><span id="line.742">}</span>
 
 
 

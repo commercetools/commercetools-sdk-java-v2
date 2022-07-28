@@ -5,22 +5,19 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CategoryOrderHints
+ *  <p>JSON object where the key is a Category <code>id</code> and the value is an order hint: a string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>. Allows controlling the order of Products and how they appear in Categories. Products with no order hint have an order score below <code>0</code>. Order hints are non-unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
- *             ./^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/("{/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryOrderHintsImpl.class)
 public interface CategoryOrderHints {
-
-    /**
-     *
-     */
-    @NotNull
-    @JsonAnyGetter
-    public Map<String, String> values();
-
-    @JsonAnySetter
-    public void setValue(String key, String value);
 
     public static CategoryOrderHints of() {
         return new CategoryOrderHintsImpl();

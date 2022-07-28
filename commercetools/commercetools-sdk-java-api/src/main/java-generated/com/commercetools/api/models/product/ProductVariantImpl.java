@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariant
+ *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImpl implements ProductVariant, ModelBase {
@@ -26,7 +26,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private String key;
 
-    private java.util.List<com.commercetools.api.models.common.Price> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices;
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
@@ -47,7 +47,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     @JsonCreator
     ProductVariantImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("key") final String key,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
@@ -74,7 +74,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
+     *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      */
 
     public Long getId() {
@@ -82,7 +82,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public String getSku() {
@@ -90,7 +90,8 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>This is different from Product <code>key</code>.</p>
      */
 
     public String getKey() {
@@ -98,15 +99,15 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPrice> getPrices() {
         return this.prices;
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -114,7 +115,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -122,7 +123,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -130,7 +131,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -138,7 +139,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {
@@ -146,7 +147,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
      */
 
     public Boolean getIsMatchingVariant() {
@@ -154,7 +155,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
      */
 
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
@@ -162,7 +163,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *
+     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
      */
 
     public Boolean getScopedPriceDiscounted() {
@@ -181,11 +182,11 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.key = key;
     }
 
-    public void setPrices(final com.commercetools.api.models.common.Price... prices) {
+    public void setPrices(final com.commercetools.api.models.product.EmbeddedPrice... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.common.Price> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices) {
         this.prices = prices;
     }
 

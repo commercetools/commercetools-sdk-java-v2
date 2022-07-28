@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRemoveVariantAction
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeletedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveVariantActionImpl implements ProductRemoveVariantAction, ModelBase {
@@ -50,7 +50,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to remove.</p>
      */
 
     public Long getId() {
@@ -58,7 +58,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      */
 
     public Boolean getStaged() {

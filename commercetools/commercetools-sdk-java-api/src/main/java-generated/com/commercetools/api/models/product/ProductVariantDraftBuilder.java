@@ -30,7 +30,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
@@ -42,7 +42,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder sku(@Nullable final String sku) {
@@ -51,7 +51,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      */
 
     public ProductVariantDraftBuilder key(@Nullable final String key) {
@@ -60,30 +60,31 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantDraftBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+    public ProductVariantDraftBuilder prices(
+            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantDraftBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+            @Nullable final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
         this.prices = prices;
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantDraftBuilder plusPrices(
-            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -92,31 +93,31 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantDraftBuilder plusPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantDraftBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public ProductVariantDraftBuilder attributes(
@@ -126,7 +127,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public ProductVariantDraftBuilder attributes(
@@ -136,7 +137,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public ProductVariantDraftBuilder plusAttributes(
@@ -149,7 +150,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public ProductVariantDraftBuilder plusAttributes(
@@ -162,7 +163,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public ProductVariantDraftBuilder withAttributes(
@@ -173,7 +174,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -182,7 +183,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder images(
@@ -192,7 +193,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -204,7 +205,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder plusImages(
@@ -217,7 +218,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder withImages(
@@ -228,7 +229,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft... assets) {
@@ -237,7 +238,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder assets(
@@ -247,7 +248,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder plusAssets(
@@ -260,7 +261,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder plusAssets(
@@ -273,7 +274,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductVariantDraftBuilder withAssets(
@@ -294,7 +295,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
         return this.prices;
     }
 

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductPublishAction
+ *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublishedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,7 +30,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
     String PUBLISH = "publish";
 
     /**
-     *
+     *  <p><code>All</code> or <code>Prices</code></p>
      */
 
     @JsonProperty("scope")

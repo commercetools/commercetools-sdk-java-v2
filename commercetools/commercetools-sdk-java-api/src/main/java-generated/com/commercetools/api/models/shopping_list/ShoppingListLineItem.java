@@ -106,7 +106,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public Integer getQuantity();
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
     @Valid
     @JsonProperty("variant")

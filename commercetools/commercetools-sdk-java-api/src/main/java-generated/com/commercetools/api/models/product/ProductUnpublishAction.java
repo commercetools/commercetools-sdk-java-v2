@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductUnpublishAction
+ *  <p>Removes the current projection of the Product. The staged projection is unaffected. Unpublished Products only appear in query/search results with <code>staged=false</code>. Produces the ProductUnpublishedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

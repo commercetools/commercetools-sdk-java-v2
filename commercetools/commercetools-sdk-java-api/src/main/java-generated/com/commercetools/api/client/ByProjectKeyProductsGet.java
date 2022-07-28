@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>You can use the query endpoint to get the full representations of products. REMARK: We suggest to use the performance optimized search endpoint which has a bunch functionalities, the query API lacks like sorting on custom attributes, etc.</p>
+ *  <p>If Price selection query parameters are provided, the selected Prices are added to the response.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -80,6 +80,10 @@ public class ByProjectKeyProductsGet extends
         return this.projectKey;
     }
 
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
     public List<String> getPriceCurrency() {
         return this.getQueryParam("priceCurrency");
     }
@@ -116,12 +120,67 @@ public class ByProjectKeyProductsGet extends
         return this.getQueryParam("withTotal");
     }
 
-    public List<String> getWhere() {
-        return this.getQueryParam("where");
-    }
-
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public <TValue> ByProjectKeyProductsGet withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public <TValue> ByProjectKeyProductsGet addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyProductsGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductsGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     */
+    public ByProjectKeyProductsGet withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     */
+    public ByProjectKeyProductsGet addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     */
+    public <TValue> ByProjectKeyProductsGet withWhere(final List<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     */
+    public <TValue> ByProjectKeyProductsGet addWhere(final List<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -662,65 +721,6 @@ public class ByProjectKeyProductsGet extends
     public <TValue> ByProjectKeyProductsGet addWithTotal(final List<TValue> withTotal) {
         return copy().addQueryParams(
             withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set where with the specified value
-     */
-    public <TValue> ByProjectKeyProductsGet withWhere(final TValue where) {
-        return copy().withQueryParam("where", where);
-    }
-
-    /**
-     * add additional where query parameter
-     */
-    public <TValue> ByProjectKeyProductsGet addWhere(final TValue where) {
-        return copy().addQueryParam("where", where);
-    }
-
-    /**
-     * set where with the specified value
-     */
-    public ByProjectKeyProductsGet withWhere(final Supplier<String> supplier) {
-        return copy().withQueryParam("where", supplier.get());
-    }
-
-    /**
-     * add additional where query parameter
-     */
-    public ByProjectKeyProductsGet addWhere(final Supplier<String> supplier) {
-        return copy().addQueryParam("where", supplier.get());
-    }
-
-    /**
-     * set where with the specified value
-     */
-    public ByProjectKeyProductsGet withWhere(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("where", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional where query parameter
-     */
-    public ByProjectKeyProductsGet addWhere(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("where", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set where with the specified values
-     */
-    public <TValue> ByProjectKeyProductsGet withWhere(final List<TValue> where) {
-        return copy().withoutQueryParam("where")
-                .addQueryParams(
-                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional where query parameters
-     */
-    public <TValue> ByProjectKeyProductsGet addWhere(final List<TValue> where) {
-        return copy().addQueryParams(
-            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
 
     /**

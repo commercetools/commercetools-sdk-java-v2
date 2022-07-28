@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ProductVariantAvailabilityBuilder implements Builder<ProductVariantAvailability> {
 
     @Nullable
+    private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
+
+    @Nullable
     private Boolean isOnStock;
 
     @Nullable
@@ -32,38 +35,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     @Nullable
     private Long availableQuantity;
 
-    @Nullable
-    private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
-
     /**
-     *
-     */
-
-    public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
-        this.isOnStock = isOnStock;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ProductVariantAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
-        this.restockableInDays = restockableInDays;
-        return this;
-    }
-
-    /**
-     *
-     */
-
-    public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
-        this.availableQuantity = availableQuantity;
-        return this;
-    }
-
-    /**
-     *
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
      */
 
     public ProductVariantAvailabilityBuilder channels(
@@ -75,13 +48,45 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
      */
 
     public ProductVariantAvailabilityBuilder channels(
             @Nullable final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
         this.channels = channels;
         return this;
+    }
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
+     */
+
+    public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
+        this.isOnStock = isOnStock;
+        return this;
+    }
+
+    /**
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     */
+
+    public ProductVariantAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
+        this.restockableInDays = restockableInDays;
+        return this;
+    }
+
+    /**
+     *  <p>Number of items of the Product Variant that are in stock.</p>
+     */
+
+    public ProductVariantAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
+        this.availableQuantity = availableQuantity;
+        return this;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
+        return this.channels;
     }
 
     @Nullable
@@ -99,20 +104,15 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return this.availableQuantity;
     }
 
-    @Nullable
-    public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
-        return this.channels;
-    }
-
     public ProductVariantAvailability build() {
-        return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
+        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
     }
 
     /**
      * builds ProductVariantAvailability without checking for non null required values
      */
     public ProductVariantAvailability buildUnchecked() {
-        return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
+        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
     }
 
     public static ProductVariantAvailabilityBuilder of() {
@@ -121,10 +121,10 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     public static ProductVariantAvailabilityBuilder of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityBuilder builder = new ProductVariantAvailabilityBuilder();
+        builder.channels = template.getChannels();
         builder.isOnStock = template.getIsOnStock();
         builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
-        builder.channels = template.getChannels();
         return builder;
     }
 

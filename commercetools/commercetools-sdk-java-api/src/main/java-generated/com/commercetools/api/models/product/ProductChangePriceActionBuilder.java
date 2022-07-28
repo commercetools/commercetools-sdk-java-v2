@@ -27,13 +27,13 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     private String priceId;
 
-    private com.commercetools.api.models.common.PriceDraft price;
+    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
 
     @Nullable
     private Boolean staged;
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the EmbeddedPrice to update.</p>
      */
 
     public ProductChangePriceActionBuilder priceId(final String priceId) {
@@ -42,26 +42,26 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductChangePriceActionBuilder price(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build();
         return this;
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
-    public ProductChangePriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
+    public ProductChangePriceActionBuilder price(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
         this.price = price;
         return this;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
      */
 
     public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {
@@ -73,7 +73,7 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return this.priceId;
     }
 
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
+    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
         return this.price;
     }
 

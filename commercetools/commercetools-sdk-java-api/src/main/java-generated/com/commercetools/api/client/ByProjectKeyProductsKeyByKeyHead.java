@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if product with given key exists.</p>
+ *  <p>Check if a Product exists with a specified <code>key</code>. Responds with a <code>200 OK</code> status if the Product exists or <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

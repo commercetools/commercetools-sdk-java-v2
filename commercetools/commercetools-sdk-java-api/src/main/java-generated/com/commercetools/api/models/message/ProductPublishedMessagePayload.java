@@ -52,7 +52,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     public ProductProjection getProductProjection();
 
     /**
-     *
+     *  <p>The scope controls which part of the product information is published.</p>
      */
     @NotNull
     @JsonProperty("scope")

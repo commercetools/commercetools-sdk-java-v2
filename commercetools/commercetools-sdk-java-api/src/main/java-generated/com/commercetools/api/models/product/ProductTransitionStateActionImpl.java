@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductTransitionStateAction
+ *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. Produces the ProductStateTransitionMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTransitionStateActionImpl implements ProductTransitionStateAction, ModelBase {
@@ -48,7 +48,7 @@ public class ProductTransitionStateActionImpl implements ProductTransitionStateA
     }
 
     /**
-     *
+     *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -56,7 +56,7 @@ public class ProductTransitionStateActionImpl implements ProductTransitionStateA
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, validations are disabled.</p>
      */
 
     public Boolean getForce() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetAttributeInAllVariantsAction
+ *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAttributeInAllVariantsAction, ModelBase {
@@ -50,7 +50,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     *
+     *  <p>The name of the Attribute to set.</p>
      */
 
     public String getName() {
@@ -58,7 +58,16 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     *  <p>The same update behavior as for Set Attribute applies.</p>
+     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
      */
 
     public java.lang.Object getValue() {
@@ -66,7 +75,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      */
 
     public Boolean getStaged() {

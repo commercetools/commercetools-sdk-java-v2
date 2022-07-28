@@ -195,7 +195,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
 
     public ProductVariantDeletedMessageBuilder variant(
@@ -205,7 +205,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
 
     public ProductVariantDeletedMessageBuilder variant(

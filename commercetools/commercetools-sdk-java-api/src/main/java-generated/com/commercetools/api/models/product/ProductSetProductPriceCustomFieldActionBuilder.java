@@ -36,7 +36,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder priceId(final String priceId) {
@@ -45,7 +45,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      */
 
     public ProductSetProductPriceCustomFieldActionBuilder staged(@Nullable final Boolean staged) {

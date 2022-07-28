@@ -42,7 +42,7 @@ public interface ProductVariantAddedMessage extends Message {
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
     @NotNull
     @Valid

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddToCategoryAction
+ *  <p>Produces the ProductAddedToCategoryMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddToCategoryActionImpl implements ProductAddToCategoryAction, ModelBase {
@@ -51,7 +51,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *
+     *  <p>The Category to add.</p>
      */
 
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
@@ -59,7 +59,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      */
 
     public String getOrderHint() {
@@ -67,7 +67,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      */
 
     public Boolean getStaged() {

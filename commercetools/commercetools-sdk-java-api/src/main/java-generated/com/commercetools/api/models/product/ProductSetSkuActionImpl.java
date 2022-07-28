@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetSkuAction
+ *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
@@ -50,7 +50,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -58,7 +58,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
      */
 
     public Boolean getStaged() {

@@ -32,7 +32,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to become the Master Variant.</p>
      */
 
     public ProductChangeMasterVariantActionBuilder variantId(@Nullable final Long variantId) {
@@ -41,7 +41,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to become the Master Variant.</p>
      */
 
     public ProductChangeMasterVariantActionBuilder sku(@Nullable final String sku) {
@@ -50,7 +50,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
      */
 
     public ProductChangeMasterVariantActionBuilder staged(@Nullable final Boolean staged) {

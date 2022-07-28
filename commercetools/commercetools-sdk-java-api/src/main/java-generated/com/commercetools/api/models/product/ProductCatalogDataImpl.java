@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductCatalogData
+ *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
@@ -43,7 +43,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the Product is published.</p>
      */
 
     public Boolean getPublished() {
@@ -51,7 +51,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current (published) data of the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductData getCurrent() {
@@ -59,7 +59,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Staged (unpublished) data of the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductData getStaged() {
@@ -67,7 +67,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      */
 
     public Boolean getHasStagedChanges() {

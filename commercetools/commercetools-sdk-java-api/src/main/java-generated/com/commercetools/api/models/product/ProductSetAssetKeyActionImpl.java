@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetAssetKeyAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, ModelBase {
@@ -57,7 +57,7 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -65,7 +65,7 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -73,7 +73,7 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public Boolean getStaged() {
@@ -81,7 +81,7 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public String getAssetId() {
@@ -89,7 +89,7 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
     }
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getAssetKey() {

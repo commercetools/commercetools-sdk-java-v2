@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomTokenizer
+ *  <p>Define arbitrary tokens that are used to match the input.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
     String CUSTOM = "custom";
 
     /**
-     *
+     *  <p>Contains custom tokens.</p>
      */
     @NotNull
     @JsonProperty("inputs")

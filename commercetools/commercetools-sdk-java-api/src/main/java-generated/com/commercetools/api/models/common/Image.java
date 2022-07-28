@@ -32,14 +32,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Image {
 
     /**
-     *
+     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
      */
     @NotNull
     @JsonProperty("url")
     public String getUrl();
 
     /**
-     *
+     *  <p>Dimensions of the original image.</p>
      */
     @NotNull
     @Valid
@@ -47,7 +47,7 @@ public interface Image {
     public ImageDimensions getDimensions();
 
     /**
-     *
+     *  <p>Custom label for the image.</p>
      */
 
     @JsonProperty("label")

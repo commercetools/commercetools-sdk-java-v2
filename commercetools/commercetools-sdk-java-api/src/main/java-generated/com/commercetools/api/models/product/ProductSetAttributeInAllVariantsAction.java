@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetAttributeInAllVariantsAction
+ *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,21 +32,30 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
     /**
-     *
+     *  <p>The name of the Attribute to set.</p>
      */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-     *  <p>The same update behavior as for Set Attribute applies.</p>
+     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
      */
 
     @JsonProperty("value")
     public Object getValue();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      */
 
     @JsonProperty("staged")

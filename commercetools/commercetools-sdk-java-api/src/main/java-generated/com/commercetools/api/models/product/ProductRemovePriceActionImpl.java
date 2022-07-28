@@ -47,7 +47,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the EmbeddedPrice to remove.</p>
      */
 
     public String getPriceId() {
@@ -55,7 +55,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged EmbeddedPrice is removed. If <code>false</code>, both the current and staged EmbeddedPrice are removed.</p>
      */
 
     public Boolean getStaged() {

@@ -42,7 +42,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code> both the current and staged Asset is updated.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -97,7 +97,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder sources(
@@ -107,7 +107,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -120,7 +120,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder plusSources(
@@ -133,7 +133,7 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetAssetSourcesActionBuilder withSources(

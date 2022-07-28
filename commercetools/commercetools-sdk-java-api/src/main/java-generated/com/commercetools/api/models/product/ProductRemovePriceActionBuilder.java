@@ -29,7 +29,7 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
     private Boolean staged;
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the EmbeddedPrice to remove.</p>
      */
 
     public ProductRemovePriceActionBuilder priceId(final String priceId) {
@@ -38,7 +38,7 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged EmbeddedPrice is removed. If <code>false</code>, both the current and staged EmbeddedPrice are removed.</p>
      */
 
     public ProductRemovePriceActionBuilder staged(@Nullable final Boolean staged) {

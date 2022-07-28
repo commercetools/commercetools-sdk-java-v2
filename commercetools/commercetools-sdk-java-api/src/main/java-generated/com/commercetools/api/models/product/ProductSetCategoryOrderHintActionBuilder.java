@@ -32,7 +32,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
      */
 
     public ProductSetCategoryOrderHintActionBuilder categoryId(final String categoryId) {
@@ -41,7 +41,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetCategoryOrderHintActionBuilder orderHint(@Nullable final String orderHint) {
@@ -50,7 +50,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      */
 
     public ProductSetCategoryOrderHintActionBuilder staged(@Nullable final Boolean staged) {

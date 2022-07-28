@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductAddToCategoryAction
+ *  <p>Produces the ProductAddedToCategoryMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     String ADD_TO_CATEGORY = "addToCategory";
 
     /**
-     *
+     *  <p>The Category to add.</p>
      */
     @NotNull
     @Valid
@@ -42,14 +42,14 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     public CategoryResourceIdentifier getCategory();
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      */
 
     @JsonProperty("staged")

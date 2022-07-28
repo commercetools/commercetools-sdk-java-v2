@@ -24,13 +24,13 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
 
     private String priceId;
 
-    private com.commercetools.api.models.common.PriceDraft price;
+    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
 
     private Boolean staged;
 
     @JsonCreator
     ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId,
-            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
+            @JsonProperty("price") final com.commercetools.api.models.product.EmbeddedPriceDraft price,
             @JsonProperty("staged") final Boolean staged) {
         this.priceId = priceId;
         this.price = price;
@@ -51,7 +51,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the EmbeddedPrice to update.</p>
      */
 
     public String getPriceId() {
@@ -59,15 +59,15 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
+    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
         return this.price;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -78,7 +78,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
         this.priceId = priceId;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
+    public void setPrice(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
         this.price = price;
     }
 

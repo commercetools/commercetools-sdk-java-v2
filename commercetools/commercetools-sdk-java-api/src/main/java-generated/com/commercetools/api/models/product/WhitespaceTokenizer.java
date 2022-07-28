@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * WhitespaceTokenizer
+ *  <p>Creates tokens by splitting the <code>text</code> field in SearchKeyword by whitespaces.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

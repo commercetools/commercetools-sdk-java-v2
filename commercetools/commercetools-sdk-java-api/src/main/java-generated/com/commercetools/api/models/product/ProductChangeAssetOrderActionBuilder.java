@@ -35,7 +35,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     private java.util.List<String> assetOrder;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder variantId(@Nullable final Long variantId) {
@@ -44,7 +44,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder sku(@Nullable final String sku) {
@@ -53,7 +53,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder staged(@Nullable final Boolean staged) {
@@ -62,7 +62,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     *
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder assetOrder(final String... assetOrder) {
@@ -71,7 +71,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     *
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder assetOrder(final java.util.List<String> assetOrder) {
@@ -80,7 +80,7 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
     }
 
     /**
-     *
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      */
 
     public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {

@@ -9,7 +9,6 @@ import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -34,49 +33,49 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     String ADD_VARIANT = "addVariant";
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("prices")
-    public List<PriceDraft> getPrices();
+    public List<EmbeddedPriceDraft> getPrices();
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     *
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("assets")
@@ -87,9 +86,9 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public void setKey(final String key);
 
     @JsonIgnore
-    public void setPrices(final PriceDraft... prices);
+    public void setPrices(final EmbeddedPriceDraft... prices);
 
-    public void setPrices(final List<PriceDraft> prices);
+    public void setPrices(final List<EmbeddedPriceDraft> prices);
 
     @JsonIgnore
     public void setImages(final Image... images);

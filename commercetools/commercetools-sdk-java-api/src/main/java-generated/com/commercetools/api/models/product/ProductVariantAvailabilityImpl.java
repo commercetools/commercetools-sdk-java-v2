@@ -15,10 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantAvailability
+ *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>quantityOnStock</code> are returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAvailabilityImpl implements ProductVariantAvailability, ModelBase {
+
+    private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
     private Boolean isOnStock;
 
@@ -26,24 +28,31 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
 
     private Long availableQuantity;
 
-    private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
-
     @JsonCreator
-    ProductVariantAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
+    ProductVariantAvailabilityImpl(
+            @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels,
+            @JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
-            @JsonProperty("availableQuantity") final Long availableQuantity,
-            @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
+            @JsonProperty("availableQuantity") final Long availableQuantity) {
+        this.channels = channels;
         this.isOnStock = isOnStock;
         this.restockableInDays = restockableInDays;
         this.availableQuantity = availableQuantity;
-        this.channels = channels;
     }
 
     public ProductVariantAvailabilityImpl() {
     }
 
     /**
-     *
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
+        return this.channels;
+    }
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
      */
 
     public Boolean getIsOnStock() {
@@ -51,7 +60,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
      */
 
     public Long getRestockableInDays() {
@@ -59,19 +68,15 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *
+     *  <p>Number of items of the Product Variant that are in stock.</p>
      */
 
     public Long getAvailableQuantity() {
         return this.availableQuantity;
     }
 
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
-        return this.channels;
+    public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
+        this.channels = channels;
     }
 
     public void setIsOnStock(final Boolean isOnStock) {
@@ -86,10 +91,6 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
         this.availableQuantity = availableQuantity;
     }
 
-    public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
-        this.channels = channels;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -100,19 +101,19 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
 
         ProductVariantAvailabilityImpl that = (ProductVariantAvailabilityImpl) o;
 
-        return new EqualsBuilder().append(isOnStock, that.isOnStock)
+        return new EqualsBuilder().append(channels, that.channels)
+                .append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
-                .append(channels, that.channels)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(isOnStock)
+        return new HashCodeBuilder(17, 37).append(channels)
+                .append(isOnStock)
                 .append(restockableInDays)
                 .append(availableQuantity)
-                .append(channels)
                 .toHashCode();
     }
 

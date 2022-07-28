@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRemoveFromCategoryAction
+ *  <p>Produces the ProductRemovedFromCategoryMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     String REMOVE_FROM_CATEGORY = "removeFromCategory";
 
     /**
-     *
+     *  <p>The Category to remove.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     public CategoryResourceIdentifier getCategory();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
      */
 
     @JsonProperty("staged")

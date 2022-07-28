@@ -8,7 +8,6 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -35,22 +34,22 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     String CHANGE_PRICE = "changePrice";
 
     /**
-     *  <p>ID of the EmbeddedPrice</p>
+     *  <p>The <code>id</code> of the EmbeddedPrice to update.</p>
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
     @NotNull
     @Valid
     @JsonProperty("price")
-    public PriceDraft getPrice();
+    public EmbeddedPriceDraft getPrice();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged EmbeddedPrice is updated. If <code>false</code>, both the current and staged EmbeddedPrice are updated.</p>
      */
 
     @JsonProperty("staged")
@@ -58,7 +57,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     public void setPriceId(final String priceId);
 
-    public void setPrice(final PriceDraft price);
+    public void setPrice(final EmbeddedPriceDraft price);
 
     public void setStaged(final Boolean staged);
 

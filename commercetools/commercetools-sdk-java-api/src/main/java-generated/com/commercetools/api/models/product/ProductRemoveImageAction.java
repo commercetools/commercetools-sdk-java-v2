@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRemoveImageAction
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,28 +32,28 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     String REMOVE_IMAGE = "removeImage";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>The URL of the image.</p>
+     *  <p>The URL of the image to remove.</p>
      */
     @NotNull
     @JsonProperty("imageUrl")
     public String getImageUrl();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      */
 
     @JsonProperty("staged")

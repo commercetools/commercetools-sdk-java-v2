@@ -32,14 +32,14 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     String SET_META_TITLE = "setMetaTitle";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      */
 
     @JsonProperty("staged")

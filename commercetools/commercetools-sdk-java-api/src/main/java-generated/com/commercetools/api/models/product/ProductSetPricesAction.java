@@ -8,14 +8,13 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetPricesAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,29 +33,29 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     String SET_PRICES = "setPrices";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
     @NotNull
     @Valid
     @JsonProperty("prices")
-    public List<PriceDraft> getPrices();
+    public List<EmbeddedPriceDraft> getPrices();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      */
 
     @JsonProperty("staged")
@@ -67,9 +66,9 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     @JsonIgnore
-    public void setPrices(final PriceDraft... prices);
+    public void setPrices(final EmbeddedPriceDraft... prices);
 
-    public void setPrices(final List<PriceDraft> prices);
+    public void setPrices(final List<EmbeddedPriceDraft> prices);
 
     public void setStaged(final Boolean staged);
 

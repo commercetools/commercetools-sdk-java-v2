@@ -28,7 +28,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     private java.util.List<String> removedImageUrls;
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(
@@ -38,7 +38,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *
+     *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
      */
 
     public ProductVariantDeletedMessagePayloadBuilder variant(

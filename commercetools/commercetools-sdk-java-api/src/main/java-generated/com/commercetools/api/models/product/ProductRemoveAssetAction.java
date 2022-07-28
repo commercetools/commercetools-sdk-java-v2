@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRemoveAssetAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,35 +29,35 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
     String REMOVE_ASSET = "removeAsset";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to remove.</p>
      */
 
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to remove.</p>
      */
 
     @JsonProperty("assetKey")

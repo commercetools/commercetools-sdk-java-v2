@@ -32,14 +32,14 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     String SET_META_DESCRIPTION = "setMetaDescription";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      */
 
     @JsonProperty("staged")

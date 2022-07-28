@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This mode specifies which type of prices should be used when looking up the price of a product.</p>
+ *  <p>This mode determines the type of Prices used for Product Price Selection as well as for LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum {
 
     /**
-    	<p>The API uses the prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">Product</a>.</p>
+    	<p>The API uses the Prices located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">ProductVariant</a>.</p>
 
     */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;

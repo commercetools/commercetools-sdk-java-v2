@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductChangeSlugAction
+ *  <p>Produces the ProductSlugChangedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, ModelBase {
@@ -47,7 +47,7 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
     }
 
     /**
-     *  <p>Every slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is <code>256</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -55,7 +55,7 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      */
 
     public Boolean getStaged() {

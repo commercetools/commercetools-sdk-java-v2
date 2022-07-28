@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRemoveVariantAction
+ *  <p>Either <code>id</code> or <code>sku</code> is required. Produces the ProductVariantDeletedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,21 +29,21 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     String REMOVE_VARIANT = "removeVariant";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to remove.</p>
      */
 
     @JsonProperty("id")
     public Long getId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to remove.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      */
 
     @JsonProperty("staged")

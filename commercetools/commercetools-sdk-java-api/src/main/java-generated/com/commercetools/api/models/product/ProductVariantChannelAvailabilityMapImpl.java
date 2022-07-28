@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -15,35 +14,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantChannelAvailabilityMap
+ *  <p>JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantChannelAvailabilityMap, ModelBase {
 
-    private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values;
-
     @JsonCreator
-    ProductVariantChannelAvailabilityMapImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values) {
-        this.values = values;
-    }
-
-    public ProductVariantChannelAvailabilityMapImpl() {
-    }
-
-    /**
-     *
-     */
-
-    public Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values() {
-        return values;
-    }
-
-    public void setValue(String key, com.commercetools.api.models.product.ProductVariantChannelAvailability value) {
-        if (values == null) {
-            values = new HashMap<>();
-        }
-        values.put(key, value);
+    ProductVariantChannelAvailabilityMapImpl() {
     }
 
     @Override
@@ -56,12 +33,12 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
 
         ProductVariantChannelAvailabilityMapImpl that = (ProductVariantChannelAvailabilityMapImpl) o;
 
-        return new EqualsBuilder().append(values, that.values).isEquals();
+        return new EqualsBuilder().isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(values).toHashCode();
+        return new HashCodeBuilder(17, 37).toHashCode();
     }
 
 }

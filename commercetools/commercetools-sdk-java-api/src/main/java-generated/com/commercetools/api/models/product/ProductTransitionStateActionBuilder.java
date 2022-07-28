@@ -30,7 +30,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     private Boolean force;
 
     /**
-     *
+     *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
      */
 
     public ProductTransitionStateActionBuilder state(
@@ -40,7 +40,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     *
+     *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
      */
 
     public ProductTransitionStateActionBuilder state(
@@ -50,7 +50,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, validations are disabled.</p>
      */
 
     public ProductTransitionStateActionBuilder force(@Nullable final Boolean force) {

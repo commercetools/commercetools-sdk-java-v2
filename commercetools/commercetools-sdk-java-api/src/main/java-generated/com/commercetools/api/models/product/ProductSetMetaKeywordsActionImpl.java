@@ -48,7 +48,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -56,7 +56,7 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
      */
 
     public Boolean getStaged() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddAssetAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBase {
@@ -58,7 +58,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -66,7 +66,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -82,7 +82,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     *
+     *  <p>Value to append.</p>
      */
 
     public com.commercetools.api.models.common.AssetDraft getAsset() {
@@ -90,7 +90,7 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
     }
 
     /**
-     *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+     *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
      */
 
     public Integer getPosition() {

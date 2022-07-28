@@ -30,7 +30,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     private Boolean staged;
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetMetaDescriptionActionBuilder metaDescription(
@@ -40,7 +40,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetMetaDescriptionActionBuilder metaDescription(
@@ -50,7 +50,7 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      */
 
     public ProductSetMetaDescriptionActionBuilder staged(@Nullable final Boolean staged) {

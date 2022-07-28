@@ -26,7 +26,7 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     /**
-     *
+     *  <p><code>All</code> or <code>Prices</code></p>
      */
 
     public ProductPublishActionBuilder scope(

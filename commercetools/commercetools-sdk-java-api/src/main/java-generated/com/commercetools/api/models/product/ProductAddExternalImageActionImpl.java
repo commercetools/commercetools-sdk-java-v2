@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddExternalImageAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAddedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddExternalImageActionImpl implements ProductAddExternalImageAction, ModelBase {
@@ -55,7 +55,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -63,7 +63,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -71,7 +71,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     *
+     *  <p>Value to add to <code>images</code>.</p>
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -79,7 +79,7 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      */
 
     public Boolean getStaged() {

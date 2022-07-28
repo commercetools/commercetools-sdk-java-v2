@@ -34,7 +34,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     *
+     *  <p>Value to set. Must not be empty.</p>
      */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      */
 
     @JsonProperty("staged")

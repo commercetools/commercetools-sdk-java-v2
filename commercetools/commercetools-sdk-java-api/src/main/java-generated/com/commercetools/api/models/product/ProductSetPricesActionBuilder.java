@@ -30,13 +30,13 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     @Nullable
     private String sku;
 
-    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
 
     @Nullable
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetPricesActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
@@ -54,29 +54,31 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductSetPricesActionBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
+    public ProductSetPricesActionBuilder prices(
+            final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductSetPricesActionBuilder prices(
-            final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+            final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
         this.prices = prices;
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductSetPricesActionBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
+    public ProductSetPricesActionBuilder plusPrices(
+            final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -85,31 +87,31 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductSetPricesActionBuilder plusPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductSetPricesActionBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      */
 
     public ProductSetPricesActionBuilder staged(@Nullable final Boolean staged) {
@@ -127,7 +129,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this.sku;
     }
 
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
         return this.prices;
     }
 

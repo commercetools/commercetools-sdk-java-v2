@@ -38,7 +38,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetImageLabelActionBuilder sku(@Nullable final String sku) {
@@ -47,7 +47,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetImageLabelActionBuilder variantId(@Nullable final Long variantId) {
@@ -56,7 +56,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     *  <p>The URL of the image to set the label.</p>
      */
 
     public ProductSetImageLabelActionBuilder imageUrl(final String imageUrl) {
@@ -65,7 +65,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
@@ -74,7 +74,7 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      */
 
     public ProductSetImageLabelActionBuilder staged(@Nullable final Boolean staged) {

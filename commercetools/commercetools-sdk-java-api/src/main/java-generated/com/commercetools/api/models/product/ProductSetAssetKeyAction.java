@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetAssetKeyAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,35 +32,35 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     String SET_ASSET_KEY = "setAssetKey";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
     @NotNull
     @JsonProperty("assetId")
     public String getAssetId();
 
     /**
-     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("assetKey")

@@ -30,7 +30,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     private Boolean staged;
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -40,7 +40,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public ProductSetSearchKeywordsActionBuilder searchKeywords(
@@ -50,7 +50,7 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      */
 
     public ProductSetSearchKeywordsActionBuilder staged(@Nullable final Boolean staged) {

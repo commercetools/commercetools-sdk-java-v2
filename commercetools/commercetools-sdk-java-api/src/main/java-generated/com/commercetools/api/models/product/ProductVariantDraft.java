@@ -9,14 +9,13 @@ import javax.validation.Valid;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantDraft
+ *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the ProductDraft.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,42 +31,42 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantDraft {
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
     @Valid
     @JsonProperty("prices")
-    public List<PriceDraft> getPrices();
+    public List<EmbeddedPriceDraft> getPrices();
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
     @Valid
     @JsonProperty("assets")
@@ -78,9 +77,9 @@ public interface ProductVariantDraft {
     public void setKey(final String key);
 
     @JsonIgnore
-    public void setPrices(final PriceDraft... prices);
+    public void setPrices(final EmbeddedPriceDraft... prices);
 
-    public void setPrices(final List<PriceDraft> prices);
+    public void setPrices(final List<EmbeddedPriceDraft> prices);
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);

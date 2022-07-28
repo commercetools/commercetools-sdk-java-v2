@@ -30,13 +30,13 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     @Nullable
     private String sku;
 
-    private com.commercetools.api.models.common.PriceDraft price;
+    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
 
     @Nullable
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductAddPriceActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductAddPriceActionBuilder sku(@Nullable final String sku) {
@@ -54,26 +54,26 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     *
+     *  <p>EmbeddedPrice to add to the Product Variant.</p>
      */
 
     public ProductAddPriceActionBuilder price(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build();
         return this;
     }
 
     /**
-     *
+     *  <p>EmbeddedPrice to add to the Product Variant.</p>
      */
 
-    public ProductAddPriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
+    public ProductAddPriceActionBuilder price(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
         this.price = price;
         return this;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
      */
 
     public ProductAddPriceActionBuilder staged(@Nullable final Boolean staged) {
@@ -91,7 +91,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
         return this.sku;
     }
 
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
+    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
         return this.price;
     }
 

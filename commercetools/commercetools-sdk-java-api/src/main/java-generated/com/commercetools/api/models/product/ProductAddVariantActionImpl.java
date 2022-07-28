@@ -26,7 +26,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     private String key;
 
-    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
 
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
@@ -38,7 +38,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
 
     @JsonCreator
     ProductAddVariantActionImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("staged") final Boolean staged,
@@ -66,7 +66,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public String getSku() {
@@ -74,7 +74,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public String getKey() {
@@ -82,15 +82,15 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
         return this.prices;
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -98,7 +98,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -106,7 +106,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     public Boolean getStaged() {
@@ -114,7 +114,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -129,11 +129,11 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
         this.key = key;
     }
 
-    public void setPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
+    public void setPrices(final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
         this.prices = prices;
     }
 

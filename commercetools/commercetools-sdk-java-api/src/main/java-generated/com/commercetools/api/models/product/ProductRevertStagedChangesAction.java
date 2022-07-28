@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductRevertStagedChangesAction
+ *  <p>Reverts the staged version of a Product to the current version. Produces the ProductRevertedStagedChangesMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ScopedPrice
+ *  <p>Scoped Price is contained in a ProductVariant which is returned in response to a Search Product Projection request when Price Selection is used.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,14 +37,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ScopedPrice extends com.commercetools.api.models.Customizable<ScopedPrice> {
 
     /**
-     *
+     *  <p>Platform-generated unique identifier of the Price.</p>
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Original value of the Price.</p>
      */
     @NotNull
     @Valid
@@ -52,7 +52,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     public TypedMoney getValue();
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      */
     @NotNull
     @Valid
@@ -60,7 +60,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     public TypedMoney getCurrentValue();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      */
 
     @JsonProperty("country")
@@ -81,28 +81,29 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     public ChannelReference getChannel();
 
     /**
-     *
+     *  <p>Date and time from which the Price is valid.</p>
      */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-     *
+     *  <p>Date and time until which the Price is valid.</p>
      */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-     *
+     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields for the Price.</p>
      */
     @Valid
     @JsonProperty("custom")

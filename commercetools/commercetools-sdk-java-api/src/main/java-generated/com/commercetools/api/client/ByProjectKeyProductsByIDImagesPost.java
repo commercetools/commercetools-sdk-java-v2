@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Uploads a binary image file to a given product variant. The supported image formats are JPEG, PNG and GIF.</p>
+ *  <p>Upload a JPEG, PNG and GIF file to a ProductVariant. The maximum file size of the image is 10MB. <code>variant</code> or <code>sku</code> is required to update a specific ProductVariant. The image is uploaded to the Master Variant if <code>variant</code> or <code>sku</code> are not included. Produces the ProductImageAddedMessage when the <code>Small</code> version of the image has been uploaded to the CDN.</p>
  *
  * <hr>
  * <div class=code-example>

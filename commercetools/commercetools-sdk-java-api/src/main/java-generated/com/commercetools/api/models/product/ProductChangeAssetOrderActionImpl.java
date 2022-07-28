@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductChangeAssetOrderAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrderAction, ModelBase {
@@ -54,7 +54,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -70,7 +70,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -78,7 +78,7 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
     }
 
     /**
-     *
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
      */
 
     public java.util.List<String> getAssetOrder() {

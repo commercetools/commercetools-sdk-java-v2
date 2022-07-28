@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantDraft
+ *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the ProductDraft.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
@@ -24,7 +24,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
 
     private String key;
 
-    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
@@ -34,7 +34,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
 
     @JsonCreator
     ProductVariantDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
-            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
+            @JsonProperty("prices") final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets) {
@@ -50,7 +50,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public String getSku() {
@@ -58,7 +58,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      */
 
     public String getKey() {
@@ -66,15 +66,15 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
         return this.prices;
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -82,7 +82,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -90,7 +90,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
@@ -105,11 +105,11 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
         this.key = key;
     }
 
-    public void setPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
+    public void setPrices(final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
     }
 
-    public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+    public void setPrices(final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
         this.prices = prices;
     }
 

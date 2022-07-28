@@ -59,7 +59,7 @@ public interface ProductPublishedMessage extends Message {
     public ProductProjection getProductProjection();
 
     /**
-     *
+     *  <p>The scope controls which part of the product information is published.</p>
      */
     @NotNull
     @JsonProperty("scope")

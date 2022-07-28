@@ -42,7 +42,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder variantId(@Nullable final Long variantId) {
@@ -51,7 +51,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder sku(@Nullable final String sku) {
@@ -60,7 +60,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder staged(@Nullable final Boolean staged) {
@@ -69,7 +69,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
@@ -78,7 +78,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
@@ -87,7 +87,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder description(
@@ -97,7 +97,7 @@ public class ProductSetAssetDescriptionActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public ProductSetAssetDescriptionActionBuilder description(

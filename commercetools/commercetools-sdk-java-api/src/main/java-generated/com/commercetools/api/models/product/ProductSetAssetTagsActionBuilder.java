@@ -41,7 +41,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     private java.util.List<String> tags;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetTagsActionBuilder variantId(@Nullable final Long variantId) {
@@ -50,7 +50,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetTagsActionBuilder sku(@Nullable final String sku) {
@@ -59,7 +59,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public ProductSetAssetTagsActionBuilder staged(@Nullable final Boolean staged) {
@@ -68,7 +68,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetTagsActionBuilder assetId(@Nullable final String assetId) {
@@ -77,7 +77,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
@@ -86,7 +86,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public ProductSetAssetTagsActionBuilder tags(@Nullable final String... tags) {
@@ -95,7 +95,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public ProductSetAssetTagsActionBuilder tags(@Nullable final java.util.List<String> tags) {
@@ -104,7 +104,7 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
     }
 
     /**
-     *
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      */
 
     public ProductSetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {

@@ -36,7 +36,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     private Boolean staged;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductAddExternalImageActionBuilder variantId(@Nullable final Long variantId) {
@@ -45,7 +45,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductAddExternalImageActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     *
+     *  <p>Value to add to <code>images</code>.</p>
      */
 
     public ProductAddExternalImageActionBuilder image(
@@ -64,7 +64,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     *
+     *  <p>Value to add to <code>images</code>.</p>
      */
 
     public ProductAddExternalImageActionBuilder image(final com.commercetools.api.models.common.Image image) {
@@ -73,7 +73,7 @@ public class ProductAddExternalImageActionBuilder implements Builder<ProductAddE
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      */
 
     public ProductAddExternalImageActionBuilder staged(@Nullable final Boolean staged) {

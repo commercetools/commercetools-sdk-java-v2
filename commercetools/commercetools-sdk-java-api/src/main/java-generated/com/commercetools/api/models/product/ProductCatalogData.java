@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductCatalogData
+ *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,14 +34,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductCatalogData {
 
     /**
-     *
+     *  <p><code>true</code> if the Product is published.</p>
      */
     @NotNull
     @JsonProperty("published")
     public Boolean getPublished();
 
     /**
-     *
+     *  <p>Current (published) data of the Product.</p>
      */
     @NotNull
     @Valid
@@ -49,7 +49,7 @@ public interface ProductCatalogData {
     public ProductData getCurrent();
 
     /**
-     *
+     *  <p>Staged (unpublished) data of the Product.</p>
      */
     @NotNull
     @Valid
@@ -57,7 +57,7 @@ public interface ProductCatalogData {
     public ProductData getStaged();
 
     /**
-     *
+     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
      */
     @NotNull
     @JsonProperty("hasStagedChanges")

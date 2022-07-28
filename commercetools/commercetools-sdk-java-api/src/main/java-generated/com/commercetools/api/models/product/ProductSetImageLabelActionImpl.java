@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetImageLabelAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetImageLabelActionImpl implements ProductSetImageLabelAction, ModelBase {
@@ -57,7 +57,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -65,7 +65,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -73,7 +73,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *  <p>The URL of the image.</p>
+     *  <p>The URL of the image to set the label.</p>
      */
 
     public String getImageUrl() {
@@ -81,7 +81,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getLabel() {
@@ -89,7 +89,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      */
 
     public Boolean getStaged() {

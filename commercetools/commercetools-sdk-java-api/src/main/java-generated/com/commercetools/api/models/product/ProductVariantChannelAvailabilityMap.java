@@ -5,23 +5,19 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductVariantChannelAvailabilityMap
+ *  <p>JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailabilityMap productVariantChannelAvailabilityMap = ProductVariantChannelAvailabilityMap.builder()
- *             .//(//Builder -> //Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,17 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantChannelAvailabilityMapImpl.class)
 public interface ProductVariantChannelAvailabilityMap {
-
-    /**
-     *
-     */
-    @NotNull
-    @Valid
-    @JsonAnyGetter
-    public Map<String, ProductVariantChannelAvailability> values();
-
-    @JsonAnySetter
-    public void setValue(String key, ProductVariantChannelAvailability value);
 
     public static ProductVariantChannelAvailabilityMap of() {
         return new ProductVariantChannelAvailabilityMapImpl();

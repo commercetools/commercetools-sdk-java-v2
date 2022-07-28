@@ -72,7 +72,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The current version of the product.</p>
+     *  <p>Current version of the Product.</p>
      */
 
     public ProductBuilder version(final Long version) {
@@ -81,7 +81,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was initially created.</p>
      */
 
     public ProductBuilder createdAt(final java.time.ZonedDateTime createdAt) {
@@ -90,7 +90,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was last updated.</p>
      */
 
     public ProductBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
@@ -138,7 +138,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
      */
 
     public ProductBuilder key(@Nullable final String key) {
@@ -147,7 +148,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      */
 
     public ProductBuilder productType(
@@ -158,7 +159,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      */
 
     public ProductBuilder productType(
@@ -168,7 +169,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The product data in the master catalog.</p>
+     *  <p>Contains the current and the staged representation of the product information.</p>
      */
 
     public ProductBuilder masterData(
@@ -178,7 +179,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>The product data in the master catalog.</p>
+     *  <p>Contains the current and the staged representation of the product information.</p>
      */
 
     public ProductBuilder masterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {
@@ -187,7 +188,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>The TaxCategory of the Product.</p>
      */
 
     public ProductBuilder taxCategory(
@@ -198,7 +199,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>The TaxCategory of the Product.</p>
      */
 
     public ProductBuilder taxCategory(
@@ -208,7 +209,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>State of the Product.</p>
      */
 
     public ProductBuilder state(
@@ -218,7 +219,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *
+     *  <p>State of the Product.</p>
      */
 
     public ProductBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
@@ -227,7 +228,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     *  <p>Review statistics of the Product.</p>
      */
 
     public ProductBuilder reviewRatingStatistics(
@@ -239,7 +240,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     *  <p>Review statistics of the Product.</p>
      */
 
     public ProductBuilder reviewRatingStatistics(
@@ -249,7 +250,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Type of Price to be used when looking up a price for the Product.</p>
      */
 
     public ProductBuilder priceMode(

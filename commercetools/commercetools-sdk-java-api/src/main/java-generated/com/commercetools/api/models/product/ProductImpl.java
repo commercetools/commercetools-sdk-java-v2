@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Product
+ *  <p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImpl implements Product, ModelBase {
@@ -86,7 +86,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>The current version of the product.</p>
+     *  <p>Current version of the Product.</p>
      */
 
     public Long getVersion() {
@@ -94,7 +94,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -102,7 +102,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -126,7 +126,8 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
      */
 
     public String getKey() {
@@ -134,7 +135,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -142,7 +143,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>The product data in the master catalog.</p>
+     *  <p>Contains the current and the staged representation of the product information.</p>
      */
 
     public com.commercetools.api.models.product.ProductCatalogData getMasterData() {
@@ -150,7 +151,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *
+     *  <p>The TaxCategory of the Product.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -158,7 +159,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Product.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -166,7 +167,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     *  <p>Review statistics of the Product.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
@@ -174,7 +175,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Type of Price to be used when looking up a price for the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

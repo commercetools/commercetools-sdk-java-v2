@@ -48,7 +48,7 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -56,7 +56,7 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      */
 
     public Boolean getStaged() {

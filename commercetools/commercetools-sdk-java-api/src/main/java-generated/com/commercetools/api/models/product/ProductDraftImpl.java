@@ -96,7 +96,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>A predefined product type assigned to the product. All products must have a product type.</p>
+     *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType() {
@@ -104,7 +104,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Product.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -112,7 +112,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -128,7 +128,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Product.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -136,7 +136,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Categories assigned to the product.</p>
+     *  <p>Categories assigned to the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> getCategories() {
@@ -144,7 +144,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -152,7 +152,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Product displayed in search results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -160,7 +160,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the Product displayed in search results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -168,7 +168,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -176,7 +176,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {
@@ -184,7 +184,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>An array of related product variants.</p>
+     *  <p>The additional Product Variants for the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariantDraft> getVariants() {
@@ -192,7 +192,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Tax Category to be assigned to the Product.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -200,7 +200,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -208,7 +208,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>State to be assigned to the Product.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -216,7 +216,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the product is published immediately.</p>
+     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
      */
 
     public Boolean getPublish() {
@@ -224,7 +224,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Specifies the type of prices used when looking up a price for the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

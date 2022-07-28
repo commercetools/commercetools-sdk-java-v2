@@ -26,7 +26,7 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
      */
 
     public ProductSetPriceModeActionBuilder priceMode(

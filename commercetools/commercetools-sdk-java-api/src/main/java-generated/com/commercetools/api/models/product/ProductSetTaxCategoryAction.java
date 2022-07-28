@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSetTaxCategoryAction
+ *  <p>Cannot be staged. Published Products are immediately updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     String SET_TAX_CATEGORY = "setTaxCategory";
 
     /**
-     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      */
     @Valid
     @JsonProperty("taxCategory")

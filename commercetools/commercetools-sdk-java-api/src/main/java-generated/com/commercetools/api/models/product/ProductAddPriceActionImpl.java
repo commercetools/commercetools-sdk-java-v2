@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductAddPriceAction
+ *  <p>Adds the given Price to the <code>prices</code> array of the ProductVariant. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBase {
@@ -26,13 +26,13 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
 
     private String sku;
 
-    private com.commercetools.api.models.common.PriceDraft price;
+    private com.commercetools.api.models.product.EmbeddedPriceDraft price;
 
     private Boolean staged;
 
     @JsonCreator
     ProductAddPriceActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
+            @JsonProperty("price") final com.commercetools.api.models.product.EmbeddedPriceDraft price,
             @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.sku = sku;
@@ -54,7 +54,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public Long getVariantId() {
@@ -62,7 +62,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public String getSku() {
@@ -70,15 +70,15 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
     }
 
     /**
-     *
+     *  <p>EmbeddedPrice to add to the Product Variant.</p>
      */
 
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
+    public com.commercetools.api.models.product.EmbeddedPriceDraft getPrice() {
         return this.price;
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
      */
 
     public Boolean getStaged() {
@@ -93,7 +93,7 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
         this.sku = sku;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
+    public void setPrice(final com.commercetools.api.models.product.EmbeddedPriceDraft price) {
         this.price = price;
     }
 

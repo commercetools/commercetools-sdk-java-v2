@@ -54,7 +54,7 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
      */
 
     public String getPriceId() {
@@ -62,7 +62,7 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      */
 
     public Boolean getStaged() {

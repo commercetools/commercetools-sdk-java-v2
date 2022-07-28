@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductUnpublishAction
+ *  <p>Removes the current projection of the Product. The staged projection is unaffected. Unpublished Products only appear in query/search results with <code>staged=false</code>. Produces the ProductUnpublishedMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishActionImpl implements ProductUnpublishAction, ModelBase {

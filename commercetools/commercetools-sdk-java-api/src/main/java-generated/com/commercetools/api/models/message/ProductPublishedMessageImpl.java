@@ -186,7 +186,7 @@ public class ProductPublishedMessageImpl implements ProductPublishedMessage, Mod
     }
 
     /**
-     *
+     *  <p>The scope controls which part of the product information is published.</p>
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

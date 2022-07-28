@@ -30,7 +30,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Image> images;
@@ -45,7 +45,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     private java.util.List<com.commercetools.api.models.common.Asset> assets;
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public ProductAddVariantActionBuilder sku(@Nullable final String sku) {
@@ -54,7 +54,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique.</p>
      */
 
     public ProductAddVariantActionBuilder key(@Nullable final String key) {
@@ -63,31 +63,31 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder prices(
-            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+            @Nullable final java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> prices) {
         this.prices = prices;
         return this;
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusPrices(
-            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+            @Nullable final com.commercetools.api.models.product.EmbeddedPriceDraft... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -96,31 +96,31 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>EmbeddedPrices for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceDraftBuilder, com.commercetools.api.models.product.EmbeddedPriceDraftBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceDraftBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -129,7 +129,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder images(
@@ -139,7 +139,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -152,7 +152,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusImages(
@@ -165,7 +165,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder withImages(
@@ -176,7 +176,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -186,7 +186,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder attributes(
@@ -196,7 +196,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -209,7 +209,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusAttributes(
@@ -222,7 +222,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Attributes for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder withAttributes(
@@ -233,7 +233,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     public ProductAddVariantActionBuilder staged(@Nullable final Boolean staged) {
@@ -242,7 +242,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -251,7 +251,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder assets(
@@ -261,7 +261,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -274,7 +274,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder plusAssets(
@@ -287,7 +287,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public ProductAddVariantActionBuilder withAssets(
@@ -308,7 +308,7 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPriceDraft> getPrices() {
         return this.prices;
     }
 

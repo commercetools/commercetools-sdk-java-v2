@@ -33,7 +33,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private String key;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.Price> prices;
+    private java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
@@ -60,7 +60,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     private Boolean scopedPriceDiscounted;
 
     /**
-     *  <p>A unique, sequential identifier of the ProductVariant within the Product.</p>
+     *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      */
 
     public ProductVariantBuilder id(final Long id) {
@@ -69,7 +69,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public ProductVariantBuilder sku(@Nullable final String sku) {
@@ -78,7 +78,8 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>This is different from Product <code>key</code>.</p>
      */
 
     public ProductVariantBuilder key(@Nullable final String key) {
@@ -87,29 +88,30 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.common.Price... prices) {
+    public ProductVariantBuilder prices(@Nullable final com.commercetools.api.models.product.EmbeddedPrice... prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Price> prices) {
+            @Nullable final java.util.List<com.commercetools.api.models.product.EmbeddedPrice> prices) {
         this.prices = prices;
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
-    public ProductVariantBuilder plusPrices(@Nullable final com.commercetools.api.models.common.Price... prices) {
+    public ProductVariantBuilder plusPrices(
+            @Nullable final com.commercetools.api.models.product.EmbeddedPrice... prices) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
@@ -118,31 +120,31 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantBuilder plusPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceBuilder, com.commercetools.api.models.product.EmbeddedPriceBuilder> builder) {
         if (this.prices == null) {
             this.prices = new ArrayList<>();
         }
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public ProductVariantBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+            Function<com.commercetools.api.models.product.EmbeddedPriceBuilder, com.commercetools.api.models.product.EmbeddedPriceBuilder> builder) {
         this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        this.prices.add(builder.apply(com.commercetools.api.models.product.EmbeddedPriceBuilder.of()).build());
         return this;
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public ProductVariantBuilder attributes(
@@ -152,7 +154,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public ProductVariantBuilder attributes(
@@ -162,7 +164,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -175,7 +177,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusAttributes(
@@ -188,7 +190,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Attributes of the Product Variant.</p>
      */
 
     public ProductVariantBuilder withAttributes(
@@ -199,7 +201,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      */
 
     public ProductVariantBuilder price(
@@ -209,7 +211,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      */
 
     public ProductVariantBuilder price(@Nullable final com.commercetools.api.models.common.Price price) {
@@ -218,7 +220,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public ProductVariantBuilder images(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -227,7 +229,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public ProductVariantBuilder images(
@@ -237,7 +239,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusImages(@Nullable final com.commercetools.api.models.common.Image... images) {
@@ -249,7 +251,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusImages(
@@ -262,7 +264,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Images of the Product Variant.</p>
      */
 
     public ProductVariantBuilder withImages(
@@ -273,7 +275,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public ProductVariantBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -282,7 +284,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public ProductVariantBuilder assets(
@@ -292,7 +294,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
@@ -304,7 +306,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public ProductVariantBuilder plusAssets(
@@ -317,7 +319,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Media assets of the Product Variant.</p>
      */
 
     public ProductVariantBuilder withAssets(
@@ -328,7 +330,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      */
 
     public ProductVariantBuilder availability(
@@ -339,7 +341,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      */
 
     public ProductVariantBuilder availability(
@@ -349,7 +351,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
      */
 
     public ProductVariantBuilder isMatchingVariant(@Nullable final Boolean isMatchingVariant) {
@@ -358,7 +360,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -368,7 +370,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
      */
 
     public ProductVariantBuilder scopedPrice(
@@ -378,7 +380,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *
+     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
      */
 
     public ProductVariantBuilder scopedPriceDiscounted(@Nullable final Boolean scopedPriceDiscounted) {
@@ -401,7 +403,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
+    public java.util.List<com.commercetools.api.models.product.EmbeddedPrice> getPrices() {
         return this.prices;
     }
 

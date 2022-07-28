@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ScopedPrice
+ *  <p>Scoped Price is contained in a ProductVariant which is returned in response to a Search Product Projection request when Price Selection is used.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScopedPriceImpl implements ScopedPrice, ModelBase {
@@ -67,7 +67,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Platform-generated unique identifier of the Price.</p>
      */
 
     public String getId() {
@@ -75,7 +75,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>Original value of the Price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getValue() {
@@ -83,7 +83,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getCurrentValue() {
@@ -91,7 +91,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -115,7 +115,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time from which the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -123,7 +123,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time until which the Price is valid.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -131,7 +131,8 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Is set if a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -139,7 +140,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     *  <p>Custom Fields for the Price.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductAddExternalImageAction
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required. Produces the ProductImageAddedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,21 +34,21 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     String ADD_EXTERNAL_IMAGE = "addExternalImage";
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     @JsonProperty("sku")
     public String getSku();
 
     /**
-     *
+     *  <p>Value to add to <code>images</code>.</p>
      */
     @NotNull
     @Valid
@@ -56,7 +56,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public Image getImage();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
      */
 
     @JsonProperty("staged")

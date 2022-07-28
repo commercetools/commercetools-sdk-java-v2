@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the full representation of a product by ID.</p>
+ *  <p>If Price selection query parameters are provided, the selected Prices are added to the response.</p>
  *
  * <hr>
  * <div class=code-example>

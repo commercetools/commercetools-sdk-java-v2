@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductSetPriceModeAction
+ *  <p>Controls whether the Prices of a Product Variant are embedded into the Product or standalone.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction, ModelBase {
@@ -44,7 +44,7 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
     }
 
     /**
-     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {

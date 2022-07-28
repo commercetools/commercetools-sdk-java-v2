@@ -32,21 +32,21 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
-     *
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
      */
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();
 
     /**
-     *
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
      */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      */
 
     @JsonProperty("staged")

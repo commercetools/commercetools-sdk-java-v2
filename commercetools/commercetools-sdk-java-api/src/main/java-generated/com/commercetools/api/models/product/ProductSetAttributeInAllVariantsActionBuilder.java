@@ -32,7 +32,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     private Boolean staged;
 
     /**
-     *
+     *  <p>The name of the Attribute to set.</p>
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder name(final String name) {
@@ -41,7 +41,16 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>The same update behavior as for Set Attribute applies.</p>
+     *  <p>Value to set for the Attributes. If empty, any existing value will be removed.</p>
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
@@ -50,7 +59,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      */
 
     public ProductSetAttributeInAllVariantsActionBuilder staged(@Nullable final Boolean staged) {

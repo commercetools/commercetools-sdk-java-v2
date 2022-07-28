@@ -44,7 +44,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     private java.lang.Object value;
 
     /**
-     *
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
@@ -53,7 +53,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
      */
 
     public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
@@ -62,7 +62,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      */
 
     public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
@@ -71,7 +71,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>id</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
@@ -80,7 +80,7 @@ public class ProductSetAssetCustomFieldActionBuilder implements Builder<ProductS
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the Asset to update.</p>
      */
 
     public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {

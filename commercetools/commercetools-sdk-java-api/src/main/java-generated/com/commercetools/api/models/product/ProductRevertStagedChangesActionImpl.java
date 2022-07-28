@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductRevertStagedChangesAction
+ *  <p>Reverts the staged version of a Product to the current version. Produces the ProductRevertedStagedChangesMessage.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRevertStagedChangesActionImpl implements ProductRevertStagedChangesAction, ModelBase {

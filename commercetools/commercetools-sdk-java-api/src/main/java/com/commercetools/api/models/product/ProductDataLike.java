@@ -9,6 +9,7 @@ import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.MetaAttributes;
 import com.commercetools.api.models.common.WithLocalizedSlug;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Interface to describe commonalities between differen product representations
@@ -60,6 +61,7 @@ public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {
      * @see #getVariants()
      * @return all variants
      */
+    @JsonIgnore
     default List<ProductVariant> getAllVariants() {
         return ProductsPackage.getAllVariants(this);
     }

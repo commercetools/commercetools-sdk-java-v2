@@ -48,7 +48,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
-    private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
+    private java.util.List<String> discountCodes;
 
     @JsonCreator
     MyCartDraftImpl(@JsonProperty("currency") final String currency,
@@ -64,7 +64,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
-            @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+            @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
         this.currency = currency;
         this.customerEmail = customerEmail;
         this.country = country;
@@ -198,10 +198,10 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>The code of existing DiscountCodes.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
+    public java.util.List<String> getDiscountCodes() {
         return this.discountCodes;
     }
 
@@ -272,12 +272,11 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.store = store;
     }
 
-    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+    public void setDiscountCodes(final String... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
 
-    public void setDiscountCodes(
-            final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+    public void setDiscountCodes(final java.util.List<String> discountCodes) {
         this.discountCodes = discountCodes;
     }
 

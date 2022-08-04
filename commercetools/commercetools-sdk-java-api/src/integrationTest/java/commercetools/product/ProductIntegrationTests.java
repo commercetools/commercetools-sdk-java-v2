@@ -120,18 +120,20 @@ public class ProductIntegrationTests {
     @Test
     public void searchBySku() {
         withTaxCategory(
-                taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
-                    Product product = createProduct(productType, category, taxCategory);
-            ProductProjectionPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
-                    .productProjections()
-                    .search()
-                    .get().withStaged(true)
-                    .withQueryParam("sku", product.getMasterData().getCurrent().getMasterVariant().getSku() )
-                    .withLimit(1)
-                    .executeBlocking()
-                    .getBody();
-            Assertions.assertEquals(response.getResults().get(0).getMasterVariant().getSku(), product.getMasterData().getCurrent().getMasterVariant().getSku());
-        })));
+            taxCategory -> withCategory(category -> withProductType(createProductTypeDraft(), productType -> {
+                Product product = createProduct(productType, category, taxCategory);
+                ProductProjectionPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withStaged(true)
+                        .withQueryParam("sku", product.getMasterData().getCurrent().getMasterVariant().getSku())
+                        .withLimit(1)
+                        .executeBlocking()
+                        .getBody();
+                Assertions.assertEquals(response.getResults().get(0).getMasterVariant().getSku(),
+                    product.getMasterData().getCurrent().getMasterVariant().getSku());
+            })));
     }
 
     @Test

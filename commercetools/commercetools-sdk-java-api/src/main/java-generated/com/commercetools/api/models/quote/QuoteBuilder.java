@@ -116,6 +116,9 @@ public class QuoteBuilder implements Builder<Quote> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
     /**
      *  <p>Unique identifier of the Quote.</p>
      */
@@ -741,6 +744,25 @@ public class QuoteBuilder implements Builder<Quote> {
         return this;
     }
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -884,6 +906,11 @@ public class QuoteBuilder implements Builder<Quote> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public Quote build() {
         Objects.requireNonNull(id, Quote.class + ": id is missing");
         Objects.requireNonNull(version, Quote.class + ": version is missing");
@@ -900,7 +927,8 @@ public class QuoteBuilder implements Builder<Quote> {
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,
             stagedQuote, customer, customerGroup, validTo, sellerComment, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom);
+            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
+            state);
     }
 
     /**
@@ -910,7 +938,8 @@ public class QuoteBuilder implements Builder<Quote> {
         return new QuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, quoteRequest,
             stagedQuote, customer, customerGroup, validTo, sellerComment, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom);
+            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
+            state);
     }
 
     public static QuoteBuilder of() {
@@ -950,6 +979,7 @@ public class QuoteBuilder implements Builder<Quote> {
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.directDiscounts = template.getDirectDiscounts();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

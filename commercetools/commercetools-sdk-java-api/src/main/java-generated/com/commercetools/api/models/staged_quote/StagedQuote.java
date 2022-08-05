@@ -15,6 +15,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.quote_request.QuoteRequestReference;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -144,6 +145,13 @@ public interface StagedQuote extends BaseResource {
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -172,6 +180,8 @@ public interface StagedQuote extends BaseResource {
 
     public void setCustom(final CustomFields custom);
 
+    public void setState(final StateReference state);
+
     public static StagedQuote of() {
         return new StagedQuoteImpl();
     }
@@ -192,6 +202,7 @@ public interface StagedQuote extends BaseResource {
         instance.setValidTo(template.getValidTo());
         instance.setSellerComment(template.getSellerComment());
         instance.setCustom(template.getCustom());
+        instance.setState(template.getState());
         return instance;
     }
 

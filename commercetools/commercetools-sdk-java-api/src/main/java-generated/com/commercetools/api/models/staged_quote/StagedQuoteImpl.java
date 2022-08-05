@@ -48,6 +48,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     StagedQuoteImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -61,7 +63,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
             @JsonProperty("quotationCart") final com.commercetools.api.models.cart.CartReference quotationCart,
             @JsonProperty("validTo") final java.time.ZonedDateTime validTo,
             @JsonProperty("sellerComment") final String sellerComment,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +79,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.validTo = validTo;
         this.sellerComment = sellerComment;
         this.custom = custom;
+        this.state = state;
     }
 
     public StagedQuoteImpl() {
@@ -193,6 +197,14 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -249,6 +261,10 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -273,6 +289,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(validTo, that.validTo)
                 .append(sellerComment, that.sellerComment)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -292,6 +309,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(validTo)
                 .append(sellerComment)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

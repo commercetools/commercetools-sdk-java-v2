@@ -35,6 +35,9 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
     /**
      *  <p>The QuoteRequest from which this StagedQuote is created.</p>
      */
@@ -102,6 +105,25 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
         return this;
     }
 
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public StagedQuoteDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public StagedQuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier getQuoteRequest() {
         return this.quoteRequest;
     }
@@ -120,17 +142,22 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public StagedQuoteDraft build() {
         Objects.requireNonNull(quoteRequest, StagedQuoteDraft.class + ": quoteRequest is missing");
         Objects.requireNonNull(quoteRequestVersion, StagedQuoteDraft.class + ": quoteRequestVersion is missing");
-        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom);
+        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom, state);
     }
 
     /**
      * builds StagedQuoteDraft without checking for non null required values
      */
     public StagedQuoteDraft buildUnchecked() {
-        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom);
+        return new StagedQuoteDraftImpl(quoteRequest, quoteRequestVersion, key, custom, state);
     }
 
     public static StagedQuoteDraftBuilder of() {
@@ -143,6 +170,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
         builder.quoteRequestVersion = template.getQuoteRequestVersion();
         builder.key = template.getKey();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

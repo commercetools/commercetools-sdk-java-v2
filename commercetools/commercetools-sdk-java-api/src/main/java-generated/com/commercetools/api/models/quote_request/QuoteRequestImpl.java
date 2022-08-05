@@ -78,6 +78,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     QuoteRequestImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -106,7 +108,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -136,6 +139,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
         this.directDiscounts = directDiscounts;
         this.custom = custom;
+        this.state = state;
     }
 
     public QuoteRequestImpl() {
@@ -373,6 +377,14 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -510,6 +522,10 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -549,6 +565,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -583,6 +600,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(itemShippingAddresses)
                 .append(directDiscounts)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

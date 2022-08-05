@@ -28,15 +28,19 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.state.StateReference state;
+
     @JsonCreator
     StagedQuoteDraftImpl(
             @JsonProperty("quoteRequest") final com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier quoteRequest,
             @JsonProperty("quoteRequestVersion") final Long quoteRequestVersion, @JsonProperty("key") final String key,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.quoteRequest = quoteRequest;
         this.quoteRequestVersion = quoteRequestVersion;
         this.key = key;
         this.custom = custom;
+        this.state = state;
     }
 
     public StagedQuoteDraftImpl() {
@@ -78,6 +82,14 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public void setQuoteRequest(
             final com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier quoteRequest) {
         this.quoteRequest = quoteRequest;
@@ -95,6 +107,10 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -109,6 +125,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
                 .append(quoteRequestVersion, that.quoteRequestVersion)
                 .append(key, that.key)
                 .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -118,6 +135,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
                 .append(quoteRequestVersion)
                 .append(key)
                 .append(custom)
+                .append(state)
                 .toHashCode();
     }
 

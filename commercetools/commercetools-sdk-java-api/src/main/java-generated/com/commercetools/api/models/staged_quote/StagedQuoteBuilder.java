@@ -65,6 +65,9 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
     /**
      *  <p>The unique ID of the StagedQuote.</p>
      */
@@ -256,6 +259,25 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         return this;
     }
 
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public StagedQuoteBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of this Staged Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public StagedQuoteBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -319,6 +341,11 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public StagedQuote build() {
         Objects.requireNonNull(id, StagedQuote.class + ": id is missing");
         Objects.requireNonNull(version, StagedQuote.class + ": version is missing");
@@ -328,7 +355,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         Objects.requireNonNull(quoteRequest, StagedQuote.class + ": quoteRequest is missing");
         Objects.requireNonNull(quotationCart, StagedQuote.class + ": quotationCart is missing");
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
-            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom);
+            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state);
     }
 
     /**
@@ -336,7 +363,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
      */
     public StagedQuote buildUnchecked() {
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
-            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom);
+            stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state);
     }
 
     public static StagedQuoteBuilder of() {
@@ -359,6 +386,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         builder.validTo = template.getValidTo();
         builder.sellerComment = template.getSellerComment();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

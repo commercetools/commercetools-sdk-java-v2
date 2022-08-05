@@ -27,6 +27,7 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.order.PaymentInfo;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -269,6 +270,13 @@ public interface QuoteRequest extends BaseResource {
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -339,6 +347,8 @@ public interface QuoteRequest extends BaseResource {
 
     public void setCustom(final CustomFields custom);
 
+    public void setState(final StateReference state);
+
     public static QuoteRequest of() {
         return new QuoteRequestImpl();
     }
@@ -374,6 +384,7 @@ public interface QuoteRequest extends BaseResource {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDirectDiscounts(template.getDirectDiscounts());
         instance.setCustom(template.getCustom());
+        instance.setState(template.getState());
         return instance;
     }
 

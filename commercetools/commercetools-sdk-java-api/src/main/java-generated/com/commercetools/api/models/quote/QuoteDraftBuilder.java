@@ -35,6 +35,9 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.state.StateReference state;
+
     /**
      *  <p>The StagedQuote from which this Quote is created.</p>
      */
@@ -102,6 +105,25 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this;
     }
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteDraftBuilder state(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public QuoteDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
+        return this;
+    }
+
     public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {
         return this.stagedQuote;
     }
@@ -120,17 +142,22 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this.custom;
     }
 
+    @Nullable
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
     public QuoteDraft build() {
         Objects.requireNonNull(stagedQuote, QuoteDraft.class + ": stagedQuote is missing");
         Objects.requireNonNull(stagedQuoteVersion, QuoteDraft.class + ": stagedQuoteVersion is missing");
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom);
+        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom, state);
     }
 
     /**
      * builds QuoteDraft without checking for non null required values
      */
     public QuoteDraft buildUnchecked() {
-        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom);
+        return new QuoteDraftImpl(stagedQuote, stagedQuoteVersion, key, custom, state);
     }
 
     public static QuoteDraftBuilder of() {
@@ -143,6 +170,7 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         builder.stagedQuoteVersion = template.getStagedQuoteVersion();
         builder.key = template.getKey();
         builder.custom = template.getCustom();
+        builder.state = template.getState();
         return builder;
     }
 

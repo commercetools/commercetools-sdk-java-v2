@@ -23,6 +23,10 @@ public class QuoteRequestUpdateActionBuilder {
         return com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionBuilder.of();
+    }
+
     public static QuoteRequestUpdateActionBuilder of() {
         return new QuoteRequestUpdateActionBuilder();
     }

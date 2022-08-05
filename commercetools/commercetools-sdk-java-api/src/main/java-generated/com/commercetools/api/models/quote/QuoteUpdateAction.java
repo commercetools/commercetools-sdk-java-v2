@@ -28,7 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeQuoteStateActionImpl.class, name = QuoteChangeQuoteStateAction.CHANGE_QUOTE_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomFieldActionImpl.class, name = QuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl.class, name = QuoteSetCustomTypeAction.SET_CUSTOM_TYPE) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomTypeActionImpl.class, name = QuoteSetCustomTypeAction.SET_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteTransitionStateActionImpl.class, name = QuoteTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = QuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = QuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -51,6 +52,10 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
 
     public static com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.quote.QuoteSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder.of();
     }
 
     default <T> T withQuoteUpdateAction(Function<QuoteUpdateAction, T> helper) {

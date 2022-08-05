@@ -375,8 +375,16 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.QuoteRequestStateChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteRequestStateTransitionMessageBuilder quoteRequestStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestStateTransitionMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteStateChangedMessageBuilder quoteStateChangedBuilder() {
         return com.commercetools.api.models.message.QuoteStateChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder quoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ReviewCreatedMessageBuilder reviewCreatedBuilder() {
@@ -405,6 +413,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StagedQuoteStateChangedMessageBuilder stagedQuoteStateChangedBuilder() {
         return com.commercetools.api.models.message.StagedQuoteStateChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StagedQuoteStateTransitionMessageBuilder stagedQuoteStateTransitionBuilder() {
+        return com.commercetools.api.models.message.StagedQuoteStateTransitionMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.StagedQuoteValidToSetMessageBuilder stagedQuoteValidToSetBuilder() {

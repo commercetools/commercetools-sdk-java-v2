@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldActionImpl.class, name = StagedQuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeActionImpl.class, name = StagedQuoteSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentActionImpl.class, name = StagedQuoteSetSellerCommentAction.SET_SELLER_COMMENT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionImpl.class, name = StagedQuoteSetValidToAction.SET_VALID_TO) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionImpl.class, name = StagedQuoteSetValidToAction.SET_VALID_TO),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionImpl.class, name = StagedQuoteTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StagedQuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StagedQuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -62,6 +63,10 @@ public interface StagedQuoteUpdateAction
 
     public static com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionBuilder setValidToBuilder() {
         return com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionBuilder.of();
     }
 
     default <T> T withStagedQuoteUpdateAction(Function<StagedQuoteUpdateAction, T> helper) {

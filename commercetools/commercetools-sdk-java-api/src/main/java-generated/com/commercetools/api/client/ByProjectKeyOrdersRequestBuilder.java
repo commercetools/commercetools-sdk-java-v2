@@ -27,6 +27,10 @@ public class ByProjectKeyOrdersRequestBuilder {
         return new ByProjectKeyOrdersImportRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyOrdersQuotesRequestBuilder orderQuote() {
+        return new ByProjectKeyOrdersQuotesRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder withOrderNumber(String orderNumber) {
         return new ByProjectKeyOrdersOrderNumberByOrderNumberRequestBuilder(apiHttpClient, projectKey, orderNumber);
     }

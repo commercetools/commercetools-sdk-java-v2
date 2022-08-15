@@ -134,6 +134,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadImpl.class, name = StandalonePriceDeletedMessagePayload.STANDALONE_PRICE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadImpl.class, name = StandalonePriceDiscountSetMessagePayload.STANDALONE_PRICE_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadImpl.class, name = StandalonePriceExternalDiscountSetMessagePayload.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadImpl.class, name = StandalonePriceStagedChangesAppliedMessagePayload.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadImpl.class, name = StandalonePriceValueChangedMessagePayload.STANDALONE_PRICE_VALUE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCreatedMessagePayloadImpl.class, name = StoreCreatedMessagePayload.STORE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreDeletedMessagePayloadImpl.class, name = StoreDeletedMessagePayload.STORE_DELETED),
@@ -581,6 +582,10 @@ public interface MessagePayload {
 
     public static com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder standalonePriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+
+    public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
 
     public static com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {

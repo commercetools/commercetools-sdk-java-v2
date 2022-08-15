@@ -443,6 +443,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }

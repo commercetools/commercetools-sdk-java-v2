@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Produces the StandalonePriceValueChangedMessage.</p>
+ *  <p>Updating the value of a StandalonePrice produces the StandalonePriceValueChangedMessage.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,16 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     @JsonProperty("value")
     public Money getValue();
 
+    /**
+     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     */
+
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
     public void setValue(final Money value);
+
+    public void setStaged(final Boolean staged);
 
     public static StandalonePriceChangeValueAction of() {
         return new StandalonePriceChangeValueActionImpl();
@@ -50,6 +59,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     public static StandalonePriceChangeValueAction of(final StandalonePriceChangeValueAction template) {
         StandalonePriceChangeValueActionImpl instance = new StandalonePriceChangeValueActionImpl();
         instance.setValue(template.getValue());
+        instance.setStaged(template.getStaged());
         return instance;
     }
 

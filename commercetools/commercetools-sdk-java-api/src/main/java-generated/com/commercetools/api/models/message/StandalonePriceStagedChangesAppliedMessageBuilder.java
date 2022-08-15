@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StandalonePriceValueChangedMessageBuilder
+ * StandalonePriceStagedChangesAppliedMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     StandalonePriceValueChangedMessage standalonePriceValueChangedMessage = StandalonePriceValueChangedMessage.builder()
+ *     StandalonePriceStagedChangesAppliedMessage standalonePriceStagedChangesAppliedMessage = StandalonePriceStagedChangesAppliedMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -23,14 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .value(valueBuilder -> valueBuilder)
- *             .staged(true)
+ *             .stagedChanges(stagedChangesBuilder -> stagedChangesBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StandalonePriceValueChangedMessageBuilder implements Builder<StandalonePriceValueChangedMessage> {
+public class StandalonePriceStagedChangesAppliedMessageBuilder
+        implements Builder<StandalonePriceStagedChangesAppliedMessage> {
 
     private String id;
 
@@ -55,15 +55,13 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.common.Money value;
-
-    private Boolean staged;
+    private com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges;
 
     /**
      *  <p>Unique identifier of the Message.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder id(final String id) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
@@ -72,7 +70,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder version(final Long version) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -81,7 +79,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -90,7 +88,8 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder lastModifiedAt(
+            final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
@@ -99,7 +98,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder lastModifiedBy(
+    public StandalonePriceStagedChangesAppliedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
@@ -109,7 +108,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder lastModifiedBy(
+    public StandalonePriceStagedChangesAppliedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -119,7 +118,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder createdBy(
+    public StandalonePriceStagedChangesAppliedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -129,7 +128,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder createdBy(
+    public StandalonePriceStagedChangesAppliedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -139,7 +138,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
@@ -148,7 +147,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder resource(
+    public StandalonePriceStagedChangesAppliedMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
@@ -158,7 +157,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder resource(
+    public StandalonePriceStagedChangesAppliedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
@@ -168,7 +167,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder resourceVersion(final Long resourceVersion) {
+    public StandalonePriceStagedChangesAppliedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
@@ -177,7 +176,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder resourceUserProvidedIdentifiers(
+    public StandalonePriceStagedChangesAppliedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -189,37 +188,31 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      *
      */
 
-    public StandalonePriceValueChangedMessageBuilder resourceUserProvidedIdentifiers(
+    public StandalonePriceStagedChangesAppliedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+    public StandalonePriceStagedChangesAppliedMessageBuilder stagedChanges(
+            Function<com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder, com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder> builder) {
+        this.stagedChanges = builder
+                .apply(com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder.of())
+                .build();
         return this;
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
      */
 
-    public StandalonePriceValueChangedMessageBuilder value(final com.commercetools.api.models.common.Money value) {
-        this.value = value;
-        return this;
-    }
-
-    /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
-     */
-
-    public StandalonePriceValueChangedMessageBuilder staged(final Boolean staged) {
-        this.staged = staged;
+    public StandalonePriceStagedChangesAppliedMessageBuilder stagedChanges(
+            final com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges) {
+        this.stagedChanges = stagedChanges;
         return this;
     }
 
@@ -266,45 +259,44 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         return this.resourceUserProvidedIdentifiers;
     }
 
-    public com.commercetools.api.models.common.Money getValue() {
-        return this.value;
+    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStagedChanges() {
+        return this.stagedChanges;
     }
 
-    public Boolean getStaged() {
-        return this.staged;
-    }
-
-    public StandalonePriceValueChangedMessage build() {
-        Objects.requireNonNull(id, StandalonePriceValueChangedMessage.class + ": id is missing");
-        Objects.requireNonNull(version, StandalonePriceValueChangedMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, StandalonePriceValueChangedMessage.class + ": createdAt is missing");
+    public StandalonePriceStagedChangesAppliedMessage build() {
+        Objects.requireNonNull(id, StandalonePriceStagedChangesAppliedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, StandalonePriceStagedChangesAppliedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, StandalonePriceStagedChangesAppliedMessage.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt,
-            StandalonePriceValueChangedMessage.class + ": lastModifiedAt is missing");
+            StandalonePriceStagedChangesAppliedMessage.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(sequenceNumber,
-            StandalonePriceValueChangedMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, StandalonePriceValueChangedMessage.class + ": resource is missing");
+            StandalonePriceStagedChangesAppliedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, StandalonePriceStagedChangesAppliedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion,
-            StandalonePriceValueChangedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(value, StandalonePriceValueChangedMessage.class + ": value is missing");
-        Objects.requireNonNull(staged, StandalonePriceValueChangedMessage.class + ": staged is missing");
-        return new StandalonePriceValueChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value, staged);
+            StandalonePriceStagedChangesAppliedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(stagedChanges,
+            StandalonePriceStagedChangesAppliedMessage.class + ": stagedChanges is missing");
+        return new StandalonePriceStagedChangesAppliedMessageImpl(id, version, createdAt, lastModifiedAt,
+            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
+            stagedChanges);
     }
 
     /**
-     * builds StandalonePriceValueChangedMessage without checking for non null required values
+     * builds StandalonePriceStagedChangesAppliedMessage without checking for non null required values
      */
-    public StandalonePriceValueChangedMessage buildUnchecked() {
-        return new StandalonePriceValueChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, value, staged);
+    public StandalonePriceStagedChangesAppliedMessage buildUnchecked() {
+        return new StandalonePriceStagedChangesAppliedMessageImpl(id, version, createdAt, lastModifiedAt,
+            lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
+            stagedChanges);
     }
 
-    public static StandalonePriceValueChangedMessageBuilder of() {
-        return new StandalonePriceValueChangedMessageBuilder();
+    public static StandalonePriceStagedChangesAppliedMessageBuilder of() {
+        return new StandalonePriceStagedChangesAppliedMessageBuilder();
     }
 
-    public static StandalonePriceValueChangedMessageBuilder of(final StandalonePriceValueChangedMessage template) {
-        StandalonePriceValueChangedMessageBuilder builder = new StandalonePriceValueChangedMessageBuilder();
+    public static StandalonePriceStagedChangesAppliedMessageBuilder of(
+            final StandalonePriceStagedChangesAppliedMessage template) {
+        StandalonePriceStagedChangesAppliedMessageBuilder builder = new StandalonePriceStagedChangesAppliedMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
@@ -315,8 +307,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.value = template.getValue();
-        builder.staged = template.getStaged();
+        builder.stagedChanges = template.getStagedChanges();
         return builder;
     }
 

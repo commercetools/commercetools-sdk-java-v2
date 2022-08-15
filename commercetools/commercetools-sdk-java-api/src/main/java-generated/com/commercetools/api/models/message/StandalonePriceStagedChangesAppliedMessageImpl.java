@@ -15,10 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Change Value update action.</p>
+ *  <p>Generated after a successful Apply Staged Changes update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class StandalonePriceValueChangedMessageImpl implements StandalonePriceValueChangedMessage, ModelBase {
+public class StandalonePriceStagedChangesAppliedMessageImpl
+        implements StandalonePriceStagedChangesAppliedMessage, ModelBase {
 
     private String id;
 
@@ -42,12 +43,10 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.common.Money value;
-
-    private Boolean staged;
+    private com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges;
 
     @JsonCreator
-    StandalonePriceValueChangedMessageImpl(@JsonProperty("id") final String id,
+    StandalonePriceStagedChangesAppliedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
@@ -57,8 +56,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("value") final com.commercetools.api.models.common.Money value,
-            @JsonProperty("staged") final Boolean staged) {
+            @JsonProperty("stagedChanges") final com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -69,13 +67,12 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.value = value;
-        this.staged = staged;
-        this.type = STANDALONE_PRICE_VALUE_CHANGED;
+        this.stagedChanges = stagedChanges;
+        this.type = STANDALONE_PRICE_STAGED_CHANGES_APPLIED;
     }
 
-    public StandalonePriceValueChangedMessageImpl() {
-        this.type = STANDALONE_PRICE_VALUE_CHANGED;
+    public StandalonePriceStagedChangesAppliedMessageImpl() {
+        this.type = STANDALONE_PRICE_STAGED_CHANGES_APPLIED;
     }
 
     /**
@@ -167,19 +164,11 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>The new value of the updated StandalonePrice.</p>
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
      */
 
-    public com.commercetools.api.models.common.Money getValue() {
-        return this.value;
-    }
-
-    /**
-     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
-     */
-
-    public Boolean getStaged() {
-        return this.staged;
+    public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStagedChanges() {
+        return this.stagedChanges;
     }
 
     public void setId(final String id) {
@@ -223,12 +212,9 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setValue(final com.commercetools.api.models.common.Money value) {
-        this.value = value;
-    }
-
-    public void setStaged(final Boolean staged) {
-        this.staged = staged;
+    public void setStagedChanges(
+            final com.commercetools.api.models.standalone_price.StagedStandalonePrice stagedChanges) {
+        this.stagedChanges = stagedChanges;
     }
 
     @Override
@@ -239,7 +225,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         if (o == null || getClass() != o.getClass())
             return false;
 
-        StandalonePriceValueChangedMessageImpl that = (StandalonePriceValueChangedMessageImpl) o;
+        StandalonePriceStagedChangesAppliedMessageImpl that = (StandalonePriceStagedChangesAppliedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
@@ -252,8 +238,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(value, that.value)
-                .append(staged, that.staged)
+                .append(stagedChanges, that.stagedChanges)
                 .isEquals();
     }
 
@@ -270,8 +255,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(value)
-                .append(staged)
+                .append(stagedChanges)
                 .toHashCode();
     }
 

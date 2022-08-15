@@ -30,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .value(valueBuilder -> valueBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +49,16 @@ public interface StandalonePriceValueChangedMessage extends Message {
     @JsonProperty("value")
     public Money getValue();
 
+    /**
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     */
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
     public void setValue(final Money value);
+
+    public void setStaged(final Boolean staged);
 
     public static StandalonePriceValueChangedMessage of() {
         return new StandalonePriceValueChangedMessageImpl();
@@ -67,6 +77,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setValue(template.getValue());
+        instance.setStaged(template.getStaged());
         return instance;
     }
 

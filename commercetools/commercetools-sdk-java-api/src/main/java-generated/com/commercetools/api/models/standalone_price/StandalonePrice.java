@@ -165,6 +165,13 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     */
+    @Valid
+    @JsonProperty("staged")
+    public StagedStandalonePrice getStaged();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -202,6 +209,8 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
 
     public void setCustom(final CustomFields custom);
 
+    public void setStaged(final StagedStandalonePrice staged);
+
     public static StandalonePrice of() {
         return new StandalonePriceImpl();
     }
@@ -225,6 +234,7 @@ public interface StandalonePrice extends BaseResource, com.commercetools.api.mod
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setStaged(template.getStaged());
         return instance;
     }
 

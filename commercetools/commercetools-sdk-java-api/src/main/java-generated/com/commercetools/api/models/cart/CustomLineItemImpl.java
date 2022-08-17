@@ -186,7 +186,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item: <code>Standard</code> = yes, <code>External</code> = no.</p>
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {

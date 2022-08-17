@@ -92,6 +92,16 @@ public interface CartAddCustomLineItemAction
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    @JsonProperty("priceMode")
+    public CustomLineItemPriceMode getPriceMode();
+
     public void setMoney(final Money money);
 
     public void setName(final LocalizedString name);
@@ -106,6 +116,8 @@ public interface CartAddCustomLineItemAction
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
     public static CartAddCustomLineItemAction of() {
         return new CartAddCustomLineItemActionImpl();
     }
@@ -119,6 +131,7 @@ public interface CartAddCustomLineItemAction
         instance.setTaxCategory(template.getTaxCategory());
         instance.setCustom(template.getCustom());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

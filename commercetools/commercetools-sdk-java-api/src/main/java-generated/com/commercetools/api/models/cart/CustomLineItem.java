@@ -141,7 +141,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public ItemShippingDetails getShippingDetails();
 
     /**
-     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item: <code>Standard</code> = yes, <code>External</code> = no.</p>
+     *  <p>Specifies whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
      */
     @NotNull
     @JsonProperty("priceMode")

@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .quantity(0.3)
  *             .money(moneyBuilder -> moneyBuilder)
  *             .slug("{slug}")
+ *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -105,6 +106,16 @@ public interface CustomLineItemImportDraft
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+    @NotNull
+    @JsonProperty("priceMode")
+    public CustomLineItemPriceMode getPriceMode();
+
     public void setName(final LocalizedString name);
 
     public void setQuantity(final Long quantity);
@@ -126,6 +137,8 @@ public interface CustomLineItemImportDraft
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
+    public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
     public static CustomLineItemImportDraft of() {
         return new CustomLineItemImportDraftImpl();
     }
@@ -141,6 +154,7 @@ public interface CustomLineItemImportDraft
         instance.setTaxCategory(template.getTaxCategory());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

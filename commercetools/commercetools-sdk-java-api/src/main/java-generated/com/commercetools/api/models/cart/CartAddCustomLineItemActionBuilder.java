@@ -44,6 +44,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
+
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
@@ -165,6 +168,19 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    public CartAddCustomLineItemActionBuilder priceMode(
+            @Nullable final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
@@ -196,19 +212,26 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         return this.externalTaxRate;
     }
 
+    @Nullable
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public CartAddCustomLineItemAction build() {
         Objects.requireNonNull(money, CartAddCustomLineItemAction.class + ": money is missing");
         Objects.requireNonNull(name, CartAddCustomLineItemAction.class + ": name is missing");
         Objects.requireNonNull(quantity, CartAddCustomLineItemAction.class + ": quantity is missing");
         Objects.requireNonNull(slug, CartAddCustomLineItemAction.class + ": slug is missing");
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate);
+        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate,
+            priceMode);
     }
 
     /**
      * builds CartAddCustomLineItemAction without checking for non null required values
      */
     public CartAddCustomLineItemAction buildUnchecked() {
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate);
+        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom, externalTaxRate,
+            priceMode);
     }
 
     public static CartAddCustomLineItemActionBuilder of() {
@@ -224,6 +247,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         builder.taxCategory = template.getTaxCategory();
         builder.custom = template.getCustom();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

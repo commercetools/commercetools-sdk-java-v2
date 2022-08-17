@@ -36,13 +36,16 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
+
     @JsonCreator
     StagedOrderAddCustomLineItemActionImpl(@JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity, @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.money = money;
         this.name = name;
         this.quantity = quantity;
@@ -50,6 +53,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.taxCategory = taxCategory;
         this.custom = custom;
         this.externalTaxRate = externalTaxRate;
+        this.priceMode = priceMode;
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
@@ -122,6 +126,17 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         return this.externalTaxRate;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setMoney(final com.commercetools.api.models.common.Money money) {
         this.money = money;
     }
@@ -151,6 +166,10 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.externalTaxRate = externalTaxRate;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -169,6 +188,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(taxCategory, that.taxCategory)
                 .append(custom, that.custom)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -182,6 +202,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(taxCategory)
                 .append(custom)
                 .append(externalTaxRate)
+                .append(priceMode)
                 .toHashCode();
     }
 
